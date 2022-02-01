@@ -19,7 +19,7 @@ namespace COMPRAS2
 
         private void MENU_Load(object sender, EventArgs e)
         {
-            AbrirFormHija(new MIPERFIL());
+            AbrirFormHija(new MENU2());
         }
 
         private void MENU_FormClosed(object sender, FormClosedEventArgs e)
@@ -79,6 +79,11 @@ namespace COMPRAS2
             INICIARSESION iniciarsesion = new INICIARSESION();
             iniciarsesion.Show();
             this.Hide();
+        }
+
+        private void PANELCONTENEDOR_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -85,6 +85,12 @@
     <Compile Include="MENU.Designer.cs">
       <DependentUpon>MENU.cs</DependentUpon>
     </Compile>
+    <Compile Include="MENU2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU2.Designer.cs">
+      <DependentUpon>MENU2.cs</DependentUpon>
+    </Compile>
     <Compile Include="MIPERFIL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MENU.resx">
       <DependentUpon>MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU2.resx">
+      <DependentUpon>MENU2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MIPERFIL.resx">
       <DependentUpon>MIPERFIL.cs</DependentUpon>
@@ -182,6 +191,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LUPA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MIPERFIL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HISTORIAL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REPORTE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INVENTARIO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EMPLEADOS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EMPLEADOS copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVS DESIGNE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HELLO !!.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
