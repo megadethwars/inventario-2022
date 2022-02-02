@@ -14,6 +14,29 @@ namespace COMPRAS2
 {
     public partial class MIPERFIL : Form
     {
+        MENU mainmenu;
+
+        public MIPERFIL(MENU mainMenu)
+        {
+            InitializeComponent();
+            this.mainmenu = mainMenu;
+
+        }
+
+        private void AbrirFormHija(object formhija)
+        {
+
+
+            if (this.mainmenu.PANELCONTENEDOR.Controls.Count > 0)
+                this.mainmenu.PANELCONTENEDOR.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.mainmenu.PANELCONTENEDOR.Controls.Add(fh);
+            this.mainmenu.PANELCONTENEDOR.Tag = fh;
+            fh.Show();
+        }
+
         string url = "https://avsinventoryswagger.azurewebsites.net/api/v1/";
         public MIPERFIL()
         {
@@ -23,7 +46,9 @@ namespace COMPRAS2
         private void MIPERFIL_Load(object sender, EventArgs e)
         {
             var url = HttpMethods.url + "usuarios";
-            //StatusMessage
+            
         }
+
+        
     }
 }

@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace COMPRAS2
 {
-    public partial class MENU : Form
+    public  partial class MENU : Form
     {
+
+        public int a = 0;
         public MENU()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace COMPRAS2
 
         private void MENU_Load(object sender, EventArgs e)
         {
-            AbrirFormHija(new MENU2());
+            AbrirFormHija(new MENU2(this));
         }
 
         private void MENU_FormClosed(object sender, FormClosedEventArgs e)
@@ -41,46 +43,19 @@ namespace COMPRAS2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new MIPERFIL());
+            AbrirFormHija(new MENU2(this));
+            
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInventario_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new INVENTARIO());
-        }
-
-        private void btnHistorial_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new HISTORIAL());
-        }
-
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new EMPLEADOS());
-        }
-
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new REPORTES());
-        }
-
-        private void btnAjustes_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new AJUSTES());
-        }
+       
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             INICIARSESION iniciarsesion = new INICIARSESION();
             iniciarsesion.Show();
-            this.Hide();
+            this.Dispose();
         }
-
+        
         private void PANELCONTENEDOR_Paint(object sender, PaintEventArgs e)
         {
 
