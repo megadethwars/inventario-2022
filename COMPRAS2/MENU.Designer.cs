@@ -31,25 +31,27 @@ namespace COMPRAS2
         {
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.PANELCONTENEDOR = new System.Windows.Forms.Panel();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.Black;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.BackgroundImage = global::COMPRAS2.Properties.Resources.fondobutton;
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 600);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 564);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(111, 50);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(105, 86);
             this.btnCerrarSesion.TabIndex = 13;
             this.btnCerrarSesion.Text = "CERRAR SESION";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -59,31 +61,13 @@ namespace COMPRAS2
             // 
             this.PANELCONTENEDOR.AutoScroll = true;
             this.PANELCONTENEDOR.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PANELCONTENEDOR.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PANELCONTENEDOR.Location = new System.Drawing.Point(111, 0);
+            this.PANELCONTENEDOR.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PANELCONTENEDOR.Location = new System.Drawing.Point(105, 0);
+            this.PANELCONTENEDOR.MinimumSize = new System.Drawing.Size(300, 300);
             this.PANELCONTENEDOR.Name = "PANELCONTENEDOR";
-            this.PANELCONTENEDOR.Size = new System.Drawing.Size(1100, 650);
+            this.PANELCONTENEDOR.Size = new System.Drawing.Size(1106, 650);
             this.PANELCONTENEDOR.TabIndex = 1;
             this.PANELCONTENEDOR.Paint += new System.Windows.Forms.PaintEventHandler(this.PANELCONTENEDOR_Paint);
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.BackColor = System.Drawing.Color.Black;
-            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(0, 0);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(111, 50);
-            this.btnPerfil.TabIndex = 0;
-            this.btnPerfil.Text = "MENU";
-            this.btnPerfil.UseVisualStyleBackColor = false;
-            this.btnPerfil.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -93,16 +77,38 @@ namespace COMPRAS2
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(111, 650);
+            this.panel1.Size = new System.Drawing.Size(105, 650);
             this.panel1.TabIndex = 2;
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnPerfil.BackgroundImage = global::COMPRAS2.Properties.Resources.fondobutton;
+            this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 0);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(105, 80);
+            this.btnPerfil.TabIndex = 0;
+            this.btnPerfil.Text = "MENU";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.button1_Click);
             // 
             // MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 650);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PANELCONTENEDOR);
+            this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "MENU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU";

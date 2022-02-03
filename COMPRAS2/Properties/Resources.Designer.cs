@@ -163,6 +163,16 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondobutton {
+            get {
+                object obj = ResourceManager.GetObject("fondobutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Grupo_1 {
             get {
                 object obj = ResourceManager.GetObject("Grupo 1", resourceCulture);

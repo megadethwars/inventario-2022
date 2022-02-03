@@ -133,6 +133,9 @@
   <data name="max" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\max.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Grupo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grupo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="REPORTE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\REPORTE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,7 @@
   <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Grupo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Grupo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondobutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondobutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
