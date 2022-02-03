@@ -41,6 +41,7 @@ namespace COMPRAS2
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.bkBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -179,12 +180,23 @@ namespace COMPRAS2
             this.label7.TabIndex = 18;
             this.label7.Text = "Dest:";
             // 
+            // bkBack
+            // 
+            this.bkBack.Location = new System.Drawing.Point(28, 30);
+            this.bkBack.Name = "bkBack";
+            this.bkBack.Size = new System.Drawing.Size(75, 23);
+            this.bkBack.TabIndex = 19;
+            this.bkBack.Text = "button1";
+            this.bkBack.UseVisualStyleBackColor = true;
+            this.bkBack.Click += new System.EventHandler(this.bkBack_Click);
+            // 
             // INVENTARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1089, 647);
+            this.Controls.Add(this.bkBack);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -222,5 +234,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bkBack;
     }
 }

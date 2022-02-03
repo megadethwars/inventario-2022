@@ -21,10 +21,10 @@ namespace COMPRAS2
 
         MENU mainmenu;
 
-        public INVENTARIO(MENU mainMenu)
+        public INVENTARIO()
         {
             InitializeComponent();
-            this.mainmenu = mainMenu;
+   
         }
 
       
@@ -84,7 +84,13 @@ namespace COMPRAS2
 
         private void brnOPCIONES_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new MIPERFIL(this.mainmenu));
+            //AbrirFormHija(new MIPERFIL());
+            Navigator.nextPage(new MIPERFIL());
+        }
+
+        private void bkBack_Click(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
         }
     }
 }

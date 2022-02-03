@@ -20,7 +20,7 @@ namespace COMPRAS2
         {
             InitializeComponent();
             this.mainmenu = new MENU();
-            this.inv = new INVENTARIO(mainmenu);
+            this.inv = new INVENTARIO();
         }
 
         private void AbrirFormHija(object formhija)

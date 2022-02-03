@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using COMPRAS2.servicios;
 namespace COMPRAS2
 {
     public partial class MENU2 : Form
@@ -64,7 +64,8 @@ namespace COMPRAS2
 
         private void btnINVENTARIO_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new INVENTARIO(mainmenu));
+            //AbrirFormHija(new INVENTARIO());
+            Navigator.nextPage(new INVENTARIO());
         }
 
         private void btnEMPLEADOS_Click(object sender, EventArgs e)

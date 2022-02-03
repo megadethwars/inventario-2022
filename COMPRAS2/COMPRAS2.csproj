@@ -109,6 +109,7 @@
       <DependentUpon>REPORTES.cs</DependentUpon>
     </Compile>
     <Compile Include="servicios\HttpMethods.cs" />
+    <Compile Include="servicios\Navigator.cs" />
     <EmbeddedResource Include="AJUSTES.resx">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </EmbeddedResource>

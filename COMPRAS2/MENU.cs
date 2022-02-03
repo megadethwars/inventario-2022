@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using COMPRAS2.servicios;
 namespace COMPRAS2
 {
     public  partial class MENU : Form
@@ -18,11 +18,13 @@ namespace COMPRAS2
         {
             mainmenu = new MENU2(this);
             InitializeComponent();
+            Navigator.setMainMenu(this);
         }
 
         private void MENU_Load(object sender, EventArgs e)
         {
-            AbrirFormHija(mainmenu);
+            Navigator.nextPage(mainmenu);
+            //AbrirFormHija(mainmenu);
         }
 
         private void MENU_FormClosed(object sender, FormClosedEventArgs e)

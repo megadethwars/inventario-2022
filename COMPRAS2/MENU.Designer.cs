@@ -57,6 +57,7 @@ namespace COMPRAS2
             // 
             // PANELCONTENEDOR
             // 
+            this.PANELCONTENEDOR.AutoScroll = true;
             this.PANELCONTENEDOR.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.PANELCONTENEDOR.Dock = System.Windows.Forms.DockStyle.Right;
             this.PANELCONTENEDOR.Location = new System.Drawing.Point(111, 0);
