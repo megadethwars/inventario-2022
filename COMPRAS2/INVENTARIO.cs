@@ -91,6 +91,7 @@ namespace COMPRAS2
         private void bkBack_Click(object sender, EventArgs e)
         {
             Navigator.backPage(this.Name, this);
+            
         }
     }
 }

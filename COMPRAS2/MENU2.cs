@@ -45,21 +45,18 @@ namespace COMPRAS2
         
         private void MIPERFIL_Click(object sender, EventArgs e)
         {
-            //this.BackColor = Color.FromArgb(0, 0, 0);
-            //is.Hide();
-            //this.Dispose();
-            AbrirFormHija(new MIPERFIL());
-
-        }
-
-        private void HISTORIAL_Click(object sender, EventArgs e)
-        {
             
+            //this.Dispose();
+         
+            Navigator.nextPage(new MIPERFIL());
         }
+
+        
 
         private void btnREPORTE_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new REPORTES());
+            
+            Navigator.nextPage(new REPORTES());
         }
 
         private void btnINVENTARIO_Click(object sender, EventArgs e)
@@ -70,12 +67,20 @@ namespace COMPRAS2
 
         private void btnEMPLEADOS_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new EMPLEADOS());
+          
+            Navigator.nextPage(new EMPLEADOS());
         }
 
         private void btnAJUSTES_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new AJUSTES());
+        
+            Navigator.nextPage(new AJUSTES());
+        }
+
+        private void btnHISTORIAL_Click(object sender, EventArgs e)
+        {
+           
+            Navigator.nextPage(new HIST() { Name="HIST"});
         }
     }
 }

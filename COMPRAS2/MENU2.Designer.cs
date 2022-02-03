@@ -36,9 +36,9 @@ namespace COMPRAS2
             this.btnEMPLEADOS = new System.Windows.Forms.PictureBox();
             this.btnINVENTARIO = new System.Windows.Forms.PictureBox();
             this.btnREPORTE = new System.Windows.Forms.PictureBox();
-            this.btnHISTORIAL = new System.Windows.Forms.PictureBox();
             this.btnMIPERFIL = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHISTORIAL = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,8 +46,8 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.btnEMPLEADOS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnINVENTARIO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnREPORTE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHISTORIAL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMIPERFIL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHISTORIAL)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -129,18 +129,6 @@ namespace COMPRAS2
             this.btnREPORTE.TabStop = false;
             this.btnREPORTE.Click += new System.EventHandler(this.btnREPORTE_Click);
             // 
-            // btnHISTORIAL
-            // 
-            this.btnHISTORIAL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHISTORIAL.Image = global::COMPRAS2.Properties.Resources.HISTORIAL1;
-            this.btnHISTORIAL.Location = new System.Drawing.Point(43, 220);
-            this.btnHISTORIAL.Name = "btnHISTORIAL";
-            this.btnHISTORIAL.Size = new System.Drawing.Size(130, 130);
-            this.btnHISTORIAL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnHISTORIAL.TabIndex = 2;
-            this.btnHISTORIAL.TabStop = false;
-            this.btnHISTORIAL.Click += new System.EventHandler(this.HISTORIAL_Click);
-            // 
             // btnMIPERFIL
             // 
             this.btnMIPERFIL.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -163,6 +151,18 @@ namespace COMPRAS2
             this.label1.Size = new System.Drawing.Size(98, 24);
             this.label1.TabIndex = 10;
             this.label1.Text = "Usuario IO";
+            // 
+            // btnHISTORIAL
+            // 
+            this.btnHISTORIAL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHISTORIAL.Image = global::COMPRAS2.Properties.Resources.HISTORIAL1;
+            this.btnHISTORIAL.Location = new System.Drawing.Point(43, 220);
+            this.btnHISTORIAL.Name = "btnHISTORIAL";
+            this.btnHISTORIAL.Size = new System.Drawing.Size(130, 130);
+            this.btnHISTORIAL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnHISTORIAL.TabIndex = 2;
+            this.btnHISTORIAL.TabStop = false;
+            this.btnHISTORIAL.Click += new System.EventHandler(this.btnHISTORIAL_Click);
             // 
             // MENU2
             // 
@@ -190,8 +190,8 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.btnEMPLEADOS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnINVENTARIO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnREPORTE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHISTORIAL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMIPERFIL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHISTORIAL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +199,6 @@ namespace COMPRAS2
 
         #endregion
         private System.Windows.Forms.PictureBox btnMIPERFIL;
-        private System.Windows.Forms.PictureBox btnHISTORIAL;
         private System.Windows.Forms.PictureBox btnREPORTE;
         private System.Windows.Forms.PictureBox btnINVENTARIO;
         private System.Windows.Forms.PictureBox btnEMPLEADOS;
@@ -208,5 +207,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox btnHISTORIAL;
     }
 }

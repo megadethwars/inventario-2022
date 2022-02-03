@@ -67,6 +67,18 @@
     <Compile Include="EMPLEADOS.Designer.cs">
       <DependentUpon>EMPLEADOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="HIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HIST.Designer.cs">
+      <DependentUpon>HIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HISTORIALFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HISTORIALFORM.Designer.cs">
+      <DependentUpon>HISTORIALFORM.cs</DependentUpon>
+    </Compile>
     <Compile Include="INICIARSESION.cs">
       <SubType>Form</SubType>
     </Compile>

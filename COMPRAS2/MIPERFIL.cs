@@ -18,15 +18,11 @@ namespace COMPRAS2
 
         public MIPERFIL()
         {
-            InitializeComponent();
-          
-
+            InitializeComponent();        
         }
 
         private void AbrirFormHija(object formhija)
         {
-
-
             if (this.mainmenu.PANELCONTENEDOR.Controls.Count > 0)
                 this.mainmenu.PANELCONTENEDOR.Controls.RemoveAt(0);
             Form fh = formhija as Form;
@@ -43,22 +39,15 @@ namespace COMPRAS2
         private void MIPERFIL_Load(object sender, EventArgs e)
         {
             var url = HttpMethods.url + "usuarios";
-
         }
-
+        /*
         ~MIPERFIL() {
             int a = 0;
         }
-
-       
-
+        */
         private void button1_Click(object sender, EventArgs e)
         {
-          
-
-
-            Navigator.backPage(this.Name,this);
-      
+            Navigator.backPage(this.Name,this);     
         }
     }
 }

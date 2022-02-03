@@ -19,6 +19,7 @@ namespace COMPRAS2
             mainmenu = new MENU2(this);
             InitializeComponent();
             Navigator.setMainMenu(this);
+            Navigator.setMainMenuoPT(mainmenu);
         }
 
         private void MENU_Load(object sender, EventArgs e)
@@ -47,20 +48,56 @@ namespace COMPRAS2
         private void button1_Click(object sender, EventArgs e)
 
         {
-            
+
+            int count = this.PANELCONTENEDOR.Controls.Count;
+            string name = "";
+            if (count > 1)
+            {
+                string[] names = new string [count - 1];
+                int temp = 0;
+                foreach (Control control in this.PANELCONTENEDOR.Controls)
+                {
+                    if (control.Name != mainmenu.Name) {
+
+                        names[temp] = control.Name;
+                        temp++;
+                    }
+                    
+                }
+
+                foreach (string nm in names) {
+
+                    Control[] controls = this.PANELCONTENEDOR.Controls.Find(nm, true);
+
+                    foreach (Control ctl in controls) {
+                        this.PANELCONTENEDOR.Controls.RemoveByKey(nm);
+
+                        ctl.Dispose();
+                    }
+
+                }
+
+                Control[] controlsUnique = this.PANELCONTENEDOR.Controls.Find(mainmenu.Name, true);
+
+                foreach (Control ctrl in controlsUnique)
+                {
+                    ctrl.Show();
+                }
+            }
+            else
+            {
+                return;
+            }
+
+
+
+
+
+
             //Control[] controls = this.PANELCONTENEDOR.Controls.Find("MIPERFIL", true);
 
-            foreach (Control control in this.PANELCONTENEDOR.Controls) {
-                control.Dispose();
-            }
-            
-  
-            if (this.PANELCONTENEDOR.Controls.Count > 0)
-                this.PANELCONTENEDOR.Controls.RemoveAt(0);
-            
-            
 
-            AbrirFormHija(mainmenu);
+             
             /*try
             {
 

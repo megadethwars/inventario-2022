@@ -10,8 +10,14 @@ namespace COMPRAS2.servicios
     class Navigator
     {
         public static MENU mainmenu;
+        public static MENU2 mainmenuOPT;
         public static void setMainMenu(MENU menu) {
             mainmenu = menu;
+        }
+
+        public static void setMainMenuoPT(MENU2 menu)
+        {
+            mainmenuOPT = menu;
         }
 
         public static void nextPage(Form form) {
@@ -54,6 +60,14 @@ namespace COMPRAS2.servicios
             }
             else
             {
+                return;
+            }
+
+            count = mainmenu.PANELCONTENEDOR.Controls.Count;
+
+            if (count == 0) {
+
+                nextPage(mainmenuOPT);
                 return;
             }
 
