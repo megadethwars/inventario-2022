@@ -84,7 +84,7 @@ namespace COMPRAS2
 
         private void brnOPCIONES_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new ejemplo(this,this.mainmenu));
+            AbrirFormHija(new MIPERFIL(this.mainmenu));
         }
     }
 }

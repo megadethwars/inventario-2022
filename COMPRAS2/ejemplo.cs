@@ -39,8 +39,8 @@ namespace COMPRAS2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            AbrirFormHija(new INVENTARIO(mainmenu));
+            //this.Dispose();
+            AbrirFormHija(this.inv);
         }
     }
 }

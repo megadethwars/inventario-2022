@@ -53,8 +53,22 @@ namespace COMPRAS2
             int a = 0;
         }
 
-        public void Dispose() {
-            this.Dispose();
+       
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in this.mainmenu.PANELCONTENEDOR.Controls)
+            {
+                control.Dispose();
+            }
+
+
+            if (this.mainmenu.PANELCONTENEDOR.Controls.Count > 0)
+                this.mainmenu.PANELCONTENEDOR.Controls.RemoveAt(0);
+
+
+
+            AbrirFormHija(new INVENTARIO(this.mainmenu));
         }
     }
 }
