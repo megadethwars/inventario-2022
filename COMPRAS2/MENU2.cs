@@ -54,7 +54,7 @@ namespace COMPRAS2
 
         private void HISTORIAL_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new HISTORIAL());
+            
         }
 
         private void btnREPORTE_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace COMPRAS2
 
         private void btnINVENTARIO_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new INVENTARIO());
+            AbrirFormHija(new INVENTARIO(mainmenu));
         }
 
         private void btnEMPLEADOS_Click(object sender, EventArgs e)

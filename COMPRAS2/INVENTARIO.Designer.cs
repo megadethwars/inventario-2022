@@ -100,6 +100,7 @@ namespace COMPRAS2
             this.brnOPCIONES.TabIndex = 6;
             this.brnOPCIONES.Text = "OPCIONES";
             this.brnOPCIONES.UseVisualStyleBackColor = false;
+            this.brnOPCIONES.Click += new System.EventHandler(this.brnOPCIONES_Click);
             // 
             // label1
             // 

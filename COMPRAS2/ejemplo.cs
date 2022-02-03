@@ -1,6 +1,4 @@
-﻿using COMPRAS2.modelos;
-using COMPRAS2.servicios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +10,17 @@ using System.Windows.Forms;
 
 namespace COMPRAS2
 {
-    public partial class MIPERFIL : Form
+    public partial class ejemplo : Form
     {
-        MENU mainmenu;
 
-        public MIPERFIL(MENU mainMenu)
+        MENU mainmenu;
+        INVENTARIO inv;
+
+        public ejemplo(INVENTARIO inv,MENU mainmenu)
         {
             InitializeComponent();
-            this.mainmenu = mainMenu;
-
+            this.mainmenu = new MENU();
+            this.inv = new INVENTARIO(mainmenu);
         }
 
         private void AbrirFormHija(object formhija)
@@ -37,24 +37,10 @@ namespace COMPRAS2
             fh.Show();
         }
 
-        string url = "https://avsinventoryswagger.azurewebsites.net/api/v1/";
-        public MIPERFIL()
+        private void button1_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
-        }
-
-        private void MIPERFIL_Load(object sender, EventArgs e)
-        {
-            var url = HttpMethods.url + "usuarios";
-
-        }
-
-        ~MIPERFIL() {
-            int a = 0;
-        }
-
-        public void Dispose() {
             this.Dispose();
+            AbrirFormHija(new INVENTARIO(mainmenu));
         }
     }
 }

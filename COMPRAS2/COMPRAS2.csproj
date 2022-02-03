@@ -55,17 +55,17 @@
     <Compile Include="AJUSTES.Designer.cs">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </Compile>
+    <Compile Include="ejemplo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ejemplo.Designer.cs">
+      <DependentUpon>ejemplo.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMPLEADOS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EMPLEADOS.Designer.cs">
       <DependentUpon>EMPLEADOS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HISTORIAL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HISTORIAL.Designer.cs">
-      <DependentUpon>HISTORIAL.cs</DependentUpon>
     </Compile>
     <Compile Include="INICIARSESION.cs">
       <SubType>Form</SubType>
@@ -112,11 +112,11 @@
     <EmbeddedResource Include="AJUSTES.resx">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ejemplo.resx">
+      <DependentUpon>ejemplo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMPLEADOS.resx">
       <DependentUpon>EMPLEADOS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HISTORIAL.resx">
-      <DependentUpon>HISTORIAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="INICIARSESION.resx">
       <DependentUpon>INICIARSESION.cs</DependentUpon>

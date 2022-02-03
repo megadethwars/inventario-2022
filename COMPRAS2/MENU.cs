@@ -12,16 +12,17 @@ namespace COMPRAS2
 {
     public  partial class MENU : Form
     {
-
+        MENU2 mainmenu;
         public int a = 0;
         public MENU()
         {
+            mainmenu = new MENU2(this);
             InitializeComponent();
         }
 
         private void MENU_Load(object sender, EventArgs e)
         {
-            AbrirFormHija(new MENU2(this));
+            AbrirFormHija(mainmenu);
         }
 
         private void MENU_FormClosed(object sender, FormClosedEventArgs e)
@@ -42,8 +43,37 @@ namespace COMPRAS2
         }
 
         private void button1_Click(object sender, EventArgs e)
+
         {
-            AbrirFormHija(new MENU2(this));
+            
+            //Control[] controls = this.PANELCONTENEDOR.Controls.Find("MIPERFIL", true);
+
+            foreach (Control control in this.PANELCONTENEDOR.Controls) {
+                control.Dispose();
+            }
+            
+  
+            if (this.PANELCONTENEDOR.Controls.Count > 0)
+                this.PANELCONTENEDOR.Controls.RemoveAt(0);
+            
+            
+
+            AbrirFormHija(mainmenu);
+            /*try
+            {
+
+                Control[] controls = this.PANELCONTENEDOR.Controls.Find("MIPERFIL", true);
+                
+                controls[0].Dispose();
+                if (this.PANELCONTENEDOR.Controls.Count > 0)
+                    this.PANELCONTENEDOR.Controls.RemoveAt(0);
+
+                AbrirFormHija(mainmenu);
+            }
+            catch
+            {
+                MessageBox.Show("EXCESO DE VISTAS...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
             
         }
 

@@ -18,9 +18,13 @@ namespace COMPRAS2
     public partial class INVENTARIO : Form
     {
         string url = "https://avsinventoryswagger.azurewebsites.net/api/v1/";
-        public INVENTARIO()
+
+        MENU mainmenu;
+
+        public INVENTARIO(MENU mainMenu)
         {
             InitializeComponent();
+            this.mainmenu = mainMenu;
         }
 
       
@@ -63,6 +67,24 @@ namespace COMPRAS2
             return await sr.ReadToEndAsync();
         }
 
-       
+
+        private void AbrirFormHija(object formhija)
+        {
+
+
+            if (this.mainmenu.PANELCONTENEDOR.Controls.Count > 0)
+                this.mainmenu.PANELCONTENEDOR.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.mainmenu.PANELCONTENEDOR.Controls.Add(fh);
+            this.mainmenu.PANELCONTENEDOR.Tag = fh;
+            fh.Show();
+        }
+
+        private void brnOPCIONES_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new ejemplo(this,this.mainmenu));
+        }
     }
 }

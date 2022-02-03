@@ -114,7 +114,7 @@ namespace COMPRAS2
 
         #endregion
         private System.Windows.Forms.Button btnPerfil;
-        public System.Windows.Forms.Panel PANELCONTENEDOR;
+        public  System.Windows.Forms.Panel PANELCONTENEDOR;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Panel panel1;
     }
