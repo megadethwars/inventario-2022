@@ -121,17 +121,20 @@
   <data name="specialbutton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\specialbutton2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="NOMBRE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NOMBRE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buttonspecial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonspecial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AJUSTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AJUSTES.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="perfil2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perfil2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="max" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\max.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HISTORIAL1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HISTORIAL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Grupo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Grupo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +142,11 @@
   <data name="REPORTE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\REPORTE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="INVENTARIO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\INVENTARIO1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TIPO DE EMPLEADO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TIPO DE EMPLEADO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="perfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\perfil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="max2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\max2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Rectángulo 1 copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rectángulo 1 copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectángulo 2 copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectángulo 2 copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,17 +157,17 @@
   <data name="HELLO !!" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HELLO !!.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HISTORIAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HISTORIAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="REPORTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REPORTES.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondobutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondobutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LUPA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LUPA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="INVENTARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\INVENTARIO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ACEPTAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ACEPTAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MIPERFIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MIPERFIL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,31 +181,28 @@
   <data name="AVS DESIGNE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AVS DESIGNE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rectángulo 1 copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rectángulo 1 copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AVS Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AVS Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="max2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\max2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Broadcast Division" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Broadcast Division.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HISTORIAL1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HISTORIAL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="REPORTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REPORTE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="specialbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\specialbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="max" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\max.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EMPLEADOS copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EMPLEADOS copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TELEFONO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TELEFONO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondobutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondobutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CORREO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CORREO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

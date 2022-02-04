@@ -101,7 +101,7 @@ namespace COMPRAS2
             this.btnAJUSTES.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAJUSTES.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAJUSTES.Image = global::COMPRAS2.Properties.Resources.EMPLEADOS_copia;
-            this.btnAJUSTES.Location = new System.Drawing.Point(662, 408);
+            this.btnAJUSTES.Location = new System.Drawing.Point(680, 430);
             this.btnAJUSTES.Name = "btnAJUSTES";
             this.btnAJUSTES.Size = new System.Drawing.Size(130, 130);
             this.btnAJUSTES.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +114,7 @@ namespace COMPRAS2
             this.btnEMPLEADOS.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEMPLEADOS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEMPLEADOS.Image = global::COMPRAS2.Properties.Resources.EMPLEADOS1;
-            this.btnEMPLEADOS.Location = new System.Drawing.Point(662, 220);
+            this.btnEMPLEADOS.Location = new System.Drawing.Point(680, 240);
             this.btnEMPLEADOS.Name = "btnEMPLEADOS";
             this.btnEMPLEADOS.Size = new System.Drawing.Size(130, 130);
             this.btnEMPLEADOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,7 +127,7 @@ namespace COMPRAS2
             this.btnINVENTARIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnINVENTARIO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnINVENTARIO.Image = global::COMPRAS2.Properties.Resources.INVENTARIO;
-            this.btnINVENTARIO.Location = new System.Drawing.Point(662, 49);
+            this.btnINVENTARIO.Location = new System.Drawing.Point(680, 50);
             this.btnINVENTARIO.Name = "btnINVENTARIO";
             this.btnINVENTARIO.Size = new System.Drawing.Size(130, 130);
             this.btnINVENTARIO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -140,7 +140,7 @@ namespace COMPRAS2
             this.btnREPORTE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnREPORTE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnREPORTE.Image = global::COMPRAS2.Properties.Resources.REPORTE1;
-            this.btnREPORTE.Location = new System.Drawing.Point(43, 408);
+            this.btnREPORTE.Location = new System.Drawing.Point(50, 430);
             this.btnREPORTE.Name = "btnREPORTE";
             this.btnREPORTE.Size = new System.Drawing.Size(130, 130);
             this.btnREPORTE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +153,7 @@ namespace COMPRAS2
             this.btnHISTORIAL.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnHISTORIAL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHISTORIAL.Image = global::COMPRAS2.Properties.Resources.HISTORIAL1;
-            this.btnHISTORIAL.Location = new System.Drawing.Point(43, 220);
+            this.btnHISTORIAL.Location = new System.Drawing.Point(50, 240);
             this.btnHISTORIAL.Name = "btnHISTORIAL";
             this.btnHISTORIAL.Size = new System.Drawing.Size(130, 130);
             this.btnHISTORIAL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@ namespace COMPRAS2
             // 
             this.btnMIPERFIL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMIPERFIL.Image = global::COMPRAS2.Properties.Resources.MIPERFIL;
-            this.btnMIPERFIL.Location = new System.Drawing.Point(43, 49);
+            this.btnMIPERFIL.Location = new System.Drawing.Point(50, 50);
             this.btnMIPERFIL.Name = "btnMIPERFIL";
             this.btnMIPERFIL.Size = new System.Drawing.Size(130, 130);
             this.btnMIPERFIL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +190,6 @@ namespace COMPRAS2
             this.Controls.Add(this.btnHISTORIAL);
             this.Controls.Add(this.btnMIPERFIL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "MENU2";
             this.Text = "MENU2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

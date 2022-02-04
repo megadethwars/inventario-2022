@@ -174,18 +174,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\perfil.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\INVENTARIO1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\HISTORIAL.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\EMPLEADOS.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\specialbutton2.png" />
     <None Include="Resources\specialbutton.png" />
     <None Include="Resources\Rectángulo 2 copia.png" />
@@ -193,14 +181,11 @@
     <None Include="Resources\max2.png" />
     <None Include="Resources\min.png" />
     <None Include="Resources\max.png" />
-    <None Include="Resources\AJUSTES.png" />
     <None Include="Resources\exit.png" />
     <None Include="Resources\AudioVideoSolutionsLogo.png" />
     <None Include="Resources\AVS Design.png" />
     <None Include="Resources\Broadcast Division.png" />
     <None Include="Resources\buttonspecial.png" />
-    <None Include="Resources\REPORTES.png" />
-    <None Include="Resources\REPORTE.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LUPA.png" />
@@ -234,6 +219,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondobutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perfil2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ACEPTAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TIPO DE EMPLEADO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOMBRE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TELEFONO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CORREO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

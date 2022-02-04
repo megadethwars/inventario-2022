@@ -63,7 +63,6 @@ namespace COMPRAS2
             this.PANELCONTENEDOR.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.PANELCONTENEDOR.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PANELCONTENEDOR.Location = new System.Drawing.Point(105, 0);
-            this.PANELCONTENEDOR.MinimumSize = new System.Drawing.Size(300, 300);
             this.PANELCONTENEDOR.Name = "PANELCONTENEDOR";
             this.PANELCONTENEDOR.Size = new System.Drawing.Size(1106, 650);
             this.PANELCONTENEDOR.TabIndex = 1;
@@ -108,7 +107,7 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1211, 650);
             this.Controls.Add(this.PANELCONTENEDOR);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.MinimumSize = new System.Drawing.Size(800, 550);
             this.Name = "MENU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU";

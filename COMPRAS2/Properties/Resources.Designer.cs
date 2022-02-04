@@ -63,9 +63,9 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AJUSTES {
+        internal static System.Drawing.Bitmap ACEPTAR {
             get {
-                object obj = ResourceManager.GetObject("AJUSTES", resourceCulture);
+                object obj = ResourceManager.GetObject("ACEPTAR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap EMPLEADOS {
+        internal static System.Drawing.Bitmap CORREO {
             get {
-                object obj = ResourceManager.GetObject("EMPLEADOS", resourceCulture);
+                object obj = ResourceManager.GetObject("CORREO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,16 +193,6 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap HISTORIAL {
-            get {
-                object obj = ResourceManager.GetObject("HISTORIAL", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap HISTORIAL1 {
             get {
                 object obj = ResourceManager.GetObject("HISTORIAL1", resourceCulture);
@@ -216,16 +206,6 @@ namespace COMPRAS2.Properties {
         internal static System.Drawing.Bitmap INVENTARIO {
             get {
                 object obj = ResourceManager.GetObject("INVENTARIO", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap INVENTARIO1 {
-            get {
-                object obj = ResourceManager.GetObject("INVENTARIO1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +263,19 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap perfil {
+        internal static System.Drawing.Bitmap NOMBRE {
             get {
-                object obj = ResourceManager.GetObject("perfil", resourceCulture);
+                object obj = ResourceManager.GetObject("NOMBRE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap perfil2 {
+            get {
+                object obj = ResourceManager.GetObject("perfil2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,29 +303,9 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap REPORTE {
-            get {
-                object obj = ResourceManager.GetObject("REPORTE", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap REPORTE1 {
             get {
                 object obj = ResourceManager.GetObject("REPORTE1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap REPORTES {
-            get {
-                object obj = ResourceManager.GetObject("REPORTES", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +326,26 @@ namespace COMPRAS2.Properties {
         internal static System.Drawing.Bitmap specialbutton2 {
             get {
                 object obj = ResourceManager.GetObject("specialbutton2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TELEFONO {
+            get {
+                object obj = ResourceManager.GetObject("TELEFONO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TIPO_DE_EMPLEADO {
+            get {
+                object obj = ResourceManager.GetObject("TIPO DE EMPLEADO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
