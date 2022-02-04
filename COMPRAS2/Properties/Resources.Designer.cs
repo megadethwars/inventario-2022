@@ -73,6 +73,16 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AGREGARFOTO {
+            get {
+                object obj = ResourceManager.GetObject("AGREGARFOTO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AudioVideoSolutionsLogo {
             get {
                 object obj = ResourceManager.GetObject("AudioVideoSolutionsLogo", resourceCulture);
