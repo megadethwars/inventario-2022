@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace COMPRAS2
 {
-    public partial class REPORTES : Form
+    public partial class EDITAR_PRODUCTO : Form
     {
-        public REPORTES()
+        public EDITAR_PRODUCTO()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

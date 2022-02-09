@@ -69,7 +69,7 @@ namespace COMPRAS2
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.LUPA;
+            //this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.LUPA;
             this.pictureBox1.Location = new System.Drawing.Point(1029, 88);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 29);

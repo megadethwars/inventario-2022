@@ -28,13 +28,7 @@ namespace COMPRAS2
         }
 
       
-
-        private void BUSCADOR_Click(object sender, EventArgs e)
-        {
-            BUSCADOR.Clear();
-            BUSCADOR.ForeColor = Color.Black;
-        }
-
+        
         private async void INVENTARIO_Load(object sender, EventArgs e)
         {
             
