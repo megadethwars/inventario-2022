@@ -39,11 +39,11 @@ namespace COMPRAS2
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.bkBack = new System.Windows.Forms.Button();
-            this.btBUSCADOR = new System.Windows.Forms.Button();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btBUSCADOR = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bTNBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -51,11 +51,11 @@ namespace COMPRAS2
             // INVENTARIOTITLE
             // 
             this.INVENTARIOTITLE.AutoSize = true;
-            this.INVENTARIOTITLE.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INVENTARIOTITLE.ForeColor = System.Drawing.Color.White;
-            this.INVENTARIOTITLE.Location = new System.Drawing.Point(400, 30);
+            this.INVENTARIOTITLE.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INVENTARIOTITLE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.INVENTARIOTITLE.Location = new System.Drawing.Point(471, 26);
             this.INVENTARIOTITLE.Name = "INVENTARIOTITLE";
-            this.INVENTARIOTITLE.Size = new System.Drawing.Size(192, 31);
+            this.INVENTARIOTITLE.Size = new System.Drawing.Size(129, 42);
             this.INVENTARIOTITLE.TabIndex = 2;
             this.INVENTARIOTITLE.Text = "INVENTARIO";
             // 
@@ -158,15 +158,29 @@ namespace COMPRAS2
             this.label7.TabIndex = 18;
             this.label7.Text = "Dest:";
             // 
-            // bkBack
+            // txtBUSCADOR
             // 
-            this.bkBack.Location = new System.Drawing.Point(28, 30);
-            this.bkBack.Name = "bkBack";
-            this.bkBack.Size = new System.Drawing.Size(75, 23);
-            this.bkBack.TabIndex = 19;
-            this.bkBack.Text = "button1";
-            this.bkBack.UseVisualStyleBackColor = true;
-            this.bkBack.Click += new System.EventHandler(this.bkBack_Click);
+            this.txtBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
+            this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBUSCADOR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
+            this.txtBUSCADOR.Location = new System.Drawing.Point(86, 109);
+            this.txtBUSCADOR.Name = "txtBUSCADOR";
+            this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
+            this.txtBUSCADOR.TabIndex = 29;
+            this.txtBUSCADOR.Text = "Search";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(478, 157);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 39);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "OPCIONES";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btBUSCADOR
             // 
@@ -181,18 +195,6 @@ namespace COMPRAS2
             this.btBUSCADOR.TabIndex = 30;
             this.btBUSCADOR.UseVisualStyleBackColor = false;
             // 
-            // txtBUSCADOR
-            // 
-            this.txtBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
-            this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBUSCADOR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.txtBUSCADOR.Location = new System.Drawing.Point(86, 109);
-            this.txtBUSCADOR.Name = "txtBUSCADOR";
-            this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
-            this.txtBUSCADOR.TabIndex = 29;
-            this.txtBUSCADOR.Text = "Search";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.SEARCH;
@@ -203,17 +205,17 @@ namespace COMPRAS2
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // bTNBack
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(478, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 39);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "OPCIONES";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
+            this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTNBack.Location = new System.Drawing.Point(28, 30);
+            this.bTNBack.Name = "bTNBack";
+            this.bTNBack.Size = new System.Drawing.Size(50, 50);
+            this.bTNBack.TabIndex = 19;
+            this.bTNBack.UseVisualStyleBackColor = true;
+            this.bTNBack.Click += new System.EventHandler(this.bkBack_Click);
             // 
             // INVENTARIO
             // 
@@ -225,7 +227,7 @@ namespace COMPRAS2
             this.Controls.Add(this.btBUSCADOR);
             this.Controls.Add(this.txtBUSCADOR);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.bkBack);
+            this.Controls.Add(this.bTNBack);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -259,7 +261,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button bkBack;
+        private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Button btBUSCADOR;
         private System.Windows.Forms.TextBox txtBUSCADOR;
         private System.Windows.Forms.PictureBox pictureBox2;

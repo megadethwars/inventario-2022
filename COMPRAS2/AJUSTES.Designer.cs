@@ -29,19 +29,31 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // label2
+            // lblPerfil
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(421, 311);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "BIENVENIDO AJUSTES";
+            this.lblPerfil.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblPerfil.Location = new System.Drawing.Point(490, 25);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(101, 42);
+            this.lblPerfil.TabIndex = 20;
+            this.lblPerfil.Text = "AJUSTES";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(111, 225);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.TabIndex = 27;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
             // 
             // AJUSTES
             // 
@@ -49,7 +61,8 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1089, 647);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lblPerfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AJUSTES";
             this.Text = "AJUSTES";
@@ -60,6 +73,7 @@ namespace COMPRAS2
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
