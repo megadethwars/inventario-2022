@@ -32,11 +32,11 @@ namespace COMPRAS2
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
             this.lblHISTORIAL = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBUSQUEDAAVANZADA = new System.Windows.Forms.Button();
+            this.btnESCANEAR = new System.Windows.Forms.Button();
             this.btBUSCADOR = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -48,9 +48,9 @@ namespace COMPRAS2
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBUSCADOR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.txtBUSCADOR.Location = new System.Drawing.Point(141, 124);
+            this.txtBUSCADOR.Location = new System.Drawing.Point(119, 124);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
-            this.txtBUSCADOR.Size = new System.Drawing.Size(632, 19);
+            this.txtBUSCADOR.Size = new System.Drawing.Size(654, 19);
             this.txtBUSCADOR.TabIndex = 32;
             this.txtBUSCADOR.Text = "Search";
             // 
@@ -78,21 +78,37 @@ namespace COMPRAS2
             this.dataGridView1.TabIndex = 35;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button1
+            // btnBUSQUEDAAVANZADA
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Knockout 48 Featherweight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.button1.Location = new System.Drawing.Point(362, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 34);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "ESCANEAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBUSQUEDAAVANZADA.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBUSQUEDAAVANZADA.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnBUSQUEDAAVANZADA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBUSQUEDAAVANZADA.FlatAppearance.BorderSize = 0;
+            this.btnBUSQUEDAAVANZADA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBUSQUEDAAVANZADA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnBUSQUEDAAVANZADA.Location = new System.Drawing.Point(326, 73);
+            this.btnBUSQUEDAAVANZADA.Name = "btnBUSQUEDAAVANZADA";
+            this.btnBUSQUEDAAVANZADA.Size = new System.Drawing.Size(187, 34);
+            this.btnBUSQUEDAAVANZADA.TabIndex = 37;
+            this.btnBUSQUEDAAVANZADA.Text = "BUSQUEDA AVANZADA";
+            this.btnBUSQUEDAAVANZADA.UseVisualStyleBackColor = true;
+            // 
+            // btnESCANEAR
+            // 
+            this.btnESCANEAR.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnESCANEAR.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnESCANEAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnESCANEAR.FlatAppearance.BorderSize = 0;
+            this.btnESCANEAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnESCANEAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnESCANEAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnESCANEAR.Location = new System.Drawing.Point(362, 160);
+            this.btnESCANEAR.Name = "btnESCANEAR";
+            this.btnESCANEAR.Size = new System.Drawing.Size(109, 34);
+            this.btnESCANEAR.TabIndex = 36;
+            this.btnESCANEAR.Text = "ESCANEAR";
+            this.btnESCANEAR.UseVisualStyleBackColor = true;
             // 
             // btBUSCADOR
             // 
@@ -102,7 +118,7 @@ namespace COMPRAS2
             this.btBUSCADOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btBUSCADOR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBUSCADOR.Location = new System.Drawing.Point(105, 148);
+            this.btBUSCADOR.Location = new System.Drawing.Point(82, 123);
             this.btBUSCADOR.Name = "btBUSCADOR";
             this.btBUSCADOR.Size = new System.Drawing.Size(31, 25);
             this.btBUSCADOR.TabIndex = 33;
@@ -112,9 +128,9 @@ namespace COMPRAS2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pictureBox2.Location = new System.Drawing.Point(83, 114);
+            this.pictureBox2.Location = new System.Drawing.Point(58, 114);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(727, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(752, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
@@ -124,27 +140,11 @@ namespace COMPRAS2
             this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 30;
             this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Knockout 48 Featherweight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.button2.Location = new System.Drawing.Point(326, 73);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 34);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "BUSQUEDA AVANZADA";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // HIST
             // 
@@ -152,8 +152,8 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(871, 617);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBUSQUEDAAVANZADA);
+            this.Controls.Add(this.btnESCANEAR);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblHISTORIAL);
             this.Controls.Add(this.btBUSCADOR);
@@ -178,7 +178,7 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblHISTORIAL;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnESCANEAR;
+        private System.Windows.Forms.Button btnBUSQUEDAAVANZADA;
     }
 }

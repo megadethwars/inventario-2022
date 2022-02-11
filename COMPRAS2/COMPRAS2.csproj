@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AGREGAR PRODUCTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGREGAR PRODUCTO.Designer.cs">
+      <DependentUpon>AGREGAR PRODUCTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="AJUSTES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     <Compile Include="modelos\Devices.cs" />
     <Compile Include="modelos\Lugares.cs" />
     <Compile Include="modelos\StatusMessage.cs" />
+    <Compile Include="OPCIONES DE INVENTARIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPCIONES DE INVENTARIO.Designer.cs">
+      <DependentUpon>OPCIONES DE INVENTARIO.cs</DependentUpon>
+    </Compile>
     <Compile Include="PERFILADMIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,9 @@
     </Compile>
     <Compile Include="servicios\HttpMethods.cs" />
     <Compile Include="servicios\Navigator.cs" />
+    <EmbeddedResource Include="AGREGAR PRODUCTO.resx">
+      <DependentUpon>AGREGAR PRODUCTO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AJUSTES.resx">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MIPERFIL.resx">
       <DependentUpon>MIPERFIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OPCIONES DE INVENTARIO.resx">
+      <DependentUpon>OPCIONES DE INVENTARIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PERFILADMIN.resx">
       <DependentUpon>PERFILADMIN.cs</DependentUpon>
