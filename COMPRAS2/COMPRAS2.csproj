@@ -290,5 +290,17 @@
   <ItemGroup>
     <None Include="Resources\LINEA.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOGGLE BUTTON 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOGGLE BUTTON 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -143,6 +143,16 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BUTTON2 {
+            get {
+                object obj = ResourceManager.GetObject("BUTTON2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonspecial {
             get {
                 object obj = ResourceManager.GetObject("buttonspecial", resourceCulture);
@@ -323,6 +333,16 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap panel2 {
+            get {
+                object obj = ResourceManager.GetObject("panel2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap perfil2 {
             get {
                 object obj = ResourceManager.GetObject("perfil2", resourceCulture);
@@ -406,6 +426,26 @@ namespace COMPRAS2.Properties {
         internal static System.Drawing.Bitmap TIPO_DE_EMPLEADO {
             get {
                 object obj = ResourceManager.GetObject("TIPO DE EMPLEADO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TOGGLE_BUTTON_1 {
+            get {
+                object obj = ResourceManager.GetObject("TOGGLE BUTTON 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TOGGLE_BUTTON_2 {
+            get {
+                object obj = ResourceManager.GetObject("TOGGLE BUTTON 2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

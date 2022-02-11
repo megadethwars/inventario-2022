@@ -210,7 +210,7 @@ namespace COMPRAS2
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bTNBack.Location = new System.Drawing.Point(28, 30);
+            this.bTNBack.Location = new System.Drawing.Point(20, 20);
             this.bTNBack.Name = "bTNBack";
             this.bTNBack.Size = new System.Drawing.Size(50, 50);
             this.bTNBack.TabIndex = 19;
