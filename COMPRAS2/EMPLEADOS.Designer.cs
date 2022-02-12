@@ -39,6 +39,7 @@ namespace COMPRAS2
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.bTNBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,6 @@ namespace COMPRAS2
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            //this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.LUPA;
             this.pictureBox1.Location = new System.Drawing.Point(1029, 88);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 29);
@@ -152,12 +152,25 @@ namespace COMPRAS2
             this.label5.TabIndex = 22;
             this.label5.Text = "Fecha de Alta:";
             // 
+            // bTNBack
+            // 
+            this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
+            this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTNBack.Location = new System.Drawing.Point(20, 20);
+            this.bTNBack.Name = "bTNBack";
+            this.bTNBack.Size = new System.Drawing.Size(50, 50);
+            this.bTNBack.TabIndex = 23;
+            this.bTNBack.UseVisualStyleBackColor = true;
+            this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
+            // 
             // EMPLEADOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1089, 647);
+            this.Controls.Add(this.bTNBack);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -190,5 +203,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button bTNBack;
     }
 }

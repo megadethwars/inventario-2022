@@ -275,6 +275,7 @@ namespace COMPRAS2
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 29;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btBUSCADOR
             // 

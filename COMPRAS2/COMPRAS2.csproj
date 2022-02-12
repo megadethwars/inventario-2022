@@ -62,6 +62,12 @@
     <Compile Include="AJUSTES.Designer.cs">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUSQUEDA AVANZADA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSQUEDA AVANZADA.Designer.cs">
+      <DependentUpon>BUSQUEDA AVANZADA.cs</DependentUpon>
+    </Compile>
     <Compile Include="DETALLES DEL PRODUCTO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AJUSTES.resx">
       <DependentUpon>AJUSTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUSQUEDA AVANZADA.resx">
+      <DependentUpon>BUSQUEDA AVANZADA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DETALLES DEL PRODUCTO.resx">
       <DependentUpon>DETALLES DEL PRODUCTO.cs</DependentUpon>

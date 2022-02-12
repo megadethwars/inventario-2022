@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMPRAS2.servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace COMPRAS2
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
         }
     }
 }
