@@ -30,24 +30,24 @@ namespace COMPRAS2
         private void InitializeComponent()
         {
             this.INVENTARIOTITLE = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.brnOPCIONES = new System.Windows.Forms.Button();
+            this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCodigoQR = new System.Windows.Forms.Label();
             this.lblModelo = new System.Windows.Forms.Label();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
-            this.btnEscanear = new System.Windows.Forms.Button();
-            this.btBUSCADOR = new System.Windows.Forms.Button();
-            this.pboxBuscador = new System.Windows.Forms.PictureBox();
-            this.bTNBack = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblCompra = new System.Windows.Forms.Label();
             this.lblOrigen = new System.Windows.Forms.Label();
             this.lblSerie = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
+            this.btnEscanear = new System.Windows.Forms.Button();
+            this.btnBuscador = new System.Windows.Forms.Button();
+            this.pboxBuscador = new System.Windows.Forms.PictureBox();
+            this.bTNBack = new System.Windows.Forms.Button();
+            this.btnOPCIONES = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             this.SuspendLayout();
             // 
             // INVENTARIOTITLE
@@ -62,35 +62,17 @@ namespace COMPRAS2
             this.INVENTARIOTITLE.TabIndex = 2;
             this.INVENTARIOTITLE.Text = "INVENTARIO";
             // 
-            // dataGridView1
+            // dgvInventario
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvInventario.AllowUserToOrderColumns = true;
+            this.dgvInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 248);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1040, 319);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // brnOPCIONES
-            // 
-            this.brnOPCIONES.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.brnOPCIONES.BackColor = System.Drawing.Color.Transparent;
-            this.brnOPCIONES.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.brnOPCIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.brnOPCIONES.FlatAppearance.BorderSize = 0;
-            this.brnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.brnOPCIONES.Location = new System.Drawing.Point(24, 587);
-            this.brnOPCIONES.Name = "brnOPCIONES";
-            this.brnOPCIONES.Size = new System.Drawing.Size(114, 39);
-            this.brnOPCIONES.TabIndex = 6;
-            this.brnOPCIONES.Text = "OPCIONES";
-            this.brnOPCIONES.UseVisualStyleBackColor = false;
-            this.brnOPCIONES.Click += new System.EventHandler(this.brnOPCIONES_Click);
+            this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventario.Location = new System.Drawing.Point(24, 248);
+            this.dgvInventario.Name = "dgvInventario";
+            this.dgvInventario.Size = new System.Drawing.Size(1040, 319);
+            this.dgvInventario.TabIndex = 3;
             // 
             // lblProducto
             // 
@@ -161,60 +143,6 @@ namespace COMPRAS2
             this.txtBUSCADOR.TabIndex = 29;
             this.txtBUSCADOR.Text = "Search";
             // 
-            // btnEscanear
-            // 
-            this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEscanear.FlatAppearance.BorderSize = 0;
-            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEscanear.Location = new System.Drawing.Point(478, 157);
-            this.btnEscanear.Name = "btnEscanear";
-            this.btnEscanear.Size = new System.Drawing.Size(114, 39);
-            this.btnEscanear.TabIndex = 31;
-            this.btnEscanear.Text = "ESCANEAR";
-            this.btnEscanear.UseVisualStyleBackColor = false;
-            // 
-            // btBUSCADOR
-            // 
-            this.btBUSCADOR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            this.btBUSCADOR.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
-            this.btBUSCADOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBUSCADOR.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBUSCADOR.Location = new System.Drawing.Point(49, 108);
-            this.btBUSCADOR.Name = "btBUSCADOR";
-            this.btBUSCADOR.Size = new System.Drawing.Size(31, 25);
-            this.btBUSCADOR.TabIndex = 30;
-            this.btBUSCADOR.UseVisualStyleBackColor = false;
-            // 
-            // pboxBuscador
-            // 
-            this.pboxBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pboxBuscador.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pboxBuscador.Location = new System.Drawing.Point(28, 99);
-            this.pboxBuscador.Name = "pboxBuscador";
-            this.pboxBuscador.Size = new System.Drawing.Size(1036, 40);
-            this.pboxBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxBuscador.TabIndex = 28;
-            this.pboxBuscador.TabStop = false;
-            // 
-            // bTNBack
-            // 
-            this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
-            this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bTNBack.Location = new System.Drawing.Point(20, 20);
-            this.bTNBack.Name = "bTNBack";
-            this.bTNBack.Size = new System.Drawing.Size(50, 50);
-            this.bTNBack.TabIndex = 19;
-            this.bTNBack.UseVisualStyleBackColor = true;
-            this.bTNBack.Click += new System.EventHandler(this.bkBack_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -282,6 +210,78 @@ namespace COMPRAS2
             this.lblSerie.TabIndex = 33;
             this.lblSerie.Text = "Serie:";
             // 
+            // btnEscanear
+            // 
+            this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
+            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEscanear.FlatAppearance.BorderSize = 0;
+            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnEscanear.Location = new System.Drawing.Point(478, 157);
+            this.btnEscanear.Name = "btnEscanear";
+            this.btnEscanear.Size = new System.Drawing.Size(114, 39);
+            this.btnEscanear.TabIndex = 31;
+            this.btnEscanear.Text = "ESCANEAR";
+            this.btnEscanear.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscador
+            // 
+            this.btnBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            this.btnBuscador.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
+            this.btnBuscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscador.Location = new System.Drawing.Point(49, 108);
+            this.btnBuscador.Name = "btnBuscador";
+            this.btnBuscador.Size = new System.Drawing.Size(31, 25);
+            this.btnBuscador.TabIndex = 30;
+            this.btnBuscador.UseVisualStyleBackColor = false;
+            // 
+            // pboxBuscador
+            // 
+            this.pboxBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pboxBuscador.Image = global::COMPRAS2.Properties.Resources.SEARCH;
+            this.pboxBuscador.Location = new System.Drawing.Point(28, 99);
+            this.pboxBuscador.Name = "pboxBuscador";
+            this.pboxBuscador.Size = new System.Drawing.Size(1036, 40);
+            this.pboxBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxBuscador.TabIndex = 28;
+            this.pboxBuscador.TabStop = false;
+            // 
+            // bTNBack
+            // 
+            this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
+            this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTNBack.Location = new System.Drawing.Point(20, 20);
+            this.bTNBack.Name = "bTNBack";
+            this.bTNBack.Size = new System.Drawing.Size(50, 50);
+            this.bTNBack.TabIndex = 19;
+            this.bTNBack.UseVisualStyleBackColor = true;
+            this.bTNBack.Click += new System.EventHandler(this.bkBack_Click);
+            // 
+            // btnOPCIONES
+            // 
+            this.btnOPCIONES.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnOPCIONES.BackColor = System.Drawing.Color.Transparent;
+            this.btnOPCIONES.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnOPCIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOPCIONES.FlatAppearance.BorderSize = 0;
+            this.btnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnOPCIONES.Location = new System.Drawing.Point(24, 587);
+            this.btnOPCIONES.Name = "btnOPCIONES";
+            this.btnOPCIONES.Size = new System.Drawing.Size(114, 39);
+            this.btnOPCIONES.TabIndex = 6;
+            this.btnOPCIONES.Text = "OPCIONES";
+            this.btnOPCIONES.UseVisualStyleBackColor = false;
+            this.btnOPCIONES.Click += new System.EventHandler(this.brnOPCIONES_Click);
+            // 
             // INVENTARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,21 +290,21 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1089, 647);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnEscanear);
-            this.Controls.Add(this.btBUSCADOR);
+            this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.txtBUSCADOR);
             this.Controls.Add(this.pboxBuscador);
             this.Controls.Add(this.bTNBack);
-            this.Controls.Add(this.brnOPCIONES);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnOPCIONES);
+            this.Controls.Add(this.dgvInventario);
             this.Controls.Add(this.INVENTARIOTITLE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "INVENTARIO";
             this.Text = "INVENTARIO";
             this.Load += new System.EventHandler(this.INVENTARIO_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,14 +313,14 @@ namespace COMPRAS2
         #endregion
 
         private System.Windows.Forms.Label INVENTARIOTITLE;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button brnOPCIONES;
+        private System.Windows.Forms.DataGridView dgvInventario;
+        private System.Windows.Forms.Button btnOPCIONES;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCodigoQR;
         private System.Windows.Forms.Label lblModelo;
         private System.Windows.Forms.Button bTNBack;
-        private System.Windows.Forms.Button btBUSCADOR;
+        private System.Windows.Forms.Button btnBuscador;
         private System.Windows.Forms.TextBox txtBUSCADOR;
         private System.Windows.Forms.PictureBox pboxBuscador;
         private System.Windows.Forms.Button btnEscanear;

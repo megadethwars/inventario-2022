@@ -92,11 +92,11 @@
     <Compile Include="HIST.Designer.cs">
       <DependentUpon>HIST.cs</DependentUpon>
     </Compile>
-    <Compile Include="HISTORIALFORM.cs">
+    <Compile Include="INGRESAR PRODUCTO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HISTORIALFORM.Designer.cs">
-      <DependentUpon>HISTORIALFORM.cs</DependentUpon>
+    <Compile Include="INGRESAR PRODUCTO.Designer.cs">
+      <DependentUpon>INGRESAR PRODUCTO.cs</DependentUpon>
     </Compile>
     <Compile Include="INICIARSESION.cs">
       <SubType>Form</SubType>
@@ -109,6 +109,12 @@
     </Compile>
     <Compile Include="INVENTARIO.Designer.cs">
       <DependentUpon>INVENTARIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LUGARES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LUGARES.Designer.cs">
+      <DependentUpon>LUGARES.cs</DependentUpon>
     </Compile>
     <Compile Include="MENU.cs">
       <SubType>Form</SubType>
@@ -156,6 +162,12 @@
     <Compile Include="REPORTES.Designer.cs">
       <DependentUpon>REPORTES.cs</DependentUpon>
     </Compile>
+    <Compile Include="SALIDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SALIDA.Designer.cs">
+      <DependentUpon>SALIDA.cs</DependentUpon>
+    </Compile>
     <Compile Include="servicios\HttpMethods.cs" />
     <Compile Include="servicios\Navigator.cs" />
     <EmbeddedResource Include="AGREGAR PRODUCTO.resx">
@@ -179,14 +191,17 @@
     <EmbeddedResource Include="HIST.resx">
       <DependentUpon>HIST.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HISTORIALFORM.resx">
-      <DependentUpon>HISTORIALFORM.cs</DependentUpon>
+    <EmbeddedResource Include="INGRESAR PRODUCTO.resx">
+      <DependentUpon>INGRESAR PRODUCTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="INICIARSESION.resx">
       <DependentUpon>INICIARSESION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="INVENTARIO.resx">
       <DependentUpon>INVENTARIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LUGARES.resx">
+      <DependentUpon>LUGARES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU.resx">
       <DependentUpon>MENU.cs</DependentUpon>
@@ -210,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES.resx">
       <DependentUpon>REPORTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SALIDA.resx">
+      <DependentUpon>SALIDA.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

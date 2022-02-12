@@ -50,7 +50,7 @@ namespace COMPRAS2
             List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
             //dataGridView1.DataSource = lugares;
-            dataGridView1.DataSource = devices;
+            dgvInventario.DataSource = devices;
         }
 
         public async Task<string> Gethttp()

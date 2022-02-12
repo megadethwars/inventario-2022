@@ -29,9 +29,13 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LUGARES));
             this.lblLugares = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvLugares = new System.Windows.Forms.DataGridView();
+            this.txtLugarDeseado = new System.Windows.Forms.TextBox();
+            this.lblIngresarLugarDeseado = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLugares)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLugares
@@ -46,17 +50,52 @@ namespace COMPRAS2
             this.lblLugares.TabIndex = 66;
             this.lblLugares.Text = "LUGARES";
             // 
-            // dataGridView1
+            // dgvLugares
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvLugares.AllowUserToOrderColumns = true;
+            this.dgvLugares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(364, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(331, 319);
-            this.dataGridView1.TabIndex = 67;
+            this.dgvLugares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLugares.Location = new System.Drawing.Point(364, 63);
+            this.dgvLugares.Name = "dgvLugares";
+            this.dgvLugares.Size = new System.Drawing.Size(331, 371);
+            this.dgvLugares.TabIndex = 67;
+            // 
+            // txtLugarDeseado
+            // 
+            this.txtLugarDeseado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtLugarDeseado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLugarDeseado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLugarDeseado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtLugarDeseado.Location = new System.Drawing.Point(364, 485);
+            this.txtLugarDeseado.Name = "txtLugarDeseado";
+            this.txtLugarDeseado.Size = new System.Drawing.Size(331, 26);
+            this.txtLugarDeseado.TabIndex = 75;
+            this.txtLugarDeseado.Text = "Ingrese Lugar Deseado";
+            // 
+            // lblIngresarLugarDeseado
+            // 
+            this.lblIngresarLugarDeseado.AutoSize = true;
+            this.lblIngresarLugarDeseado.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresarLugarDeseado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblIngresarLugarDeseado.Location = new System.Drawing.Point(358, 450);
+            this.lblIngresarLugarDeseado.Name = "lblIngresarLugarDeseado";
+            this.lblIngresarLugarDeseado.Size = new System.Drawing.Size(198, 32);
+            this.lblIngresarLugarDeseado.TabIndex = 74;
+            this.lblIngresarLugarDeseado.Text = "INGRESAR NUEVO LUGAR:";
+            // 
+            // btnOK
+            // 
+            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
+            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Location = new System.Drawing.Point(488, 537);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(88, 34);
+            this.btnOK.TabIndex = 76;
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
             // LUGARES
             // 
@@ -65,12 +104,15 @@ namespace COMPRAS2
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1073, 608);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.txtLugarDeseado);
+            this.Controls.Add(this.lblIngresarLugarDeseado);
+            this.Controls.Add(this.dgvLugares);
             this.Controls.Add(this.lblLugares);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LUGARES";
             this.Text = "LUGARES";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLugares)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,6 +121,9 @@ namespace COMPRAS2
         #endregion
 
         private System.Windows.Forms.Label lblLugares;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLugares;
+        private System.Windows.Forms.TextBox txtLugarDeseado;
+        private System.Windows.Forms.Label lblIngresarLugarDeseado;
+        private System.Windows.Forms.Button btnOK;
     }
 }

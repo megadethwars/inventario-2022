@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMPRAS2
 {
-    public partial class HISTORIALFORM : Form
+    public partial class BUSQUEDA_AVANZADA : Form
     {
-        public HISTORIALFORM()
+        public BUSQUEDA_AVANZADA()
         {
             InitializeComponent();
         }
