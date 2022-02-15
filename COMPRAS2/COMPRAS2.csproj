@@ -176,6 +176,9 @@
     </Compile>
     <Compile Include="servicios\HttpMethods.cs" />
     <Compile Include="servicios\Navigator.cs" />
+    <Compile Include="Toggle Button\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="AGREGAR PRODUCTO.resx">
       <DependentUpon>AGREGAR PRODUCTO.cs</DependentUpon>
     </EmbeddedResource>

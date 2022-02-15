@@ -107,7 +107,7 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1384, 861);
             this.Controls.Add(this.PANELCONTENEDOR);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1300, 700);
+            this.MinimumSize = new System.Drawing.Size(1400, 900);
             this.Name = "MENU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU";
