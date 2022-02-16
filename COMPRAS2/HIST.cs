@@ -27,5 +27,10 @@ namespace COMPRAS2
         {
             Navigator.backPage(this.Name, this);
         }
+
+        private void btnBUSQUEDAAVANZADA_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new BUSQUEDA_AVANZADA());
+        }
     }
 }

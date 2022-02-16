@@ -102,16 +102,6 @@ namespace COMPRAS2
         {
             Navigator.nextPage(new LUGARES());
         }
-        /*
-        private void button1_MouseCaptureChanged(object sender, EventArgs e)
-        {
-            
-            //button1.BackColor = ColorTranslator.FromHtml("Red");
-        }
-
-        private void button1_DragEnter(object sender, DragEventArgs e)
-        {
-            button1.BackColor = ColorTranslator.FromHtml("Red");
-        }*/
+        
     }
 }

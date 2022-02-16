@@ -33,10 +33,9 @@ namespace COMPRAS2
             this.lblCopiaDeSeguridad = new System.Windows.Forms.Label();
             this.lblSincronizacionAutomatica = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.bTNBack = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.toggleButton1 = new COMPRAS2.Toggle_Button.ToggleButton();
+            this.toggleButton2 = new COMPRAS2.Toggle_Button.ToggleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,21 +88,6 @@ namespace COMPRAS2
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(84)))));
-            this.button1.BackgroundImage = global::COMPRAS2.Properties.Resources.TOGGLE_BUTTON_1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(20, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 40);
-            this.button1.TabIndex = 25;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // bTNBack
             // 
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
@@ -118,31 +102,37 @@ namespace COMPRAS2
             this.bTNBack.UseVisualStyleBackColor = true;
             this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
             // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(84)))));
-            this.button2.BackgroundImage = global::COMPRAS2.Properties.Resources.TOGGLE_BUTTON_1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(20, 306);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 40);
-            this.button2.TabIndex = 27;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // toggleButton1
             // 
+            this.toggleButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.toggleButton1.AutoSize = true;
-            this.toggleButton1.Location = new System.Drawing.Point(355, 184);
+            this.toggleButton1.Location = new System.Drawing.Point(337, 184);
             this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
             this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
+            this.toggleButton1.OffToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.toggleButton1.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
+            this.toggleButton1.OnToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
             this.toggleButton1.Size = new System.Drawing.Size(92, 22);
             this.toggleButton1.TabIndex = 29;
             this.toggleButton1.Text = "toggleButton1";
             this.toggleButton1.UseVisualStyleBackColor = true;
+            // 
+            // toggleButton2
+            // 
+            this.toggleButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.toggleButton2.AutoSize = true;
+            this.toggleButton2.Location = new System.Drawing.Point(337, 282);
+            this.toggleButton2.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleButton2.Name = "toggleButton2";
+            this.toggleButton2.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
+            this.toggleButton2.OffToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.toggleButton2.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
+            this.toggleButton2.OnToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.toggleButton2.Size = new System.Drawing.Size(92, 22);
+            this.toggleButton2.TabIndex = 30;
+            this.toggleButton2.Text = "toggleButton2";
+            this.toggleButton2.UseVisualStyleBackColor = true;
             // 
             // AJUSTES
             // 
@@ -150,9 +140,8 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1089, 647);
+            this.Controls.Add(this.toggleButton2);
             this.Controls.Add(this.toggleButton1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.bTNBack);
             this.Controls.Add(this.lblSincronizacionAutomatica);
             this.Controls.Add(this.lblCopiaDeSeguridad);
@@ -173,9 +162,8 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblCopiaDeSeguridad;
         private System.Windows.Forms.Label lblSincronizacionAutomatica;
         private System.Windows.Forms.Button bTNBack;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
         private Toggle_Button.ToggleButton toggleButton1;
+        private Toggle_Button.ToggleButton toggleButton2;
     }
 }
