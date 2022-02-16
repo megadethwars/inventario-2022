@@ -75,17 +75,43 @@ namespace COMPRAS2
             this.mainmenu.PANELCONTENEDOR.Tag = fh;
             fh.Show();
         }
-
-        private void brnOPCIONES_Click(object sender, EventArgs e)
-        {
-            //AbrirFormHija(new MIPERFIL());
-            Navigator.nextPage(new MIPERFIL());
-        }
+        
 
         private void bkBack_Click(object sender, EventArgs e)
         {
             Navigator.backPage(this.Name, this);
             
         }
+
+        private void btnAgregarNuevoProducto_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new AGREGAR_PRODUCTO());
+        }
+
+        private void btnReingresarProducto_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new INGRESAR_PRODUCTO());
+        }
+
+        private void btnSALIDA_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new SALIDA());
+        }
+
+        private void btnActualizarProducto_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new LUGARES());
+        }
+        /*
+        private void button1_MouseCaptureChanged(object sender, EventArgs e)
+        {
+            
+            //button1.BackColor = ColorTranslator.FromHtml("Red");
+        }
+
+        private void button1_DragEnter(object sender, DragEventArgs e)
+        {
+            button1.BackColor = ColorTranslator.FromHtml("Red");
+        }*/
     }
 }

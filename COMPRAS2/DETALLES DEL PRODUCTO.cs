@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMPRAS2.servicios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace COMPRAS2
         public DETALLES_DEL_PRODUCTO()
         {
             InitializeComponent();
+        }
+
+        private void brnOPCIONES_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new EDITAR_PRODUCTO());
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
         }
     }
 }

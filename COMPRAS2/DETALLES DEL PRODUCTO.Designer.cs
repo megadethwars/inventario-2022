@@ -62,7 +62,7 @@ namespace COMPRAS2
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.brnOPCIONES = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnELIMINAR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtCosto
@@ -197,6 +197,7 @@ namespace COMPRAS2
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 44;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblProvedor
             // 
@@ -451,24 +452,25 @@ namespace COMPRAS2
             this.brnOPCIONES.TabIndex = 65;
             this.brnOPCIONES.Text = "OPCIONES";
             this.brnOPCIONES.UseVisualStyleBackColor = false;
+            this.brnOPCIONES.Click += new System.EventHandler(this.brnOPCIONES_Click);
             // 
-            // button1
+            // btnELIMINAR
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.button1.Location = new System.Drawing.Point(203, 692);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 39);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "ELIMINAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnELIMINAR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnELIMINAR.BackColor = System.Drawing.Color.Transparent;
+            this.btnELIMINAR.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnELIMINAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnELIMINAR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnELIMINAR.FlatAppearance.BorderSize = 0;
+            this.btnELIMINAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnELIMINAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnELIMINAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnELIMINAR.Location = new System.Drawing.Point(203, 692);
+            this.btnELIMINAR.Name = "btnELIMINAR";
+            this.btnELIMINAR.Size = new System.Drawing.Size(114, 39);
+            this.btnELIMINAR.TabIndex = 66;
+            this.btnELIMINAR.Text = "ELIMINAR";
+            this.btnELIMINAR.UseVisualStyleBackColor = false;
             // 
             // DETALLES_DEL_PRODUCTO
             // 
@@ -476,7 +478,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1073, 751);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnELIMINAR);
             this.Controls.Add(this.brnOPCIONES);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
@@ -552,6 +554,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button brnOPCIONES;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnELIMINAR;
     }
 }

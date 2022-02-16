@@ -54,7 +54,7 @@ namespace COMPRAS2
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBUSCADOR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.txtBUSCADOR.Location = new System.Drawing.Point(82, 109);
+            this.txtBUSCADOR.Location = new System.Drawing.Point(181, 109);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
             this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
             this.txtBUSCADOR.TabIndex = 34;
@@ -66,7 +66,7 @@ namespace COMPRAS2
             this.lblIngresarProducto.AutoSize = true;
             this.lblIngresarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblIngresarProducto.Location = new System.Drawing.Point(424, 20);
+            this.lblIngresarProducto.Location = new System.Drawing.Point(560, 30);
             this.lblIngresarProducto.Name = "lblIngresarProducto";
             this.lblIngresarProducto.Size = new System.Drawing.Size(218, 42);
             this.lblIngresarProducto.TabIndex = 31;
@@ -80,7 +80,7 @@ namespace COMPRAS2
             this.btBUSCADOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btBUSCADOR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBUSCADOR.Location = new System.Drawing.Point(45, 108);
+            this.btBUSCADOR.Location = new System.Drawing.Point(144, 108);
             this.btBUSCADOR.Name = "btBUSCADOR";
             this.btBUSCADOR.Size = new System.Drawing.Size(31, 25);
             this.btBUSCADOR.TabIndex = 35;
@@ -90,7 +90,7 @@ namespace COMPRAS2
             // 
             this.pboxBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pboxBuscador.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pboxBuscador.Location = new System.Drawing.Point(24, 99);
+            this.pboxBuscador.Location = new System.Drawing.Point(123, 99);
             this.pboxBuscador.Name = "pboxBuscador";
             this.pboxBuscador.Size = new System.Drawing.Size(1036, 40);
             this.pboxBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,12 +101,14 @@ namespace COMPRAS2
             // 
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTNBack.Location = new System.Drawing.Point(20, 20);
             this.bTNBack.Name = "bTNBack";
             this.bTNBack.Size = new System.Drawing.Size(50, 50);
             this.bTNBack.TabIndex = 32;
             this.bTNBack.UseVisualStyleBackColor = true;
+            this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
             // 
             // btnEscanear
             // 
@@ -114,11 +116,12 @@ namespace COMPRAS2
             this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
             this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEscanear.FlatAppearance.BorderSize = 0;
             this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEscanear.Location = new System.Drawing.Point(468, 145);
+            this.btnEscanear.Location = new System.Drawing.Point(573, 157);
             this.btnEscanear.Name = "btnEscanear";
             this.btnEscanear.Size = new System.Drawing.Size(114, 39);
             this.btnEscanear.TabIndex = 55;
@@ -127,11 +130,13 @@ namespace COMPRAS2
             // 
             // txtMarca
             // 
+            this.txtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtMarca.Location = new System.Drawing.Point(611, 225);
+            this.txtMarca.Location = new System.Drawing.Point(768, 286);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(426, 26);
             this.txtMarca.TabIndex = 59;
@@ -143,7 +148,7 @@ namespace COMPRAS2
             this.txtProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtProducto.Location = new System.Drawing.Point(45, 225);
+            this.txtProducto.Location = new System.Drawing.Point(54, 286);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(426, 26);
             this.txtProducto.TabIndex = 58;
@@ -151,10 +156,12 @@ namespace COMPRAS2
             // 
             // lblMarca
             // 
+            this.lblMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblMarca.Location = new System.Drawing.Point(611, 185);
+            this.lblMarca.Location = new System.Drawing.Point(768, 246);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(71, 32);
             this.lblMarca.TabIndex = 57;
@@ -165,7 +172,7 @@ namespace COMPRAS2
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblProducto.Location = new System.Drawing.Point(45, 185);
+            this.lblProducto.Location = new System.Drawing.Point(54, 246);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(197, 32);
             this.lblProducto.TabIndex = 56;
@@ -173,11 +180,13 @@ namespace COMPRAS2
             // 
             // txtProvedor
             // 
+            this.txtProvedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProvedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtProvedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtProvedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProvedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtProvedor.Location = new System.Drawing.Point(611, 308);
+            this.txtProvedor.Location = new System.Drawing.Point(774, 410);
             this.txtProvedor.Name = "txtProvedor";
             this.txtProvedor.Size = new System.Drawing.Size(426, 26);
             this.txtProvedor.TabIndex = 63;
@@ -189,7 +198,7 @@ namespace COMPRAS2
             this.txtSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtSerie.Location = new System.Drawing.Point(45, 308);
+            this.txtSerie.Location = new System.Drawing.Point(60, 410);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(426, 26);
             this.txtSerie.TabIndex = 62;
@@ -197,10 +206,12 @@ namespace COMPRAS2
             // 
             // lblProvedor
             // 
+            this.lblProvedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProvedor.AutoSize = true;
             this.lblProvedor.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProvedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblProvedor.Location = new System.Drawing.Point(611, 268);
+            this.lblProvedor.Location = new System.Drawing.Point(774, 370);
             this.lblProvedor.Name = "lblProvedor";
             this.lblProvedor.Size = new System.Drawing.Size(105, 32);
             this.lblProvedor.TabIndex = 61;
@@ -211,7 +222,7 @@ namespace COMPRAS2
             this.lblSerie.AutoSize = true;
             this.lblSerie.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblSerie.Location = new System.Drawing.Point(45, 268);
+            this.lblSerie.Location = new System.Drawing.Point(60, 370);
             this.lblSerie.Name = "lblSerie";
             this.lblSerie.Size = new System.Drawing.Size(62, 32);
             this.lblSerie.TabIndex = 60;
@@ -222,7 +233,7 @@ namespace COMPRAS2
             this.lblOrigen.AutoSize = true;
             this.lblOrigen.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrigen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblOrigen.Location = new System.Drawing.Point(45, 349);
+            this.lblOrigen.Location = new System.Drawing.Point(60, 498);
             this.lblOrigen.Name = "lblOrigen";
             this.lblOrigen.Size = new System.Drawing.Size(74, 32);
             this.lblOrigen.TabIndex = 64;
@@ -233,7 +244,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1073, 608);
+            this.ClientSize = new System.Drawing.Size(1279, 861);
             this.Controls.Add(this.lblOrigen);
             this.Controls.Add(this.txtProvedor);
             this.Controls.Add(this.txtSerie);
