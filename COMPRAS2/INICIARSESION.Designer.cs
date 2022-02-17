@@ -40,7 +40,7 @@ namespace COMPRAS2
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.SPECIALBUTTON = new System.Windows.Forms.PictureBox();
+            this.btnSingIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCERRAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMIN)).BeginInit();
@@ -49,7 +49,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SPECIALBUTTON)).BeginInit();
             this.SuspendLayout();
             // 
             // USERID
@@ -178,25 +177,29 @@ namespace COMPRAS2
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
             // 
-            // SPECIALBUTTON
+            // btnSingIn
             // 
-            this.SPECIALBUTTON.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SPECIALBUTTON.Image = global::COMPRAS2.Properties.Resources.specialbutton;
-            this.SPECIALBUTTON.Location = new System.Drawing.Point(74, 634);
-            this.SPECIALBUTTON.Name = "SPECIALBUTTON";
-            this.SPECIALBUTTON.Size = new System.Drawing.Size(261, 50);
-            this.SPECIALBUTTON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SPECIALBUTTON.TabIndex = 19;
-            this.SPECIALBUTTON.TabStop = false;
-            this.SPECIALBUTTON.Click += new System.EventHandler(this.SPECIALBUTTON_Click);
+            this.btnSingIn.BackgroundImage = global::COMPRAS2.Properties.Resources.specialbutton2;
+            this.btnSingIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSingIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSingIn.FlatAppearance.BorderSize = 0;
+            this.btnSingIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnSingIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSingIn.Location = new System.Drawing.Point(74, 690);
+            this.btnSingIn.Name = "btnSingIn";
+            this.btnSingIn.Size = new System.Drawing.Size(261, 54);
+            this.btnSingIn.TabIndex = 20;
+            this.btnSingIn.UseVisualStyleBackColor = true;
+            this.btnSingIn.Click += new System.EventHandler(this.btnSingIn_Click);
             // 
             // INICIARSESION
             // 
+            this.AcceptButton = this.btnSingIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(400, 800);
-            this.Controls.Add(this.SPECIALBUTTON);
+            this.Controls.Add(this.btnSingIn);
             this.Controls.Add(this.USERID);
             this.Controls.Add(this.PASSWORD);
             this.Controls.Add(this.pictureBox3);
@@ -219,7 +222,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SPECIALBUTTON)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,6 +239,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox SPECIALBUTTON;
+        private System.Windows.Forms.Button btnSingIn;
     }
 }

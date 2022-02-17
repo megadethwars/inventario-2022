@@ -102,19 +102,6 @@ namespace COMPRAS2
 
         }
 
-        private async void SPECIALBUTTON_Click(object sender, EventArgs e)
-        {
-
-            int status = await Auth();
-            if (status == 0)
-            {
-                MENU menu = new MENU();
-                menu.Show();
-                this.Hide();
-            }
-
-        }
-
         private void USERID_Leave(object sender, EventArgs e)
         {
             if (USERID.Text == "")
@@ -143,6 +130,17 @@ namespace COMPRAS2
         {
             PASSWORD.Clear();
             PASSWORD.UseSystemPasswordChar = true;
+        }
+
+        private async void btnSingIn_Click(object sender, EventArgs e)
+        {
+            int status = await Auth();
+            if (status == 0)
+            {
+                MENU menu = new MENU();
+                menu.Show();
+                this.Hide();
+            }
         }
     }
 }

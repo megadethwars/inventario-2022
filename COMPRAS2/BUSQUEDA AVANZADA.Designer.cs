@@ -47,7 +47,7 @@ namespace COMPRAS2
             this.lblSerie = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblBusquedaAvanzada = new System.Windows.Forms.Label();
-            this.btnEscanear = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOK
@@ -255,22 +255,22 @@ namespace COMPRAS2
             this.lblBusquedaAvanzada.TabIndex = 32;
             this.lblBusquedaAvanzada.Text = "BUSQUEDA AVANZADA";
             // 
-            // btnEscanear
+            // btnCancelar
             // 
-            this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEscanear.FlatAppearance.BorderSize = 0;
-            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEscanear.Location = new System.Drawing.Point(684, 781);
-            this.btnEscanear.Name = "btnEscanear";
-            this.btnEscanear.Size = new System.Drawing.Size(114, 39);
-            this.btnEscanear.TabIndex = 57;
-            this.btnEscanear.Text = "ESCANEAR";
-            this.btnEscanear.UseVisualStyleBackColor = false;
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnCancelar.Location = new System.Drawing.Point(684, 781);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(114, 39);
+            this.btnCancelar.TabIndex = 57;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // BUSQUEDA_AVANZADA
             // 
@@ -278,7 +278,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.btnEscanear);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtSerie);
@@ -323,6 +323,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblBusquedaAvanzada;
-        private System.Windows.Forms.Button btnEscanear;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
