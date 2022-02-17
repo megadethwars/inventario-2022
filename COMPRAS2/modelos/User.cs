@@ -20,11 +20,11 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string correo { get; set; }
 
-   
-        public DateTime fechaAlta { get; private set; }
 
-        
-        public DateTime fechaUltimaModificacion { get; private  set; }
+        public DateTime? fechaAlta = null;
+
+
+        public DateTime? fechaUltimaModificacion = null;
 
  
         public string foto { get; set; }

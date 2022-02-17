@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using COMPRAS2.modelos;
 using Newtonsoft.Json;
 using COMPRAS2.servicios;
+using Newtonsoft.Json.Converters;
 
 namespace COMPRAS2
 {
@@ -72,7 +73,7 @@ namespace COMPRAS2
              
 
                 string json = JsonConvert.SerializeObject(user,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore});
                 var url = HttpMethods.url + "usuarios/login";
                 StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
@@ -82,7 +83,7 @@ namespace COMPRAS2
                     return 2;
                 }
 
-                User userDeserialize = JsonConvert.DeserializeObject<User>(statusmessage.data);
+                User userDeserialize = JsonConvert.DeserializeObject<User>(statusmessage.data, new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSz" });
 
                 CurrentUser.username = userDeserialize.username;
                 CurrentUser.nombre = userDeserialize.nombre;
