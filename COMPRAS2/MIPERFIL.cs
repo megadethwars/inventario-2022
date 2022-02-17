@@ -18,7 +18,11 @@ namespace COMPRAS2
 
         public MIPERFIL()
         {
-            InitializeComponent();        
+            InitializeComponent();
+
+            this.nombre1.Text = CurrentUser.nombre;
+            this.telefono1.Text = CurrentUser.telefono;
+            this.correo1.Text = CurrentUser.correo;
         }
 
         private void AbrirFormHija(object formhija)

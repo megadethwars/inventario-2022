@@ -140,9 +140,11 @@
     <Compile Include="MIPERFIL.Designer.cs">
       <DependentUpon>MIPERFIL.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelos\CurrentUser.cs" />
     <Compile Include="modelos\Devices.cs" />
     <Compile Include="modelos\Lugares.cs" />
     <Compile Include="modelos\StatusMessage.cs" />
+    <Compile Include="modelos\User.cs" />
     <Compile Include="OPCIONES DE INVENTARIO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +178,7 @@
     </Compile>
     <Compile Include="servicios\HttpMethods.cs" />
     <Compile Include="servicios\Navigator.cs" />
+    <Compile Include="servicios\VG.cs" />
     <Compile Include="Toggle Button\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>

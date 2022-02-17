@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using COMPRAS2.modelos;
+using Newtonsoft.Json;
+using COMPRAS2.servicios;
 
 namespace COMPRAS2
 {
@@ -39,13 +42,78 @@ namespace COMPRAS2
             SendMessage(this.Handle, 0x112,0xf012, 0);
         }
 
-        private void SPECIALBUTTON_Click(object sender, EventArgs e)
+
+        private async Task<int> Auth()
         {
-            MENU menu = new MENU();
-            menu.Show();
-            this.Hide();
+            try
+            {
+                if (USERID.Text == "")
+                {
+                    MessageBox.Show("campo de usuario vacio");
+                    return 1;
+                }
+
+                if (PASSWORD.Text == "")
+                {
+                    MessageBox.Show("campo de password vacio");
+                    return 1;
+                }
+
+                modelos.User user = new User();
+                user.username = USERID.Text;
+                user.password = PASSWORD.Text;
+                user.id = 0;
+                user.rolId = 0;
+                user.nombre = null;
+                user.statusId = 0;
+                user.telefono = null;
+                user.correo = null;
+          
+             
+
+                string json = JsonConvert.SerializeObject(user,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                var url = HttpMethods.url + "usuarios/login";
+                StatusMessage statusmessage = await HttpMethods.Post(url, json);
+
+                if (statusmessage.statuscode != 201)
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrectos");
+                    return 2;
+                }
+
+                User userDeserialize = JsonConvert.DeserializeObject<User>(statusmessage.data);
+
+                CurrentUser.username = userDeserialize.username;
+                CurrentUser.nombre = userDeserialize.nombre;
+                CurrentUser.apellidoPaterno = userDeserialize.apellidoPaterno;
+                CurrentUser.apellidoMaterno = userDeserialize.apellidoMaterno;
+                CurrentUser.correo = userDeserialize.correo;
+                CurrentUser.telefono = userDeserialize.telefono;
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+                return 10;
+            }
+
         }
-        
+
+        private async void SPECIALBUTTON_Click(object sender, EventArgs e)
+        {
+
+            int status = await Auth();
+            if (status == 0)
+            {
+                MENU menu = new MENU();
+                menu.Show();
+                this.Hide();
+            }
+
+        }
+
         private void USERID_Leave(object sender, EventArgs e)
         {
             if (USERID.Text == "")
@@ -55,7 +123,7 @@ namespace COMPRAS2
             }
         }
 
-        private void PASSWORD_Leave(object sender, EventArgs e)
+        public void PASSWORD_Leave(object sender, EventArgs e)
         {
             if (PASSWORD.Text == "")
             {

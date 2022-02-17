@@ -27,7 +27,20 @@ namespace COMPRAS2.servicios
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(estado, new Dictionary<string, object>());
 
                     mensaje.message = htmlAttributes["message"].ToString();
-                    mensaje.data = htmlAttributes["data"].ToString();
+                    if (htmlAttributes.ContainsKey("data")) {
+
+                        if (htmlAttributes.TryGetValue("data", out var name))
+                        {
+                            var valueAsString = name?.ToString();
+                            htmlAttributes.Add("data2", valueAsString ?? "unknown");
+                        }
+
+
+                        mensaje.data = htmlAttributes["data2"].ToString();
+                        
+                        
+                    }
+                    
                     mensaje.statuscode = (int)result.StatusCode;
                     return mensaje;
                 }
@@ -60,7 +73,21 @@ namespace COMPRAS2.servicios
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(stringres, new Dictionary<string, object>());
 
                     statusmessage.message = htmlAttributes["message"].ToString();
-                    statusmessage.data = htmlAttributes["data"].ToString();
+                    if (htmlAttributes.ContainsKey("data"))
+                    {
+
+                        if (htmlAttributes.TryGetValue("data", out var name))
+                        {
+                            var valueAsString = name?.ToString();
+                            htmlAttributes.Add("data2", valueAsString ?? "unknown");
+                        }
+
+
+                        statusmessage.data = htmlAttributes["data2"].ToString();
+
+
+                    }
+                    statusmessage.data = htmlAttributes["data2"].ToString();
                     statusmessage.statuscode = (int)response.StatusCode;
 
 
@@ -95,7 +122,21 @@ namespace COMPRAS2.servicios
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(estado, new Dictionary<string, object>());
 
                     statusmessage.message = htmlAttributes["message"].ToString();
-                    statusmessage.data = htmlAttributes["data"].ToString();
+                    if (htmlAttributes.ContainsKey("data"))
+                    {
+
+                        if (htmlAttributes.TryGetValue("data", out var name))
+                        {
+                            var valueAsString = name?.ToString();
+                            htmlAttributes.Add("data2", valueAsString ?? "unknown");
+                        }
+
+
+                        statusmessage.data = htmlAttributes["data2"].ToString();
+
+
+                    }
+                    statusmessage.data = htmlAttributes["data2"].ToString();
                     statusmessage.statuscode = (int)response.StatusCode;
                     return statusmessage;
                 }
@@ -128,7 +169,21 @@ namespace COMPRAS2.servicios
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(estado, new Dictionary<string, object>());
 
                     statusmessage.message = htmlAttributes["message"].ToString();
-                    statusmessage.data = htmlAttributes["data"].ToString();
+                    if (htmlAttributes.ContainsKey("data"))
+                    {
+
+                        if (htmlAttributes.TryGetValue("data", out var name))
+                        {
+                            var valueAsString = name?.ToString();
+                            htmlAttributes.Add("data2", valueAsString ?? "unknown");
+                        }
+
+
+                        statusmessage.data = htmlAttributes["data2"].ToString();
+
+
+                    }
+                    statusmessage.data = htmlAttributes["data2"].ToString();
                     statusmessage.statuscode = (int)response.StatusCode;
                     return statusmessage;
                 }

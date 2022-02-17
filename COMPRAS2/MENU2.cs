@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COMPRAS2.modelos;
 using COMPRAS2.servicios;
 namespace COMPRAS2
 {
@@ -19,7 +20,8 @@ namespace COMPRAS2
         {
             InitializeComponent();
             this.mainmenu = mainMenu;
-            
+
+            this.lbUsername.Text = CurrentUser.username;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
