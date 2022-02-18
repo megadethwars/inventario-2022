@@ -29,16 +29,6 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCosto = new System.Windows.Forms.TextBox();
-            this.txtProvedor = new System.Windows.Forms.TextBox();
-            this.txtDescompostura = new System.Windows.Forms.TextBox();
-            this.txtAccesorio = new System.Windows.Forms.TextBox();
-            this.txtCompra = new System.Windows.Forms.TextBox();
-            this.txtOrigen = new System.Windows.Forms.TextBox();
-            this.txtModelo = new System.Windows.Forms.TextBox();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.txtCodigoQR = new System.Windows.Forms.TextBox();
-            this.txtSerie = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblProvedor = new System.Windows.Forms.Label();
             this.lblDescompostura = new System.Windows.Forms.Label();
@@ -52,138 +42,13 @@ namespace COMPRAS2
             this.lblSerie = new System.Windows.Forms.Label();
             this.lblTituloEditarProducto = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.brnOPCIONES = new System.Windows.Forms.Button();
             this.btnELIMINAR = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // txtCosto
-            // 
-            this.txtCosto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtCosto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCosto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCosto.Location = new System.Drawing.Point(50, 530);
-            this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(426, 26);
-            this.txtCosto.TabIndex = 55;
-            this.txtCosto.Text = "Costo";
-            // 
-            // txtProvedor
-            // 
-            this.txtProvedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtProvedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProvedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProvedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtProvedor.Location = new System.Drawing.Point(580, 370);
-            this.txtProvedor.Name = "txtProvedor";
-            this.txtProvedor.Size = new System.Drawing.Size(426, 26);
-            this.txtProvedor.TabIndex = 54;
-            this.txtProvedor.Text = "Provedor";
-            // 
-            // txtDescompostura
-            // 
-            this.txtDescompostura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtDescompostura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescompostura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescompostura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtDescompostura.Location = new System.Drawing.Point(580, 290);
-            this.txtDescompostura.Name = "txtDescompostura";
-            this.txtDescompostura.Size = new System.Drawing.Size(426, 26);
-            this.txtDescompostura.TabIndex = 53;
-            this.txtDescompostura.Text = "Descompostura";
-            // 
-            // txtAccesorio
-            // 
-            this.txtAccesorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtAccesorio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAccesorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtAccesorio.Location = new System.Drawing.Point(580, 215);
-            this.txtAccesorio.Name = "txtAccesorio";
-            this.txtAccesorio.Size = new System.Drawing.Size(426, 26);
-            this.txtAccesorio.TabIndex = 52;
-            this.txtAccesorio.Text = "Accesorio";
-            // 
-            // txtCompra
-            // 
-            this.txtCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCompra.Location = new System.Drawing.Point(580, 135);
-            this.txtCompra.Name = "txtCompra";
-            this.txtCompra.Size = new System.Drawing.Size(426, 26);
-            this.txtCompra.TabIndex = 51;
-            this.txtCompra.Text = "Compra";
-            // 
-            // txtOrigen
-            // 
-            this.txtOrigen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtOrigen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtOrigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrigen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtOrigen.Location = new System.Drawing.Point(50, 610);
-            this.txtOrigen.Name = "txtOrigen";
-            this.txtOrigen.Size = new System.Drawing.Size(426, 26);
-            this.txtOrigen.TabIndex = 50;
-            this.txtOrigen.Text = "Origen";
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtModelo.Location = new System.Drawing.Point(50, 450);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(426, 26);
-            this.txtModelo.TabIndex = 49;
-            this.txtModelo.Text = "Modelo";
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtMarca.Location = new System.Drawing.Point(50, 370);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(426, 26);
-            this.txtMarca.TabIndex = 48;
-            this.txtMarca.Text = "Marca";
-            // 
-            // txtCodigoQR
-            // 
-            this.txtCodigoQR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtCodigoQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigoQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCodigoQR.Location = new System.Drawing.Point(50, 290);
-            this.txtCodigoQR.Name = "txtCodigoQR";
-            this.txtCodigoQR.Size = new System.Drawing.Size(426, 26);
-            this.txtCodigoQR.TabIndex = 47;
-            this.txtCodigoQR.Text = "Codigo QR";
-            // 
-            // txtSerie
-            // 
-            this.txtSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtSerie.Location = new System.Drawing.Point(50, 210);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(426, 26);
-            this.txtSerie.TabIndex = 46;
-            this.txtSerie.Text = "Serie";
             // 
             // btnBack
             // 
@@ -331,30 +196,6 @@ namespace COMPRAS2
             this.lblProducto.TabIndex = 33;
             this.lblProducto.Text = "NOMBRE DEL PRODUCTO:";
             // 
-            // txtProducto
-            // 
-            this.txtProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtProducto.Location = new System.Drawing.Point(50, 130);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(426, 26);
-            this.txtProducto.TabIndex = 45;
-            this.txtProducto.Text = "Producto";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.textBox1.Location = new System.Drawing.Point(580, 450);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(426, 26);
-            this.textBox1.TabIndex = 58;
-            this.textBox1.Text = "Provedor";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -366,18 +207,6 @@ namespace COMPRAS2
             this.label1.TabIndex = 57;
             this.label1.Text = "CANTIDAD:";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.textBox2.Location = new System.Drawing.Point(580, 530);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(426, 26);
-            this.textBox2.TabIndex = 60;
-            this.textBox2.Text = "Provedor";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -388,18 +217,6 @@ namespace COMPRAS2
             this.label2.Size = new System.Drawing.Size(66, 32);
             this.label2.TabIndex = 59;
             this.label2.Text = "LUGAR:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.textBox3.Location = new System.Drawing.Point(580, 610);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(426, 26);
-            this.textBox3.TabIndex = 62;
-            this.textBox3.Text = "Provedor";
             // 
             // label3
             // 
@@ -422,18 +239,6 @@ namespace COMPRAS2
             this.label4.Size = new System.Drawing.Size(56, 32);
             this.label4.TabIndex = 63;
             this.label4.Text = "FOTO:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.textBox4.Location = new System.Drawing.Point(580, 692);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(426, 26);
-            this.textBox4.TabIndex = 64;
-            this.textBox4.Text = "Provedor";
             // 
             // brnOPCIONES
             // 
@@ -480,25 +285,10 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1073, 751);
             this.Controls.Add(this.btnELIMINAR);
             this.Controls.Add(this.brnOPCIONES);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCosto);
-            this.Controls.Add(this.txtProvedor);
-            this.Controls.Add(this.txtDescompostura);
-            this.Controls.Add(this.txtAccesorio);
-            this.Controls.Add(this.txtCompra);
-            this.Controls.Add(this.txtOrigen);
-            this.Controls.Add(this.txtModelo);
-            this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.txtCodigoQR);
-            this.Controls.Add(this.txtSerie);
-            this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblProvedor);
             this.Controls.Add(this.lblDescompostura);
@@ -521,16 +311,6 @@ namespace COMPRAS2
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtCosto;
-        private System.Windows.Forms.TextBox txtProvedor;
-        private System.Windows.Forms.TextBox txtDescompostura;
-        private System.Windows.Forms.TextBox txtAccesorio;
-        private System.Windows.Forms.TextBox txtCompra;
-        private System.Windows.Forms.TextBox txtOrigen;
-        private System.Windows.Forms.TextBox txtModelo;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.TextBox txtCodigoQR;
-        private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblProvedor;
         private System.Windows.Forms.Label lblDescompostura;
@@ -544,15 +324,10 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Label lblTituloEditarProducto;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.TextBox txtProducto;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button brnOPCIONES;
         private System.Windows.Forms.Button btnELIMINAR;
     }

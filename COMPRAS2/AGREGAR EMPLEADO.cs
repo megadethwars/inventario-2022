@@ -16,5 +16,10 @@ namespace COMPRAS2
         {
             InitializeComponent();
         }
+
+        private void AGREGAR_EMPLEADO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

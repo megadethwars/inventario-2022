@@ -65,11 +65,12 @@ namespace COMPRAS2
             // 
             // txtLugarDeseado
             // 
+            this.txtLugarDeseado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtLugarDeseado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtLugarDeseado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLugarDeseado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugarDeseado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtLugarDeseado.Location = new System.Drawing.Point(439, 712);
+            this.txtLugarDeseado.Location = new System.Drawing.Point(477, 709);
             this.txtLugarDeseado.Name = "txtLugarDeseado";
             this.txtLugarDeseado.Size = new System.Drawing.Size(331, 26);
             this.txtLugarDeseado.TabIndex = 75;
@@ -77,10 +78,11 @@ namespace COMPRAS2
             // 
             // lblIngresarLugarDeseado
             // 
+            this.lblIngresarLugarDeseado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblIngresarLugarDeseado.AutoSize = true;
             this.lblIngresarLugarDeseado.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresarLugarDeseado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblIngresarLugarDeseado.Location = new System.Drawing.Point(497, 677);
+            this.lblIngresarLugarDeseado.Location = new System.Drawing.Point(531, 674);
             this.lblIngresarLugarDeseado.Name = "lblIngresarLugarDeseado";
             this.lblIngresarLugarDeseado.Size = new System.Drawing.Size(198, 32);
             this.lblIngresarLugarDeseado.TabIndex = 74;
@@ -88,11 +90,12 @@ namespace COMPRAS2
             // 
             // btnOK
             // 
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(547, 759);
+            this.btnOK.Location = new System.Drawing.Point(591, 753);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(88, 34);
             this.btnOK.TabIndex = 76;

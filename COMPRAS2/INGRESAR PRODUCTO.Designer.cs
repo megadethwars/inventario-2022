@@ -35,12 +35,8 @@ namespace COMPRAS2
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
             this.btnEscanear = new System.Windows.Forms.Button();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.txtProducto = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.txtProvedor = new System.Windows.Forms.TextBox();
-            this.txtSerie = new System.Windows.Forms.TextBox();
             this.lblProvedor = new System.Windows.Forms.Label();
             this.lblSerie = new System.Windows.Forms.Label();
             this.lblOrigen = new System.Windows.Forms.Label();
@@ -68,9 +64,9 @@ namespace COMPRAS2
             this.lblIngresarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblIngresarProducto.Location = new System.Drawing.Point(560, 30);
             this.lblIngresarProducto.Name = "lblIngresarProducto";
-            this.lblIngresarProducto.Size = new System.Drawing.Size(218, 42);
+            this.lblIngresarProducto.Size = new System.Drawing.Size(242, 42);
             this.lblIngresarProducto.TabIndex = 31;
-            this.lblIngresarProducto.Text = "INGRESAR PRODUCTO";
+            this.lblIngresarProducto.Text = "REINGRESAR PRODUCTO";
             // 
             // btBUSCADOR
             // 
@@ -128,32 +124,6 @@ namespace COMPRAS2
             this.btnEscanear.Text = "ESCANEAR";
             this.btnEscanear.UseVisualStyleBackColor = false;
             // 
-            // txtMarca
-            // 
-            this.txtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtMarca.Location = new System.Drawing.Point(768, 286);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(426, 26);
-            this.txtMarca.TabIndex = 59;
-            this.txtMarca.Text = "Introduzca la Marca";
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtProducto.Location = new System.Drawing.Point(54, 286);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(426, 26);
-            this.txtProducto.TabIndex = 58;
-            this.txtProducto.Text = "Introduzca el Producto";
-            // 
             // lblMarca
             // 
             this.lblMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -177,32 +147,6 @@ namespace COMPRAS2
             this.lblProducto.Size = new System.Drawing.Size(197, 32);
             this.lblProducto.TabIndex = 56;
             this.lblProducto.Text = "NOMBRE DEL PRODUCTO:";
-            // 
-            // txtProvedor
-            // 
-            this.txtProvedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProvedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtProvedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProvedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProvedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtProvedor.Location = new System.Drawing.Point(774, 410);
-            this.txtProvedor.Name = "txtProvedor";
-            this.txtProvedor.Size = new System.Drawing.Size(426, 26);
-            this.txtProvedor.TabIndex = 63;
-            this.txtProvedor.Text = "Introduzca el Provedor";
-            // 
-            // txtSerie
-            // 
-            this.txtSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtSerie.Location = new System.Drawing.Point(60, 410);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(426, 26);
-            this.txtSerie.TabIndex = 62;
-            this.txtSerie.Text = "Introduzca la Serie";
             // 
             // lblProvedor
             // 
@@ -246,12 +190,8 @@ namespace COMPRAS2
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
             this.Controls.Add(this.lblOrigen);
-            this.Controls.Add(this.txtProvedor);
-            this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.lblProvedor);
             this.Controls.Add(this.lblSerie);
-            this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.btnEscanear);
@@ -278,12 +218,8 @@ namespace COMPRAS2
         private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Label lblIngresarProducto;
         private System.Windows.Forms.Button btnEscanear;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.TextBox txtProvedor;
-        private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.Label lblProvedor;
         private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Label lblOrigen;

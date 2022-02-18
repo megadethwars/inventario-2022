@@ -33,7 +33,6 @@ namespace COMPRAS2
             this.lblHISTORIAL = new System.Windows.Forms.Label();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
             this.btnBUSQUEDAAVANZADA = new System.Windows.Forms.Button();
-            this.btnESCANEAR = new System.Windows.Forms.Button();
             this.btBUSCADOR = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
@@ -95,22 +94,6 @@ namespace COMPRAS2
             this.btnBUSQUEDAAVANZADA.UseVisualStyleBackColor = true;
             this.btnBUSQUEDAAVANZADA.Click += new System.EventHandler(this.btnBUSQUEDAAVANZADA_Click);
             // 
-            // btnESCANEAR
-            // 
-            this.btnESCANEAR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnESCANEAR.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnESCANEAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnESCANEAR.FlatAppearance.BorderSize = 0;
-            this.btnESCANEAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnESCANEAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnESCANEAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnESCANEAR.Location = new System.Drawing.Point(567, 200);
-            this.btnESCANEAR.Name = "btnESCANEAR";
-            this.btnESCANEAR.Size = new System.Drawing.Size(109, 34);
-            this.btnESCANEAR.TabIndex = 36;
-            this.btnESCANEAR.Text = "ESCANEAR";
-            this.btnESCANEAR.UseVisualStyleBackColor = true;
-            // 
             // btBUSCADOR
             // 
             this.btBUSCADOR.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -155,7 +138,6 @@ namespace COMPRAS2
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
             this.Controls.Add(this.btnBUSQUEDAAVANZADA);
-            this.Controls.Add(this.btnESCANEAR);
             this.Controls.Add(this.dgvHistorial);
             this.Controls.Add(this.lblHISTORIAL);
             this.Controls.Add(this.btBUSCADOR);
@@ -180,7 +162,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblHISTORIAL;
         private System.Windows.Forms.DataGridView dgvHistorial;
-        private System.Windows.Forms.Button btnESCANEAR;
         private System.Windows.Forms.Button btnBUSQUEDAAVANZADA;
     }
 }
