@@ -40,14 +40,16 @@ namespace COMPRAS2
             this.lblCompra = new System.Windows.Forms.Label();
             this.lblOrigen = new System.Windows.Forms.Label();
             this.lblSerie = new System.Windows.Forms.Label();
+            this.btnEditarMovimientos = new System.Windows.Forms.Button();
+            this.btnActualizarBDD = new System.Windows.Forms.Button();
+            this.btnActualizarProducto = new System.Windows.Forms.Button();
+            this.btnSALIDA = new System.Windows.Forms.Button();
+            this.btnReingresarProducto = new System.Windows.Forms.Button();
+            this.btnAgregarNuevoProducto = new System.Windows.Forms.Button();
             this.btnEscanear = new System.Windows.Forms.Button();
             this.btnBuscador = new System.Windows.Forms.Button();
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
-            this.btnAgregarNuevoProducto = new System.Windows.Forms.Button();
-            this.btnReingresarProducto = new System.Windows.Forms.Button();
-            this.btnSALIDA = new System.Windows.Forms.Button();
-            this.btnActualizarProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
@@ -211,6 +213,120 @@ namespace COMPRAS2
             this.lblSerie.TabIndex = 33;
             this.lblSerie.Text = "Serie:";
             // 
+            // btnEditarMovimientos
+            // 
+            this.btnEditarMovimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditarMovimientos.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarMovimientos.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnEditarMovimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditarMovimientos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarMovimientos.FlatAppearance.BorderSize = 0;
+            this.btnEditarMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarMovimientos.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnEditarMovimientos.Location = new System.Drawing.Point(941, 801);
+            this.btnEditarMovimientos.Name = "btnEditarMovimientos";
+            this.btnEditarMovimientos.Size = new System.Drawing.Size(175, 39);
+            this.btnEditarMovimientos.TabIndex = 38;
+            this.btnEditarMovimientos.Text = "EDITAR MOVIMIENTOS";
+            this.btnEditarMovimientos.UseVisualStyleBackColor = false;
+            this.btnEditarMovimientos.Click += new System.EventHandler(this.btnEditarMovimientos_Click);
+            // 
+            // btnActualizarBDD
+            // 
+            this.btnActualizarBDD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizarBDD.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarBDD.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnActualizarBDD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizarBDD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarBDD.FlatAppearance.BorderSize = 0;
+            this.btnActualizarBDD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarBDD.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarBDD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnActualizarBDD.Location = new System.Drawing.Point(579, 801);
+            this.btnActualizarBDD.Name = "btnActualizarBDD";
+            this.btnActualizarBDD.Size = new System.Drawing.Size(175, 39);
+            this.btnActualizarBDD.TabIndex = 37;
+            this.btnActualizarBDD.Text = "ACTUALIZAR BDD";
+            this.btnActualizarBDD.UseVisualStyleBackColor = false;
+            this.btnActualizarBDD.Click += new System.EventHandler(this.btnActualizarBDD_Click);
+            // 
+            // btnActualizarProducto
+            // 
+            this.btnActualizarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizarProducto.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarProducto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnActualizarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarProducto.FlatAppearance.BorderSize = 0;
+            this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnActualizarProducto.Location = new System.Drawing.Point(760, 801);
+            this.btnActualizarProducto.Name = "btnActualizarProducto";
+            this.btnActualizarProducto.Size = new System.Drawing.Size(175, 39);
+            this.btnActualizarProducto.TabIndex = 36;
+            this.btnActualizarProducto.Text = "EDITAR LUGARES";
+            this.btnActualizarProducto.UseVisualStyleBackColor = false;
+            this.btnActualizarProducto.Click += new System.EventHandler(this.btnActualizarProducto_Click);
+            // 
+            // btnSALIDA
+            // 
+            this.btnSALIDA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSALIDA.BackColor = System.Drawing.Color.Transparent;
+            this.btnSALIDA.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnSALIDA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSALIDA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSALIDA.FlatAppearance.BorderSize = 0;
+            this.btnSALIDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSALIDA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnSALIDA.Location = new System.Drawing.Point(440, 801);
+            this.btnSALIDA.Name = "btnSALIDA";
+            this.btnSALIDA.Size = new System.Drawing.Size(133, 39);
+            this.btnSALIDA.TabIndex = 35;
+            this.btnSALIDA.Text = "SALIDA";
+            this.btnSALIDA.UseVisualStyleBackColor = false;
+            this.btnSALIDA.Click += new System.EventHandler(this.btnSALIDA_Click);
+            // 
+            // btnReingresarProducto
+            // 
+            this.btnReingresarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnReingresarProducto.BackColor = System.Drawing.Color.Transparent;
+            this.btnReingresarProducto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnReingresarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReingresarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReingresarProducto.FlatAppearance.BorderSize = 0;
+            this.btnReingresarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReingresarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReingresarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnReingresarProducto.Location = new System.Drawing.Point(245, 801);
+            this.btnReingresarProducto.Name = "btnReingresarProducto";
+            this.btnReingresarProducto.Size = new System.Drawing.Size(189, 39);
+            this.btnReingresarProducto.TabIndex = 34;
+            this.btnReingresarProducto.Text = "REINGRESAR PRODUCTO";
+            this.btnReingresarProducto.UseVisualStyleBackColor = false;
+            this.btnReingresarProducto.Click += new System.EventHandler(this.btnReingresarProducto_Click);
+            // 
+            // btnAgregarNuevoProducto
+            // 
+            this.btnAgregarNuevoProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAgregarNuevoProducto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarNuevoProducto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnAgregarNuevoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregarNuevoProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarNuevoProducto.FlatAppearance.BorderSize = 0;
+            this.btnAgregarNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarNuevoProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarNuevoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnAgregarNuevoProducto.Location = new System.Drawing.Point(30, 801);
+            this.btnAgregarNuevoProducto.Name = "btnAgregarNuevoProducto";
+            this.btnAgregarNuevoProducto.Size = new System.Drawing.Size(209, 39);
+            this.btnAgregarNuevoProducto.TabIndex = 33;
+            this.btnAgregarNuevoProducto.Text = "AGREGAR NUEVO PRODUCTO";
+            this.btnAgregarNuevoProducto.UseVisualStyleBackColor = false;
+            this.btnAgregarNuevoProducto.Click += new System.EventHandler(this.btnAgregarNuevoProducto_Click);
+            // 
             // btnEscanear
             // 
             this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -222,7 +338,7 @@ namespace COMPRAS2
             this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEscanear.Location = new System.Drawing.Point(573, 157);
+            this.btnEscanear.Location = new System.Drawing.Point(567, 157);
             this.btnEscanear.Name = "btnEscanear";
             this.btnEscanear.Size = new System.Drawing.Size(114, 39);
             this.btnEscanear.TabIndex = 31;
@@ -268,88 +384,14 @@ namespace COMPRAS2
             this.bTNBack.UseVisualStyleBackColor = false;
             this.bTNBack.Click += new System.EventHandler(this.bkBack_Click);
             // 
-            // btnAgregarNuevoProducto
-            // 
-            this.btnAgregarNuevoProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregarNuevoProducto.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarNuevoProducto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnAgregarNuevoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregarNuevoProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarNuevoProducto.FlatAppearance.BorderSize = 0;
-            this.btnAgregarNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarNuevoProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarNuevoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarNuevoProducto.Location = new System.Drawing.Point(30, 801);
-            this.btnAgregarNuevoProducto.Name = "btnAgregarNuevoProducto";
-            this.btnAgregarNuevoProducto.Size = new System.Drawing.Size(209, 39);
-            this.btnAgregarNuevoProducto.TabIndex = 33;
-            this.btnAgregarNuevoProducto.Text = "AGREGAR NUEVO PRODUCTO";
-            this.btnAgregarNuevoProducto.UseVisualStyleBackColor = false;
-            this.btnAgregarNuevoProducto.Click += new System.EventHandler(this.btnAgregarNuevoProducto_Click);
-            // 
-            // btnReingresarProducto
-            // 
-            this.btnReingresarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnReingresarProducto.BackColor = System.Drawing.Color.Transparent;
-            this.btnReingresarProducto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnReingresarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReingresarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReingresarProducto.FlatAppearance.BorderSize = 0;
-            this.btnReingresarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReingresarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReingresarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnReingresarProducto.Location = new System.Drawing.Point(245, 801);
-            this.btnReingresarProducto.Name = "btnReingresarProducto";
-            this.btnReingresarProducto.Size = new System.Drawing.Size(189, 39);
-            this.btnReingresarProducto.TabIndex = 34;
-            this.btnReingresarProducto.Text = "INGRESAR PRODUCTO";
-            this.btnReingresarProducto.UseVisualStyleBackColor = false;
-            this.btnReingresarProducto.Click += new System.EventHandler(this.btnReingresarProducto_Click);
-            // 
-            // btnSALIDA
-            // 
-            this.btnSALIDA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSALIDA.BackColor = System.Drawing.Color.Transparent;
-            this.btnSALIDA.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnSALIDA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSALIDA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSALIDA.FlatAppearance.BorderSize = 0;
-            this.btnSALIDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSALIDA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnSALIDA.Location = new System.Drawing.Point(440, 801);
-            this.btnSALIDA.Name = "btnSALIDA";
-            this.btnSALIDA.Size = new System.Drawing.Size(133, 39);
-            this.btnSALIDA.TabIndex = 35;
-            this.btnSALIDA.Text = "SALIDA";
-            this.btnSALIDA.UseVisualStyleBackColor = false;
-            this.btnSALIDA.Click += new System.EventHandler(this.btnSALIDA_Click);
-            // 
-            // btnActualizarProducto
-            // 
-            this.btnActualizarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnActualizarProducto.BackColor = System.Drawing.Color.Transparent;
-            this.btnActualizarProducto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnActualizarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnActualizarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizarProducto.FlatAppearance.BorderSize = 0;
-            this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizarProducto.Location = new System.Drawing.Point(579, 801);
-            this.btnActualizarProducto.Name = "btnActualizarProducto";
-            this.btnActualizarProducto.Size = new System.Drawing.Size(175, 39);
-            this.btnActualizarProducto.TabIndex = 36;
-            this.btnActualizarProducto.Text = "ACTUALIZAR LUGARES";
-            this.btnActualizarProducto.UseVisualStyleBackColor = false;
-            this.btnActualizarProducto.Click += new System.EventHandler(this.btnActualizarProducto_Click);
-            // 
             // INVENTARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnEditarMovimientos);
+            this.Controls.Add(this.btnActualizarBDD);
             this.Controls.Add(this.btnActualizarProducto);
             this.Controls.Add(this.btnSALIDA);
             this.Controls.Add(this.btnReingresarProducto);
@@ -397,5 +439,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnReingresarProducto;
         private System.Windows.Forms.Button btnSALIDA;
         private System.Windows.Forms.Button btnActualizarProducto;
+        private System.Windows.Forms.Button btnActualizarBDD;
+        private System.Windows.Forms.Button btnEditarMovimientos;
     }
 }

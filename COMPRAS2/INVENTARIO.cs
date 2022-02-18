@@ -102,6 +102,15 @@ namespace COMPRAS2
         {
             Navigator.nextPage(new LUGARES());
         }
-        
+
+        private void btnActualizarBDD_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new ACTUALIZAR_BDD());
+        }
+
+        private void btnEditarMovimientos_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new INVENTARIO2());
+        }
     }
 }

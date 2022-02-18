@@ -32,10 +32,11 @@ namespace COMPRAS2
             this.lblPerfil = new System.Windows.Forms.Label();
             this.lblCopiaDeSeguridad = new System.Windows.Forms.Label();
             this.lblSincronizacionAutomatica = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
-            this.toggleButton1 = new COMPRAS2.Toggle_Button.ToggleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toggleButton2 = new COMPRAS2.Toggle_Button.ToggleButton();
+            this.toggleButton1 = new COMPRAS2.Toggle_Button.ToggleButton();
+            this.linkInformacion = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@ namespace COMPRAS2
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblPerfil.Location = new System.Drawing.Point(490, 25);
+            this.lblPerfil.Location = new System.Drawing.Point(585, 25);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(101, 42);
             this.lblPerfil.TabIndex = 20;
@@ -58,7 +59,7 @@ namespace COMPRAS2
             this.lblCopiaDeSeguridad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(84)))));
             this.lblCopiaDeSeguridad.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCopiaDeSeguridad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCopiaDeSeguridad.Location = new System.Drawing.Point(84, 174);
+            this.lblCopiaDeSeguridad.Location = new System.Drawing.Point(84, 281);
             this.lblCopiaDeSeguridad.Name = "lblCopiaDeSeguridad";
             this.lblCopiaDeSeguridad.Size = new System.Drawing.Size(146, 32);
             this.lblCopiaDeSeguridad.TabIndex = 22;
@@ -71,22 +72,11 @@ namespace COMPRAS2
             this.lblSincronizacionAutomatica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(84)))));
             this.lblSincronizacionAutomatica.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSincronizacionAutomatica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblSincronizacionAutomatica.Location = new System.Drawing.Point(84, 271);
+            this.lblSincronizacionAutomatica.Location = new System.Drawing.Point(84, 378);
             this.lblSincronizacionAutomatica.Name = "lblSincronizacionAutomatica";
             this.lblSincronizacionAutomatica.Size = new System.Drawing.Size(200, 32);
             this.lblSincronizacionAutomatica.TabIndex = 23;
             this.lblSincronizacionAutomatica.Text = "Sincronización Automatica";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.panel2;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 141);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(464, 218);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // bTNBack
             // 
@@ -102,27 +92,22 @@ namespace COMPRAS2
             this.bTNBack.UseVisualStyleBackColor = true;
             this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
             // 
-            // toggleButton1
+            // pictureBox1
             // 
-            this.toggleButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.toggleButton1.AutoSize = true;
-            this.toggleButton1.Location = new System.Drawing.Point(337, 184);
-            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
-            this.toggleButton1.OffToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.toggleButton1.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
-            this.toggleButton1.OnToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
-            this.toggleButton1.Size = new System.Drawing.Size(92, 22);
-            this.toggleButton1.TabIndex = 29;
-            this.toggleButton1.Text = "toggleButton1";
-            this.toggleButton1.UseVisualStyleBackColor = true;
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.panel2;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 248);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(464, 218);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // toggleButton2
             // 
             this.toggleButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.toggleButton2.AutoSize = true;
-            this.toggleButton2.Location = new System.Drawing.Point(337, 282);
+            this.toggleButton2.Location = new System.Drawing.Point(337, 389);
             this.toggleButton2.MinimumSize = new System.Drawing.Size(45, 22);
             this.toggleButton2.Name = "toggleButton2";
             this.toggleButton2.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
@@ -134,12 +119,43 @@ namespace COMPRAS2
             this.toggleButton2.Text = "toggleButton2";
             this.toggleButton2.UseVisualStyleBackColor = true;
             // 
+            // toggleButton1
+            // 
+            this.toggleButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.toggleButton1.AutoSize = true;
+            this.toggleButton1.Location = new System.Drawing.Point(337, 291);
+            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
+            this.toggleButton1.OffToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.toggleButton1.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(98)))));
+            this.toggleButton1.OnToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(178)))), ((int)(((byte)(255)))));
+            this.toggleButton1.Size = new System.Drawing.Size(92, 22);
+            this.toggleButton1.TabIndex = 29;
+            this.toggleButton1.Text = "toggleButton1";
+            this.toggleButton1.UseVisualStyleBackColor = true;
+            // 
+            // linkInformacion
+            // 
+            this.linkInformacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.linkInformacion.AutoSize = true;
+            this.linkInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkInformacion.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.linkInformacion.Location = new System.Drawing.Point(17, 518);
+            this.linkInformacion.Name = "linkInformacion";
+            this.linkInformacion.Size = new System.Drawing.Size(101, 16);
+            this.linkInformacion.TabIndex = 32;
+            this.linkInformacion.TabStop = true;
+            this.linkInformacion.Text = "INFORMACION";
+            this.linkInformacion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkInformacion_LinkClicked);
+            // 
             // AJUSTES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1089, 647);
+            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.linkInformacion);
             this.Controls.Add(this.toggleButton2);
             this.Controls.Add(this.toggleButton1);
             this.Controls.Add(this.bTNBack);
@@ -165,5 +181,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox1;
         private Toggle_Button.ToggleButton toggleButton1;
         private Toggle_Button.ToggleButton toggleButton2;
+        private System.Windows.Forms.LinkLabel linkInformacion;
     }
 }

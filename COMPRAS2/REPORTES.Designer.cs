@@ -29,6 +29,7 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(REPORTES));
             this.lblREPORTES = new System.Windows.Forms.Label();
             this.correo1 = new System.Windows.Forms.Label();
             this.telefono1 = new System.Windows.Forms.Label();
@@ -51,9 +52,9 @@ namespace COMPRAS2
             this.btnBack = new System.Windows.Forms.Button();
             this.btBUSCADOR = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnOPCIONES = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnAgregarFoto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -320,32 +321,54 @@ namespace COMPRAS2
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // btnOPCIONES
             // 
-            this.button1.Location = new System.Drawing.Point(539, 656);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "agregarfoto";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOPCIONES.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnOPCIONES.BackColor = System.Drawing.Color.Transparent;
+            this.btnOPCIONES.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnOPCIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOPCIONES.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOPCIONES.FlatAppearance.BorderSize = 0;
+            this.btnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnOPCIONES.Location = new System.Drawing.Point(455, 789);
+            this.btnOPCIONES.Name = "btnOPCIONES";
+            this.btnOPCIONES.Size = new System.Drawing.Size(160, 39);
+            this.btnOPCIONES.TabIndex = 63;
+            this.btnOPCIONES.Text = "OPCIONES";
+            this.btnOPCIONES.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnOK
             // 
-            this.button2.Location = new System.Drawing.Point(475, 796);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "opciones";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
+            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Location = new System.Drawing.Point(682, 795);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(88, 34);
+            this.btnOK.TabIndex = 62;
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAgregarFoto
             // 
-            this.button3.Location = new System.Drawing.Point(688, 796);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 46;
-            this.button3.Text = "aceptar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgregarFoto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAgregarFoto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarFoto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnAgregarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
+            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnAgregarFoto.Location = new System.Drawing.Point(553, 697);
+            this.btnAgregarFoto.Name = "btnAgregarFoto";
+            this.btnAgregarFoto.Size = new System.Drawing.Size(160, 39);
+            this.btnAgregarFoto.TabIndex = 64;
+            this.btnAgregarFoto.Text = "AGREGAR FOTO";
+            this.btnAgregarFoto.UseVisualStyleBackColor = false;
             // 
             // REPORTES
             // 
@@ -353,9 +376,9 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgregarFoto);
+            this.Controls.Add(this.btnOPCIONES);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -416,8 +439,8 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnOPCIONES;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnAgregarFoto;
     }
 }

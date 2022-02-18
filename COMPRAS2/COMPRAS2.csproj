@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACTUALIZAR BDD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ACTUALIZAR BDD.Designer.cs">
+      <DependentUpon>ACTUALIZAR BDD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGREGAR EMPLEADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGREGAR EMPLEADO.Designer.cs">
+      <DependentUpon>AGREGAR EMPLEADO.cs</DependentUpon>
+    </Compile>
     <Compile Include="AGREGAR PRODUCTO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     <Compile Include="INVENTARIO.Designer.cs">
       <DependentUpon>INVENTARIO.cs</DependentUpon>
     </Compile>
+    <Compile Include="INVENTARIO2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INVENTARIO2.Designer.cs">
+      <DependentUpon>INVENTARIO2.cs</DependentUpon>
+    </Compile>
     <Compile Include="LUGARES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +188,12 @@
     <Compile Include="REPORTES.Designer.cs">
       <DependentUpon>REPORTES.cs</DependentUpon>
     </Compile>
+    <Compile Include="REPORTES2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTES2.Designer.cs">
+      <DependentUpon>REPORTES2.cs</DependentUpon>
+    </Compile>
     <Compile Include="SALIDA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +206,12 @@
     <Compile Include="Toggle Button\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ACTUALIZAR BDD.resx">
+      <DependentUpon>ACTUALIZAR BDD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGREGAR EMPLEADO.resx">
+      <DependentUpon>AGREGAR EMPLEADO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AGREGAR PRODUCTO.resx">
       <DependentUpon>AGREGAR PRODUCTO.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +245,9 @@
     <EmbeddedResource Include="INVENTARIO.resx">
       <DependentUpon>INVENTARIO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="INVENTARIO2.resx">
+      <DependentUpon>INVENTARIO2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LUGARES.resx">
       <DependentUpon>LUGARES.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES.resx">
       <DependentUpon>REPORTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES2.resx">
+      <DependentUpon>REPORTES2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SALIDA.resx">
       <DependentUpon>SALIDA.cs</DependentUpon>

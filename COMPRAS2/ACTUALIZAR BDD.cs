@@ -11,21 +11,16 @@ using System.Windows.Forms;
 
 namespace COMPRAS2
 {
-    public partial class AJUSTES : Form
+    public partial class ACTUALIZAR_BDD : Form
     {
-        public AJUSTES()
+        public ACTUALIZAR_BDD()
         {
             InitializeComponent();
         }
 
-        private void bTNBack_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             Navigator.backPage(this.Name, this);
-        }
-
-        private void linkInformacion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MessageBox.Show("Aqui informacion de la aplicacion");
         }
     }
 }
