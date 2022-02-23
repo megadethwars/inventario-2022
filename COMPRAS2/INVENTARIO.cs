@@ -40,16 +40,10 @@ namespace COMPRAS2
             {
                 return;
             }
-            //string respuesta = await Gethttp();
-            //List<PostViewModel> lst = JsonConvert.DeserializeObject<List<PostViewModel>>(respuesta);
-
-            //List<Lugares> lugares = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
-            //var id = lugares[2].activo;
-            //var lugar =lugares[2].lugar;
-
+           
             List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-            //dataGridView1.DataSource = lugares;
+          
             dgvInventario.DataSource = devices;
         }
 

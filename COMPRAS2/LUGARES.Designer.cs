@@ -130,6 +130,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LUGARES";
             this.Text = "LUGARES";
+            this.Load += new System.EventHandler(this.LUGARES_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLugares)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
