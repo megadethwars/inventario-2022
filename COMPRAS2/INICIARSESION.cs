@@ -92,6 +92,7 @@ namespace COMPRAS2
                 CurrentUser.correo = userDeserialize.correo;
                 CurrentUser.telefono = userDeserialize.telefono;
 
+
                 return 0;
             }
             catch (Exception ex)

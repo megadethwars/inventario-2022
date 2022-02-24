@@ -46,5 +46,8 @@ namespace COMPRAS2.modelos
 
    
         public static string password { get; set; }
+
+
+        public static Rol rol  { get;set; }
     }
 }

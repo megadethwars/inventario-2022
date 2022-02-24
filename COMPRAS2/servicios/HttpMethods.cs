@@ -11,7 +11,7 @@ namespace COMPRAS2.servicios
     public static class HttpMethods
     {
 
-        public static string url = "https://avsinventoryswagger.azurewebsites.net/api/v1/";
+        public static string url = "https://avsinventoryswagger25.azurewebsites.net/api/v1/";
 
         //static HttpClient client = new HttpClient();
         public static async Task<StatusMessage> Post(string url, string objeto)

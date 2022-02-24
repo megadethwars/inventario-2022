@@ -161,6 +161,7 @@
     <Compile Include="modelos\CurrentUser.cs" />
     <Compile Include="modelos\Devices.cs" />
     <Compile Include="modelos\Lugares.cs" />
+    <Compile Include="modelos\Rol.cs" />
     <Compile Include="modelos\StatusMessage.cs" />
     <Compile Include="modelos\User.cs" />
     <Compile Include="OPCIONES DE INVENTARIO.cs">
