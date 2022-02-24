@@ -62,7 +62,7 @@ namespace COMPRAS2
             this.lblTituloEditarProducto.AutoSize = true;
             this.lblTituloEditarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloEditarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblTituloEditarProducto.Location = new System.Drawing.Point(418, 21);
+            this.lblTituloEditarProducto.Location = new System.Drawing.Point(560, 30);
             this.lblTituloEditarProducto.Name = "lblTituloEditarProducto";
             this.lblTituloEditarProducto.Size = new System.Drawing.Size(189, 42);
             this.lblTituloEditarProducto.TabIndex = 6;
@@ -351,7 +351,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1073, 608);
+            this.ClientSize = new System.Drawing.Size(1279, 861);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.txtProvedor);

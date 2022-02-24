@@ -48,6 +48,7 @@ namespace COMPRAS2
             this.label4 = new System.Windows.Forms.Label();
             this.brnOPCIONES = new System.Windows.Forms.Button();
             this.btnELIMINAR = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBack
@@ -179,7 +180,7 @@ namespace COMPRAS2
             this.lblTituloEditarProducto.AutoSize = true;
             this.lblTituloEditarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloEditarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblTituloEditarProducto.Location = new System.Drawing.Point(418, 21);
+            this.lblTituloEditarProducto.Location = new System.Drawing.Point(560, 30);
             this.lblTituloEditarProducto.Name = "lblTituloEditarProducto";
             this.lblTituloEditarProducto.Size = new System.Drawing.Size(255, 42);
             this.lblTituloEditarProducto.TabIndex = 32;
@@ -223,7 +224,7 @@ namespace COMPRAS2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(575, 575);
+            this.label3.Location = new System.Drawing.Point(50, 657);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 32);
             this.label3.TabIndex = 61;
@@ -251,7 +252,7 @@ namespace COMPRAS2
             this.brnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.brnOPCIONES.Location = new System.Drawing.Point(50, 692);
+            this.brnOPCIONES.Location = new System.Drawing.Point(50, 802);
             this.brnOPCIONES.Name = "brnOPCIONES";
             this.brnOPCIONES.Size = new System.Drawing.Size(114, 39);
             this.brnOPCIONES.TabIndex = 65;
@@ -270,19 +271,30 @@ namespace COMPRAS2
             this.btnELIMINAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnELIMINAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnELIMINAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnELIMINAR.Location = new System.Drawing.Point(203, 692);
+            this.btnELIMINAR.Location = new System.Drawing.Point(203, 802);
             this.btnELIMINAR.Name = "btnELIMINAR";
             this.btnELIMINAR.Size = new System.Drawing.Size(114, 39);
             this.btnELIMINAR.TabIndex = 66;
             this.btnELIMINAR.Text = "ELIMINAR";
             this.btnELIMINAR.UseVisualStyleBackColor = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.label5.Location = new System.Drawing.Point(56, 135);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Producto";
+            // 
             // DETALLES_DEL_PRODUCTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1073, 751);
+            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnELIMINAR);
             this.Controls.Add(this.brnOPCIONES);
             this.Controls.Add(this.label4);
@@ -330,5 +342,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button brnOPCIONES;
         private System.Windows.Forms.Button btnELIMINAR;
+        private System.Windows.Forms.Label label5;
     }
 }
