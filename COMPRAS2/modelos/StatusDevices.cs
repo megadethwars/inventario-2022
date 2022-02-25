@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace COMPRAS2.modelos
 {
-    public class Lugares
+    class StatusDevices
     {
         [DefaultValue(null)]
-        public bool activo { get; set; }
-        
+        public string descripcion { get; set; }
+
         public DateTime? fechaAlta { get; set; }
-        
+
         public DateTime? fechaUltimaModificacion { get; set; }
 
-        [DefaultValue(null)]
-        public string lugar { get; set; }
+        [DefaultValue(0)]
+        public int id { get; set; }
     }
 }

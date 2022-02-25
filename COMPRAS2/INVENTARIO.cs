@@ -17,7 +17,7 @@ namespace COMPRAS2
 {
     public partial class INVENTARIO : Form
     {
-        string url = "https://avsinventoryswagger.azurewebsites.net/api/v1/";
+        string url = "https://avsinventoryswagger25.azurewebsites.net/api/v1/";
 
         MENU mainmenu;
 
@@ -43,8 +43,24 @@ namespace COMPRAS2
            
             List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-          
+            for (int x = 0; x < devices.Count; x++) {
+                Lugares lugar = devices[0].lugar;
+
+                devices[0].lugarSitio = lugar.lugar;
+            }
+
+            for (int i = 0; i < devices.Count; i++)
+            {
+                //StatusDevices 
+
+                //devices[0].statusSitio = statusDevice.descripcion;
+            }
+
+
+            
             dgvInventario.DataSource = devices;
+            this.dgvInventario.Columns["lugar"].Visible = false;
+            this.dgvInventario.Columns["lugarId"].Visible = false;
         }
 
         public async Task<string> Gethttp()
