@@ -46,10 +46,10 @@ namespace COMPRAS2
             for (int x = 0; x < devices.Count; x++) {
 
                 Lugares lugar = devices[0].lugar;               
-                devices[0].lugarSitio = lugar.lugar;
+                devices[0].lugar_Actual = lugar.lugar;
                 
                 StatusDevices status = devices[0].status;
-                devices[0].statusSitio = status.descripcion;
+                devices[0].statusActual = status.descripcion;
 
             }
             

@@ -42,7 +42,7 @@ namespace COMPRAS2.modelos
 
 
         [DefaultValue(null)]
-        public string lugarSitio { get; set; }
+        public string lugar_Actual { get; set; }
         
         [DefaultValue(null)]
         public Lugares lugar { get; set; }
@@ -74,7 +74,7 @@ namespace COMPRAS2.modelos
 
 
         [DefaultValue(null)]
-        public string statusSitio { get; set; }
+        public string statusActual { get; set; }
 
         [DefaultValue(null)]
         public StatusDevices status { get; set; }

@@ -54,9 +54,7 @@ namespace COMPRAS2
             // dgvLugares
             // 
             this.dgvLugares.AllowUserToOrderColumns = true;
-            this.dgvLugares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvLugares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvLugares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLugares.Location = new System.Drawing.Point(364, 99);
             this.dgvLugares.Name = "dgvLugares";
@@ -65,7 +63,7 @@ namespace COMPRAS2
             // 
             // txtLugarDeseado
             // 
-            this.txtLugarDeseado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtLugarDeseado.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtLugarDeseado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtLugarDeseado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLugarDeseado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,7 +76,7 @@ namespace COMPRAS2
             // 
             // lblIngresarLugarDeseado
             // 
-            this.lblIngresarLugarDeseado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblIngresarLugarDeseado.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblIngresarLugarDeseado.AutoSize = true;
             this.lblIngresarLugarDeseado.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresarLugarDeseado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -90,7 +88,7 @@ namespace COMPRAS2
             // 
             // btnOK
             // 
-            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
