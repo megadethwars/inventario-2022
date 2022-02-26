@@ -47,25 +47,17 @@ namespace COMPRAS2
 
                 Lugares lugar = devices[0].lugar;               
                 devices[0].lugarSitio = lugar.lugar;
-
-                //StatusDevices statusDevices = devices[0].descripcion;
-                //devices[0].statusSitio = statusDevices.descripcion;
-            }
-            
-            for (int i = 0; i < devices.Count; i++)
-            {
-
-                //StatusDevices descripcion = devices[0].descripcion;
-                //devices[0].statusSitio = descripcion.descripcion;
                 
-                                
+                StatusDevices status = devices[0].status;
+                devices[0].statusSitio = status.descripcion;
+
             }
             
-
             
             dgvInventario.DataSource = devices;
             this.dgvInventario.Columns["lugar"].Visible = false;
             this.dgvInventario.Columns["lugarId"].Visible = false;
+            this.dgvInventario.Columns["status"].Visible = false;
         }
 
         public async Task<string> Gethttp()

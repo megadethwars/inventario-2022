@@ -77,6 +77,6 @@ namespace COMPRAS2.modelos
         public string statusSitio { get; set; }
 
         [DefaultValue(null)]
-        public StatusDevices descripcion { get; set; }
+        public StatusDevices status { get; set; }
     }
 }
