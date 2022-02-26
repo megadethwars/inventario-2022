@@ -283,6 +283,7 @@ namespace COMPRAS2
             this.btnOPCIONES.TabIndex = 63;
             this.btnOPCIONES.Text = "OPCIONES";
             this.btnOPCIONES.UseVisualStyleBackColor = false;
+            this.btnOPCIONES.Click += new System.EventHandler(this.btnOPCIONES_Click);
             // 
             // btnOK
             // 

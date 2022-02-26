@@ -86,6 +86,12 @@
     <Compile Include="DETALLES DEL PRODUCTO.Designer.cs">
       <DependentUpon>DETALLES DEL PRODUCTO.cs</DependentUpon>
     </Compile>
+    <Compile Include="DETALLES EMPLEADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DETALLES EMPLEADO.Designer.cs">
+      <DependentUpon>DETALLES EMPLEADO.cs</DependentUpon>
+    </Compile>
     <Compile Include="EDITAR PRODUCTO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DETALLES DEL PRODUCTO.resx">
       <DependentUpon>DETALLES DEL PRODUCTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DETALLES EMPLEADO.resx">
+      <DependentUpon>DETALLES EMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EDITAR PRODUCTO.resx">
       <DependentUpon>EDITAR PRODUCTO.cs</DependentUpon>

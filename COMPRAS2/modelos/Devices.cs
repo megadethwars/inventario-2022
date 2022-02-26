@@ -40,12 +40,14 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string idMov { get; set; }
 
+
         [DefaultValue(null)]
         public string lugarSitio { get; set; }
         
         [DefaultValue(null)]
         public Lugares lugar { get; set; }
         
+
         [DefaultValue(null)]
         public string lugarId { get; set; }
         
@@ -70,10 +72,11 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string proveedor { get; set; }
 
-        [DefaultValue(null)]
-        public StatusDevices descripcion { get; set; }
 
         [DefaultValue(null)]
         public string statusSitio { get; set; }
+
+        [DefaultValue(null)]
+        public StatusDevices descripcion { get; set; }
     }
 }

@@ -44,18 +44,23 @@ namespace COMPRAS2
             List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
             for (int x = 0; x < devices.Count; x++) {
-                Lugares lugar = devices[0].lugar;
 
+                Lugares lugar = devices[0].lugar;               
                 devices[0].lugarSitio = lugar.lugar;
-            }
 
+                //StatusDevices statusDevices = devices[0].descripcion;
+                //devices[0].statusSitio = statusDevices.descripcion;
+            }
+            
             for (int i = 0; i < devices.Count; i++)
             {
-                //StatusDevices 
 
-                //devices[0].statusSitio = statusDevice.descripcion;
+                //StatusDevices descripcion = devices[0].descripcion;
+                //devices[0].statusSitio = descripcion.descripcion;
+                
+                                
             }
-
+            
 
             
             dgvInventario.DataSource = devices;
