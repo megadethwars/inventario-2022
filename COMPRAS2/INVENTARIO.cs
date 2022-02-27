@@ -23,16 +23,11 @@ namespace COMPRAS2
 
         public INVENTARIO()
         {
-            InitializeComponent();
-   
-        }
-
-      
+            InitializeComponent();  
+        }     
         
         private async void INVENTARIO_Load(object sender, EventArgs e)
-        {
-            
-
+        {            
             var url = HttpMethods.url + "dispositivos";
             StatusMessage statusmessage = await HttpMethods.get(url);
 
@@ -46,18 +41,26 @@ namespace COMPRAS2
             for (int x = 0; x < devices.Count; x++) {
 
                 Lugares lugar = devices[0].lugar;               
-                devices[0].lugar_Actual = lugar.lugar;
+                devices[0].Lugar_Actual = lugar.lugar;
                 
                 StatusDevices status = devices[0].status;
-                devices[0].statusActual = status.descripcion;
-
+                devices[0].StatusActual = status.descripcion;
             }
-            
-            
+                        
             dgvInventario.DataSource = devices;
             this.dgvInventario.Columns["lugar"].Visible = false;
             this.dgvInventario.Columns["lugarId"].Visible = false;
             this.dgvInventario.Columns["status"].Visible = false;
+            this.dgvInventario.Columns["Compra"].Visible = false;
+            this.dgvInventario.Columns["Descompostura"].Visible = false;
+            this.dgvInventario.Columns["Foto"].Visible = false;
+            this.dgvInventario.Columns["IdMov"].Visible = false;
+            this.dgvInventario.Columns["Observaciones"].Visible = false;
+            this.dgvInventario.Columns["Origen"].Visible = false;
+            this.dgvInventario.Columns["Pertenece"].Visible = false;
+            this.dgvInventario.Columns["Proveedor"].Visible = false;
+            this.dgvInventario.Columns["Costo"].Visible = false;
+            this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
         }
 
         public async Task<string> Gethttp()
@@ -71,8 +74,6 @@ namespace COMPRAS2
 
         private void AbrirFormHija(object formhija)
         {
-
-
             if (this.mainmenu.PANELCONTENEDOR.Controls.Count > 0)
                 this.mainmenu.PANELCONTENEDOR.Controls.RemoveAt(0);
             Form fh = formhija as Form;
@@ -83,11 +84,9 @@ namespace COMPRAS2
             fh.Show();
         }
         
-
         private void bkBack_Click(object sender, EventArgs e)
         {
-            Navigator.backPage(this.Name, this);
-            
+            Navigator.backPage(this.Name, this);            
         }
 
         private void btnAgregarNuevoProducto_Click(object sender, EventArgs e)
@@ -118,6 +117,19 @@ namespace COMPRAS2
         private void btnEditarMovimientos_Click(object sender, EventArgs e)
         {
             Navigator.nextPage(new INVENTARIO2());
+        }
+
+        private void dgvInventario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Navigator.nextPage(new DETALLES_DEL_PRODUCTO());
+                //lblDProduct.Text = this.dgvInventario.CurrentCell.Value.ToString();
+            }
+            catch
+            {
+                return;
+            }
         }
     }
 }

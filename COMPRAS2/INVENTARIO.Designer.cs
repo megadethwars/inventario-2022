@@ -29,19 +29,11 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.INVENTARIOTITLE = new System.Windows.Forms.Label();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.lblProducto = new System.Windows.Forms.Label();
-            this.lblMarca = new System.Windows.Forms.Label();
-            this.lblCodigoQR = new System.Windows.Forms.Label();
-            this.lblModelo = new System.Windows.Forms.Label();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblCompra = new System.Windows.Forms.Label();
-            this.lblOrigen = new System.Windows.Forms.Label();
-            this.lblSerie = new System.Windows.Forms.Label();
             this.btnEditarMovimientos = new System.Windows.Forms.Button();
             this.btnActualizarBDD = new System.Windows.Forms.Button();
             this.btnActualizarProducto = new System.Windows.Forms.Button();
@@ -52,8 +44,8 @@ namespace COMPRAS2
             this.btnBuscador = new System.Windows.Forms.Button();
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,88 +67,39 @@ namespace COMPRAS2
             this.dgvInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvInventario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
             this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvInventario.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInventario.ColumnHeadersHeight = 45;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvInventario.Location = new System.Drawing.Point(24, 248);
+            this.dgvInventario.Location = new System.Drawing.Point(24, 220);
             this.dgvInventario.Name = "dgvInventario";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvInventario.Size = new System.Drawing.Size(1230, 533);
+            this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvInventario.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInventario.Size = new System.Drawing.Size(1230, 561);
             this.dgvInventario.TabIndex = 3;
-            // 
-            // lblProducto
-            // 
-            this.lblProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProducto.ForeColor = System.Drawing.Color.White;
-            this.lblProducto.Location = new System.Drawing.Point(27, 222);
-            this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(74, 16);
-            this.lblProducto.TabIndex = 12;
-            this.lblProducto.Text = "Producto:";
-            // 
-            // lblMarca
-            // 
-            this.lblMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.ForeColor = System.Drawing.Color.White;
-            this.lblMarca.Location = new System.Drawing.Point(151, 0);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(142, 20);
-            this.lblMarca.TabIndex = 13;
-            this.lblMarca.Text = "Marca:";
-            // 
-            // lblCodigoQR
-            // 
-            this.lblCodigoQR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCodigoQR.AutoSize = true;
-            this.lblCodigoQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoQR.ForeColor = System.Drawing.Color.White;
-            this.lblCodigoQR.Location = new System.Drawing.Point(299, 0);
-            this.lblCodigoQR.Name = "lblCodigoQR";
-            this.lblCodigoQR.Size = new System.Drawing.Size(142, 20);
-            this.lblCodigoQR.TabIndex = 14;
-            this.lblCodigoQR.Text = "Codigo QR:";
-            // 
-            // lblModelo
-            // 
-            this.lblModelo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblModelo.AutoSize = true;
-            this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModelo.ForeColor = System.Drawing.Color.White;
-            this.lblModelo.Location = new System.Drawing.Point(447, 0);
-            this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(142, 20);
-            this.lblModelo.TabIndex = 15;
-            this.lblModelo.Text = "Modelo:";
+            this.dgvInventario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellDoubleClick);
             // 
             // txtBUSCADOR
             // 
@@ -170,71 +113,6 @@ namespace COMPRAS2
             this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
             this.txtBUSCADOR.TabIndex = 29;
             this.txtBUSCADOR.Text = "Search";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
-            this.tableLayoutPanel1.Controls.Add(this.lblCompra, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblOrigen, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblSerie, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblMarca, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblModelo, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblCodigoQR, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 222);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1040, 20);
-            this.tableLayoutPanel1.TabIndex = 32;
-            // 
-            // lblCompra
-            // 
-            this.lblCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCompra.AutoSize = true;
-            this.lblCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompra.ForeColor = System.Drawing.Color.White;
-            this.lblCompra.Location = new System.Drawing.Point(891, 0);
-            this.lblCompra.Name = "lblCompra";
-            this.lblCompra.Size = new System.Drawing.Size(146, 20);
-            this.lblCompra.TabIndex = 35;
-            this.lblCompra.Text = "Compra:";
-            // 
-            // lblOrigen
-            // 
-            this.lblOrigen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOrigen.AutoSize = true;
-            this.lblOrigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrigen.ForeColor = System.Drawing.Color.White;
-            this.lblOrigen.Location = new System.Drawing.Point(743, 0);
-            this.lblOrigen.Name = "lblOrigen";
-            this.lblOrigen.Size = new System.Drawing.Size(142, 20);
-            this.lblOrigen.TabIndex = 34;
-            this.lblOrigen.Text = "Origen:";
-            // 
-            // lblSerie
-            // 
-            this.lblSerie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSerie.AutoSize = true;
-            this.lblSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerie.ForeColor = System.Drawing.Color.White;
-            this.lblSerie.Location = new System.Drawing.Point(595, 0);
-            this.lblSerie.Name = "lblSerie";
-            this.lblSerie.Size = new System.Drawing.Size(142, 20);
-            this.lblSerie.TabIndex = 33;
-            this.lblSerie.Text = "Serie:";
             // 
             // btnEditarMovimientos
             // 
@@ -407,20 +285,29 @@ namespace COMPRAS2
             this.bTNBack.UseVisualStyleBackColor = false;
             this.bTNBack.Click += new System.EventHandler(this.bkBack_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(288, 170);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "label1";
+            // 
             // INVENTARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEditarMovimientos);
             this.Controls.Add(this.btnActualizarBDD);
             this.Controls.Add(this.btnActualizarProducto);
             this.Controls.Add(this.btnSALIDA);
             this.Controls.Add(this.btnReingresarProducto);
-            this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.btnAgregarNuevoProducto);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnEscanear);
             this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.txtBUSCADOR);
@@ -433,8 +320,6 @@ namespace COMPRAS2
             this.Text = "INVENTARIO";
             this.Load += new System.EventHandler(this.INVENTARIO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -445,24 +330,17 @@ namespace COMPRAS2
 
         private System.Windows.Forms.Label INVENTARIOTITLE;
         private System.Windows.Forms.DataGridView dgvInventario;
-        private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.Label lblCodigoQR;
-        private System.Windows.Forms.Label lblModelo;
         private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Button btnBuscador;
         private System.Windows.Forms.TextBox txtBUSCADOR;
         private System.Windows.Forms.PictureBox pboxBuscador;
         private System.Windows.Forms.Button btnEscanear;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblCompra;
-        private System.Windows.Forms.Label lblOrigen;
-        private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Button btnAgregarNuevoProducto;
         private System.Windows.Forms.Button btnReingresarProducto;
         private System.Windows.Forms.Button btnSALIDA;
         private System.Windows.Forms.Button btnActualizarProducto;
         private System.Windows.Forms.Button btnActualizarBDD;
         private System.Windows.Forms.Button btnEditarMovimientos;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -88,35 +88,9 @@ namespace COMPRAS2
             {
                 return;
             }
-
-
-
-
-
-
-            //Control[] controls = this.PANELCONTENEDOR.Controls.Find("MIPERFIL", true);
-
-
-             
-            /*try
-            {
-
-                Control[] controls = this.PANELCONTENEDOR.Controls.Find("MIPERFIL", true);
-                
-                controls[0].Dispose();
-                if (this.PANELCONTENEDOR.Controls.Count > 0)
-                    this.PANELCONTENEDOR.Controls.RemoveAt(0);
-
-                AbrirFormHija(mainmenu);
-            }
-            catch
-            {
-                MessageBox.Show("EXCESO DE VISTAS...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-            
+          
         }
-
-       
+      
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
