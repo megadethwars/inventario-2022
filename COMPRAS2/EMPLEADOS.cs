@@ -40,11 +40,13 @@ namespace COMPRAS2
                     return 1;
                 }
 
-
                 var products = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
-                dgvEmpleados.DataSource = products;
-
-
+                
+                dgvUsuarios.DataSource = products;
+                this.dgvUsuarios.Columns["correo"].Visible = false;
+                this.dgvUsuarios.Columns["rolId"].Visible = false;
+                this.dgvUsuarios.Columns["foto"].Visible = false;
+                this.dgvUsuarios.Columns["statusId"].Visible = false;
 
                 return 0;
             }

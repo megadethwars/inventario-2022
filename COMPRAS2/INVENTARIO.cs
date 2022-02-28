@@ -62,7 +62,7 @@ namespace COMPRAS2
             this.dgvInventario.Columns["Costo"].Visible = false;
             this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
         }
-
+        /*
         public async Task<string> Gethttp()
         {
             WebRequest oRequest = WebRequest.Create(url);
@@ -70,7 +70,7 @@ namespace COMPRAS2
             StreamReader sr = new StreamReader(oResponse.GetResponseStream());
             return await sr.ReadToEndAsync();
         }
-
+        */
 
         private void AbrirFormHija(object formhija)
         {
@@ -118,11 +118,14 @@ namespace COMPRAS2
         {
             Navigator.nextPage(new INVENTARIO2());
         }
-
-        private void dgvInventario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+       
+        public void dgvInventario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
+                DETALLES_DEL_PRODUCTO f = new DETALLES_DEL_PRODUCTO();
+                
+                //f.lblDProducto.Text = this.dgvInventario.CurrentRow.Cells[1].Value.ToString();
                 Navigator.nextPage(new DETALLES_DEL_PRODUCTO());
                 //lblDProduct.Text = this.dgvInventario.CurrentCell.Value.ToString();
             }
