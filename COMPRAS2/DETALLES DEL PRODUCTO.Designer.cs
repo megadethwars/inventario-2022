@@ -39,7 +39,6 @@ namespace COMPRAS2
             this.lblModelo = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCodigoQR = new System.Windows.Forms.Label();
-            this.lblSerie = new System.Windows.Forms.Label();
             this.lblTituloEditarProducto = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@ namespace COMPRAS2
             this.brnOPCIONES = new System.Windows.Forms.Button();
             this.btnELIMINAR = new System.Windows.Forms.Button();
             this.lblDProducto = new System.Windows.Forms.Label();
-            this.lblDSerie = new System.Windows.Forms.Label();
             this.lblDCodigoQR = new System.Windows.Forms.Label();
             this.lblDMarca = new System.Windows.Forms.Label();
             this.lblDModelo = new System.Windows.Forms.Label();
@@ -125,7 +123,7 @@ namespace COMPRAS2
             this.lblCompra.AutoSize = true;
             this.lblCompra.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCompra.Location = new System.Drawing.Point(700, 100);
+            this.lblCompra.Location = new System.Drawing.Point(100, 260);
             this.lblCompra.Name = "lblCompra";
             this.lblCompra.Size = new System.Drawing.Size(82, 32);
             this.lblCompra.TabIndex = 40;
@@ -190,24 +188,11 @@ namespace COMPRAS2
             this.lblCodigoQR.AutoSize = true;
             this.lblCodigoQR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCodigoQR.Location = new System.Drawing.Point(100, 260);
+            this.lblCodigoQR.Location = new System.Drawing.Point(102, 180);
             this.lblCodigoQR.Name = "lblCodigoQR";
             this.lblCodigoQR.Size = new System.Drawing.Size(98, 32);
             this.lblCodigoQR.TabIndex = 35;
             this.lblCodigoQR.Text = "CODIGO QR:";
-            // 
-            // lblSerie
-            // 
-            this.lblSerie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblSerie.AutoSize = true;
-            this.lblSerie.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblSerie.Location = new System.Drawing.Point(100, 180);
-            this.lblSerie.Name = "lblSerie";
-            this.lblSerie.Size = new System.Drawing.Size(62, 32);
-            this.lblSerie.TabIndex = 34;
-            this.lblSerie.Text = "SERIE:";
             // 
             // lblTituloEditarProducto
             // 
@@ -253,7 +238,7 @@ namespace COMPRAS2
             this.lblLugar.AutoSize = true;
             this.lblLugar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblLugar.Location = new System.Drawing.Point(700, 500);
+            this.lblLugar.Location = new System.Drawing.Point(700, 100);
             this.lblLugar.Name = "lblLugar";
             this.lblLugar.Size = new System.Drawing.Size(66, 32);
             this.lblLugar.TabIndex = 59;
@@ -279,7 +264,7 @@ namespace COMPRAS2
             this.lblDLugar.AutoSize = true;
             this.lblDLugar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDLugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDLugar.Location = new System.Drawing.Point(700, 580);
+            this.lblDLugar.Location = new System.Drawing.Point(700, 500);
             this.lblDLugar.Name = "lblDLugar";
             this.lblDLugar.Size = new System.Drawing.Size(56, 32);
             this.lblDLugar.TabIndex = 63;
@@ -335,19 +320,6 @@ namespace COMPRAS2
             this.lblDProducto.TabIndex = 67;
             this.lblDProducto.Text = "Producto";
             // 
-            // lblDSerie
-            // 
-            this.lblDSerie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblDSerie.AutoSize = true;
-            this.lblDSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDSerie.Location = new System.Drawing.Point(100, 220);
-            this.lblDSerie.Name = "lblDSerie";
-            this.lblDSerie.Size = new System.Drawing.Size(46, 20);
-            this.lblDSerie.TabIndex = 68;
-            this.lblDSerie.Text = "Serie";
-            // 
             // lblDCodigoQR
             // 
             this.lblDCodigoQR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -355,7 +327,7 @@ namespace COMPRAS2
             this.lblDCodigoQR.AutoSize = true;
             this.lblDCodigoQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDCodigoQR.Location = new System.Drawing.Point(100, 300);
+            this.lblDCodigoQR.Location = new System.Drawing.Point(102, 220);
             this.lblDCodigoQR.Name = "lblDCodigoQR";
             this.lblDCodigoQR.Size = new System.Drawing.Size(87, 20);
             this.lblDCodigoQR.TabIndex = 69;
@@ -433,7 +405,7 @@ namespace COMPRAS2
             this.lblDCompra.AutoSize = true;
             this.lblDCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDCompra.Location = new System.Drawing.Point(702, 140);
+            this.lblDCompra.Location = new System.Drawing.Point(100, 300);
             this.lblDCompra.Name = "lblDCompra";
             this.lblDCompra.Size = new System.Drawing.Size(65, 20);
             this.lblDCompra.TabIndex = 75;
@@ -446,7 +418,7 @@ namespace COMPRAS2
             this.lblDAccesorio.AutoSize = true;
             this.lblDAccesorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDAccesorio.Location = new System.Drawing.Point(702, 220);
+            this.lblDAccesorio.Location = new System.Drawing.Point(700, 220);
             this.lblDAccesorio.Name = "lblDAccesorio";
             this.lblDAccesorio.Size = new System.Drawing.Size(79, 20);
             this.lblDAccesorio.TabIndex = 76;
@@ -459,7 +431,7 @@ namespace COMPRAS2
             this.lblDDescompostura.AutoSize = true;
             this.lblDDescompostura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDDescompostura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDDescompostura.Location = new System.Drawing.Point(702, 300);
+            this.lblDDescompostura.Location = new System.Drawing.Point(700, 300);
             this.lblDDescompostura.Name = "lblDDescompostura";
             this.lblDDescompostura.Size = new System.Drawing.Size(122, 20);
             this.lblDDescompostura.TabIndex = 77;
@@ -472,7 +444,7 @@ namespace COMPRAS2
             this.lblDProvedor.AutoSize = true;
             this.lblDProvedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDProvedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDProvedor.Location = new System.Drawing.Point(702, 380);
+            this.lblDProvedor.Location = new System.Drawing.Point(700, 380);
             this.lblDProvedor.Name = "lblDProvedor";
             this.lblDProvedor.Size = new System.Drawing.Size(72, 20);
             this.lblDProvedor.TabIndex = 78;
@@ -485,7 +457,7 @@ namespace COMPRAS2
             this.lblDCantidad.AutoSize = true;
             this.lblDCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDCantidad.Location = new System.Drawing.Point(702, 460);
+            this.lblDCantidad.Location = new System.Drawing.Point(700, 460);
             this.lblDCantidad.Name = "lblDCantidad";
             this.lblDCantidad.Size = new System.Drawing.Size(73, 20);
             this.lblDCantidad.TabIndex = 79;
@@ -498,7 +470,7 @@ namespace COMPRAS2
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label17.Location = new System.Drawing.Point(702, 540);
+            this.label17.Location = new System.Drawing.Point(700, 140);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(50, 20);
             this.label17.TabIndex = 80;
@@ -511,7 +483,7 @@ namespace COMPRAS2
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label18.Location = new System.Drawing.Point(702, 620);
+            this.label18.Location = new System.Drawing.Point(700, 540);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 20);
             this.label18.TabIndex = 81;
@@ -536,7 +508,6 @@ namespace COMPRAS2
             this.Controls.Add(this.lblDModelo);
             this.Controls.Add(this.lblDMarca);
             this.Controls.Add(this.lblDCodigoQR);
-            this.Controls.Add(this.lblDSerie);
             this.Controls.Add(this.lblDProducto);
             this.Controls.Add(this.btnELIMINAR);
             this.Controls.Add(this.brnOPCIONES);
@@ -554,12 +525,12 @@ namespace COMPRAS2
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblCodigoQR);
-            this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.lblTituloEditarProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DETALLES_DEL_PRODUCTO";
             this.Text = "DETALLES_DEL_PRODUCTO";
+            this.Load += new System.EventHandler(this.DETALLES_DEL_PRODUCTO_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -576,7 +547,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblModelo;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCodigoQR;
-        private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Label lblTituloEditarProducto;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblCantidad;
@@ -586,7 +556,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button brnOPCIONES;
         private System.Windows.Forms.Button btnELIMINAR;
         private System.Windows.Forms.Label lblDProducto;
-        private System.Windows.Forms.Label lblDSerie;
         private System.Windows.Forms.Label lblDCodigoQR;
         private System.Windows.Forms.Label lblDMarca;
         private System.Windows.Forms.Label lblDModelo;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace COMPRAS2.modelos
 {
     
-    class Devices
+    public class Devices
     {
         [DefaultValue(0)]
         public int Cantidad { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace COMPRAS2.modelos
 {
-    class StatusDevices
+    public class StatusDevices
     {
         [DefaultValue(null)]
         public string descripcion { get; set; }

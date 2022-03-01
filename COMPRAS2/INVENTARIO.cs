@@ -123,13 +123,13 @@ namespace COMPRAS2
         {
             try
             {
-                DETALLES_DEL_PRODUCTO f = new DETALLES_DEL_PRODUCTO();
-                
-                //f.lblDProducto.Text = this.dgvInventario.CurrentRow.Cells[1].Value.ToString();
-                Navigator.nextPage(new DETALLES_DEL_PRODUCTO());
-                //lblDProduct.Text = this.dgvInventario.CurrentCell.Value.ToString();
+                DataGridViewRow cell = dgvInventario.Rows[e.RowIndex];
+                Devices data =(Devices)cell.DataBoundItem;
+
+                Navigator.nextPage(new DETALLES_DEL_PRODUCTO(data));
+                ;
             }
-            catch
+            catch(Exception ex)
             {
                 return;
             }

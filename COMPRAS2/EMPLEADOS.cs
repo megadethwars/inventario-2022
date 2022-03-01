@@ -41,7 +41,13 @@ namespace COMPRAS2
                 }
 
                 var products = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
-                
+
+                for (int x = 0; x < products.Count; x++)
+                {
+
+                    
+                }
+
                 dgvUsuarios.DataSource = products;
                 this.dgvUsuarios.Columns["correo"].Visible = false;
                 this.dgvUsuarios.Columns["rolId"].Visible = false;
