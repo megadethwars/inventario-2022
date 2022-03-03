@@ -43,9 +43,12 @@ namespace COMPRAS2
             this.lblDCosto.Text = devices.Costo.ToString();
             this.lblDOrigen.Text = devices.Origen;
             this.lblDFecha.Text = devices.FechaAlta.ToString();
-            //this.lblDLugar.Text = devices.Lugar_Actual.ToString();            
+            this.lblDLugar.Text = devices.Lugar_Actual;
+            this.lblDEstatus.Text = devices.StatusActual;
             this.lblDDescompostura.Text = devices.Descompostura;
             this.lblDProvedor.Text = devices.Proveedor;
+            this.lblDCantidad.Text = devices.Cantidad.ToString();
+            this.lblDFoto.Text = devices.Foto;
 
 
         }
