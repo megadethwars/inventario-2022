@@ -35,17 +35,17 @@ namespace COMPRAS2
         private void DETALLES_DEL_PRODUCTO_Load(object sender, EventArgs e)
         {
             
-            this.lblDProducto.Text = devices.Producto;
-            this.lblDCompra.Text = devices.Compra;
-            this.lblDCodigoQR.Text = devices.Codigo;
-            this.lblDMarca.Text = devices.Marca;
-            this.lblDModelo.Text = devices.Modelo;
-            this.lblDCosto.Text = devices.Costo.ToString();
-            this.lblDOrigen.Text = devices.Origen;
+            this.lblDProducto.Text = devices.producto;
+            this.lblDCompra.Text = devices.compra;
+            this.lblDCodigoQR.Text = devices.codigo;
+            this.lblDMarca.Text = devices.marca;
+            this.lblDModelo.Text = devices.modelo;
+            this.lblDCosto.Text = devices.costo.ToString();
+            this.lblDOrigen.Text = devices.origen;
             this.lblDFecha.Text = devices.FechaAlta.ToString();
             //this.lblDLugar.Text = devices.Lugar_Actual.ToString();            
-            this.lblDDescompostura.Text = devices.Descompostura;
-            this.lblDProvedor.Text = devices.Proveedor;
+            this.lblDDescompostura.Text = devices.descompostura;
+            this.lblDProvedor.Text = devices.proveedor;
 
 
         }
