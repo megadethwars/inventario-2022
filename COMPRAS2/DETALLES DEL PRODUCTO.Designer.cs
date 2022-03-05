@@ -32,7 +32,7 @@ namespace COMPRAS2
             this.btnBack = new System.Windows.Forms.Button();
             this.lblProvedor = new System.Windows.Forms.Label();
             this.lblDescompostura = new System.Windows.Forms.Label();
-            this.lblAccesorio = new System.Windows.Forms.Label();
+            this.lblEstatus = new System.Windows.Forms.Label();
             this.lblCompra = new System.Windows.Forms.Label();
             this.lblOrigen = new System.Windows.Forms.Label();
             this.lblCosto = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@ namespace COMPRAS2
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblLugar = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblDLugar = new System.Windows.Forms.Label();
+            this.lblFoto = new System.Windows.Forms.Label();
             this.brnOPCIONES = new System.Windows.Forms.Button();
             this.btnELIMINAR = new System.Windows.Forms.Button();
             this.lblDProducto = new System.Windows.Forms.Label();
@@ -55,12 +55,12 @@ namespace COMPRAS2
             this.lblDOrigen = new System.Windows.Forms.Label();
             this.lblDFecha = new System.Windows.Forms.Label();
             this.lblDCompra = new System.Windows.Forms.Label();
-            this.lblDAccesorio = new System.Windows.Forms.Label();
+            this.lblDEstatus = new System.Windows.Forms.Label();
             this.lblDDescompostura = new System.Windows.Forms.Label();
             this.lblDProvedor = new System.Windows.Forms.Label();
             this.lblDCantidad = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblDLugar = new System.Windows.Forms.Label();
+            this.lblDFoto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBack
@@ -103,18 +103,18 @@ namespace COMPRAS2
             this.lblDescompostura.TabIndex = 42;
             this.lblDescompostura.Text = "DESCOMPOSTURA:";
             // 
-            // lblAccesorio
+            // lblEstatus
             // 
-            this.lblAccesorio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblEstatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAccesorio.AutoSize = true;
-            this.lblAccesorio.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblAccesorio.Location = new System.Drawing.Point(700, 180);
-            this.lblAccesorio.Name = "lblAccesorio";
-            this.lblAccesorio.Size = new System.Drawing.Size(125, 32);
-            this.lblAccesorio.TabIndex = 41;
-            this.lblAccesorio.Text = "ACCESORIO DE:";
+            this.lblEstatus.AutoSize = true;
+            this.lblEstatus.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblEstatus.Location = new System.Drawing.Point(700, 180);
+            this.lblEstatus.Name = "lblEstatus";
+            this.lblEstatus.Size = new System.Drawing.Size(83, 32);
+            this.lblEstatus.TabIndex = 41;
+            this.lblEstatus.Text = "ESTATUS:";
             // 
             // lblCompra
             // 
@@ -257,18 +257,18 @@ namespace COMPRAS2
             this.lblFecha.TabIndex = 61;
             this.lblFecha.Text = "FECHA:";
             // 
-            // lblDLugar
+            // lblFoto
             // 
-            this.lblDLugar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblFoto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDLugar.AutoSize = true;
-            this.lblDLugar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDLugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDLugar.Location = new System.Drawing.Point(700, 500);
-            this.lblDLugar.Name = "lblDLugar";
-            this.lblDLugar.Size = new System.Drawing.Size(56, 32);
-            this.lblDLugar.TabIndex = 63;
-            this.lblDLugar.Text = "FOTO:";
+            this.lblFoto.AutoSize = true;
+            this.lblFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblFoto.Location = new System.Drawing.Point(700, 500);
+            this.lblFoto.Name = "lblFoto";
+            this.lblFoto.Size = new System.Drawing.Size(56, 32);
+            this.lblFoto.TabIndex = 63;
+            this.lblFoto.Text = "FOTO:";
             // 
             // brnOPCIONES
             // 
@@ -411,18 +411,18 @@ namespace COMPRAS2
             this.lblDCompra.TabIndex = 75;
             this.lblDCompra.Text = "Compra";
             // 
-            // lblDAccesorio
+            // lblDEstatus
             // 
-            this.lblDAccesorio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblDEstatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDAccesorio.AutoSize = true;
-            this.lblDAccesorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDAccesorio.Location = new System.Drawing.Point(700, 220);
-            this.lblDAccesorio.Name = "lblDAccesorio";
-            this.lblDAccesorio.Size = new System.Drawing.Size(79, 20);
-            this.lblDAccesorio.TabIndex = 76;
-            this.lblDAccesorio.Text = "Accesorio";
+            this.lblDEstatus.AutoSize = true;
+            this.lblDEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblDEstatus.Location = new System.Drawing.Point(700, 220);
+            this.lblDEstatus.Name = "lblDEstatus";
+            this.lblDEstatus.Size = new System.Drawing.Size(79, 20);
+            this.lblDEstatus.TabIndex = 76;
+            this.lblDEstatus.Text = "Accesorio";
             // 
             // lblDDescompostura
             // 
@@ -463,31 +463,31 @@ namespace COMPRAS2
             this.lblDCantidad.TabIndex = 79;
             this.lblDCantidad.Text = "Cantidad";
             // 
-            // label17
+            // lblDLugar
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblDLugar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label17.Location = new System.Drawing.Point(700, 140);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(50, 20);
-            this.label17.TabIndex = 80;
-            this.label17.Text = "Lugar";
+            this.lblDLugar.AutoSize = true;
+            this.lblDLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDLugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblDLugar.Location = new System.Drawing.Point(700, 140);
+            this.lblDLugar.Name = "lblDLugar";
+            this.lblDLugar.Size = new System.Drawing.Size(50, 20);
+            this.lblDLugar.TabIndex = 80;
+            this.lblDLugar.Text = "Lugar";
             // 
-            // label18
+            // lblDFoto
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblDFoto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label18.Location = new System.Drawing.Point(700, 540);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 20);
-            this.label18.TabIndex = 81;
-            this.label18.Text = "Foto";
+            this.lblDFoto.AutoSize = true;
+            this.lblDFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblDFoto.Location = new System.Drawing.Point(700, 540);
+            this.lblDFoto.Name = "lblDFoto";
+            this.lblDFoto.Size = new System.Drawing.Size(42, 20);
+            this.lblDFoto.TabIndex = 81;
+            this.lblDFoto.Text = "Foto";
             // 
             // DETALLES_DEL_PRODUCTO
             // 
@@ -495,12 +495,12 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.lblDFoto);
+            this.Controls.Add(this.lblDLugar);
             this.Controls.Add(this.lblDCantidad);
             this.Controls.Add(this.lblDProvedor);
             this.Controls.Add(this.lblDDescompostura);
-            this.Controls.Add(this.lblDAccesorio);
+            this.Controls.Add(this.lblDEstatus);
             this.Controls.Add(this.lblDCompra);
             this.Controls.Add(this.lblDFecha);
             this.Controls.Add(this.lblDOrigen);
@@ -511,14 +511,14 @@ namespace COMPRAS2
             this.Controls.Add(this.lblDProducto);
             this.Controls.Add(this.btnELIMINAR);
             this.Controls.Add(this.brnOPCIONES);
-            this.Controls.Add(this.lblDLugar);
+            this.Controls.Add(this.lblFoto);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblLugar);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblProvedor);
             this.Controls.Add(this.lblDescompostura);
-            this.Controls.Add(this.lblAccesorio);
+            this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.lblCompra);
             this.Controls.Add(this.lblOrigen);
             this.Controls.Add(this.lblCosto);
@@ -540,7 +540,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblProvedor;
         private System.Windows.Forms.Label lblDescompostura;
-        private System.Windows.Forms.Label lblAccesorio;
+        private System.Windows.Forms.Label lblEstatus;
         private System.Windows.Forms.Label lblCompra;
         private System.Windows.Forms.Label lblOrigen;
         private System.Windows.Forms.Label lblCosto;
@@ -552,7 +552,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblDLugar;
+        private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.Button brnOPCIONES;
         private System.Windows.Forms.Button btnELIMINAR;
         private System.Windows.Forms.Label lblDProducto;
@@ -563,11 +563,11 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblDOrigen;
         private System.Windows.Forms.Label lblDFecha;
         private System.Windows.Forms.Label lblDCompra;
-        private System.Windows.Forms.Label lblDAccesorio;
+        private System.Windows.Forms.Label lblDEstatus;
         private System.Windows.Forms.Label lblDDescompostura;
         private System.Windows.Forms.Label lblDProvedor;
         private System.Windows.Forms.Label lblDCantidad;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblDLugar;
+        private System.Windows.Forms.Label lblDFoto;
     }
 }

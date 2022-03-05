@@ -11,19 +11,19 @@ namespace COMPRAS2.modelos
     public class Devices
     {
         [DefaultValue(0)]
-        public int cantidad { get; set; }
+        public int Cantidad { get; set; }
 
         [DefaultValue(null)]
-        public string codigo { get; set; }
+        public string Codigo { get; set; }
 
         [DefaultValue(null)]
-        public string compra { get; set; }
+        public string Compra { get; set; }
 
         [DefaultValue(0)]
-        public int costo { get; set; }
+        public int Costo { get; set; }
 
         [DefaultValue(null)]
-        public string descompostura { get; set; }
+        public string Descompostura { get; set; }
 
         [DefaultValue(null)]
         public DateTime? FechaAlta { get; set; }
@@ -32,13 +32,10 @@ namespace COMPRAS2.modelos
         public DateTime? FechaUltimaModificacion { get; set; }
 
         [DefaultValue(null)]
-        public string foto { get; set; }
+        public string Foto { get; set; }
 
         [DefaultValue(0)]
         public int Id { get; set; }
-
-        [DefaultValue(0)]
-        public int statusId { get; set; }
 
         [DefaultValue(null)]
         public string IdMov { get; set; }
@@ -52,28 +49,28 @@ namespace COMPRAS2.modelos
         
 
         [DefaultValue(null)]
-        public int lugarId { get; set; }
+        public string lugarId { get; set; }
         
         [DefaultValue(null)]
-        public string marca { get; set; }
+        public string Marca { get; set; }
         
         [DefaultValue(null)]
-        public string modelo { get; set; }
+        public string Modelo { get; set; }
 
         [DefaultValue(null)]
-        public string observaciones { get; set; }
+        public string Observaciones { get; set; }
 
         [DefaultValue(null)]
-        public string origen { get; set; }
+        public string Origen { get; set; }
 
         [DefaultValue(null)]
-        public string pertenece { get; set; }
+        public string Pertenece { get; set; }
 
         [DefaultValue(null)]
-        public string producto { get; set; }
+        public string Producto { get; set; }
 
         [DefaultValue(null)]
-        public string proveedor { get; set; }
+        public string Proveedor { get; set; }
 
 
         [DefaultValue(null)]

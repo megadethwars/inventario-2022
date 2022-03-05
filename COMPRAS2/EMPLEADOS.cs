@@ -68,5 +68,21 @@ namespace COMPRAS2
             await empleados();
 
         }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {/*
+                DataGridViewRow cell = dgvInventario.Rows[e.RowIndex];
+                Devices data = (Devices)cell.DataBoundItem;*/
+
+                Navigator.nextPage(new DETALLES_EMPLEADO());
+                
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
     }
 }
