@@ -40,11 +40,11 @@ namespace COMPRAS2
 
             for (int x = 0; x < devices.Count; x++) {
 
-                Lugares lugar = devices[0].lugar;               
-                devices[0].Lugar_Actual = lugar.lugar;
+                Lugares lugar = devices[x].lugar;               
+                devices[x].Lugar_Actual = lugar.lugar;
                 
-                StatusDevices status = devices[0].status;
-                devices[0].StatusActual = status.descripcion;
+                StatusDevices status = devices[x].status;
+                devices[x].StatusActual = status.descripcion;
             }
                         
             dgvInventario.DataSource = devices;

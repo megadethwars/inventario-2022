@@ -11,19 +11,19 @@ namespace COMPRAS2.modelos
     public class Devices
     {
         [DefaultValue(0)]
-        public int Cantidad { get; set; }
+        public int cantidad { get; set; }
 
         [DefaultValue(null)]
-        public string Codigo { get; set; }
+        public string codigo { get; set; }
 
         [DefaultValue(null)]
-        public string Compra { get; set; }
+        public string compra { get; set; }
 
         [DefaultValue(0)]
-        public int Costo { get; set; }
+        public int costo { get; set; }
 
         [DefaultValue(null)]
-        public string Descompostura { get; set; }
+        public string descompostura { get; set; }
 
         [DefaultValue(null)]
         public DateTime? FechaAlta { get; set; }
@@ -52,13 +52,13 @@ namespace COMPRAS2.modelos
         public string lugarId { get; set; }
         
         [DefaultValue(null)]
-        public string Marca { get; set; }
+        public string marca { get; set; }
         
         [DefaultValue(null)]
-        public string Modelo { get; set; }
+        public string modelo { get; set; }
 
         [DefaultValue(null)]
-        public string Observaciones { get; set; }
+        public string observaciones { get; set; }
 
         [DefaultValue(null)]
         public string Origen { get; set; }
@@ -67,10 +67,10 @@ namespace COMPRAS2.modelos
         public string Pertenece { get; set; }
 
         [DefaultValue(null)]
-        public string Producto { get; set; }
+        public string producto { get; set; }
 
         [DefaultValue(null)]
-        public string Proveedor { get; set; }
+        public string proveedor { get; set; }
 
 
         [DefaultValue(null)]
@@ -78,5 +78,8 @@ namespace COMPRAS2.modelos
 
         [DefaultValue(null)]
         public StatusDevices status { get; set; }
+
+        [DefaultValue(null)]
+        public string statusId { get; set; }
     }
 }
