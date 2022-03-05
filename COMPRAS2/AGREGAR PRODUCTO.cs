@@ -31,6 +31,7 @@ namespace COMPRAS2
             Navigator.backPage(this.Name, this);
         }
 
+
         private async Task<int> Auth()
         {
             try
@@ -50,7 +51,7 @@ namespace COMPRAS2
                 }
                 if (txtModelo.Text == "")
                 {
-                    MessageBox.Show("campo de modelo vacio");
+                    MessageBox.Show("campo de modelo esta vacio");
                     return 1;
                 }
 
