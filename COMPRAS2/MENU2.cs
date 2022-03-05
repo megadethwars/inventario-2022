@@ -62,8 +62,7 @@ namespace COMPRAS2
         }
 
         private void btnINVENTARIO_Click(object sender, EventArgs e)
-        {
-            //AbrirFormHija(new INVENTARIO());
+        {            
             Navigator.nextPage(new INVENTARIO());
         }
 

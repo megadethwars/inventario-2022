@@ -400,5 +400,11 @@
   <ItemGroup>
     <None Include="Resources\panel2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recarga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RECARGAORIG.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -34,6 +34,7 @@ namespace COMPRAS2
             this.INVENTARIOTITLE = new System.Windows.Forms.Label();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
+            this.btnRecargar = new System.Windows.Forms.Button();
             this.btnEditarMovimientos = new System.Windows.Forms.Button();
             this.btnActualizarBDD = new System.Windows.Forms.Button();
             this.btnActualizarProducto = new System.Windows.Forms.Button();
@@ -112,6 +113,20 @@ namespace COMPRAS2
             this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
             this.txtBUSCADOR.TabIndex = 29;
             this.txtBUSCADOR.Text = "Search";
+            // 
+            // btnRecargar
+            // 
+            this.btnRecargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnRecargar.BackgroundImage = global::COMPRAS2.Properties.Resources.RECARGAORIG;
+            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRecargar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecargar.Location = new System.Drawing.Point(1209, 20);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(50, 50);
+            this.btnRecargar.TabIndex = 39;
+            this.btnRecargar.UseVisualStyleBackColor = false;
+            this.btnRecargar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnEditarMovimientos
             // 
@@ -290,6 +305,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnRecargar);
             this.Controls.Add(this.btnEditarMovimientos);
             this.Controls.Add(this.btnActualizarBDD);
             this.Controls.Add(this.btnActualizarProducto);
@@ -329,5 +345,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnActualizarProducto;
         private System.Windows.Forms.Button btnActualizarBDD;
         private System.Windows.Forms.Button btnEditarMovimientos;
+        private System.Windows.Forms.Button btnRecargar;
     }
 }

@@ -148,6 +148,9 @@
   <data name="TIPO DE EMPLEADO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TIPO DE EMPLEADO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="panel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="specialbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\specialbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,6 +192,9 @@
   </data>
   <data name="MIPERFIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MIPERFIL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="recarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\recarga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AudioVideoSolutionsLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AudioVideoSolutionsLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,7 +238,7 @@
   <data name="OK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="panel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\panel2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RECARGAORIG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RECARGAORIG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
