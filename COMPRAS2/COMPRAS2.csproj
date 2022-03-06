@@ -167,6 +167,7 @@
     <Compile Include="modelos\CurrentUser.cs" />
     <Compile Include="modelos\Devices.cs" />
     <Compile Include="modelos\Lugares.cs" />
+    <Compile Include="modelos\Reportes.cs" />
     <Compile Include="modelos\Rol.cs" />
     <Compile Include="modelos\StatusDevices.cs" />
     <Compile Include="modelos\StatusMessage.cs" />

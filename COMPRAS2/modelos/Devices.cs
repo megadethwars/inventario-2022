@@ -79,6 +79,7 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public StatusDevices status { get; set; }
 
+
         [DefaultValue(null)]
         public string statusId { get; set; }
     }

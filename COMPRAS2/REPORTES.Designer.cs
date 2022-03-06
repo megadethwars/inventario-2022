@@ -234,6 +234,7 @@ namespace COMPRAS2
             // 
             this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";

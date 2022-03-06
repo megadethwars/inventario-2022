@@ -29,8 +29,8 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.INVENTARIOTITLE = new System.Windows.Forms.Label();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
@@ -73,14 +73,14 @@ namespace COMPRAS2
             this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvInventario.ColumnHeadersHeight = 45;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvInventario.EnableHeadersVisualStyles = false;
@@ -89,13 +89,13 @@ namespace COMPRAS2
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvInventario.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(1230, 561);
             this.dgvInventario.TabIndex = 3;
@@ -108,7 +108,7 @@ namespace COMPRAS2
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBUSCADOR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.txtBUSCADOR.Location = new System.Drawing.Point(181, 109);
+            this.txtBUSCADOR.Location = new System.Drawing.Point(180, 110);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
             this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
             this.txtBUSCADOR.TabIndex = 29;
@@ -269,7 +269,7 @@ namespace COMPRAS2
             this.btnBuscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscador.Location = new System.Drawing.Point(144, 108);
+            this.btnBuscador.Location = new System.Drawing.Point(145, 110);
             this.btnBuscador.Name = "btnBuscador";
             this.btnBuscador.Size = new System.Drawing.Size(31, 25);
             this.btnBuscador.TabIndex = 30;
@@ -279,7 +279,7 @@ namespace COMPRAS2
             // 
             this.pboxBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pboxBuscador.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pboxBuscador.Location = new System.Drawing.Point(123, 99);
+            this.pboxBuscador.Location = new System.Drawing.Point(120, 100);
             this.pboxBuscador.Name = "pboxBuscador";
             this.pboxBuscador.Size = new System.Drawing.Size(1036, 40);
             this.pboxBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
