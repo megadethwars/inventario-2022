@@ -77,7 +77,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.correo1.AutoSize = true;
             this.correo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
+            this.correo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.correo1.Location = new System.Drawing.Point(324, 424);
             this.correo1.Name = "correo1";
             this.correo1.Size = new System.Drawing.Size(89, 20);
@@ -90,7 +90,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.telefono1.AutoSize = true;
             this.telefono1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefono1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
+            this.telefono1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.telefono1.Location = new System.Drawing.Point(324, 364);
             this.telefono1.Name = "telefono1";
             this.telefono1.Size = new System.Drawing.Size(69, 20);
@@ -103,7 +103,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tipodeempleado1.AutoSize = true;
             this.tipodeempleado1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipodeempleado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
+            this.tipodeempleado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.tipodeempleado1.Location = new System.Drawing.Point(324, 304);
             this.tipodeempleado1.Name = "tipodeempleado1";
             this.tipodeempleado1.Size = new System.Drawing.Size(77, 20);
@@ -116,12 +116,12 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nombre1.AutoSize = true;
             this.nombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
+            this.nombre1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.nombre1.Location = new System.Drawing.Point(324, 244);
             this.nombre1.Name = "nombre1";
-            this.nombre1.Size = new System.Drawing.Size(246, 20);
+            this.nombre1.Size = new System.Drawing.Size(233, 20);
             this.nombre1.TabIndex = 16;
-            this.nombre1.Text = "NOMBRE DEL PROODUCTO:";
+            this.nombre1.Text = "NOMBRE DEL PRODUCTO:";
             // 
             // label1
             // 
@@ -129,7 +129,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.label1.Location = new System.Drawing.Point(324, 484);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 20);

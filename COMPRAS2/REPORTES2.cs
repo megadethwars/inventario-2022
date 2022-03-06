@@ -41,16 +41,32 @@ namespace COMPRAS2
             }
 
             List<Reportes> reportes = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
-            /*
-            for (int x = 0; x < devices.Count; x++)
+
+            for(int x=0; x<reportes.Count; x++)
             {
-                
-                Lugares lugar = devices[x].lugar;
-                devices[x].Lugar_Actual = lugar.lugar;
-                
-                Devices status = devices[x].status;
-                devices[x].DispositivoActual = status.descripcion;
-            }*/
+                Devices Dispositivos = reportes[x].Dispositivo;
+                reportes[x].DispositivoActual = Dispositivos.producto;
+            }
+            
+            dgvReportes.DataSource = reportes;
+            this.dgvReportes.Columns["Foto"].Visible = false;
+            this.dgvReportes.Columns["FechaUltimaModificacion"].Visible = false;
+        }
+
+        private async void btnRecargar_Click(object sender, EventArgs e)
+        {
+            dgvReportes.DataSource = null;
+
+            var url = HttpMethods.url + "reportes";
+            StatusMessage statusmessage = await HttpMethods.get(url);
+
+            if (statusmessage.statuscode != 200)
+            {
+                return;
+            }
+
+            List<Reportes> reportes = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+
             dgvReportes.DataSource = reportes;
         }
     }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace COMPRAS2.modelos
 {
-    class User
+    public class User
     {
         [DefaultValue(null)]
         public string apellidoMaterno { get; set; }
@@ -20,10 +20,13 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string correo { get; set; }
 
+        [DefaultValue(null)]
         public DateTime? fechaAlta = null;
 
+        [DefaultValue(null)]
         public DateTime? fechaUltimaModificacion = null;
- 
+
+        [DefaultValue(null)]
         public string foto { get; set; }
 
         [DefaultValue(0)]
