@@ -116,6 +116,7 @@ namespace COMPRAS2
             // 
             // btnRecargar
             // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRecargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnRecargar.BackgroundImage = global::COMPRAS2.Properties.Resources.RECARGAORIG;
             this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

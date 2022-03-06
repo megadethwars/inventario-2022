@@ -32,5 +32,10 @@ namespace COMPRAS2
         {
             Navigator.nextPage(new REPORTES2());
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

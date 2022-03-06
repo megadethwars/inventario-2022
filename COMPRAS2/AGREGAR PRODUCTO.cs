@@ -139,7 +139,8 @@ namespace COMPRAS2
                     //var auth = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
                     List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
                     MessageBox.Show("PRODUCTO AGREGADO CORRECTAMENTE");
-                    return 0;
+                    Navigator.backPage(this.Name, this);
+                    return 0;                    
                 }
                 else if (statusmessage.statuscode == 404)
                 {

@@ -51,6 +51,7 @@ namespace COMPRAS2
             this.dgvInventario.Columns["lugar"].Visible = false;
             this.dgvInventario.Columns["lugarId"].Visible = false;
             this.dgvInventario.Columns["status"].Visible = false;
+            this.dgvInventario.Columns["statusId"].Visible = false;
             this.dgvInventario.Columns["Compra"].Visible = false;
             this.dgvInventario.Columns["Descompostura"].Visible = false;
             this.dgvInventario.Columns["Foto"].Visible = false;
@@ -138,7 +139,7 @@ namespace COMPRAS2
         private async void button1_Click(object sender, EventArgs e)
         {
             dgvInventario.DataSource = null;
-            //Navigator.nextPage(new INVENTARIO());
+            
             var url = HttpMethods.url + "dispositivos";
             StatusMessage statusmessage = await HttpMethods.get(url);
 
@@ -163,6 +164,7 @@ namespace COMPRAS2
             this.dgvInventario.Columns["lugar"].Visible = false;
             this.dgvInventario.Columns["lugarId"].Visible = false;
             this.dgvInventario.Columns["status"].Visible = false;
+            this.dgvInventario.Columns["statusId"].Visible = false;
             this.dgvInventario.Columns["Compra"].Visible = false;
             this.dgvInventario.Columns["Descompostura"].Visible = false;
             this.dgvInventario.Columns["Foto"].Visible = false;

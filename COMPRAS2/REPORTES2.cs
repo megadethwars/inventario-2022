@@ -22,5 +22,10 @@ namespace COMPRAS2
         {
             Navigator.backPage(this.Name, this);
         }
+
+        private void btnAgregarNuevoReporte_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new REPORTES());
+        }
     }
 }

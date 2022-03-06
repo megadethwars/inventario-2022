@@ -50,6 +50,7 @@ namespace COMPRAS2
             this.btnOPCIONES = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnAgregarFoto = new System.Windows.Forms.Button();
+            this.btnEscanear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -77,7 +78,7 @@ namespace COMPRAS2
             this.correo1.AutoSize = true;
             this.correo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
-            this.correo1.Location = new System.Drawing.Point(369, 362);
+            this.correo1.Location = new System.Drawing.Point(324, 424);
             this.correo1.Name = "correo1";
             this.correo1.Size = new System.Drawing.Size(89, 20);
             this.correo1.TabIndex = 19;
@@ -90,7 +91,7 @@ namespace COMPRAS2
             this.telefono1.AutoSize = true;
             this.telefono1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefono1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
-            this.telefono1.Location = new System.Drawing.Point(369, 302);
+            this.telefono1.Location = new System.Drawing.Point(324, 364);
             this.telefono1.Name = "telefono1";
             this.telefono1.Size = new System.Drawing.Size(69, 20);
             this.telefono1.TabIndex = 18;
@@ -103,7 +104,7 @@ namespace COMPRAS2
             this.tipodeempleado1.AutoSize = true;
             this.tipodeempleado1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipodeempleado1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
-            this.tipodeempleado1.Location = new System.Drawing.Point(369, 242);
+            this.tipodeempleado1.Location = new System.Drawing.Point(324, 304);
             this.tipodeempleado1.Name = "tipodeempleado1";
             this.tipodeempleado1.Size = new System.Drawing.Size(77, 20);
             this.tipodeempleado1.TabIndex = 17;
@@ -116,7 +117,7 @@ namespace COMPRAS2
             this.nombre1.AutoSize = true;
             this.nombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
-            this.nombre1.Location = new System.Drawing.Point(369, 182);
+            this.nombre1.Location = new System.Drawing.Point(324, 244);
             this.nombre1.Name = "nombre1";
             this.nombre1.Size = new System.Drawing.Size(246, 20);
             this.nombre1.TabIndex = 16;
@@ -129,7 +130,7 @@ namespace COMPRAS2
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(47)))), ((int)(((byte)(102)))));
-            this.label1.Location = new System.Drawing.Point(369, 422);
+            this.label1.Location = new System.Drawing.Point(324, 484);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 20);
             this.label1.TabIndex = 21;
@@ -141,7 +142,7 @@ namespace COMPRAS2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(124, 498);
+            this.label3.Location = new System.Drawing.Point(124, 540);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 22;
@@ -164,7 +165,7 @@ namespace COMPRAS2
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(123, 532);
+            this.panel1.Location = new System.Drawing.Point(123, 574);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1043, 100);
             this.panel1.TabIndex = 30;
@@ -174,7 +175,7 @@ namespace COMPRAS2
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox6.Location = new System.Drawing.Point(339, 412);
+            this.pictureBox6.Location = new System.Drawing.Point(294, 474);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(600, 3);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,7 +187,7 @@ namespace COMPRAS2
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox5.Location = new System.Drawing.Point(339, 352);
+            this.pictureBox5.Location = new System.Drawing.Point(294, 414);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(600, 3);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +199,7 @@ namespace COMPRAS2
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox4.Location = new System.Drawing.Point(339, 292);
+            this.pictureBox4.Location = new System.Drawing.Point(294, 354);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(600, 3);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,7 +211,7 @@ namespace COMPRAS2
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox3.Location = new System.Drawing.Point(339, 232);
+            this.pictureBox3.Location = new System.Drawing.Point(294, 294);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(600, 3);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,7 +223,7 @@ namespace COMPRAS2
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox1.Location = new System.Drawing.Point(339, 172);
+            this.pictureBox1.Location = new System.Drawing.Point(294, 234);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(600, 3);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,6 +298,7 @@ namespace COMPRAS2
             this.btnOK.Size = new System.Drawing.Size(88, 34);
             this.btnOK.TabIndex = 62;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnAgregarFoto
             // 
@@ -316,12 +318,31 @@ namespace COMPRAS2
             this.btnAgregarFoto.Text = "AGREGAR FOTO";
             this.btnAgregarFoto.UseVisualStyleBackColor = false;
             // 
+            // btnEscanear
+            // 
+            this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
+            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEscanear.FlatAppearance.BorderSize = 0;
+            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnEscanear.Location = new System.Drawing.Point(559, 162);
+            this.btnEscanear.Name = "btnEscanear";
+            this.btnEscanear.Size = new System.Drawing.Size(114, 39);
+            this.btnEscanear.TabIndex = 65;
+            this.btnEscanear.Text = "ESCANEAR";
+            this.btnEscanear.UseVisualStyleBackColor = false;
+            // 
             // REPORTES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnEscanear);
             this.Controls.Add(this.btnAgregarFoto);
             this.Controls.Add(this.btnOPCIONES);
             this.Controls.Add(this.btnOK);
@@ -378,5 +399,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnOPCIONES;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnAgregarFoto;
+        private System.Windows.Forms.Button btnEscanear;
     }
 }

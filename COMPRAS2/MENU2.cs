@@ -26,13 +26,11 @@ namespace COMPRAS2
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
         }
         
         private void AbrirFormHija(object formhija)
         {
-           
-            
+                       
             if (this.mainmenu.PANELCONTENEDOR.Controls.Count > 0)
                 this.mainmenu.PANELCONTENEDOR.Controls.RemoveAt(0);
             Form fh = formhija as Form;
@@ -52,13 +50,12 @@ namespace COMPRAS2
          
             Navigator.nextPage(new MIPERFIL());
         }
-
-        
+       
 
         private void btnREPORTE_Click(object sender, EventArgs e)
         {
             
-            Navigator.nextPage(new REPORTES());
+            Navigator.nextPage(new REPORTES2());
         }
 
         private void btnINVENTARIO_Click(object sender, EventArgs e)
