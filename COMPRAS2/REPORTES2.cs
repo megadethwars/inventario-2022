@@ -44,19 +44,17 @@ namespace COMPRAS2
 
             for(int x=0; x<reportes.Count; x++)
             {
-                Devices Dispositivos = reportes[x].Dispositivo;
-                reportes[x].DispositivoActual = Dispositivos.producto;
+                Devices Dispositivos = reportes[x].dispositivo;
+                reportes[x].dispositivoActual = Dispositivos.producto;
             }
             
             dgvReportes.DataSource = reportes;
-            this.dgvReportes.Columns["Foto"].Visible = false;
-            this.dgvReportes.Columns["FechaUltimaModificacion"].Visible = false;
+            this.dgvReportes.Columns["foto"].Visible = false;
+            this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
         }
 
         private async void btnRecargar_Click(object sender, EventArgs e)
         {
-            dgvReportes.DataSource = null;
-
             var url = HttpMethods.url + "reportes";
             StatusMessage statusmessage = await HttpMethods.get(url);
 
@@ -67,7 +65,15 @@ namespace COMPRAS2
 
             List<Reportes> reportes = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
 
+            for (int x = 0; x < reportes.Count; x++)
+            {
+                Devices Dispositivos = reportes[x].dispositivo;
+                reportes[x].dispositivoActual = Dispositivos.producto;
+            }
+
             dgvReportes.DataSource = reportes;
+            this.dgvReportes.Columns["foto"].Visible = false;
+            this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
         }
     }
 }

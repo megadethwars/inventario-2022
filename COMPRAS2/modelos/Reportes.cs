@@ -10,27 +10,27 @@ namespace COMPRAS2.modelos
     public class Reportes
     {
         [DefaultValue(null)]
-        public string Comentarios { get; set; }
+        public string comentarios { get; set; }
 
         
         [DefaultValue(null)]
-        public string DispositivoActual { get; set; }
+        public string dispositivoActual { get; set; }
         
         [DefaultValue(null)]
-        public Devices Dispositivo { get; set; }
+        public Devices dispositivo { get; set; }
         
 
         [DefaultValue(0)]
-        public int DispositivoId { get; set; }
+        public int dispositivoId { get; set; }
 
         [DefaultValue(null)]
-        public DateTime? FechaAlta { get; set; }
+        public DateTime? fechaAlta { get; set; }
 
         [DefaultValue(null)]
-        public DateTime? FechaUltimaModificacion { get; set; }
+        public DateTime? fechaUltimaModificacion { get; set; }
 
         [DefaultValue(null)]
-        public string Foto { get; set; }
+        public string foto { get; set; }
 
         [DefaultValue(0)]
         public int id { get; set; }
@@ -40,9 +40,9 @@ namespace COMPRAS2.modelos
         public string UserActual { get; set; }
 
         [DefaultValue(null)]
-        public User Usuario { get; set; }     
+        public User usuario { get; set; }     
 
         [DefaultValue(null)]
-        public int UsuarioId { get; set; }
+        public int usuarioId { get; set; }
     }
 }
