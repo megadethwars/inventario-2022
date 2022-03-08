@@ -27,7 +27,7 @@ namespace COMPRAS2.modelos
         public static string foto { get; set; }
 
 
-        public int id { get; set; }
+        public static int id { get; set; }
 
     
         public static string nombre { get; set; }

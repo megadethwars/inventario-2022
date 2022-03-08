@@ -91,6 +91,7 @@ namespace COMPRAS2
                 CurrentUser.apellidoMaterno = userDeserialize.apellidoMaterno;
                 CurrentUser.correo = userDeserialize.correo;
                 CurrentUser.telefono = userDeserialize.telefono;
+                CurrentUser.id = userDeserialize.id;
 
 
                 return 0;
