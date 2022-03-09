@@ -34,16 +34,16 @@ namespace COMPRAS2
             this.lblNombreProducto = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
+            this.txtNombreDelProducto = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.btnEscanear = new System.Windows.Forms.Button();
+            this.btnAgregarFoto = new System.Windows.Forms.Button();
+            this.btnOPCIONES = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btBUSCADOR = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnOPCIONES = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.btnAgregarFoto = new System.Windows.Forms.Button();
-            this.btnEscanear = new System.Windows.Forms.Button();
-            this.txtNombreDelProducto = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -56,9 +56,9 @@ namespace COMPRAS2
             this.lblREPORTES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblREPORTES.Location = new System.Drawing.Point(560, 30);
             this.lblREPORTES.Name = "lblREPORTES";
-            this.lblREPORTES.Size = new System.Drawing.Size(114, 42);
+            this.lblREPORTES.Size = new System.Drawing.Size(243, 42);
             this.lblREPORTES.TabIndex = 5;
-            this.lblREPORTES.Text = "REPORTES";
+            this.lblREPORTES.Text = "CREACION DE REPORTES";
             // 
             // lblNombreProducto
             // 
@@ -91,12 +91,112 @@ namespace COMPRAS2
             this.txtBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBUSCADOR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
+            this.txtBUSCADOR.ForeColor = System.Drawing.Color.White;
             this.txtBUSCADOR.Location = new System.Drawing.Point(181, 109);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
             this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
             this.txtBUSCADOR.TabIndex = 25;
             this.txtBUSCADOR.Text = "Search";
+            // 
+            // txtNombreDelProducto
+            // 
+            this.txtNombreDelProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNombreDelProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
+            this.txtNombreDelProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreDelProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreDelProducto.ForeColor = System.Drawing.Color.White;
+            this.txtNombreDelProducto.Location = new System.Drawing.Point(298, 334);
+            this.txtNombreDelProducto.Name = "txtNombreDelProducto";
+            this.txtNombreDelProducto.Size = new System.Drawing.Size(600, 26);
+            this.txtNombreDelProducto.TabIndex = 67;
+            this.txtNombreDelProducto.Text = "Producto";
+            this.txtNombreDelProducto.Click += new System.EventHandler(this.txtNombreDelProducto_Click);
+            this.txtNombreDelProducto.Leave += new System.EventHandler(this.txtNombreDelProducto_Leave);
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.ForeColor = System.Drawing.Color.White;
+            this.txtDescripcion.Location = new System.Drawing.Point(144, 502);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(971, 162);
+            this.txtDescripcion.TabIndex = 68;
+            this.txtDescripcion.Text = "Escriba Aqui";
+            this.txtDescripcion.Click += new System.EventHandler(this.txtDescripcion_Click);
+            this.txtDescripcion.Leave += new System.EventHandler(this.txtDescripcion_Leave);
+            // 
+            // btnEscanear
+            // 
+            this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
+            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEscanear.FlatAppearance.BorderSize = 0;
+            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnEscanear.Location = new System.Drawing.Point(567, 164);
+            this.btnEscanear.Name = "btnEscanear";
+            this.btnEscanear.Size = new System.Drawing.Size(107, 39);
+            this.btnEscanear.TabIndex = 65;
+            this.btnEscanear.Text = "ESCANEAR";
+            this.btnEscanear.UseVisualStyleBackColor = false;
+            // 
+            // btnAgregarFoto
+            // 
+            this.btnAgregarFoto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAgregarFoto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarFoto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnAgregarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
+            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnAgregarFoto.Location = new System.Drawing.Point(553, 697);
+            this.btnAgregarFoto.Name = "btnAgregarFoto";
+            this.btnAgregarFoto.Size = new System.Drawing.Size(160, 39);
+            this.btnAgregarFoto.TabIndex = 64;
+            this.btnAgregarFoto.Text = "AGREGAR FOTO";
+            this.btnAgregarFoto.UseVisualStyleBackColor = false;
+            // 
+            // btnOPCIONES
+            // 
+            this.btnOPCIONES.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnOPCIONES.BackColor = System.Drawing.Color.Transparent;
+            this.btnOPCIONES.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnOPCIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOPCIONES.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOPCIONES.FlatAppearance.BorderSize = 0;
+            this.btnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnOPCIONES.Location = new System.Drawing.Point(455, 789);
+            this.btnOPCIONES.Name = "btnOPCIONES";
+            this.btnOPCIONES.Size = new System.Drawing.Size(160, 39);
+            this.btnOPCIONES.TabIndex = 63;
+            this.btnOPCIONES.Text = "OPCIONES";
+            this.btnOPCIONES.UseVisualStyleBackColor = false;
+            this.btnOPCIONES.Click += new System.EventHandler(this.btnOPCIONES_Click);
+            // 
+            // btnOK
+            // 
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
+            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Location = new System.Drawing.Point(682, 795);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(88, 34);
+            this.btnOK.TabIndex = 62;
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_ClickAsync);
             // 
             // pictureBox1
             // 
@@ -147,106 +247,6 @@ namespace COMPRAS2
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnOPCIONES
-            // 
-            this.btnOPCIONES.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnOPCIONES.BackColor = System.Drawing.Color.Transparent;
-            this.btnOPCIONES.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnOPCIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOPCIONES.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOPCIONES.FlatAppearance.BorderSize = 0;
-            this.btnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnOPCIONES.Location = new System.Drawing.Point(455, 789);
-            this.btnOPCIONES.Name = "btnOPCIONES";
-            this.btnOPCIONES.Size = new System.Drawing.Size(160, 39);
-            this.btnOPCIONES.TabIndex = 63;
-            this.btnOPCIONES.Text = "OPCIONES";
-            this.btnOPCIONES.UseVisualStyleBackColor = false;
-            this.btnOPCIONES.Click += new System.EventHandler(this.btnOPCIONES_Click);
-            // 
-            // btnOK
-            // 
-            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
-            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(682, 795);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(88, 34);
-            this.btnOK.TabIndex = 62;
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_ClickAsync);
-            // 
-            // btnAgregarFoto
-            // 
-            this.btnAgregarFoto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAgregarFoto.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarFoto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnAgregarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
-            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarFoto.Location = new System.Drawing.Point(553, 697);
-            this.btnAgregarFoto.Name = "btnAgregarFoto";
-            this.btnAgregarFoto.Size = new System.Drawing.Size(160, 39);
-            this.btnAgregarFoto.TabIndex = 64;
-            this.btnAgregarFoto.Text = "AGREGAR FOTO";
-            this.btnAgregarFoto.UseVisualStyleBackColor = false;
-            // 
-            // btnEscanear
-            // 
-            this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEscanear.FlatAppearance.BorderSize = 0;
-            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEscanear.Location = new System.Drawing.Point(567, 164);
-            this.btnEscanear.Name = "btnEscanear";
-            this.btnEscanear.Size = new System.Drawing.Size(107, 39);
-            this.btnEscanear.TabIndex = 65;
-            this.btnEscanear.Text = "ESCANEAR";
-            this.btnEscanear.UseVisualStyleBackColor = false;
-            // 
-            // txtNombreDelProducto
-            // 
-            this.txtNombreDelProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNombreDelProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
-            this.txtNombreDelProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreDelProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreDelProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.txtNombreDelProducto.Location = new System.Drawing.Point(298, 334);
-            this.txtNombreDelProducto.Name = "txtNombreDelProducto";
-            this.txtNombreDelProducto.Size = new System.Drawing.Size(600, 26);
-            this.txtNombreDelProducto.TabIndex = 67;
-            this.txtNombreDelProducto.Text = "Producto";
-            this.txtNombreDelProducto.Click += new System.EventHandler(this.txtNombreDelProducto_Click);
-            this.txtNombreDelProducto.Leave += new System.EventHandler(this.txtNombreDelProducto_Leave);
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
-            this.txtDescripcion.Location = new System.Drawing.Point(144, 502);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(971, 162);
-            this.txtDescripcion.TabIndex = 68;
-            this.txtDescripcion.Text = "Escriba Aqui";
-            this.txtDescripcion.Click += new System.EventHandler(this.txtDescripcion_Click);
-            this.txtDescripcion.Leave += new System.EventHandler(this.txtDescripcion_Leave);
             // 
             // REPORTES
             // 

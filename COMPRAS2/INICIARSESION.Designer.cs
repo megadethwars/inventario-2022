@@ -213,6 +213,7 @@ namespace COMPRAS2
             this.Name = "INICIARSESION";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INICIARSESION";
+            this.Load += new System.EventHandler(this.INICIARSESION_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCERRAR)).EndInit();

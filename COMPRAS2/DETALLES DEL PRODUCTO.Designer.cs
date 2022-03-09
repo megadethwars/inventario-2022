@@ -45,7 +45,7 @@ namespace COMPRAS2
             this.lblLugar = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblFoto = new System.Windows.Forms.Label();
-            this.brnOPCIONES = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnELIMINAR = new System.Windows.Forms.Button();
             this.lblDProducto = new System.Windows.Forms.Label();
             this.lblDCodigoQR = new System.Windows.Forms.Label();
@@ -298,24 +298,24 @@ namespace COMPRAS2
             this.lblFoto.TabIndex = 63;
             this.lblFoto.Text = "FOTO:";
             // 
-            // brnOPCIONES
+            // btnEditar
             // 
-            this.brnOPCIONES.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.brnOPCIONES.BackColor = System.Drawing.Color.Transparent;
-            this.brnOPCIONES.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.brnOPCIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.brnOPCIONES.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.brnOPCIONES.FlatAppearance.BorderSize = 0;
-            this.brnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.brnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.brnOPCIONES.Location = new System.Drawing.Point(36, 785);
-            this.brnOPCIONES.Name = "brnOPCIONES";
-            this.brnOPCIONES.Size = new System.Drawing.Size(114, 39);
-            this.brnOPCIONES.TabIndex = 65;
-            this.brnOPCIONES.Text = "OPCIONES";
-            this.brnOPCIONES.UseVisualStyleBackColor = false;
-            this.brnOPCIONES.Click += new System.EventHandler(this.brnOPCIONES_Click);
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnEditar.Location = new System.Drawing.Point(35, 785);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(114, 39);
+            this.btnEditar.TabIndex = 65;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.brnOPCIONES_Click);
             // 
             // btnELIMINAR
             // 
@@ -328,7 +328,7 @@ namespace COMPRAS2
             this.btnELIMINAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnELIMINAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnELIMINAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnELIMINAR.Location = new System.Drawing.Point(189, 785);
+            this.btnELIMINAR.Location = new System.Drawing.Point(190, 785);
             this.btnELIMINAR.Name = "btnELIMINAR";
             this.btnELIMINAR.Size = new System.Drawing.Size(114, 39);
             this.btnELIMINAR.TabIndex = 66;
@@ -720,7 +720,7 @@ namespace COMPRAS2
             this.Controls.Add(this.lblDCodigoQR);
             this.Controls.Add(this.lblDProducto);
             this.Controls.Add(this.btnELIMINAR);
-            this.Controls.Add(this.brnOPCIONES);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lblFoto);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblLugar);
@@ -777,7 +777,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblFoto;
-        private System.Windows.Forms.Button brnOPCIONES;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnELIMINAR;
         private System.Windows.Forms.Label lblDProducto;
         private System.Windows.Forms.Label lblDCodigoQR;

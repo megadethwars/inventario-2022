@@ -144,5 +144,10 @@ namespace COMPRAS2
                 this.Hide();
             }
         }
+        
+        private void INICIARSESION_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
