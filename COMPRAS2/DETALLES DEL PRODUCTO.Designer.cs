@@ -147,7 +147,7 @@ namespace COMPRAS2
             // lblCompra
             // 
             this.lblCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCompra.AutoSize = true;
             this.lblCompra.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -429,7 +429,7 @@ namespace COMPRAS2
             // lblDCompra
             // 
             this.lblDCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDCompra.AutoSize = true;
             this.lblDCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -523,8 +523,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox1.Location = new System.Drawing.Point(100, 95);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox1.Size = new System.Drawing.Size(500, 3);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 82;
             this.pictureBox1.TabStop = false;
@@ -535,8 +536,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox2.Location = new System.Drawing.Point(100, 175);
+            this.pictureBox2.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox2.Size = new System.Drawing.Size(500, 3);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 83;
             this.pictureBox2.TabStop = false;
@@ -547,8 +549,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox3.Location = new System.Drawing.Point(100, 255);
+            this.pictureBox3.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox3.Size = new System.Drawing.Size(500, 3);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 84;
             this.pictureBox3.TabStop = false;
@@ -559,8 +562,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox4.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox4.Location = new System.Drawing.Point(100, 335);
+            this.pictureBox4.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox4.Size = new System.Drawing.Size(500, 3);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 85;
             this.pictureBox4.TabStop = false;
@@ -571,8 +575,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox5.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox5.Location = new System.Drawing.Point(100, 415);
+            this.pictureBox5.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox5.Size = new System.Drawing.Size(500, 3);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 86;
             this.pictureBox5.TabStop = false;
@@ -583,8 +588,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox6.Location = new System.Drawing.Point(100, 495);
+            this.pictureBox6.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox6.Size = new System.Drawing.Size(500, 3);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 87;
             this.pictureBox6.TabStop = false;
@@ -595,8 +601,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox7.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox7.Location = new System.Drawing.Point(100, 575);
+            this.pictureBox7.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox7.Size = new System.Drawing.Size(500, 3);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 88;
             this.pictureBox7.TabStop = false;
@@ -607,8 +614,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox8.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox8.Location = new System.Drawing.Point(100, 655);
+            this.pictureBox8.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox8.Size = new System.Drawing.Size(500, 3);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 89;
             this.pictureBox8.TabStop = false;
@@ -619,8 +627,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox9.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox9.Location = new System.Drawing.Point(700, 95);
+            this.pictureBox9.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox9.Size = new System.Drawing.Size(500, 3);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 90;
             this.pictureBox9.TabStop = false;
@@ -631,8 +640,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox10.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox10.Location = new System.Drawing.Point(700, 415);
+            this.pictureBox10.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox10.Size = new System.Drawing.Size(500, 3);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 91;
             this.pictureBox10.TabStop = false;
@@ -643,8 +653,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox11.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox11.Location = new System.Drawing.Point(700, 335);
+            this.pictureBox11.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox11.Size = new System.Drawing.Size(500, 3);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 92;
             this.pictureBox11.TabStop = false;
@@ -655,8 +666,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox12.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox12.Location = new System.Drawing.Point(700, 255);
+            this.pictureBox12.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox12.Size = new System.Drawing.Size(500, 3);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 93;
             this.pictureBox12.TabStop = false;
@@ -667,8 +679,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox13.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox13.Location = new System.Drawing.Point(704, 175);
+            this.pictureBox13.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox13.Size = new System.Drawing.Size(500, 3);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 94;
             this.pictureBox13.TabStop = false;
@@ -679,8 +692,9 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox14.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox14.Location = new System.Drawing.Point(700, 495);
+            this.pictureBox14.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(400, 3);
+            this.pictureBox14.Size = new System.Drawing.Size(500, 3);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 95;
             this.pictureBox14.TabStop = false;

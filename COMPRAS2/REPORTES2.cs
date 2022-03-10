@@ -46,6 +46,9 @@ namespace COMPRAS2
             {
                 Devices Dispositivos = reportes[x].dispositivo;
                 reportes[x].dispositivoActual = Dispositivos.producto;
+
+                User Usuarios = reportes[x].usuario;
+                reportes[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
             }
             
             dgvReportes.DataSource = reportes;
@@ -74,6 +77,22 @@ namespace COMPRAS2
             dgvReportes.DataSource = reportes;
             this.dgvReportes.Columns["foto"].Visible = false;
             this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
+        }
+
+        public void dgvReportes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow cell = dgvReportes.Rows[e.RowIndex];
+                Reportes data = (Reportes)cell.DataBoundItem;
+
+                Navigator.nextPage(new DETALLES_REPORTE(data));
+                
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
     }
 }
