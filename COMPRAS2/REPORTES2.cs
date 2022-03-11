@@ -49,11 +49,20 @@ namespace COMPRAS2
 
                 User Usuarios = reportes[x].usuario;
                 reportes[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
+
+                User UsuariosA = reportes[x].usuario;
+                reportes[x].UserActualA = UsuariosA.apellidoPaterno;
+
+                Devices Codigos = reportes[x].dispositivo;
+                reportes[x].dispositivoCodigo = Codigos.codigo;
             }
             
             dgvReportes.DataSource = reportes;
             this.dgvReportes.Columns["foto"].Visible = false;
             this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
+            this.dgvReportes.Columns["UserActualA"].Visible = false;
+            this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
+
         }
 
         private async void btnRecargar_Click(object sender, EventArgs e)
@@ -72,11 +81,23 @@ namespace COMPRAS2
             {
                 Devices Dispositivos = reportes[x].dispositivo;
                 reportes[x].dispositivoActual = Dispositivos.producto;
+
+                User Usuarios = reportes[x].usuario;
+                reportes[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
+
+                User UsuariosA = reportes[x].usuario;
+                reportes[x].UserActualA = Usuarios.apellidoPaterno;
+
+                Devices Codigos = reportes[x].dispositivo;
+                reportes[x].dispositivoCodigo = Codigos.codigo;
             }
 
             dgvReportes.DataSource = reportes;
             this.dgvReportes.Columns["foto"].Visible = false;
             this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
+            this.dgvReportes.Columns["UserActualA"].Visible = false;
+            this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
+
         }
 
         public void dgvReportes_CellClick(object sender, DataGridViewCellEventArgs e)

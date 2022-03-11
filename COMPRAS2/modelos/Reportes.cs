@@ -12,7 +12,10 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string comentarios { get; set; }
 
-        
+
+        [DefaultValue(null)]
+        public string dispositivoCodigo { get; set; }
+
         [DefaultValue(null)]
         public string dispositivoActual { get; set; }
         
@@ -38,6 +41,9 @@ namespace COMPRAS2.modelos
         
         [DefaultValue(null)]
         public string UserActual { get; set; }
+        
+        [DefaultValue(null)]
+        public string UserActualA { get; set; }
 
         [DefaultValue(null)]
         public User usuario { get; set; }     

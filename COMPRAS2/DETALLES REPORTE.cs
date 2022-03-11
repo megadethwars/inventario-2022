@@ -33,8 +33,15 @@ namespace COMPRAS2
 
         private void DETALLES_REPORTE_Load(object sender, EventArgs e)
         {
-            //lblNombre.Text = reportes.nombre;
+            
             lblComentarios.Text = reportes.comentarios;
+            lblDispositivoId.Text = reportes.dispositivoId.ToString();
+            lblFechaAlta.Text = reportes.fechaAlta.ToString();
+            //lblFoto.Text = reportes.foto;
+            lblProducto.Text = reportes.dispositivoActual;
+            lblNombre.Text = reportes.UserActual;
+            lblApellido.Text = reportes.UserActualA;
+            lblCodigo.Text = reportes.dispositivoCodigo;
         }
     }
 }

@@ -46,7 +46,7 @@ namespace COMPRAS2
             this.lblComentarios = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.lblDDispositivoId = new System.Windows.Forms.Label();
+            this.lblDispositivoId = new System.Windows.Forms.Label();
             this.lblDCodigo = new System.Windows.Forms.Label();
             this.lblDFoto = new System.Windows.Forms.Label();
             this.lblDFechaAlta = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@ namespace COMPRAS2
             this.lblDComentarios = new System.Windows.Forms.Label();
             this.lblDApellido = new System.Windows.Forms.Label();
             this.lblDProducto = new System.Windows.Forms.Label();
-            this.lblDispositivoId = new System.Windows.Forms.Label();
+            this.lblDDispositivoId = new System.Windows.Forms.Label();
             this.btnELIMINAR = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -231,9 +231,9 @@ namespace COMPRAS2
             this.lblFechaAlta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblFechaAlta.Location = new System.Drawing.Point(715, 248);
             this.lblFechaAlta.Name = "lblFechaAlta";
-            this.lblFechaAlta.Size = new System.Drawing.Size(79, 20);
+            this.lblFechaAlta.Size = new System.Drawing.Size(86, 20);
             this.lblFechaAlta.TabIndex = 110;
-            this.lblFechaAlta.Text = "Accesorio";
+            this.lblFechaAlta.Text = "Fecha Alta";
             // 
             // lblNombre
             // 
@@ -288,18 +288,18 @@ namespace COMPRAS2
             this.lblProducto.TabIndex = 106;
             this.lblProducto.Text = "Producto";
             // 
-            // lblDDispositivoId
+            // lblDispositivoId
             // 
-            this.lblDDispositivoId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblDispositivoId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblDDispositivoId.AutoSize = true;
-            this.lblDDispositivoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDDispositivoId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDDispositivoId.Location = new System.Drawing.Point(90, 168);
-            this.lblDDispositivoId.Name = "lblDDispositivoId";
-            this.lblDDispositivoId.Size = new System.Drawing.Size(103, 20);
-            this.lblDDispositivoId.TabIndex = 105;
-            this.lblDDispositivoId.Text = "Dispositivo Id";
+            this.lblDispositivoId.AutoSize = true;
+            this.lblDispositivoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDispositivoId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblDispositivoId.Location = new System.Drawing.Point(90, 168);
+            this.lblDispositivoId.Name = "lblDispositivoId";
+            this.lblDispositivoId.Size = new System.Drawing.Size(103, 20);
+            this.lblDispositivoId.TabIndex = 105;
+            this.lblDispositivoId.Text = "Dispositivo Id";
             // 
             // lblDCodigo
             // 
@@ -392,18 +392,18 @@ namespace COMPRAS2
             this.lblDProducto.TabIndex = 96;
             this.lblDProducto.Text = "PRODUCTO:";
             // 
-            // lblDispositivoId
+            // lblDDispositivoId
             // 
-            this.lblDispositivoId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblDDispositivoId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblDispositivoId.AutoSize = true;
-            this.lblDispositivoId.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDispositivoId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDispositivoId.Location = new System.Drawing.Point(90, 128);
-            this.lblDispositivoId.Name = "lblDispositivoId";
-            this.lblDispositivoId.Size = new System.Drawing.Size(132, 32);
-            this.lblDispositivoId.TabIndex = 95;
-            this.lblDispositivoId.Text = "DISPOSITIVO ID:";
+            this.lblDDispositivoId.AutoSize = true;
+            this.lblDDispositivoId.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDDispositivoId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblDDispositivoId.Location = new System.Drawing.Point(90, 128);
+            this.lblDDispositivoId.Name = "lblDDispositivoId";
+            this.lblDDispositivoId.Size = new System.Drawing.Size(132, 32);
+            this.lblDDispositivoId.TabIndex = 95;
+            this.lblDDispositivoId.Text = "DISPOSITIVO ID:";
             // 
             // btnELIMINAR
             // 
@@ -465,7 +465,7 @@ namespace COMPRAS2
             this.Controls.Add(this.lblComentarios);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblProducto);
-            this.Controls.Add(this.lblDDispositivoId);
+            this.Controls.Add(this.lblDispositivoId);
             this.Controls.Add(this.lblDCodigo);
             this.Controls.Add(this.lblDFoto);
             this.Controls.Add(this.lblDFechaAlta);
@@ -473,7 +473,7 @@ namespace COMPRAS2
             this.Controls.Add(this.lblDComentarios);
             this.Controls.Add(this.lblDApellido);
             this.Controls.Add(this.lblDProducto);
-            this.Controls.Add(this.lblDispositivoId);
+            this.Controls.Add(this.lblDDispositivoId);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblREPORTES);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -512,7 +512,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblComentarios;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.Label lblDDispositivoId;
+        private System.Windows.Forms.Label lblDispositivoId;
         private System.Windows.Forms.Label lblDCodigo;
         private System.Windows.Forms.Label lblDFoto;
         private System.Windows.Forms.Label lblDFechaAlta;
@@ -520,7 +520,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblDComentarios;
         private System.Windows.Forms.Label lblDApellido;
         private System.Windows.Forms.Label lblDProducto;
-        private System.Windows.Forms.Label lblDispositivoId;
+        private System.Windows.Forms.Label lblDDispositivoId;
         private System.Windows.Forms.Button btnELIMINAR;
         private System.Windows.Forms.Button btnEditar;
     }
