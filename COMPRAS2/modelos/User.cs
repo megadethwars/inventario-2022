@@ -50,8 +50,13 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string password { get; set; }
 
+
         [DefaultValue(null)]
-        public Rol rol = null;
+        public string rolNombre { get; set; }
+
+        [DefaultValue(null)]
+        public Rol rol { get; set; }
+
 
     }
 }

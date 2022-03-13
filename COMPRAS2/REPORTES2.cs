@@ -55,6 +55,7 @@ namespace COMPRAS2
 
                 Devices Codigos = reportes[x].dispositivo;
                 reportes[x].dispositivoCodigo = Codigos.codigo;
+
             }
             
             dgvReportes.DataSource = reportes;
@@ -97,6 +98,7 @@ namespace COMPRAS2
             this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
             this.dgvReportes.Columns["UserActualA"].Visible = false;
             this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
+            
 
         }
 

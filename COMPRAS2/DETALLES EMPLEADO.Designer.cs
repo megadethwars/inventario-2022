@@ -377,6 +377,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DETALLES_EMPLEADO";
             this.Text = "DETALLES_EMPLEADO";
+            this.Load += new System.EventHandler(this.DETALLES_EMPLEADO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
