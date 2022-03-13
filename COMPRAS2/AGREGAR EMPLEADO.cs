@@ -86,6 +86,7 @@ namespace COMPRAS2
             {
                 int cantidad = 0;
                 Int32 costo = 0;
+                int idRol = 0;
                 if (txtNombreDelUsuario.Text == "")
                 {
                     MessageBox.Show("campo de nombre vacio");
@@ -131,9 +132,34 @@ namespace COMPRAS2
                     return 1;
                 }
 
-                
+                if (cbRoles.SelectedItem != null)
+                {
+                    var idRoltuple =(Tuple<int, string>)cbRoles.SelectedItem;
+                    idRol = idRoltuple.Item1;
+                }
+                else {
+                    MessageBox.Show("No se ha seleccionado ningun rol");
+                    return 1;
+                }
 
-                Devices product = new Devices();
+                //check passwords
+                if (txtContraseña.Text != txtContraseñaDeNuevo.Text) {
+                    MessageBox.Show("Error en las contraseñas");
+                    return 1;
+                }
+
+
+                User user = new User();
+                user.apellidoMaterno = txtApellidoMaterno.Text;
+                user.apellidoPaterno = txtApellidoPaterno.Text;
+                user.nombre = txtNombreDelUsuario.Text;
+                user.password = txtContraseña.Text;
+                user.rolId = idRol;
+                user.telefono = txtTelefono.Text;
+                user.correo = txtCorreo.Text;
+                user.statusId = 1;
+                user.username = txtNombreDelUsuario.Text;
+
                 //product.producto = txtProducto.Text;
                 //product.marca = txtMarca.Text;
                 //product.modelo = txtModelo.Text;
@@ -145,21 +171,20 @@ namespace COMPRAS2
                 //product.costo = (int)costo;
                 //product.observaciones = txtObservaciones.Text;
 
-                product.statusId = 1.ToString();
-                product.lugarId = 1.ToString();
+              
 
 
 
 
-                string json = JsonConvert.SerializeObject(product,
+                string json = JsonConvert.SerializeObject(user,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                var url = HttpMethods.url + "dispositivos";
+                var url = HttpMethods.url + "usuarios";
                 StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
 
                 if (statusmessage.statuscode == 409)
                 {
-                    MessageBox.Show("error en el servicio, posiblemente el producto ya exista");
+                    MessageBox.Show("error en el servicio, "+statusmessage.message);
                     return 2;
                 }
 
@@ -184,6 +209,7 @@ namespace COMPRAS2
                 }
                 else
                 {
+                    MessageBox.Show("Bad request, algunos campos faltantes");
                     return 2;
                 }
 

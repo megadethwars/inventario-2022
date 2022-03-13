@@ -49,7 +49,6 @@ namespace COMPRAS2
             this.txtContraseñaDeNuevo = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textUsuario = new System.Windows.Forms.TextBox();
             this.cbRoles = new System.Windows.Forms.ComboBox();
@@ -312,20 +311,6 @@ namespace COMPRAS2
             this.txtCorreo.TabIndex = 80;
             this.txtCorreo.Text = "Introduzca el Correo";
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtUsuario.Location = new System.Drawing.Point(700, 340);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(426, 26);
-            this.txtUsuario.TabIndex = 81;
-            this.txtUsuario.Text = "Introduzca el Usuario";
-            // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -355,10 +340,11 @@ namespace COMPRAS2
             // 
             // cbRoles
             // 
+            this.cbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRoles.FormattingEnabled = true;
-            this.cbRoles.Location = new System.Drawing.Point(700, 372);
+            this.cbRoles.Location = new System.Drawing.Point(700, 345);
             this.cbRoles.Name = "cbRoles";
-            this.cbRoles.Size = new System.Drawing.Size(426, 21);
+            this.cbRoles.Size = new System.Drawing.Size(426, 28);
             this.cbRoles.TabIndex = 84;
             // 
             // AGREGAR_EMPLEADO
@@ -370,7 +356,6 @@ namespace COMPRAS2
             this.Controls.Add(this.cbRoles);
             this.Controls.Add(this.textUsuario);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtContraseñaDeNuevo);
@@ -420,7 +405,6 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox txtContraseñaDeNuevo;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textUsuario;
         private System.Windows.Forms.ComboBox cbRoles;
