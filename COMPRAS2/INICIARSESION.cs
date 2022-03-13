@@ -77,6 +77,27 @@ namespace COMPRAS2
                 var url = HttpMethods.url + "usuarios/login";
                 StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
+                if (statusmessage.statuscode == 404)
+                {
+
+                    MessageBox.Show("Usuario no encontrado");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode == 401)
+                {
+
+                    MessageBox.Show("Usuario y/o contraseña incorrecto");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode == 500)
+                {
+
+                    MessageBox.Show("Error interno del servidor");
+                    return 2;
+                }
+
                 if (statusmessage.statuscode != 201)
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrectos");

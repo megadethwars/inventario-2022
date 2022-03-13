@@ -38,6 +38,7 @@ namespace COMPRAS2
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEscanear = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.btAgregarEmp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -58,11 +59,11 @@ namespace COMPRAS2
             // 
             this.lblEMPLEADOS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEMPLEADOS.AutoSize = true;
-            this.lblEMPLEADOS.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEMPLEADOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEMPLEADOS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblEMPLEADOS.Location = new System.Drawing.Point(560, 30);
             this.lblEMPLEADOS.Name = "lblEMPLEADOS";
-            this.lblEMPLEADOS.Size = new System.Drawing.Size(131, 42);
+            this.lblEMPLEADOS.Size = new System.Drawing.Size(232, 39);
             this.lblEMPLEADOS.TabIndex = 35;
             this.lblEMPLEADOS.Text = "EMPLEADOS";
             // 
@@ -113,11 +114,11 @@ namespace COMPRAS2
             this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEscanear.FlatAppearance.BorderSize = 0;
             this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscanear.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnEscanear.Location = new System.Drawing.Point(12, 810);
             this.btnEscanear.Name = "btnEscanear";
-            this.btnEscanear.Size = new System.Drawing.Size(114, 39);
+            this.btnEscanear.Size = new System.Drawing.Size(163, 39);
             this.btnEscanear.TabIndex = 39;
             this.btnEscanear.Text = "INGRESAR";
             this.btnEscanear.UseVisualStyleBackColor = false;
@@ -162,12 +163,32 @@ namespace COMPRAS2
             this.dgvUsuarios.TabIndex = 40;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
+            // btAgregarEmp
+            // 
+            this.btAgregarEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btAgregarEmp.BackColor = System.Drawing.Color.Transparent;
+            this.btAgregarEmp.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btAgregarEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btAgregarEmp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAgregarEmp.FlatAppearance.BorderSize = 0;
+            this.btAgregarEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAgregarEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAgregarEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btAgregarEmp.Location = new System.Drawing.Point(239, 810);
+            this.btAgregarEmp.Name = "btAgregarEmp";
+            this.btAgregarEmp.Size = new System.Drawing.Size(163, 39);
+            this.btAgregarEmp.TabIndex = 41;
+            this.btAgregarEmp.Text = "AGREGAR";
+            this.btAgregarEmp.UseVisualStyleBackColor = false;
+            this.btAgregarEmp.Click += new System.EventHandler(this.btAgregarEmp_Click);
+            // 
             // EMPLEADOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btAgregarEmp);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.btnEscanear);
             this.Controls.Add(this.btBUSCADOR);
@@ -194,5 +215,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnEscanear;
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Button btAgregarEmp;
     }
 }

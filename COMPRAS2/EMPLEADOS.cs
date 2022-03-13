@@ -84,5 +84,10 @@ namespace COMPRAS2
                 return;
             }
         }
+
+        private void btAgregarEmp_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new AGREGAR_EMPLEADO());
+        }
     }
 }
