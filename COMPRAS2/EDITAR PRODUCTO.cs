@@ -22,5 +22,10 @@ namespace COMPRAS2
         {
             Navigator.backPage(this.Name, this);
         }
+
+        private void EDITAR_PRODUCTO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

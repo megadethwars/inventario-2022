@@ -327,6 +327,7 @@ namespace COMPRAS2
             this.bTNBack.Size = new System.Drawing.Size(50, 50);
             this.bTNBack.TabIndex = 21;
             this.bTNBack.UseVisualStyleBackColor = false;
+            this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
             // 
             // btnEditar
             // 

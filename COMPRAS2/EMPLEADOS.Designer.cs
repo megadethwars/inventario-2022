@@ -59,11 +59,11 @@ namespace COMPRAS2
             // 
             this.lblEMPLEADOS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEMPLEADOS.AutoSize = true;
-            this.lblEMPLEADOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEMPLEADOS.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEMPLEADOS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblEMPLEADOS.Location = new System.Drawing.Point(560, 30);
             this.lblEMPLEADOS.Name = "lblEMPLEADOS";
-            this.lblEMPLEADOS.Size = new System.Drawing.Size(232, 39);
+            this.lblEMPLEADOS.Size = new System.Drawing.Size(131, 42);
             this.lblEMPLEADOS.TabIndex = 35;
             this.lblEMPLEADOS.Text = "EMPLEADOS";
             // 
@@ -114,7 +114,7 @@ namespace COMPRAS2
             this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEscanear.FlatAppearance.BorderSize = 0;
             this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnEscanear.Location = new System.Drawing.Point(12, 810);
             this.btnEscanear.Name = "btnEscanear";
@@ -172,7 +172,7 @@ namespace COMPRAS2
             this.btAgregarEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAgregarEmp.FlatAppearance.BorderSize = 0;
             this.btAgregarEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAgregarEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAgregarEmp.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAgregarEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btAgregarEmp.Location = new System.Drawing.Point(239, 810);
             this.btAgregarEmp.Name = "btAgregarEmp";

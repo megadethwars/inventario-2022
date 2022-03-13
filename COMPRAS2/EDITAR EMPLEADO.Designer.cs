@@ -51,9 +51,9 @@ namespace COMPRAS2
             this.INVENTARIOTITLE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.INVENTARIOTITLE.Location = new System.Drawing.Point(560, 30);
             this.INVENTARIOTITLE.Name = "INVENTARIOTITLE";
-            this.INVENTARIOTITLE.Size = new System.Drawing.Size(255, 42);
+            this.INVENTARIOTITLE.Size = new System.Drawing.Size(189, 42);
             this.INVENTARIOTITLE.TabIndex = 22;
-            this.INVENTARIOTITLE.Text = "DETALLES DEL EMPLEADO";
+            this.INVENTARIOTITLE.Text = "EDITAR EMPLEADO";
             // 
             // label10
             // 
@@ -202,6 +202,7 @@ namespace COMPRAS2
             this.bTNBack.Size = new System.Drawing.Size(50, 50);
             this.bTNBack.TabIndex = 23;
             this.bTNBack.UseVisualStyleBackColor = false;
+            this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
             // 
             // EDITAR_EMPLEADO
             // 

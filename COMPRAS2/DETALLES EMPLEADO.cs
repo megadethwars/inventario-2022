@@ -22,5 +22,10 @@ namespace COMPRAS2
         {
             Navigator.nextPage(new EDITAR_EMPLEADO());
         }
+
+        private void bTNBack_Click(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
+        }
     }
 }
