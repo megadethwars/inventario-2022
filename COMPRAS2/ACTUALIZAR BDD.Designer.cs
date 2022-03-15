@@ -40,7 +40,8 @@ namespace COMPRAS2
             // 
             // lblCodigoQR
             // 
-            this.lblCodigoQR.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCodigoQR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCodigoQR.AutoSize = true;
             this.lblCodigoQR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -52,7 +53,8 @@ namespace COMPRAS2
             // 
             // lblProducto
             // 
-            this.lblProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -80,6 +82,8 @@ namespace COMPRAS2
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
@@ -90,12 +94,15 @@ namespace COMPRAS2
             // 
             // btnDETENER
             // 
-            this.btnDETENER.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDETENER.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDETENER.BackColor = System.Drawing.Color.Transparent;
             this.btnDETENER.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnDETENER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDETENER.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDETENER.FlatAppearance.BorderSize = 0;
+            this.btnDETENER.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDETENER.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDETENER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDETENER.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDETENER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -108,12 +115,15 @@ namespace COMPRAS2
             // 
             // btnINICIAR
             // 
-            this.btnINICIAR.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnINICIAR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnINICIAR.BackColor = System.Drawing.Color.Transparent;
             this.btnINICIAR.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnINICIAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnINICIAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnINICIAR.FlatAppearance.BorderSize = 0;
+            this.btnINICIAR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnINICIAR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnINICIAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnINICIAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnINICIAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -126,12 +136,15 @@ namespace COMPRAS2
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSeleccionarArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSeleccionarArchivo.BackColor = System.Drawing.Color.Transparent;
             this.btnSeleccionarArchivo.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnSeleccionarArchivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSeleccionarArchivo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeleccionarArchivo.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionarArchivo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSeleccionarArchivo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSeleccionarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarArchivo.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionarArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));

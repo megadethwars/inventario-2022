@@ -162,12 +162,7 @@ namespace COMPRAS2
             }
 
         }
-/*
-        private async void btnOK_Click(object sender, EventArgs e)
-        {
-            //int status = await Auth();
-        }
-*/
+
         private async void btnOK_Click_1(object sender, EventArgs e)
         {
             int status = await Auth();

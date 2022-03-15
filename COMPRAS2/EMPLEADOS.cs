@@ -92,5 +92,10 @@ namespace COMPRAS2
         {
             Navigator.nextPage(new AGREGAR_EMPLEADO());
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,7 +38,6 @@ namespace COMPRAS2
             this.lblCosto = new System.Windows.Forms.Label();
             this.lblOrigen = new System.Windows.Forms.Label();
             this.lblCompra = new System.Windows.Forms.Label();
-            this.lblAccesorio = new System.Windows.Forms.Label();
             this.lblDescompostura = new System.Windows.Forms.Label();
             this.lblProvedor = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
@@ -47,7 +46,6 @@ namespace COMPRAS2
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.txtOrigen = new System.Windows.Forms.TextBox();
             this.txtCompra = new System.Windows.Forms.TextBox();
-            this.txtAccesorio = new System.Windows.Forms.TextBox();
             this.txtDescompostura = new System.Windows.Forms.TextBox();
             this.txtProvedor = new System.Windows.Forms.TextBox();
             this.txtCosto = new System.Windows.Forms.TextBox();
@@ -59,8 +57,6 @@ namespace COMPRAS2
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -70,8 +66,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -165,23 +159,12 @@ namespace COMPRAS2
             this.lblCompra.TabIndex = 14;
             this.lblCompra.Text = "COMPRA:";
             // 
-            // lblAccesorio
-            // 
-            this.lblAccesorio.AutoSize = true;
-            this.lblAccesorio.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblAccesorio.Location = new System.Drawing.Point(700, 300);
-            this.lblAccesorio.Name = "lblAccesorio";
-            this.lblAccesorio.Size = new System.Drawing.Size(102, 32);
-            this.lblAccesorio.TabIndex = 15;
-            this.lblAccesorio.Text = "ACCESORIO:";
-            // 
             // lblDescompostura
             // 
             this.lblDescompostura.AutoSize = true;
             this.lblDescompostura.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescompostura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDescompostura.Location = new System.Drawing.Point(700, 400);
+            this.lblDescompostura.Location = new System.Drawing.Point(700, 200);
             this.lblDescompostura.Name = "lblDescompostura";
             this.lblDescompostura.Size = new System.Drawing.Size(150, 32);
             this.lblDescompostura.TabIndex = 16;
@@ -192,7 +175,7 @@ namespace COMPRAS2
             this.lblProvedor.AutoSize = true;
             this.lblProvedor.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProvedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblProvedor.Location = new System.Drawing.Point(700, 500);
+            this.lblProvedor.Location = new System.Drawing.Point(700, 300);
             this.lblProvedor.Name = "lblProvedor";
             this.lblProvedor.Size = new System.Drawing.Size(98, 32);
             this.lblProvedor.TabIndex = 17;
@@ -270,25 +253,13 @@ namespace COMPRAS2
             this.txtCompra.TabIndex = 26;
             this.txtCompra.Text = "Compra";
             // 
-            // txtAccesorio
-            // 
-            this.txtAccesorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtAccesorio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAccesorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtAccesorio.Location = new System.Drawing.Point(700, 340);
-            this.txtAccesorio.Name = "txtAccesorio";
-            this.txtAccesorio.Size = new System.Drawing.Size(426, 26);
-            this.txtAccesorio.TabIndex = 27;
-            this.txtAccesorio.Text = "Accesorio";
-            // 
             // txtDescompostura
             // 
             this.txtDescompostura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtDescompostura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescompostura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescompostura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtDescompostura.Location = new System.Drawing.Point(700, 440);
+            this.txtDescompostura.Location = new System.Drawing.Point(700, 240);
             this.txtDescompostura.Name = "txtDescompostura";
             this.txtDescompostura.Size = new System.Drawing.Size(426, 26);
             this.txtDescompostura.TabIndex = 28;
@@ -300,7 +271,7 @@ namespace COMPRAS2
             this.txtProvedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtProvedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProvedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtProvedor.Location = new System.Drawing.Point(700, 540);
+            this.txtProvedor.Location = new System.Drawing.Point(700, 340);
             this.txtProvedor.Name = "txtProvedor";
             this.txtProvedor.Size = new System.Drawing.Size(426, 26);
             this.txtProvedor.TabIndex = 29;
@@ -422,32 +393,6 @@ namespace COMPRAS2
             this.pictureBox6.TabIndex = 121;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox7.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox7.Location = new System.Drawing.Point(700, 500);
-            this.pictureBox7.MaximumSize = new System.Drawing.Size(1000, 5);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(550, 3);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 122;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox8.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox8.Location = new System.Drawing.Point(700, 400);
-            this.pictureBox8.MaximumSize = new System.Drawing.Size(1000, 3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(550, 3);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 123;
-            this.pictureBox8.TabStop = false;
-            // 
             // pictureBox9
             // 
             this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -496,8 +441,6 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -508,7 +451,6 @@ namespace COMPRAS2
             this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.txtProvedor);
             this.Controls.Add(this.txtDescompostura);
-            this.Controls.Add(this.txtAccesorio);
             this.Controls.Add(this.txtCompra);
             this.Controls.Add(this.txtOrigen);
             this.Controls.Add(this.txtModelo);
@@ -518,7 +460,6 @@ namespace COMPRAS2
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblProvedor);
             this.Controls.Add(this.lblDescompostura);
-            this.Controls.Add(this.lblAccesorio);
             this.Controls.Add(this.lblCompra);
             this.Controls.Add(this.lblOrigen);
             this.Controls.Add(this.lblCosto);
@@ -537,8 +478,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -557,7 +496,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblCosto;
         private System.Windows.Forms.Label lblOrigen;
         private System.Windows.Forms.Label lblCompra;
-        private System.Windows.Forms.Label lblAccesorio;
         private System.Windows.Forms.Label lblDescompostura;
         private System.Windows.Forms.Label lblProvedor;
         private System.Windows.Forms.Button btnBack;
@@ -567,7 +505,6 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtOrigen;
         private System.Windows.Forms.TextBox txtCompra;
-        private System.Windows.Forms.TextBox txtAccesorio;
         private System.Windows.Forms.TextBox txtDescompostura;
         private System.Windows.Forms.TextBox txtProvedor;
         private System.Windows.Forms.TextBox txtCosto;
@@ -578,8 +515,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
