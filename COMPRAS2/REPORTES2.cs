@@ -65,8 +65,25 @@ namespace COMPRAS2
             this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
 
         }
+        
 
-        private async void btnRecargar_Click(object sender, EventArgs e)
+        public void dgvReportes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow cell = dgvReportes.Rows[e.RowIndex];
+                Reportes data = (Reportes)cell.DataBoundItem;
+
+                Navigator.nextPage(new DETALLES_REPORTE(data));
+                
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+
+        private async void btnActualizar_Click(object sender, EventArgs e)
         {
             var url = HttpMethods.url + "reportes";
             StatusMessage statusmessage = await HttpMethods.get(url);
@@ -98,24 +115,6 @@ namespace COMPRAS2
             this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
             this.dgvReportes.Columns["UserActualA"].Visible = false;
             this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
-            
-
-        }
-
-        public void dgvReportes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                DataGridViewRow cell = dgvReportes.Rows[e.RowIndex];
-                Reportes data = (Reportes)cell.DataBoundItem;
-
-                Navigator.nextPage(new DETALLES_REPORTE(data));
-                
-            }
-            catch (Exception ex)
-            {
-                return;
-            }
         }
     }
 }

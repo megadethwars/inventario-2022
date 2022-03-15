@@ -29,12 +29,11 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.INVENTARIOTITLE = new System.Windows.Forms.Label();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
-            this.btnRecargar = new System.Windows.Forms.Button();
             this.btnEditarMovimientos = new System.Windows.Forms.Button();
             this.btnActualizarBDD = new System.Windows.Forms.Button();
             this.btnActualizarProducto = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@ namespace COMPRAS2
             this.btnBuscador = new System.Windows.Forms.Button();
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             this.SuspendLayout();
@@ -73,14 +73,14 @@ namespace COMPRAS2
             this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInventario.ColumnHeadersHeight = 45;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvInventario.EnableHeadersVisualStyles = false;
@@ -89,13 +89,13 @@ namespace COMPRAS2
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvInventario.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(1230, 561);
             this.dgvInventario.TabIndex = 3;
@@ -114,21 +114,6 @@ namespace COMPRAS2
             this.txtBUSCADOR.TabIndex = 29;
             this.txtBUSCADOR.Text = "Search";
             // 
-            // btnRecargar
-            // 
-            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRecargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnRecargar.BackgroundImage = global::COMPRAS2.Properties.Resources.RECARGAORIG;
-            this.btnRecargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRecargar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRecargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecargar.Location = new System.Drawing.Point(1209, 20);
-            this.btnRecargar.Name = "btnRecargar";
-            this.btnRecargar.Size = new System.Drawing.Size(50, 50);
-            this.btnRecargar.TabIndex = 39;
-            this.btnRecargar.UseVisualStyleBackColor = false;
-            this.btnRecargar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnEditarMovimientos
             // 
             this.btnEditarMovimientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -137,6 +122,8 @@ namespace COMPRAS2
             this.btnEditarMovimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditarMovimientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarMovimientos.FlatAppearance.BorderSize = 0;
+            this.btnEditarMovimientos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditarMovimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditarMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarMovimientos.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -156,6 +143,8 @@ namespace COMPRAS2
             this.btnActualizarBDD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnActualizarBDD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizarBDD.FlatAppearance.BorderSize = 0;
+            this.btnActualizarBDD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarBDD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarBDD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarBDD.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarBDD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -175,6 +164,8 @@ namespace COMPRAS2
             this.btnActualizarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnActualizarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizarProducto.FlatAppearance.BorderSize = 0;
+            this.btnActualizarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -194,6 +185,8 @@ namespace COMPRAS2
             this.btnSALIDA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSALIDA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSALIDA.FlatAppearance.BorderSize = 0;
+            this.btnSALIDA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSALIDA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSALIDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSALIDA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -213,6 +206,8 @@ namespace COMPRAS2
             this.btnReingresarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReingresarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReingresarProducto.FlatAppearance.BorderSize = 0;
+            this.btnReingresarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnReingresarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReingresarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReingresarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReingresarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -232,6 +227,8 @@ namespace COMPRAS2
             this.btnAgregarNuevoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregarNuevoProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarNuevoProducto.FlatAppearance.BorderSize = 0;
+            this.btnAgregarNuevoProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarNuevoProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarNuevoProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarNuevoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -251,6 +248,8 @@ namespace COMPRAS2
             this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEscanear.FlatAppearance.BorderSize = 0;
+            this.btnEscanear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEscanear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -292,6 +291,8 @@ namespace COMPRAS2
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTNBack.Location = new System.Drawing.Point(20, 20);
             this.bTNBack.Name = "bTNBack";
@@ -300,13 +301,34 @@ namespace COMPRAS2
             this.bTNBack.UseVisualStyleBackColor = false;
             this.bTNBack.Click += new System.EventHandler(this.bkBack_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnActualizar.Location = new System.Drawing.Point(1140, 30);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(114, 39);
+            this.btnActualizar.TabIndex = 46;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // INVENTARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.btnRecargar);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEditarMovimientos);
             this.Controls.Add(this.btnActualizarBDD);
             this.Controls.Add(this.btnActualizarProducto);
@@ -346,6 +368,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnActualizarProducto;
         private System.Windows.Forms.Button btnActualizarBDD;
         private System.Windows.Forms.Button btnEditarMovimientos;
-        private System.Windows.Forms.Button btnRecargar;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

@@ -135,7 +135,7 @@ namespace COMPRAS2
                 return;
             }
         }
-
+        /*
         private async void button1_Click(object sender, EventArgs e)
         {
             dgvInventario.DataSource = null;
@@ -175,6 +175,48 @@ namespace COMPRAS2
             this.dgvInventario.Columns["Proveedor"].Visible = false;
             this.dgvInventario.Columns["Costo"].Visible = false;
             this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+        }*/
+
+        private async void btnActualizar_Click(object sender, EventArgs e)
+        {
+            dgvInventario.DataSource = null;
+
+            var url = HttpMethods.url + "dispositivos";
+            StatusMessage statusmessage = await HttpMethods.get(url);
+
+            if (statusmessage.statuscode != 200)
+            {
+                return;
+            }
+
+            List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+
+            for (int x = 0; x < devices.Count; x++)
+            {
+
+                Lugares lugar = devices[x].lugar;
+                devices[x].Lugar_Actual = lugar.lugar;
+
+                StatusDevices status = devices[x].status;
+                devices[x].StatusActual = status.descripcion;
+            }
+
+            dgvInventario.DataSource = devices;
+            this.dgvInventario.Columns["lugar"].Visible = false;
+            this.dgvInventario.Columns["lugarId"].Visible = false;
+            this.dgvInventario.Columns["status"].Visible = false;
+            this.dgvInventario.Columns["statusId"].Visible = false;
+            this.dgvInventario.Columns["Compra"].Visible = false;
+            this.dgvInventario.Columns["Descompostura"].Visible = false;
+            this.dgvInventario.Columns["Foto"].Visible = false;
+            this.dgvInventario.Columns["IdMov"].Visible = false;
+            this.dgvInventario.Columns["Observaciones"].Visible = false;
+            this.dgvInventario.Columns["Origen"].Visible = false;
+            this.dgvInventario.Columns["Pertenece"].Visible = false;
+            this.dgvInventario.Columns["Proveedor"].Visible = false;
+            this.dgvInventario.Columns["Costo"].Visible = false;
+            this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
         }
     }
+    //}
 }

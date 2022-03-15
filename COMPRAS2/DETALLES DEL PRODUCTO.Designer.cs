@@ -242,9 +242,9 @@ namespace COMPRAS2
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblProducto.Location = new System.Drawing.Point(100, 100);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(197, 32);
+            this.lblProducto.Size = new System.Drawing.Size(98, 32);
             this.lblProducto.TabIndex = 33;
-            this.lblProducto.Text = "NOMBRE DEL PRODUCTO:";
+            this.lblProducto.Text = "PRODUCTO:";
             // 
             // lblCantidad
             // 

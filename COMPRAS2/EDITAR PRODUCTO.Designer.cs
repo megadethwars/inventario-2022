@@ -32,7 +32,6 @@ namespace COMPRAS2
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EDITAR_PRODUCTO));
             this.lblTituloEditarProducto = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.lblSerie = new System.Windows.Forms.Label();
             this.lblCodigoQR = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblModelo = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@ namespace COMPRAS2
             this.lblDescompostura = new System.Windows.Forms.Label();
             this.lblProvedor = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
-            this.txtSerie = new System.Windows.Forms.TextBox();
             this.txtCodigoQR = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
@@ -101,23 +99,12 @@ namespace COMPRAS2
             this.lblProducto.TabIndex = 7;
             this.lblProducto.Text = "PRODUCTO:";
             // 
-            // lblSerie
-            // 
-            this.lblSerie.AutoSize = true;
-            this.lblSerie.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblSerie.Location = new System.Drawing.Point(100, 200);
-            this.lblSerie.Name = "lblSerie";
-            this.lblSerie.Size = new System.Drawing.Size(62, 32);
-            this.lblSerie.TabIndex = 8;
-            this.lblSerie.Text = "SERIE:";
-            // 
             // lblCodigoQR
             // 
             this.lblCodigoQR.AutoSize = true;
             this.lblCodigoQR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCodigoQR.Location = new System.Drawing.Point(94, 300);
+            this.lblCodigoQR.Location = new System.Drawing.Point(100, 200);
             this.lblCodigoQR.Name = "lblCodigoQR";
             this.lblCodigoQR.Size = new System.Drawing.Size(98, 32);
             this.lblCodigoQR.TabIndex = 9;
@@ -172,7 +159,7 @@ namespace COMPRAS2
             this.lblCompra.AutoSize = true;
             this.lblCompra.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCompra.Location = new System.Drawing.Point(700, 200);
+            this.lblCompra.Location = new System.Drawing.Point(100, 300);
             this.lblCompra.Name = "lblCompra";
             this.lblCompra.Size = new System.Drawing.Size(82, 32);
             this.lblCompra.TabIndex = 14;
@@ -223,25 +210,13 @@ namespace COMPRAS2
             this.txtProducto.TabIndex = 20;
             this.txtProducto.Text = "Producto";
             // 
-            // txtSerie
-            // 
-            this.txtSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtSerie.Location = new System.Drawing.Point(100, 240);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(426, 26);
-            this.txtSerie.TabIndex = 21;
-            this.txtSerie.Text = "Serie";
-            // 
             // txtCodigoQR
             // 
             this.txtCodigoQR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtCodigoQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigoQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCodigoQR.Location = new System.Drawing.Point(100, 340);
+            this.txtCodigoQR.Location = new System.Drawing.Point(106, 240);
             this.txtCodigoQR.Name = "txtCodigoQR";
             this.txtCodigoQR.Size = new System.Drawing.Size(426, 26);
             this.txtCodigoQR.TabIndex = 22;
@@ -289,7 +264,7 @@ namespace COMPRAS2
             this.txtCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCompra.Location = new System.Drawing.Point(700, 240);
+            this.txtCompra.Location = new System.Drawing.Point(106, 340);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.Size = new System.Drawing.Size(426, 26);
             this.txtCompra.TabIndex = 26;
@@ -539,7 +514,6 @@ namespace COMPRAS2
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtCodigoQR);
-            this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblProvedor);
@@ -551,7 +525,6 @@ namespace COMPRAS2
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblCodigoQR);
-            this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.lblTituloEditarProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -578,7 +551,6 @@ namespace COMPRAS2
 
         private System.Windows.Forms.Label lblTituloEditarProducto;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Label lblCodigoQR;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblModelo;
@@ -590,7 +562,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblProvedor;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtProducto;
-        private System.Windows.Forms.TextBox txtSerie;
         private System.Windows.Forms.TextBox txtCodigoQR;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtModelo;
