@@ -35,7 +35,7 @@ namespace COMPRAS2
             this.lblProducto = new System.Windows.Forms.Label();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
             this.lblSALIDA = new System.Windows.Forms.Label();
-            this.btBUSCADOR = new System.Windows.Forms.Button();
+            this.btnBuscador = new System.Windows.Forms.Button();
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
             this.lblDescompostura = new System.Windows.Forms.Label();
@@ -113,19 +113,22 @@ namespace COMPRAS2
             this.lblSALIDA.TabIndex = 65;
             this.lblSALIDA.Text = "SALIDA";
             // 
-            // btBUSCADOR
+            // btnBuscador
             // 
-            this.btBUSCADOR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            this.btBUSCADOR.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
-            this.btBUSCADOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBUSCADOR.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBUSCADOR.Location = new System.Drawing.Point(144, 108);
-            this.btBUSCADOR.Name = "btBUSCADOR";
-            this.btBUSCADOR.Size = new System.Drawing.Size(31, 25);
-            this.btBUSCADOR.TabIndex = 69;
-            this.btBUSCADOR.UseVisualStyleBackColor = false;
+            this.btnBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            this.btnBuscador.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
+            this.btnBuscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscador.FlatAppearance.BorderSize = 0;
+            this.btnBuscador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscador.Location = new System.Drawing.Point(144, 108);
+            this.btnBuscador.Name = "btnBuscador";
+            this.btnBuscador.Size = new System.Drawing.Size(31, 25);
+            this.btnBuscador.TabIndex = 69;
+            this.btnBuscador.UseVisualStyleBackColor = false;
             // 
             // pboxBuscador
             // 
@@ -143,6 +146,9 @@ namespace COMPRAS2
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bTNBack.FlatAppearance.BorderSize = 0;
+            this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTNBack.Location = new System.Drawing.Point(20, 20);
             this.bTNBack.Name = "bTNBack";
@@ -197,7 +203,7 @@ namespace COMPRAS2
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblProducto);
-            this.Controls.Add(this.btBUSCADOR);
+            this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.txtBUSCADOR);
             this.Controls.Add(this.pboxBuscador);
             this.Controls.Add(this.bTNBack);
@@ -216,7 +222,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.Button btBUSCADOR;
+        private System.Windows.Forms.Button btnBuscador;
         private System.Windows.Forms.TextBox txtBUSCADOR;
         private System.Windows.Forms.PictureBox pboxBuscador;
         private System.Windows.Forms.Button bTNBack;

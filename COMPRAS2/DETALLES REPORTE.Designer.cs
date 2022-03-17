@@ -72,6 +72,8 @@ namespace COMPRAS2
             this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
@@ -413,6 +415,8 @@ namespace COMPRAS2
             this.btnELIMINAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnELIMINAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnELIMINAR.FlatAppearance.BorderSize = 0;
+            this.btnELIMINAR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnELIMINAR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnELIMINAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnELIMINAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnELIMINAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -431,6 +435,8 @@ namespace COMPRAS2
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));

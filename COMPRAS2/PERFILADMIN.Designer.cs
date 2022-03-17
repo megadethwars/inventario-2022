@@ -58,6 +58,9 @@ namespace COMPRAS2
             this.button1.BackgroundImage = global::COMPRAS2.Properties.Resources.AGREGARFOTO;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(746, 540);
             this.button1.Name = "button1";
@@ -195,6 +198,9 @@ namespace COMPRAS2
             this.btnAceptar.BackgroundImage = global::COMPRAS2.Properties.Resources.ACEPTAR;
             this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAceptar.Location = new System.Drawing.Point(284, 555);

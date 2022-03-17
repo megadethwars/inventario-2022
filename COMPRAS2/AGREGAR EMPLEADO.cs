@@ -229,5 +229,20 @@ namespace COMPRAS2
         {
             int status = await CreateUser();
         }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = true;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
+        }
+
+        private void txtContraseñaDeNuevo_TextChanged(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
+        }
     }
 }

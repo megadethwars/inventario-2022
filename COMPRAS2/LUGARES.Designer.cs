@@ -92,6 +92,9 @@ namespace COMPRAS2
             this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Location = new System.Drawing.Point(591, 753);
             this.btnOK.Name = "btnOK";
@@ -104,6 +107,9 @@ namespace COMPRAS2
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bTNBack.FlatAppearance.BorderSize = 0;
+            this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTNBack.Location = new System.Drawing.Point(20, 20);
             this.bTNBack.Name = "bTNBack";

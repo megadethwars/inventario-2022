@@ -137,6 +137,8 @@ namespace COMPRAS2
             this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEscanear.FlatAppearance.BorderSize = 0;
+            this.btnEscanear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEscanear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -155,6 +157,8 @@ namespace COMPRAS2
             this.btnAgregarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
+            this.btnAgregarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -173,6 +177,8 @@ namespace COMPRAS2
             this.btnOPCIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOPCIONES.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOPCIONES.FlatAppearance.BorderSize = 0;
+            this.btnOPCIONES.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOPCIONES.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -190,6 +196,9 @@ namespace COMPRAS2
             this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Location = new System.Drawing.Point(682, 795);
             this.btnOK.Name = "btnOK";
@@ -215,6 +224,9 @@ namespace COMPRAS2
             this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
@@ -230,6 +242,9 @@ namespace COMPRAS2
             this.btBUSCADOR.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
             this.btBUSCADOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btBUSCADOR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btBUSCADOR.FlatAppearance.BorderSize = 0;
+            this.btBUSCADOR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBUSCADOR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBUSCADOR.Location = new System.Drawing.Point(144, 108);
             this.btBUSCADOR.Name = "btBUSCADOR";

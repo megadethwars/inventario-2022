@@ -182,6 +182,7 @@ namespace COMPRAS2
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 36;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAgregarFoto
             // 
@@ -272,6 +273,7 @@ namespace COMPRAS2
             this.txtContraseña.Size = new System.Drawing.Size(426, 26);
             this.txtContraseña.TabIndex = 77;
             this.txtContraseña.Text = "Introduzca la contraseña";
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // txtContraseñaDeNuevo
             // 
@@ -286,6 +288,7 @@ namespace COMPRAS2
             this.txtContraseñaDeNuevo.Size = new System.Drawing.Size(426, 26);
             this.txtContraseñaDeNuevo.TabIndex = 78;
             this.txtContraseñaDeNuevo.Text = "Introduzca la contraseña de nuevo";
+            this.txtContraseñaDeNuevo.TextChanged += new System.EventHandler(this.txtContraseñaDeNuevo_TextChanged);
             // 
             // txtTelefono
             // 
@@ -324,9 +327,9 @@ namespace COMPRAS2
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.label8.Location = new System.Drawing.Point(100, 400);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 32);
+            this.label8.Size = new System.Drawing.Size(79, 32);
             this.label8.TabIndex = 82;
-            this.label8.Text = "Usuario";
+            this.label8.Text = "USUARIO";
             // 
             // textUsuario
             // 

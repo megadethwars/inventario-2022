@@ -37,7 +37,7 @@ namespace COMPRAS2
             this.INVENTARIOTITLE = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOPCIONES = new System.Windows.Forms.Button();
@@ -56,6 +56,9 @@ namespace COMPRAS2
             this.btnBuscador.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
             this.btnBuscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscador.FlatAppearance.BorderSize = 0;
+            this.btnBuscador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscador.Location = new System.Drawing.Point(144, 108);
             this.btnBuscador.Name = "btnBuscador";
@@ -93,6 +96,9 @@ namespace COMPRAS2
             this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
@@ -129,19 +135,22 @@ namespace COMPRAS2
             this.dataGridView2.Size = new System.Drawing.Size(1036, 82);
             this.dataGridView2.TabIndex = 40;
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            this.button1.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(144, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 25);
-            this.button1.TabIndex = 39;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            this.btnBuscar.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(144, 309);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(31, 25);
+            this.btnBuscar.TabIndex = 39;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -175,6 +184,8 @@ namespace COMPRAS2
             this.btnOPCIONES.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOPCIONES.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOPCIONES.FlatAppearance.BorderSize = 0;
+            this.btnOPCIONES.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOPCIONES.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOPCIONES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOPCIONES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -191,6 +202,9 @@ namespace COMPRAS2
             this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Location = new System.Drawing.Point(485, 531);
             this.btnOK.Name = "btnOK";
@@ -220,7 +234,7 @@ namespace COMPRAS2
             this.Controls.Add(this.btnOPCIONES);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
@@ -250,7 +264,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label INVENTARIOTITLE;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnOPCIONES;
