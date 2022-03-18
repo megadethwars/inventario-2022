@@ -267,6 +267,9 @@ namespace COMPRAS2
             this.btnBuscador.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
             this.btnBuscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscador.FlatAppearance.BorderSize = 0;
+            this.btnBuscador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscador.Location = new System.Drawing.Point(145, 110);
             this.btnBuscador.Name = "btnBuscador";
