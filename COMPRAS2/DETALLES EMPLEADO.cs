@@ -21,14 +21,22 @@ namespace COMPRAS2
             this.user = user;
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        public void btnEditar_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new EDITAR_EMPLEADO());
+            try
+            {
+                this.user = user;
+                Navigator.nextPage(new EDITAR_EMPLEADO(user));
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void bTNBack_Click(object sender, EventArgs e)
         {
-            Navigator.backPage(this.Name, this);
+            Navigator.backPage(this.Name, this);          
         }
 
         private void DETALLES_EMPLEADO_Load(object sender, EventArgs e)

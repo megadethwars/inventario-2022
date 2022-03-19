@@ -63,15 +63,7 @@ namespace COMPRAS2
             this.dgvInventario.Columns["Costo"].Visible = false;
             this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
         }
-        /*
-        public async Task<string> Gethttp()
-        {
-            WebRequest oRequest = WebRequest.Create(url);
-            WebResponse oResponse = oRequest.GetResponse();
-            StreamReader sr = new StreamReader(oResponse.GetResponseStream());
-            return await sr.ReadToEndAsync();
-        }
-        */
+       
 
         private void AbrirFormHija(object formhija)
         {

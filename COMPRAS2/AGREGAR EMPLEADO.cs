@@ -171,11 +171,6 @@ namespace COMPRAS2
                 //product.costo = (int)costo;
                 //product.observaciones = txtObservaciones.Text;
 
-              
-
-
-
-
                 string json = JsonConvert.SerializeObject(user,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
                 var url = HttpMethods.url + "usuarios";
@@ -242,7 +237,7 @@ namespace COMPRAS2
 
         private void txtContraseñaDeNuevo_TextChanged(object sender, EventArgs e)
         {
-            Navigator.backPage(this.Name, this);
+            txtContraseñaDeNuevo.UseSystemPasswordChar = true;
         }
     }
 }

@@ -23,16 +23,11 @@ namespace COMPRAS2
         }
 
         public void brnOPCIONES_Click(object sender, EventArgs e)
-        {
-            //Navigator.nextPage(new EDITAR_PRODUCTO());
-
+        {            
             try
-            {
-                //DataGridViewRow cell = devices;
-                //Devices data = (Devices)cell.DataBoundItem;
+            {               
                 this.devices = devices;
-                Navigator.nextPage(new EDITAR_PRODUCTO(devices));
-                ;
+                Navigator.nextPage(new EDITAR_PRODUCTO(devices));                
             }
             catch (Exception ex)
             {
@@ -62,8 +57,6 @@ namespace COMPRAS2
             this.lblDProvedor.Text = devices.proveedor;
             this.lblDCantidad.Text = devices.cantidad.ToString();
             this.lblDFoto.Text = devices.Foto;
-
-
         }
     }
 }
