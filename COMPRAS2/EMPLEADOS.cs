@@ -19,9 +19,7 @@ namespace COMPRAS2
         {
             InitializeComponent();
             
-        }
-
-        
+        }        
 
         private void bTNBack_Click(object sender, EventArgs e)
         {
@@ -40,19 +38,24 @@ namespace COMPRAS2
                     return 1;
                 }
 
-                var products = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
-
-                for (int x = 0; x < products.Count; x++)
-                {
-
+                //var products = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
+                List<User> user = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
+                for (int x = 0; x < user.Count; x++)
+                {/*
+                    User UsuariosA = reportes[x].usuario;
+                    reportes[x].UserActualA = Usuarios.apellidoPaterno;
+                    */
+                    Rol rolNombre = user[x].rol;
+                    user[x].rolNombre = rolNombre.nombre;
                     
                 }
 
-                dgvUsuarios.DataSource = products;
+                dgvUsuarios.DataSource = user;
                 this.dgvUsuarios.Columns["correo"].Visible = false;
                 this.dgvUsuarios.Columns["rolId"].Visible = false;
                 this.dgvUsuarios.Columns["foto"].Visible = false;
                 this.dgvUsuarios.Columns["statusId"].Visible = false;
+                this.dgvUsuarios.Columns["password"].Visible = false;
 
                 return 0;
             }
@@ -69,14 +72,14 @@ namespace COMPRAS2
 
         }
 
-        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
-            {/*
-                DataGridViewRow cell = dgvInventario.Rows[e.RowIndex];
-                Devices data = (Devices)cell.DataBoundItem;*/
+            {               
+                DataGridViewRow cell = dgvUsuarios.Rows[e.RowIndex];
+                User data = (User)cell.DataBoundItem;
 
-                Navigator.nextPage(new DETALLES_EMPLEADO());
+                Navigator.nextPage(new DETALLES_EMPLEADO(data));
                 
             }
             catch (Exception ex)
@@ -88,6 +91,11 @@ namespace COMPRAS2
         private void btAgregarEmp_Click(object sender, EventArgs e)
         {
             Navigator.nextPage(new AGREGAR_EMPLEADO());
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

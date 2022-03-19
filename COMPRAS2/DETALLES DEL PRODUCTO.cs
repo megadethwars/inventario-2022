@@ -22,9 +22,17 @@ namespace COMPRAS2
             
         }
 
-        private void brnOPCIONES_Click(object sender, EventArgs e)
-        {
-            Navigator.nextPage(new EDITAR_PRODUCTO());
+        public void brnOPCIONES_Click(object sender, EventArgs e)
+        {            
+            try
+            {               
+                this.devices = devices;
+                Navigator.nextPage(new EDITAR_PRODUCTO(devices));                
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -49,8 +57,6 @@ namespace COMPRAS2
             this.lblDProvedor.Text = devices.proveedor;
             this.lblDCantidad.Text = devices.cantidad.ToString();
             this.lblDFoto.Text = devices.Foto;
-
-
         }
     }
 }

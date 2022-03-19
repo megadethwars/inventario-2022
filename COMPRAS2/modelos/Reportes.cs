@@ -48,6 +48,7 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public User usuario { get; set; }     
 
+
         [DefaultValue(null)]
         public int usuarioId { get; set; }
     }

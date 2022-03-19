@@ -39,6 +39,7 @@ namespace COMPRAS2
             this.btnEscanear = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btAgregarEmp = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,9 @@ namespace COMPRAS2
             // 
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bTNBack.FlatAppearance.BorderSize = 0;
+            this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTNBack.Location = new System.Drawing.Point(20, 20);
             this.bTNBack.Name = "bTNBack";
@@ -59,11 +63,11 @@ namespace COMPRAS2
             // 
             this.lblEMPLEADOS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEMPLEADOS.AutoSize = true;
-            this.lblEMPLEADOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEMPLEADOS.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEMPLEADOS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblEMPLEADOS.Location = new System.Drawing.Point(560, 30);
             this.lblEMPLEADOS.Name = "lblEMPLEADOS";
-            this.lblEMPLEADOS.Size = new System.Drawing.Size(232, 39);
+            this.lblEMPLEADOS.Size = new System.Drawing.Size(131, 42);
             this.lblEMPLEADOS.TabIndex = 35;
             this.lblEMPLEADOS.Text = "EMPLEADOS";
             // 
@@ -74,6 +78,9 @@ namespace COMPRAS2
             this.btBUSCADOR.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
             this.btBUSCADOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btBUSCADOR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btBUSCADOR.FlatAppearance.BorderSize = 0;
+            this.btBUSCADOR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBUSCADOR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBUSCADOR.Location = new System.Drawing.Point(144, 108);
             this.btBUSCADOR.Name = "btBUSCADOR";
@@ -113,8 +120,10 @@ namespace COMPRAS2
             this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEscanear.FlatAppearance.BorderSize = 0;
+            this.btnEscanear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEscanear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnEscanear.Location = new System.Drawing.Point(12, 810);
             this.btnEscanear.Name = "btnEscanear";
@@ -171,8 +180,10 @@ namespace COMPRAS2
             this.btAgregarEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btAgregarEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAgregarEmp.FlatAppearance.BorderSize = 0;
+            this.btAgregarEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btAgregarEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btAgregarEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAgregarEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAgregarEmp.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAgregarEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btAgregarEmp.Location = new System.Drawing.Point(239, 810);
             this.btAgregarEmp.Name = "btAgregarEmp";
@@ -182,12 +193,34 @@ namespace COMPRAS2
             this.btAgregarEmp.UseVisualStyleBackColor = false;
             this.btAgregarEmp.Click += new System.EventHandler(this.btAgregarEmp_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnActualizar.Location = new System.Drawing.Point(1128, 31);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(114, 39);
+            this.btnActualizar.TabIndex = 47;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // EMPLEADOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btAgregarEmp);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.btnEscanear);
@@ -216,5 +249,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnEscanear;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Button btAgregarEmp;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

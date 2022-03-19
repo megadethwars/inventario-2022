@@ -63,15 +63,7 @@ namespace COMPRAS2
             this.dgvInventario.Columns["Costo"].Visible = false;
             this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
         }
-        /*
-        public async Task<string> Gethttp()
-        {
-            WebRequest oRequest = WebRequest.Create(url);
-            WebResponse oResponse = oRequest.GetResponse();
-            StreamReader sr = new StreamReader(oResponse.GetResponseStream());
-            return await sr.ReadToEndAsync();
-        }
-        */
+       
 
         private void AbrirFormHija(object formhija)
         {
@@ -128,18 +120,19 @@ namespace COMPRAS2
                 Devices data =(Devices)cell.DataBoundItem;
 
                 Navigator.nextPage(new DETALLES_DEL_PRODUCTO(data));
-                ;
+                
             }
             catch(Exception ex)
             {
                 return;
             }
         }
+        
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void btnActualizar_Click(object sender, EventArgs e)
         {
             dgvInventario.DataSource = null;
-            
+
             var url = HttpMethods.url + "dispositivos";
             StatusMessage statusmessage = await HttpMethods.get(url);
 
@@ -177,4 +170,5 @@ namespace COMPRAS2
             this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
         }
     }
+    
 }

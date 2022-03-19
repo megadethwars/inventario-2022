@@ -73,6 +73,8 @@ namespace COMPRAS2
             this.btnBUSQUEDAAVANZADA.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnBUSQUEDAAVANZADA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBUSQUEDAAVANZADA.FlatAppearance.BorderSize = 0;
+            this.btnBUSQUEDAAVANZADA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBUSQUEDAAVANZADA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBUSQUEDAAVANZADA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBUSQUEDAAVANZADA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -91,6 +93,9 @@ namespace COMPRAS2
             this.btBUSCADOR.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
             this.btBUSCADOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btBUSCADOR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btBUSCADOR.FlatAppearance.BorderSize = 0;
+            this.btBUSCADOR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btBUSCADOR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btBUSCADOR.Location = new System.Drawing.Point(144, 152);
             this.btBUSCADOR.Name = "btBUSCADOR";
@@ -113,6 +118,9 @@ namespace COMPRAS2
             // 
             this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
