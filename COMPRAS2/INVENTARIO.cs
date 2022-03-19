@@ -128,7 +128,7 @@ namespace COMPRAS2
                 Devices data =(Devices)cell.DataBoundItem;
 
                 Navigator.nextPage(new DETALLES_DEL_PRODUCTO(data));
-                ;
+                
             }
             catch(Exception ex)
             {

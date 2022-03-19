@@ -22,9 +22,22 @@ namespace COMPRAS2
             
         }
 
-        private void brnOPCIONES_Click(object sender, EventArgs e)
+        public void brnOPCIONES_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new EDITAR_PRODUCTO());
+            //Navigator.nextPage(new EDITAR_PRODUCTO());
+
+            try
+            {
+                //DataGridViewRow cell = devices;
+                //Devices data = (Devices)cell.DataBoundItem;
+                this.devices = devices;
+                Navigator.nextPage(new EDITAR_PRODUCTO(devices));
+                ;
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
