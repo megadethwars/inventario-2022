@@ -196,8 +196,8 @@ namespace COMPRAS2
                 else if (statusmessage.statuscode == 201)
                 {
                     //var auth = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
-                    List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-                    MessageBox.Show("PRODUCTO AGREGADO CORRECTAMENTE");
+                    List<User> USERS = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
+                    MessageBox.Show("EMPLEADO AGREGADO CORRECTAMENTE");
                     Navigator.backPage(this.Name, this);
                     return 0;
                 }
