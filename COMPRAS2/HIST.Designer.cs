@@ -38,6 +38,8 @@ namespace COMPRAS2
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
+            this.btSalida = new System.Windows.Forms.Button();
+            this.btRecepcion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.SuspendLayout();
@@ -59,11 +61,11 @@ namespace COMPRAS2
             // 
             this.lblHISTORIAL.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHISTORIAL.AutoSize = true;
-            this.lblHISTORIAL.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHISTORIAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHISTORIAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblHISTORIAL.Location = new System.Drawing.Point(560, 30);
             this.lblHISTORIAL.Name = "lblHISTORIAL";
-            this.lblHISTORIAL.Size = new System.Drawing.Size(116, 42);
+            this.lblHISTORIAL.Size = new System.Drawing.Size(198, 39);
             this.lblHISTORIAL.TabIndex = 34;
             this.lblHISTORIAL.Text = "HISTORIAL";
             // 
@@ -76,7 +78,7 @@ namespace COMPRAS2
             this.btnBUSQUEDAAVANZADA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBUSQUEDAAVANZADA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBUSQUEDAAVANZADA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBUSQUEDAAVANZADA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnBUSQUEDAAVANZADA.Location = new System.Drawing.Point(530, 91);
             this.btnBUSQUEDAAVANZADA.Name = "btnBUSQUEDAAVANZADA";
@@ -168,12 +170,33 @@ namespace COMPRAS2
             this.dgvHistorial.Size = new System.Drawing.Size(1230, 561);
             this.dgvHistorial.TabIndex = 45;
             // 
+            // btSalida
+            // 
+            this.btSalida.Location = new System.Drawing.Point(20, 803);
+            this.btSalida.Name = "btSalida";
+            this.btSalida.Size = new System.Drawing.Size(121, 37);
+            this.btSalida.TabIndex = 46;
+            this.btSalida.Text = "Salida";
+            this.btSalida.UseVisualStyleBackColor = true;
+            this.btSalida.Click += new System.EventHandler(this.btSalida_Click);
+            // 
+            // btRecepcion
+            // 
+            this.btRecepcion.Location = new System.Drawing.Point(219, 803);
+            this.btRecepcion.Name = "btRecepcion";
+            this.btRecepcion.Size = new System.Drawing.Size(139, 37);
+            this.btRecepcion.TabIndex = 47;
+            this.btRecepcion.Text = "Recepcion";
+            this.btRecepcion.UseVisualStyleBackColor = true;
+            // 
             // HIST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btRecepcion);
+            this.Controls.Add(this.btSalida);
             this.Controls.Add(this.dgvHistorial);
             this.Controls.Add(this.btnBUSQUEDAAVANZADA);
             this.Controls.Add(this.lblHISTORIAL);
@@ -200,5 +223,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblHISTORIAL;
         private System.Windows.Forms.Button btnBUSQUEDAAVANZADA;
         private System.Windows.Forms.DataGridView dgvHistorial;
+        private System.Windows.Forms.Button btSalida;
+        private System.Windows.Forms.Button btRecepcion;
     }
 }

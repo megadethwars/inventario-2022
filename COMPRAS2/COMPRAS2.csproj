@@ -182,6 +182,7 @@
     <Compile Include="MIPERFIL.Designer.cs">
       <DependentUpon>MIPERFIL.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelos\QueryDevice.cs" />
     <Compile Include="modelos\QueryReporte.cs" />
     <Compile Include="modelos\CurrentUser.cs" />
     <Compile Include="modelos\Devices.cs" />

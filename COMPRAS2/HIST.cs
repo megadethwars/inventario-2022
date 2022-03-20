@@ -32,5 +32,10 @@ namespace COMPRAS2
         {
             Navigator.nextPage(new BUSQUEDA_AVANZADA());
         }
+
+        private void btSalida_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new SALIDA());
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace COMPRAS2
             this.txtNombre.Text = user.nombre;
             this.txtCorreo.Text = user.correo;
             this.txtTelefono.Text = user.telefono;
-            cbEmpleado.DataSource
+            //cbEmpleado.DataSource
         }
     }
 }
