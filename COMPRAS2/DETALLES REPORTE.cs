@@ -23,7 +23,7 @@ namespace COMPRAS2
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new EDITAR_REPORTES());
+            Navigator.nextPage(new EDITAR_REPORTES(reportes));
         }
 
         private void btnBack_Click(object sender, EventArgs e)

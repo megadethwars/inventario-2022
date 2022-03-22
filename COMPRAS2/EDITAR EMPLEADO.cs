@@ -17,11 +17,13 @@ namespace COMPRAS2
     {
         List<Tuple<Int32, String>> listaRoles;
         User user;
+        int id = 0;
         public EDITAR_EMPLEADO(User user)
         {
             InitializeComponent();
             this.user = user;
             listaRoles = new List<Tuple<int, string>>();
+            id = user.id;
         }
 
         private void bTNBack_Click(object sender, EventArgs e)
@@ -34,9 +36,9 @@ namespace COMPRAS2
             this.txtNombre.Text = user.nombre;
             this.txtCorreo.Text = user.correo;
             this.txtTelefono.Text = user.telefono;
-            //this.cbEmpleado.Text = user.rolNombre;
-            int status = await Roles();           
             
+            int status = await Roles();           
+            this.cbEmpleado.Text = user.rolNombre;
         }
 
         private async Task<int> Roles()
@@ -85,6 +87,39 @@ namespace COMPRAS2
                 MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
                 return 10;
             }
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            EditarEmpleado();
+        }
+
+        private async void EditarEmpleado()
+        {
+            
+            int idEmpleados = 0;
+            
+
+            User userUpdate;
+            userUpdate = new User();
+
+            userUpdate.nombre = txtNombre.Text;
+            userUpdate.correo = txtCorreo.Text;
+            userUpdate.telefono = txtTelefono.Text;
+
+            if (cbEmpleado.SelectedItem != null)
+            {
+                var idEmpleadotuple = (Tuple<int, string>)cbEmpleado.SelectedItem;
+                idEmpleados = idEmpleadotuple.Item1;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun estatus");
+                return;
+            }
+            userUpdate.statusId = idEmpleados;            
+
+            Navigator.backPage(this.Name, this);
         }
     }
 }

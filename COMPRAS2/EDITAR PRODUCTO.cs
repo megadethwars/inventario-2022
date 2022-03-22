@@ -47,13 +47,13 @@ namespace COMPRAS2
             this.txtCosto.Text = devices.costo.ToString();
             this.txtOrigen.Text = devices.Origen;
             this.txtLugar.Text = devices.Lugar_Actual;
-            //this.txtEstatus.Text = devices.StatusActual;
             this.txtDescompostura.Text = devices.descompostura;
             this.txtProvedor.Text = devices.proveedor;
             this.txtCantidad.Text = devices.cantidad.ToString();
             this.txtFoto.Text = devices.Foto;
 
             int status = await Estatus();
+            this.cbEstatus.Text = devices.StatusActual;
         }
 
         private async Task<int> Estatus()

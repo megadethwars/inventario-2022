@@ -169,6 +169,11 @@ namespace COMPRAS2
             this.dgvInventario.Columns["Costo"].Visible = false;
             this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
         }
+        
+        private void dgvInventario_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+        }
     }
     
 }

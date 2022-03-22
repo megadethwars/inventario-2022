@@ -1,4 +1,5 @@
-﻿using COMPRAS2.servicios;
+﻿using COMPRAS2.modelos;
+using COMPRAS2.servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +14,38 @@ namespace COMPRAS2
 {
     public partial class EDITAR_REPORTES : Form
     {
-        public EDITAR_REPORTES()
+        Reportes reportes;       
+
+        public EDITAR_REPORTES(Reportes reportes)
         {
+            
             InitializeComponent();
+            this.reportes = reportes;
         }
 
         private void bTNBack_Click(object sender, EventArgs e)
         {
             Navigator.backPage(this.Name, this);
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            EditarReportes();
+        }
+
+        private async void EditarReportes()
+        {
+            Reportes reportes;
+            reportes = new Reportes();
+
+            reportes.comentarios = txtComentarios.Text;
+
+            Navigator.backPage(this.Name, this);
+        }
+
+        private void EDITAR_REPORTES_Load(object sender, EventArgs e)
+        {
+            txtComentarios.Text = reportes.comentarios;
         }
     }
 }

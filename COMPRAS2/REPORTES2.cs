@@ -116,5 +116,10 @@ namespace COMPRAS2
             this.dgvReportes.Columns["UserActualA"].Visible = false;
             this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
         }
+
+        private void dgvReportes_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.dgvReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+        }
     }
 }

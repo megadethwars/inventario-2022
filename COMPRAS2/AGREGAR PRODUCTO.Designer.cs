@@ -56,7 +56,6 @@ namespace COMPRAS2
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.btnAgregarFoto = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtOrigen = new System.Windows.Forms.TextBox();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
@@ -442,26 +441,6 @@ namespace COMPRAS2
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click_1);
             // 
-            // btnAgregarFoto
-            // 
-            this.btnAgregarFoto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAgregarFoto.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarFoto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnAgregarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
-            this.btnAgregarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarFoto.Location = new System.Drawing.Point(545, 705);
-            this.btnAgregarFoto.Name = "btnAgregarFoto";
-            this.btnAgregarFoto.Size = new System.Drawing.Size(160, 39);
-            this.btnAgregarFoto.TabIndex = 61;
-            this.btnAgregarFoto.Text = "AGREGAR FOTO";
-            this.btnAgregarFoto.UseVisualStyleBackColor = false;
-            // 
             // txtCantidad
             // 
             this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -695,7 +674,6 @@ namespace COMPRAS2
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.txtOrigen);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.btnAgregarFoto);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -772,7 +750,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Button btnAgregarFoto;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtOrigen;
         private System.Windows.Forms.TextBox txtObservaciones;

@@ -38,7 +38,6 @@ namespace COMPRAS2
             this.btBUSCADOR = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAgregarNuevoReporte = new System.Windows.Forms.Button();
-            this.btnEscanear = new System.Windows.Forms.Button();
             this.dgvReportes = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -144,26 +143,6 @@ namespace COMPRAS2
             this.btnAgregarNuevoReporte.UseVisualStyleBackColor = false;
             this.btnAgregarNuevoReporte.Click += new System.EventHandler(this.btnAgregarNuevoReporte_Click);
             // 
-            // btnEscanear
-            // 
-            this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEscanear.FlatAppearance.BorderSize = 0;
-            this.btnEscanear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEscanear.Location = new System.Drawing.Point(567, 157);
-            this.btnEscanear.Name = "btnEscanear";
-            this.btnEscanear.Size = new System.Drawing.Size(114, 39);
-            this.btnEscanear.TabIndex = 43;
-            this.btnEscanear.Text = "ESCANEAR";
-            this.btnEscanear.UseVisualStyleBackColor = false;
-            // 
             // dgvReportes
             // 
             this.dgvReportes.AllowUserToOrderColumns = true;
@@ -188,7 +167,7 @@ namespace COMPRAS2
             this.dgvReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvReportes.EnableHeadersVisualStyles = false;
             this.dgvReportes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvReportes.Location = new System.Drawing.Point(28, 217);
+            this.dgvReportes.Location = new System.Drawing.Point(20, 180);
             this.dgvReportes.Name = "dgvReportes";
             this.dgvReportes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvReportes.RowHeadersVisible = false;
@@ -200,9 +179,10 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReportes.Size = new System.Drawing.Size(1230, 561);
+            this.dgvReportes.Size = new System.Drawing.Size(1235, 560);
             this.dgvReportes.TabIndex = 44;
             this.dgvReportes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReportes_CellClick);
+            this.dgvReportes.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReportes_CellMouseEnter);
             // 
             // btnActualizar
             // 
@@ -217,7 +197,7 @@ namespace COMPRAS2
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizar.Location = new System.Drawing.Point(1134, 31);
+            this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(114, 39);
             this.btnActualizar.TabIndex = 45;
@@ -233,7 +213,6 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1279, 861);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvReportes);
-            this.Controls.Add(this.btnEscanear);
             this.Controls.Add(this.btnAgregarNuevoReporte);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBack);
@@ -261,7 +240,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblREPORTES;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgregarNuevoReporte;
-        private System.Windows.Forms.Button btnEscanear;
         private System.Windows.Forms.DataGridView dgvReportes;
         private System.Windows.Forms.Button btnActualizar;
     }

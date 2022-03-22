@@ -29,8 +29,8 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
             this.lblHISTORIAL = new System.Windows.Forms.Label();
             this.btnBUSQUEDAAVANZADA = new System.Windows.Forms.Button();
@@ -40,6 +40,7 @@ namespace COMPRAS2
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
             this.btSalida = new System.Windows.Forms.Button();
             this.btRecepcion = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.SuspendLayout();
@@ -61,11 +62,11 @@ namespace COMPRAS2
             // 
             this.lblHISTORIAL.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHISTORIAL.AutoSize = true;
-            this.lblHISTORIAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHISTORIAL.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHISTORIAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblHISTORIAL.Location = new System.Drawing.Point(560, 30);
             this.lblHISTORIAL.Name = "lblHISTORIAL";
-            this.lblHISTORIAL.Size = new System.Drawing.Size(198, 39);
+            this.lblHISTORIAL.Size = new System.Drawing.Size(116, 42);
             this.lblHISTORIAL.TabIndex = 34;
             this.lblHISTORIAL.Text = "HISTORIAL";
             // 
@@ -78,9 +79,9 @@ namespace COMPRAS2
             this.btnBUSQUEDAAVANZADA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBUSQUEDAAVANZADA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBUSQUEDAAVANZADA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBUSQUEDAAVANZADA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnBUSQUEDAAVANZADA.Location = new System.Drawing.Point(530, 91);
+            this.btnBUSQUEDAAVANZADA.Location = new System.Drawing.Point(520, 92);
             this.btnBUSQUEDAAVANZADA.Name = "btnBUSQUEDAAVANZADA";
             this.btnBUSQUEDAAVANZADA.Size = new System.Drawing.Size(187, 34);
             this.btnBUSQUEDAAVANZADA.TabIndex = 37;
@@ -143,14 +144,14 @@ namespace COMPRAS2
             this.dgvHistorial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHistorial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvHistorial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHistorial.ColumnHeadersHeight = 45;
             this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvHistorial.EnableHeadersVisualStyles = false;
@@ -159,19 +160,20 @@ namespace COMPRAS2
             this.dgvHistorial.Name = "dgvHistorial";
             this.dgvHistorial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvHistorial.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvHistorial.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvHistorial.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorial.Size = new System.Drawing.Size(1230, 561);
             this.dgvHistorial.TabIndex = 45;
             // 
             // btSalida
             // 
+            this.btSalida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btSalida.Location = new System.Drawing.Point(20, 803);
             this.btSalida.Name = "btSalida";
             this.btSalida.Size = new System.Drawing.Size(121, 37);
@@ -182,6 +184,7 @@ namespace COMPRAS2
             // 
             // btRecepcion
             // 
+            this.btRecepcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btRecepcion.Location = new System.Drawing.Point(219, 803);
             this.btRecepcion.Name = "btRecepcion";
             this.btRecepcion.Size = new System.Drawing.Size(139, 37);
@@ -189,12 +192,33 @@ namespace COMPRAS2
             this.btRecepcion.Text = "Recepcion";
             this.btRecepcion.UseVisualStyleBackColor = true;
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnActualizar.Location = new System.Drawing.Point(1136, 22);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(114, 39);
+            this.btnActualizar.TabIndex = 48;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            // 
             // HIST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btRecepcion);
             this.Controls.Add(this.btSalida);
             this.Controls.Add(this.dgvHistorial);
@@ -225,5 +249,6 @@ namespace COMPRAS2
         private System.Windows.Forms.DataGridView dgvHistorial;
         private System.Windows.Forms.Button btSalida;
         private System.Windows.Forms.Button btRecepcion;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
