@@ -34,12 +34,9 @@ namespace COMPRAS2
             this.txtNombre.Text = user.nombre;
             this.txtCorreo.Text = user.correo;
             this.txtTelefono.Text = user.telefono;
-            this.cbEmpleado.Text = user.rolNombre;
-            int status = await Roles();
+            //this.cbEmpleado.Text = user.rolNombre;
+            int status = await Roles();           
             
-            /*cbEmpleado.DataSource = listaRoles;
-            cbEmpleado.DisplayMember = "Item2";
-            cbEmpleado.ValueMember = "Item1";*/
         }
 
         private async Task<int> Roles()

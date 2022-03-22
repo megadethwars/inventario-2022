@@ -111,7 +111,7 @@ namespace COMPRAS2
                 product.costo = (int)costo;
                 product.observaciones = txtObservaciones.Text;
 
-                product.statusId = 1.ToString();
+                product.statusId = 1;
                 product.lugarId = 1.ToString();
 
 

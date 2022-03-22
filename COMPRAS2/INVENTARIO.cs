@@ -113,7 +113,7 @@ namespace COMPRAS2
         }
        
         public void dgvInventario_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {            
             try
             {
                 DataGridViewRow cell = dgvInventario.Rows[e.RowIndex];
