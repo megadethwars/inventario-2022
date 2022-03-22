@@ -1,5 +1,6 @@
 ﻿using COMPRAS2.modelos;
 using COMPRAS2.servicios;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,12 +29,65 @@ namespace COMPRAS2
             Navigator.backPage(this.Name, this);
         }
 
-        private void EDITAR_EMPLEADO_Load(object sender, EventArgs e)
+        private async void EDITAR_EMPLEADO_Load(object sender, EventArgs e)
         {
             this.txtNombre.Text = user.nombre;
             this.txtCorreo.Text = user.correo;
             this.txtTelefono.Text = user.telefono;
-            //cbEmpleado.DataSource
+            this.cbEmpleado.Text = user.rolNombre;
+            int status = await Roles();
+            
+            /*cbEmpleado.DataSource = listaRoles;
+            cbEmpleado.DisplayMember = "Item2";
+            cbEmpleado.ValueMember = "Item1";*/
+        }
+
+        private async Task<int> Roles()
+        {
+            try
+            {
+                var url = HttpMethods.url + "roles";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode == 500)
+                {
+
+                    MessageBox.Show("Error interno del servidor");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode == 404)
+                {
+
+                    MessageBox.Show("Roles no encontrados");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return 1;
+                }
+
+
+                var roles = JsonConvert.DeserializeObject<List<Rol>>(statusmessage.data);
+
+
+                for (int x = 0; x < roles.Count; x++)
+                {
+
+                    listaRoles.Add(Tuple.Create<Int32, String>(roles[x].id, roles[x].nombre));
+                }
+                cbEmpleado.DataSource = listaRoles;
+                cbEmpleado.DisplayMember = "Item2";
+                cbEmpleado.ValueMember = "Item1";               
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+                return 10;
+            }
         }
     }
 }

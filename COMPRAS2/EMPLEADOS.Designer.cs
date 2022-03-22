@@ -48,6 +48,7 @@ namespace COMPRAS2
             // 
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bTNBack.FlatAppearance.BorderSize = 0;
             this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -189,13 +190,13 @@ namespace COMPRAS2
             this.btAgregarEmp.Name = "btAgregarEmp";
             this.btAgregarEmp.Size = new System.Drawing.Size(163, 39);
             this.btAgregarEmp.TabIndex = 41;
-            this.btAgregarEmp.Text = "AGREGAR";
+            this.btAgregarEmp.Text = "AGREGAR EMPLEADO";
             this.btAgregarEmp.UseVisualStyleBackColor = false;
             this.btAgregarEmp.Click += new System.EventHandler(this.btAgregarEmp_Click);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.BackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

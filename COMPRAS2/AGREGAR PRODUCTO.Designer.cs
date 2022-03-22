@@ -507,7 +507,7 @@ namespace COMPRAS2
             // pictureBox9
             // 
             this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox9.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox9.Location = new System.Drawing.Point(100, 100);
             this.pictureBox9.MaximumSize = new System.Drawing.Size(1000, 3);
@@ -533,7 +533,7 @@ namespace COMPRAS2
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox2.Location = new System.Drawing.Point(100, 180);
             this.pictureBox2.MaximumSize = new System.Drawing.Size(1000, 3);
@@ -546,7 +546,7 @@ namespace COMPRAS2
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox3.Location = new System.Drawing.Point(100, 260);
             this.pictureBox3.MaximumSize = new System.Drawing.Size(1000, 3);
@@ -559,7 +559,7 @@ namespace COMPRAS2
             // pictureBox4
             // 
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox4.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox4.Location = new System.Drawing.Point(100, 340);
             this.pictureBox4.MaximumSize = new System.Drawing.Size(1000, 3);
@@ -572,7 +572,7 @@ namespace COMPRAS2
             // pictureBox5
             // 
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox5.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox5.Location = new System.Drawing.Point(100, 420);
             this.pictureBox5.MaximumSize = new System.Drawing.Size(1000, 3);
@@ -585,7 +585,7 @@ namespace COMPRAS2
             // pictureBox6
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox6.Location = new System.Drawing.Point(100, 500);
             this.pictureBox6.MaximumSize = new System.Drawing.Size(1000, 3);
@@ -598,7 +598,7 @@ namespace COMPRAS2
             // pictureBox7
             // 
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox7.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox7.Location = new System.Drawing.Point(100, 580);
             this.pictureBox7.MaximumSize = new System.Drawing.Size(1000, 3);

@@ -54,7 +54,6 @@ namespace COMPRAS2
 
 
                 var roles = JsonConvert.DeserializeObject<List<Rol>>(statusmessage.data);
-
                 
 
                 for (int x = 0; x < roles.Count; x++)
@@ -65,11 +64,7 @@ namespace COMPRAS2
                 cbRoles.DataSource = listaRoles;
                 cbRoles.DisplayMember = "Item2";
                 cbRoles.ValueMember = "Item1";
-                //dgvUsuarios.DataSource = products;
-                //this.dgvUsuarios.Columns["correo"].Visible = false;
-                //this.dgvUsuarios.Columns["rolId"].Visible = false;
-                //this.dgvUsuarios.Columns["foto"].Visible = false;
-                //this.dgvUsuarios.Columns["statusId"].Visible = false;
+                
 
                 return 0;
             }
@@ -238,6 +233,11 @@ namespace COMPRAS2
         private void txtContraseñaDeNuevo_TextChanged(object sender, EventArgs e)
         {
             txtContraseñaDeNuevo.UseSystemPasswordChar = true;
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
         }
     }
 }
