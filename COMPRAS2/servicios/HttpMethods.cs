@@ -35,10 +35,8 @@ namespace COMPRAS2.servicios
                             htmlAttributes.Add("data2", valueAsString ?? "unknown");
                         }
 
-
                         mensaje.data = htmlAttributes["data2"].ToString();
-                        
-                        
+                                                
                     }
                     
                     mensaje.statuscode = (int)result.StatusCode;
@@ -52,8 +50,6 @@ namespace COMPRAS2.servicios
                 statusmessage.statuscode = 500;
                 return statusmessage;
             }
-
-
 
         }
 
@@ -82,18 +78,14 @@ namespace COMPRAS2.servicios
                             htmlAttributes.Add("data2", valueAsString ?? "unknown");
                         }
 
-
                         statusmessage.data = htmlAttributes["data2"].ToString();
-
 
                     }
                     statusmessage.data = htmlAttributes["data2"].ToString();
                     statusmessage.statuscode = (int)response.StatusCode;
 
-
                     return statusmessage;
                 }
-
 
             }
             catch (Exception e)
@@ -103,11 +95,7 @@ namespace COMPRAS2.servicios
                 return statusmessage;
             }
 
-
-
         }
-
-
 
         public static async Task<StatusMessage> put(string url, string objeto)
         {

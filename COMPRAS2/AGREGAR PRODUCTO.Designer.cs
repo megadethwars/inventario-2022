@@ -112,6 +112,8 @@ namespace COMPRAS2
             this.txtCosto.Size = new System.Drawing.Size(426, 29);
             this.txtCosto.TabIndex = 52;
             this.txtCosto.Text = "Introduzca el Costo";
+            this.txtCosto.Click += new System.EventHandler(this.txtCosto_Click);
+            this.txtCosto.Leave += new System.EventHandler(this.txtCosto_Leave);
             // 
             // txtProvedor
             // 
@@ -126,6 +128,8 @@ namespace COMPRAS2
             this.txtProvedor.Size = new System.Drawing.Size(426, 29);
             this.txtProvedor.TabIndex = 51;
             this.txtProvedor.Text = "Introduzca el Provedor";
+            this.txtProvedor.Click += new System.EventHandler(this.txtProvedor_Click);
+            this.txtProvedor.Leave += new System.EventHandler(this.txtProvedor_Leave);
             // 
             // txtDescompostura
             // 
@@ -140,6 +144,8 @@ namespace COMPRAS2
             this.txtDescompostura.Size = new System.Drawing.Size(426, 29);
             this.txtDescompostura.TabIndex = 50;
             this.txtDescompostura.Text = "Introduzca la Descompostura";
+            this.txtDescompostura.Click += new System.EventHandler(this.txtDescompostura_Click);
+            this.txtDescompostura.Leave += new System.EventHandler(this.txtDescompostura_Leave);
             // 
             // txtAccesorio
             // 
@@ -154,6 +160,8 @@ namespace COMPRAS2
             this.txtAccesorio.Size = new System.Drawing.Size(426, 29);
             this.txtAccesorio.TabIndex = 49;
             this.txtAccesorio.Text = "Introduzca el Accesorio";
+            this.txtAccesorio.Click += new System.EventHandler(this.txtAccesorio_Click);
+            this.txtAccesorio.Leave += new System.EventHandler(this.txtAccesorio_Leave);
             // 
             // txtCompra
             // 
@@ -168,6 +176,8 @@ namespace COMPRAS2
             this.txtCompra.Size = new System.Drawing.Size(426, 29);
             this.txtCompra.TabIndex = 48;
             this.txtCompra.Text = "Introduzca la Compra";
+            this.txtCompra.Click += new System.EventHandler(this.txtCompra_Click);
+            this.txtCompra.Leave += new System.EventHandler(this.txtCompra_Leave);
             // 
             // txtModelo
             // 
@@ -182,6 +192,8 @@ namespace COMPRAS2
             this.txtModelo.Size = new System.Drawing.Size(426, 29);
             this.txtModelo.TabIndex = 46;
             this.txtModelo.Text = "Introduzca el Modelo";
+            this.txtModelo.Click += new System.EventHandler(this.txtModelo_Click);
+            this.txtModelo.Leave += new System.EventHandler(this.txtModelo_Leave);
             // 
             // txtMarca
             // 
@@ -196,6 +208,8 @@ namespace COMPRAS2
             this.txtMarca.Size = new System.Drawing.Size(426, 29);
             this.txtMarca.TabIndex = 45;
             this.txtMarca.Text = "Introduzca la Marca";
+            this.txtMarca.Click += new System.EventHandler(this.txtMarca_Click);
+            this.txtMarca.Leave += new System.EventHandler(this.txtMarca_Leave);
             // 
             // txtCodigo
             // 
@@ -210,6 +224,8 @@ namespace COMPRAS2
             this.txtCodigo.Size = new System.Drawing.Size(426, 29);
             this.txtCodigo.TabIndex = 44;
             this.txtCodigo.Text = "Introduzca el Codigo";
+            this.txtCodigo.Click += new System.EventHandler(this.txtCodigo_Click);
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // txtSerie
             // 
@@ -224,6 +240,8 @@ namespace COMPRAS2
             this.txtSerie.Size = new System.Drawing.Size(426, 29);
             this.txtSerie.TabIndex = 43;
             this.txtSerie.Text = "Introduzca la Serie";
+            this.txtSerie.Click += new System.EventHandler(this.txtSerie_Click);
+            this.txtSerie.Leave += new System.EventHandler(this.txtSerie_Leave);
             // 
             // txtProducto
             // 
@@ -238,6 +256,8 @@ namespace COMPRAS2
             this.txtProducto.Size = new System.Drawing.Size(426, 29);
             this.txtProducto.TabIndex = 42;
             this.txtProducto.Text = "Introduzca el Producto";
+            this.txtProducto.Click += new System.EventHandler(this.txtProducto_Click);
+            this.txtProducto.Leave += new System.EventHandler(this.txtProducto_Leave);
             // 
             // lblProvedor
             // 
@@ -454,6 +474,8 @@ namespace COMPRAS2
             this.txtCantidad.Size = new System.Drawing.Size(426, 29);
             this.txtCantidad.TabIndex = 62;
             this.txtCantidad.Text = "Introduzca la Cantidad";
+            this.txtCantidad.Click += new System.EventHandler(this.txtCantidad_Click);
+            this.txtCantidad.Leave += new System.EventHandler(this.txtCantidad_Leave);
             // 
             // txtOrigen
             // 
@@ -467,7 +489,9 @@ namespace COMPRAS2
             this.txtOrigen.Name = "txtOrigen";
             this.txtOrigen.Size = new System.Drawing.Size(426, 29);
             this.txtOrigen.TabIndex = 63;
-            this.txtOrigen.Text = "Introduzca la Compra";
+            this.txtOrigen.Text = "Introduzca el Origen";
+            this.txtOrigen.Click += new System.EventHandler(this.txtOrigen_Click);
+            this.txtOrigen.Leave += new System.EventHandler(this.txtOrigen_Leave);
             // 
             // txtObservaciones
             // 
@@ -481,7 +505,9 @@ namespace COMPRAS2
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(426, 29);
             this.txtObservaciones.TabIndex = 64;
-            this.txtObservaciones.Text = "Introduzca Observaciones";
+            this.txtObservaciones.Text = "Introduzca las Observaciones";
+            this.txtObservaciones.Click += new System.EventHandler(this.txtObservaciones_Click);
+            this.txtObservaciones.Leave += new System.EventHandler(this.txtObservaciones_Leave);
             // 
             // pictureBox9
             // 

@@ -169,7 +169,7 @@ namespace COMPRAS2
 
             string json = JsonConvert.SerializeObject(devicesUpdate,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            var url = HttpMethods.url + "usuarios";
+            var url = HttpMethods.url + "dispositivos";
             StatusMessage statusmessage = await HttpMethods.put(url, json);
 
             if (statusmessage.statuscode == 409)
@@ -183,11 +183,11 @@ namespace COMPRAS2
                 MessageBox.Show("error en el servicio");
                 return;
             }
-            else if (statusmessage.statuscode == 201)
+            else if (statusmessage.statuscode == 200)
             {
                 //var auth = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
                 List<User> USERS = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
-                MessageBox.Show("EMPLEADO AGREGADO CORRECTAMENTE");
+                MessageBox.Show("PRODUCTO ACTUALIZADO CORRECTAMENTE");
                 Navigator.backPage(this.Name, this);
                 return;
             }
