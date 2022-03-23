@@ -48,6 +48,7 @@ namespace COMPRAS2
             // 
             this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
             this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bTNBack.FlatAppearance.BorderSize = 0;
             this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -156,7 +157,7 @@ namespace COMPRAS2
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
             this.dgvUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvUsuarios.Location = new System.Drawing.Point(12, 177);
+            this.dgvUsuarios.Location = new System.Drawing.Point(20, 180);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvUsuarios.RowHeadersVisible = false;
@@ -168,9 +169,10 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1230, 561);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1235, 560);
             this.dgvUsuarios.TabIndex = 40;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
+            this.dgvUsuarios.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellMouseEnter);
             // 
             // btAgregarEmp
             // 
@@ -189,13 +191,13 @@ namespace COMPRAS2
             this.btAgregarEmp.Name = "btAgregarEmp";
             this.btAgregarEmp.Size = new System.Drawing.Size(163, 39);
             this.btAgregarEmp.TabIndex = 41;
-            this.btAgregarEmp.Text = "AGREGAR";
+            this.btAgregarEmp.Text = "AGREGAR EMPLEADO";
             this.btAgregarEmp.UseVisualStyleBackColor = false;
             this.btAgregarEmp.Click += new System.EventHandler(this.btAgregarEmp_Click);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.BackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -206,7 +208,7 @@ namespace COMPRAS2
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizar.Location = new System.Drawing.Point(1128, 31);
+            this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(114, 39);
             this.btnActualizar.TabIndex = 47;

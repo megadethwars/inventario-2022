@@ -97,5 +97,10 @@ namespace COMPRAS2
         {
 
         }
+
+        private void dgvUsuarios_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.dgvUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+        }
     }
 }

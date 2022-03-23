@@ -113,7 +113,7 @@ namespace COMPRAS2
         }
        
         public void dgvInventario_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {            
             try
             {
                 DataGridViewRow cell = dgvInventario.Rows[e.RowIndex];
@@ -168,6 +168,11 @@ namespace COMPRAS2
             this.dgvInventario.Columns["Proveedor"].Visible = false;
             this.dgvInventario.Columns["Costo"].Visible = false;
             this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+        }
+        
+        private void dgvInventario_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
         }
     }
     

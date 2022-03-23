@@ -34,7 +34,6 @@ namespace COMPRAS2
             this.btBUSCADOR = new System.Windows.Forms.Button();
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
-            this.btnEscanear = new System.Windows.Forms.Button();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblProvedor = new System.Windows.Forms.Label();
@@ -109,26 +108,6 @@ namespace COMPRAS2
             this.bTNBack.UseVisualStyleBackColor = true;
             this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
             // 
-            // btnEscanear
-            // 
-            this.btnEscanear.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEscanear.FlatAppearance.BorderSize = 0;
-            this.btnEscanear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEscanear.Location = new System.Drawing.Point(573, 157);
-            this.btnEscanear.Name = "btnEscanear";
-            this.btnEscanear.Size = new System.Drawing.Size(114, 39);
-            this.btnEscanear.TabIndex = 55;
-            this.btnEscanear.Text = "ESCANEAR";
-            this.btnEscanear.UseVisualStyleBackColor = false;
-            // 
             // lblMarca
             // 
             this.lblMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -199,7 +178,6 @@ namespace COMPRAS2
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblProducto);
-            this.Controls.Add(this.btnEscanear);
             this.Controls.Add(this.btBUSCADOR);
             this.Controls.Add(this.txtBUSCADOR);
             this.Controls.Add(this.pboxBuscador);
@@ -222,7 +200,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pboxBuscador;
         private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Label lblIngresarProducto;
-        private System.Windows.Forms.Button btnEscanear;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblProvedor;

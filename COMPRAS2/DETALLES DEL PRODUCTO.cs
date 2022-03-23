@@ -49,14 +49,14 @@ namespace COMPRAS2
             this.lblDMarca.Text = devices.marca;
             this.lblDModelo.Text = devices.modelo;
             this.lblDCosto.Text = devices.costo.ToString();
-            this.lblDOrigen.Text = devices.Origen;
-            this.lblDFecha.Text = devices.FechaAlta.ToString();
+            this.lblDOrigen.Text = devices.origen;
+            this.lblDFecha.Text = devices.fechaAlta.ToString();
             this.lblDLugar.Text = devices.Lugar_Actual;
             this.lblDEstatus.Text = devices.StatusActual;
             this.lblDDescompostura.Text = devices.descompostura;
             this.lblDProvedor.Text = devices.proveedor;
             this.lblDCantidad.Text = devices.cantidad.ToString();
-            this.lblDFoto.Text = devices.Foto;
+            this.lblDFoto.Text = devices.foto;
         }
     }
 }

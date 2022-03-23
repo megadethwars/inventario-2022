@@ -226,6 +226,7 @@ namespace COMPRAS2
             // 
             // lblTituloEditarProducto
             // 
+            this.lblTituloEditarProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTituloEditarProducto.AutoSize = true;
             this.lblTituloEditarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloEditarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -277,7 +278,7 @@ namespace COMPRAS2
             // lblFecha
             // 
             this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -315,9 +316,9 @@ namespace COMPRAS2
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnEditar.Location = new System.Drawing.Point(35, 785);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(114, 39);
+            this.btnEditar.Size = new System.Drawing.Size(163, 39);
             this.btnEditar.TabIndex = 65;
-            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.Text = "EDITAR PRODUCTO";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.brnOPCIONES_Click);
             // 
@@ -334,7 +335,7 @@ namespace COMPRAS2
             this.btnELIMINAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnELIMINAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnELIMINAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnELIMINAR.Location = new System.Drawing.Point(190, 785);
+            this.btnELIMINAR.Location = new System.Drawing.Point(209, 785);
             this.btnELIMINAR.Name = "btnELIMINAR";
             this.btnELIMINAR.Size = new System.Drawing.Size(114, 39);
             this.btnELIMINAR.TabIndex = 66;
@@ -422,7 +423,7 @@ namespace COMPRAS2
             // lblDFecha
             // 
             this.lblDFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDFecha.AutoSize = true;
             this.lblDFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -617,7 +618,7 @@ namespace COMPRAS2
             // pictureBox8
             // 
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.Image = global::COMPRAS2.Properties.Resources.LINEA;
             this.pictureBox8.Location = new System.Drawing.Point(700, 575);
             this.pictureBox8.MaximumSize = new System.Drawing.Size(1000, 3);

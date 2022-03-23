@@ -9,6 +9,7 @@ namespace COMPRAS2.modelos
 {
     public class Rol
     {
+        
         [DefaultValue(null)]
         public string nombre { get; set; }
 
