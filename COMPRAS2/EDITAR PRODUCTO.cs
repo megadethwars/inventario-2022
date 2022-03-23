@@ -129,7 +129,6 @@ namespace COMPRAS2
 
                 var lugares = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
                 
-
                 for (int x = 0; x < lugares.Count; x++)
                 {
                     listaLugares.Add(Tuple.Create<Int32, String>(lugares[x].id, lugares[x].lugar));
@@ -180,8 +179,6 @@ namespace COMPRAS2
             devicesUpdate.costo = costo;
 
             devicesUpdate.origen = txtOrigen.Text;
-
-            //devicesUpdate.Lugar_Actual = txtLugar.Text;
             
             if (cbLugares.SelectedItem != null)
             {
@@ -243,7 +240,6 @@ namespace COMPRAS2
             }
             else if (statusmessage.statuscode == 200)
             {
-                //var auth = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
                 Devices USERS = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
                 MessageBox.Show("PRODUCTO ACTUALIZADO CORRECTAMENTE");
                 Navigator.backPage(this.Name, this);

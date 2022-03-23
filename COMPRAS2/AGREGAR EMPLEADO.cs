@@ -222,5 +222,133 @@ namespace COMPRAS2
         {
             Navigator.backPage(this.Name, this);
         }
+
+        private void txtNombreDelUsuario_Click(object sender, EventArgs e)
+        {
+            if (txtNombreDelUsuario.Text == "Introduzca el Nombre(s) del Usuario")
+            {
+                txtNombreDelUsuario.Clear();
+            }
+        }
+
+        private void txtNombreDelUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtNombreDelUsuario.Text == "")
+            {
+                txtNombreDelUsuario.Text = "Introduzca el Nombre(s) del Usuario";
+            }
+        }
+
+        private void txtApellidoPaterno_Click(object sender, EventArgs e)
+        {
+            if (txtApellidoPaterno.Text == "Introduzca el Apellido Paterno")
+            {
+                txtApellidoPaterno.Clear();
+            }
+        }
+
+        private void txtApellidoPaterno_Leave(object sender, EventArgs e)
+        {
+            if (txtApellidoPaterno.Text == "")
+            {
+                txtApellidoPaterno.Text = "Introduzca el Apellido Paterno";
+            }
+        }
+
+        private void txtApellidoMaterno_Click(object sender, EventArgs e)
+        {
+            if (txtApellidoMaterno.Text == "Introduzca el Apellido Materno")
+            {
+                txtApellidoMaterno.Clear();
+            }
+        }
+
+        private void txtApellidoMaterno_Leave(object sender, EventArgs e)
+        {
+            if (txtApellidoMaterno.Text == "")
+            {
+                txtApellidoMaterno.Text = "Introduzca el Apellido Materno";
+            }
+        }
+
+        private void textUsuario_Click(object sender, EventArgs e)
+        {
+            if (textUsuario.Text == "Nombre de Usuario")
+            {
+                textUsuario.Clear();
+            }
+        }
+
+        private void textUsuario_Leave(object sender, EventArgs e)
+        {
+            if (textUsuario.Text == "")
+            {
+                textUsuario.Text = "Nombre de Usuario";
+            }
+        }
+
+        private void txtContraseña_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "Introduzca la contraseña")
+            {
+                txtContraseña.Clear();
+            }
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "")
+            {
+                txtContraseña.Text = "Introduzca la contraseña";
+            }
+        }
+
+        private void txtContraseñaDeNuevo_Click(object sender, EventArgs e)
+        {
+            if (txtContraseñaDeNuevo.Text == "Introduzca la contraseña de nuevo")
+            {
+                txtContraseñaDeNuevo.Clear();
+            }
+        }
+
+        private void txtContraseñaDeNuevo_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseñaDeNuevo.Text == "")
+            {
+                txtContraseñaDeNuevo.Text = "Introduzca la contraseña de nuevo";
+            }
+        }
+
+        private void txtTelefono_Click(object sender, EventArgs e)
+        {
+            if (txtTelefono.Text == "Introduzca el telefono")
+            {
+                txtTelefono.Clear();
+            }
+        }
+
+        private void txtTelefono_Leave(object sender, EventArgs e)
+        {
+            if (txtTelefono.Text == "")
+            {
+                txtTelefono.Text = "Introduzca el telefono";
+            }
+        }
+
+        private void txtCorreo_Click(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "Introduzca el Correo")
+            {
+                txtCorreo.Clear();
+            }
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "")
+            {
+                txtCorreo.Text = "Introduzca el Correo";
+            }
+        }
     }
 }

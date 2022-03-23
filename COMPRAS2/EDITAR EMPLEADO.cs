@@ -95,11 +95,9 @@ namespace COMPRAS2
         }
 
         private async void EditarEmpleado()
-        {
-            
+        {           
             int idEmpleados = 0;
             
-
             User userUpdate;
             userUpdate = new User();
 
@@ -117,7 +115,42 @@ namespace COMPRAS2
                 MessageBox.Show("No se ha seleccionado ningun estatus");
                 return;
             }
-            userUpdate.statusId = idEmpleados;            
+            userUpdate.statusId = idEmpleados;
+
+            string json = JsonConvert.SerializeObject(userUpdate,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var url = HttpMethods.url + "usuarios/pass";
+            StatusMessage statusmessage = await HttpMethods.put(url, json);
+
+            if (statusmessage.statuscode == 409)
+            {
+                MessageBox.Show("error en el servicio, " + statusmessage.message);
+                return;
+            }
+
+            else if (statusmessage.statuscode == 500)
+            {
+                MessageBox.Show("error en el servicio");
+                return;
+            }
+            else if (statusmessage.statuscode == 200)
+            {
+                User USERS = JsonConvert.DeserializeObject<User>(statusmessage.data);
+                MessageBox.Show("PRODUCTO ACTUALIZADO CORRECTAMENTE");
+                Navigator.backPage(this.Name, this);
+                return;
+            }
+            else if (statusmessage.statuscode == 404)
+            {
+                MessageBox.Show("error en el servicio, NO encontrado");
+
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Bad request, algunos campos faltantes");
+                return;
+            }
 
             Navigator.backPage(this.Name, this);
         }

@@ -220,13 +220,15 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNombreDelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtNombreDelUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreDelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreDelUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreDelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.txtNombreDelUsuario.Location = new System.Drawing.Point(100, 140);
             this.txtNombreDelUsuario.Name = "txtNombreDelUsuario";
-            this.txtNombreDelUsuario.Size = new System.Drawing.Size(426, 26);
+            this.txtNombreDelUsuario.Size = new System.Drawing.Size(426, 29);
             this.txtNombreDelUsuario.TabIndex = 74;
             this.txtNombreDelUsuario.Text = "Introduzca el Nombre(s) del Usuario";
+            this.txtNombreDelUsuario.Click += new System.EventHandler(this.txtNombreDelUsuario_Click);
+            this.txtNombreDelUsuario.Leave += new System.EventHandler(this.txtNombreDelUsuario_Leave);
             // 
             // txtApellidoPaterno
             // 
@@ -234,13 +236,15 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtApellidoPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.txtApellidoPaterno.Location = new System.Drawing.Point(100, 240);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
-            this.txtApellidoPaterno.Size = new System.Drawing.Size(426, 26);
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(426, 29);
             this.txtApellidoPaterno.TabIndex = 75;
             this.txtApellidoPaterno.Text = "Introduzca el Apellido Paterno";
+            this.txtApellidoPaterno.Click += new System.EventHandler(this.txtApellidoPaterno_Click);
+            this.txtApellidoPaterno.Leave += new System.EventHandler(this.txtApellidoPaterno_Leave);
             // 
             // txtApellidoMaterno
             // 
@@ -248,13 +252,15 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtApellidoMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.txtApellidoMaterno.Location = new System.Drawing.Point(100, 340);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
-            this.txtApellidoMaterno.Size = new System.Drawing.Size(426, 26);
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(426, 29);
             this.txtApellidoMaterno.TabIndex = 76;
             this.txtApellidoMaterno.Text = "Introduzca el Apellido Materno";
+            this.txtApellidoMaterno.Click += new System.EventHandler(this.txtApellidoMaterno_Click);
+            this.txtApellidoMaterno.Leave += new System.EventHandler(this.txtApellidoMaterno_Leave);
             // 
             // txtContraseña
             // 
@@ -262,13 +268,15 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.txtContraseña.Location = new System.Drawing.Point(100, 540);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(426, 26);
+            this.txtContraseña.Size = new System.Drawing.Size(426, 29);
             this.txtContraseña.TabIndex = 77;
             this.txtContraseña.Text = "Introduzca la contraseña";
+            this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_Click);
+            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // txtContraseñaDeNuevo
             // 
@@ -276,13 +284,15 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtContraseñaDeNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtContraseñaDeNuevo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContraseñaDeNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaDeNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseñaDeNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.txtContraseñaDeNuevo.Location = new System.Drawing.Point(100, 640);
             this.txtContraseñaDeNuevo.Name = "txtContraseñaDeNuevo";
-            this.txtContraseñaDeNuevo.Size = new System.Drawing.Size(426, 26);
+            this.txtContraseñaDeNuevo.Size = new System.Drawing.Size(426, 29);
             this.txtContraseñaDeNuevo.TabIndex = 78;
             this.txtContraseñaDeNuevo.Text = "Introduzca la contraseña de nuevo";
+            this.txtContraseñaDeNuevo.Click += new System.EventHandler(this.txtContraseñaDeNuevo_Click);
+            this.txtContraseñaDeNuevo.Leave += new System.EventHandler(this.txtContraseñaDeNuevo_Leave);
             // 
             // txtTelefono
             // 
@@ -290,13 +300,15 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.txtTelefono.Location = new System.Drawing.Point(700, 140);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(426, 26);
+            this.txtTelefono.Size = new System.Drawing.Size(426, 29);
             this.txtTelefono.TabIndex = 79;
             this.txtTelefono.Text = "Introduzca el telefono";
+            this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
+            this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave);
             // 
             // txtCorreo
             // 
@@ -304,13 +316,15 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.txtCorreo.Location = new System.Drawing.Point(700, 240);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(426, 26);
+            this.txtCorreo.Size = new System.Drawing.Size(426, 29);
             this.txtCorreo.TabIndex = 80;
             this.txtCorreo.Text = "Introduzca el Correo";
+            this.txtCorreo.Click += new System.EventHandler(this.txtCorreo_Click);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // label8
             // 
@@ -331,13 +345,15 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left)));
             this.textUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.textUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.textUsuario.Location = new System.Drawing.Point(100, 440);
             this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(426, 26);
+            this.textUsuario.Size = new System.Drawing.Size(426, 29);
             this.textUsuario.TabIndex = 83;
-            this.textUsuario.Text = "Nombre de usuario";
+            this.textUsuario.Text = "Nombre de Usuario";
+            this.textUsuario.Click += new System.EventHandler(this.textUsuario_Click);
+            this.textUsuario.Leave += new System.EventHandler(this.textUsuario_Leave);
             // 
             // cbRoles
             // 
@@ -345,12 +361,12 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.cbRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.cbRoles.FormattingEnabled = true;
             this.cbRoles.Location = new System.Drawing.Point(700, 340);
             this.cbRoles.Name = "cbRoles";
-            this.cbRoles.Size = new System.Drawing.Size(426, 28);
+            this.cbRoles.Size = new System.Drawing.Size(426, 32);
             this.cbRoles.TabIndex = 84;
             // 
             // pictureBox1

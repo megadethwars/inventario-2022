@@ -351,9 +351,9 @@ namespace COMPRAS2
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnEditar.Location = new System.Drawing.Point(20, 799);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(114, 39);
+            this.btnEditar.Size = new System.Drawing.Size(183, 39);
             this.btnEditar.TabIndex = 132;
-            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.Text = "EDITAR EMPLEADOS";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 

@@ -189,7 +189,7 @@ namespace COMPRAS2
             this.btAgregarEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btAgregarEmp.Location = new System.Drawing.Point(239, 810);
             this.btAgregarEmp.Name = "btAgregarEmp";
-            this.btAgregarEmp.Size = new System.Drawing.Size(163, 39);
+            this.btAgregarEmp.Size = new System.Drawing.Size(187, 39);
             this.btAgregarEmp.TabIndex = 41;
             this.btAgregarEmp.Text = "AGREGAR EMPLEADO";
             this.btAgregarEmp.UseVisualStyleBackColor = false;
