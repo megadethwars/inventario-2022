@@ -48,6 +48,7 @@ namespace COMPRAS2
             this.label3 = new System.Windows.Forms.Label();
             this.lbCantitad = new System.Windows.Forms.Label();
             this.lbdesc = new System.Windows.Forms.Label();
+            this.btAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -275,12 +276,23 @@ namespace COMPRAS2
             this.lbdesc.TabIndex = 91;
             this.lbdesc.Text = "Por definir";
             // 
+            // btAgregar
+            // 
+            this.btAgregar.Location = new System.Drawing.Point(70, 782);
+            this.btAgregar.Name = "btAgregar";
+            this.btAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btAgregar.TabIndex = 92;
+            this.btAgregar.Text = "Agregar";
+            this.btAgregar.UseVisualStyleBackColor = true;
+            this.btAgregar.Click += new System.EventHandler(this.btAgregar_Click);
+            // 
             // SALIDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btAgregar);
             this.Controls.Add(this.lbdesc);
             this.Controls.Add(this.lbCantitad);
             this.Controls.Add(this.label3);
@@ -329,5 +341,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbCantitad;
         private System.Windows.Forms.Label lbdesc;
+        private System.Windows.Forms.Button btAgregar;
     }
 }
