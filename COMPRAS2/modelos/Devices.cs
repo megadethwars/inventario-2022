@@ -26,19 +26,19 @@ namespace COMPRAS2.modelos
         public string descompostura { get; set; }
 
         [DefaultValue(null)]
-        public DateTime? FechaAlta { get; set; }
+        public DateTime? fechaAlta { get; set; }
 
         [DefaultValue(null)]
-        public DateTime? FechaUltimaModificacion { get; set; }
+        public DateTime? fechaUltimaModificacion { get; set; }
 
         [DefaultValue(null)]
-        public string Foto { get; set; }
+        public string foto { get; set; }
 
         [DefaultValue(0)]
-        public int Id { get; set; }
+        public int id { get; set; }
 
         [DefaultValue(null)]
-        public string IdMov { get; set; }
+        public string idMov { get; set; }
 
 
         [DefaultValue(null)]
@@ -61,10 +61,10 @@ namespace COMPRAS2.modelos
         public string observaciones { get; set; }
 
         [DefaultValue(null)]
-        public string Origen { get; set; }
+        public string origen { get; set; }
 
         [DefaultValue(null)]
-        public string Pertenece { get; set; }
+        public string pertenece { get; set; }
 
         [DefaultValue(null)]
         public string producto { get; set; }

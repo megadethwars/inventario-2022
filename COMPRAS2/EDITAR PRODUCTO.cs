@@ -26,7 +26,7 @@ namespace COMPRAS2
             this.devices = devices;
             listaEstatus = new List<Tuple<int, string>>();
             listaLugares = new List<Tuple<int, string>>();
-            id = devices.Id;
+            id = devices.id;
         }
 
         public EDITAR_PRODUCTO()
@@ -48,11 +48,11 @@ namespace COMPRAS2
             this.txtMarca.Text = devices.marca;
             this.txtModelo.Text = devices.modelo;
             this.txtCosto.Text = devices.costo.ToString();
-            this.txtOrigen.Text = devices.Origen;
+            this.txtOrigen.Text = devices.origen;
             this.txtDescompostura.Text = devices.descompostura;
             this.txtProvedor.Text = devices.proveedor;
             this.txtCantidad.Text = devices.cantidad.ToString();
-            this.txtFoto.Text = devices.Foto;
+            this.txtFoto.Text = devices.foto;
 
             int status = await Estatus();
             int lugars = await Lugares();
@@ -179,7 +179,7 @@ namespace COMPRAS2
             }
             devicesUpdate.costo = costo;
 
-            devicesUpdate.Origen = txtOrigen.Text;
+            devicesUpdate.origen = txtOrigen.Text;
 
             //devicesUpdate.Lugar_Actual = txtLugar.Text;
             
@@ -187,6 +187,7 @@ namespace COMPRAS2
             {
                 var idLugarestuple = (Tuple<int, string>)cbEstatus.SelectedItem;
                 idLugares = idLugarestuple.Item1;
+                devicesUpdate.lugarId = idLugares;
             }
             else
             {
@@ -199,13 +200,13 @@ namespace COMPRAS2
             {
                 var idEstatustuple = (Tuple<int, string>)cbEstatus.SelectedItem;
                 idEstatus = idEstatustuple.Item1;
+                devicesUpdate.statusId = idEstatus;
             }
             else
             {
                 MessageBox.Show("No se ha seleccionado ningun estatus");
                 return;
-            }
-            devicesUpdate.statusId = idEstatus;
+            }            
 
             devicesUpdate.descompostura = txtDescompostura.Text;
             devicesUpdate.proveedor = txtProvedor.Text;
@@ -221,7 +222,7 @@ namespace COMPRAS2
             }
             devicesUpdate.cantidad = cantidad;
 
-            devicesUpdate.Id = id;
+            devicesUpdate.id = id;
 
 
             string json = JsonConvert.SerializeObject(devicesUpdate,
@@ -243,7 +244,7 @@ namespace COMPRAS2
             else if (statusmessage.statuscode == 200)
             {
                 //var auth = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
-                List<User> USERS = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
+                Devices USERS = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
                 MessageBox.Show("PRODUCTO ACTUALIZADO CORRECTAMENTE");
                 Navigator.backPage(this.Name, this);
                 return;

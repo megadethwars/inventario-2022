@@ -59,7 +59,7 @@ namespace COMPRAS2
                     devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessagequery.data);
 
                     
-                    reporte.dispositivoId = devices[0].Id;
+                    reporte.dispositivoId = devices[0].id;
 
                 }
                 else {

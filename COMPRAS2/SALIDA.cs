@@ -82,7 +82,7 @@ if (e.KeyCode == Keys.Enter)
                 List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
                 this.lbNombre.Text = devices[0].producto;
-                this.lbOrigen.Text = devices[0].Origen;
+                this.lbOrigen.Text = devices[0].origen;
                 this.lbSerie.Text = "N/A";
                 this.lbCantitad.Text = devices[0].cantidad.ToString();
                 this.lbMarca.Text = devices[0].marca;
