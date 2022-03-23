@@ -18,5 +18,8 @@ namespace COMPRAS2.modelos
 
         [DefaultValue(null)]
         public string lugar { get; set; }
+
+        [DefaultValue(0)]
+        public int id { get; set; }
     }
 }

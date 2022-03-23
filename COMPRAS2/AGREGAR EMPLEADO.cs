@@ -42,7 +42,6 @@ namespace COMPRAS2
 
                 if (statusmessage.statuscode == 404)
                 {
-
                     MessageBox.Show("Roles no encontrados");
                     return 2;
                 }
@@ -53,8 +52,7 @@ namespace COMPRAS2
                 }
 
 
-                var roles = JsonConvert.DeserializeObject<List<Rol>>(statusmessage.data);
-                
+                var roles = JsonConvert.DeserializeObject<List<Rol>>(statusmessage.data);                
 
                 for (int x = 0; x < roles.Count; x++)
                 {
@@ -63,8 +61,7 @@ namespace COMPRAS2
                 }
                 cbRoles.DataSource = listaRoles;
                 cbRoles.DisplayMember = "Item2";
-                cbRoles.ValueMember = "Item1";
-                
+                cbRoles.ValueMember = "Item1";               
 
                 return 0;
             }
@@ -102,28 +99,24 @@ namespace COMPRAS2
                 if (txtContraseña.Text == "")
                 {
                     MessageBox.Show("campo de contraseña vacio");
-
                     return 1;
                 }
 
                 if (txtContraseñaDeNuevo.Text == "")
                 {
                     MessageBox.Show("campo de contraseña vacio");
-
                     return 1;
                 }
 
                 if (txtCorreo.Text == "")
                 {
                     MessageBox.Show("campo de correo vacio");
-
                     return 1;
                 }
 
                 if (txtTelefono.Text == "")
                 {
                     MessageBox.Show("campo de correo vacio");
-
                     return 1;
                 }
 
@@ -154,17 +147,7 @@ namespace COMPRAS2
                 user.correo = txtCorreo.Text;
                 user.statusId = 1;
                 user.username = txtNombreDelUsuario.Text;
-
-                //product.producto = txtProducto.Text;
-                //product.marca = txtMarca.Text;
-                //product.modelo = txtModelo.Text;
-                //product.cantidad = cantidad;
-                //product.compra = txtCompra.Text;
-                //product.descompostura = txtDescompostura.Text;
-                //product.codigo = txtCodigo.Text;
-                //product.proveedor = txtProvedor.Text;
-                //product.costo = (int)costo;
-                //product.observaciones = txtObservaciones.Text;
+               
 
                 string json = JsonConvert.SerializeObject(user,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });

@@ -48,8 +48,8 @@ namespace COMPRAS2.modelos
         public Lugares lugar { get; set; }
         
 
-        [DefaultValue(null)]
-        public string lugarId { get; set; }
+        [DefaultValue(0)]
+        public int lugarId { get; set; }
         
         [DefaultValue(null)]
         public string marca { get; set; }

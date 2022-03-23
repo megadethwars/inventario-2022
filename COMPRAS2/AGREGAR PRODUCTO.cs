@@ -112,7 +112,7 @@ namespace COMPRAS2
                 product.observaciones = txtObservaciones.Text;
 
                 product.statusId = 1;
-                product.lugarId = 1.ToString();
+                product.lugarId = 1;
 
 
 

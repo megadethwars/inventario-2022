@@ -16,6 +16,8 @@ namespace COMPRAS2
     public partial class EDITAR_PRODUCTO : Form
     {
         List<Tuple<Int32, String>> listaEstatus;
+        List<Tuple<Int32, String>> listaLugares;
+
         Devices devices;
         int id = 0;
         public EDITAR_PRODUCTO(Devices devices)
@@ -23,6 +25,7 @@ namespace COMPRAS2
             InitializeComponent();
             this.devices = devices;
             listaEstatus = new List<Tuple<int, string>>();
+            listaLugares = new List<Tuple<int, string>>();
             id = devices.Id;
         }
 
@@ -46,14 +49,15 @@ namespace COMPRAS2
             this.txtModelo.Text = devices.modelo;
             this.txtCosto.Text = devices.costo.ToString();
             this.txtOrigen.Text = devices.Origen;
-            this.txtLugar.Text = devices.Lugar_Actual;
             this.txtDescompostura.Text = devices.descompostura;
             this.txtProvedor.Text = devices.proveedor;
             this.txtCantidad.Text = devices.cantidad.ToString();
             this.txtFoto.Text = devices.Foto;
 
             int status = await Estatus();
+            int lugars = await Lugares();
             this.cbEstatus.Text = devices.StatusActual;
+            this.cbLugares.Text = devices.Lugar_Actual;
         }
 
         private async Task<int> Estatus()
@@ -65,14 +69,12 @@ namespace COMPRAS2
 
                 if (statusmessage.statuscode == 500)
                 {
-
                     MessageBox.Show("Error interno del servidor");
                     return 2;
                 }
 
                 if (statusmessage.statuscode == 404)
                 {
-
                     MessageBox.Show("Estatus no encontrados");
                     return 2;
                 }
@@ -82,18 +84,59 @@ namespace COMPRAS2
                     return 1;
                 }
 
+                var estatus = JsonConvert.DeserializeObject<List<StatusDevices>>(statusmessage.data);
 
-                var roles = JsonConvert.DeserializeObject<List<StatusDevices>>(statusmessage.data);
-
-
-                for (int x = 0; x < roles.Count; x++)
+                for (int x = 0; x < estatus.Count; x++)
                 {
-
-                    listaEstatus.Add(Tuple.Create<Int32, String>(roles[x].id, roles[x].descripcion));
+                    listaEstatus.Add(Tuple.Create<Int32, String>(estatus[x].id, estatus[x].descripcion));
                 }
                 cbEstatus.DataSource = listaEstatus;
                 cbEstatus.DisplayMember = "Item2";
                 cbEstatus.ValueMember = "Item1";
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+                return 10;
+            }
+        }
+
+        private async Task<int> Lugares()
+        {
+            try
+            {
+                var url = HttpMethods.url + "lugares";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode == 500)
+                {
+                    MessageBox.Show("Error interno del servidor");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode == 404)
+                {
+                    MessageBox.Show("Estatus no encontrados");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return 1;
+                }
+
+                var lugares = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
+                
+
+                for (int x = 0; x < lugares.Count; x++)
+                {
+                    listaLugares.Add(Tuple.Create<Int32, String>(lugares[x].id, lugares[x].lugar));
+                }
+                cbLugares.DataSource = listaLugares;
+                cbLugares.DisplayMember = "Item2";
+                cbLugares.ValueMember = "Item1";
 
                 return 0;
             }
@@ -113,6 +156,7 @@ namespace COMPRAS2
         {
             int costo = 0;
             int idEstatus = 0;
+            int idLugares = 0;
             int cantidad = 0;
 
             Devices devicesUpdate;
@@ -136,7 +180,20 @@ namespace COMPRAS2
             devicesUpdate.costo = costo;
 
             devicesUpdate.Origen = txtOrigen.Text;
-            devicesUpdate.Lugar_Actual = txtLugar.Text;
+
+            //devicesUpdate.Lugar_Actual = txtLugar.Text;
+            
+            if (cbLugares.SelectedItem != null)
+            {
+                var idLugarestuple = (Tuple<int, string>)cbEstatus.SelectedItem;
+                idLugares = idLugarestuple.Item1;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun estatus");
+                return;
+            }
+            devicesUpdate.lugarId = idLugares;
 
             if (cbEstatus.SelectedItem != null)
             {

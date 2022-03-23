@@ -61,7 +61,6 @@ namespace COMPRAS2
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.txtLugar = new System.Windows.Forms.TextBox();
             this.lblLugar = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblEstatus = new System.Windows.Forms.Label();
@@ -72,6 +71,7 @@ namespace COMPRAS2
             this.txtFoto = new System.Windows.Forms.TextBox();
             this.lblFoto = new System.Windows.Forms.Label();
             this.cbEstatus = new System.Windows.Forms.ComboBox();
+            this.cbLugares = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -477,20 +477,6 @@ namespace COMPRAS2
             this.pictureBox7.TabIndex = 129;
             this.pictureBox7.TabStop = false;
             // 
-            // txtLugar
-            // 
-            this.txtLugar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLugar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtLugar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtLugar.Location = new System.Drawing.Point(700, 140);
-            this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(426, 26);
-            this.txtLugar.TabIndex = 128;
-            this.txtLugar.Text = "Origen";
-            // 
             // lblLugar
             // 
             this.lblLugar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -625,12 +611,28 @@ namespace COMPRAS2
             this.cbEstatus.TabIndex = 139;
             this.cbEstatus.Text = "Estatus";
             // 
+            // cbLugares
+            // 
+            this.cbLugares.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbLugares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbLugares.FormattingEnabled = true;
+            this.cbLugares.Location = new System.Drawing.Point(700, 139);
+            this.cbLugares.Name = "cbLugares";
+            this.cbLugares.Size = new System.Drawing.Size(426, 28);
+            this.cbLugares.TabIndex = 140;
+            this.cbLugares.Text = "Lugares";
+            // 
             // EDITAR_PRODUCTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.cbLugares);
             this.Controls.Add(this.cbEstatus);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.txtFoto);
@@ -641,7 +643,6 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.txtLugar);
             this.Controls.Add(this.lblLugar);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
@@ -728,7 +729,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox txtLugar;
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lblEstatus;
@@ -739,5 +739,6 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox txtFoto;
         private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.ComboBox cbEstatus;
+        private System.Windows.Forms.ComboBox cbLugares;
     }
 }
