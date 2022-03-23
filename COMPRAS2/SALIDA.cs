@@ -15,6 +15,7 @@ namespace COMPRAS2
 {
     public partial class SALIDA : Form
     {
+        
         public SALIDA()
         {
             InitializeComponent();
@@ -89,6 +90,14 @@ if (e.KeyCode == Keys.Enter)
                 this.lbdesc.Text = devices[0].descompostura;
 
             }
+
+        }
+
+        private void Agregar() { 
+        
+        }
+        private void btAgregar_Click(object sender, EventArgs e)
+        {
 
         }
     }
