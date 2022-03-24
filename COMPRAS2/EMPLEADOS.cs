@@ -38,13 +38,9 @@ namespace COMPRAS2
                     return 1;
                 }
 
-                //var products = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
                 List<User> user = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
                 for (int x = 0; x < user.Count; x++)
-                {/*
-                    User UsuariosA = reportes[x].usuario;
-                    reportes[x].UserActualA = Usuarios.apellidoPaterno;
-                    */
+                {
                     Rol rolNombre = user[x].rol;
                     user[x].rolNombre = rolNombre.nombre;
                     
@@ -56,6 +52,10 @@ namespace COMPRAS2
                 this.dgvUsuarios.Columns["foto"].Visible = false;
                 this.dgvUsuarios.Columns["statusId"].Visible = false;
                 this.dgvUsuarios.Columns["password"].Visible = false;
+                this.dgvUsuarios.Columns["rol"].Visible = false;
+                this.dgvUsuarios.Columns["nombre"].Visible = false;
+                //this.dgvUsuarios.Columns["nombre"].Visible = true;
+                
 
                 return 0;
             }
@@ -93,9 +93,10 @@ namespace COMPRAS2
             Navigator.nextPage(new AGREGAR_EMPLEADO());
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private async void btnActualizar_Click(object sender, EventArgs e)
         {
-
+            dgvUsuarios.DataSource = null;
+            await empleados();
         }
 
         private void dgvUsuarios_CellMouseEnter(object sender, DataGridViewCellEventArgs e)

@@ -117,9 +117,11 @@ namespace COMPRAS2
             }
             userUpdate.statusId = idEmpleados;
 
+            userUpdate.id = id;
+
             string json = JsonConvert.SerializeObject(userUpdate,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            var url = HttpMethods.url + "usuarios/pass";
+            var url = HttpMethods.url + "usuarios";
             StatusMessage statusmessage = await HttpMethods.put(url, json);
 
             if (statusmessage.statuscode == 409)
@@ -137,6 +139,7 @@ namespace COMPRAS2
             {
                 User USERS = JsonConvert.DeserializeObject<User>(statusmessage.data);
                 MessageBox.Show("PRODUCTO ACTUALIZADO CORRECTAMENTE");
+                
                 Navigator.backPage(this.Name, this);
                 return;
             }

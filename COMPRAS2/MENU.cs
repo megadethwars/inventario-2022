@@ -87,11 +87,9 @@ namespace COMPRAS2
             else
             {
                 return;
-            }
-          
+            }         
         }
       
-
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             INICIARSESION iniciarsesion = new INICIARSESION();
