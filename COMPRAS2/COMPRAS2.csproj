@@ -182,6 +182,7 @@
     <Compile Include="MIPERFIL.Designer.cs">
       <DependentUpon>MIPERFIL.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelos\Movimientos.cs" />
     <Compile Include="modelos\QueryDevice.cs" />
     <Compile Include="modelos\QueryReporte.cs" />
     <Compile Include="modelos\CurrentUser.cs" />
@@ -191,6 +192,7 @@
     <Compile Include="modelos\Rol.cs" />
     <Compile Include="modelos\StatusDevices.cs" />
     <Compile Include="modelos\StatusMessage.cs" />
+    <Compile Include="modelos\TipoMovimiento.cs" />
     <Compile Include="modelos\User.cs" />
     <Compile Include="OPCIONES DE INVENTARIO.cs">
       <SubType>Form</SubType>

@@ -278,7 +278,7 @@ namespace COMPRAS2
             // 
             // btAgregar
             // 
-            this.btAgregar.Location = new System.Drawing.Point(70, 782);
+            this.btAgregar.Location = new System.Drawing.Point(70, 753);
             this.btAgregar.Name = "btAgregar";
             this.btAgregar.Size = new System.Drawing.Size(75, 23);
             this.btAgregar.TabIndex = 92;
@@ -291,7 +291,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.btAgregar);
             this.Controls.Add(this.lbdesc);
             this.Controls.Add(this.lbCantitad);
