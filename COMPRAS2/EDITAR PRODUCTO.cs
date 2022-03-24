@@ -242,7 +242,7 @@ namespace COMPRAS2
             {
                 Devices USERS = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
                 MessageBox.Show("PRODUCTO ACTUALIZADO CORRECTAMENTE");
-                Navigator.backPage(this.Name, this);
+                Navigator.nextPage(new INVENTARIO());
                 return;
             }
             else if (statusmessage.statuscode == 404)

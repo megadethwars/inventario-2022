@@ -138,9 +138,8 @@ namespace COMPRAS2
             else if (statusmessage.statuscode == 200)
             {
                 User USERS = JsonConvert.DeserializeObject<User>(statusmessage.data);
-                MessageBox.Show("PRODUCTO ACTUALIZADO CORRECTAMENTE");
-                
-                Navigator.backPage(this.Name, this);
+                MessageBox.Show("EMPLEADO ACTUALIZADO CORRECTAMENTE");
+                Navigator.nextPage(new EMPLEADOS());               
                 return;
             }
             else if (statusmessage.statuscode == 404)

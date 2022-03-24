@@ -85,6 +85,7 @@ namespace COMPRAS2
 
         private async void btnActualizar_Click(object sender, EventArgs e)
         {
+            dgvReportes.DataSource = null;
             var url = HttpMethods.url + "reportes";
             StatusMessage statusmessage = await HttpMethods.get(url);
 

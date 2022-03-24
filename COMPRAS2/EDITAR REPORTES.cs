@@ -1,5 +1,6 @@
 ﻿using COMPRAS2.modelos;
 using COMPRAS2.servicios;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,13 +15,16 @@ namespace COMPRAS2
 {
     public partial class EDITAR_REPORTES : Form
     {
-        Reportes reportes;       
+        Reportes reportes;
+        int id = 0;
+        int dispositivoid = 0;
+        int usuarioid = 0;
 
         public EDITAR_REPORTES(Reportes reportes)
-        {
-            
+        {           
             InitializeComponent();
             this.reportes = reportes;
+            id = reportes.id;
         }
 
         private void bTNBack_Click(object sender, EventArgs e)
@@ -39,13 +43,55 @@ namespace COMPRAS2
             reportes = new Reportes();
 
             reportes.comentarios = txtComentarios.Text;
+            reportes.id = id;
 
-            Navigator.backPage(this.Name, this);
+            Navigator.nextPage(new REPORTES2());
         }
 
-        private void EDITAR_REPORTES_Load(object sender, EventArgs e)
+        private async void EDITAR_REPORTES_Load(object sender, EventArgs e)
         {
-            txtComentarios.Text = reportes.comentarios;
+            Reportes reportesUpdates;
+            reportesUpdates = new Reportes();
+
+            reportesUpdates.comentarios = txtComentarios.Text;
+            reportesUpdates.dispositivoId = dispositivoid;
+            reportesUpdates.usuarioId = usuarioid;
+            reportesUpdates.id = id;
+
+            string json = JsonConvert.SerializeObject(reportesUpdates,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var url = HttpMethods.url + "reportes";
+            StatusMessage statusmessage = await HttpMethods.put(url, json);
+
+            if (statusmessage.statuscode == 409)
+            {
+                MessageBox.Show("error en el servicio, " + statusmessage.message);
+                return;
+            }
+
+            else if (statusmessage.statuscode == 500)
+            {
+                MessageBox.Show("error en el servicio");
+                return;
+            }
+            else if (statusmessage.statuscode == 200)
+            {
+                User USERS = JsonConvert.DeserializeObject<User>(statusmessage.data);
+                MessageBox.Show("REPORTE ACTUALIZADO CORRECTAMENTE");
+                Navigator.nextPage(new REPORTES2());
+                return;
+            }
+            else if (statusmessage.statuscode == 404)
+            {
+                MessageBox.Show("error en el servicio, NO encontrado");
+
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Bad request, algunos campos faltantes");
+                return;
+            }
         }
     }
 }

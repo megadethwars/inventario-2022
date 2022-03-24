@@ -47,7 +47,7 @@ namespace COMPRAS2
             lblCorreo.Text = user.correo;
             lblTelefono.Text = user.telefono;
         }
-
+        /*
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             lblNombreDelEmpleado.Text = null;
@@ -56,6 +56,6 @@ namespace COMPRAS2
             lblTipoDeUsuario.Text = user.rolNombre;
             lblCorreo.Text = user.correo;
             lblTelefono.Text = user.telefono;
-        }
+        }*/
     }
 }
