@@ -15,12 +15,13 @@ namespace COMPRAS2
 {
     public partial class SALIDA : Form
     {
-        
+        public List<Devices> devices;
+        public List<Movimientos> movimientos;
         public SALIDA()
         {
             InitializeComponent();
-
-            
+            devices = new List<Devices>();
+            movimientos = new List<Movimientos>();
         }
 
         private void bTNBack_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ if (e.KeyCode == Keys.Enter)
 
             if (statusmessage.statuscode == 200)
             {
-                List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
                 this.lbNombre.Text = devices[0].producto;
                 this.lbOrigen.Text = devices[0].origen;
@@ -89,16 +90,31 @@ if (e.KeyCode == Keys.Enter)
                 this.lbMarca.Text = devices[0].marca;
                 this.lbdesc.Text = devices[0].descompostura;
 
+                //llenar
+                if (devices[0].cantidad == 0) {
+                    MessageBox.Show("No hay dispositivos en stock, cantidad Insuficiente");
+                    return;
+                }
+
+                Agregar(devices[0]);
+
             }
 
         }
 
-        private void Agregar() { 
-        
+        private void Agregar(Devices device) {
+            //convert device to movement
+            Movimientos movement = new Movimientos();
+            movement.usuarioId = CurrentUser.id;
+            movement.dispositivoId = device.id;
+            movement.tipoMovId = 1;
+
+            movimientos.Add(movement);
+            
         }
         private void btAgregar_Click(object sender, EventArgs e)
         {
-
+            //cambiar al carrito
         }
     }
 }
