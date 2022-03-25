@@ -119,7 +119,7 @@ namespace COMPRAS2
                 MessageBox.Show("No se ha seleccionado ningun estatus");
                 return;
             }
-            userUpdate.statusId = idEmpleados;
+            userUpdate.rolId = idEmpleados;
 
             userUpdate.id = id;
 

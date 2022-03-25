@@ -53,8 +53,6 @@ namespace COMPRAS2
                 this.dgvUsuarios.Columns["statusId"].Visible = false;
                 this.dgvUsuarios.Columns["password"].Visible = false;
                 this.dgvUsuarios.Columns["rol"].Visible = false;
-                //this.dgvUsuarios.Columns["nombre"].Visible = false;
-                //this.dgvUsuarios.Columns["nombre"].Visible = true;
                 
 
                 return 0;

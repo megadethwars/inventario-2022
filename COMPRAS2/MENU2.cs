@@ -21,7 +21,7 @@ namespace COMPRAS2
             InitializeComponent();
             this.mainmenu = mainMenu;
 
-            this.lbUsername.Text = CurrentUser.username;
+            this.lbUsername.Text = CurrentUsers.username;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

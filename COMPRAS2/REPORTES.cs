@@ -71,7 +71,7 @@ namespace COMPRAS2
                
                
 
-                reporte.usuarioId = CurrentUser.id;
+                reporte.usuarioId = CurrentUsers.id;
                 reporte.comentarios = txtDescripcion.Text;
 
 

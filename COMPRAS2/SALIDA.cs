@@ -105,7 +105,7 @@ if (e.KeyCode == Keys.Enter)
         private void Agregar(Devices device) {
             //convert device to movement
             Movimientos movement = new Movimientos();
-            movement.usuarioId = CurrentUser.id;
+            movement.usuarioId = CurrentUsers.id;
             movement.dispositivoId = device.id;
             movement.tipoMovId = 1;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMPRAS2.modelos
 {
-    public class CurrentUser
+    public class CurrentUsers
     {
        
         public static string apellidoMaterno { get; set; }

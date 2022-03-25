@@ -106,13 +106,13 @@ namespace COMPRAS2
 
                 User userDeserialize = JsonConvert.DeserializeObject<User>(statusmessage.data, new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSz" });
 
-                CurrentUser.username = userDeserialize.username;
-                CurrentUser.nombre = userDeserialize.nombre;
-                CurrentUser.apellidoPaterno = userDeserialize.apellidoPaterno;
-                CurrentUser.apellidoMaterno = userDeserialize.apellidoMaterno;
-                CurrentUser.correo = userDeserialize.correo;
-                CurrentUser.telefono = userDeserialize.telefono;
-                CurrentUser.id = userDeserialize.id;
+                CurrentUsers.username = userDeserialize.username;
+                CurrentUsers.nombre = userDeserialize.nombre;
+                CurrentUsers.apellidoPaterno = userDeserialize.apellidoPaterno;
+                CurrentUsers.apellidoMaterno = userDeserialize.apellidoMaterno;
+                CurrentUsers.correo = userDeserialize.correo;
+                CurrentUsers.telefono = userDeserialize.telefono;
+                CurrentUsers.id = userDeserialize.id;
 
 
                 return 0;

@@ -20,9 +20,9 @@ namespace COMPRAS2
         {
             InitializeComponent();
 
-            this.nombre1.Text = CurrentUser.nombre;
-            this.telefono1.Text = CurrentUser.telefono;
-            this.correo1.Text = CurrentUser.correo;
+            this.nombre1.Text = CurrentUsers.nombre;
+            this.telefono1.Text = CurrentUsers.telefono;
+            this.correo1.Text = CurrentUsers.correo;
         }
 
         private void AbrirFormHija(object formhija)

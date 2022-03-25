@@ -185,13 +185,14 @@
     <Compile Include="modelos\Movimientos.cs" />
     <Compile Include="modelos\QueryDevice.cs" />
     <Compile Include="modelos\QueryReporte.cs" />
-    <Compile Include="modelos\CurrentUser.cs" />
+    <Compile Include="modelos\CurrentUsers.cs" />
     <Compile Include="modelos\Devices.cs" />
     <Compile Include="modelos\Lugares.cs" />
     <Compile Include="modelos\Reportes.cs" />
     <Compile Include="modelos\Rol.cs" />
     <Compile Include="modelos\StatusDevices.cs" />
     <Compile Include="modelos\StatusMessage.cs" />
+    <Compile Include="modelos\StatusUser.cs" />
     <Compile Include="modelos\TipoMovimiento.cs" />
     <Compile Include="modelos\User.cs" />
     <Compile Include="OPCIONES DE INVENTARIO.cs">

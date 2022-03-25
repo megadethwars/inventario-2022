@@ -182,7 +182,7 @@ namespace COMPRAS2
             
             if (cbLugares.SelectedItem != null)
             {
-                var idLugarestuple = (Tuple<int, string>)cbEstatus.SelectedItem;
+                var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
                 idLugares = idLugarestuple.Item1;
                 devicesUpdate.lugarId = idLugares;
             }
