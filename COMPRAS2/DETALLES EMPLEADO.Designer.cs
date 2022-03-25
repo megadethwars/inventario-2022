@@ -45,8 +45,7 @@ namespace COMPRAS2
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAgregarFoto = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.bTNBack = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -92,9 +91,9 @@ namespace COMPRAS2
             this.lblDNombreDelEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblDNombreDelEmpleado.Location = new System.Drawing.Point(410, 154);
             this.lblDNombreDelEmpleado.Name = "lblDNombreDelEmpleado";
-            this.lblDNombreDelEmpleado.Size = new System.Drawing.Size(197, 32);
+            this.lblDNombreDelEmpleado.Size = new System.Drawing.Size(291, 32);
             this.lblDNombreDelEmpleado.TabIndex = 116;
-            this.lblDNombreDelEmpleado.Text = "NOMBRE DEL EMPLEADO:";
+            this.lblDNombreDelEmpleado.Text = "NOMBRE COMPLEADO DEL EMPLEADO:";
             // 
             // lblTipoDeUsuario
             // 
@@ -279,45 +278,25 @@ namespace COMPRAS2
             this.pictureBox1.TabIndex = 118;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnEliminar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.button1.Location = new System.Drawing.Point(726, 799);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 39);
-            this.button1.TabIndex = 86;
-            this.button1.Text = "ELIMINAR";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnAgregarFoto
-            // 
-            this.btnAgregarFoto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAgregarFoto.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarFoto.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnAgregarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregarFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
-            this.btnAgregarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarFoto.Location = new System.Drawing.Point(529, 799);
-            this.btnAgregarFoto.Name = "btnAgregarFoto";
-            this.btnAgregarFoto.Size = new System.Drawing.Size(160, 39);
-            this.btnAgregarFoto.TabIndex = 85;
-            this.btnAgregarFoto.Text = "ACTUALIZAR";
-            this.btnAgregarFoto.UseVisualStyleBackColor = false;
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnEliminar.Location = new System.Drawing.Point(226, 799);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(160, 39);
+            this.btnEliminar.TabIndex = 86;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // bTNBack
             // 
@@ -379,8 +358,7 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblNombreDelEmpleado);
             this.Controls.Add(this.lblDNombreDelEmpleado);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAgregarFoto);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.bTNBack);
             this.Controls.Add(this.INVENTARIOTITLE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -401,8 +379,7 @@ namespace COMPRAS2
 
         private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Label INVENTARIOTITLE;
-        private System.Windows.Forms.Button btnAgregarFoto;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNombreDelEmpleado;
         private System.Windows.Forms.Label lblDNombreDelEmpleado;

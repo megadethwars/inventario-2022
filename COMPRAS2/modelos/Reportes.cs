@@ -49,7 +49,7 @@ namespace COMPRAS2.modelos
         public User usuario { get; set; }     
 
 
-        [DefaultValue(null)]
+        [DefaultValue(0)]
         public int usuarioId { get; set; }
     }
 }

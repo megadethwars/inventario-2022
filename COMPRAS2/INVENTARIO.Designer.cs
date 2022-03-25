@@ -52,11 +52,11 @@ namespace COMPRAS2
             // 
             this.INVENTARIOTITLE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.INVENTARIOTITLE.AutoSize = true;
-            this.INVENTARIOTITLE.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INVENTARIOTITLE.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.INVENTARIOTITLE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.INVENTARIOTITLE.Location = new System.Drawing.Point(560, 30);
             this.INVENTARIOTITLE.Name = "INVENTARIOTITLE";
-            this.INVENTARIOTITLE.Size = new System.Drawing.Size(227, 39);
+            this.INVENTARIOTITLE.Size = new System.Drawing.Size(129, 42);
             this.INVENTARIOTITLE.TabIndex = 2;
             this.INVENTARIOTITLE.Text = "INVENTARIO";
             // 
@@ -125,7 +125,7 @@ namespace COMPRAS2
             this.btnEditarMovimientos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEditarMovimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditarMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarMovimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarMovimientos.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnEditarMovimientos.Location = new System.Drawing.Point(941, 728);
             this.btnEditarMovimientos.Name = "btnEditarMovimientos";
@@ -146,7 +146,7 @@ namespace COMPRAS2
             this.btnActualizarBDD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarBDD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarBDD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarBDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarBDD.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarBDD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizarBDD.Location = new System.Drawing.Point(579, 728);
             this.btnActualizarBDD.Name = "btnActualizarBDD";
@@ -167,7 +167,7 @@ namespace COMPRAS2
             this.btnActualizarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizarProducto.Location = new System.Drawing.Point(760, 728);
             this.btnActualizarProducto.Name = "btnActualizarProducto";
@@ -188,7 +188,7 @@ namespace COMPRAS2
             this.btnSALIDA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSALIDA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSALIDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSALIDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSALIDA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnSALIDA.Location = new System.Drawing.Point(440, 728);
             this.btnSALIDA.Name = "btnSALIDA";
@@ -209,7 +209,7 @@ namespace COMPRAS2
             this.btnReingresarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReingresarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReingresarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReingresarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReingresarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReingresarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnReingresarProducto.Location = new System.Drawing.Point(245, 728);
             this.btnReingresarProducto.Name = "btnReingresarProducto";
@@ -230,7 +230,7 @@ namespace COMPRAS2
             this.btnAgregarNuevoProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarNuevoProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarNuevoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarNuevoProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarNuevoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnAgregarNuevoProducto.Location = new System.Drawing.Point(30, 728);
             this.btnAgregarNuevoProducto.Name = "btnAgregarNuevoProducto";
@@ -295,7 +295,7 @@ namespace COMPRAS2
             this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
             this.btnActualizar.Name = "btnActualizar";

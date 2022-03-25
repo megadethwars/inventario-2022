@@ -41,21 +41,12 @@ namespace COMPRAS2
 
         private void DETALLES_EMPLEADO_Load(object sender, EventArgs e)
         {
-            lblNombreDelEmpleado.Text = user.nombre;
+            lblNombreDelEmpleado.Text = user.nombre + " " + user.apellidoPaterno + " " + user.apellidoMaterno;
             lblFechaDeIngreso.Text = user.fechaAlta.ToString();
             lblTipoDeUsuario.Text = user.rolNombre;
             lblCorreo.Text = user.correo;
             lblTelefono.Text = user.telefono;
         }
-        /*
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            lblNombreDelEmpleado.Text = null;
-            lblNombreDelEmpleado.Text = user.nombre;
-            lblFechaDeIngreso.Text = user.fechaAlta.ToString();
-            lblTipoDeUsuario.Text = user.rolNombre;
-            lblCorreo.Text = user.correo;
-            lblTelefono.Text = user.telefono;
-        }*/
+        
     }
 }

@@ -31,9 +31,9 @@ namespace COMPRAS2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EDITAR_EMPLEADO));
             this.INVENTARIOTITLE = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -45,10 +45,18 @@ namespace COMPRAS2
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblApellidoPaterno = new System.Windows.Forms.Label();
+            this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
+            this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
+            this.lblApellidoMaterno = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // INVENTARIOTITLE
@@ -63,44 +71,44 @@ namespace COMPRAS2
             this.INVENTARIOTITLE.TabIndex = 22;
             this.INVENTARIOTITLE.Text = "EDITAR EMPLEADO";
             // 
-            // label8
+            // lblTelefono
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label8.Location = new System.Drawing.Point(120, 330);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 32);
-            this.label8.TabIndex = 105;
-            this.label8.Text = "CAMBIAR TELEFONO:";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblTelefono.Location = new System.Drawing.Point(120, 530);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(164, 32);
+            this.lblTelefono.TabIndex = 105;
+            this.lblTelefono.Text = "CAMBIAR TELEFONO:";
             // 
-            // label6
+            // lblCorreo
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label6.Location = new System.Drawing.Point(120, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 32);
-            this.label6.TabIndex = 104;
-            this.label6.Text = "CAMBIAR CORREO:";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblCorreo.Location = new System.Drawing.Point(120, 430);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(149, 32);
+            this.lblCorreo.TabIndex = 104;
+            this.lblCorreo.Text = "CAMBIAR CORREO:";
             // 
-            // label5
+            // lblNombre
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label5.Location = new System.Drawing.Point(120, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 32);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "CAMBIAR NOMBRE:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblNombre.Location = new System.Drawing.Point(120, 130);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(154, 32);
+            this.lblNombre.TabIndex = 103;
+            this.lblNombre.Text = "CAMBIAR NOMBRE:";
             // 
             // txtTelefono
             // 
@@ -111,11 +119,11 @@ namespace COMPRAS2
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtTelefono.Location = new System.Drawing.Point(170, 365);
+            this.txtTelefono.Location = new System.Drawing.Point(170, 570);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(960, 26);
             this.txtTelefono.TabIndex = 100;
-            this.txtTelefono.Text = "Introduzca el Telefono";
+            this.txtTelefono.Text = "Cambiar Telefono";
             // 
             // txtCorreo
             // 
@@ -126,11 +134,11 @@ namespace COMPRAS2
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCorreo.Location = new System.Drawing.Point(170, 270);
+            this.txtCorreo.Location = new System.Drawing.Point(170, 470);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(960, 26);
             this.txtCorreo.TabIndex = 99;
-            this.txtCorreo.Text = "Introduzca el Correo";
+            this.txtCorreo.Text = "Cambiar Correo";
             // 
             // txtNombre
             // 
@@ -145,7 +153,7 @@ namespace COMPRAS2
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(960, 26);
             this.txtNombre.TabIndex = 98;
-            this.txtNombre.Text = "Introduzca el Nombre ";
+            this.txtNombre.Text = "Cambiar Nombre";
             // 
             // bTNBack
             // 
@@ -188,7 +196,7 @@ namespace COMPRAS2
             this.lblTipoDeUsuario.AutoSize = true;
             this.lblTipoDeUsuario.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoDeUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblTipoDeUsuario.Location = new System.Drawing.Point(120, 430);
+            this.lblTipoDeUsuario.Location = new System.Drawing.Point(120, 630);
             this.lblTipoDeUsuario.Name = "lblTipoDeUsuario";
             this.lblTipoDeUsuario.Size = new System.Drawing.Size(215, 32);
             this.lblTipoDeUsuario.TabIndex = 109;
@@ -204,7 +212,7 @@ namespace COMPRAS2
             this.cbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.cbEmpleado.FormattingEnabled = true;
-            this.cbEmpleado.Location = new System.Drawing.Point(170, 470);
+            this.cbEmpleado.Location = new System.Drawing.Point(170, 670);
             this.cbEmpleado.Name = "cbEmpleado";
             this.cbEmpleado.Size = new System.Drawing.Size(960, 28);
             this.cbEmpleado.TabIndex = 110;
@@ -243,7 +251,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox3.Location = new System.Drawing.Point(120, 325);
+            this.pictureBox3.Location = new System.Drawing.Point(120, 425);
             this.pictureBox3.MaximumSize = new System.Drawing.Size(2000, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1000, 3);
@@ -257,7 +265,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox4.Location = new System.Drawing.Point(120, 425);
+            this.pictureBox4.Location = new System.Drawing.Point(120, 525);
             this.pictureBox4.MaximumSize = new System.Drawing.Size(2000, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(1000, 3);
@@ -265,12 +273,102 @@ namespace COMPRAS2
             this.pictureBox4.TabIndex = 122;
             this.pictureBox4.TabStop = false;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox5.Location = new System.Drawing.Point(120, 625);
+            this.pictureBox5.MaximumSize = new System.Drawing.Size(2000, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(1000, 3);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 123;
+            this.pictureBox5.TabStop = false;
+            // 
+            // lblApellidoPaterno
+            // 
+            this.lblApellidoPaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblApellidoPaterno.AutoSize = true;
+            this.lblApellidoPaterno.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblApellidoPaterno.Location = new System.Drawing.Point(120, 230);
+            this.lblApellidoPaterno.Name = "lblApellidoPaterno";
+            this.lblApellidoPaterno.Size = new System.Drawing.Size(229, 32);
+            this.lblApellidoPaterno.TabIndex = 124;
+            this.lblApellidoPaterno.Text = "CAMBIAR APELLIDO PATERNO:";
+            // 
+            // txtApellidoPaterno
+            // 
+            this.txtApellidoPaterno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellidoPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(170, 270);
+            this.txtApellidoPaterno.Name = "txtApellidoPaterno";
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(960, 26);
+            this.txtApellidoPaterno.TabIndex = 125;
+            this.txtApellidoPaterno.Text = "Cambiar Apellido Paterno";
+            // 
+            // txtApellidoMaterno
+            // 
+            this.txtApellidoMaterno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellidoMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(170, 370);
+            this.txtApellidoMaterno.Name = "txtApellidoMaterno";
+            this.txtApellidoMaterno.Size = new System.Drawing.Size(960, 26);
+            this.txtApellidoMaterno.TabIndex = 128;
+            this.txtApellidoMaterno.Text = "Cambiar Apellido Materno";
+            // 
+            // lblApellidoMaterno
+            // 
+            this.lblApellidoMaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblApellidoMaterno.AutoSize = true;
+            this.lblApellidoMaterno.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblApellidoMaterno.Location = new System.Drawing.Point(120, 330);
+            this.lblApellidoMaterno.Name = "lblApellidoMaterno";
+            this.lblApellidoMaterno.Size = new System.Drawing.Size(234, 32);
+            this.lblApellidoMaterno.TabIndex = 127;
+            this.lblApellidoMaterno.Text = "CAMBIAR APELLIDO MATERNO:";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox6.Location = new System.Drawing.Point(120, 325);
+            this.pictureBox6.MaximumSize = new System.Drawing.Size(2000, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(1000, 3);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 126;
+            this.pictureBox6.TabStop = false;
+            // 
             // EDITAR_EMPLEADO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.txtApellidoMaterno);
+            this.Controls.Add(this.lblApellidoMaterno);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.txtApellidoPaterno);
+            this.Controls.Add(this.lblApellidoPaterno);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -278,9 +376,9 @@ namespace COMPRAS2
             this.Controls.Add(this.cbEmpleado);
             this.Controls.Add(this.lblTipoDeUsuario);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.lblCorreo);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtNombre);
@@ -294,6 +392,8 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,9 +403,9 @@ namespace COMPRAS2
 
         private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Label INVENTARIOTITLE;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtNombre;
@@ -316,5 +416,11 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lblApellidoPaterno;
+        private System.Windows.Forms.TextBox txtApellidoPaterno;
+        private System.Windows.Forms.TextBox txtApellidoMaterno;
+        private System.Windows.Forms.Label lblApellidoMaterno;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

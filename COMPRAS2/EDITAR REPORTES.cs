@@ -39,17 +39,6 @@ namespace COMPRAS2
 
         private async void EditarReportes()
         {
-            Reportes reportes;
-            reportes = new Reportes();
-
-            reportes.comentarios = txtComentarios.Text;
-            reportes.id = id;
-
-            Navigator.nextPage(new REPORTES2());
-        }
-
-        private async void EDITAR_REPORTES_Load(object sender, EventArgs e)
-        {
             Reportes reportesUpdates;
             reportesUpdates = new Reportes();
 
@@ -76,7 +65,7 @@ namespace COMPRAS2
             }
             else if (statusmessage.statuscode == 200)
             {
-                User USERS = JsonConvert.DeserializeObject<User>(statusmessage.data);
+                Reportes USERS = JsonConvert.DeserializeObject<Reportes>(statusmessage.data);
                 MessageBox.Show("REPORTE ACTUALIZADO CORRECTAMENTE");
                 Navigator.nextPage(new REPORTES2());
                 return;
@@ -92,6 +81,17 @@ namespace COMPRAS2
                 MessageBox.Show("Bad request, algunos campos faltantes");
                 return;
             }
+        }
+
+        private async void EDITAR_REPORTES_Load(object sender, EventArgs e)
+        {
+            Reportes reportes;
+            reportes = new Reportes();
+
+            reportes.comentarios = txtComentarios.Text;
+            reportes.id = id;
+
+            Navigator.nextPage(new REPORTES2());            
         }
     }
 }

@@ -34,6 +34,8 @@ namespace COMPRAS2
         private async void EDITAR_EMPLEADO_Load(object sender, EventArgs e)
         {
             this.txtNombre.Text = user.nombre;
+            this.txtApellidoPaterno.Text = user.apellidoPaterno;
+            this.txtApellidoMaterno.Text = user.apellidoMaterno;
             this.txtCorreo.Text = user.correo;
             this.txtTelefono.Text = user.telefono;
             
@@ -102,6 +104,8 @@ namespace COMPRAS2
             userUpdate = new User();
 
             userUpdate.nombre = txtNombre.Text;
+            userUpdate.apellidoPaterno = txtApellidoPaterno.Text;
+            userUpdate.apellidoMaterno = txtApellidoMaterno.Text;
             userUpdate.correo = txtCorreo.Text;
             userUpdate.telefono = txtTelefono.Text;
 
