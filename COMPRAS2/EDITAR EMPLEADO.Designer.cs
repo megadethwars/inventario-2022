@@ -51,12 +51,16 @@ namespace COMPRAS2
             this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
             this.lblApellidoMaterno = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.lblEstadoDelUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // INVENTARIOTITLE
@@ -78,7 +82,7 @@ namespace COMPRAS2
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblTelefono.Location = new System.Drawing.Point(120, 530);
+            this.lblTelefono.Location = new System.Drawing.Point(120, 470);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(164, 32);
             this.lblTelefono.TabIndex = 105;
@@ -91,7 +95,7 @@ namespace COMPRAS2
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCorreo.Location = new System.Drawing.Point(120, 430);
+            this.lblCorreo.Location = new System.Drawing.Point(120, 385);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(149, 32);
             this.lblCorreo.TabIndex = 104;
@@ -119,7 +123,7 @@ namespace COMPRAS2
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtTelefono.Location = new System.Drawing.Point(170, 570);
+            this.txtTelefono.Location = new System.Drawing.Point(170, 510);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(960, 26);
             this.txtTelefono.TabIndex = 100;
@@ -134,7 +138,7 @@ namespace COMPRAS2
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCorreo.Location = new System.Drawing.Point(170, 470);
+            this.txtCorreo.Location = new System.Drawing.Point(170, 425);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(960, 26);
             this.txtCorreo.TabIndex = 99;
@@ -196,7 +200,7 @@ namespace COMPRAS2
             this.lblTipoDeUsuario.AutoSize = true;
             this.lblTipoDeUsuario.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoDeUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblTipoDeUsuario.Location = new System.Drawing.Point(120, 630);
+            this.lblTipoDeUsuario.Location = new System.Drawing.Point(120, 555);
             this.lblTipoDeUsuario.Name = "lblTipoDeUsuario";
             this.lblTipoDeUsuario.Size = new System.Drawing.Size(215, 32);
             this.lblTipoDeUsuario.TabIndex = 109;
@@ -212,7 +216,7 @@ namespace COMPRAS2
             this.cbEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.cbEmpleado.FormattingEnabled = true;
-            this.cbEmpleado.Location = new System.Drawing.Point(170, 670);
+            this.cbEmpleado.Location = new System.Drawing.Point(170, 595);
             this.cbEmpleado.Name = "cbEmpleado";
             this.cbEmpleado.Size = new System.Drawing.Size(960, 28);
             this.cbEmpleado.TabIndex = 110;
@@ -237,7 +241,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox2.Location = new System.Drawing.Point(120, 225);
+            this.pictureBox2.Location = new System.Drawing.Point(120, 210);
             this.pictureBox2.MaximumSize = new System.Drawing.Size(2000, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1000, 3);
@@ -251,7 +255,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox3.Location = new System.Drawing.Point(120, 425);
+            this.pictureBox3.Location = new System.Drawing.Point(120, 380);
             this.pictureBox3.MaximumSize = new System.Drawing.Size(2000, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1000, 3);
@@ -265,7 +269,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox4.Location = new System.Drawing.Point(120, 525);
+            this.pictureBox4.Location = new System.Drawing.Point(120, 465);
             this.pictureBox4.MaximumSize = new System.Drawing.Size(2000, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(1000, 3);
@@ -279,7 +283,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox5.Location = new System.Drawing.Point(120, 625);
+            this.pictureBox5.Location = new System.Drawing.Point(120, 550);
             this.pictureBox5.MaximumSize = new System.Drawing.Size(2000, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(1000, 3);
@@ -294,7 +298,7 @@ namespace COMPRAS2
             this.lblApellidoPaterno.AutoSize = true;
             this.lblApellidoPaterno.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblApellidoPaterno.Location = new System.Drawing.Point(120, 230);
+            this.lblApellidoPaterno.Location = new System.Drawing.Point(120, 215);
             this.lblApellidoPaterno.Name = "lblApellidoPaterno";
             this.lblApellidoPaterno.Size = new System.Drawing.Size(229, 32);
             this.lblApellidoPaterno.TabIndex = 124;
@@ -309,7 +313,7 @@ namespace COMPRAS2
             this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(170, 270);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(170, 255);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(960, 26);
             this.txtApellidoPaterno.TabIndex = 125;
@@ -324,7 +328,7 @@ namespace COMPRAS2
             this.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(170, 370);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(170, 340);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(960, 26);
             this.txtApellidoMaterno.TabIndex = 128;
@@ -337,7 +341,7 @@ namespace COMPRAS2
             this.lblApellidoMaterno.AutoSize = true;
             this.lblApellidoMaterno.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidoMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblApellidoMaterno.Location = new System.Drawing.Point(120, 330);
+            this.lblApellidoMaterno.Location = new System.Drawing.Point(120, 300);
             this.lblApellidoMaterno.Name = "lblApellidoMaterno";
             this.lblApellidoMaterno.Size = new System.Drawing.Size(234, 32);
             this.lblApellidoMaterno.TabIndex = 127;
@@ -349,7 +353,7 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox6.Location = new System.Drawing.Point(120, 325);
+            this.pictureBox6.Location = new System.Drawing.Point(120, 295);
             this.pictureBox6.MaximumSize = new System.Drawing.Size(2000, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(1000, 3);
@@ -357,12 +361,57 @@ namespace COMPRAS2
             this.pictureBox6.TabIndex = 126;
             this.pictureBox6.TabStop = false;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox7.Location = new System.Drawing.Point(120, 635);
+            this.pictureBox7.MaximumSize = new System.Drawing.Size(2000, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(1000, 3);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 131;
+            this.pictureBox7.TabStop = false;
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(170, 680);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(960, 28);
+            this.cbEstado.TabIndex = 130;
+            // 
+            // lblEstadoDelUsuario
+            // 
+            this.lblEstadoDelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblEstadoDelUsuario.AutoSize = true;
+            this.lblEstadoDelUsuario.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoDelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblEstadoDelUsuario.Location = new System.Drawing.Point(120, 640);
+            this.lblEstadoDelUsuario.Name = "lblEstadoDelUsuario";
+            this.lblEstadoDelUsuario.Size = new System.Drawing.Size(237, 32);
+            this.lblEstadoDelUsuario.TabIndex = 129;
+            this.lblEstadoDelUsuario.Text = "CAMBIAR ESTADO DE USUARIO:";
+            // 
             // EDITAR_EMPLEADO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.lblEstadoDelUsuario);
             this.Controls.Add(this.txtApellidoMaterno);
             this.Controls.Add(this.lblApellidoMaterno);
             this.Controls.Add(this.pictureBox6);
@@ -394,6 +443,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,5 +472,8 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox txtApellidoMaterno;
         private System.Windows.Forms.Label lblApellidoMaterno;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.Label lblEstadoDelUsuario;
     }
 }

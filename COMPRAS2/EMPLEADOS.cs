@@ -41,10 +41,14 @@ namespace COMPRAS2
                 List<User> user = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
                 for (int x = 0; x < user.Count; x++)
                 {
-                    Rol rolNombre = user[x].rol;
+                    Rol rolNombre = user[x].rol;                   
                     user[x].rolNombre = rolNombre.nombre;
+
+                    StatusUser statusUserDescripcion = user[x].status;
+                    user[x].statusUserDescripcion = statusUserDescripcion.descripcion;
                     
                 }
+                
 
                 dgvUsuarios.DataSource = user;
                 this.dgvUsuarios.Columns["correo"].Visible = false;
@@ -53,7 +57,8 @@ namespace COMPRAS2
                 this.dgvUsuarios.Columns["statusId"].Visible = false;
                 this.dgvUsuarios.Columns["password"].Visible = false;
                 this.dgvUsuarios.Columns["rol"].Visible = false;
-                
+                this.dgvUsuarios.Columns["statusUserDescripcion"].Visible = false;
+                this.dgvUsuarios.Columns["status"].Visible = false;
 
                 return 0;
             }

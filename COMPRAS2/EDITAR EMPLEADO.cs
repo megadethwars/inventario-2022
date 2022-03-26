@@ -16,6 +16,7 @@ namespace COMPRAS2
     public partial class EDITAR_EMPLEADO : Form
     {
         List<Tuple<Int32, String>> listaRoles;
+        List<Tuple<Int32, String>> listaStatus;
         User user;
         int id = 0;
         public EDITAR_EMPLEADO(User user)
@@ -23,6 +24,7 @@ namespace COMPRAS2
             InitializeComponent();
             this.user = user;
             listaRoles = new List<Tuple<int, string>>();
+            listaStatus = new List<Tuple<int, string>>();
             id = user.id;
         }
 
@@ -41,6 +43,9 @@ namespace COMPRAS2
             
             int status = await Roles();           
             this.cbEmpleado.Text = user.rolNombre;
+
+            int estatus = await Estatus();
+            this.cbEstado.Text = user.statusUserDescripcion;
         }
 
         private async Task<int> Roles()
@@ -52,14 +57,12 @@ namespace COMPRAS2
 
                 if (statusmessage.statuscode == 500)
                 {
-
                     MessageBox.Show("Error interno del servidor");
                     return 2;
                 }
 
                 if (statusmessage.statuscode == 404)
                 {
-
                     MessageBox.Show("Roles no encontrados");
                     return 2;
                 }
@@ -69,18 +72,58 @@ namespace COMPRAS2
                     return 1;
                 }
 
-
                 var roles = JsonConvert.DeserializeObject<List<Rol>>(statusmessage.data);
-
 
                 for (int x = 0; x < roles.Count; x++)
                 {
-
                     listaRoles.Add(Tuple.Create<Int32, String>(roles[x].id, roles[x].nombre));
                 }
                 cbEmpleado.DataSource = listaRoles;
                 cbEmpleado.DisplayMember = "Item2";
                 cbEmpleado.ValueMember = "Item1";               
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+                return 10;
+            }
+        }
+
+        private async Task<int> Estatus()
+        {
+            try
+            {
+                var url = HttpMethods.url + "statusUsuarios";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode == 500)
+                {
+                    MessageBox.Show("Error interno del servidor");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode == 404)
+                {
+                    MessageBox.Show("Estatus no encontrados");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return 1;
+                }
+
+                var estatus = JsonConvert.DeserializeObject<List<StatusUser>>(statusmessage.data);
+
+                for (int x = 0; x < estatus.Count; x++)
+                {
+                    listaStatus.Add(Tuple.Create<Int32, String>(estatus[x].id, estatus[x].descripcion));
+                }
+                cbEstado.DataSource = listaStatus;
+                cbEstado.DisplayMember = "Item2";
+                cbEstado.ValueMember = "Item1";
 
                 return 0;
             }
@@ -99,6 +142,7 @@ namespace COMPRAS2
         private async void EditarEmpleado()
         {           
             int idEmpleados = 0;
+            int idEstado = 0;
             
             User userUpdate;
             userUpdate = new User();
@@ -108,6 +152,8 @@ namespace COMPRAS2
             userUpdate.apellidoMaterno = txtApellidoMaterno.Text;
             userUpdate.correo = txtCorreo.Text;
             userUpdate.telefono = txtTelefono.Text;
+            userUpdate.rolNombre = cbEmpleado.Text;
+            userUpdate.statusUserDescripcion = cbEstado.Text;
 
             if (cbEmpleado.SelectedItem != null)
             {
@@ -120,6 +166,18 @@ namespace COMPRAS2
                 return;
             }
             userUpdate.rolId = idEmpleados;
+
+            if (cbEstado.SelectedItem != null)
+            {
+                var idEstadotuple = (Tuple<int, string>)cbEstado.SelectedItem;
+                idEstado = idEstadotuple.Item1;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun estatus");
+                return;
+            }
+            userUpdate.statusId = idEstado;
 
             userUpdate.id = id;
 

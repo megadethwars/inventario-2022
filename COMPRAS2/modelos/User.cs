@@ -38,6 +38,14 @@ namespace COMPRAS2.modelos
         [DefaultValue(0)]
         public int rolId { get; set; }
 
+
+        [DefaultValue(null)]
+        public string statusUserDescripcion { get; set; }
+
+        [DefaultValue(null)]
+        public StatusUser status { get; set; }
+
+
         [DefaultValue(0)]
         public int statusId { get; set; }
 

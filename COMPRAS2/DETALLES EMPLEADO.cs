@@ -44,6 +44,7 @@ namespace COMPRAS2
             lblNombreDelEmpleado.Text = user.nombre + " " + user.apellidoPaterno + " " + user.apellidoMaterno;
             lblFechaDeIngreso.Text = user.fechaAlta.ToString();
             lblTipoDeUsuario.Text = user.rolNombre;
+            lblEstadoDelUsuario.Text = user.statusUserDescripcion;
             lblCorreo.Text = user.correo;
             lblTelefono.Text = user.telefono;
         }
