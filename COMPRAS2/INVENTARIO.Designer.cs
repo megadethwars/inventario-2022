@@ -44,6 +44,7 @@ namespace COMPRAS2
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnBusquedaAvanzada = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +85,7 @@ namespace COMPRAS2
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvInventario.Location = new System.Drawing.Point(20, 180);
+            this.dgvInventario.Location = new System.Drawing.Point(20, 198);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvInventario.RowHeadersVisible = false;
@@ -96,7 +97,7 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventario.Size = new System.Drawing.Size(1235, 487);
+            this.dgvInventario.Size = new System.Drawing.Size(1235, 501);
             this.dgvInventario.TabIndex = 3;
             this.dgvInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellClick);
             this.dgvInventario.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellMouseEnter);
@@ -106,13 +107,13 @@ namespace COMPRAS2
             this.txtBUSCADOR.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBUSCADOR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(75)))), ((int)(((byte)(120)))));
+            this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBUSCADOR.ForeColor = System.Drawing.Color.White;
             this.txtBUSCADOR.Location = new System.Drawing.Point(180, 110);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
             this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
             this.txtBUSCADOR.TabIndex = 29;
-            this.txtBUSCADOR.Text = "Search";
+            this.txtBUSCADOR.Text = "Buscar";
             // 
             // btnEditarMovimientos
             // 
@@ -305,12 +306,35 @@ namespace COMPRAS2
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // btnBusquedaAvanzada
+            // 
+            this.btnBusquedaAvanzada.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBusquedaAvanzada.BackColor = System.Drawing.Color.Transparent;
+            this.btnBusquedaAvanzada.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnBusquedaAvanzada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBusquedaAvanzada.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBusquedaAvanzada.FlatAppearance.BorderSize = 0;
+            this.btnBusquedaAvanzada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBusquedaAvanzada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusquedaAvanzada.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusquedaAvanzada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnBusquedaAvanzada.Location = new System.Drawing.Point(525, 152);
+            this.btnBusquedaAvanzada.MaximumSize = new System.Drawing.Size(210, 40);
+            this.btnBusquedaAvanzada.Name = "btnBusquedaAvanzada";
+            this.btnBusquedaAvanzada.Size = new System.Drawing.Size(210, 40);
+            this.btnBusquedaAvanzada.TabIndex = 47;
+            this.btnBusquedaAvanzada.Text = "BUSQUEDA AVANZADA";
+            this.btnBusquedaAvanzada.UseVisualStyleBackColor = false;
+            this.btnBusquedaAvanzada.Click += new System.EventHandler(this.btnBusquedaAvanzada_Click);
+            // 
             // INVENTARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.btnBusquedaAvanzada);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEditarMovimientos);
             this.Controls.Add(this.btnActualizarBDD);
@@ -350,5 +374,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnActualizarBDD;
         private System.Windows.Forms.Button btnEditarMovimientos;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnBusquedaAvanzada;
     }
 }
