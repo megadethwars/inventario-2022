@@ -31,7 +31,7 @@ namespace COMPRAS2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BUSQUEDA_AVANZADA));
             this.lblBusquedaAvanzada = new System.Windows.Forms.Label();
-            this.txtMovimiento = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblSerie = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
@@ -46,6 +46,10 @@ namespace COMPRAS2
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.cbLugares = new System.Windows.Forms.ComboBox();
+            this.cbEstatus = new System.Windows.Forms.ComboBox();
+            this.lblLugares = new System.Windows.Forms.Label();
+            this.lblEstatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,24 +65,26 @@ namespace COMPRAS2
             this.lblBusquedaAvanzada.TabIndex = 32;
             this.lblBusquedaAvanzada.Text = "BUSQUEDA AVANZADA";
             // 
-            // txtMovimiento
+            // txtMarca
             // 
-            this.txtMovimiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtMovimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtMovimiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMovimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtMovimiento.Location = new System.Drawing.Point(162, 425);
-            this.txtMovimiento.Name = "txtMovimiento";
-            this.txtMovimiento.Size = new System.Drawing.Size(426, 26);
-            this.txtMovimiento.TabIndex = 48;
-            this.txtMovimiento.Text = "Introduzca la Marca";
+            this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtMarca.Location = new System.Drawing.Point(162, 425);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(426, 26);
+            this.txtMarca.TabIndex = 48;
+            this.txtMarca.Text = "Introduzca la Marca";
+            this.txtMarca.Click += new System.EventHandler(this.txtMarca_Click);
+            //this.txtMarca.Leave += new System.EventHandler(this.txtMarca_Leave);
             // 
             // lblProducto
             // 
             this.lblProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -143,7 +149,7 @@ namespace COMPRAS2
             // txtProducto
             // 
             this.txtProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,6 +159,7 @@ namespace COMPRAS2
             this.txtProducto.Size = new System.Drawing.Size(426, 26);
             this.txtProducto.TabIndex = 45;
             this.txtProducto.Text = "Introduzca el Producto";
+            this.txtProducto.Click += new System.EventHandler(this.txtProducto_Click);
             // 
             // txtModelo
             // 
@@ -167,11 +174,12 @@ namespace COMPRAS2
             this.txtModelo.Size = new System.Drawing.Size(426, 26);
             this.txtModelo.TabIndex = 49;
             this.txtModelo.Text = "Introduzca el Modelo";
+            this.txtModelo.Click += new System.EventHandler(this.txtModelo_Click);
             // 
             // txtSerie
             // 
             this.txtSerie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.txtSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,6 +189,7 @@ namespace COMPRAS2
             this.txtSerie.Size = new System.Drawing.Size(426, 26);
             this.txtSerie.TabIndex = 52;
             this.txtSerie.Text = "Introduzca la Serie";
+            this.txtSerie.Click += new System.EventHandler(this.txtSerie_Click);
             // 
             // txtCodigo
             // 
@@ -195,6 +204,7 @@ namespace COMPRAS2
             this.txtCodigo.Size = new System.Drawing.Size(426, 26);
             this.txtCodigo.TabIndex = 54;
             this.txtCodigo.Text = "Introduzca el Codigo";
+            this.txtCodigo.Click += new System.EventHandler(this.txtCodigo_Click);
             // 
             // txtBUSCADOR
             // 
@@ -269,12 +279,72 @@ namespace COMPRAS2
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // cbLugares
+            // 
+            this.cbLugares.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbLugares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbLugares.FormattingEnabled = true;
+            this.cbLugares.Location = new System.Drawing.Point(766, 213);
+            this.cbLugares.Name = "cbLugares";
+            this.cbLugares.Size = new System.Drawing.Size(426, 28);
+            this.cbLugares.TabIndex = 141;
+            this.cbLugares.Text = "Lugares";
+            // 
+            // cbEstatus
+            // 
+            this.cbEstatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbEstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbEstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbEstatus.FormattingEnabled = true;
+            this.cbEstatus.Location = new System.Drawing.Point(766, 322);
+            this.cbEstatus.Name = "cbEstatus";
+            this.cbEstatus.Size = new System.Drawing.Size(426, 28);
+            this.cbEstatus.TabIndex = 142;
+            this.cbEstatus.Text = "Estatus";
+            // 
+            // lblLugares
+            // 
+            this.lblLugares.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLugares.AutoSize = true;
+            this.lblLugares.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblLugares.Location = new System.Drawing.Point(760, 173);
+            this.lblLugares.Name = "lblLugares";
+            this.lblLugares.Size = new System.Drawing.Size(66, 32);
+            this.lblLugares.TabIndex = 143;
+            this.lblLugares.Text = "LUGAR:";
+            // 
+            // lblEstatus
+            // 
+            this.lblEstatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEstatus.AutoSize = true;
+            this.lblEstatus.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblEstatus.Location = new System.Drawing.Point(760, 280);
+            this.lblEstatus.Name = "lblEstatus";
+            this.lblEstatus.Size = new System.Drawing.Size(83, 32);
+            this.lblEstatus.TabIndex = 144;
+            this.lblEstatus.Text = "ESTATUS:";
+            // 
             // BUSQUEDA_AVANZADA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.lblEstatus);
+            this.Controls.Add(this.lblLugares);
+            this.Controls.Add(this.cbEstatus);
+            this.Controls.Add(this.cbLugares);
             this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.txtBUSCADOR);
             this.Controls.Add(this.pboxBuscador);
@@ -282,7 +352,7 @@ namespace COMPRAS2
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtSerie);
             this.Controls.Add(this.txtModelo);
-            this.Controls.Add(this.txtMovimiento);
+            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblCodigo);
@@ -294,6 +364,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BUSQUEDA_AVANZADA";
             this.Text = "BUSQUEDA_AVANZADA";
+            this.Load += new System.EventHandler(this.BUSQUEDA_AVANZADA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -305,7 +376,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblBusquedaAvanzada;
-        private System.Windows.Forms.TextBox txtMovimiento;
+        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Label lblMarca;
@@ -318,5 +389,9 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnBuscador;
         private System.Windows.Forms.TextBox txtBUSCADOR;
         private System.Windows.Forms.PictureBox pboxBuscador;
+        private System.Windows.Forms.ComboBox cbLugares;
+        private System.Windows.Forms.ComboBox cbEstatus;
+        private System.Windows.Forms.Label lblLugares;
+        private System.Windows.Forms.Label lblEstatus;
     }
 }
