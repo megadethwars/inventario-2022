@@ -32,7 +32,7 @@ namespace COMPRAS2
         private void CheckEnter(object sender, KeyEventArgs e)
         {
             
-if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 busqueda();
             }

@@ -80,6 +80,18 @@
     <Compile Include="BUSQUEDA AVANZADA.Designer.cs">
       <DependentUpon>BUSQUEDA AVANZADA.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarritoSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarritoSalida.Designer.cs">
+      <DependentUpon>CarritoSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmarSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmarSalida.Designer.cs">
+      <DependentUpon>ConfirmarSalida.cs</DependentUpon>
+    </Compile>
     <Compile Include="DETALLES DEL PRODUCTO.cs">
       <SubType>Form</SubType>
     </Compile>
