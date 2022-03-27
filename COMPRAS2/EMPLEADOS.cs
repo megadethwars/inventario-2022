@@ -109,7 +109,7 @@ namespace COMPRAS2
 
         private void btnBusquedaAvanzada_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new BUSQUEDA_AVANZADA());
+            Navigator.nextPage(new BUSQUEDA_AVANZADA_EMPLEADO());
         }
     }
 }
