@@ -115,6 +115,7 @@ namespace COMPRAS2
         private void btAgregar_Click(object sender, EventArgs e)
         {
             //cambiar al carrito
+            Navigator.nextPage(new CarritoSalida(this));
         }
     }
 }

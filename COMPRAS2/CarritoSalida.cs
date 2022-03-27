@@ -12,7 +12,7 @@ namespace COMPRAS2
 {
     public partial class CarritoSalida : Form
     {
-        public CarritoSalida()
+        public CarritoSalida(SALIDA salida)
         {
             InitializeComponent();
         }
