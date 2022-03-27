@@ -72,6 +72,8 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string proveedor { get; set; }
 
+        [DefaultValue(null)]
+        public string serie { get; set; }
 
         [DefaultValue(null)]
         public string StatusActual { get; set; }

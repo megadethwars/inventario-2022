@@ -74,11 +74,23 @@
     <Compile Include="AJUSTES.Designer.cs">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </Compile>
-    <Compile Include="BUSQUEDA AVANZADA.cs">
+    <Compile Include="BUSQUEDA AVANZADA EMPLEADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUSQUEDA AVANZADA.Designer.cs">
-      <DependentUpon>BUSQUEDA AVANZADA.cs</DependentUpon>
+    <Compile Include="BUSQUEDA AVANZADA EMPLEADO.Designer.cs">
+      <DependentUpon>BUSQUEDA AVANZADA EMPLEADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUSQUEDA AVANZADA PRODUCTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSQUEDA AVANZADA PRODUCTO.Designer.cs">
+      <DependentUpon>BUSQUEDA AVANZADA PRODUCTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUSQUEDA AVANZADA REPORTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSQUEDA AVANZADA REPORTE.Designer.cs">
+      <DependentUpon>BUSQUEDA AVANZADA REPORTE.cs</DependentUpon>
     </Compile>
     <Compile Include="CarritoSalida.cs">
       <SubType>Form</SubType>
@@ -127,12 +139,6 @@
     </Compile>
     <Compile Include="EDITAR REPORTES.Designer.cs">
       <DependentUpon>EDITAR REPORTES.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ejemplo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ejemplo.Designer.cs">
-      <DependentUpon>ejemplo.cs</DependentUpon>
     </Compile>
     <Compile Include="EMPLEADOS.cs">
       <SubType>Form</SubType>
@@ -207,12 +213,6 @@
     <Compile Include="modelos\StatusUser.cs" />
     <Compile Include="modelos\TipoMovimiento.cs" />
     <Compile Include="modelos\User.cs" />
-    <Compile Include="OPCIONES DE INVENTARIO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OPCIONES DE INVENTARIO.Designer.cs">
-      <DependentUpon>OPCIONES DE INVENTARIO.cs</DependentUpon>
-    </Compile>
     <Compile Include="PERFILADMIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,8 +262,14 @@
     <EmbeddedResource Include="AJUSTES.resx">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BUSQUEDA AVANZADA.resx">
-      <DependentUpon>BUSQUEDA AVANZADA.cs</DependentUpon>
+    <EmbeddedResource Include="BUSQUEDA AVANZADA EMPLEADO.resx">
+      <DependentUpon>BUSQUEDA AVANZADA EMPLEADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUSQUEDA AVANZADA PRODUCTO.resx">
+      <DependentUpon>BUSQUEDA AVANZADA PRODUCTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUSQUEDA AVANZADA REPORTE.resx">
+      <DependentUpon>BUSQUEDA AVANZADA REPORTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DETALLES DEL PRODUCTO.resx">
       <DependentUpon>DETALLES DEL PRODUCTO.cs</DependentUpon>
@@ -282,9 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EDITAR REPORTES.resx">
       <DependentUpon>EDITAR REPORTES.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ejemplo.resx">
-      <DependentUpon>ejemplo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EMPLEADOS.resx">
       <DependentUpon>EMPLEADOS.cs</DependentUpon>
@@ -315,9 +318,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MIPERFIL.resx">
       <DependentUpon>MIPERFIL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OPCIONES DE INVENTARIO.resx">
-      <DependentUpon>OPCIONES DE INVENTARIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PERFILADMIN.resx">
       <DependentUpon>PERFILADMIN.cs</DependentUpon>

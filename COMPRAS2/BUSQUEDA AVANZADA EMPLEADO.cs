@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMPRAS2
 {
-    public partial class OPCIONES_DE_INVENTARIO : Form
+    public partial class BUSQUEDA_AVANZADA_EMPLEADO : Form
     {
-        public OPCIONES_DE_INVENTARIO()
+        public BUSQUEDA_AVANZADA_EMPLEADO()
         {
             InitializeComponent();
         }
