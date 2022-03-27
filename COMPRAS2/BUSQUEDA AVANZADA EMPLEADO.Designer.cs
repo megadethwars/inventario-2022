@@ -102,6 +102,7 @@ namespace COMPRAS2
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 62;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblBusquedaAvanzada
             // 
@@ -200,6 +201,7 @@ namespace COMPRAS2
             this.txtCorreo.Size = new System.Drawing.Size(426, 26);
             this.txtCorreo.TabIndex = 148;
             this.txtCorreo.Text = "Introduzca el Correo";
+            this.txtCorreo.Click += new System.EventHandler(this.txtCorreo_Click);
             // 
             // txtNombre
             // 
@@ -214,6 +216,7 @@ namespace COMPRAS2
             this.txtNombre.Size = new System.Drawing.Size(426, 26);
             this.txtNombre.TabIndex = 147;
             this.txtNombre.Text = "Introduzca el Nombre";
+            this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
             // 
             // lblCorreo
             // 
@@ -264,6 +267,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BUSQUEDA_AVANZADA_EMPLEADO";
             this.Text = "BUSQUEDA_AVANZADA_EMPLEADO";
+            this.Load += new System.EventHandler(this.BUSQUEDA_AVANZADA_EMPLEADO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -30,7 +30,7 @@ namespace COMPRAS2
 
         private void btnBUSQUEDAAVANZADA_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new BUSQUEDA_AVANZADA());
+            //Navigator.nextPage(new BUSQUEDA_AVANZADA());
         }
 
         private void btSalida_Click(object sender, EventArgs e)

@@ -28,11 +28,11 @@ namespace COMPRAS2
             listaLugares = new List<Tuple<int, string>>();
             id = devices.id;
         }
-
+        /*
         public EDITAR_PRODUCTO()
         {
             InitializeComponent();
-        }
+        }*/
 
         private void btnBack_Click(object sender, EventArgs e)
         {

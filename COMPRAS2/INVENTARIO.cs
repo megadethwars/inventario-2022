@@ -175,9 +175,11 @@ namespace COMPRAS2
             this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
         }
 
-        private void btnBusquedaAvanzada_Click(object sender, EventArgs e)
+        Devices devices;
+        private async void btnBusquedaAvanzada_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new BUSQUEDA_AVANZADA());
+            this.devices = devices;
+            Navigator.nextPage(new BUSQUEDA_AVANZADA(devices));
         }
     }
     
