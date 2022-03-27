@@ -278,7 +278,7 @@ namespace COMPRAS2
             // 
             // btAgregar
             // 
-            this.btAgregar.Location = new System.Drawing.Point(70, 753);
+            this.btAgregar.Location = new System.Drawing.Point(70, 726);
             this.btAgregar.Name = "btAgregar";
             this.btAgregar.Size = new System.Drawing.Size(75, 23);
             this.btAgregar.TabIndex = 92;
