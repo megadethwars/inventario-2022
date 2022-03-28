@@ -107,9 +107,11 @@ namespace COMPRAS2
             this.dgvUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
         }
 
+        Devices devices;
         private void btnBusquedaAvanzada_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new BUSQUEDA_AVANZADA_EMPLEADO());
+            this.devices = devices;
+            Navigator.nextPage(new BUSQUEDA_AVANZADA_EMPLEADO(devices));
         }
     }
 }

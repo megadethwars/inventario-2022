@@ -142,7 +142,6 @@ namespace COMPRAS2
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(426, 26);
             this.txtCodigo.TabIndex = 152;
-            this.txtCodigo.Text = "Introduzca el Codigo";
             // 
             // txtNombre
             // 
@@ -156,7 +155,6 @@ namespace COMPRAS2
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(426, 26);
             this.txtNombre.TabIndex = 151;
-            this.txtNombre.Text = "Introduzca el Nombre";
             // 
             // lblCodigo
             // 

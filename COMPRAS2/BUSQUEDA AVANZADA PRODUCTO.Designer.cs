@@ -77,9 +77,6 @@ namespace COMPRAS2
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(426, 26);
             this.txtMarca.TabIndex = 48;
-            this.txtMarca.Text = "Introduzca la Marca";
-            this.txtMarca.Click += new System.EventHandler(this.txtMarca_Click);
-            //this.txtMarca.Leave += new System.EventHandler(this.txtMarca_Leave);
             // 
             // lblProducto
             // 
@@ -158,8 +155,6 @@ namespace COMPRAS2
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(426, 26);
             this.txtProducto.TabIndex = 45;
-            this.txtProducto.Text = "Introduzca el Producto";
-            this.txtProducto.Click += new System.EventHandler(this.txtProducto_Click);
             // 
             // txtModelo
             // 
@@ -173,8 +168,6 @@ namespace COMPRAS2
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(426, 26);
             this.txtModelo.TabIndex = 49;
-            this.txtModelo.Text = "Introduzca el Modelo";
-            this.txtModelo.Click += new System.EventHandler(this.txtModelo_Click);
             // 
             // txtSerie
             // 
@@ -188,8 +181,6 @@ namespace COMPRAS2
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(426, 26);
             this.txtSerie.TabIndex = 52;
-            this.txtSerie.Text = "Introduzca la Serie";
-            this.txtSerie.Click += new System.EventHandler(this.txtSerie_Click);
             // 
             // txtCodigo
             // 
@@ -203,8 +194,6 @@ namespace COMPRAS2
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(426, 26);
             this.txtCodigo.TabIndex = 54;
-            this.txtCodigo.Text = "Introduzca el Codigo";
-            this.txtCodigo.Click += new System.EventHandler(this.txtCodigo_Click);
             // 
             // txtBUSCADOR
             // 

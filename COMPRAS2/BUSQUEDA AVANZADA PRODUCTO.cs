@@ -121,45 +121,6 @@ namespace COMPRAS2
             int status = await Estatus();
             int lugars = await Lugares();
         }
-
-        private void txtProducto_Click(object sender, EventArgs e)
-        {
-            if (txtProducto.Text == "Introduzca el Producto")
-            {
-                txtProducto.Clear();
-            }
-        }
         
-        private void txtCodigo_Click(object sender, EventArgs e)
-        {
-            if (txtCodigo.Text == "Introduzca el Codigo")
-            {
-                txtCodigo.Clear();
-            }
-        }
-        
-        private void txtMarca_Click(object sender, EventArgs e)
-        {
-            if (txtMarca.Text == "Introduzca la Marca")
-            {
-                txtMarca.Clear();
-            }
-        }
-       
-        private void txtModelo_Click(object sender, EventArgs e)
-        {
-            if (txtModelo.Text == "Introduzca el Modelo")
-            {
-                txtModelo.Clear();
-            }
-        }
-        
-        private void txtSerie_Click(object sender, EventArgs e)
-        {
-            if (txtSerie.Text == "Introduzca la Serie")
-            {
-                txtSerie.Clear();
-            }
-        }
     }
 }
