@@ -18,16 +18,7 @@ namespace COMPRAS2
             InitializeComponent();
             this.salida = salida;
         }
-
-        private void btBack_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btAceptar_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void CarritoSalida_Load(object sender, EventArgs e)
         {

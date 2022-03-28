@@ -17,6 +17,9 @@ namespace COMPRAS2
     {
         List<Tuple<Int32, String>> listaEstatus;
         List<Tuple<Int32, String>> listaLugares;
+        int lugarid = 0;
+        int statusid = 0;
+        List<Devices> devices;
 
         public BUSQUEDA_AVANZADA(Devices devices)
         {
@@ -121,6 +124,86 @@ namespace COMPRAS2
             int status = await Estatus();
             int lugars = await Lugares();
         }
+
         
+        public async void busqueda()
+        {
+            
+            QueryDevice devicequery = new QueryDevice();
+            
+            if (txtProducto.Text != "")
+            {
+                devicequery.producto = txtProducto.Text;              
+            }
+
+            if (txtCodigo.Text != "")
+            {
+                devicequery.codigo = txtCodigo.Text;
+            }
+
+            if (txtMarca.Text != "") 
+            {
+                devicequery.marca = txtMarca.Text;
+            }
+
+            if (txtModelo.Text != "")
+            {
+                devicequery.modelo = txtModelo.Text;
+            }
+
+            if (txtSerie.Text != "")
+            {
+                devicequery.serie = txtSerie.Text;
+            }
+
+            string json = JsonConvert.SerializeObject(devicequery,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var url = HttpMethods.url + "dispositivos/query";
+            StatusMessage statusmessage = await HttpMethods.Post(url, json);
+
+            if (statusmessage.statuscode == 500)
+            {
+                MessageBox.Show("Error interno en el servidor");
+            }
+
+            if (statusmessage.statuscode == 409)
+            {
+                MessageBox.Show("Ocurrio un conflicto");
+            }
+
+            if (statusmessage.statuscode == 404)
+            {
+                MessageBox.Show("recurso NO encontrado");
+            }
+
+            if (statusmessage.statuscode == 200)
+            {
+                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+
+                dgvInventario.DataSource = devices;
+
+                this.dgvInventario.Columns["lugar"].Visible = false;
+                this.dgvInventario.Columns["lugarId"].Visible = false;
+                this.dgvInventario.Columns["status"].Visible = false;
+                this.dgvInventario.Columns["statusId"].Visible = false;
+                this.dgvInventario.Columns["Compra"].Visible = false;
+                this.dgvInventario.Columns["Descompostura"].Visible = false;
+                this.dgvInventario.Columns["Foto"].Visible = false;
+                this.dgvInventario.Columns["IdMov"].Visible = false;
+                this.dgvInventario.Columns["Observaciones"].Visible = false;
+                this.dgvInventario.Columns["Origen"].Visible = false;
+                this.dgvInventario.Columns["Pertenece"].Visible = false;
+                this.dgvInventario.Columns["Proveedor"].Visible = false;
+                this.dgvInventario.Columns["Costo"].Visible = false;
+                this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+
+            }
+
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            busqueda();
+        }
     }
 }
