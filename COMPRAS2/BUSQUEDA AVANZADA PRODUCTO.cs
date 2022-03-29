@@ -35,6 +35,7 @@ namespace COMPRAS2
 
         private async Task<int> Estatus()
         {
+            int idLugares = 0;
             try
             {
                 var url = HttpMethods.url + "statusDevices";
@@ -58,6 +59,8 @@ namespace COMPRAS2
                 }
 
                 var estatus = JsonConvert.DeserializeObject<List<StatusDevices>>(statusmessage.data);
+
+                listaEstatus.Add(Tuple.Create<Int32, String>(0, "ninguno"));
 
                 for (int x = 0; x < estatus.Count; x++)
                 {
@@ -101,7 +104,7 @@ namespace COMPRAS2
                 }
 
                 var lugares = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
-
+                listaLugares.Add(Tuple.Create<Int32, String>(0, "ninguno"));
                 for (int x = 0; x < lugares.Count; x++)
                 {
                     listaLugares.Add(Tuple.Create<Int32, String>(lugares[x].id, lugares[x].lugar));
@@ -128,7 +131,9 @@ namespace COMPRAS2
         
         public async void busqueda()
         {
-            
+            int idLugares = 0;
+            int idEstatus = 0;
+
             QueryDevice devicequery = new QueryDevice();
             
             if (txtProducto.Text != "")
@@ -156,6 +161,36 @@ namespace COMPRAS2
                 devicequery.serie = txtSerie.Text;
             }
 
+            if (cbLugares.SelectedItem != null)
+            {
+                var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
+                idLugares = idLugarestuple.Item1;
+                if(idLugares != 0)
+                {
+                    devicequery.lugarId = idLugares;
+                }               
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun estatus");
+                return;
+            }
+
+            if (cbEstatus.SelectedItem != null)
+            {
+                var idEstatustuple = (Tuple<int, string>)cbEstatus.SelectedItem;
+                idEstatus = idEstatustuple.Item1;
+                if (idEstatus != 0)
+                {
+                    devicequery.statusId = idEstatus;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun estatus");
+                return;
+            }
+
             string json = JsonConvert.SerializeObject(devicequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
             var url = HttpMethods.url + "dispositivos/query";
@@ -171,6 +206,11 @@ namespace COMPRAS2
                 MessageBox.Show("Ocurrio un conflicto");
             }
 
+            if (statusmessage.statuscode == 400)
+            {
+                MessageBox.Show("No hay campos seleccionados a consultar");                
+            }
+
             if (statusmessage.statuscode == 404)
             {
                 MessageBox.Show("recurso NO encontrado");
@@ -180,8 +220,24 @@ namespace COMPRAS2
             {
                 devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-                dgvInventario.DataSource = devices;
+                if(devices.Count == 0)
+                {                
+                     MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
+                     dgvInventario.DataSource = null;
+                    return;
+                }
 
+                for (int x = 0; x < devices.Count; x++)
+                {
+                    Lugares lugar = devices[x].lugar;
+                    devices[x].Lugar_Actual = lugar.lugar;
+
+                    StatusDevices status = devices[x].status;
+                    devices[x].StatusActual = status.descripcion;
+                }
+                
+                dgvInventario.DataSource = devices;
+                
                 this.dgvInventario.Columns["lugar"].Visible = false;
                 this.dgvInventario.Columns["lugarId"].Visible = false;
                 this.dgvInventario.Columns["status"].Visible = false;
@@ -204,6 +260,32 @@ namespace COMPRAS2
         private void btnOK_Click(object sender, EventArgs e)
         {
             busqueda();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            dgvInventario.DataSource = null;
+            this.txtProducto.Text = null;
+            this.txtCodigo.Text = null;
+            this.txtMarca.Text = null;
+            this.txtModelo.Text = null;
+            this.txtSerie.Text = null;
+        }
+
+        private void dgvInventario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow cell = dgvInventario.Rows[e.RowIndex];
+                Devices data = (Devices)cell.DataBoundItem;
+
+                Navigator.nextPage(new DETALLES_DEL_PRODUCTO(data));
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
     }
 }

@@ -27,12 +27,7 @@ namespace COMPRAS2
             listaEstatus = new List<Tuple<int, string>>();
             listaLugares = new List<Tuple<int, string>>();
             id = devices.id;
-        }
-        /*
-        public EDITAR_PRODUCTO()
-        {
-            InitializeComponent();
-        }*/
+        }       
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -191,7 +186,7 @@ namespace COMPRAS2
                 MessageBox.Show("No se ha seleccionado ningun estatus");
                 return;
             }
-            devicesUpdate.lugarId = idLugares;
+            
 
             if (cbEstatus.SelectedItem != null)
             {
