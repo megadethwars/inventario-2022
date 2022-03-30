@@ -38,9 +38,8 @@ namespace COMPRAS2
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
-            this.btSalida = new System.Windows.Forms.Button();
-            this.btRecepcion = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSalida = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.SuspendLayout();
@@ -171,27 +170,6 @@ namespace COMPRAS2
             this.dgvHistorial.Size = new System.Drawing.Size(1230, 561);
             this.dgvHistorial.TabIndex = 45;
             // 
-            // btSalida
-            // 
-            this.btSalida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btSalida.Location = new System.Drawing.Point(20, 803);
-            this.btSalida.Name = "btSalida";
-            this.btSalida.Size = new System.Drawing.Size(121, 37);
-            this.btSalida.TabIndex = 46;
-            this.btSalida.Text = "Salida";
-            this.btSalida.UseVisualStyleBackColor = true;
-            this.btSalida.Click += new System.EventHandler(this.btSalida_Click);
-            // 
-            // btRecepcion
-            // 
-            this.btRecepcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btRecepcion.Location = new System.Drawing.Point(219, 803);
-            this.btRecepcion.Name = "btRecepcion";
-            this.btRecepcion.Size = new System.Drawing.Size(139, 37);
-            this.btRecepcion.TabIndex = 47;
-            this.btRecepcion.Text = "Recepcion";
-            this.btRecepcion.UseVisualStyleBackColor = true;
-            // 
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -212,15 +190,35 @@ namespace COMPRAS2
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
+            // btnSalida
+            // 
+            this.btnSalida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSalida.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalida.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnSalida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalida.FlatAppearance.BorderSize = 0;
+            this.btnSalida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnSalida.Location = new System.Drawing.Point(20, 810);
+            this.btnSalida.Name = "btnSalida";
+            this.btnSalida.Size = new System.Drawing.Size(114, 39);
+            this.btnSalida.TabIndex = 50;
+            this.btnSalida.Text = "SALIDA";
+            this.btnSalida.UseVisualStyleBackColor = false;
+            this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
+            // 
             // HIST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnSalida);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btRecepcion);
-            this.Controls.Add(this.btSalida);
             this.Controls.Add(this.dgvHistorial);
             this.Controls.Add(this.btnBUSQUEDAAVANZADA);
             this.Controls.Add(this.lblHISTORIAL);
@@ -247,8 +245,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblHISTORIAL;
         private System.Windows.Forms.Button btnBUSQUEDAAVANZADA;
         private System.Windows.Forms.DataGridView dgvHistorial;
-        private System.Windows.Forms.Button btSalida;
-        private System.Windows.Forms.Button btRecepcion;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnSalida;
     }
 }
