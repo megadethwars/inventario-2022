@@ -50,7 +50,7 @@ namespace COMPRAS2
             this.lblLugares = new System.Windows.Forms.Label();
             this.lblEstatus = new System.Windows.Forms.Label();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -326,26 +326,26 @@ namespace COMPRAS2
             this.dgvInventario.TabIndex = 145;
             this.dgvInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellClick);
             // 
-            // btnEditar
+            // btnLimpiar
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEditar.Location = new System.Drawing.Point(1146, 22);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(111, 39);
-            this.btnEditar.TabIndex = 146;
-            this.btnEditar.Text = "LIMPIAR";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnLimpiar.Location = new System.Drawing.Point(1146, 22);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(111, 39);
+            this.btnLimpiar.TabIndex = 146;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // BUSQUEDA_AVANZADA
             // 
@@ -353,7 +353,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
-            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.dgvInventario);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.lblLugares);
@@ -402,6 +402,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblLugares;
         private System.Windows.Forms.Label lblEstatus;
         private System.Windows.Forms.DataGridView dgvInventario;
-        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

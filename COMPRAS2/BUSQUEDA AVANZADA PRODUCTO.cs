@@ -262,7 +262,7 @@ namespace COMPRAS2
             busqueda();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
             dgvInventario.DataSource = null;
             this.txtProducto.Text = null;
