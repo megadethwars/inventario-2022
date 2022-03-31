@@ -15,8 +15,8 @@ namespace COMPRAS2.modelos
         public int usuarioId { get; set; }
         [DefaultValue(0)]
         public int LugarId { get; set; }
-        [DefaultValue(0)]
-        public int idMovimiento { get; set; }
+        [DefaultValue(null)]
+        public string idMovimiento { get; set; }
         [DefaultValue(null)]
         public string comentarios { get; set; }
         [DefaultValue(0)]
@@ -28,11 +28,16 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string foto2 { get; set; }
 
-  
+        [DefaultValue(null)]
         public DateTime? fechaAlta = null;
 
-
+        [DefaultValue(null)]
         public DateTime? fechaUltimaModificacion = null;
+
+        [DefaultValue(null)]
+        public Devices dispositivo;
+
+        //public User usuario;
 
 
 

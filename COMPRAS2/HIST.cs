@@ -1,4 +1,6 @@
-﻿using COMPRAS2.servicios;
+﻿using COMPRAS2.modelos;
+using COMPRAS2.servicios;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +44,19 @@ namespace COMPRAS2
         {
             Navigator.nextPage(new SALIDA());
         }
-        
+
+        private async void HIST_Load(object sender, EventArgs e)
+        {
+            var url = HttpMethods.url + "movimientos";
+            StatusMessage statusmessage = await HttpMethods.get(url);
+
+            if (statusmessage.statuscode != 200)
+            {
+                return;
+            }
+
+            List<Movimientos> devices = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+            dgvHistorial.DataSource = devices;
+        }
     }
 }
