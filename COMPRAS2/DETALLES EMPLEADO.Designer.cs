@@ -67,9 +67,9 @@ namespace COMPRAS2
             this.INVENTARIOTITLE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.INVENTARIOTITLE.Location = new System.Drawing.Point(560, 30);
             this.INVENTARIOTITLE.Name = "INVENTARIOTITLE";
-            this.INVENTARIOTITLE.Size = new System.Drawing.Size(215, 42);
+            this.INVENTARIOTITLE.Size = new System.Drawing.Size(255, 42);
             this.INVENTARIOTITLE.TabIndex = 20;
-            this.INVENTARIOTITLE.Text = "DETALLES EMPLEADO";
+            this.INVENTARIOTITLE.Text = "DETALLES DEL EMPLEADO";
             // 
             // lblNombreDelEmpleado
             // 
@@ -297,9 +297,9 @@ namespace COMPRAS2
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnEliminar.Location = new System.Drawing.Point(226, 799);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(160, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(183, 39);
             this.btnEliminar.TabIndex = 86;
-            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.Text = "ELIMINAR EMPLEADOS";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // bTNBack

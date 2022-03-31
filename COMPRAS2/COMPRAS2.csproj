@@ -122,6 +122,12 @@
     <Compile Include="DETALLES EMPLEADO.Designer.cs">
       <DependentUpon>DETALLES EMPLEADO.cs</DependentUpon>
     </Compile>
+    <Compile Include="DETALLES HISTORIAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DETALLES HISTORIAL.Designer.cs">
+      <DependentUpon>DETALLES HISTORIAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="DETALLES REPORTE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DETALLES EMPLEADO.resx">
       <DependentUpon>DETALLES EMPLEADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DETALLES HISTORIAL.resx">
+      <DependentUpon>DETALLES HISTORIAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DETALLES REPORTE.resx">
       <DependentUpon>DETALLES REPORTE.cs</DependentUpon>
