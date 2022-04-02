@@ -41,6 +41,9 @@ namespace COMPRAS2.modelos
 
 
         [DefaultValue(null)]
+        public string codigo_Actual { get; set; }
+
+        [DefaultValue(null)]
         public string dispositivo_Actual { get; set; }
 
         [DefaultValue(null)]
@@ -52,6 +55,13 @@ namespace COMPRAS2.modelos
 
         [DefaultValue(null)]
         public User usuario { get; set; }
+
+
+        [DefaultValue(null)]
+        public string tipo_Actual { get; set; }
+
+        [DefaultValue(null)]
+        public TipoMovimiento tipoMovimiento { get; set; }
 
     }
 }
