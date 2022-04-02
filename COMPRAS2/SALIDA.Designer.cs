@@ -48,51 +48,51 @@ namespace COMPRAS2
             this.label3 = new System.Windows.Forms.Label();
             this.lbCantitad = new System.Windows.Forms.Label();
             this.lbdesc = new System.Windows.Forms.Label();
-            this.btAgregar = new System.Windows.Forms.Button();
+            this.btnAgregarCarrito = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             this.SuspendLayout();
             // 
             // mod
             // 
             this.mod.AutoSize = true;
-            this.mod.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mod.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.mod.Location = new System.Drawing.Point(630, 304);
             this.mod.Name = "mod";
-            this.mod.Size = new System.Drawing.Size(80, 32);
+            this.mod.Size = new System.Drawing.Size(139, 31);
             this.mod.TabIndex = 76;
             this.mod.Text = "MODELO:";
             // 
             // lbS
             // 
             this.lbS.AutoSize = true;
-            this.lbS.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbS.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbS.Location = new System.Drawing.Point(64, 304);
             this.lbS.Name = "lbS";
-            this.lbS.Size = new System.Drawing.Size(62, 32);
+            this.lbS.Size = new System.Drawing.Size(104, 31);
             this.lbS.TabIndex = 75;
             this.lbS.Text = "SERIE:";
             // 
             // lbm
             // 
             this.lbm.AutoSize = true;
-            this.lbm.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbm.Location = new System.Drawing.Point(630, 211);
             this.lbm.Name = "lbm";
-            this.lbm.Size = new System.Drawing.Size(71, 32);
+            this.lbm.Size = new System.Drawing.Size(120, 31);
             this.lbm.TabIndex = 72;
             this.lbm.Text = "MARCA:";
             // 
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblProducto.Location = new System.Drawing.Point(64, 211);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(83, 32);
+            this.lblProducto.Size = new System.Drawing.Size(141, 31);
             this.lblProducto.TabIndex = 71;
             this.lblProducto.Text = "NOMBRE:";
             // 
@@ -114,11 +114,11 @@ namespace COMPRAS2
             // 
             this.lblSALIDA.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSALIDA.AutoSize = true;
-            this.lblSALIDA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSALIDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblSALIDA.Location = new System.Drawing.Point(560, 30);
             this.lblSALIDA.Name = "lblSALIDA";
-            this.lblSALIDA.Size = new System.Drawing.Size(84, 42);
+            this.lblSALIDA.Size = new System.Drawing.Size(139, 39);
             this.lblSALIDA.TabIndex = 65;
             this.lblSALIDA.Text = "SALIDA";
             // 
@@ -169,122 +169,133 @@ namespace COMPRAS2
             // lbd
             // 
             this.lbd.AutoSize = true;
-            this.lbd.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbd.Location = new System.Drawing.Point(64, 557);
             this.lbd.Name = "lbd";
-            this.lbd.Size = new System.Drawing.Size(208, 32);
+            this.lbd.Size = new System.Drawing.Size(383, 31);
             this.lbd.TabIndex = 82;
             this.lbd.Text = "OBSERVACIONES PREVIAS:";
             // 
             // or
             // 
             this.or.AutoSize = true;
-            this.or.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.or.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.or.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.or.Location = new System.Drawing.Point(64, 427);
             this.or.Name = "or";
-            this.or.Size = new System.Drawing.Size(97, 32);
+            this.or.Size = new System.Drawing.Size(175, 31);
             this.or.TabIndex = 79;
             this.or.Text = "ORIGEN DE:";
             // 
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbNombre.Location = new System.Drawing.Point(245, 211);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(88, 32);
+            this.lbNombre.Size = new System.Drawing.Size(137, 31);
             this.lbNombre.TabIndex = 83;
             this.lbNombre.Text = "Por definir";
             // 
             // lbMarca
             // 
             this.lbMarca.AutoSize = true;
-            this.lbMarca.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbMarca.Location = new System.Drawing.Point(843, 211);
             this.lbMarca.Name = "lbMarca";
-            this.lbMarca.Size = new System.Drawing.Size(88, 32);
+            this.lbMarca.Size = new System.Drawing.Size(137, 31);
             this.lbMarca.TabIndex = 84;
             this.lbMarca.Text = "Por definir";
             // 
             // lbSerie
             // 
             this.lbSerie.AutoSize = true;
-            this.lbSerie.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbSerie.Location = new System.Drawing.Point(245, 304);
             this.lbSerie.Name = "lbSerie";
-            this.lbSerie.Size = new System.Drawing.Size(88, 32);
+            this.lbSerie.Size = new System.Drawing.Size(137, 31);
             this.lbSerie.TabIndex = 85;
             this.lbSerie.Text = "Por definir";
             // 
             // lbOrigen
             // 
             this.lbOrigen.AutoSize = true;
-            this.lbOrigen.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOrigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOrigen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbOrigen.Location = new System.Drawing.Point(245, 427);
             this.lbOrigen.Name = "lbOrigen";
-            this.lbOrigen.Size = new System.Drawing.Size(88, 32);
+            this.lbOrigen.Size = new System.Drawing.Size(137, 31);
             this.lbOrigen.TabIndex = 87;
             this.lbOrigen.Text = "Por definir";
             // 
             // lbModelo
             // 
             this.lbModelo.AutoSize = true;
-            this.lbModelo.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbModelo.Location = new System.Drawing.Point(843, 304);
             this.lbModelo.Name = "lbModelo";
-            this.lbModelo.Size = new System.Drawing.Size(88, 32);
+            this.lbModelo.Size = new System.Drawing.Size(137, 31);
             this.lbModelo.TabIndex = 88;
             this.lbModelo.Text = "Por definir";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.label3.Location = new System.Drawing.Point(630, 415);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 32);
+            this.label3.Size = new System.Drawing.Size(163, 31);
             this.label3.TabIndex = 89;
             this.label3.Text = "CANTIDAD:";
             // 
             // lbCantitad
             // 
             this.lbCantitad.AutoSize = true;
-            this.lbCantitad.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantitad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCantitad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbCantitad.Location = new System.Drawing.Point(843, 415);
             this.lbCantitad.Name = "lbCantitad";
-            this.lbCantitad.Size = new System.Drawing.Size(88, 32);
+            this.lbCantitad.Size = new System.Drawing.Size(137, 31);
             this.lbCantitad.TabIndex = 90;
             this.lbCantitad.Text = "Por definir";
             // 
             // lbdesc
             // 
             this.lbdesc.AutoSize = true;
-            this.lbdesc.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbdesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbdesc.Location = new System.Drawing.Point(64, 638);
             this.lbdesc.Name = "lbdesc";
-            this.lbdesc.Size = new System.Drawing.Size(88, 32);
+            this.lbdesc.Size = new System.Drawing.Size(137, 31);
             this.lbdesc.TabIndex = 91;
             this.lbdesc.Text = "Por definir";
             // 
-            // btAgregar
+            // btnAgregarCarrito
             // 
-            this.btAgregar.Location = new System.Drawing.Point(1165, 740);
-            this.btAgregar.Name = "btAgregar";
-            this.btAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btAgregar.TabIndex = 92;
-            this.btAgregar.Text = "Agregar";
-            this.btAgregar.UseVisualStyleBackColor = true;
-            this.btAgregar.Click += new System.EventHandler(this.btAgregar_Click);
+            this.btnAgregarCarrito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAgregarCarrito.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarCarrito.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnAgregarCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregarCarrito.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarCarrito.FlatAppearance.BorderSize = 0;
+            this.btnAgregarCarrito.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCarrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnAgregarCarrito.Location = new System.Drawing.Point(1074, 724);
+            this.btnAgregarCarrito.Name = "btnAgregarCarrito";
+            this.btnAgregarCarrito.Size = new System.Drawing.Size(175, 39);
+            this.btnAgregarCarrito.TabIndex = 93;
+            this.btnAgregarCarrito.Text = "AGREGAR AL CARRITO";
+            this.btnAgregarCarrito.UseVisualStyleBackColor = false;
+            this.btnAgregarCarrito.Click += new System.EventHandler(this.btnAgregarCarrito_Click);
             // 
             // SALIDA
             // 
@@ -292,7 +303,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
-            this.Controls.Add(this.btAgregar);
+            this.Controls.Add(this.btnAgregarCarrito);
             this.Controls.Add(this.lbdesc);
             this.Controls.Add(this.lbCantitad);
             this.Controls.Add(this.label3);
@@ -341,6 +352,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbCantitad;
         private System.Windows.Forms.Label lbdesc;
-        private System.Windows.Forms.Button btAgregar;
+        private System.Windows.Forms.Button btnAgregarCarrito;
     }
 }
