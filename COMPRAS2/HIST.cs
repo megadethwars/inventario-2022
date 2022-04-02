@@ -15,6 +15,7 @@ namespace COMPRAS2
 {
     public partial class HIST : Form
     {
+        
         public HIST()
         {
             InitializeComponent();
@@ -55,8 +56,29 @@ namespace COMPRAS2
                 return;
             }
 
-            List<Movimientos> devices = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
-            dgvHistorial.DataSource = devices;
+            List<Movimientos> hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+
+            for (int x = 0; x < hist.Count; x++)
+            {
+                Devices dispositivo = hist[x].dispositivo;
+                hist[x].dispositivo_Actual = dispositivo.producto;
+
+                User usuario = hist[x].usuario;
+                hist[x].nombre_Actual = usuario.nombre;
+            }
+
+            dgvHistorial.DataSource = hist;
+
+            this.dgvHistorial.Columns["foto"].Visible = false;
+            this.dgvHistorial.Columns["fechaUltimaModificacion"].Visible = false;
+            this.dgvHistorial.Columns["foto2"].Visible = false;
+            this.dgvHistorial.Columns["dispositivoId"].Visible = false;
+            this.dgvHistorial.Columns["usuarioId"].Visible = false;
+            this.dgvHistorial.Columns["LugarId"].Visible = false;
+            this.dgvHistorial.Columns["comentarios"].Visible = false;
+            this.dgvHistorial.Columns["tipoMovId"].Visible = false;
+            this.dgvHistorial.Columns["dispositivo"].Visible = false;
+            this.dgvHistorial.Columns["usuario"].Visible = false;
         }
     }
 }

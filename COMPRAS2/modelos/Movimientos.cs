@@ -11,36 +11,47 @@ namespace COMPRAS2.modelos
     {
         [DefaultValue(0)]
         public int dispositivoId { get; set; }
+
         [DefaultValue(0)]
         public int usuarioId { get; set; }
+
         [DefaultValue(0)]
         public int LugarId { get; set; }
+
         [DefaultValue(null)]
         public string idMovimiento { get; set; }
+
         [DefaultValue(null)]
         public string comentarios { get; set; }
+
         [DefaultValue(0)]
         public int tipoMovId { get; set; }
-        [DefaultValue(null)]
 
+        [DefaultValue(null)]       
         public string foto { get; set; }
-
+        
         [DefaultValue(null)]
         public string foto2 { get; set; }
 
         [DefaultValue(null)]
-        public DateTime? fechaAlta = null;
+        public DateTime? fechaAlta { get; set; }
 
         [DefaultValue(null)]
-        public DateTime? fechaUltimaModificacion = null;
+        public DateTime? fechaUltimaModificacion { get; set; }
+
 
         [DefaultValue(null)]
-        public Devices dispositivo;
+        public string dispositivo_Actual { get; set; }
 
-        //public User usuario;
+        [DefaultValue(null)]
+        public Devices dispositivo { get; set; }
 
 
+        [DefaultValue(null)]
+        public string nombre_Actual { get; set; }
 
+        [DefaultValue(null)]
+        public User usuario { get; set; }
 
     }
 }
