@@ -337,9 +337,9 @@ namespace COMPRAS2
             this.btnELIMINAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnELIMINAR.Location = new System.Drawing.Point(209, 785);
             this.btnELIMINAR.Name = "btnELIMINAR";
-            this.btnELIMINAR.Size = new System.Drawing.Size(114, 39);
+            this.btnELIMINAR.Size = new System.Drawing.Size(163, 39);
             this.btnELIMINAR.TabIndex = 66;
-            this.btnELIMINAR.Text = "ELIMINAR";
+            this.btnELIMINAR.Text = "ELIMINAR PRODUCTO";
             this.btnELIMINAR.UseVisualStyleBackColor = false;
             // 
             // lblDProducto

@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace COMPRAS2
 {
-    public partial class CarritoSalida : Form
+    public partial class DETALLES_HISTORIAL : Form
     {
-        SALIDA salida;
-        public CarritoSalida(SALIDA salida)
+        public DETALLES_HISTORIAL()
         {
             InitializeComponent();
-            this.salida = salida;
-        }
-        
-
-        private void CarritoSalida_Load(object sender, EventArgs e)
-        {
-            //instanciate lista
         }
     }
 }

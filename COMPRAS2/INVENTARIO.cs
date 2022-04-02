@@ -20,7 +20,7 @@ namespace COMPRAS2
         string url = "https://avsinventoryswagger25.azurewebsites.net/api/v1/";
 
         MENU mainmenu;
-
+        Devices devices;
         public INVENTARIO()
         {
             InitializeComponent();  
@@ -175,7 +175,6 @@ namespace COMPRAS2
             this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
         }
 
-        Devices devices;
         private async void btnBusquedaAvanzada_Click(object sender, EventArgs e)
         {
             this.devices = devices;
