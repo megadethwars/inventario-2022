@@ -271,6 +271,9 @@
     <EmbeddedResource Include="BUSQUEDA AVANZADA REPORTE.resx">
       <DependentUpon>BUSQUEDA AVANZADA REPORTE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarritoSalida.resx">
+      <DependentUpon>CarritoSalida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DETALLES DEL PRODUCTO.resx">
       <DependentUpon>DETALLES DEL PRODUCTO.cs</DependentUpon>
     </EmbeddedResource>
