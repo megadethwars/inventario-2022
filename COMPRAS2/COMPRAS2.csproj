@@ -74,6 +74,12 @@
     <Compile Include="AJUSTES.Designer.cs">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUSQUEDA AVANZADA  HISTORIAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSQUEDA AVANZADA  HISTORIAL.Designer.cs">
+      <DependentUpon>BUSQUEDA AVANZADA  HISTORIAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUSQUEDA AVANZADA EMPLEADO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,12 @@
     </Compile>
     <Compile Include="DETALLES EMPLEADO.Designer.cs">
       <DependentUpon>DETALLES EMPLEADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DETALLES HISTORIAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DETALLES HISTORIAL.Designer.cs">
+      <DependentUpon>DETALLES HISTORIAL.cs</DependentUpon>
     </Compile>
     <Compile Include="DETALLES REPORTE.cs">
       <SubType>Form</SubType>
@@ -202,6 +214,7 @@
     </Compile>
     <Compile Include="modelos\Movimientos.cs" />
     <Compile Include="modelos\QueryDevice.cs" />
+    <Compile Include="modelos\QueryMovimientos.cs" />
     <Compile Include="modelos\QueryReporte.cs" />
     <Compile Include="modelos\CurrentUsers.cs" />
     <Compile Include="modelos\Devices.cs" />
@@ -262,6 +275,9 @@
     <EmbeddedResource Include="AJUSTES.resx">
       <DependentUpon>AJUSTES.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUSQUEDA AVANZADA  HISTORIAL.resx">
+      <DependentUpon>BUSQUEDA AVANZADA  HISTORIAL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUSQUEDA AVANZADA EMPLEADO.resx">
       <DependentUpon>BUSQUEDA AVANZADA EMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,11 +290,17 @@
     <EmbeddedResource Include="CarritoSalida.resx">
       <DependentUpon>CarritoSalida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmarSalida.resx">
+      <DependentUpon>ConfirmarSalida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DETALLES DEL PRODUCTO.resx">
       <DependentUpon>DETALLES DEL PRODUCTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DETALLES EMPLEADO.resx">
       <DependentUpon>DETALLES EMPLEADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DETALLES HISTORIAL.resx">
+      <DependentUpon>DETALLES HISTORIAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DETALLES REPORTE.resx">
       <DependentUpon>DETALLES REPORTE.cs</DependentUpon>
