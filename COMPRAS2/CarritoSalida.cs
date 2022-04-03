@@ -29,17 +29,31 @@ namespace COMPRAS2
         {
             for (int x = 0; x < movimientos.Count; x++)
             {
-
                 Devices producto = movimientos[x].dispositivo;
                 movimientos[x].dispositivo_Actual = producto.producto;
-
-                
+                movimientos[x].cantidad_Actual = producto.cantidad;
+                movimientos[x].codigo_Actual = producto.codigo;
             }
 
-            //instanciate lista
+            
             dgvCarritoSalida.DataSource = movimientos;
 
-            //this.dgvInventario.Columns["dispositivo"].Visible = false;
+            this.dgvCarritoSalida.Columns["dispositivo"].Visible = false;
+            this.dgvCarritoSalida.Columns["foto"].Visible = false;
+            this.dgvCarritoSalida.Columns["foto2"].Visible = false;
+            this.dgvCarritoSalida.Columns["comentarios"].Visible = false;
+            this.dgvCarritoSalida.Columns["LugarId"].Visible = false;
+            this.dgvCarritoSalida.Columns["comentarios"].Visible = false;
+            this.dgvCarritoSalida.Columns["usuario"].Visible = false;
+            this.dgvCarritoSalida.Columns["usuarioId"].Visible = false;
+            this.dgvCarritoSalida.Columns["idMovimiento"].Visible = false;
+            this.dgvCarritoSalida.Columns["fechaAlta"].Visible = false;
+            this.dgvCarritoSalida.Columns["tipoMovimiento"].Visible = false;
+            this.dgvCarritoSalida.Columns["fechaUltimaModificacion"].Visible = false;
+            this.dgvCarritoSalida.Columns["dispositivoId"].Visible = false;
+            this.dgvCarritoSalida.Columns["tipoMovId"].Visible = false;
+            this.dgvCarritoSalida.Columns["nombre_Actual"].Visible = false;
+            this.dgvCarritoSalida.Columns["tipo_Actual"].Visible = false;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
