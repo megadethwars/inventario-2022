@@ -173,6 +173,10 @@ namespace COMPRAS2
                 MessageBox.Show("No se ha seleccionado ningun lugar");
                 return;
             }
+
+
+
+
         }
     }
 }

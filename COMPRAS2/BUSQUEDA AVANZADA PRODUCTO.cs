@@ -172,7 +172,7 @@ namespace COMPRAS2
             }
             else
             {
-                MessageBox.Show("No se ha seleccionado ningun estatus");
+                MessageBox.Show("No se ha seleccionado ningun lugar");
                 return;
             }
 
