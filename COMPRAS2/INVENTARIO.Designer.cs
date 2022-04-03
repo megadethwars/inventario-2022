@@ -128,7 +128,7 @@ namespace COMPRAS2
             this.btnEditarMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarMovimientos.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEditarMovimientos.Location = new System.Drawing.Point(941, 728);
+            this.btnEditarMovimientos.Location = new System.Drawing.Point(1005, 728);
             this.btnEditarMovimientos.Name = "btnEditarMovimientos";
             this.btnEditarMovimientos.Size = new System.Drawing.Size(175, 39);
             this.btnEditarMovimientos.TabIndex = 38;
@@ -149,7 +149,7 @@ namespace COMPRAS2
             this.btnActualizarBDD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarBDD.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarBDD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizarBDD.Location = new System.Drawing.Point(579, 728);
+            this.btnActualizarBDD.Location = new System.Drawing.Point(643, 728);
             this.btnActualizarBDD.Name = "btnActualizarBDD";
             this.btnActualizarBDD.Size = new System.Drawing.Size(175, 39);
             this.btnActualizarBDD.TabIndex = 37;
@@ -170,7 +170,7 @@ namespace COMPRAS2
             this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizarProducto.Location = new System.Drawing.Point(760, 728);
+            this.btnActualizarProducto.Location = new System.Drawing.Point(824, 728);
             this.btnActualizarProducto.Name = "btnActualizarProducto";
             this.btnActualizarProducto.Size = new System.Drawing.Size(175, 39);
             this.btnActualizarProducto.TabIndex = 36;
@@ -193,9 +193,9 @@ namespace COMPRAS2
             this.btnSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnSALIDA.Location = new System.Drawing.Point(440, 728);
             this.btnSALIDA.Name = "btnSALIDA";
-            this.btnSALIDA.Size = new System.Drawing.Size(133, 39);
+            this.btnSALIDA.Size = new System.Drawing.Size(197, 39);
             this.btnSALIDA.TabIndex = 35;
-            this.btnSALIDA.Text = "SALIDA";
+            this.btnSALIDA.Text = "SALIDA DE PRODUCTOS";
             this.btnSALIDA.UseVisualStyleBackColor = false;
             this.btnSALIDA.Click += new System.EventHandler(this.btnSALIDA_Click);
             // 

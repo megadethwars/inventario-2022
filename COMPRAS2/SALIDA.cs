@@ -107,19 +107,21 @@ namespace COMPRAS2
             Movimientos movement = new Movimientos();
             movement.usuarioId = CurrentUsers.id;
             movement.dispositivoId = device.id;
-            movement.dispositivo = device;
-            
-            
+            movement.dispositivo = device;                        
             movement.tipoMovId = 1;
 
-            movimientos.Add(movement);
-            
+            movimientos.Add(movement);           
         }
         
 
         private void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
             Navigator.nextPage(new CarritoSalida(this));
+        }        
+
+        private void txtBUSCADOR_Click(object sender, EventArgs e)
+        {
+            txtBUSCADOR.Clear();
         }
     }
 }
