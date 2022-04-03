@@ -185,7 +185,38 @@ namespace COMPRAS2
             this.txtCodigo.Text = null;
         }
 
-        private async void busqueda() {
+        private async void busqueda() 
+        {
+            int idtipomov = 0;
+            int idstatus = 0;
+            int idlugars = 0;
+
+            QueryDevice histquery = new QueryDevice();
+
+            if (txtCodigo.Text != "")
+            {
+                histquery.codigo = txtCodigo.Text;
+            }
+
+            if (txtMovimiento.Text != "")
+            {
+                histquery.idMov = txtMovimiento.Text;
+            }
+            /*
+            if (cbLugares.SelectedItem != null)
+            {
+                var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
+                idLugares = idLugarestuple.Item1;
+                if (idLugares != 0)
+                {
+                    devicequery.lugarId = idLugares;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun lugar");
+                return;
+            }*/
 
             if (txtCodigo.Text != "") {
 
