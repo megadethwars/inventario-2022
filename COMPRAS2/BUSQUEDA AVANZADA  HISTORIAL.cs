@@ -180,7 +180,9 @@ namespace COMPRAS2
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            dgvBusquedaHistorial.DataSource = null;
+            this.txtMovimiento.Text = null;
+            this.txtCodigo.Text = null;
         }
 
         private async void busqueda() {
@@ -227,7 +229,7 @@ namespace COMPRAS2
                     if (devices.Count == 0)
                     {
                         MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
-                        dgvInventario.DataSource = null;
+                        dgvBusquedaHistorial.DataSource = null;
                         return;
                     }
 

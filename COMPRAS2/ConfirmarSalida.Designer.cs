@@ -29,26 +29,33 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmarSalida));
             this.lblConfirmarSalida = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.tbpass = new System.Windows.Forms.TextBox();
             this.cbLugares = new System.Windows.Forms.ComboBox();
-            this.bl1 = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.lblLugares = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btAceptar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblConfirmarSalida
             // 
             this.lblConfirmarSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblConfirmarSalida.AutoSize = true;
-            this.lblConfirmarSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblConfirmarSalida.Location = new System.Drawing.Point(560, 30);
             this.lblConfirmarSalida.Name = "lblConfirmarSalida";
-            this.lblConfirmarSalida.Size = new System.Drawing.Size(357, 39);
+            this.lblConfirmarSalida.Size = new System.Drawing.Size(202, 42);
             this.lblConfirmarSalida.TabIndex = 70;
             this.lblConfirmarSalida.Text = "CONFIRMAR SALIDA";
             // 
@@ -69,65 +76,144 @@ namespace COMPRAS2
             // 
             // tbUsuario
             // 
-            this.tbUsuario.Location = new System.Drawing.Point(540, 192);
+            this.tbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Location = new System.Drawing.Point(530, 200);
             this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(216, 20);
+            this.tbUsuario.Size = new System.Drawing.Size(216, 26);
             this.tbUsuario.TabIndex = 71;
             // 
             // tbpass
             // 
-            this.tbpass.Location = new System.Drawing.Point(540, 286);
+            this.tbpass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.tbpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbpass.Location = new System.Drawing.Point(530, 320);
             this.tbpass.Name = "tbpass";
-            this.tbpass.Size = new System.Drawing.Size(216, 20);
+            this.tbpass.Size = new System.Drawing.Size(216, 26);
             this.tbpass.TabIndex = 72;
             // 
             // cbLugares
             // 
+            this.cbLugares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbLugares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLugares.FormattingEnabled = true;
-            this.cbLugares.Location = new System.Drawing.Point(540, 390);
+            this.cbLugares.Location = new System.Drawing.Point(530, 440);
             this.cbLugares.Name = "cbLugares";
-            this.cbLugares.Size = new System.Drawing.Size(216, 21);
+            this.cbLugares.Size = new System.Drawing.Size(216, 28);
             this.cbLugares.TabIndex = 73;
             // 
-            // bl1
+            // btnOK
             // 
-            this.bl1.AutoSize = true;
-            this.bl1.ForeColor = System.Drawing.SystemColors.Control;
-            this.bl1.Location = new System.Drawing.Point(537, 157);
-            this.bl1.Name = "bl1";
-            this.bl1.Size = new System.Drawing.Size(43, 13);
-            this.bl1.TabIndex = 74;
-            this.bl1.Text = "Usuario";
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
+            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Location = new System.Drawing.Point(591, 789);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(98, 40);
+            this.btnOK.TabIndex = 168;
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // lblLugares
+            // 
+            this.lblLugares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLugares.AutoSize = true;
+            this.lblLugares.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblLugares.Location = new System.Drawing.Point(530, 150);
+            this.lblLugares.Name = "lblLugares";
+            this.lblLugares.Size = new System.Drawing.Size(83, 32);
+            this.lblLugares.TabIndex = 169;
+            this.lblLugares.Text = "USUARIO:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.label3.Location = new System.Drawing.Point(530, 270);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 32);
+            this.label3.TabIndex = 170;
+            this.label3.Text = "CONTRASEÑA:";
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(537, 252);
+            this.label1.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.label1.Location = new System.Drawing.Point(534, 390);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 75;
-            this.label1.Text = "Contraseña";
+            this.label1.Size = new System.Drawing.Size(157, 32);
+            this.label1.TabIndex = 172;
+            this.label1.Text = "LUGAR DE DESTINO:";
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(537, 348);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 13);
-            this.label2.TabIndex = 76;
-            this.label2.Text = "Lugar de destino";
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox1.Location = new System.Drawing.Point(378, 144);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 173;
+            this.pictureBox1.TabStop = false;
             // 
-            // btAceptar
+            // pictureBox2
             // 
-            this.btAceptar.Location = new System.Drawing.Point(540, 461);
-            this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(112, 38);
-            this.btAceptar.TabIndex = 77;
-            this.btAceptar.Text = "Aceptar";
-            this.btAceptar.UseVisualStyleBackColor = true;
-            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox2.Location = new System.Drawing.Point(378, 264);
+            this.pictureBox2.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 174;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox3.Location = new System.Drawing.Point(378, 384);
+            this.pictureBox3.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 175;
+            this.pictureBox3.TabStop = false;
             // 
             // ConfirmarSalida
             // 
@@ -135,10 +221,13 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.btAceptar);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bl1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblLugares);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.cbLugares);
             this.Controls.Add(this.tbpass);
             this.Controls.Add(this.tbUsuario);
@@ -148,6 +237,9 @@ namespace COMPRAS2
             this.Name = "ConfirmarSalida";
             this.Text = "ConfirmarSalida";
             this.Load += new System.EventHandler(this.ConfirmarSalida_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,9 +252,12 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.TextBox tbpass;
         private System.Windows.Forms.ComboBox cbLugares;
-        private System.Windows.Forms.Label bl1;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Label lblLugares;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btAceptar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

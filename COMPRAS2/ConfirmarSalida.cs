@@ -150,33 +150,32 @@ namespace COMPRAS2
             }
 
         }
+        
 
-        private async void btAceptar_Click(object sender, EventArgs e)
+        private async void btnOK_Click(object sender, EventArgs e)
         {
-            if (idlugar == 0) {
+            if (idlugar == 0)
+            {
                 MessageBox.Show("No se ha asignado algun lugar , intente de nuevo");
             }
 
             int statusUser = await Auth();
 
-            if (statusUser != 0) {
+            if (statusUser != 0)
+            {
                 return;
             }
 
             if (cbLugares.SelectedItem != null)
             {
                 var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
-                idlugar = idLugarestuple.Item1;           
+                idlugar = idLugarestuple.Item1;
             }
             else
             {
                 MessageBox.Show("No se ha seleccionado ningun lugar");
                 return;
             }
-
-
-
-
         }
     }
 }

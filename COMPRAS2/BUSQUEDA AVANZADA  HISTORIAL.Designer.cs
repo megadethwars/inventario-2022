@@ -39,7 +39,7 @@ namespace COMPRAS2
             this.lblLugares = new System.Windows.Forms.Label();
             this.cbEstatus = new System.Windows.Forms.ComboBox();
             this.cbLugares = new System.Windows.Forms.ComboBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtMovimiento = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -47,9 +47,9 @@ namespace COMPRAS2
             this.cbMovimiento = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dgvInventario = new System.Windows.Forms.DataGridView();
+            this.dgvBusquedaHistorial = new System.Windows.Forms.DataGridView();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusquedaHistorial)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHISTORIAL
@@ -153,18 +153,18 @@ namespace COMPRAS2
             this.cbLugares.TabIndex = 157;
             this.cbLugares.Text = "Seleccione el Lugar";
             // 
-            // txtCorreo
+            // txtMovimiento
             // 
-            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtMovimiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCorreo.Location = new System.Drawing.Point(750, 190);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(426, 26);
-            this.txtCorreo.TabIndex = 156;
+            this.txtMovimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtMovimiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMovimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtMovimiento.Location = new System.Drawing.Point(750, 190);
+            this.txtMovimiento.Name = "txtMovimiento";
+            this.txtMovimiento.Size = new System.Drawing.Size(426, 26);
+            this.txtMovimiento.TabIndex = 156;
             // 
             // txtCodigo
             // 
@@ -256,18 +256,18 @@ namespace COMPRAS2
             this.dateTimePicker1.Size = new System.Drawing.Size(420, 26);
             this.dateTimePicker1.TabIndex = 164;
             // 
-            // dgvInventario
+            // dgvBusquedaHistorial
             // 
-            this.dgvInventario.AllowUserToOrderColumns = true;
-            this.dgvInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvBusquedaHistorial.AllowUserToOrderColumns = true;
+            this.dgvBusquedaHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvInventario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBusquedaHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBusquedaHistorial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvBusquedaHistorial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            this.dgvBusquedaHistorial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBusquedaHistorial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvBusquedaHistorial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,26 +275,26 @@ namespace COMPRAS2
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvInventario.ColumnHeadersHeight = 45;
-            this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvInventario.EnableHeadersVisualStyles = false;
-            this.dgvInventario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvInventario.Location = new System.Drawing.Point(22, 342);
-            this.dgvInventario.Name = "dgvInventario";
-            this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvInventario.RowHeadersVisible = false;
+            this.dgvBusquedaHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBusquedaHistorial.ColumnHeadersHeight = 45;
+            this.dgvBusquedaHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvBusquedaHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvBusquedaHistorial.EnableHeadersVisualStyles = false;
+            this.dgvBusquedaHistorial.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dgvBusquedaHistorial.Location = new System.Drawing.Point(22, 342);
+            this.dgvBusquedaHistorial.Name = "dgvBusquedaHistorial";
+            this.dgvBusquedaHistorial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBusquedaHistorial.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventario.Size = new System.Drawing.Size(1235, 395);
-            this.dgvInventario.TabIndex = 165;
+            this.dgvBusquedaHistorial.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBusquedaHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBusquedaHistorial.Size = new System.Drawing.Size(1235, 421);
+            this.dgvBusquedaHistorial.TabIndex = 165;
             // 
             // btnLimpiar
             // 
@@ -324,7 +324,7 @@ namespace COMPRAS2
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.dgvInventario);
+            this.Controls.Add(this.dgvBusquedaHistorial);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -333,7 +333,7 @@ namespace COMPRAS2
             this.Controls.Add(this.lblLugares);
             this.Controls.Add(this.cbEstatus);
             this.Controls.Add(this.cbLugares);
-            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtMovimiento);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblCodigo);
@@ -344,7 +344,7 @@ namespace COMPRAS2
             this.Name = "BUSQUEDA_AVANZADA__HISTORIAL";
             this.Text = "BUSQUEDA_AVANZADA__HISTORIAL";
             this.Load += new System.EventHandler(this.BUSQUEDA_AVANZADA__HISTORIAL_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusquedaHistorial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,7 +359,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblLugares;
         private System.Windows.Forms.ComboBox cbEstatus;
         private System.Windows.Forms.ComboBox cbLugares;
-        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtMovimiento;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblCodigo;
@@ -367,7 +367,7 @@ namespace COMPRAS2
         private System.Windows.Forms.ComboBox cbMovimiento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dgvInventario;
+        private System.Windows.Forms.DataGridView dgvBusquedaHistorial;
         private System.Windows.Forms.Button btnLimpiar;
     }
 }
