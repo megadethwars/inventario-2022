@@ -83,6 +83,11 @@ namespace COMPRAS2
             {
                 devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
+                if (devices[0].cantidad == 0)
+                {
+                    MessageBox.Show("No hay dispositivos en stock, cantidad Insuficiente");
+                    return;
+                }
                 this.lbNombre.Text = devices[0].producto;
                 this.lbOrigen.Text = devices[0].origen;
                 this.lbSerie.Text = "N/A";
@@ -91,10 +96,7 @@ namespace COMPRAS2
                 this.lbdesc.Text = devices[0].descompostura;
 
                 //llenar
-                if (devices[0].cantidad == 0) {
-                    MessageBox.Show("No hay dispositivos en stock, cantidad Insuficiente");
-                    return;
-                }
+                
 
                 Agregar(devices[0]);
 
@@ -116,6 +118,10 @@ namespace COMPRAS2
 
         private void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
+            if (movimientos.Count == 0) {
+                MessageBox.Show("No hay productos para realizar una salida");
+                return;
+            }
             Navigator.nextPage(new CarritoSalida(this));
         }        
 
