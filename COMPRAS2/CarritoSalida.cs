@@ -14,7 +14,7 @@ namespace COMPRAS2
 {
     public partial class CarritoSalida : Form
     {
-        SALIDA salida;
+        public SALIDA salida;
         public List<Movimientos> movimientos;
         DataGridViewButtonColumn btnclm;
         public CarritoSalida(SALIDA salida)
@@ -137,7 +137,7 @@ namespace COMPRAS2
                 return;
             }
 
-
+            Navigator.nextPage(new ConfirmarSalida(this));
         }
     }
 }

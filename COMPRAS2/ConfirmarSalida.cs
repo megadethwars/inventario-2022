@@ -20,10 +20,14 @@ namespace COMPRAS2
 
         private int idlugar;
         private int idUsuario;
-
-        public ConfirmarSalida()
+        CarritoSalida carrito;
+        public string uniqueId;
+        public ConfirmarSalida(CarritoSalida carrito)
         {
             InitializeComponent();
+            this.carrito = carrito;
+            uniqueId = Guid.NewGuid().ToString("D");
+            listaLugares = new List<Tuple<Int32, String>>();
         }
 
         private async void ConfirmarSalida_Load(object sender, EventArgs e)
@@ -150,13 +154,87 @@ namespace COMPRAS2
             }
 
         }
+
+    
+
+        private async Task<int> sendMovementAsync() {
+
+            try
+            {
+
+                foreach (Movimientos movement in this.carrito.salida.movimientos) {
+
+                    //actualizar lugar del dispositivo
+
+
+                    movement.LugarId = idlugar;
+                    movement.usuarioId = idUsuario;
+                    movement.usuario = null;
+                    movement.dispositivo_Actual = null;
+                    movement.cantidad_Actual = 0;
+                    movement.codigo_Actual = null;
+                    movement.dispositivo = null;
+                    movement.idMovimiento = uniqueId;
+
+                    List<Movimientos> movimientos = new List<Movimientos>();
+                    movimientos.Add(movement);
+
+                    string json = JsonConvert.SerializeObject(movimientos,
+                    new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                    var url = HttpMethods.url + "movimientos";
+                    StatusMessage statusmessage = await HttpMethods.Post(url, json);
+
+                    if (statusmessage.statuscode == 409)
+                    {
+    
+                    }
+
+                    else if (statusmessage.statuscode == 500)
+                    {
+                        
+                    }
+                    else if (statusmessage.statuscode == 200)
+                    {
+                        
+                   
+                    }
+                    else if (statusmessage.statuscode == 404)
+                    {
+                        MessageBox.Show("error en el servicio, NO encontrado");
+
+                        
+                    }
+                    movimientos.Clear();
+                    movimientos = null;
+                }
+
+                return 0;
+            }
+            catch (Exception ex) {
+                return 10;
+            }
+        }
         
 
         private async void btnOK_Click(object sender, EventArgs e)
         {
+
+            if (cbLugares.SelectedItem != null)
+            {
+                var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
+                idlugar = idLugarestuple.Item1;
+        
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningun estatus");
+                return;
+            }
+
             if (idlugar == 0)
             {
                 MessageBox.Show("No se ha asignado algun lugar , intente de nuevo");
+                return;
             }
 
             int statusUser = await Auth();
@@ -176,6 +254,8 @@ namespace COMPRAS2
                 MessageBox.Show("No se ha seleccionado ningun lugar");
                 return;
             }
+
+            int statusmovements = await sendMovementAsync();
         }
     }
 }
