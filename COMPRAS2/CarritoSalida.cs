@@ -14,7 +14,7 @@ namespace COMPRAS2
 {
     public partial class CarritoSalida : Form
     {
-        SALIDA salida;
+        public SALIDA salida;
         public List<Movimientos> movimientos;
         DataGridViewButtonColumn btnclm;
         public CarritoSalida(SALIDA salida)
@@ -118,7 +118,7 @@ namespace COMPRAS2
                     //DataGridViewRow row = dgvCarritoSalida.Rows[e.RowIndex];
                     dgvCarritoSalida.Rows.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
 
-                    movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
+                    //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
                     this.salida.movimientos.RemoveAt(e.RowIndex);
                 }
                 catch (Exception ex)
@@ -128,6 +128,16 @@ namespace COMPRAS2
 
 
             }
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if (this.salida.movimientos.Count == 0) {
+                MessageBox.Show("No hay productos en el carrito");
+                return;
+            }
+
+            Navigator.nextPage(new ConfirmarSalida(this));
         }
     }
 }
