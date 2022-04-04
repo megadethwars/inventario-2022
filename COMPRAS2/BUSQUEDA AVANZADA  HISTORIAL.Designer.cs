@@ -37,7 +37,7 @@ namespace COMPRAS2
             this.btnOK = new System.Windows.Forms.Button();
             this.lblEstatus = new System.Windows.Forms.Label();
             this.lblLugares = new System.Windows.Forms.Label();
-            this.cbEstatus = new System.Windows.Forms.ComboBox();
+            this.cbUsuario = new System.Windows.Forms.ComboBox();
             this.cbLugares = new System.Windows.Forms.ComboBox();
             this.txtMovimiento = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -123,20 +123,20 @@ namespace COMPRAS2
             this.lblLugares.TabIndex = 159;
             this.lblLugares.Text = "USUARIO:";
             // 
-            // cbEstatus
+            // cbUsuario
             // 
-            this.cbEstatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbEstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.cbEstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.cbEstatus.FormattingEnabled = true;
-            this.cbEstatus.Location = new System.Drawing.Point(160, 190);
-            this.cbEstatus.Name = "cbEstatus";
-            this.cbEstatus.Size = new System.Drawing.Size(426, 28);
-            this.cbEstatus.TabIndex = 158;
-            this.cbEstatus.Text = "Seleccione el Lugar";
+            this.cbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbUsuario.FormattingEnabled = true;
+            this.cbUsuario.Location = new System.Drawing.Point(160, 124);
+            this.cbUsuario.Name = "cbUsuario";
+            this.cbUsuario.Size = new System.Drawing.Size(426, 28);
+            this.cbUsuario.TabIndex = 158;
+            this.cbUsuario.Text = "Seleccione el Usuario";
             // 
             // cbLugares
             // 
@@ -147,7 +147,7 @@ namespace COMPRAS2
             this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.cbLugares.FormattingEnabled = true;
-            this.cbLugares.Location = new System.Drawing.Point(160, 120);
+            this.cbLugares.Location = new System.Drawing.Point(160, 188);
             this.cbLugares.Name = "cbLugares";
             this.cbLugares.Size = new System.Drawing.Size(426, 28);
             this.cbLugares.TabIndex = 157;
@@ -331,7 +331,7 @@ namespace COMPRAS2
             this.Controls.Add(this.cbMovimiento);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.lblLugares);
-            this.Controls.Add(this.cbEstatus);
+            this.Controls.Add(this.cbUsuario);
             this.Controls.Add(this.cbLugares);
             this.Controls.Add(this.txtMovimiento);
             this.Controls.Add(this.txtCodigo);
@@ -357,7 +357,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label lblEstatus;
         private System.Windows.Forms.Label lblLugares;
-        private System.Windows.Forms.ComboBox cbEstatus;
+        private System.Windows.Forms.ComboBox cbUsuario;
         private System.Windows.Forms.ComboBox cbLugares;
         private System.Windows.Forms.TextBox txtMovimiento;
         private System.Windows.Forms.TextBox txtCodigo;

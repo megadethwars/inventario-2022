@@ -15,7 +15,7 @@ namespace COMPRAS2
 {
     public partial class BUSQUEDA_AVANZADA__HISTORIAL : Form
     {
-        List<Tuple<Int32, String>> listaEstatus;
+        List<Tuple<Int32, String>> listaUsuarios;
         List<Tuple<Int32, String>> listaLugares;
         List<Tuple<Int32, String>> listaTipoMov;
         List<Devices> devices;
@@ -25,7 +25,7 @@ namespace COMPRAS2
         public BUSQUEDA_AVANZADA__HISTORIAL()
         {
             InitializeComponent();
-            listaEstatus = new List<Tuple<int, string>>();
+            listaUsuarios = new List<Tuple<int, string>>();
             listaLugares = new List<Tuple<int, string>>();
             listaTipoMov = new List<Tuple<int, string>>();
         }
@@ -34,13 +34,13 @@ namespace COMPRAS2
         {
             Navigator.backPage(this.Name, this);
         }
-
-        private async Task<int> Estatus()
+        
+        private async Task<int> Usuarios()
         {
-            int idLugares = 0;
+            int idUsuarios = 0;
             try
             {
-                var url = HttpMethods.url + "statusDevices";
+                var url = HttpMethods.url + "usuarios";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
                 if (statusmessage.statuscode == 500)
@@ -60,17 +60,17 @@ namespace COMPRAS2
                     return 1;
                 }
 
-                var estatus = JsonConvert.DeserializeObject<List<StatusDevices>>(statusmessage.data);
+                var estatus = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
 
-                listaEstatus.Add(Tuple.Create<Int32, String>(0, "ninguno"));
+                listaUsuarios.Add(Tuple.Create<Int32, String>(0, "ninguno"));
 
                 for (int x = 0; x < estatus.Count; x++)
                 {
-                    listaEstatus.Add(Tuple.Create<Int32, String>(estatus[x].id, estatus[x].descripcion));
+                    listaUsuarios.Add(Tuple.Create<Int32, String>(estatus[x].id, estatus[x].nombre));
                 }
-                cbEstatus.DataSource = listaEstatus;
-                cbEstatus.DisplayMember = "Item2";
-                cbEstatus.ValueMember = "Item1";
+                cbUsuario.DataSource = listaUsuarios;
+                cbUsuario.DisplayMember = "Item2";
+                cbUsuario.ValueMember = "Item1";
 
                 return 0;
             }
@@ -174,7 +174,7 @@ namespace COMPRAS2
         private async void BUSQUEDA_AVANZADA__HISTORIAL_Load(object sender, EventArgs e)
         {
             int tipomov = await TipoMov();
-            int status = await Estatus();
+            int users = await Usuarios();
             int lugars = await Lugares();
         }
 
@@ -188,43 +188,47 @@ namespace COMPRAS2
         private async void busqueda() 
         {
             int idtipomov = 0;
-            int idstatus = 0;
-            int idlugars = 0;
+            int idUsers = 0;
+            int idLugares = 0;
 
-            QueryDevice histquery = new QueryDevice();
+            QueryMovimientos hist = new QueryMovimientos();
 
-            if (txtCodigo.Text != "")
+            QueryDevice devicequery = new QueryDevice();
+
+            if (cbUsuario.SelectedItem != null)
             {
-                histquery.codigo = txtCodigo.Text;
+                var idUserstuple = (Tuple<int, string>)cbUsuario.SelectedItem;
+                idUsers = idUserstuple.Item1;
+                if (idUsers != 0)
+                {
+                    hist.usuarioId = idUsers;
+                }
             }
 
-            if (txtMovimiento.Text != "")
-            {
-                histquery.idMov = txtMovimiento.Text;
-            }
-            /*
             if (cbLugares.SelectedItem != null)
             {
                 var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
                 idLugares = idLugarestuple.Item1;
                 if (idLugares != 0)
                 {
-                    devicequery.lugarId = idLugares;
+                    hist.LugarId = idLugares;
                 }
             }
-            else
+
+            if (cbMovimiento.SelectedItem != null)
             {
-                MessageBox.Show("No se ha seleccionado ningun lugar");
-                return;
-            }*/
+                var idTipoMovestuple = (Tuple<int, string>)cbLugares.SelectedItem;
+                idLugares = idLugarestuple.Item1;
+                if (idLugares != 0)
+                {
+                    hist.LugarId = idLugares;
+                }
+            }
+
 
             if (txtCodigo.Text != "") {
-
-                QueryDevice querydevice = new QueryDevice();
-
-                querydevice.codigo = txtCodigo.Text;
-
-                string json = JsonConvert.SerializeObject(querydevice,
+                devicequery.codigo = txtCodigo.Text;
+                string json = JsonConvert.SerializeObject(devicequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
                 var url = HttpMethods.url + "dispositivos/query";
                 StatusMessage statusmessage = await HttpMethods.Post(url, json);
@@ -263,15 +267,19 @@ namespace COMPRAS2
                         dgvBusquedaHistorial.DataSource = null;
                         return;
                     }
-
-
                     iddevice = devices[0].id;
 
-                  
+                    hist.dispositivoId = iddevice;
 
                 }
+
             }
             
+            
+
+            
+
+
         }
 
         private void btnOK_Click(object sender, EventArgs e)

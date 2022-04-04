@@ -104,7 +104,9 @@ namespace COMPRAS2
                 }
 
                 var lugares = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
+
                 listaLugares.Add(Tuple.Create<Int32, String>(0, "ninguno"));
+
                 for (int x = 0; x < lugares.Count; x++)
                 {
                     listaLugares.Add(Tuple.Create<Int32, String>(lugares[x].id, lugares[x].lugar));
@@ -170,11 +172,7 @@ namespace COMPRAS2
                     devicequery.lugarId = idLugares;
                 }               
             }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado ningun lugar");
-                return;
-            }
+            
 
             if (cbEstatus.SelectedItem != null)
             {
@@ -185,11 +183,7 @@ namespace COMPRAS2
                     devicequery.statusId = idEstatus;
                 }
             }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado ningun estatus");
-                return;
-            }
+            
 
             string json = JsonConvert.SerializeObject(devicequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
@@ -252,9 +246,7 @@ namespace COMPRAS2
                 this.dgvInventario.Columns["Proveedor"].Visible = false;
                 this.dgvInventario.Columns["Costo"].Visible = false;
                 this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
-
             }
-
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -270,6 +262,9 @@ namespace COMPRAS2
             this.txtMarca.Text = null;
             this.txtModelo.Text = null;
             this.txtSerie.Text = null;
+            this.cbEstatus.Text = null;
+            this.cbLugares.SelectedItem = null;
+            
         }
 
         private void dgvInventario_CellClick(object sender, DataGridViewCellEventArgs e)
