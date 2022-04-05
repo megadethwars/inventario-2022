@@ -217,16 +217,73 @@ namespace COMPRAS2
 
             if (cbMovimiento.SelectedItem != null)
             {
-                var idTipoMovestuple = (Tuple<int, string>)cbLugares.SelectedItem;
-                idLugares = idLugarestuple.Item1;
-                if (idLugares != 0)
+                var idTipoMovestuple = (Tuple<int, string>)cbMovimiento.SelectedItem;
+                idtipomov = idTipoMovestuple.Item1;
+                if (idtipomov != 0)
                 {
-                    hist.LugarId = idLugares;
+                    hist.tipoMovId = idtipomov;
                 }
             }
 
 
-            if (txtCodigo.Text != "") {
+            string json = JsonConvert.SerializeObject(hist,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var url = HttpMethods.url + "movimientos/query";
+            StatusMessage statusmessage = await HttpMethods.Post(url, json);
+
+            if (statusmessage.statuscode == 500)
+            {
+                MessageBox.Show("Error interno en el servidor");
+            }
+
+            if (statusmessage.statuscode == 409)
+            {
+                MessageBox.Show("Ocurrio un conflicto");
+            }
+
+            if (statusmessage.statuscode == 400)
+            {
+                MessageBox.Show("No hay campos seleccionados a consultar");
+            }
+
+            if (statusmessage.statuscode == 404)
+            {
+                MessageBox.Show("recurso NO encontrado");
+            }
+
+            if (statusmessage.statuscode == 200)
+            {
+                List<Movimientos> historial = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+
+                for (int x = 0; x < historial.Count; x++)
+                {
+                    Devices dispositivo = historial[x].dispositivo;
+                    historial[x].dispositivo_Actual = dispositivo.producto;
+                    historial[x].codigo_Actual = dispositivo.codigo;
+
+                    User usuario = historial[x].usuario;
+                    historial[x].nombre_Actual = usuario.nombre + " " + usuario.apellidoPaterno + "" + usuario.apellidoMaterno;
+
+                    TipoMovimiento tipoMovimiento = historial[x].tipoMovimiento;
+                    historial[x].tipo_Actual = tipoMovimiento.tipo;
+                }
+
+                dgvBusquedaHistorial.DataSource = devices;
+                this.dgvBusquedaHistorial.Columns["foto"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["fechaUltimaModificacion"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["foto2"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["dispositivoId"].Visible = false;
+                /*this.dgvBusquedaHistorial.Columns["usuarioId"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["LugarId"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["comentarios"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["tipoMovId"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["dispositivo"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["usuario"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["tipoMovimiento"].Visible = false;*/
+            }
+
+
+            /*if (txtCodigo.Text != "") {
                 devicequery.codigo = txtCodigo.Text;
                 string json = JsonConvert.SerializeObject(devicequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
@@ -271,14 +328,11 @@ namespace COMPRAS2
 
                     hist.dispositivoId = iddevice;
 
+                    dgvBusquedaHistorial.DataSource = devices;
+
                 }
 
-            }
-            
-            
-
-            
-
+            }*/
 
         }
 
