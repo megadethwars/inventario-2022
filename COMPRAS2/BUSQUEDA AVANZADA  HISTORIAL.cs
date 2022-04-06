@@ -18,7 +18,7 @@ namespace COMPRAS2
         List<Tuple<Int32, String>> listaUsuarios;
         List<Tuple<Int32, String>> listaLugares;
         List<Tuple<Int32, String>> listaTipoMov;
-        List<Devices> devices;
+        List<Movimientos> historial;
 
         int iddevice = 0;
 
@@ -193,7 +193,7 @@ namespace COMPRAS2
 
             QueryMovimientos hist = new QueryMovimientos();
 
-            QueryDevice devicequery = new QueryDevice();
+            //QueryDevice devicequery = new QueryDevice();
 
             if (cbUsuario.SelectedItem != null)
             {
@@ -253,8 +253,8 @@ namespace COMPRAS2
 
             if (statusmessage.statuscode == 200)
             {
-                List<Movimientos> historial = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
-
+                 historial = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+                
                 for (int x = 0; x < historial.Count; x++)
                 {
                     Devices dispositivo = historial[x].dispositivo;
@@ -268,18 +268,18 @@ namespace COMPRAS2
                     historial[x].tipo_Actual = tipoMovimiento.tipo;
                 }
 
-                dgvBusquedaHistorial.DataSource = devices;
+                dgvBusquedaHistorial.DataSource = historial;
                 this.dgvBusquedaHistorial.Columns["foto"].Visible = false;
                 this.dgvBusquedaHistorial.Columns["fechaUltimaModificacion"].Visible = false;
-                //this.dgvBusquedaHistorial.Columns["foto2"].Visible = false;
-                //this.dgvBusquedaHistorial.Columns["dispositivoId"].Visible = false;
-                /*this.dgvBusquedaHistorial.Columns["usuarioId"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["foto2"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["dispositivoId"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["usuarioId"].Visible = false;
                 this.dgvBusquedaHistorial.Columns["LugarId"].Visible = false;
                 this.dgvBusquedaHistorial.Columns["comentarios"].Visible = false;
                 this.dgvBusquedaHistorial.Columns["tipoMovId"].Visible = false;
                 this.dgvBusquedaHistorial.Columns["dispositivo"].Visible = false;
                 this.dgvBusquedaHistorial.Columns["usuario"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["tipoMovimiento"].Visible = false;*/
+                this.dgvBusquedaHistorial.Columns["tipoMovimiento"].Visible = false;
             }
 
 
