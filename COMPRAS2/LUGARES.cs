@@ -36,11 +36,13 @@ namespace COMPRAS2
             {
                 return;
             }
-
-            //List <List<Lugares>>(statusmessage.data);
+            
             List<Lugares> devices = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
 
             dgvLugares.DataSource = devices;
+            this.dgvLugares.Columns["fechaAlta"].Visible = false;
+            this.dgvLugares.Columns["fechaUltimaModificacion"].Visible = false;
+            this.dgvLugares.Columns["id"].Visible = false;
         }
     }
 }

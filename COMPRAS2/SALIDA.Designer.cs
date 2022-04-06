@@ -124,7 +124,7 @@ namespace COMPRAS2
             this.txtBUSCADOR.Name = "txtBUSCADOR";
             this.txtBUSCADOR.Size = new System.Drawing.Size(953, 19);
             this.txtBUSCADOR.TabIndex = 68;
-            this.txtBUSCADOR.Text = "AGREGAR AQUI CODIGO DEL PRODUCTO PARA SALIDA";
+            this.txtBUSCADOR.Text = "AGREGAR CODIGO";
             this.txtBUSCADOR.Click += new System.EventHandler(this.txtBUSCADOR_Click);
             this.txtBUSCADOR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CheckEnter);
             // 

@@ -149,7 +149,7 @@ namespace COMPRAS2
             USERID.Clear();
         }
 
-        private void PASSWORD_Click(object sender, EventArgs e)
+        public void PASSWORD_Click(object sender, EventArgs e)
         {
             PASSWORD.Clear();
             PASSWORD.UseSystemPasswordChar = true;
@@ -169,6 +169,20 @@ namespace COMPRAS2
         private void INICIARSESION_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void CheckEnter(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Tab)
+            {
+                PASSWORD.Clear();
+                PASSWORD.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                USERID.Clear();
+            }
         }
     }
 }
