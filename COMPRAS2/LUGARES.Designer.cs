@@ -94,6 +94,7 @@ namespace COMPRAS2
             this.btnOK.Size = new System.Drawing.Size(88, 34);
             this.btnOK.TabIndex = 76;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // bTNBack
             // 
