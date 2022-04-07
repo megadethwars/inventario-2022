@@ -20,6 +20,7 @@ namespace COMPRAS2
         public INICIARSESION()
         {
             InitializeComponent();
+            //USERID.KeyDown += new KeyEventHandler(CheckEnter);
         }
 
         private void btnCERRAR_Click(object sender, EventArgs e)
@@ -149,7 +150,7 @@ namespace COMPRAS2
             USERID.Clear();
         }
 
-        public void PASSWORD_Click(object sender, EventArgs e)
+        private void PASSWORD_Click(object sender, EventArgs e)
         {
             PASSWORD.Clear();
             PASSWORD.UseSystemPasswordChar = true;
@@ -170,7 +171,7 @@ namespace COMPRAS2
         {
            
         }
-
+        /*
         private void CheckEnter(object sender, KeyEventArgs e)
         {
 
@@ -183,6 +184,6 @@ namespace COMPRAS2
             {
                 USERID.Clear();
             }
-        }
+        }*/
     }
 }

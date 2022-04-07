@@ -43,6 +43,12 @@ namespace COMPRAS2
             this.dgvLugares.Columns["fechaAlta"].Visible = false;
             this.dgvLugares.Columns["fechaUltimaModificacion"].Visible = false;
             this.dgvLugares.Columns["id"].Visible = false;
+            this.dgvLugares.Columns["activo"].Visible = false;
+        }
+
+        private void txtLugarDeseado_Click(object sender, EventArgs e)
+        {
+            txtLugarDeseado.Clear();
         }
     }
 }

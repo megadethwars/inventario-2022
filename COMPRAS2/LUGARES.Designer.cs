@@ -65,6 +65,7 @@ namespace COMPRAS2
             this.txtLugarDeseado.Size = new System.Drawing.Size(331, 26);
             this.txtLugarDeseado.TabIndex = 75;
             this.txtLugarDeseado.Text = "Ingrese Lugar Deseado";
+            this.txtLugarDeseado.Click += new System.EventHandler(this.txtLugarDeseado_Click);
             // 
             // lblIngresarLugarDeseado
             // 

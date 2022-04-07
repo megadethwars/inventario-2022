@@ -38,24 +38,24 @@ namespace COMPRAS2
             {
                 int cantidad = 0;
                 Int32 costo = 0;
-                if (txtProducto.Text == "")
+                if ((txtProducto.Text == "") || (txtProducto.Text == "Introduzca el Producto"))
                 {
                     MessageBox.Show("campo de producto vacio");
                     return 1;
                 }
 
-                if (txtMarca.Text == "")
+                if ((txtMarca.Text == "") || (txtMarca.Text == "Introduzca la Marca"))
                 {
                     MessageBox.Show("campo de marca vacio");
                     return 1;
                 }
-                if (txtModelo.Text == "")
+                if ((txtModelo.Text == "") || (txtModelo.Text == "Introduzca el Modelo"))
                 {
                     MessageBox.Show("campo de modelo esta vacio");
                     return 1;
                 }
 
-                if (txtCantidad.Text == "")
+                if ((txtCantidad.Text == "") || (txtCantidad.Text == "Introduzca la Cantidad"))
                 {
                     MessageBox.Show("campo de cantidad vacio");
 
@@ -71,14 +71,14 @@ namespace COMPRAS2
                     return 1;
                 }
 
-                if (txtCodigo.Text == "")
+                if ((txtCodigo.Text == "") || (txtCodigo.Text == "Introduzca el Codigo"))
                 {
                     MessageBox.Show("campo de codigo vacio");
                     return 1;
                 }
 
 
-                if (txtSerie.Text == "")
+                if ((txtSerie.Text == "") || (txtSerie.Text == "Introduzca la Serie"))
                 {
                     MessageBox.Show("campo de serie vacio");
                     return 1;
@@ -94,9 +94,7 @@ namespace COMPRAS2
                     {
                         MessageBox.Show("El costo no es numerico");
                         return 1;
-                    }
-                  
-                    
+                    }                                     
                 }
 
                 Devices product = new Devices();
@@ -212,7 +210,7 @@ namespace COMPRAS2
         {
             if (txtModelo.Text == "")
             {
-                txtModelo.Text = "Introduzca el Modelo";
+               txtModelo.Text = "Introduzca el Modelo";
             }
         }
 
@@ -260,7 +258,7 @@ namespace COMPRAS2
         {
             if (txtDescompostura.Text == "")
             {
-                txtDescompostura.Text = "Introduzca la Descompostura";
+               txtDescompostura.Text = "Introduzca la Descompostura";
             }
         }
 
