@@ -72,10 +72,9 @@ namespace COMPRAS2
                 }
                 else if (statusmessage.statuscode == 201)
                 {
-                    //var auth = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
                     List<Lugares> devices = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
-                    MessageBox.Show("PRODUCTO AGREGADO CORRECTAMENTE");
-                    Navigator.backPage(this.Name, this);
+                    MessageBox.Show("PRODUCTO AGREGADO CORRECTAMENTE");                    
+
                     return 0;
                 }
                 else if (statusmessage.statuscode == 404)
@@ -105,6 +104,42 @@ namespace COMPRAS2
         private async void btnOK_Click(object sender, EventArgs e)
         {
             int status = await Auth();           
+        }
+
+        private async void btnActualizar_Click(object sender, EventArgs e)
+        {
+            dgvLugares.DataSource = null;
+            var url = HttpMethods.url + "lugares";
+            StatusMessage statusmessage = await HttpMethods.get(url);
+
+            if (statusmessage.statuscode != 200)
+            {
+                return;
+            }
+
+            List<Lugares> devices = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
+
+            dgvLugares.DataSource = devices;
+            this.dgvLugares.Columns["fechaAlta"].Visible = false;
+            this.dgvLugares.Columns["fechaUltimaModificacion"].Visible = false;
+            this.dgvLugares.Columns["id"].Visible = false;
+            this.dgvLugares.Columns["activo"].Visible = false;
+        }
+
+        public void dgvLugares_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow cell = dgvLugares.Rows[e.RowIndex];
+                Lugares data = (Lugares)cell.DataBoundItem;
+
+                Navigator.nextPage(new EDITAR_LUGARES(data));
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
     }
 }

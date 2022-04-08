@@ -1,0 +1,28 @@
+﻿using COMPRAS2.modelos;
+using COMPRAS2.servicios;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace COMPRAS2
+{
+    public partial class EDITAR_LUGARES : Form
+    {
+        LUGARES user;
+        public EDITAR_LUGARES(Lugares user)
+        {
+            InitializeComponent();
+        }
+
+        private void bTNBack_Click(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
+        }
+    }
+}

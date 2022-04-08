@@ -29,15 +29,16 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LUGARES));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LUGARES));
             this.lblLugares = new System.Windows.Forms.Label();
             this.txtLugarDeseado = new System.Windows.Forms.TextBox();
             this.lblIngresarLugarDeseado = new System.Windows.Forms.Label();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.bTNBack = new System.Windows.Forms.Button();
             this.dgvLugares = new System.Windows.Forms.DataGridView();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.bTNBack = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLugares)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,39 +80,6 @@ namespace COMPRAS2
             this.lblIngresarLugarDeseado.TabIndex = 74;
             this.lblIngresarLugarDeseado.Text = "INGRESAR NUEVO LUGAR:";
             // 
-            // btnOK
-            // 
-            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
-            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOK.FlatAppearance.BorderSize = 0;
-            this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(591, 753);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(88, 34);
-            this.btnOK.TabIndex = 76;
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // bTNBack
-            // 
-            this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
-            this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bTNBack.FlatAppearance.BorderSize = 0;
-            this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bTNBack.Location = new System.Drawing.Point(20, 20);
-            this.bTNBack.Name = "bTNBack";
-            this.bTNBack.Size = new System.Drawing.Size(50, 50);
-            this.bTNBack.TabIndex = 77;
-            this.bTNBack.UseVisualStyleBackColor = true;
-            this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
-            // 
             // dgvLugares
             // 
             this.dgvLugares.AllowUserToOrderColumns = true;
@@ -151,6 +119,61 @@ namespace COMPRAS2
             this.dgvLugares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLugares.Size = new System.Drawing.Size(537, 553);
             this.dgvLugares.TabIndex = 166;
+            this.dgvLugares.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLugares_CellClick);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(115, 40);
+            this.btnActualizar.TabIndex = 167;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // bTNBack
+            // 
+            this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
+            this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bTNBack.FlatAppearance.BorderSize = 0;
+            this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTNBack.Location = new System.Drawing.Point(20, 20);
+            this.bTNBack.Name = "bTNBack";
+            this.bTNBack.Size = new System.Drawing.Size(50, 50);
+            this.bTNBack.TabIndex = 77;
+            this.bTNBack.UseVisualStyleBackColor = true;
+            this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
+            // 
+            // btnOK
+            // 
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
+            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Location = new System.Drawing.Point(591, 753);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(88, 34);
+            this.btnOK.TabIndex = 76;
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // LUGARES
             // 
@@ -159,6 +182,7 @@ namespace COMPRAS2
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvLugares);
             this.Controls.Add(this.bTNBack);
             this.Controls.Add(this.btnOK);
@@ -183,5 +207,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.DataGridView dgvLugares;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

@@ -140,6 +140,12 @@
     <Compile Include="EDITAR EMPLEADO.Designer.cs">
       <DependentUpon>EDITAR EMPLEADO.cs</DependentUpon>
     </Compile>
+    <Compile Include="EDITAR LUGARES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDITAR LUGARES.Designer.cs">
+      <DependentUpon>EDITAR LUGARES.cs</DependentUpon>
+    </Compile>
     <Compile Include="EDITAR PRODUCTO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EDITAR EMPLEADO.resx">
       <DependentUpon>EDITAR EMPLEADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EDITAR LUGARES.resx">
+      <DependentUpon>EDITAR LUGARES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EDITAR PRODUCTO.resx">
       <DependentUpon>EDITAR PRODUCTO.cs</DependentUpon>
