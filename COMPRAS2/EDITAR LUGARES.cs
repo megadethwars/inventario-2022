@@ -15,11 +15,13 @@ namespace COMPRAS2
 {
     public partial class EDITAR_LUGARES : Form
     {
+        int id = 0;
         Lugares lug;
         public EDITAR_LUGARES(Lugares lug)
         {
             InitializeComponent();
             this.lug = lug;
+            id = lug.id;
         }
 
         private void bTNBack_Click(object sender, EventArgs e)
@@ -37,8 +39,10 @@ namespace COMPRAS2
             Lugares lugarUpdate;
             lugarUpdate = new Lugares();
 
-            lugarUpdate.lugar = txtLugar.Text;            
-            
+            lugarUpdate.lugar = txtLugar.Text;
+
+            lugarUpdate.id = id;
+
             string json = JsonConvert.SerializeObject(lugarUpdate,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
             var url = HttpMethods.url + "lugares";
