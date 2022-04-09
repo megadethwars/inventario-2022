@@ -82,6 +82,7 @@ namespace COMPRAS2
             this.tbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.tbUsuario.Location = new System.Drawing.Point(530, 200);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(216, 26);
@@ -95,6 +96,7 @@ namespace COMPRAS2
             this.tbpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.tbpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.tbpass.Location = new System.Drawing.Point(530, 320);
             this.tbpass.Name = "tbpass";
             this.tbpass.Size = new System.Drawing.Size(216, 26);
@@ -108,6 +110,7 @@ namespace COMPRAS2
             this.cbLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.cbLugares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.cbLugares.FormattingEnabled = true;
             this.cbLugares.Location = new System.Drawing.Point(530, 440);
             this.cbLugares.Name = "cbLugares";

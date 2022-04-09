@@ -1,5 +1,6 @@
 ﻿using COMPRAS2.modelos;
 using COMPRAS2.servicios;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,15 +15,71 @@ namespace COMPRAS2
 {
     public partial class EDITAR_LUGARES : Form
     {
-        LUGARES user;
-        public EDITAR_LUGARES(Lugares user)
+        Lugares lug;
+        public EDITAR_LUGARES(Lugares lug)
         {
             InitializeComponent();
+            this.lug = lug;
         }
 
         private void bTNBack_Click(object sender, EventArgs e)
         {
             Navigator.backPage(this.Name, this);
+        }
+
+        private void EDITAR_LUGARES_Load(object sender, EventArgs e)
+        {
+            this.txtLugar.Text = lug.lugar;
+        }
+
+        private async void EditarEmpleado()
+        {           
+            Lugares lugarUpdate;
+            lugarUpdate = new Lugares();
+
+            lugarUpdate.lugar = txtLugar.Text;            
+            
+            string json = JsonConvert.SerializeObject(lugarUpdate,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var url = HttpMethods.url + "lugares";
+            StatusMessage statusmessage = await HttpMethods.put(url, json);
+
+            if (statusmessage.statuscode == 409)
+            {
+                MessageBox.Show("error en el servicio, " + statusmessage.message);
+                return;
+            }
+
+            else if (statusmessage.statuscode == 500)
+            {
+                MessageBox.Show("error en el servicio");
+                return;
+            }
+            else if (statusmessage.statuscode == 200)
+            {
+                Lugares LUGARS = JsonConvert.DeserializeObject<Lugares>(statusmessage.data);
+                MessageBox.Show("EMPLEADO ACTUALIZADO CORRECTAMENTE");
+                Navigator.nextPage(new LUGARES());
+                return;
+            }
+            else if (statusmessage.statuscode == 404)
+            {
+                MessageBox.Show("error en el servicio, NO encontrado");
+
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Bad request, algunos campos faltantes");
+                return;
+            }
+
+            Navigator.backPage(this.Name, this);
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            EditarEmpleado();
         }
     }
 }

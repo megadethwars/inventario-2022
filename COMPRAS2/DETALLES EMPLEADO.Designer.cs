@@ -51,6 +51,7 @@ namespace COMPRAS2
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lblEstadoDelUsuario = new System.Windows.Forms.Label();
             this.lblDEstadoDelUsuario = new System.Windows.Forms.Label();
+            this.btnContraseña = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -295,7 +296,7 @@ namespace COMPRAS2
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEliminar.Location = new System.Drawing.Point(226, 799);
+            this.btnEliminar.Location = new System.Drawing.Point(398, 799);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(183, 39);
             this.btnEliminar.TabIndex = 86;
@@ -382,12 +383,34 @@ namespace COMPRAS2
             this.lblDEstadoDelUsuario.TabIndex = 133;
             this.lblDEstadoDelUsuario.Text = "ESTADO DEL USUARIO:";
             // 
+            // btnContraseña
+            // 
+            this.btnContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnContraseña.BackColor = System.Drawing.Color.Transparent;
+            this.btnContraseña.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContraseña.FlatAppearance.BorderSize = 0;
+            this.btnContraseña.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnContraseña.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContraseña.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnContraseña.Location = new System.Drawing.Point(209, 799);
+            this.btnContraseña.Name = "btnContraseña";
+            this.btnContraseña.Size = new System.Drawing.Size(183, 39);
+            this.btnContraseña.TabIndex = 136;
+            this.btnContraseña.Text = "EDITAR CONTRASEÑA";
+            this.btnContraseña.UseVisualStyleBackColor = false;
+            this.btnContraseña.Click += new System.EventHandler(this.btnContraseña_Click);
+            // 
             // DETALLES_EMPLEADO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnContraseña);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.lblEstadoDelUsuario);
             this.Controls.Add(this.lblDEstadoDelUsuario);
@@ -449,5 +472,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lblEstadoDelUsuario;
         private System.Windows.Forms.Label lblDEstadoDelUsuario;
+        private System.Windows.Forms.Button btnContraseña;
     }
 }

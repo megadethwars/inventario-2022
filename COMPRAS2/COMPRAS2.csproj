@@ -98,6 +98,12 @@
     <Compile Include="BUSQUEDA AVANZADA REPORTE.Designer.cs">
       <DependentUpon>BUSQUEDA AVANZADA REPORTE.cs</DependentUpon>
     </Compile>
+    <Compile Include="CAMBIAR CONTRASEÑA EMPLEADOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAMBIAR CONTRASEÑA EMPLEADOS.Designer.cs">
+      <DependentUpon>CAMBIAR CONTRASEÑA EMPLEADOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarritoSalida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BUSQUEDA AVANZADA REPORTE.resx">
       <DependentUpon>BUSQUEDA AVANZADA REPORTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAMBIAR CONTRASEÑA EMPLEADOS.resx">
+      <DependentUpon>CAMBIAR CONTRASEÑA EMPLEADOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CarritoSalida.resx">
       <DependentUpon>CarritoSalida.cs</DependentUpon>

@@ -48,6 +48,10 @@ namespace COMPRAS2
             lblCorreo.Text = user.correo;
             lblTelefono.Text = user.telefono;
         }
-        
+
+        private void btnContraseña_Click(object sender, EventArgs e)
+        {
+            Navigator.nextPage(new CAMBIAR_CONTRASEÑA_EMPLEADOS());
+        }
     }
 }

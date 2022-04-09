@@ -131,9 +131,9 @@ namespace COMPRAS2
             try
             {
                 DataGridViewRow cell = dgvLugares.Rows[e.RowIndex];
-                Lugares data = (Lugares)cell.DataBoundItem;
+                Lugares lug = (Lugares)cell.DataBoundItem;
 
-                Navigator.nextPage(new EDITAR_LUGARES(data));
+                Navigator.nextPage(new EDITAR_LUGARES(lug));
 
             }
             catch (Exception ex)

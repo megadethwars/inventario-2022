@@ -52,6 +52,7 @@ namespace COMPRAS2
             this.btnOK.Size = new System.Drawing.Size(88, 34);
             this.btnOK.TabIndex = 77;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // bTNBack
             // 
@@ -120,6 +121,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EDITAR_LUGARES";
             this.Text = "EDITAR_LUGARES";
+            this.Load += new System.EventHandler(this.EDITAR_LUGARES_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
