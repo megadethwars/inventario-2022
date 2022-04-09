@@ -140,10 +140,10 @@ namespace COMPRAS2
         }
 
         private async void EditarEmpleado()
-        {           
+        {
             int idEmpleados = 0;
             int idEstado = 0;
-            
+
             User userUpdate;
             userUpdate = new User();
 
@@ -180,6 +180,9 @@ namespace COMPRAS2
             userUpdate.statusId = idEstado;
 
             userUpdate.id = id;
+
+            userUpdate.statusUserDescripcion = null;
+            userUpdate.rolNombre = null;
 
             string json = JsonConvert.SerializeObject(userUpdate,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
