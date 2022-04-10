@@ -208,6 +208,8 @@ namespace COMPRAS2
                     movimientos = null;
                 }
 
+                Navigator.nextPage(new PDFMovement(uniqueId));
+
                 return 0;
             }
             catch (Exception ex) {
