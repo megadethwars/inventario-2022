@@ -118,11 +118,23 @@
     <Compile Include="CAMBIAR CONTRASEÑA EMPLEADOS.Designer.cs">
       <DependentUpon>CAMBIAR CONTRASEÑA EMPLEADOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarritoEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarritoEntrada.Designer.cs">
+      <DependentUpon>CarritoEntrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarritoSalida.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CarritoSalida.Designer.cs">
       <DependentUpon>CarritoSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmarEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmarEntrada.Designer.cs">
+      <DependentUpon>ConfirmarEntrada.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfirmarSalida.cs">
       <SubType>Form</SubType>
@@ -183,6 +195,12 @@
     </Compile>
     <Compile Include="EMPLEADOS.Designer.cs">
       <DependentUpon>EMPLEADOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENTRADA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENTRADA.Designer.cs">
+      <DependentUpon>ENTRADA.cs</DependentUpon>
     </Compile>
     <Compile Include="HIST.cs">
       <SubType>Form</SubType>
