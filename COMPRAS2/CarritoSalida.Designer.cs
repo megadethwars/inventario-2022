@@ -32,24 +32,12 @@ namespace COMPRAS2
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarritoSalida));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblCarritoDeSalida = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.dgvCarritoSalida = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblCarritoDeSalida = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarritoSalida)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCarritoDeSalida
-            // 
-            this.lblCarritoDeSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCarritoDeSalida.AutoSize = true;
-            this.lblCarritoDeSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarritoDeSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCarritoDeSalida.Location = new System.Drawing.Point(560, 30);
-            this.lblCarritoDeSalida.Name = "lblCarritoDeSalida";
-            this.lblCarritoDeSalida.Size = new System.Drawing.Size(199, 42);
-            this.lblCarritoDeSalida.TabIndex = 68;
-            this.lblCarritoDeSalida.Text = "CARRITO DE SALIDA";
             // 
             // btnOK
             // 
@@ -68,22 +56,6 @@ namespace COMPRAS2
             this.btnOK.TabIndex = 67;
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(20, 20);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(50, 50);
-            this.btnBack.TabIndex = 63;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dgvCarritoSalida
             // 
@@ -128,6 +100,34 @@ namespace COMPRAS2
             this.dgvCarritoSalida.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarritoSalida_CellMouseClick);
             this.dgvCarritoSalida.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvCarritoSalida_CellPainting);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(20, 20);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(50, 50);
+            this.btnBack.TabIndex = 63;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblCarritoDeSalida
+            // 
+            this.lblCarritoDeSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCarritoDeSalida.AutoSize = true;
+            this.lblCarritoDeSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarritoDeSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblCarritoDeSalida.Location = new System.Drawing.Point(560, 30);
+            this.lblCarritoDeSalida.Name = "lblCarritoDeSalida";
+            this.lblCarritoDeSalida.Size = new System.Drawing.Size(199, 42);
+            this.lblCarritoDeSalida.TabIndex = 68;
+            this.lblCarritoDeSalida.Text = "CARRITO DE SALIDA";
+            // 
             // CarritoSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,9 +150,9 @@ namespace COMPRAS2
         }
 
         #endregion
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Label lblCarritoDeSalida;
         private System.Windows.Forms.DataGridView dgvCarritoSalida;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblCarritoDeSalida;
     }
 }

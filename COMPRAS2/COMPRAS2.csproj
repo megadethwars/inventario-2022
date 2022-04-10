@@ -340,8 +340,14 @@
     <EmbeddedResource Include="CAMBIAR CONTRASEÑA EMPLEADOS.resx">
       <DependentUpon>CAMBIAR CONTRASEÑA EMPLEADOS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarritoEntrada.resx">
+      <DependentUpon>CarritoEntrada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarritoSalida.resx">
       <DependentUpon>CarritoSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmarEntrada.resx">
+      <DependentUpon>ConfirmarEntrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmarSalida.resx">
       <DependentUpon>ConfirmarSalida.cs</DependentUpon>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EMPLEADOS.resx">
       <DependentUpon>EMPLEADOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENTRADA.resx">
+      <DependentUpon>ENTRADA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HIST.resx">
       <DependentUpon>HIST.cs</DependentUpon>
