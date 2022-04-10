@@ -42,7 +42,15 @@ namespace COMPRAS2
 
         private void MIPERFIL_Load(object sender, EventArgs e)
         {
-            var url = HttpMethods.url + "usuarios";
+            try
+            {
+                var url = HttpMethods.url + "usuarios";
+            }
+            catch
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");                
+            }
+            
         }
         /*
         ~MIPERFIL() {

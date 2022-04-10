@@ -32,37 +32,45 @@ namespace COMPRAS2
 
         private async void REPORTES2_Load(object sender, EventArgs e)
         {
-            var url = HttpMethods.url + "reportes";
-            StatusMessage statusmessage = await HttpMethods.get(url);
-
-            if (statusmessage.statuscode != 200)
+            try
             {
-                return;
+                var url = HttpMethods.url + "reportes";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return;
+                }
+
+                List<Reportes> reportes = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+
+                for(int x=0; x<reportes.Count; x++)
+                {
+                    Devices Dispositivos = reportes[x].dispositivo;
+                    reportes[x].dispositivoActual = Dispositivos.producto;
+
+                    User Usuarios = reportes[x].usuario;
+                    reportes[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
+
+                    User UsuariosA = reportes[x].usuario;
+                    reportes[x].UserActualA = UsuariosA.apellidoPaterno;
+
+                    Devices Codigos = reportes[x].dispositivo;
+                    reportes[x].dispositivoCodigo = Codigos.codigo;
+
+                }
+            
+                dgvReportes.DataSource = reportes;
+                this.dgvReportes.Columns["foto"].Visible = false;
+                this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
+                this.dgvReportes.Columns["UserActualA"].Visible = false;
+                this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
             }
-
-            List<Reportes> reportes = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
-
-            for(int x=0; x<reportes.Count; x++)
+            catch
             {
-                Devices Dispositivos = reportes[x].dispositivo;
-                reportes[x].dispositivoActual = Dispositivos.producto;
-
-                User Usuarios = reportes[x].usuario;
-                reportes[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
-
-                User UsuariosA = reportes[x].usuario;
-                reportes[x].UserActualA = UsuariosA.apellidoPaterno;
-
-                Devices Codigos = reportes[x].dispositivo;
-                reportes[x].dispositivoCodigo = Codigos.codigo;
-
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
             }
             
-            dgvReportes.DataSource = reportes;
-            this.dgvReportes.Columns["foto"].Visible = false;
-            this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
-            this.dgvReportes.Columns["UserActualA"].Visible = false;
-            this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
 
         }
         

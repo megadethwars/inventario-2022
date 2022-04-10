@@ -27,41 +27,49 @@ namespace COMPRAS2
         }     
         
         private async void INVENTARIO_Load(object sender, EventArgs e)
-        {            
-            var url = HttpMethods.url + "dispositivos";
-            StatusMessage statusmessage = await HttpMethods.get(url);
-
-            if (statusmessage.statuscode != 200)
+        {   
+            try
             {
-                return;
-            }
+                var url = HttpMethods.url + "dispositivos";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return;
+                }
            
-            List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+                List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-            for (int x = 0; x < devices.Count; x++) {
+                for (int x = 0; x < devices.Count; x++) {
 
-                Lugares lugar = devices[x].lugar;               
-                devices[x].Lugar_Actual = lugar.lugar;
+                    Lugares lugar = devices[x].lugar;               
+                    devices[x].Lugar_Actual = lugar.lugar;
                 
-                StatusDevices status = devices[x].status;
-                devices[x].StatusActual = status.descripcion;
-            }
+                    StatusDevices status = devices[x].status;
+                    devices[x].StatusActual = status.descripcion;
+                }
                         
-            dgvInventario.DataSource = devices;
-            this.dgvInventario.Columns["lugar"].Visible = false;
-            this.dgvInventario.Columns["lugarId"].Visible = false;
-            this.dgvInventario.Columns["status"].Visible = false;
-            this.dgvInventario.Columns["statusId"].Visible = false;
-            this.dgvInventario.Columns["Compra"].Visible = false;
-            this.dgvInventario.Columns["Descompostura"].Visible = false;
-            this.dgvInventario.Columns["Foto"].Visible = false;
-            this.dgvInventario.Columns["IdMov"].Visible = false;
-            this.dgvInventario.Columns["Observaciones"].Visible = false;
-            this.dgvInventario.Columns["Origen"].Visible = false;
-            this.dgvInventario.Columns["Pertenece"].Visible = false;
-            this.dgvInventario.Columns["Proveedor"].Visible = false;
-            this.dgvInventario.Columns["Costo"].Visible = false;
-            this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+                dgvInventario.DataSource = devices;
+                this.dgvInventario.Columns["lugar"].Visible = false;
+                this.dgvInventario.Columns["lugarId"].Visible = false;
+                this.dgvInventario.Columns["status"].Visible = false;
+                this.dgvInventario.Columns["statusId"].Visible = false;
+                this.dgvInventario.Columns["Compra"].Visible = false;
+                this.dgvInventario.Columns["Descompostura"].Visible = false;
+                this.dgvInventario.Columns["Foto"].Visible = false;
+                this.dgvInventario.Columns["IdMov"].Visible = false;
+                this.dgvInventario.Columns["Observaciones"].Visible = false;
+                this.dgvInventario.Columns["Origen"].Visible = false;
+                this.dgvInventario.Columns["Pertenece"].Visible = false;
+                this.dgvInventario.Columns["Proveedor"].Visible = false;
+                this.dgvInventario.Columns["Costo"].Visible = false;
+                this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+            }
+            catch
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");               
+            }
+            
         }
        
 
