@@ -85,6 +85,7 @@ namespace COMPRAS2
             this.btnOK.Size = new System.Drawing.Size(88, 34);
             this.btnOK.TabIndex = 67;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // pictureBox8
             // 
@@ -205,6 +206,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CAMBIAR_CONTRASEÑA_EMPLEADOS";
             this.Text = "CAMBIAR_CONTRASEÑA_EMPLEADOS";
+            this.Load += new System.EventHandler(this.CAMBIAR_CONTRASEÑA_EMPLEADOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);

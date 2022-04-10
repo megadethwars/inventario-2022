@@ -25,7 +25,7 @@ namespace COMPRAS2
         {
             try
             {
-                this.user = user;
+                //this.user = user;
                 Navigator.nextPage(new EDITAR_EMPLEADO(user));
             }
             catch (Exception ex)
@@ -51,7 +51,7 @@ namespace COMPRAS2
 
         private void btnContraseña_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new CAMBIAR_CONTRASEÑA_EMPLEADOS());
+            Navigator.nextPage(new CAMBIAR_CONTRASEÑA_EMPLEADOS(user));
         }
     }
 }
