@@ -432,8 +432,7 @@ namespace COMPRAS2
                         TipoMovimiento tipoMovimiento = historial[x].tipoMovimiento;
                         historial[x].tipo_Actual = tipoMovimiento.tipo;
                     }
-
-                   
+                  
                 }
 
                 return historial;
@@ -445,11 +444,9 @@ namespace COMPRAS2
             }
             // searching only idproduct
 
-
         }
 
-       
-
+      
         private bool SendSTMPT(byte[] bytes, string correo)
         {
 
@@ -477,8 +474,6 @@ namespace COMPRAS2
                 SmtpServer.Credentials = new System.Net.NetworkCredential("avsinventario@gmail.com", "avs123456");
                 SmtpServer.Send(mail);
 
-
-
                 return true;
             }
             catch (Exception ex)
@@ -489,13 +484,11 @@ namespace COMPRAS2
                 return false;
             }
 
-
-
         }
 
-        private void Aceptar_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-
+            MENU menu = new MENU();
         }
     }
 }

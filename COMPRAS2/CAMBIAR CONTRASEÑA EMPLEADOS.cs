@@ -39,12 +39,21 @@ namespace COMPRAS2
             User userUpdate;
             userUpdate = new User();
 
-            userUpdate.password = txtContraseña.Text;                       
+            userUpdate.password = txtContraseña.Text;
             
+            
+            if(txtContraseña.Text != txtContraseñaDeNuevo.Text)
+            {
+                MessageBox.Show("LAS CONTRASEÑAS NO SON IGUALES, INTENTE DE NUEVO");
+                return;
+            }
+
             userUpdate.id = id;
 
-            userUpdate.statusUserDescripcion = null;
-            userUpdate.rolNombre = null;
+            userUpdate.statusId = 0;
+            userUpdate.rolId = 0;
+
+            userUpdate.username = user.username;
             
 
             string json = JsonConvert.SerializeObject(userUpdate,
@@ -63,7 +72,7 @@ namespace COMPRAS2
                 MessageBox.Show("error en el servicio");
                 return;
             }
-            else if (statusmessage.statuscode == 200)
+            else if (statusmessage.statuscode == 201)
             {
                 User USERS = JsonConvert.DeserializeObject<User>(statusmessage.data);
                 MessageBox.Show("EMPLEADO ACTUALIZADO CORRECTAMENTE");
@@ -87,6 +96,11 @@ namespace COMPRAS2
         
         private void CAMBIAR_CONTRASEÑA_EMPLEADOS_Load(object sender, EventArgs e)
         {
+            txtContraseña.Clear();
+            txtContraseña.UseSystemPasswordChar = true;
+            txtContraseñaDeNuevo.Clear();
+            txtContraseñaDeNuevo.UseSystemPasswordChar = true;
+            
             this.lblEmpleado.Text ="USUARIO: " + user.nombre + " " + user.apellidoPaterno + " " + user.apellidoMaterno;
         }
     }
