@@ -27,5 +27,17 @@ namespace COMPRAS2
         {
             MessageBox.Show("Aqui informacion de la aplicacion");
         }
+
+        private void AJUSTES_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+            }
+        }
     }
 }

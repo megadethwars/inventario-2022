@@ -89,7 +89,7 @@ namespace COMPRAS2
             }
             catch
             {
-
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");                
             }
             
         }

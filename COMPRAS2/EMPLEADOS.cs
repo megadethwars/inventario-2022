@@ -71,7 +71,15 @@ namespace COMPRAS2
 
         private async void EMPLEADOS_Load(object sender, EventArgs e)
         {
-            await empleados();
+            try
+            {
+                await empleados();
+            }
+            catch
+            {
+                MessageBox.Show("Navegue con mas lentitud");
+            }
+            
 
         }
 
