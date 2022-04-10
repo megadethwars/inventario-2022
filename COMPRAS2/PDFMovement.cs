@@ -18,6 +18,7 @@ using System.Net.Mime;
 using COMPRAS2.modelos;
 using Newtonsoft.Json;
 using COMPRAS2.servicios;
+using System.Diagnostics;
 
 namespace COMPRAS2
 {
@@ -261,23 +262,15 @@ namespace COMPRAS2
                 }
 
                 string save = hd + movimientos.idMovimiento+".pdf";
-                //Save the stream as a file in the device and invoke it for viewing
-                // Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView(save + ".pdf", "application/pdf", stream);
-                //The operation in Save under Xamarin varies between Windows Phone, Android and iOS platforms. Please refer PDF/Xamarin section for respective code samples.
 
+                Process.Start("C:/Inventarios/"+ save2);
 
-                //SaveStreamAsFile("C:/Inventarios", stream, save);
+                //System.Diagnostics.Process.Start(@ class="hljs-string">"c:/myPDF.pdf");
 
-                //if (Device.OS == TargetPlatform.WinPhone || Device.OS == TargetPlatform.Windows)
-                //{
-                //    // Xamarin.Forms.DependencyService.Get<ISaveWindowsPhone>().Save("Output.pdf", "application/pdf", stream);
-                //    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView(save + ".pdf", "application/pdf", stream);
-                //}
-                //else
-                //{
-                //    Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView(save + ".pdf", "application/pdf", stream);
-                //}
+                //string pdfPath = Path.Combine(Application.StartupPath, "archivo.pdf");
 
+                //Process.Start(pdfPath);
+                
 
                 return true;
             }
@@ -500,6 +493,9 @@ namespace COMPRAS2
 
         }
 
+        private void Aceptar_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
