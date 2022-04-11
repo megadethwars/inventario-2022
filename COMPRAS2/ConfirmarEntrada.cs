@@ -36,9 +36,23 @@ namespace COMPRAS2
             Navigator.backPage(this.Name, this);
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private async void btnOK_Click(object sender, EventArgs e)
         {
+            
 
+            
+
+            int statusUser = await Auth();
+
+            if (statusUser != 0)
+            {
+            
+                return;
+            }
+
+            
+
+            int statusmovements = await sendMovementAsync();
         }
 
         private void ConfirmarEntrada_Load(object sender, EventArgs e)
