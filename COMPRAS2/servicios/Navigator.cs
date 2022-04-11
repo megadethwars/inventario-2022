@@ -81,5 +81,50 @@ namespace COMPRAS2.servicios
 
         }
 
+        public static void GoMenu() {
+            int count = mainmenu.PANELCONTENEDOR.Controls.Count;
+            string name = "";
+            if (count > 1)
+            {
+                string[] names = new string[count - 1];
+                int temp = 0;
+                foreach (Control control in mainmenu.PANELCONTENEDOR.Controls)
+                {
+                    if (control.Name != mainmenu.Name)
+                    {
+
+                        names[temp] = control.Name;
+                        temp++;
+                    }
+
+                }
+
+                foreach (string nm in names)
+                {
+
+                    Control[] controls = mainmenu.PANELCONTENEDOR.Controls.Find(nm, true);
+
+                    foreach (Control ctl in controls)
+                    {
+                        mainmenu.PANELCONTENEDOR.Controls.RemoveByKey(nm);
+
+                        ctl.Dispose();
+                    }
+
+                }
+
+                Control[] controlsUnique = mainmenu.PANELCONTENEDOR.Controls.Find(mainmenu.Name, true);
+
+                foreach (Control ctrl in controlsUnique)
+                {
+                    ctrl.Show();
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
     }
 }

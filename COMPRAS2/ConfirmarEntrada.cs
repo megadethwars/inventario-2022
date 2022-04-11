@@ -13,9 +13,11 @@ namespace COMPRAS2
 {
     public partial class ConfirmarEntrada : Form
     {
-        public ConfirmarEntrada()
+        public ENTRADA entrada;
+        public ConfirmarEntrada(ENTRADA entrada)
         {
             InitializeComponent();
+            this.entrada = entrada;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
