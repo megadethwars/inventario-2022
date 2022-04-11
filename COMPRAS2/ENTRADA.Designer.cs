@@ -363,6 +363,7 @@ namespace COMPRAS2
             this.txtBUSCADOR.Size = new System.Drawing.Size(953, 19);
             this.txtBUSCADOR.TabIndex = 102;
             this.txtBUSCADOR.Text = "AGREGAR CODIGO";
+            this.txtBUSCADOR.Click += new System.EventHandler(this.txtBUSCADOR_Click);
             this.txtBUSCADOR.TextChanged += new System.EventHandler(this.txtBUSCADOR_TextChanged);
             this.txtBUSCADOR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CheckEnter);
             // 

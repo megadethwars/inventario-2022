@@ -175,6 +175,7 @@ namespace COMPRAS2
                     movement.codigo_Actual = null;
                     movement.dispositivo = null;
                     movement.idMovimiento = uniqueId;
+                    
 
                     List<Movimientos> movimientos = new List<Movimientos>();
                     movimientos.Add(movement);

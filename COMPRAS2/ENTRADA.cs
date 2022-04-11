@@ -175,7 +175,7 @@ namespace COMPRAS2
             movement.usuarioId = CurrentUsers.id;
             movement.dispositivoId = device.id;
             movement.dispositivo = device;
-            movement.tipoMovId = 1;
+            movement.tipoMovId = 2;
 
             movimientos.Add(movement);
         }
