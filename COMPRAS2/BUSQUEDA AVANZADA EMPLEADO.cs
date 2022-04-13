@@ -116,5 +116,10 @@ namespace COMPRAS2
             int status = await Estatus();
             int lugars = await Lugares();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
+        }
     }
 }

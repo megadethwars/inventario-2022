@@ -71,8 +71,14 @@ namespace COMPRAS2
 
         private async void EMPLEADOS_Load(object sender, EventArgs e)
         {
+            
             try
             {
+                if(CurrentUsers.rol.id != 1)
+                {
+                    btnEscanear.Enabled = false;
+                    btAgregarEmp.Enabled = false;
+                }
                 await empleados();
             }
             catch

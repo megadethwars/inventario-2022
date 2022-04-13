@@ -97,7 +97,7 @@ namespace COMPRAS2
 
         private void btnReingresarProducto_Click(object sender, EventArgs e)
         {
-            Navigator.nextPage(new INGRESAR_PRODUCTO());
+            Navigator.nextPage(new ENTRADA());
         }
 
         private void btnSALIDA_Click(object sender, EventArgs e)

@@ -114,7 +114,7 @@ namespace COMPRAS2
                 CurrentUsers.correo = userDeserialize.correo;
                 CurrentUsers.telefono = userDeserialize.telefono;
                 CurrentUsers.id = userDeserialize.id;
-
+                CurrentUsers.rol = userDeserialize.rol;
 
                 return 0;
             }
