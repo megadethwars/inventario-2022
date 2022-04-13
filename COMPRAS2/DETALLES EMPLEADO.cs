@@ -41,6 +41,12 @@ namespace COMPRAS2
 
         private void DETALLES_EMPLEADO_Load(object sender, EventArgs e)
         {
+            if (CurrentUsers.rol.id != 1)
+            {
+                btnEditar.Enabled = false;
+                btnContraseña.Enabled = false;
+                btnEliminar.Enabled = false;               
+            }
             lblNombreDelEmpleado.Text = user.nombre + " " + user.apellidoPaterno + " " + user.apellidoMaterno;
             lblFechaDeIngreso.Text = user.fechaAlta.ToString();
             lblTipoDeUsuario.Text = user.rolNombre;
