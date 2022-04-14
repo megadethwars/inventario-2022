@@ -63,7 +63,9 @@ namespace COMPRAS2
             this.USERID.TabIndex = 2;
             this.USERID.Text = "User ID";
             this.USERID.Click += new System.EventHandler(this.USERID_Click);
+            this.USERID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.USERID_KeyDown);
             this.USERID.Leave += new System.EventHandler(this.USERID_Leave);
+            this.USERID.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.USERID_PreviewKeyDown);
             // 
             // label1
             // 
@@ -125,6 +127,7 @@ namespace COMPRAS2
             this.PASSWORD.TabIndex = 12;
             this.PASSWORD.Text = "Password";
             this.PASSWORD.Click += new System.EventHandler(this.PASSWORD_Click);
+            this.PASSWORD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PASSWORD_KeyDown);
             this.PASSWORD.Leave += new System.EventHandler(this.PASSWORD_Leave);
             // 
             // pictureBox3

@@ -109,6 +109,7 @@ namespace COMPRAS2
             // 
             this.toggleButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.toggleButton2.AutoSize = true;
+            this.toggleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.toggleButton2.Location = new System.Drawing.Point(337, 389);
             this.toggleButton2.MinimumSize = new System.Drawing.Size(45, 22);
             this.toggleButton2.Name = "toggleButton2";
@@ -125,6 +126,7 @@ namespace COMPRAS2
             // 
             this.toggleButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.toggleButton1.AutoSize = true;
+            this.toggleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.toggleButton1.Location = new System.Drawing.Point(337, 291);
             this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
             this.toggleButton1.Name = "toggleButton1";
