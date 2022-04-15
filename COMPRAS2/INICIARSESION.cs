@@ -166,64 +166,20 @@ namespace COMPRAS2
                 this.Hide();
             }
         }
-
-        
+       
         
         private void INICIARSESION_Load(object sender, EventArgs e)
         {
            
         }
-        /*
-        private void CheckEnter(object sender, KeyEventArgs e)
-        {
-            /*
-            if (e.KeyCode == Keys.Enter)
-            {
-                PASSWORD.Clear();
-                PASSWORD.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                //USERID.Clear();
-            }
-        }*/
-        
-       
-
-        private void USERID_KeyDown(object sender, KeyEventArgs e)
-        {
-            /*
-            if (e.KeyCode == Keys.Q)
-            {
-                PASSWORD.Clear();
-                PASSWORD.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                //USERID.Clear();
-            }*/
-        }
-
-        private void PASSWORD_KeyDown(object sender, KeyEventArgs e)
-        {
-           
-        }
-
-        
+               
         private void USERID_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyData == Keys.Tab)
-            {
-                MessageBox.Show("Tab");
+            {              
                 PASSWORD.Clear();
-                PASSWORD.UseSystemPasswordChar = true;
-                //e.IsInputKey = true;
-            }/*
-            if (e.KeyData == (Keys.Tab | Keys.Shift))
-            {
-                MessageBox.Show("Shift + Tab");
-                e.IsInputKey = true;
-            }*/
+                PASSWORD.UseSystemPasswordChar = true;              
+            }           
         }
     }
 }

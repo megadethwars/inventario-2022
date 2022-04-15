@@ -37,14 +37,6 @@ namespace COMPRAS2
                 busqueda();
             }
 
-
-            /*
-            if (e.KeyChar == (char)13)
-            {
-                // Enter key pressed
-                //busqueda();
-            }
-            */
             
         }
         public async void busqueda() {

@@ -155,6 +155,8 @@ namespace COMPRAS2
                 this.lbCantitad.Text = devices[0].cantidad.ToString();
                 this.lbMarca.Text = devices[0].marca;
                 this.lbdesc.Text = devices[0].descompostura;
+                this.lbModelo.Text = devices[0].modelo;
+                
 
                 //llenar
 
@@ -195,12 +197,13 @@ namespace COMPRAS2
             isFirst = false;
             movimientos.Clear();
 
-            this.lbNombre.Text = "";
-            this.lbOrigen.Text = "";
-            this.lbSerie.Text = "";
-            this.lbCantitad.Text = "";
-            this.lbMarca.Text = "";
-            this.lbdesc.Text = "";
+            this.lbNombre.Text = "Por definir";
+            this.lbOrigen.Text = "Por definir";
+            this.lbSerie.Text = "Por definir";
+            this.lbCantitad.Text = "Por definir";
+            this.lbMarca.Text = "Por definir";
+            this.lbdesc.Text = "Por definir";
+            this.lbModelo.Text = "Por definir";
         }
 
         private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
