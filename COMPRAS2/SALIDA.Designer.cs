@@ -55,6 +55,7 @@ namespace COMPRAS2
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btnBuscador = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -120,9 +121,9 @@ namespace COMPRAS2
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBUSCADOR.ForeColor = System.Drawing.Color.White;
-            this.txtBUSCADOR.Location = new System.Drawing.Point(162, 109);
+            this.txtBUSCADOR.Location = new System.Drawing.Point(191, 109);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
-            this.txtBUSCADOR.Size = new System.Drawing.Size(953, 19);
+            this.txtBUSCADOR.Size = new System.Drawing.Size(924, 19);
             this.txtBUSCADOR.TabIndex = 68;
             this.txtBUSCADOR.Text = "AGREGAR CODIGO";
             this.txtBUSCADOR.Click += new System.EventHandler(this.txtBUSCADOR_Click);
@@ -397,12 +398,31 @@ namespace COMPRAS2
             this.pictureBox7.TabIndex = 100;
             this.pictureBox7.TabStop = false;
             // 
+            // btnBuscador
+            // 
+            this.btnBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            this.btnBuscador.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
+            this.btnBuscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscador.FlatAppearance.BorderSize = 0;
+            this.btnBuscador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscador.Location = new System.Drawing.Point(154, 108);
+            this.btnBuscador.Name = "btnBuscador";
+            this.btnBuscador.Size = new System.Drawing.Size(31, 25);
+            this.btnBuscador.TabIndex = 101;
+            this.btnBuscador.UseVisualStyleBackColor = false;
+            this.btnBuscador.Click += new System.EventHandler(this.btnBuscador_Click);
+            // 
             // SALIDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -472,5 +492,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btnBuscador;
     }
 }

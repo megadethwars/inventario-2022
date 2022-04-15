@@ -85,10 +85,7 @@ namespace COMPRAS2
                 this.lbSerie.Text = "N/A";
                 this.lbCantitad.Text = devices[0].cantidad.ToString();
                 this.lbMarca.Text = devices[0].marca;
-                this.lbdesc.Text = devices[0].descompostura;
-
-                //llenar
-                
+                this.lbdesc.Text = devices[0].descompostura;              
 
                 Agregar(devices[0]);
 
@@ -120,6 +117,11 @@ namespace COMPRAS2
         private void txtBUSCADOR_Click(object sender, EventArgs e)
         {
             txtBUSCADOR.Clear();
+        }
+
+        private void btnBuscador_Click(object sender, EventArgs e)
+        {
+            busqueda();
         }
     }
 }

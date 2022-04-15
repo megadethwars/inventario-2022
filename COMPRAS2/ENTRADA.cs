@@ -215,5 +215,10 @@ namespace COMPRAS2
         {
             txtBUSCADOR.Clear();
         }
+
+        private void btnBuscador_Click(object sender, EventArgs e)
+        {
+            busqueda();
+        }
     }
 }
