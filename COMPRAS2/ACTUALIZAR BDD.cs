@@ -22,5 +22,13 @@ namespace COMPRAS2
         {
             Navigator.backPage(this.Name, this);
         }
+
+        private void btnSeleccionarArchivo_Click(object sender, EventArgs e)
+        {
+            if(OFDActualizar.ShowDialog() == DialogResult.OK)
+            {
+                lblNombreArchivo.Text = OFDActualizar.FileName;
+            }
+        }
     }
 }
