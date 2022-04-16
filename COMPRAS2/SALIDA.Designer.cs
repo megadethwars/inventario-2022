@@ -299,7 +299,7 @@ namespace COMPRAS2
             this.btnAgregarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCarrito.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCarrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarCarrito.Location = new System.Drawing.Point(1074, 728);
+            this.btnAgregarCarrito.Location = new System.Drawing.Point(1068, 703);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
             this.btnAgregarCarrito.Size = new System.Drawing.Size(175, 39);
             this.btnAgregarCarrito.TabIndex = 93;

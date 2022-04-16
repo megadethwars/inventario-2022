@@ -392,7 +392,7 @@ namespace COMPRAS2
             this.btnAgregarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCarrito.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCarrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarCarrito.Location = new System.Drawing.Point(915, 734);
+            this.btnAgregarCarrito.Location = new System.Drawing.Point(1026, 774);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
             this.btnAgregarCarrito.Size = new System.Drawing.Size(175, 39);
             this.btnAgregarCarrito.TabIndex = 124;
@@ -402,7 +402,7 @@ namespace COMPRAS2
             // 
             // btClear
             // 
-            this.btClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btClear.BackColor = System.Drawing.Color.Transparent;
             this.btClear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -413,7 +413,7 @@ namespace COMPRAS2
             this.btClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btClear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btClear.Location = new System.Drawing.Point(61, 734);
+            this.btClear.Location = new System.Drawing.Point(61, 774);
             this.btClear.Name = "btClear";
             this.btClear.Size = new System.Drawing.Size(175, 39);
             this.btClear.TabIndex = 125;
