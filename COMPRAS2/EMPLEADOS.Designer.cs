@@ -36,7 +36,6 @@ namespace COMPRAS2
             this.btBUSCADOR = new System.Windows.Forms.Button();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnEscanear = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btAgregarEmp = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -114,26 +113,6 @@ namespace COMPRAS2
             this.pictureBox2.TabIndex = 36;
             this.pictureBox2.TabStop = false;
             // 
-            // btnEscanear
-            // 
-            this.btnEscanear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEscanear.BackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEscanear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEscanear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEscanear.FlatAppearance.BorderSize = 0;
-            this.btnEscanear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEscanear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscanear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEscanear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEscanear.Location = new System.Drawing.Point(12, 810);
-            this.btnEscanear.Name = "btnEscanear";
-            this.btnEscanear.Size = new System.Drawing.Size(163, 39);
-            this.btnEscanear.TabIndex = 39;
-            this.btnEscanear.Text = "INGRESAR";
-            this.btnEscanear.UseVisualStyleBackColor = false;
-            // 
             // dgvUsuarios
             // 
             this.dgvUsuarios.AllowUserToOrderColumns = true;
@@ -188,7 +167,7 @@ namespace COMPRAS2
             this.btAgregarEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAgregarEmp.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAgregarEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btAgregarEmp.Location = new System.Drawing.Point(239, 810);
+            this.btAgregarEmp.Location = new System.Drawing.Point(20, 798);
             this.btAgregarEmp.Name = "btAgregarEmp";
             this.btAgregarEmp.Size = new System.Drawing.Size(187, 39);
             this.btAgregarEmp.TabIndex = 41;
@@ -249,7 +228,6 @@ namespace COMPRAS2
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btAgregarEmp);
             this.Controls.Add(this.dgvUsuarios);
-            this.Controls.Add(this.btnEscanear);
             this.Controls.Add(this.btBUSCADOR);
             this.Controls.Add(this.txtBUSCADOR);
             this.Controls.Add(this.pictureBox2);
@@ -272,7 +250,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btBUSCADOR;
         private System.Windows.Forms.TextBox txtBUSCADOR;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnEscanear;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Button btAgregarEmp;
         private System.Windows.Forms.Button btnActualizar;

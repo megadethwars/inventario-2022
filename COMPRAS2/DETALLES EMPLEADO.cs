@@ -1,5 +1,6 @@
 ﻿using COMPRAS2.modelos;
 using COMPRAS2.servicios;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,11 @@ namespace COMPRAS2
                 btnContraseña.Enabled = false;
                 btnEliminar.Enabled = false;               
             }
+
+            if(CurrentUsers.rol.id == user.id)
+            {
+                btnEliminar.Enabled = false;
+            }
             lblNombreDelEmpleado.Text = user.nombre + " " + user.apellidoPaterno + " " + user.apellidoMaterno;
             lblFechaDeIngreso.Text = user.fechaAlta.ToString();
             lblTipoDeUsuario.Text = user.rolNombre;
@@ -58,6 +64,67 @@ namespace COMPRAS2
         private void btnContraseña_Click(object sender, EventArgs e)
         {
             Navigator.nextPage(new CAMBIAR_CONTRASEÑA_EMPLEADOS(user));
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("¿Seguro que desea eliminar a este empleado?");
+            EliminarEmpleado();
+        }
+
+        private async void EliminarEmpleado()
+        {
+            
+            User userUpdate;
+            userUpdate = new User();
+
+            userUpdate.id = 3;
+            userUpdate.statusId = 3;
+            
+
+            /*
+            userUpdate.statusId = idEstado;
+
+            userUpdate.id = id;
+            */
+            
+
+            string json = JsonConvert.SerializeObject(userUpdate,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var url = HttpMethods.url + "usuarios";
+            StatusMessage statusmessage = await HttpMethods.put(url, json);
+
+            if (statusmessage.statuscode == 409)
+            {
+                MessageBox.Show("error en el servicio, " + statusmessage.message);
+                return;
+            }
+
+            else if (statusmessage.statuscode == 500)
+            {
+                MessageBox.Show("error en el servicio");
+                return;
+            }
+            else if (statusmessage.statuscode == 200)
+            {
+                User USERS = JsonConvert.DeserializeObject<User>(statusmessage.data);
+                MessageBox.Show("EMPLEADO ELIMINADO");
+                Navigator.nextPage(new EMPLEADOS());
+                return;
+            }
+            else if (statusmessage.statuscode == 404)
+            {
+                MessageBox.Show("error en el servicio, NO encontrado");
+
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Bad request, algunos campos faltantes");
+                return;
+            }
+
+            Navigator.nextPage(new EMPLEADOS());
         }
     }
 }

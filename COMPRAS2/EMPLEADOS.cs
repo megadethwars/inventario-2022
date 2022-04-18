@@ -76,7 +76,7 @@ namespace COMPRAS2
             {
                 if(CurrentUsers.rol.id != 1)
                 {
-                    btnEscanear.Enabled = false;
+                    //btnEscanear.Enabled = false;
                     btAgregarEmp.Enabled = false;
                 }
                 await empleados();

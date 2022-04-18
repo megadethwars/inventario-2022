@@ -300,8 +300,9 @@ namespace COMPRAS2
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(183, 39);
             this.btnEliminar.TabIndex = 86;
-            this.btnEliminar.Text = "ELIMINAR EMPLEADOS";
+            this.btnEliminar.Text = "ELIMINAR EMPLEADO";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // bTNBack
             // 
@@ -337,7 +338,7 @@ namespace COMPRAS2
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(183, 39);
             this.btnEditar.TabIndex = 132;
-            this.btnEditar.Text = "EDITAR EMPLEADOS";
+            this.btnEditar.Text = "EDITAR EMPLEADO";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
