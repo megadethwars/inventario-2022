@@ -1,5 +1,6 @@
 ﻿using COMPRAS2.servicios;
 using ExcelDataReader;
+using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,10 +39,7 @@ namespace COMPRAS2
             try
             {
                 FileStream fStream = File.Open(@"C:\File\Classes.xlsx", FileMode.Open, FileAccess.Read);
-                IExcelDataReader excelDataReader = ExcelReaderFactory.CreateOpenXmlReader(fStream);
-                DataSet resultDataSet = excelDataReader.AsDataSet();
-                
-                excelDataReader.Close();
+              
 
 
                 ExcelEngine excelEngine = new ExcelEngine();
@@ -49,7 +47,7 @@ namespace COMPRAS2
                 application.DefaultVersion = ExcelVersion.Excel2013;
 
 
-                IWorkbook workbook = application.Workbooks.Open(f.GetStream());
+                IWorkbook workbook = application.Workbooks.Open(fStream);
 
                 //Access first worksheet from the workbook.
                 IWorksheet worksheet = workbook.Worksheets[1];
