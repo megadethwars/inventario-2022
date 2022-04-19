@@ -37,6 +37,7 @@ namespace COMPRAS2
             this.btnINICIAR = new System.Windows.Forms.Button();
             this.btnSeleccionarArchivo = new System.Windows.Forms.Button();
             this.OFDActualizar = new System.Windows.Forms.OpenFileDialog();
+            this.porcentaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCodigoQR
@@ -47,9 +48,9 @@ namespace COMPRAS2
             this.lblCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblCodigoQR.Location = new System.Drawing.Point(561, 257);
             this.lblCodigoQR.Name = "lblCodigoQR";
-            this.lblCodigoQR.Size = new System.Drawing.Size(386, 31);
+            this.lblCodigoQR.Size = new System.Drawing.Size(362, 31);
             this.lblCodigoQR.TabIndex = 56;
-            this.lblCodigoQR.Text = "PORCENTAJE DE CARGA :%";
+            this.lblCodigoQR.Text = "PORCENTAJE DE CARGA :";
             // 
             // lblNombreArchivo
             // 
@@ -111,6 +112,7 @@ namespace COMPRAS2
             this.btnDETENER.TabIndex = 61;
             this.btnDETENER.Text = "DETENER";
             this.btnDETENER.UseVisualStyleBackColor = false;
+            this.btnDETENER.Click += new System.EventHandler(this.btnDETENER_Click);
             // 
             // btnINICIAR
             // 
@@ -160,12 +162,25 @@ namespace COMPRAS2
             // 
             this.OFDActualizar.FileName = "OFDActualizar";
             // 
+            // porcentaje
+            // 
+            this.porcentaje.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.porcentaje.AutoSize = true;
+            this.porcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.porcentaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.porcentaje.Location = new System.Drawing.Point(959, 257);
+            this.porcentaje.Name = "porcentaje";
+            this.porcentaje.Size = new System.Drawing.Size(60, 31);
+            this.porcentaje.TabIndex = 64;
+            this.porcentaje.Text = "0 %";
+            // 
             // ACTUALIZAR_BDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.porcentaje);
             this.Controls.Add(this.btnSeleccionarArchivo);
             this.Controls.Add(this.btnINICIAR);
             this.Controls.Add(this.btnDETENER);
@@ -191,5 +206,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnINICIAR;
         private System.Windows.Forms.Button btnSeleccionarArchivo;
         private System.Windows.Forms.OpenFileDialog OFDActualizar;
+        private System.Windows.Forms.Label porcentaje;
     }
 }
