@@ -26,7 +26,7 @@ namespace COMPRAS2
 
         private async void AGREGAR_EMPLEADO_Load(object sender, EventArgs e)
         {
-            int status = await Roles();
+            int roles = await Roles();
             int estatus = await Estatus();
         }
 

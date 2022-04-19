@@ -37,8 +37,6 @@ namespace COMPRAS2
             this.btnOK = new System.Windows.Forms.Button();
             this.lblEstatus = new System.Windows.Forms.Label();
             this.lblLugares = new System.Windows.Forms.Label();
-            this.cbEstatus = new System.Windows.Forms.ComboBox();
-            this.cbLugares = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
@@ -49,28 +47,26 @@ namespace COMPRAS2
             this.label1 = new System.Windows.Forms.Label();
             this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textUsuario = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.cbRoles = new System.Windows.Forms.ComboBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -145,36 +141,6 @@ namespace COMPRAS2
             this.lblLugares.Size = new System.Drawing.Size(144, 32);
             this.lblLugares.TabIndex = 151;
             this.lblLugares.Text = "TIPO DE USUARIO:";
-            // 
-            // cbEstatus
-            // 
-            this.cbEstatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbEstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.cbEstatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.cbEstatus.FormattingEnabled = true;
-            this.cbEstatus.Location = new System.Drawing.Point(745, 352);
-            this.cbEstatus.Name = "cbEstatus";
-            this.cbEstatus.Size = new System.Drawing.Size(426, 28);
-            this.cbEstatus.TabIndex = 150;
-            this.cbEstatus.Text = "Seleccione el tipo de Estatus";
-            // 
-            // cbLugares
-            // 
-            this.cbLugares.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.cbLugares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.cbLugares.FormattingEnabled = true;
-            this.cbLugares.Location = new System.Drawing.Point(745, 282);
-            this.cbLugares.Name = "cbLugares";
-            this.cbLugares.Size = new System.Drawing.Size(426, 28);
-            this.cbLugares.TabIndex = 149;
-            this.cbLugares.Text = "Seleccione el Lugar";
             // 
             // txtCorreo
             // 
@@ -253,7 +219,7 @@ namespace COMPRAS2
             this.dgvEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvEmpleado.EnableHeadersVisualStyles = false;
             this.dgvEmpleado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvEmpleado.Location = new System.Drawing.Point(20, 478);
+            this.dgvEmpleado.Location = new System.Drawing.Point(20, 418);
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvEmpleado.RowHeadersVisible = false;
@@ -265,7 +231,7 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleado.Size = new System.Drawing.Size(1235, 309);
+            this.dgvEmpleado.Size = new System.Drawing.Size(1235, 354);
             this.dgvEmpleado.TabIndex = 153;
             // 
             // btnLimpiar
@@ -341,33 +307,6 @@ namespace COMPRAS2
             this.label2.TabIndex = 157;
             this.label2.Text = "APELLIDO MATERNO:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.textBox1.Location = new System.Drawing.Point(745, 207);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(426, 29);
-            this.textBox1.TabIndex = 160;
-            this.textBox1.Text = "Introduzca el Correo";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label6.Location = new System.Drawing.Point(745, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 32);
-            this.label6.TabIndex = 159;
-            this.label6.Text = "CORREO";
-            // 
             // txtTelefono
             // 
             this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -380,7 +319,6 @@ namespace COMPRAS2
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(426, 29);
             this.txtTelefono.TabIndex = 162;
-            this.txtTelefono.Text = "Introduzca el telefono";
             // 
             // label5
             // 
@@ -395,27 +333,27 @@ namespace COMPRAS2
             this.label5.TabIndex = 161;
             this.label5.Text = "TELEFONO:";
             // 
-            // textUsuario
+            // txtUsuario
             // 
-            this.textUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.textUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.textUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.textUsuario.Location = new System.Drawing.Point(155, 420);
-            this.textUsuario.Name = "textUsuario";
-            this.textUsuario.Size = new System.Drawing.Size(426, 29);
-            this.textUsuario.TabIndex = 164;
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtUsuario.Location = new System.Drawing.Point(745, 207);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(426, 29);
+            this.txtUsuario.TabIndex = 164;
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label8.Location = new System.Drawing.Point(155, 385);
+            this.label8.Location = new System.Drawing.Point(745, 175);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 32);
             this.label8.TabIndex = 163;
@@ -486,19 +424,6 @@ namespace COMPRAS2
             this.pictureBox4.TabIndex = 169;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox6.Location = new System.Drawing.Point(132, 385);
-            this.pictureBox6.MaximumSize = new System.Drawing.Size(1000, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(473, 3);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 170;
-            this.pictureBox6.TabStop = false;
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -538,27 +463,54 @@ namespace COMPRAS2
             this.pictureBox9.TabIndex = 173;
             this.pictureBox9.TabStop = false;
             // 
+            // cbRoles
+            // 
+            this.cbRoles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbRoles.FormattingEnabled = true;
+            this.cbRoles.Location = new System.Drawing.Point(745, 277);
+            this.cbRoles.Name = "cbRoles";
+            this.cbRoles.Size = new System.Drawing.Size(426, 32);
+            this.cbRoles.TabIndex = 175;
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(745, 352);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(426, 28);
+            this.cbEstado.TabIndex = 176;
+            // 
             // BUSQUEDA_AVANZADA_EMPLEADO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.cbRoles);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textUsuario);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtApellidoMaterno);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtApellidoPaterno);
@@ -567,8 +519,6 @@ namespace COMPRAS2
             this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.lblLugares);
-            this.Controls.Add(this.cbEstatus);
-            this.Controls.Add(this.cbLugares);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblCorreo);
@@ -586,7 +536,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -601,8 +550,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label lblEstatus;
         private System.Windows.Forms.Label lblLugares;
-        private System.Windows.Forms.ComboBox cbEstatus;
-        private System.Windows.Forms.ComboBox cbLugares;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblCorreo;
@@ -613,20 +560,19 @@ namespace COMPRAS2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtApellidoMaterno;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textUsuario;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.ComboBox cbRoles;
+        private System.Windows.Forms.ComboBox cbEstado;
     }
 }

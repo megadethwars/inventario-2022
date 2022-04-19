@@ -128,6 +128,8 @@ namespace COMPRAS2
         {
             int status = await Estatus();
             int lugars = await Lugares();
+            this.cbEstatus.Text = null;
+            this.cbLugares.SelectedItem = null;
         }
 
         
