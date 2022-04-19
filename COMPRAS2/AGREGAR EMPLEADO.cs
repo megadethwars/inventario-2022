@@ -200,6 +200,11 @@ namespace COMPRAS2
 
         private async void btnOK_Click(object sender, EventArgs e)
         {
+            if (txtContraseña.Text != txtContraseñaDeNuevo.Text)
+            {
+                MessageBox.Show("LAS CONTRASEÑAS NO SON IGUALES, INTENTE DE NUEVO");
+                return;
+            }
             int status = await CreateUser();
         }
 
@@ -292,6 +297,7 @@ namespace COMPRAS2
             if (txtContraseña.Text == "Introduzca la contraseña")
             {
                 txtContraseña.Clear();
+                txtContraseña.UseSystemPasswordChar = true;
             }
         }
 
@@ -308,6 +314,7 @@ namespace COMPRAS2
             if (txtContraseñaDeNuevo.Text == "Introduzca la contraseña de nuevo")
             {
                 txtContraseñaDeNuevo.Clear();
+                txtContraseñaDeNuevo.UseSystemPasswordChar = true;
             }
         }
 

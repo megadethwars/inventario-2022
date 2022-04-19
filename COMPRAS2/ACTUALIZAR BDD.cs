@@ -1,5 +1,5 @@
 ﻿using COMPRAS2.servicios;
-using ExcelDataReader;
+
 using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;

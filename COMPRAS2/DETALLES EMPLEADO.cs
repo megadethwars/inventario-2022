@@ -78,17 +78,10 @@ namespace COMPRAS2
             User userUpdate;
             userUpdate = new User();
 
-            userUpdate.id = 3;
+            userUpdate.id = user.id;
             userUpdate.statusId = 3;
             
-
-            /*
-            userUpdate.statusId = idEstado;
-
-            userUpdate.id = id;
-            */
-            
-
+                        
             string json = JsonConvert.SerializeObject(userUpdate,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
             var url = HttpMethods.url + "usuarios";
@@ -124,7 +117,7 @@ namespace COMPRAS2
                 return;
             }
 
-            Navigator.nextPage(new EMPLEADOS());
+            Navigator.backPage(this.Name, this);
         }
     }
 }

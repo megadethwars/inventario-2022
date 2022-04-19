@@ -30,9 +30,8 @@ namespace COMPRAS2
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BUSQUEDA_AVANZADA_EMPLEADO));
-            this.btnBuscador = new System.Windows.Forms.Button();
-            this.txtBUSCADOR = new System.Windows.Forms.TextBox();
-            this.pboxBuscador = new System.Windows.Forms.PictureBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblBusquedaAvanzada = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
@@ -44,49 +43,10 @@ namespace COMPRAS2
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
+            this.dgvInventario = new System.Windows.Forms.DataGridView();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnBuscador
-            // 
-            this.btnBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            this.btnBuscador.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
-            this.btnBuscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscador.FlatAppearance.BorderSize = 0;
-            this.btnBuscador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscador.Location = new System.Drawing.Point(159, 100);
-            this.btnBuscador.Name = "btnBuscador";
-            this.btnBuscador.Size = new System.Drawing.Size(31, 25);
-            this.btnBuscador.TabIndex = 65;
-            this.btnBuscador.UseVisualStyleBackColor = false;
-            // 
-            // txtBUSCADOR
-            // 
-            this.txtBUSCADOR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
-            this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBUSCADOR.ForeColor = System.Drawing.Color.White;
-            this.txtBUSCADOR.Location = new System.Drawing.Point(194, 100);
-            this.txtBUSCADOR.Name = "txtBUSCADOR";
-            this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
-            this.txtBUSCADOR.TabIndex = 64;
-            this.txtBUSCADOR.Text = "Buscar";
-            // 
-            // pboxBuscador
-            // 
-            this.pboxBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pboxBuscador.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pboxBuscador.Location = new System.Drawing.Point(134, 90);
-            this.pboxBuscador.Name = "pboxBuscador";
-            this.pboxBuscador.Size = new System.Drawing.Size(1036, 40);
-            this.pboxBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxBuscador.TabIndex = 63;
-            this.pboxBuscador.TabStop = false;
             // 
             // btnBack
             // 
@@ -139,7 +99,7 @@ namespace COMPRAS2
             this.lblEstatus.AutoSize = true;
             this.lblEstatus.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblEstatus.Location = new System.Drawing.Point(760, 280);
+            this.lblEstatus.Location = new System.Drawing.Point(759, 219);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(144, 32);
             this.lblEstatus.TabIndex = 152;
@@ -152,7 +112,7 @@ namespace COMPRAS2
             this.lblLugares.AutoSize = true;
             this.lblLugares.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblLugares.Location = new System.Drawing.Point(760, 173);
+            this.lblLugares.Location = new System.Drawing.Point(759, 112);
             this.lblLugares.Name = "lblLugares";
             this.lblLugares.Size = new System.Drawing.Size(144, 32);
             this.lblLugares.TabIndex = 151;
@@ -167,7 +127,7 @@ namespace COMPRAS2
             this.cbEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.cbEstatus.FormattingEnabled = true;
-            this.cbEstatus.Location = new System.Drawing.Point(766, 324);
+            this.cbEstatus.Location = new System.Drawing.Point(765, 263);
             this.cbEstatus.Name = "cbEstatus";
             this.cbEstatus.Size = new System.Drawing.Size(426, 28);
             this.cbEstatus.TabIndex = 150;
@@ -182,7 +142,7 @@ namespace COMPRAS2
             this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.cbLugares.FormattingEnabled = true;
-            this.cbLugares.Location = new System.Drawing.Point(766, 213);
+            this.cbLugares.Location = new System.Drawing.Point(765, 152);
             this.cbLugares.Name = "cbLugares";
             this.cbLugares.Size = new System.Drawing.Size(426, 28);
             this.cbLugares.TabIndex = 149;
@@ -196,7 +156,7 @@ namespace COMPRAS2
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtCorreo.Location = new System.Drawing.Point(159, 324);
+            this.txtCorreo.Location = new System.Drawing.Point(158, 263);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(426, 26);
             this.txtCorreo.TabIndex = 148;
@@ -209,7 +169,7 @@ namespace COMPRAS2
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtNombre.Location = new System.Drawing.Point(159, 213);
+            this.txtNombre.Location = new System.Drawing.Point(158, 152);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(426, 26);
             this.txtNombre.TabIndex = 147;
@@ -221,7 +181,7 @@ namespace COMPRAS2
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCorreo.Location = new System.Drawing.Point(159, 280);
+            this.lblCorreo.Location = new System.Drawing.Point(158, 219);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(78, 32);
             this.lblCorreo.TabIndex = 146;
@@ -234,11 +194,71 @@ namespace COMPRAS2
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblNombre.Location = new System.Drawing.Point(159, 173);
+            this.lblNombre.Location = new System.Drawing.Point(158, 112);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(83, 32);
             this.lblNombre.TabIndex = 145;
             this.lblNombre.Text = "NOMBRE:";
+            // 
+            // dgvInventario
+            // 
+            this.dgvInventario.AllowUserToOrderColumns = true;
+            this.dgvInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvInventario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInventario.ColumnHeadersHeight = 45;
+            this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvInventario.EnableHeadersVisualStyles = false;
+            this.dgvInventario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dgvInventario.Location = new System.Drawing.Point(20, 334);
+            this.dgvInventario.Name = "dgvInventario";
+            this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvInventario.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInventario.Size = new System.Drawing.Size(1235, 435);
+            this.dgvInventario.TabIndex = 153;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnLimpiar.Location = new System.Drawing.Point(1133, 30);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(111, 39);
+            this.btnLimpiar.TabIndex = 154;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
             // BUSQUEDA_AVANZADA_EMPLEADO
             // 
@@ -246,6 +266,8 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.dgvInventario);
             this.Controls.Add(this.lblEstatus);
             this.Controls.Add(this.lblLugares);
             this.Controls.Add(this.cbEstatus);
@@ -255,26 +277,19 @@ namespace COMPRAS2
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.btnBuscador);
-            this.Controls.Add(this.txtBUSCADOR);
-            this.Controls.Add(this.pboxBuscador);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblBusquedaAvanzada);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BUSQUEDA_AVANZADA_EMPLEADO";
             this.Text = "BUSQUEDA_AVANZADA_EMPLEADO";
             this.Load += new System.EventHandler(this.BUSQUEDA_AVANZADA_EMPLEADO_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBuscador;
-        private System.Windows.Forms.TextBox txtBUSCADOR;
-        private System.Windows.Forms.PictureBox pboxBuscador;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblBusquedaAvanzada;
         private System.Windows.Forms.Button btnOK;
@@ -286,5 +301,7 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.DataGridView dgvInventario;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

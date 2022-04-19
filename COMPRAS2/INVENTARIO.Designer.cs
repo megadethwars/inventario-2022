@@ -243,7 +243,7 @@ namespace COMPRAS2
             // 
             // btnBuscador
             // 
-            this.btnBuscador.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
             this.btnBuscador.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
             this.btnBuscador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

@@ -59,6 +59,7 @@ namespace COMPRAS2
                 this.dgvUsuarios.Columns["rol"].Visible = false;
                 this.dgvUsuarios.Columns["statusUserDescripcion"].Visible = false;
                 this.dgvUsuarios.Columns["status"].Visible = false;
+                this.dgvUsuarios.Columns["id"].Visible = false;
 
                 return 0;
             }
@@ -76,8 +77,7 @@ namespace COMPRAS2
             {
                 if(CurrentUsers.rol.id != 1)
                 {
-                    //btnEscanear.Enabled = false;
-                    btAgregarEmp.Enabled = false;
+                   btAgregarEmp.Enabled = false;
                 }
                 await empleados();
             }

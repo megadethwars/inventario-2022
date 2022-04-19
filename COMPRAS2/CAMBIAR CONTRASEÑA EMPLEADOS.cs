@@ -55,7 +55,6 @@ namespace COMPRAS2
 
             userUpdate.username = user.username;
             
-
             string json = JsonConvert.SerializeObject(userUpdate,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
             var url = HttpMethods.url + "usuarios/pass";
@@ -75,7 +74,7 @@ namespace COMPRAS2
             else if (statusmessage.statuscode == 201)
             {
                 User USERS = JsonConvert.DeserializeObject<User>(statusmessage.data);
-                MessageBox.Show("EMPLEADO ACTUALIZADO CORRECTAMENTE");
+                MessageBox.Show("CONTRASEÑA ACTUALIZADA CORRECTAMENTE");
                 Navigator.backPage(this.Name, this);
                 return;
             }
