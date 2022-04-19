@@ -16,15 +16,18 @@ namespace COMPRAS2
     public partial class AGREGAR_EMPLEADO : Form
     {
         List<Tuple<Int32, String>> listaRoles;
+        List<Tuple<Int32, String>> listaStatus;
         public AGREGAR_EMPLEADO()
         {
             InitializeComponent();
             listaRoles = new List<Tuple<int, string>>();
+            listaStatus = new List<Tuple<int, string>>();
         }
 
         private async void AGREGAR_EMPLEADO_Load(object sender, EventArgs e)
         {
             int status = await Roles();
+            int estatus = await Estatus();
         }
 
         private async Task<int> Roles()
@@ -72,6 +75,52 @@ namespace COMPRAS2
             }
         }
 
+        private async Task<int> Estatus()
+        {
+            try
+            {
+                var url = HttpMethods.url + "statusUsuarios";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode == 500)
+                {
+                    MessageBox.Show("Error interno del servidor");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode == 404)
+                {
+                    MessageBox.Show("Estatus no encontrados");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return 1;
+                }
+
+                var estatus = JsonConvert.DeserializeObject<List<StatusUser>>(statusmessage.data);
+
+                for (int x = 0; x < estatus.Count; x++)
+                {
+                    listaStatus.Add(Tuple.Create<Int32, String>(estatus[x].id, estatus[x].descripcion));
+                }
+
+                listaStatus.RemoveAt(2);
+
+                cbEstado.DataSource = listaStatus;
+                cbEstado.DisplayMember = "Item2";
+                cbEstado.ValueMember = "Item1";
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+                return 10;
+            }
+        }
+
         private async Task<int> CreateUser()
         {
             try
@@ -79,6 +128,7 @@ namespace COMPRAS2
                 int cantidad = 0;
                 Int32 costo = 0;
                 int idRol = 0;
+                int idEstatus = 0;
                 if (txtNombreDelUsuario.Text == "")
                 {
                     MessageBox.Show("campo de nombre vacio");
@@ -125,12 +175,18 @@ namespace COMPRAS2
                     var idRoltuple =(Tuple<int, string>)cbRoles.SelectedItem;
                     idRol = idRoltuple.Item1;
                 }
+
+                if (cbEstado.SelectedItem != null)
+                {
+                    var idEstatustuple = (Tuple<int, string>)cbEstado.SelectedItem;
+                    idEstatus = idEstatustuple.Item1;
+                }
                 else {
                     MessageBox.Show("No se ha seleccionado ningun rol");
                     return 1;
                 }
 
-                //check passwords
+                
                 if (txtContraseña.Text != txtContraseñaDeNuevo.Text) {
                     MessageBox.Show("Error en las contraseñas");
                     return 1;
@@ -145,7 +201,7 @@ namespace COMPRAS2
                 user.rolId = idRol;
                 user.telefono = txtTelefono.Text;
                 user.correo = txtCorreo.Text;
-                user.statusId = 1;
+                user.statusId = idEstatus;
                 user.username = txtNombreDelUsuario.Text;
                
 
@@ -168,7 +224,7 @@ namespace COMPRAS2
                 }
                 else if (statusmessage.statuscode == 201)
                 {
-                    //var auth = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
+                    
                     List<User> USERS = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
                     MessageBox.Show("EMPLEADO AGREGADO CORRECTAMENTE");
                     Navigator.backPage(this.Name, this);
@@ -355,6 +411,24 @@ namespace COMPRAS2
             if (txtCorreo.Text == "")
             {
                 txtCorreo.Text = "Introduzca el Correo";
+            }
+        }
+
+        private void txtApellidoMaterno_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Tab)
+            {
+                txtContraseña.Clear();
+                txtContraseña.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtContraseña_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Tab)
+            {
+                txtContraseñaDeNuevo.Clear();
+                txtContraseñaDeNuevo.UseSystemPasswordChar = true;
             }
         }
     }

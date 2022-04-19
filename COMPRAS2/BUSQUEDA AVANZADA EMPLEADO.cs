@@ -121,5 +121,11 @@ namespace COMPRAS2
         {
             Navigator.backPage(this.Name, this);
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            dgvEmpleado.DataSource = null;
+            this.txtNombre.Text = null;
+        }
     }
 }

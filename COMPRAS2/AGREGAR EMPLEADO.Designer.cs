@@ -60,6 +60,9 @@ namespace COMPRAS2
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.lblEstadoDelUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,6 +72,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // lblREPORTES
@@ -261,6 +265,7 @@ namespace COMPRAS2
             this.txtApellidoMaterno.Text = "Introduzca el Apellido Materno";
             this.txtApellidoMaterno.Click += new System.EventHandler(this.txtApellidoMaterno_Click);
             this.txtApellidoMaterno.Leave += new System.EventHandler(this.txtApellidoMaterno_Leave);
+            this.txtApellidoMaterno.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtApellidoMaterno_PreviewKeyDown);
             // 
             // txtContraseña
             // 
@@ -277,6 +282,7 @@ namespace COMPRAS2
             this.txtContraseña.Text = "Introduzca la contraseña";
             this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_Click);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
+            this.txtContraseña.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtContraseña_PreviewKeyDown);
             // 
             // txtContraseñaDeNuevo
             // 
@@ -486,12 +492,55 @@ namespace COMPRAS2
             this.pictureBox9.TabIndex = 93;
             this.pictureBox9.TabStop = false;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox10.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox10.Location = new System.Drawing.Point(700, 395);
+            this.pictureBox10.MaximumSize = new System.Drawing.Size(2000, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 134;
+            this.pictureBox10.TabStop = false;
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(700, 442);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(426, 28);
+            this.cbEstado.TabIndex = 133;
+            // 
+            // lblEstadoDelUsuario
+            // 
+            this.lblEstadoDelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEstadoDelUsuario.AutoSize = true;
+            this.lblEstadoDelUsuario.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoDelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblEstadoDelUsuario.Location = new System.Drawing.Point(700, 401);
+            this.lblEstadoDelUsuario.Name = "lblEstadoDelUsuario";
+            this.lblEstadoDelUsuario.Size = new System.Drawing.Size(166, 32);
+            this.lblEstadoDelUsuario.TabIndex = 132;
+            this.lblEstadoDelUsuario.Text = "ESTADO DE USUARIO:";
+            // 
             // AGREGAR_EMPLEADO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.lblEstadoDelUsuario);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -535,6 +584,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,5 +622,8 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.Label lblEstadoDelUsuario;
     }
 }
