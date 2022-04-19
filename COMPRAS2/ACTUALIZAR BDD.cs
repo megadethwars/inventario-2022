@@ -1,9 +1,11 @@
 ﻿using COMPRAS2.servicios;
+using ExcelDataReader;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +30,32 @@ namespace COMPRAS2
             if(OFDActualizar.ShowDialog() == DialogResult.OK)
             {
                 lblNombreArchivo.Text = OFDActualizar.FileName;
+            }
+        }
+
+        private void btnINICIAR_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FileStream fStream = File.Open(@"C:\File\Classes.xlsx", FileMode.Open, FileAccess.Read);
+                IExcelDataReader excelDataReader = ExcelReaderFactory.CreateOpenXmlReader(fStream);
+                DataSet resultDataSet = excelDataReader.AsDataSet();
+                
+                excelDataReader.Close();
+
+
+                ExcelEngine excelEngine = new ExcelEngine();
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Excel2013;
+
+
+                IWorkbook workbook = application.Workbooks.Open(f.GetStream());
+
+                //Access first worksheet from the workbook.
+                IWorksheet worksheet = workbook.Worksheets[1];
+
+            }
+            catch (Exception ex) { 
             }
         }
     }

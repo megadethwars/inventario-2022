@@ -43,11 +43,11 @@ namespace COMPRAS2
             // 
             this.lblCodigoQR.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCodigoQR.AutoSize = true;
-            this.lblCodigoQR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblCodigoQR.Location = new System.Drawing.Point(561, 257);
             this.lblCodigoQR.Name = "lblCodigoQR";
-            this.lblCodigoQR.Size = new System.Drawing.Size(206, 32);
+            this.lblCodigoQR.Size = new System.Drawing.Size(386, 31);
             this.lblCodigoQR.TabIndex = 56;
             this.lblCodigoQR.Text = "PORCENTAJE DE CARGA :%";
             // 
@@ -55,11 +55,11 @@ namespace COMPRAS2
             // 
             this.lblNombreArchivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNombreArchivo.AutoSize = true;
-            this.lblNombreArchivo.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblNombreArchivo.Location = new System.Drawing.Point(561, 187);
             this.lblNombreArchivo.Name = "lblNombreArchivo";
-            this.lblNombreArchivo.Size = new System.Drawing.Size(183, 32);
+            this.lblNombreArchivo.Size = new System.Drawing.Size(333, 31);
             this.lblNombreArchivo.TabIndex = 55;
             this.lblNombreArchivo.Text = "NOMBRE DEL ARCHIVO:";
             // 
@@ -67,11 +67,11 @@ namespace COMPRAS2
             // 
             this.lblTituloAgregarProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTituloAgregarProducto.AutoSize = true;
-            this.lblTituloAgregarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloAgregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblTituloAgregarProducto.Location = new System.Drawing.Point(560, 30);
             this.lblTituloAgregarProducto.Name = "lblTituloAgregarProducto";
-            this.lblTituloAgregarProducto.Size = new System.Drawing.Size(211, 42);
+            this.lblTituloAgregarProducto.Size = new System.Drawing.Size(397, 39);
             this.lblTituloAgregarProducto.TabIndex = 54;
             this.lblTituloAgregarProducto.Text = "AGREGAR PRODUCTO";
             // 
@@ -102,9 +102,9 @@ namespace COMPRAS2
             this.btnDETENER.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDETENER.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDETENER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDETENER.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDETENER.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDETENER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnDETENER.Location = new System.Drawing.Point(567, 485);
+            this.btnDETENER.Location = new System.Drawing.Point(567, 412);
             this.btnDETENER.MaximumSize = new System.Drawing.Size(175, 39);
             this.btnDETENER.Name = "btnDETENER";
             this.btnDETENER.Size = new System.Drawing.Size(175, 39);
@@ -123,15 +123,16 @@ namespace COMPRAS2
             this.btnINICIAR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnINICIAR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnINICIAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnINICIAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnINICIAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnINICIAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnINICIAR.Location = new System.Drawing.Point(567, 412);
+            this.btnINICIAR.Location = new System.Drawing.Point(567, 339);
             this.btnINICIAR.MaximumSize = new System.Drawing.Size(175, 39);
             this.btnINICIAR.Name = "btnINICIAR";
             this.btnINICIAR.Size = new System.Drawing.Size(175, 39);
             this.btnINICIAR.TabIndex = 62;
             this.btnINICIAR.Text = "INICIAR";
             this.btnINICIAR.UseVisualStyleBackColor = false;
+            this.btnINICIAR.Click += new System.EventHandler(this.btnINICIAR_Click);
             // 
             // btnSeleccionarArchivo
             // 
@@ -144,9 +145,9 @@ namespace COMPRAS2
             this.btnSeleccionarArchivo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSeleccionarArchivo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSeleccionarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionarArchivo.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionarArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(567, 347);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(567, 274);
             this.btnSeleccionarArchivo.MaximumSize = new System.Drawing.Size(175, 39);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
             this.btnSeleccionarArchivo.Size = new System.Drawing.Size(175, 39);
@@ -164,7 +165,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.btnSeleccionarArchivo);
             this.Controls.Add(this.btnINICIAR);
             this.Controls.Add(this.btnDETENER);
