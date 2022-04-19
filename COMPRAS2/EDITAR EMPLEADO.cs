@@ -119,11 +119,14 @@ namespace COMPRAS2
 
                 for (int x = 0; x < estatus.Count; x++)
                 {
-                    listaStatus.Add(Tuple.Create<Int32, String>(estatus[x].id, estatus[x].descripcion));
+                    listaStatus.Add(Tuple.Create<Int32, String>(estatus[x].id, estatus[x].descripcion));                  
                 }
+
+                listaStatus.RemoveAt(2);
+
                 cbEstado.DataSource = listaStatus;
                 cbEstado.DisplayMember = "Item2";
-                cbEstado.ValueMember = "Item1";
+                cbEstado.ValueMember = "Item1";               
 
                 return 0;
             }
