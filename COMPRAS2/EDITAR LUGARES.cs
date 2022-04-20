@@ -62,7 +62,7 @@ namespace COMPRAS2
             else if (statusmessage.statuscode == 200)
             {
                 Lugares LUGARS = JsonConvert.DeserializeObject<Lugares>(statusmessage.data);
-                MessageBox.Show("EMPLEADO ACTUALIZADO CORRECTAMENTE");
+                MessageBox.Show("LUGAR ACTUALIZADO CORRECTAMENTE");
                 Navigator.nextPage(new LUGARES());
                 return;
             }

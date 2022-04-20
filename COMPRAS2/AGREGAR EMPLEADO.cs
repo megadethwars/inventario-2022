@@ -28,6 +28,8 @@ namespace COMPRAS2
         {
             int roles = await Roles();
             int estatus = await Estatus();
+            this.cbRoles.Text = null;
+            this.cbEstado.Text = null;
         }
 
         private async Task<int> Roles()
@@ -146,6 +148,12 @@ namespace COMPRAS2
                     return 1;
                 }
 
+                if (textUsuario.Text == "")
+                {
+                    MessageBox.Show("campo de usuario esta vacio");
+                    return 1;
+                }
+
                 if (txtContraseña.Text == "")
                 {
                     MessageBox.Show("campo de contraseña vacio");
@@ -166,7 +174,17 @@ namespace COMPRAS2
 
                 if (txtTelefono.Text == "")
                 {
-                    MessageBox.Show("campo de correo vacio");
+                    MessageBox.Show("campo de telefono vacio");
+                    return 1;
+                }
+
+                try
+                {
+                    cantidad = int.Parse(txtTelefono.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("El telefono no es numerico");
                     return 1;
                 }
 
@@ -174,21 +192,25 @@ namespace COMPRAS2
                 {
                     var idRoltuple =(Tuple<int, string>)cbRoles.SelectedItem;
                     idRol = idRoltuple.Item1;
+                }else
+                {
+                    MessageBox.Show("No se ha seleccionado ningun estado");
+                    return 1;
                 }
 
                 if (cbEstado.SelectedItem != null)
                 {
                     var idEstatustuple = (Tuple<int, string>)cbEstado.SelectedItem;
                     idEstatus = idEstatustuple.Item1;
-                }
-                else {
-                    MessageBox.Show("No se ha seleccionado ningun rol");
+                }else 
+                {
+                    MessageBox.Show("No se ha seleccionado ningun estado");
                     return 1;
                 }
 
                 
                 if (txtContraseña.Text != txtContraseñaDeNuevo.Text) {
-                    MessageBox.Show("Error en las contraseñas");
+                    MessageBox.Show("Error en las contraseñas, intenta de nuevo");
                     return 1;
                 }
 
@@ -256,11 +278,6 @@ namespace COMPRAS2
 
         private async void btnOK_Click(object sender, EventArgs e)
         {
-            if (txtContraseña.Text != txtContraseñaDeNuevo.Text)
-            {
-                MessageBox.Show("LAS CONTRASEÑAS NO SON IGUALES, INTENTE DE NUEVO");
-                return;
-            }
             int status = await CreateUser();
         }
 
@@ -282,105 +299,17 @@ namespace COMPRAS2
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             Navigator.backPage(this.Name, this);
-        }
-
-        private void txtNombreDelUsuario_Click(object sender, EventArgs e)
-        {
-            if (txtNombreDelUsuario.Text == "Introduzca el Nombre(s) del Usuario")
-            {
-                txtNombreDelUsuario.Clear();
-            }
-        }
-
-        private void txtNombreDelUsuario_Leave(object sender, EventArgs e)
-        {
-            if (txtNombreDelUsuario.Text == "")
-            {
-                txtNombreDelUsuario.Text = "Introduzca el Nombre(s) del Usuario";
-            }
-        }
-
-        private void txtApellidoPaterno_Click(object sender, EventArgs e)
-        {
-            if (txtApellidoPaterno.Text == "Introduzca el Apellido Paterno")
-            {
-                txtApellidoPaterno.Clear();
-            }
-        }
-
-        private void txtApellidoPaterno_Leave(object sender, EventArgs e)
-        {
-            if (txtApellidoPaterno.Text == "")
-            {
-                txtApellidoPaterno.Text = "Introduzca el Apellido Paterno";
-            }
-        }
-
-        private void txtApellidoMaterno_Click(object sender, EventArgs e)
-        {
-            if (txtApellidoMaterno.Text == "Introduzca el Apellido Materno")
-            {
-                txtApellidoMaterno.Clear();
-            }
-        }
-
-        private void txtApellidoMaterno_Leave(object sender, EventArgs e)
-        {
-            if (txtApellidoMaterno.Text == "")
-            {
-                txtApellidoMaterno.Text = "Introduzca el Apellido Materno";
-            }
-        }
-
-        private void textUsuario_Click(object sender, EventArgs e)
-        {
-            if (textUsuario.Text == "Nombre de Usuario")
-            {
-                textUsuario.Clear();
-            }
-        }
-
-        private void textUsuario_Leave(object sender, EventArgs e)
-        {
-            if (textUsuario.Text == "")
-            {
-                textUsuario.Text = "Nombre de Usuario";
-            }
-        }
+        }                
 
         private void txtContraseña_Click(object sender, EventArgs e)
         {
-            if (txtContraseña.Text == "Introduzca la contraseña")
-            {
-                txtContraseña.Clear();
-                txtContraseña.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void txtContraseña_Leave(object sender, EventArgs e)
-        {
-            if (txtContraseña.Text == "")
-            {
-                txtContraseña.Text = "Introduzca la contraseña";
-            }
-        }
+            txtContraseña.UseSystemPasswordChar = true;            
+        }       
 
         private void txtContraseñaDeNuevo_Click(object sender, EventArgs e)
         {
-            if (txtContraseñaDeNuevo.Text == "Introduzca la contraseña de nuevo")
-            {
-                txtContraseñaDeNuevo.Clear();
-                txtContraseñaDeNuevo.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void txtContraseñaDeNuevo_Leave(object sender, EventArgs e)
-        {
-            if (txtContraseñaDeNuevo.Text == "")
-            {
-                txtContraseñaDeNuevo.Text = "Introduzca la contraseña de nuevo";
-            }
-        }
+            txtContraseñaDeNuevo.UseSystemPasswordChar = true;           
+        }       
 
         private void txtTelefono_Click(object sender, EventArgs e)
         {

@@ -230,9 +230,6 @@ namespace COMPRAS2
             this.txtNombreDelUsuario.Name = "txtNombreDelUsuario";
             this.txtNombreDelUsuario.Size = new System.Drawing.Size(426, 29);
             this.txtNombreDelUsuario.TabIndex = 74;
-            this.txtNombreDelUsuario.Text = "Introduzca el Nombre(s) del Usuario";
-            this.txtNombreDelUsuario.Click += new System.EventHandler(this.txtNombreDelUsuario_Click);
-            this.txtNombreDelUsuario.Leave += new System.EventHandler(this.txtNombreDelUsuario_Leave);
             // 
             // txtApellidoPaterno
             // 
@@ -246,9 +243,6 @@ namespace COMPRAS2
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(426, 29);
             this.txtApellidoPaterno.TabIndex = 75;
-            this.txtApellidoPaterno.Text = "Introduzca el Apellido Paterno";
-            this.txtApellidoPaterno.Click += new System.EventHandler(this.txtApellidoPaterno_Click);
-            this.txtApellidoPaterno.Leave += new System.EventHandler(this.txtApellidoPaterno_Leave);
             // 
             // txtApellidoMaterno
             // 
@@ -262,9 +256,6 @@ namespace COMPRAS2
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(426, 29);
             this.txtApellidoMaterno.TabIndex = 76;
-            this.txtApellidoMaterno.Text = "Introduzca el Apellido Materno";
-            this.txtApellidoMaterno.Click += new System.EventHandler(this.txtApellidoMaterno_Click);
-            this.txtApellidoMaterno.Leave += new System.EventHandler(this.txtApellidoMaterno_Leave);
             this.txtApellidoMaterno.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtApellidoMaterno_PreviewKeyDown);
             // 
             // txtContraseña
@@ -279,9 +270,7 @@ namespace COMPRAS2
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(426, 29);
             this.txtContraseña.TabIndex = 77;
-            this.txtContraseña.Text = "Introduzca la contraseña";
             this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_Click);
-            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             this.txtContraseña.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtContraseña_PreviewKeyDown);
             // 
             // txtContraseñaDeNuevo
@@ -296,9 +285,7 @@ namespace COMPRAS2
             this.txtContraseñaDeNuevo.Name = "txtContraseñaDeNuevo";
             this.txtContraseñaDeNuevo.Size = new System.Drawing.Size(426, 29);
             this.txtContraseñaDeNuevo.TabIndex = 78;
-            this.txtContraseñaDeNuevo.Text = "Introduzca la contraseña de nuevo";
             this.txtContraseñaDeNuevo.Click += new System.EventHandler(this.txtContraseñaDeNuevo_Click);
-            this.txtContraseñaDeNuevo.Leave += new System.EventHandler(this.txtContraseñaDeNuevo_Leave);
             // 
             // txtTelefono
             // 
@@ -312,7 +299,6 @@ namespace COMPRAS2
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(426, 29);
             this.txtTelefono.TabIndex = 79;
-            this.txtTelefono.Text = "Introduzca el telefono";
             this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
             this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave);
             // 
@@ -328,7 +314,6 @@ namespace COMPRAS2
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(426, 29);
             this.txtCorreo.TabIndex = 80;
-            this.txtCorreo.Text = "Introduzca el Correo";
             this.txtCorreo.Click += new System.EventHandler(this.txtCorreo_Click);
             this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
@@ -357,9 +342,7 @@ namespace COMPRAS2
             this.textUsuario.Name = "textUsuario";
             this.textUsuario.Size = new System.Drawing.Size(426, 29);
             this.textUsuario.TabIndex = 83;
-            this.textUsuario.Text = "Nombre de Usuario";
-            this.textUsuario.Click += new System.EventHandler(this.textUsuario_Click);
-            this.textUsuario.Leave += new System.EventHandler(this.textUsuario_Leave);
+            
             // 
             // cbRoles
             // 

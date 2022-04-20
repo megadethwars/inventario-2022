@@ -56,7 +56,7 @@ namespace COMPRAS2
             this.lblDDescompostura.Text = devices.descompostura;
             this.lblDProvedor.Text = devices.proveedor;
             this.lblDCantidad.Text = devices.cantidad.ToString();
-            this.lblDFoto.Text = devices.foto;
+            
         }
     }
 }
