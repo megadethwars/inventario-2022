@@ -162,7 +162,7 @@ namespace COMPRAS2
             this.txtCompra.Location = new System.Drawing.Point(100, 460);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.Size = new System.Drawing.Size(426, 29);
-            this.txtCompra.TabIndex = 48;            
+            this.txtCompra.TabIndex = 48;
             // 
             // txtModelo
             // 
@@ -188,7 +188,7 @@ namespace COMPRAS2
             this.txtMarca.Location = new System.Drawing.Point(100, 220);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(426, 29);
-            this.txtMarca.TabIndex = 45;            
+            this.txtMarca.TabIndex = 45;
             // 
             // txtCodigo
             // 
@@ -227,7 +227,7 @@ namespace COMPRAS2
             this.txtProducto.Location = new System.Drawing.Point(100, 140);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(426, 29);
-            this.txtProducto.TabIndex = 42;            
+            this.txtProducto.TabIndex = 42;
             // 
             // lblProvedor
             // 
@@ -368,9 +368,9 @@ namespace COMPRAS2
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.label1.Location = new System.Drawing.Point(100, 500);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 32);
+            this.label1.Size = new System.Drawing.Size(150, 32);
             this.label1.TabIndex = 55;
-            this.label1.Text = "DECOMPOSTURA:";
+            this.label1.Text = "DESCOMPOSTURA:";
             // 
             // label2
             // 
@@ -442,7 +442,7 @@ namespace COMPRAS2
             this.txtCantidad.Location = new System.Drawing.Point(100, 380);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(426, 29);
-            this.txtCantidad.TabIndex = 62;           
+            this.txtCantidad.TabIndex = 62;
             // 
             // txtOrigen
             // 

@@ -46,8 +46,7 @@ namespace COMPRAS2
             this.txtOrigen.Text = devices.origen;
             this.txtDescompostura.Text = devices.descompostura;
             this.txtProvedor.Text = devices.proveedor;
-            this.txtCantidad.Text = devices.cantidad.ToString();
-            this.txtFoto.Text = devices.foto;
+            this.txtCantidad.Text = devices.cantidad.ToString();            
 
             int status = await Estatus();
             int lugars = await Lugares();

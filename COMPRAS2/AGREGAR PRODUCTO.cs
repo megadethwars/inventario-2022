@@ -58,7 +58,24 @@ namespace COMPRAS2
                 if ((txtCantidad.Text == "") || (txtCantidad.Text == "Introduzca la Cantidad"))
                 {
                     MessageBox.Show("campo de cantidad vacio");
+                    return 1;
+                }
+                
+                if ((txtCompra.Text == "") || (txtCompra.Text == "Introduzca la Compra"))
+                {
+                    MessageBox.Show("campo de compra vacio");
+                    return 1;
+                }
 
+                if ((txtDescompostura.Text == "") || (txtDescompostura.Text == "Introduzca la Descompostura"))
+                {
+                    MessageBox.Show("campo de descompostura vacio");
+                    return 1;
+                }
+
+                if ((txtOrigen.Text == "") || (txtOrigen.Text == "Introduzca el Origen"))
+                {
+                    MessageBox.Show("campo de origen vacio");
                     return 1;
                 }
 
@@ -77,6 +94,11 @@ namespace COMPRAS2
                     return 1;
                 }
 
+                if ((txtProvedor.Text == "") || (txtProvedor.Text == "Introduzca el Provedor"))
+                {
+                    MessageBox.Show("campo de provedor vacio");
+                    return 1;
+                }
 
                 if ((txtSerie.Text == "") || (txtSerie.Text == "Introduzca la Serie"))
                 {
@@ -84,17 +106,32 @@ namespace COMPRAS2
                     return 1;
                 }
 
-                if (txtCosto.Text != "")
+                if ((txtCosto.Text != "") || (txtCosto.Text != "Introduzca el Costo"))
                 {
-                    try
-                    {
-                        costo = Int32.Parse(txtCosto.Text);
-                    }
-                    catch
-                    {
-                        MessageBox.Show("El costo no es numerico");
-                        return 1;
-                    }                                     
+                    MessageBox.Show("campo de costo vacio");
+                    return 1;
+                                               
+                }
+                try
+                {
+                    costo = Int32.Parse(txtCosto.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("El costo no es numerico");
+                    return 1;
+                }
+                
+                if ((txtObservaciones.Text == "") || (txtObservaciones.Text == "Introduzca las Observaciones"))
+                {
+                    MessageBox.Show("campo de observaciones vacio");
+                    return 1;
+                }
+
+                if ((txtAccesorio.Text == "") || (txtAccesorio.Text == "Introduzca los Accesorios"))
+                {
+                    MessageBox.Show("campo de observaciones vacio");
+                    return 1;
                 }
 
                 Devices product = new Devices();

@@ -68,8 +68,6 @@ namespace COMPRAS2
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.txtFoto = new System.Windows.Forms.TextBox();
-            this.lblFoto = new System.Windows.Forms.Label();
             this.cbEstatus = new System.Windows.Forms.ComboBox();
             this.cbLugares = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -569,33 +567,6 @@ namespace COMPRAS2
             this.pictureBox13.TabIndex = 138;
             this.pictureBox13.TabStop = false;
             // 
-            // txtFoto
-            // 
-            this.txtFoto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtFoto.Location = new System.Drawing.Point(700, 540);
-            this.txtFoto.Name = "txtFoto";
-            this.txtFoto.Size = new System.Drawing.Size(426, 26);
-            this.txtFoto.TabIndex = 137;
-            this.txtFoto.Text = "Foto";
-            // 
-            // lblFoto
-            // 
-            this.lblFoto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoto.AutoSize = true;
-            this.lblFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblFoto.Location = new System.Drawing.Point(700, 500);
-            this.lblFoto.Name = "lblFoto";
-            this.lblFoto.Size = new System.Drawing.Size(56, 32);
-            this.lblFoto.TabIndex = 136;
-            this.lblFoto.Text = "FOTO:";
-            // 
             // cbEstatus
             // 
             this.cbEstatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -635,8 +606,6 @@ namespace COMPRAS2
             this.Controls.Add(this.cbLugares);
             this.Controls.Add(this.cbEstatus);
             this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.txtFoto);
-            this.Controls.Add(this.lblFoto);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblCantidad);
@@ -736,8 +705,6 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.TextBox txtFoto;
-        private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.ComboBox cbEstatus;
         private System.Windows.Forms.ComboBox cbLugares;
     }
