@@ -106,7 +106,7 @@ namespace COMPRAS2
                     return 1;
                 }
 
-                if ((txtCosto.Text != "") || (txtCosto.Text != "Introduzca el Costo"))
+                if ((txtCosto.Text == "") || (txtCosto.Text == "Introduzca el Costo"))
                 {
                     MessageBox.Show("campo de costo vacio");
                     return 1;
@@ -141,10 +141,12 @@ namespace COMPRAS2
                 product.cantidad = cantidad;
                 product.compra = txtCompra.Text;
                 product.descompostura = txtDescompostura.Text;
+                product.serie = txtSerie.Text;
                 product.codigo = txtCodigo.Text;
                 product.proveedor = txtProvedor.Text;
                 product.costo = (int)costo;
                 product.observaciones = txtObservaciones.Text;
+                product.accesorios = txtAccesorio.Text;
 
                 product.statusId = 1;
                 product.lugarId = 1;

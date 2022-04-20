@@ -79,7 +79,7 @@ namespace COMPRAS2
             userUpdate = new User();
 
             userUpdate.id = user.id;
-            userUpdate.statusId = 3;
+            userUpdate.statusId = 2;
             
                         
             string json = JsonConvert.SerializeObject(userUpdate,

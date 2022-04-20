@@ -70,6 +70,14 @@ namespace COMPRAS2
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.cbEstatus = new System.Windows.Forms.ComboBox();
             this.cbLugares = new System.Windows.Forms.ComboBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.txtAccesorio = new System.Windows.Forms.TextBox();
+            this.lblAccesorio = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSerie = new System.Windows.Forms.TextBox();
+            this.lblSerie = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,6 +91,8 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloEditarProducto
@@ -597,12 +607,124 @@ namespace COMPRAS2
             this.cbLugares.TabIndex = 140;
             this.cbLugares.Text = "Lugares";
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox14.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox14.Location = new System.Drawing.Point(100, 654);
+            this.pictureBox14.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 143;
+            this.pictureBox14.TabStop = false;
+            // 
+            // txtAccesorio
+            // 
+            this.txtAccesorio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAccesorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtAccesorio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAccesorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtAccesorio.Location = new System.Drawing.Point(100, 700);
+            this.txtAccesorio.Name = "txtAccesorio";
+            this.txtAccesorio.Size = new System.Drawing.Size(426, 29);
+            this.txtAccesorio.TabIndex = 142;
+            // 
+            // lblAccesorio
+            // 
+            this.lblAccesorio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAccesorio.AutoSize = true;
+            this.lblAccesorio.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblAccesorio.Location = new System.Drawing.Point(100, 660);
+            this.lblAccesorio.Name = "lblAccesorio";
+            this.lblAccesorio.Size = new System.Drawing.Size(102, 32);
+            this.lblAccesorio.TabIndex = 141;
+            this.lblAccesorio.Text = "ACCESORIO:";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox15.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox15.Location = new System.Drawing.Point(700, 575);
+            this.pictureBox15.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 148;
+            this.pictureBox15.TabStop = false;
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObservaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtObservaciones.Location = new System.Drawing.Point(700, 537);
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(426, 29);
+            this.txtObservaciones.TabIndex = 147;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.label2.Location = new System.Drawing.Point(700, 500);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 32);
+            this.label2.TabIndex = 146;
+            this.label2.Text = "OBSERVACIONES:";
+            // 
+            // txtSerie
+            // 
+            this.txtSerie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtSerie.Location = new System.Drawing.Point(700, 617);
+            this.txtSerie.Name = "txtSerie";
+            this.txtSerie.Size = new System.Drawing.Size(426, 29);
+            this.txtSerie.TabIndex = 145;
+            // 
+            // lblSerie
+            // 
+            this.lblSerie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSerie.AutoSize = true;
+            this.lblSerie.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblSerie.Location = new System.Drawing.Point(700, 580);
+            this.lblSerie.Name = "lblSerie";
+            this.lblSerie.Size = new System.Drawing.Size(62, 32);
+            this.lblSerie.TabIndex = 144;
+            this.lblSerie.Text = "SERIE:";
+            // 
             // EDITAR_PRODUCTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.txtObservaciones);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSerie);
+            this.Controls.Add(this.lblSerie);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.txtAccesorio);
+            this.Controls.Add(this.lblAccesorio);
             this.Controls.Add(this.cbLugares);
             this.Controls.Add(this.cbEstatus);
             this.Controls.Add(this.pictureBox13);
@@ -660,6 +782,8 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -707,5 +831,13 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.ComboBox cbEstatus;
         private System.Windows.Forms.ComboBox cbLugares;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.TextBox txtAccesorio;
+        private System.Windows.Forms.Label lblAccesorio;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.TextBox txtObservaciones;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSerie;
+        private System.Windows.Forms.Label lblSerie;
     }
 }

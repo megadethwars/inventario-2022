@@ -1,5 +1,6 @@
 ﻿using COMPRAS2.modelos;
 using COMPRAS2.servicios;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +19,7 @@ namespace COMPRAS2
         public DETALLES_DEL_PRODUCTO(Devices devices)
         {
             InitializeComponent();
-            this.devices = devices;
-            
+            this.devices = devices;           
         }
 
         public void brnOPCIONES_Click(object sender, EventArgs e)
@@ -41,8 +41,7 @@ namespace COMPRAS2
         }
 
         private void DETALLES_DEL_PRODUCTO_Load(object sender, EventArgs e)
-        {
-            
+        {           
             this.lblDProducto.Text = devices.producto;
             this.lblDCompra.Text = devices.compra;
             this.lblDCodigoQR.Text = devices.codigo;
@@ -56,7 +55,63 @@ namespace COMPRAS2
             this.lblDDescompostura.Text = devices.descompostura;
             this.lblDProvedor.Text = devices.proveedor;
             this.lblDCantidad.Text = devices.cantidad.ToString();
-            //this.lblDAccesorio.Text = devices.
+            this.lblDAccesorio.Text = devices.accesorios;
+            this.lblObservaciones.Text = devices.observaciones;
+            this.lblSerie.Text = devices.serie;
+        }
+
+        private void btnELIMINAR_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("¿Seguro que desea eliminar a este producto?");
+            EliminarProducto();
+        }
+
+        private async void EliminarProducto()
+        {
+                       
+            Devices devicesUpdate;
+            devicesUpdate = new Devices();
+
+            devicesUpdate.id = devices.id;
+            devicesUpdate.statusId = 2;
+
+            
+            string json = JsonConvert.SerializeObject(devicesUpdate,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var url = HttpMethods.url + "dispositivos";
+            StatusMessage statusmessage = await HttpMethods.put(url, json);
+
+            if (statusmessage.statuscode == 409)
+            {
+                MessageBox.Show("error en el servicio, " + statusmessage.message);
+                return;
+            }
+
+            else if (statusmessage.statuscode == 500)
+            {
+                MessageBox.Show("error en el servicio");
+                return;
+            }
+            else if (statusmessage.statuscode == 200)
+            {
+                Devices USERS = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
+                MessageBox.Show("PRODUCTO ELIMINADO");
+                Navigator.backPage(this.Name, this);
+                return;
+            }
+            else if (statusmessage.statuscode == 404)
+            {
+                MessageBox.Show("error en el servicio, NO encontrado");
+
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Bad request, algunos campos faltantes");
+                return;
+            }
+
+            Navigator.backPage(this.Name, this);
         }
     }
 }

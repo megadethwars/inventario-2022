@@ -46,7 +46,10 @@ namespace COMPRAS2
             this.txtOrigen.Text = devices.origen;
             this.txtDescompostura.Text = devices.descompostura;
             this.txtProvedor.Text = devices.proveedor;
-            this.txtCantidad.Text = devices.cantidad.ToString();            
+            this.txtCantidad.Text = devices.cantidad.ToString();
+            this.txtAccesorio.Text = devices.accesorios;
+            this.txtObservaciones.Text = devices.observaciones;
+            this.txtSerie.Text = devices.serie;
 
             int status = await Estatus();
             int lugars = await Lugares();
@@ -212,6 +215,10 @@ namespace COMPRAS2
                 return;
             }
             devicesUpdate.cantidad = cantidad;
+
+            devicesUpdate.observaciones = txtObservaciones.Text;
+            devicesUpdate.serie = txtSerie.Text;
+            devicesUpdate.accesorios = txtAccesorio.Text;
 
             devicesUpdate.id = id;
 

@@ -75,6 +75,12 @@ namespace COMPRAS2
             this.lblAccesorio = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblDAccesorio = new System.Windows.Forms.Label();
+            this.lblSerie = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.lblObservaciones = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -89,6 +95,8 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -328,6 +336,7 @@ namespace COMPRAS2
             this.btnELIMINAR.TabIndex = 66;
             this.btnELIMINAR.Text = "ELIMINAR PRODUCTO";
             this.btnELIMINAR.UseVisualStyleBackColor = false;
+            this.btnELIMINAR.Click += new System.EventHandler(this.btnELIMINAR_Click);
             // 
             // lblDProducto
             // 
@@ -706,12 +715,96 @@ namespace COMPRAS2
             this.lblDAccesorio.TabIndex = 98;
             this.lblDAccesorio.Text = "Accesorios";
             // 
+            // lblSerie
+            // 
+            this.lblSerie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSerie.AutoSize = true;
+            this.lblSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblSerie.Location = new System.Drawing.Point(700, 700);
+            this.lblSerie.Name = "lblSerie";
+            this.lblSerie.Size = new System.Drawing.Size(46, 20);
+            this.lblSerie.TabIndex = 104;
+            this.lblSerie.Text = "Serie";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox15.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox15.Location = new System.Drawing.Point(700, 655);
+            this.pictureBox15.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 103;
+            this.pictureBox15.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.label2.Location = new System.Drawing.Point(700, 660);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 32);
+            this.label2.TabIndex = 102;
+            this.label2.Text = "SERIE:";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox16.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox16.Location = new System.Drawing.Point(100, 655);
+            this.pictureBox16.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 101;
+            this.pictureBox16.TabStop = false;
+            // 
+            // lblObservaciones
+            // 
+            this.lblObservaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblObservaciones.AutoSize = true;
+            this.lblObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblObservaciones.Location = new System.Drawing.Point(100, 700);
+            this.lblObservaciones.Name = "lblObservaciones";
+            this.lblObservaciones.Size = new System.Drawing.Size(114, 20);
+            this.lblObservaciones.TabIndex = 100;
+            this.lblObservaciones.Text = "Observaciones";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.label4.Location = new System.Drawing.Point(100, 660);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 32);
+            this.label4.TabIndex = 99;
+            this.label4.Text = "OBSERVACIONES:";
+            // 
             // DETALLES_DEL_PRODUCTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.lblSerie);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.lblObservaciones);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblDAccesorio);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.lblAccesorio);
@@ -776,6 +869,8 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -828,5 +923,11 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblAccesorio;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lblDAccesorio;
+        private System.Windows.Forms.Label lblSerie;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Label lblObservaciones;
+        private System.Windows.Forms.Label label4;
     }
 }

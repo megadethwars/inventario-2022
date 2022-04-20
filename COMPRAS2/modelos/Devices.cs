@@ -85,5 +85,8 @@ namespace COMPRAS2.modelos
 
         [DefaultValue(0)]
         public int statusId { get; set; }
+
+        [DefaultValue(null)]
+        public string accesorios { get; set; }
     }
 }

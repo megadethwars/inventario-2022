@@ -30,7 +30,7 @@ namespace COMPRAS2
         {   
             try
             {
-                var url = HttpMethods.url + "dispositivos";
+                var url = HttpMethods.url + "dispositivos?limit=100";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
                 if (statusmessage.statuscode != 200)
@@ -64,6 +64,10 @@ namespace COMPRAS2
                 this.dgvInventario.Columns["Proveedor"].Visible = false;
                 this.dgvInventario.Columns["Costo"].Visible = false;
                 this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+                this.dgvInventario.Columns["id"].Visible = false;
+                this.dgvInventario.Columns["accesorios"].Visible = false;
+                this.dgvInventario.Columns["serie"].Visible = false;
+                this.dgvInventario.Columns["fechaAlta"].Visible = false;
             }
             catch
             {
@@ -176,6 +180,10 @@ namespace COMPRAS2
             this.dgvInventario.Columns["Proveedor"].Visible = false;
             this.dgvInventario.Columns["Costo"].Visible = false;
             this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+            this.dgvInventario.Columns["id"].Visible = false;
+            this.dgvInventario.Columns["accesorios"].Visible = false;
+            this.dgvInventario.Columns["serie"].Visible = false;
+            this.dgvInventario.Columns["fechaAlta"].Visible = false;
         }
         
         private void dgvInventario_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
