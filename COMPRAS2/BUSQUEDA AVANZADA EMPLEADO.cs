@@ -17,6 +17,7 @@ namespace COMPRAS2
     {
         List<Tuple<Int32, String>> listaEstado;
         List<Tuple<Int32, String>> listaRoles;
+        List<User> users;
 
         public BUSQUEDA_AVANZADA_EMPLEADO(Devices devices)
         {
@@ -132,127 +133,130 @@ namespace COMPRAS2
             this.txtApellidoPaterno.Text = null;
             this.txtApellidoMaterno.Text = null;
             this.txtTelefono.Text = null;
-            this.txtUsuario = null;
+            this.txtUsuario.Text = null;
             this.cbEstado.Text = null;
             this.cbRoles.Text = null;
         }
-        /*
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            busqueda();
+        }
+        
         public async void busqueda()
         {
-            int idLugares = 0;
-            int idEstatus = 0;
+           int idRoles = 0;
+           int idEstatus = 0;
 
-            QueryDevice devicequery = new QueryDevice();
+           QueryUsers userquery = new QueryUsers();
 
-            if (txtProducto.Text != "")
-            {
-                devicequery.producto = txtProducto.Text;
-            }
+           if (txtNombre.Text != "")
+           {
+                userquery.nombre = txtNombre.Text;
+           }
 
-            if (txtCodigo.Text != "")
-            {
-                devicequery.codigo = txtCodigo.Text;
-            }
+           if (txtCorreo.Text != "")
+           {
+                userquery.correo = txtCorreo.Text;
+           }
 
-            if (txtMarca.Text != "")
-            {
-                devicequery.marca = txtMarca.Text;
-            }
+           if (txtApellidoPaterno.Text != "")
+           {
+                userquery.apellidoPaterno = txtApellidoPaterno.Text;
+           }
 
-            if (txtModelo.Text != "")
-            {
-                devicequery.modelo = txtModelo.Text;
-            }
+           if (txtApellidoMaterno.Text != "")
+           {
+                userquery.apellidoMaterno = txtApellidoMaterno.Text;
+           }
 
-            if (txtSerie.Text != "")
-            {
-                devicequery.serie = txtSerie.Text;
-            }
+           if (txtTelefono.Text != "")
+           {
+                userquery.telefono = txtTelefono.Text;
+           }
 
-            if (cbLugares.SelectedItem != null)
-            {
-                var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
-                idLugares = idLugarestuple.Item1;
-                if (idLugares != 0)
-                {
-                    devicequery.lugarId = idLugares;
+           if (txtUsuario.Text != "")
+           {
+                userquery.username = txtUsuario.Text;
+           }
+
+           if (cbRoles.SelectedItem != null)
+           {
+               var idRolestuple = (Tuple<int, string>)cbRoles.SelectedItem;
+               idRoles = idRolestuple.Item1;
+               if (idRoles != 0)
+               {
+                    userquery.rolId = idRoles;
+               }
+           }
+
+           if (cbEstado.SelectedItem != null)
+           {
+               var idEstadostuple = (Tuple<int, string>)cbEstado.SelectedItem;
+               idEstatus = idEstadostuple.Item1;
+               if (idEstatus != 0)
+               {
+                    userquery.statusId = idEstatus;
+               }
+           }
+
+           string json = JsonConvert.SerializeObject(userquery,
+               new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+           var url = HttpMethods.url + "usuarios/query";
+           StatusMessage statusmessage = await HttpMethods.Post(url, json);
+
+           if (statusmessage.statuscode == 500)
+           {
+               MessageBox.Show("Error interno en el servidor");
+           }
+
+           if (statusmessage.statuscode == 409)
+           {
+               MessageBox.Show("Ocurrio un conflicto");
+           }
+
+           if (statusmessage.statuscode == 400)
+           {
+               MessageBox.Show("No hay campos seleccionados a consultar");
+           }
+
+           if (statusmessage.statuscode == 404)
+           {
+               MessageBox.Show("recurso NO encontrado");
+           }
+
+           if (statusmessage.statuscode == 200)
+           {
+               users = JsonConvert.DeserializeObject<List<User>>(statusmessage.data);
+
+               if (users.Count == 0)
+               {
+                   MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
+                   dgvEmpleado.DataSource = null;
+                   return;
+               }
+
+               for (int x = 0; x < users.Count; x++)
+               {
+                    Rol rolNombre = users[x].rol;
+                    users[x].rolNombre = rolNombre.nombre;
+
+                    StatusUser statusUserDescripcion = users[x].status;
+                    users[x].statusUserDescripcion = statusUserDescripcion.descripcion;
                 }
+
+                dgvEmpleado.DataSource = users;
+
+                this.dgvEmpleado.Columns["correo"].Visible = false;
+                this.dgvEmpleado.Columns["rolId"].Visible = false;
+                this.dgvEmpleado.Columns["foto"].Visible = false;
+                this.dgvEmpleado.Columns["statusId"].Visible = false;
+                this.dgvEmpleado.Columns["password"].Visible = false;
+                this.dgvEmpleado.Columns["rol"].Visible = false;
+                this.dgvEmpleado.Columns["statusUserDescripcion"].Visible = false;
+                this.dgvEmpleado.Columns["status"].Visible = false;
+                this.dgvEmpleado.Columns["id"].Visible = false;
             }
-
-
-            if (cbEstatus.SelectedItem != null)
-            {
-                var idEstatustuple = (Tuple<int, string>)cbEstatus.SelectedItem;
-                idEstatus = idEstatustuple.Item1;
-                if (idEstatus != 0)
-                {
-                    devicequery.statusId = idEstatus;
-                }
-            }
-
-
-            string json = JsonConvert.SerializeObject(devicequery,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            var url = HttpMethods.url + "dispositivos/query";
-            StatusMessage statusmessage = await HttpMethods.Post(url, json);
-
-            if (statusmessage.statuscode == 500)
-            {
-                MessageBox.Show("Error interno en el servidor");
-            }
-
-            if (statusmessage.statuscode == 409)
-            {
-                MessageBox.Show("Ocurrio un conflicto");
-            }
-
-            if (statusmessage.statuscode == 400)
-            {
-                MessageBox.Show("No hay campos seleccionados a consultar");
-            }
-
-            if (statusmessage.statuscode == 404)
-            {
-                MessageBox.Show("recurso NO encontrado");
-            }
-
-            if (statusmessage.statuscode == 200)
-            {
-                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-                if (devices.Count == 0)
-                {
-                    MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
-                    dgvInventario.DataSource = null;
-                    return;
-                }
-
-                for (int x = 0; x < devices.Count; x++)
-                {
-                    Lugares lugar = devices[x].lugar;
-                    devices[x].Lugar_Actual = lugar.lugar;
-
-                    StatusDevices status = devices[x].status;
-                    devices[x].StatusActual = status.descripcion;
-                }
-
-                dgvInventario.DataSource = devices;
-
-                this.dgvInventario.Columns["lugar"].Visible = false;
-                this.dgvInventario.Columns["lugarId"].Visible = false;
-                this.dgvInventario.Columns["status"].Visible = false;
-                this.dgvInventario.Columns["statusId"].Visible = false;
-                this.dgvInventario.Columns["Compra"].Visible = false;
-                this.dgvInventario.Columns["Descompostura"].Visible = false;
-                this.dgvInventario.Columns["Foto"].Visible = false;
-                this.dgvInventario.Columns["IdMov"].Visible = false;
-                this.dgvInventario.Columns["Observaciones"].Visible = false;
-                this.dgvInventario.Columns["Origen"].Visible = false;
-                this.dgvInventario.Columns["Pertenece"].Visible = false;
-                this.dgvInventario.Columns["Proveedor"].Visible = false;
-                this.dgvInventario.Columns["Costo"].Visible = false;
-                this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
-            }
-        }*/
+        }
     }
 }

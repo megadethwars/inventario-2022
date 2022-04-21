@@ -273,6 +273,7 @@
     <Compile Include="modelos\CurrentUsers.cs" />
     <Compile Include="modelos\Devices.cs" />
     <Compile Include="modelos\Lugares.cs" />
+    <Compile Include="modelos\QueryUsers.cs" />
     <Compile Include="modelos\Reportes.cs" />
     <Compile Include="modelos\Rol.cs" />
     <Compile Include="modelos\StatusDevices.cs" />

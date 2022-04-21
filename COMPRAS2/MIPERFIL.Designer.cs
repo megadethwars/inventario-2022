@@ -38,8 +38,6 @@ namespace COMPRAS2
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.FOTO = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -47,7 +45,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FOTO)).BeginInit();
             this.SuspendLayout();
             // 
             // nombre1
@@ -150,35 +147,6 @@ namespace COMPRAS2
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAceptar.BackgroundImage = global::COMPRAS2.Properties.Resources.ACEPTAR;
-            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAceptar.Location = new System.Drawing.Point(390, 542);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(289, 63);
-            this.btnAceptar.TabIndex = 13;
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            // 
-            // FOTO
-            // 
-            this.FOTO.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.FOTO.Image = global::COMPRAS2.Properties.Resources.perfil2;
-            this.FOTO.Location = new System.Drawing.Point(840, 234);
-            this.FOTO.Name = "FOTO";
-            this.FOTO.Size = new System.Drawing.Size(202, 198);
-            this.FOTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.FOTO.TabIndex = 12;
-            this.FOTO.TabStop = false;
-            // 
             // btnBack
             // 
             this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
@@ -215,8 +183,6 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1100, 650);
             this.Controls.Add(this.lblPerfil);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.FOTO);
             this.Controls.Add(this.btnBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MIPERFIL";
@@ -228,7 +194,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FOTO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,8 +205,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label telefono1;
         private System.Windows.Forms.Label correo1;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.PictureBox FOTO;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
