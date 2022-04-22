@@ -258,5 +258,21 @@ namespace COMPRAS2
                 this.dgvEmpleado.Columns["id"].Visible = false;
             }
         }
+
+        private void dgvEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow cell = dgvEmpleado.Rows[e.RowIndex];
+                User data = (User)cell.DataBoundItem;
+
+                Navigator.nextPage(new DETALLES_EMPLEADO(data));
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
     }
 }

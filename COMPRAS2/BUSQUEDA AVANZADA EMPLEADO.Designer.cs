@@ -234,6 +234,7 @@ namespace COMPRAS2
             this.dgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpleado.Size = new System.Drawing.Size(1235, 354);
             this.dgvEmpleado.TabIndex = 153;
+            this.dgvEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellClick);
             // 
             // btnLimpiar
             // 

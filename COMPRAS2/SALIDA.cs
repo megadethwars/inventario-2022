@@ -30,22 +30,19 @@ namespace COMPRAS2
         }
 
         private void CheckEnter(object sender, KeyEventArgs e)
-        {
-            
+        {        
             if (e.KeyCode == Keys.Enter)
             {
                 busqueda();
-            }
-
-            
+            }          
         }
+
         public async void busqueda() {
 
             //busqueda
             if (txtBUSCADOR.Text == "") {
                 MessageBox.Show("Campo de Texto vacio");
-                return;
-            
+                return;          
             }
 
             QueryDevice devicequery = new QueryDevice();

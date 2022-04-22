@@ -21,9 +21,11 @@ namespace COMPRAS2
 
         MENU mainmenu;
         Devices devices;
+        List<Devices> deviceslist;
         public INVENTARIO()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            deviceslist= new List<Devices>();
         }     
         
         private async void INVENTARIO_Load(object sender, EventArgs e)
@@ -37,19 +39,19 @@ namespace COMPRAS2
                 {
                     return;
                 }
-           
-                List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-                for (int x = 0; x < devices.Count; x++) {
+                deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-                    Lugares lugar = devices[x].lugar;               
-                    devices[x].Lugar_Actual = lugar.lugar;
+                for (int x = 0; x < deviceslist.Count; x++) {
+
+                    Lugares lugar = deviceslist[x].lugar;
+                    deviceslist[x].Lugar_Actual = lugar.lugar;
                 
-                    StatusDevices status = devices[x].status;
-                    devices[x].StatusActual = status.descripcion;
+                    StatusDevices status = deviceslist[x].status;
+                    deviceslist[x].StatusActual = status.descripcion;
                 }
                         
-                dgvInventario.DataSource = devices;
+                dgvInventario.DataSource = deviceslist;
                 this.dgvInventario.Columns["lugar"].Visible = false;
                 this.dgvInventario.Columns["lugarId"].Visible = false;
                 this.dgvInventario.Columns["status"].Visible = false;
@@ -76,7 +78,6 @@ namespace COMPRAS2
             
         }
        
-
         private void AbrirFormHija(object formhija)
         {
             if (this.mainmenu.PANELCONTENEDOR.Controls.Count > 0)
@@ -157,7 +158,6 @@ namespace COMPRAS2
 
             for (int x = 0; x < devices.Count; x++)
             {
-
                 Lugares lugar = devices[x].lugar;
                 devices[x].Lugar_Actual = lugar.lugar;
 
@@ -195,6 +195,73 @@ namespace COMPRAS2
         {
             this.devices = devices;
             Navigator.nextPage(new BUSQUEDA_AVANZADA(devices));
+        }
+
+        private void CheckEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                busquedaNormal();
+            }
+        }
+
+        private async void busquedaNormal()
+        {
+            try
+            {
+                
+             
+                deviceslist.Clear();
+
+                var url = HttpMethods.url + "dispositivos/filter/"+txtBUSCADOR.Text+"?limit=30";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return;
+                }
+
+                List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+
+                for (int x = 0; x < devices.Count; x++)
+                {
+
+                    Lugares lugar = devices[x].lugar;
+                    devices[x].Lugar_Actual = lugar.lugar;
+
+                    StatusDevices status = devices[x].status;
+                    devices[x].StatusActual = status.descripcion;
+                }
+
+                dgvInventario.DataSource = devices;
+                this.dgvInventario.Columns["lugar"].Visible = false;
+                this.dgvInventario.Columns["lugarId"].Visible = false;
+                this.dgvInventario.Columns["status"].Visible = false;
+                this.dgvInventario.Columns["statusId"].Visible = false;
+                this.dgvInventario.Columns["Compra"].Visible = false;
+                this.dgvInventario.Columns["Descompostura"].Visible = false;
+                this.dgvInventario.Columns["Foto"].Visible = false;
+                this.dgvInventario.Columns["IdMov"].Visible = false;
+                this.dgvInventario.Columns["Observaciones"].Visible = false;
+                this.dgvInventario.Columns["Origen"].Visible = false;
+                this.dgvInventario.Columns["Pertenece"].Visible = false;
+                this.dgvInventario.Columns["Proveedor"].Visible = false;
+                this.dgvInventario.Columns["Costo"].Visible = false;
+                this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+                this.dgvInventario.Columns["id"].Visible = false;
+                this.dgvInventario.Columns["accesorios"].Visible = false;
+                this.dgvInventario.Columns["serie"].Visible = false;
+                this.dgvInventario.Columns["fechaAlta"].Visible = false;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+            }
+        }
+
+        private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
+        {
+            busquedaNormal();
         }
     }
     
