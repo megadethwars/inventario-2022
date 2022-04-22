@@ -29,10 +29,10 @@ namespace COMPRAS2
         }     
         
         private async void INVENTARIO_Load(object sender, EventArgs e)
-        {   
+        {
             try
             {
-                var url = HttpMethods.url + "dispositivos?limit=100";
+                var url = HttpMethods.url + "dispositivos?limit=10000";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
                 if (statusmessage.statuscode != 200)
@@ -42,16 +42,18 @@ namespace COMPRAS2
 
                 deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-                for (int x = 0; x < deviceslist.Count; x++) {
+                for (int x = 0; x < deviceslist.Count; x++)
+                {
 
                     Lugares lugar = deviceslist[x].lugar;
                     deviceslist[x].Lugar_Actual = lugar.lugar;
-                
+
                     StatusDevices status = deviceslist[x].status;
                     deviceslist[x].StatusActual = status.descripcion;
                 }
-                        
+
                 dgvInventario.DataSource = deviceslist;
+                //dgvInventario.FirstDisplayedScrollingRowIndex = deviceslist;
                 this.dgvInventario.Columns["lugar"].Visible = false;
                 this.dgvInventario.Columns["lugarId"].Visible = false;
                 this.dgvInventario.Columns["status"].Visible = false;
@@ -70,6 +72,8 @@ namespace COMPRAS2
                 this.dgvInventario.Columns["accesorios"].Visible = false;
                 this.dgvInventario.Columns["serie"].Visible = false;
                 this.dgvInventario.Columns["fechaAlta"].Visible = false;
+
+                //this.dgvInventario.FirstDisplayedScrollingRowIndex = deviceslist;
             }
             catch
             {
@@ -146,44 +150,52 @@ namespace COMPRAS2
         {
             dgvInventario.DataSource = null;
 
-            var url = HttpMethods.url + "dispositivos";
-            StatusMessage statusmessage = await HttpMethods.get(url);
-
-            if (statusmessage.statuscode != 200)
+            try
             {
-                return;
+                var url = HttpMethods.url + "dispositivos?limit=10000";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return;
+                }
+
+                deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+
+                for (int x = 0; x < deviceslist.Count; x++)
+                {
+
+                    Lugares lugar = deviceslist[x].lugar;
+                    deviceslist[x].Lugar_Actual = lugar.lugar;
+
+                    StatusDevices status = deviceslist[x].status;
+                    deviceslist[x].StatusActual = status.descripcion;
+                }
+
+                dgvInventario.DataSource = deviceslist;
+                this.dgvInventario.Columns["lugar"].Visible = false;
+                this.dgvInventario.Columns["lugarId"].Visible = false;
+                this.dgvInventario.Columns["status"].Visible = false;
+                this.dgvInventario.Columns["statusId"].Visible = false;
+                this.dgvInventario.Columns["Compra"].Visible = false;
+                this.dgvInventario.Columns["Descompostura"].Visible = false;
+                this.dgvInventario.Columns["Foto"].Visible = false;
+                this.dgvInventario.Columns["IdMov"].Visible = false;
+                this.dgvInventario.Columns["Observaciones"].Visible = false;
+                this.dgvInventario.Columns["Origen"].Visible = false;
+                this.dgvInventario.Columns["Pertenece"].Visible = false;
+                this.dgvInventario.Columns["Proveedor"].Visible = false;
+                this.dgvInventario.Columns["Costo"].Visible = false;
+                this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+                this.dgvInventario.Columns["id"].Visible = false;
+                this.dgvInventario.Columns["accesorios"].Visible = false;
+                this.dgvInventario.Columns["serie"].Visible = false;
+                this.dgvInventario.Columns["fechaAlta"].Visible = false;
             }
-
-            List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-            for (int x = 0; x < devices.Count; x++)
+            catch
             {
-                Lugares lugar = devices[x].lugar;
-                devices[x].Lugar_Actual = lugar.lugar;
-
-                StatusDevices status = devices[x].status;
-                devices[x].StatusActual = status.descripcion;
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
             }
-
-            dgvInventario.DataSource = devices;
-            this.dgvInventario.Columns["lugar"].Visible = false;
-            this.dgvInventario.Columns["lugarId"].Visible = false;
-            this.dgvInventario.Columns["status"].Visible = false;
-            this.dgvInventario.Columns["statusId"].Visible = false;
-            this.dgvInventario.Columns["Compra"].Visible = false;
-            this.dgvInventario.Columns["Descompostura"].Visible = false;
-            this.dgvInventario.Columns["Foto"].Visible = false;
-            this.dgvInventario.Columns["IdMov"].Visible = false;
-            this.dgvInventario.Columns["Observaciones"].Visible = false;
-            this.dgvInventario.Columns["Origen"].Visible = false;
-            this.dgvInventario.Columns["Pertenece"].Visible = false;
-            this.dgvInventario.Columns["Proveedor"].Visible = false;
-            this.dgvInventario.Columns["Costo"].Visible = false;
-            this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
-            this.dgvInventario.Columns["id"].Visible = false;
-            this.dgvInventario.Columns["accesorios"].Visible = false;
-            this.dgvInventario.Columns["serie"].Visible = false;
-            this.dgvInventario.Columns["fechaAlta"].Visible = false;
         }
         
         private void dgvInventario_CellMouseEnter(object sender, DataGridViewCellEventArgs e)

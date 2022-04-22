@@ -127,8 +127,8 @@ namespace COMPRAS2
         {
             try
             {
-                int cantidad = 0;
-                Int32 costo = 0;
+                Int32 cantidad = 0;
+                //Int32 costo = 0;
                 int idRol = 0;
                 int idEstatus = 0;
                 if (txtNombreDelUsuario.Text == "")
@@ -180,7 +180,7 @@ namespace COMPRAS2
 
                 try
                 {
-                    cantidad = int.Parse(txtTelefono.Text);
+                    cantidad = Int32.Parse(txtTelefono.Text);
                 }
                 catch
                 {
