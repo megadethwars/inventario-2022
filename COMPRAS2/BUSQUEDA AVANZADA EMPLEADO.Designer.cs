@@ -113,7 +113,7 @@ namespace COMPRAS2
             this.btnOK.Location = new System.Drawing.Point(1146, 793);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(98, 40);
-            this.btnOK.TabIndex = 66;
+            this.btnOK.TabIndex = 177;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -252,7 +252,7 @@ namespace COMPRAS2
             this.btnLimpiar.Location = new System.Drawing.Point(1133, 30);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(111, 39);
-            this.btnLimpiar.TabIndex = 154;
+            this.btnLimpiar.TabIndex = 178;
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -268,7 +268,7 @@ namespace COMPRAS2
             this.txtApellidoPaterno.Location = new System.Drawing.Point(155, 280);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(426, 29);
-            this.txtApellidoPaterno.TabIndex = 156;
+            this.txtApellidoPaterno.TabIndex = 149;
             // 
             // label1
             // 

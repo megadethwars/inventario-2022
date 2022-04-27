@@ -200,7 +200,7 @@ namespace COMPRAS2
             this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(50, 50);
-            this.btnBack.TabIndex = 36;
+            this.btnBack.TabIndex = 70;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
@@ -214,7 +214,7 @@ namespace COMPRAS2
             this.btnOK.Location = new System.Drawing.Point(1150, 800);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(88, 34);
-            this.btnOK.TabIndex = 66;
+            this.btnOK.TabIndex = 84;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -269,7 +269,7 @@ namespace COMPRAS2
             this.txtContraseña.Location = new System.Drawing.Point(100, 540);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(426, 29);
-            this.txtContraseña.TabIndex = 77;
+            this.txtContraseña.TabIndex = 78;
             this.txtContraseña.Click += new System.EventHandler(this.txtContraseña_Click);
             this.txtContraseña.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtContraseña_PreviewKeyDown);
             // 
@@ -284,7 +284,7 @@ namespace COMPRAS2
             this.txtContraseñaDeNuevo.Location = new System.Drawing.Point(100, 640);
             this.txtContraseñaDeNuevo.Name = "txtContraseñaDeNuevo";
             this.txtContraseñaDeNuevo.Size = new System.Drawing.Size(426, 29);
-            this.txtContraseñaDeNuevo.TabIndex = 78;
+            this.txtContraseñaDeNuevo.TabIndex = 79;
             this.txtContraseñaDeNuevo.Click += new System.EventHandler(this.txtContraseñaDeNuevo_Click);
             // 
             // txtTelefono
@@ -298,7 +298,7 @@ namespace COMPRAS2
             this.txtTelefono.Location = new System.Drawing.Point(700, 140);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(426, 29);
-            this.txtTelefono.TabIndex = 79;
+            this.txtTelefono.TabIndex = 80;
             this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
             this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave);
             // 
@@ -313,7 +313,7 @@ namespace COMPRAS2
             this.txtCorreo.Location = new System.Drawing.Point(700, 240);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(426, 29);
-            this.txtCorreo.TabIndex = 80;
+            this.txtCorreo.TabIndex = 81;
             this.txtCorreo.Click += new System.EventHandler(this.txtCorreo_Click);
             this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
@@ -341,8 +341,8 @@ namespace COMPRAS2
             this.textUsuario.Location = new System.Drawing.Point(100, 440);
             this.textUsuario.Name = "textUsuario";
             this.textUsuario.Size = new System.Drawing.Size(426, 29);
-            this.textUsuario.TabIndex = 83;
-            
+            this.textUsuario.TabIndex = 77;
+            this.textUsuario.TextChanged += new System.EventHandler(this.textUsuario_TextChanged);
             // 
             // cbRoles
             // 
@@ -356,7 +356,7 @@ namespace COMPRAS2
             this.cbRoles.Location = new System.Drawing.Point(700, 340);
             this.cbRoles.Name = "cbRoles";
             this.cbRoles.Size = new System.Drawing.Size(426, 32);
-            this.cbRoles.TabIndex = 84;
+            this.cbRoles.TabIndex = 82;
             // 
             // pictureBox1
             // 
@@ -500,7 +500,7 @@ namespace COMPRAS2
             this.cbEstado.Location = new System.Drawing.Point(700, 442);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(426, 28);
-            this.cbEstado.TabIndex = 133;
+            this.cbEstado.TabIndex = 83;
             // 
             // lblEstadoDelUsuario
             // 

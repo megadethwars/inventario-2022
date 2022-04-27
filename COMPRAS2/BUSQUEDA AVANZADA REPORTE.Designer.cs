@@ -98,7 +98,7 @@ namespace COMPRAS2
             this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(50, 50);
-            this.btnBack.TabIndex = 62;
+            this.btnBack.TabIndex = 20;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -127,7 +127,7 @@ namespace COMPRAS2
             this.btnOK.Location = new System.Drawing.Point(1146, 720);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(98, 40);
-            this.btnOK.TabIndex = 66;
+            this.btnOK.TabIndex = 160;
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // txtCodigo

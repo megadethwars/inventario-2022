@@ -91,7 +91,7 @@ namespace COMPRAS2
             this.txtMarca.Location = new System.Drawing.Point(160, 260);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(426, 26);
-            this.txtMarca.TabIndex = 48;
+            this.txtMarca.TabIndex = 55;
             // 
             // lblProducto
             // 
@@ -182,7 +182,7 @@ namespace COMPRAS2
             this.txtModelo.Location = new System.Drawing.Point(160, 330);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(426, 26);
-            this.txtModelo.TabIndex = 49;
+            this.txtModelo.TabIndex = 56;
             // 
             // txtSerie
             // 
@@ -195,7 +195,7 @@ namespace COMPRAS2
             this.txtSerie.Location = new System.Drawing.Point(750, 120);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(426, 26);
-            this.txtSerie.TabIndex = 52;
+            this.txtSerie.TabIndex = 57;
             // 
             // txtCodigo
             // 
@@ -223,7 +223,7 @@ namespace COMPRAS2
             this.btnOK.Location = new System.Drawing.Point(1146, 720);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(98, 40);
-            this.btnOK.TabIndex = 56;
+            this.btnOK.TabIndex = 60;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -255,7 +255,7 @@ namespace COMPRAS2
             this.cbLugares.Location = new System.Drawing.Point(750, 190);
             this.cbLugares.Name = "cbLugares";
             this.cbLugares.Size = new System.Drawing.Size(426, 28);
-            this.cbLugares.TabIndex = 141;
+            this.cbLugares.TabIndex = 58;
             this.cbLugares.Text = "Lugares";
             // 
             // cbEstatus
@@ -270,7 +270,7 @@ namespace COMPRAS2
             this.cbEstatus.Location = new System.Drawing.Point(750, 260);
             this.cbEstatus.Name = "cbEstatus";
             this.cbEstatus.Size = new System.Drawing.Size(426, 28);
-            this.cbEstatus.TabIndex = 142;
+            this.cbEstatus.TabIndex = 59;
             this.cbEstatus.Text = "Estatus";
             // 
             // lblLugares
@@ -356,7 +356,7 @@ namespace COMPRAS2
             this.btnLimpiar.Location = new System.Drawing.Point(1146, 22);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(111, 39);
-            this.btnLimpiar.TabIndex = 146;
+            this.btnLimpiar.TabIndex = 61;
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);

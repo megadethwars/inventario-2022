@@ -360,5 +360,10 @@ namespace COMPRAS2
                 txtContraseñaDeNuevo.UseSystemPasswordChar = true;
             }
         }
+
+        private void textUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -126,7 +126,7 @@ namespace COMPRAS2
             this.txtTelefono.Location = new System.Drawing.Point(170, 510);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(960, 26);
-            this.txtTelefono.TabIndex = 100;
+            this.txtTelefono.TabIndex = 130;
             this.txtTelefono.Text = "Cambiar Telefono";
             // 
             // txtCorreo
@@ -141,7 +141,7 @@ namespace COMPRAS2
             this.txtCorreo.Location = new System.Drawing.Point(170, 425);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(960, 26);
-            this.txtCorreo.TabIndex = 99;
+            this.txtCorreo.TabIndex = 129;
             this.txtCorreo.Text = "Cambiar Correo";
             // 
             // txtNombre
@@ -189,7 +189,7 @@ namespace COMPRAS2
             this.btnOK.Location = new System.Drawing.Point(1150, 800);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(88, 34);
-            this.btnOK.TabIndex = 108;
+            this.btnOK.TabIndex = 133;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -219,7 +219,7 @@ namespace COMPRAS2
             this.cbEmpleado.Location = new System.Drawing.Point(170, 595);
             this.cbEmpleado.Name = "cbEmpleado";
             this.cbEmpleado.Size = new System.Drawing.Size(960, 28);
-            this.cbEmpleado.TabIndex = 110;
+            this.cbEmpleado.TabIndex = 131;
             // 
             // pictureBox1
             // 
@@ -388,7 +388,7 @@ namespace COMPRAS2
             this.cbEstado.Location = new System.Drawing.Point(170, 680);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(960, 28);
-            this.cbEstado.TabIndex = 130;
+            this.cbEstado.TabIndex = 132;
             // 
             // lblEstadoDelUsuario
             // 

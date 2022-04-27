@@ -83,7 +83,7 @@ namespace COMPRAS2
             this.btnOK.Location = new System.Drawing.Point(549, 727);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(88, 34);
-            this.btnOK.TabIndex = 67;
+            this.btnOK.TabIndex = 97;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -142,7 +142,6 @@ namespace COMPRAS2
             this.txtContraseñaDeNuevo.Name = "txtContraseñaDeNuevo";
             this.txtContraseñaDeNuevo.Size = new System.Drawing.Size(426, 29);
             this.txtContraseñaDeNuevo.TabIndex = 96;
-            this.txtContraseñaDeNuevo.Text = "Introduzca la contraseña de nuevo";
             // 
             // txtContraseña
             // 
@@ -157,7 +156,6 @@ namespace COMPRAS2
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(426, 29);
             this.txtContraseña.TabIndex = 95;
-            this.txtContraseña.Text = "Introduzca la contraseña";
             // 
             // label4
             // 

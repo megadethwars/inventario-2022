@@ -231,7 +231,7 @@ namespace COMPRAS2
             this.txtCodigoQR.Location = new System.Drawing.Point(100, 220);
             this.txtCodigoQR.Name = "txtCodigoQR";
             this.txtCodigoQR.Size = new System.Drawing.Size(426, 26);
-            this.txtCodigoQR.TabIndex = 22;
+            this.txtCodigoQR.TabIndex = 21;
             this.txtCodigoQR.Text = "Codigo QR";
             // 
             // txtMarca
@@ -267,7 +267,7 @@ namespace COMPRAS2
             this.txtOrigen.Location = new System.Drawing.Point(100, 620);
             this.txtOrigen.Name = "txtOrigen";
             this.txtOrigen.Size = new System.Drawing.Size(426, 26);
-            this.txtOrigen.TabIndex = 25;
+            this.txtOrigen.TabIndex = 26;
             this.txtOrigen.Text = "Origen";
             // 
             // txtCompra
@@ -279,7 +279,7 @@ namespace COMPRAS2
             this.txtCompra.Location = new System.Drawing.Point(100, 300);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.Size = new System.Drawing.Size(426, 26);
-            this.txtCompra.TabIndex = 26;
+            this.txtCompra.TabIndex = 22;
             this.txtCompra.Text = "Compra";
             // 
             // txtDescompostura
@@ -293,7 +293,7 @@ namespace COMPRAS2
             this.txtDescompostura.Location = new System.Drawing.Point(700, 300);
             this.txtDescompostura.Name = "txtDescompostura";
             this.txtDescompostura.Size = new System.Drawing.Size(426, 26);
-            this.txtDescompostura.TabIndex = 28;
+            this.txtDescompostura.TabIndex = 30;
             this.txtDescompostura.Text = "Descompostura";
             // 
             // txtProvedor
@@ -307,7 +307,7 @@ namespace COMPRAS2
             this.txtProvedor.Location = new System.Drawing.Point(700, 380);
             this.txtProvedor.Name = "txtProvedor";
             this.txtProvedor.Size = new System.Drawing.Size(426, 26);
-            this.txtProvedor.TabIndex = 29;
+            this.txtProvedor.TabIndex = 31;
             this.txtProvedor.Text = "Provedor";
             // 
             // txtCosto
@@ -319,7 +319,7 @@ namespace COMPRAS2
             this.txtCosto.Location = new System.Drawing.Point(100, 540);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(426, 26);
-            this.txtCosto.TabIndex = 30;
+            this.txtCosto.TabIndex = 25;
             this.txtCosto.Text = "Costo";
             // 
             // btnOK
@@ -335,7 +335,7 @@ namespace COMPRAS2
             this.btnOK.Location = new System.Drawing.Point(1150, 800);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(88, 34);
-            this.btnOK.TabIndex = 31;
+            this.btnOK.TabIndex = 35;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -548,7 +548,7 @@ namespace COMPRAS2
             this.txtCantidad.Location = new System.Drawing.Point(700, 460);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(426, 26);
-            this.txtCantidad.TabIndex = 134;
+            this.txtCantidad.TabIndex = 32;
             this.txtCantidad.Text = "Cantidad";
             // 
             // lblCantidad
@@ -589,7 +589,7 @@ namespace COMPRAS2
             this.cbEstatus.Location = new System.Drawing.Point(700, 219);
             this.cbEstatus.Name = "cbEstatus";
             this.cbEstatus.Size = new System.Drawing.Size(426, 28);
-            this.cbEstatus.TabIndex = 139;
+            this.cbEstatus.TabIndex = 29;
             this.cbEstatus.Text = "Estatus";
             // 
             // cbLugares
@@ -604,7 +604,7 @@ namespace COMPRAS2
             this.cbLugares.Location = new System.Drawing.Point(700, 139);
             this.cbLugares.Name = "cbLugares";
             this.cbLugares.Size = new System.Drawing.Size(426, 28);
-            this.cbLugares.TabIndex = 140;
+            this.cbLugares.TabIndex = 28;
             this.cbLugares.Text = "Lugares";
             // 
             // pictureBox14
@@ -631,7 +631,7 @@ namespace COMPRAS2
             this.txtAccesorio.Location = new System.Drawing.Point(100, 700);
             this.txtAccesorio.Name = "txtAccesorio";
             this.txtAccesorio.Size = new System.Drawing.Size(426, 29);
-            this.txtAccesorio.TabIndex = 142;
+            this.txtAccesorio.TabIndex = 27;
             // 
             // lblAccesorio
             // 
@@ -670,7 +670,7 @@ namespace COMPRAS2
             this.txtObservaciones.Location = new System.Drawing.Point(700, 537);
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(426, 29);
-            this.txtObservaciones.TabIndex = 147;
+            this.txtObservaciones.TabIndex = 33;
             // 
             // label2
             // 
@@ -696,7 +696,7 @@ namespace COMPRAS2
             this.txtSerie.Location = new System.Drawing.Point(700, 617);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(426, 29);
-            this.txtSerie.TabIndex = 145;
+            this.txtSerie.TabIndex = 34;
             // 
             // lblSerie
             // 

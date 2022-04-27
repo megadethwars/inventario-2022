@@ -83,6 +83,7 @@ namespace COMPRAS2
             this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInventario.ColumnHeadersHeight = 45;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvInventario.Location = new System.Drawing.Point(20, 198);
@@ -98,6 +99,7 @@ namespace COMPRAS2
             this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(1235, 501);
+            this.dgvInventario.StandardTab = true;
             this.dgvInventario.TabIndex = 3;
             this.dgvInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellClick);
             this.dgvInventario.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellMouseEnter);
