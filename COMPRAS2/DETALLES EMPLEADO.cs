@@ -68,8 +68,11 @@ namespace COMPRAS2
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Seguro que desea eliminar a este empleado?");
-            EliminarEmpleado();
+            if (MessageBox.Show("¿Seguro que desea eliminar a este empleado?", "Exit Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarEmpleado();
+            }
+            
         }
 
         private async void EliminarEmpleado()

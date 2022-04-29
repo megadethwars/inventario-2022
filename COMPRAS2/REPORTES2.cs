@@ -65,6 +65,11 @@ namespace COMPRAS2
                 this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
                 this.dgvReportes.Columns["UserActualA"].Visible = false;
                 this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
+                this.dgvReportes.Columns["dispositivoId"].Visible = false;
+                this.dgvReportes.Columns["Id"].Visible = false;
+                this.dgvReportes.Columns["usuarioId"].Visible = false;
+                this.dgvReportes.Columns["dispositivo"].Visible = false;
+                this.dgvReportes.Columns["usuario"].Visible = false;
             }
             catch
             {
@@ -108,15 +113,17 @@ namespace COMPRAS2
             {
                 Devices Dispositivos = reportes[x].dispositivo;
                 reportes[x].dispositivoActual = Dispositivos.producto;
-
+                
                 User Usuarios = reportes[x].usuario;
                 reportes[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
 
                 User UsuariosA = reportes[x].usuario;
                 reportes[x].UserActualA = Usuarios.apellidoPaterno;
-
+                
                 Devices Codigos = reportes[x].dispositivo;
                 reportes[x].dispositivoCodigo = Codigos.codigo;
+
+                
             }
 
             dgvReportes.DataSource = reportes;
@@ -124,6 +131,11 @@ namespace COMPRAS2
             this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
             this.dgvReportes.Columns["UserActualA"].Visible = false;
             this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
+            this.dgvReportes.Columns["dispositivoId"].Visible = false;
+            this.dgvReportes.Columns["Id"].Visible = false;
+            this.dgvReportes.Columns["usuarioId"].Visible = false;
+            this.dgvReportes.Columns["dispositivo"].Visible = false;
+            this.dgvReportes.Columns["usuario"].Visible = false;
         }
 
         private void dgvReportes_CellMouseEnter(object sender, DataGridViewCellEventArgs e)

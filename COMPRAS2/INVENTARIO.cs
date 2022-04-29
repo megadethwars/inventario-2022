@@ -73,7 +73,6 @@ namespace COMPRAS2
                 this.dgvInventario.Columns["serie"].Visible = false;
                 this.dgvInventario.Columns["fechaAlta"].Visible = false;
 
-                //this.dgvInventario.FirstDisplayedScrollingRowIndex = deviceslist;
             }
             catch
             {

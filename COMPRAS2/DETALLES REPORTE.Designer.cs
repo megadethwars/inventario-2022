@@ -32,7 +32,6 @@ namespace COMPRAS2
             this.btnBack = new System.Windows.Forms.Button();
             this.lblREPORTES = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -40,7 +39,6 @@ namespace COMPRAS2
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblFoto = new System.Windows.Forms.Label();
             this.lblFechaAlta = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblComentarios = new System.Windows.Forms.Label();
@@ -48,7 +46,6 @@ namespace COMPRAS2
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblDispositivoId = new System.Windows.Forms.Label();
             this.lblDCodigo = new System.Windows.Forms.Label();
-            this.lblDFoto = new System.Windows.Forms.Label();
             this.lblDFechaAlta = new System.Windows.Forms.Label();
             this.lblDNombre = new System.Windows.Forms.Label();
             this.lblDComentarios = new System.Windows.Forms.Label();
@@ -58,7 +55,6 @@ namespace COMPRAS2
             this.btnELIMINAR = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -107,19 +103,6 @@ namespace COMPRAS2
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 124;
             this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox12.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox12.Location = new System.Drawing.Point(715, 283);
-            this.pictureBox12.MaximumSize = new System.Drawing.Size(1000, 3);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(550, 3);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 123;
-            this.pictureBox12.TabStop = false;
             // 
             // pictureBox9
             // 
@@ -212,19 +195,6 @@ namespace COMPRAS2
             this.lblCodigo.TabIndex = 114;
             this.lblCodigo.Text = "Codigo";
             // 
-            // lblFoto
-            // 
-            this.lblFoto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoto.AutoSize = true;
-            this.lblFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblFoto.Location = new System.Drawing.Point(715, 328);
-            this.lblFoto.Name = "lblFoto";
-            this.lblFoto.Size = new System.Drawing.Size(42, 20);
-            this.lblFoto.TabIndex = 111;
-            this.lblFoto.Text = "Foto";
-            // 
             // lblFechaAlta
             // 
             this.lblFechaAlta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -316,19 +286,6 @@ namespace COMPRAS2
             this.lblDCodigo.Size = new System.Drawing.Size(74, 32);
             this.lblDCodigo.TabIndex = 104;
             this.lblDCodigo.Text = "CODIGO:";
-            // 
-            // lblDFoto
-            // 
-            this.lblDFoto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDFoto.AutoSize = true;
-            this.lblDFoto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDFoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDFoto.Location = new System.Drawing.Point(715, 288);
-            this.lblDFoto.Name = "lblDFoto";
-            this.lblDFoto.Size = new System.Drawing.Size(56, 32);
-            this.lblDFoto.TabIndex = 101;
-            this.lblDFoto.Text = "FOTO:";
             // 
             // lblDFechaAlta
             // 
@@ -458,7 +415,6 @@ namespace COMPRAS2
             this.Controls.Add(this.btnELIMINAR);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -466,7 +422,6 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.lblFoto);
             this.Controls.Add(this.lblFechaAlta);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblComentarios);
@@ -474,7 +429,6 @@ namespace COMPRAS2
             this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.lblDispositivoId);
             this.Controls.Add(this.lblDCodigo);
-            this.Controls.Add(this.lblDFoto);
             this.Controls.Add(this.lblDFechaAlta);
             this.Controls.Add(this.lblDNombre);
             this.Controls.Add(this.lblDComentarios);
@@ -488,7 +442,6 @@ namespace COMPRAS2
             this.Text = "DETALLES_REPORTE";
             this.Load += new System.EventHandler(this.DETALLES_REPORTE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -505,7 +458,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblREPORTES;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -513,7 +465,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.Label lblFechaAlta;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblComentarios;
@@ -521,7 +472,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblDispositivoId;
         private System.Windows.Forms.Label lblDCodigo;
-        private System.Windows.Forms.Label lblDFoto;
         private System.Windows.Forms.Label lblDFechaAlta;
         private System.Windows.Forms.Label lblDNombre;
         private System.Windows.Forms.Label lblDComentarios;

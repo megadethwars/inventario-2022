@@ -177,6 +177,9 @@ namespace COMPRAS2
             int tipomov = await TipoMov();
             int users = await Usuarios();
             int lugars = await Lugares();
+            this.cbLugares.Text = null;
+            this.cbUsuario.Text = null;
+            this.cbMovimiento.Text = null;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

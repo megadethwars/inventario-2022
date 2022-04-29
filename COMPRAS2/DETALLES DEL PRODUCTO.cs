@@ -62,8 +62,11 @@ namespace COMPRAS2
 
         private void btnELIMINAR_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Seguro que desea eliminar a este producto?");
-            EliminarProducto();
+            if(MessageBox.Show("¿Seguro que desea eliminar a este producto?", "Exit Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarProducto();
+            }
+                       
         }
 
         private async void EliminarProducto()
