@@ -52,7 +52,6 @@ namespace COMPRAS2
             this.lblDApellido = new System.Windows.Forms.Label();
             this.lblDProducto = new System.Windows.Forms.Label();
             this.lblDDispositivoId = new System.Windows.Forms.Label();
-            this.btnELIMINAR = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -365,26 +364,6 @@ namespace COMPRAS2
             this.lblDDispositivoId.TabIndex = 95;
             this.lblDDispositivoId.Text = "DISPOSITIVO ID:";
             // 
-            // btnELIMINAR
-            // 
-            this.btnELIMINAR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnELIMINAR.BackColor = System.Drawing.Color.Transparent;
-            this.btnELIMINAR.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnELIMINAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnELIMINAR.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnELIMINAR.FlatAppearance.BorderSize = 0;
-            this.btnELIMINAR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnELIMINAR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnELIMINAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnELIMINAR.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnELIMINAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnELIMINAR.Location = new System.Drawing.Point(234, 785);
-            this.btnELIMINAR.Name = "btnELIMINAR";
-            this.btnELIMINAR.Size = new System.Drawing.Size(163, 39);
-            this.btnELIMINAR.TabIndex = 126;
-            this.btnELIMINAR.Text = "ELIMINAR REPORTE";
-            this.btnELIMINAR.UseVisualStyleBackColor = false;
-            // 
             // btnEditar
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -412,7 +391,6 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.btnELIMINAR);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox9);
@@ -478,7 +456,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblDApellido;
         private System.Windows.Forms.Label lblDProducto;
         private System.Windows.Forms.Label lblDDispositivoId;
-        private System.Windows.Forms.Button btnELIMINAR;
         private System.Windows.Forms.Button btnEditar;
     }
 }

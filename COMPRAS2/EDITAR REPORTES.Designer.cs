@@ -30,31 +30,14 @@ namespace COMPRAS2
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EDITAR_REPORTES));
-            this.bTNBack = new System.Windows.Forms.Button();
             this.EDITARREPORTESTITLE = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblDComentarios = new System.Windows.Forms.Label();
-            this.txtComentarios = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.txtComentarios = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bTNBack
-            // 
-            this.bTNBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bTNBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
-            this.bTNBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bTNBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bTNBack.FlatAppearance.BorderSize = 0;
-            this.bTNBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.bTNBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.bTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bTNBack.Location = new System.Drawing.Point(20, 20);
-            this.bTNBack.Name = "bTNBack";
-            this.bTNBack.Size = new System.Drawing.Size(50, 50);
-            this.bTNBack.TabIndex = 25;
-            this.bTNBack.UseVisualStyleBackColor = false;
-            this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
             // 
             // EDITARREPORTESTITLE
             // 
@@ -95,21 +78,6 @@ namespace COMPRAS2
             this.lblDComentarios.TabIndex = 128;
             this.lblDComentarios.Text = "COMENTARIOS:";
             // 
-            // txtComentarios
-            // 
-            this.txtComentarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtComentarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.txtComentarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComentarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtComentarios.Location = new System.Drawing.Point(375, 219);
-            this.txtComentarios.Multiline = true;
-            this.txtComentarios.Name = "txtComentarios";
-            this.txtComentarios.Size = new System.Drawing.Size(550, 279);
-            this.txtComentarios.TabIndex = 156;
-            this.txtComentarios.Text = "Escribe aqui";
-            // 
             // btnOK
             // 
             this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
@@ -123,17 +91,45 @@ namespace COMPRAS2
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackgroundImage = global::COMPRAS2.Properties.Resources.BACK;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(20, 20);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(50, 50);
+            this.btnBack.TabIndex = 158;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // txtComentarios
+            // 
+            this.txtComentarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.txtComentarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComentarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.txtComentarios.Location = new System.Drawing.Point(375, 246);
+            this.txtComentarios.Multiline = true;
+            this.txtComentarios.Name = "txtComentarios";
+            this.txtComentarios.Size = new System.Drawing.Size(550, 233);
+            this.txtComentarios.TabIndex = 159;
+            // 
             // EDITAR_REPORTES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtComentarios);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.lblDComentarios);
-            this.Controls.Add(this.bTNBack);
             this.Controls.Add(this.EDITARREPORTESTITLE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EDITAR_REPORTES";
@@ -146,12 +142,11 @@ namespace COMPRAS2
         }
 
         #endregion
-
-        private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Label EDITARREPORTESTITLE;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblDComentarios;
-        private System.Windows.Forms.TextBox txtComentarios;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.TextBox txtComentarios;
     }
 }

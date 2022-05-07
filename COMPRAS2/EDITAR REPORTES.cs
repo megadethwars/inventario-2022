@@ -26,12 +26,7 @@ namespace COMPRAS2
             this.reportes = reportes;
             id = reportes.id;
         }
-
-        private void bTNBack_Click(object sender, EventArgs e)
-        {
-            Navigator.backPage(this.Name, this);
-        }
-
+        
         private void btnOK_Click(object sender, EventArgs e)
         {
             EditarReportes();
@@ -83,15 +78,14 @@ namespace COMPRAS2
             }
         }
 
-        private async void EDITAR_REPORTES_Load(object sender, EventArgs e)
+        private void EDITAR_REPORTES_Load(object sender, EventArgs e)
+        {           
+            this.txtComentarios.Text = reportes.comentarios;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            Reportes reportes;
-            reportes = new Reportes();
-
-            reportes.comentarios = txtComentarios.Text;
-            reportes.id = id;
-
-            Navigator.nextPage(new REPORTES2());            
+            Navigator.backPage(this.Name, this);
         }
     }
 }
