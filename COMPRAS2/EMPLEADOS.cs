@@ -84,9 +84,7 @@ namespace COMPRAS2
             catch
             {
                 MessageBox.Show("Navegue con mas lentitud");
-            }
-            
-
+            }          
         }
 
         public void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -126,6 +124,11 @@ namespace COMPRAS2
         {
             this.devices = devices;
             Navigator.nextPage(new BUSQUEDA_AVANZADA_EMPLEADO(devices));
+        }
+
+        private void txtBUSCADOR_Click(object sender, EventArgs e)
+        {
+            txtBUSCADOR.Clear();
         }
     }
 }

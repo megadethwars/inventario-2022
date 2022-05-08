@@ -70,6 +70,7 @@ namespace COMPRAS2
                 this.dgvReportes.Columns["usuarioId"].Visible = false;
                 this.dgvReportes.Columns["dispositivo"].Visible = false;
                 this.dgvReportes.Columns["usuario"].Visible = false;
+                this.dgvReportes.Columns["comentarios"].Visible = false;
             }
             catch
             {
@@ -136,6 +137,7 @@ namespace COMPRAS2
             this.dgvReportes.Columns["usuarioId"].Visible = false;
             this.dgvReportes.Columns["dispositivo"].Visible = false;
             this.dgvReportes.Columns["usuario"].Visible = false;
+            this.dgvReportes.Columns["comentarios"].Visible = false;
         }
 
         private void dgvReportes_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -146,6 +148,11 @@ namespace COMPRAS2
         private void btnBusquedaAvanzada_Click(object sender, EventArgs e)
         {
             Navigator.nextPage(new BUSQUEDA_AVANZADA_REPORTE());
+        }
+
+        private void txtBUSCADOR_Click(object sender, EventArgs e)
+        {
+            txtBUSCADOR.Clear();
         }
     }
 }
