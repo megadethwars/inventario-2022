@@ -113,10 +113,10 @@ namespace COMPRAS2
             this.txtComentarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComentarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtComentarios.Location = new System.Drawing.Point(375, 246);
+            this.txtComentarios.Location = new System.Drawing.Point(228, 246);
             this.txtComentarios.Multiline = true;
             this.txtComentarios.Name = "txtComentarios";
-            this.txtComentarios.Size = new System.Drawing.Size(550, 233);
+            this.txtComentarios.Size = new System.Drawing.Size(860, 233);
             this.txtComentarios.TabIndex = 159;
             // 
             // EDITAR_REPORTES

@@ -57,9 +57,14 @@ namespace COMPRAS2
                 {
                     //var auth = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
                     devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessagequery.data);
+                    if (devices.Count== 0)
+                    {
+                        MessageBox.Show("El producto no fue encontrado");
+                        return 1;
+                    }
 
-                    
                     reporte.dispositivoId = devices[0].id;
+                    
 
                 }
                 else {

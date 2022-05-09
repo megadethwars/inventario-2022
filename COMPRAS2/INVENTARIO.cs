@@ -277,7 +277,7 @@ namespace COMPRAS2
 
         private void txtBUSCADOR_Click(object sender, EventArgs e)
         {
-            txtBUSCADOR.Clear();
+            
         }
     }
     
