@@ -18,4 +18,18 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string data { get; set; }
     }
+
+
+    public class ErrorMessage
+    {
+        [DefaultValue(0)]
+        public int statuscode { get; set; }
+
+        [DefaultValue(null)]
+        public string message { get; set; }
+
+        [DefaultValue(null)]
+        public string data { get; set; }
+    }
+
 }
