@@ -266,6 +266,7 @@
     <Compile Include="MIPERFIL.Designer.cs">
       <DependentUpon>MIPERFIL.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelos\DeviceMigrate.cs" />
     <Compile Include="modelos\Movimientos.cs" />
     <Compile Include="modelos\QueryDevice.cs" />
     <Compile Include="modelos\QueryMovimientos.cs" />

@@ -74,7 +74,7 @@ namespace COMPRAS2
                 this.dgvInventario.Columns["fechaAlta"].Visible = false;
 
             }
-            catch
+            catch(Exception ex)
             {
                 MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");               
             }

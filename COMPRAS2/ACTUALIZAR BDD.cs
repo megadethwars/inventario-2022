@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,7 +43,9 @@ namespace COMPRAS2
         {
             try
             {
-                
+                Thread th = new Thread(syncDataBase);
+
+                th.Start();
 
             }
             catch (Exception ex) { 
@@ -72,16 +75,21 @@ namespace COMPRAS2
                 IWorkbook workbook = application.Workbooks.Open(fStream);
 
                 //Access first worksheet from the workbook.
-                IWorksheet worksheet = workbook.Worksheets[1];
+                IWorksheet worksheet = workbook.Worksheets[0];
 
                 int row = 2;
+         
 
-                while (!worksheet.GetValueRowCol(row, 2).Equals("") && worksheet.GetValueRowCol(row, 2) != null)
+                while (!worksheet.GetValueRowCol(row, 2).Equals("") || !worksheet.GetValueRowCol(row+1, 2).Equals("") || !worksheet.GetValueRowCol(row+2, 2).Equals("") || !worksheet.GetValueRowCol(row + 3, 2).Equals("") || !worksheet.GetValueRowCol(row + 4, 2).Equals("") || !worksheet.GetValueRowCol(row + 5, 2).Equals("") || !worksheet.GetValueRowCol(row + 6, 2).Equals(""))
                 {
 
                     if (isStopped)
                     {
-                        porcentaje.Text = "Detenido";
+                        this.Invoke((MethodInvoker)delegate(){
+                            porcentaje.Text = "Detenido";
+                        });
+
+                        
                         break;
                     }
 
@@ -92,108 +100,152 @@ namespace COMPRAS2
                     //list = await App.MobileService.GetTable<InventDB>().Where(u => u.codigo == strs).ToListAsync();
 
 
-                    var url = HttpMethods.url + "dispositivos";
-                    StatusMessage statusmessage = await HttpMethods.get(url);
+                  
+                    QueryDevice devicequery = new QueryDevice();
+                    devicequery.codigo = strs;
+                    string jsonD = JsonConvert.SerializeObject(devicequery,
+                    new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                    var urlD = HttpMethods.url + "dispositivos/query";
+                    StatusMessage statusmessageD = await HttpMethods.Post(urlD, jsonD);
 
-
-
-                    if (statusmessage == null)
+                    if (statusmessageD == null)
                     {
 
                         MessageBox.Show("error de conexion con el servidor");
-                        porcentaje.Text = "Error de conexion";
+                        this.Invoke((MethodInvoker)delegate () {
+                            porcentaje.Text = "Error de conexion";
+                        });
+                        
                         break;
                     }
 
-                    if (statusmessage.statuscode == 500)
+                    if (statusmessageD.statuscode == 500)
                     {
                         MessageBox.Show("error de conexion con el servidor");
-                        porcentaje.Text = "Error de sincronizacion";
+                        
+                        this.Invoke((MethodInvoker)delegate () {
+                            porcentaje.Text = "Error de sincronizacion";
+                        });
                         break;
                     }
 
-                    if (statusmessage.statuscode == 404)
+                    if (statusmessageD.statuscode == 200)
                     {
                         //await DisplayAlert("Buscando", "producto no encontrado", "OK");
 
                         //var id = Guid.NewGuid().ToString();
-                        Devices n = new Devices
-                        {
-
-                            codigo = strs,
-                            serie = (string)worksheet.GetValueRowCol(row, 2),
-                            compra = worksheet.GetText(row, 8),
-                            costo = int.Parse(worksheet.GetText(row, 6)),
-                            descompostura = worksheet.GetText(row, 11),
-                            marca = worksheet.GetText(row, 4),
-                            modelo = worksheet.GetText(row, 5),
-                            producto = worksheet.GetText(row, 3),
-                            observaciones = worksheet.GetText(row, 9),
-                            origen = worksheet.GetText(row, 7),
-                            pertenece = worksheet.GetText(row, 10),
-                            //ID = id,
-                            lugarId = 1,
-
-                        };
-
-                        n.serie = n.serie.Replace('\x22', '\0');
-
-                        string json = JsonConvert.SerializeObject(n,
-                        new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                        var urlpost = HttpMethods.url + "dispositivos";
-                        StatusMessage statusmessagePost = await HttpMethods.Post(urlpost, json);
-
-
-                        //await App.MobileService.GetTable<InventDB>().InsertAsync(n);
-                        if (statusmessagePost.statuscode != 201) {
-                            MessageBox.Show("Ocurrio un error durante la migracion en el producto " + n.codigo);
-                            return;
-                        }
-
-                    }
-
-                    if (statusmessage.statuscode == 200 || statusmessage.statuscode == 201)
-                    {
-                        Devices deviceUpdate = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
+                        List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessageD.data);
                  
-
-                        deviceUpdate.compra = worksheet.GetText(row, 8);
-                        deviceUpdate.costo = int.Parse( worksheet.GetText(row, 6));
-                        deviceUpdate.descompostura = worksheet.GetText(row, 11);
-                        deviceUpdate.marca = worksheet.GetText(row, 4);
-                        deviceUpdate.modelo = worksheet.GetText(row, 5);
-                        deviceUpdate.producto = worksheet.GetText(row, 3);
-                        deviceUpdate.observaciones = worksheet.GetText(row, 9);
-                        deviceUpdate.origen = worksheet.GetText(row, 7);
-                        deviceUpdate.pertenece = worksheet.GetText(row, 10);
-                        deviceUpdate.serie = (string)worksheet.GetValueRowCol(row, 1);
-                        deviceUpdate.lugarId = 1;
-                        deviceUpdate.serie = deviceUpdate.serie.Replace('\x22', '\0');
-
-                        string json = JsonConvert.SerializeObject(deviceUpdate,
-                        new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                        var urlput = HttpMethods.url + "dispositivos";
-                        StatusMessage statusmessageput = await HttpMethods.put(urlput, json);
-
-                        if (statusmessageput.statuscode != 200)
+                        if (devices.Count == 0)
                         {
-                            MessageBox.Show("Ocurrio un error durante la migracion en el la actualizacion " + deviceUpdate.codigo);
-                            return;
+
+                            DeviceMigrate n = new DeviceMigrate();
+                            n.codigo = strs;
+                            n.serie = (string)worksheet.GetValueRowCol(row, 2);
+                            n.compra = worksheet.GetText(row, 8);
+                            try
+                            {
+                                n.costo = int.Parse((string)worksheet.GetValueRowCol(row, 6));
+                                if (n.costo == 0) {
+                                    n.costo = 1;
+                                }
+                            }
+                            catch {
+                                n.costo = 1;
+
+                            }
+                            
+                            n.descompostura = (string)worksheet.GetValueRowCol(row, 11);
+                            n.marca = (string)worksheet.GetValueRowCol(row, 4);
+                            n.modelo = (string)worksheet.GetValueRowCol(row, 5);
+                            n.producto = (string)worksheet.GetValueRowCol(row, 3);
+                            n.observaciones = (string)worksheet.GetValueRowCol(row, 9);
+                            n.origen = (string)worksheet.GetValueRowCol(row, 7);
+                            n.pertenece = (string)worksheet.GetValueRowCol(row, 10);
+                            //ID = id,
+                            n.lugarId = 1;
+                            n.cantidad = 2;
+                            n.statusId = 1;
+                            n.serie = n.serie.Replace('\x22', '\0');
+                            
+
+                            string json = JsonConvert.SerializeObject(n,
+                            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                            var urlpost = HttpMethods.url + "dispositivos";
+                            StatusMessage statusmessagePost = await HttpMethods.Post(urlpost, json);
+
+
+                            //await App.MobileService.GetTable<InventDB>().InsertAsync(n);
+                            if (statusmessagePost.statuscode != 201)
+                            {
+                                MessageBox.Show("Ocurrio un error durante la migracion en el producto " + n.codigo);
+                                return;
+                            }
                         }
+                        else {
+                            List<DeviceMigrate> deviceUpdate = JsonConvert.DeserializeObject<List<DeviceMigrate>>(statusmessageD.data);
+
+
+                            deviceUpdate[0].compra = (string)worksheet.GetValueRowCol(row, 8);
+                            try
+                            {
+                                deviceUpdate[0].costo = int.Parse((string)worksheet.GetValueRowCol(row, 6));
+                                if (deviceUpdate[0].costo == 0)
+                                {
+                                    deviceUpdate[0].costo = 1;
+                                }
+                            }
+                            catch
+                            {
+                                deviceUpdate[0].costo = 1;
+                            }
+                           
+                            deviceUpdate[0].descompostura = (string)worksheet.GetValueRowCol(row, 11);
+                            deviceUpdate[0].marca = (string)worksheet.GetValueRowCol(row, 4);
+                            deviceUpdate[0].modelo = (string)worksheet.GetValueRowCol(row, 5);
+                            deviceUpdate[0].producto = (string)worksheet.GetValueRowCol(row, 3);
+                            deviceUpdate[0].observaciones = (string)worksheet.GetValueRowCol(row, 9);
+                            deviceUpdate[0].origen = (string)worksheet.GetValueRowCol(row, 7);
+                            deviceUpdate[0].pertenece = (string)worksheet.GetValueRowCol(row, 10);
+                            deviceUpdate[0].serie = (string)worksheet.GetValueRowCol(row, 1);
+                            deviceUpdate[0].lugarId = 1;
+                            deviceUpdate[0].serie = (string)deviceUpdate[0].serie.Replace('\x22', '\0');
+
+                            string json = JsonConvert.SerializeObject(deviceUpdate[0],
+                            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                            var urlput = HttpMethods.url + "dispositivos";
+                            StatusMessage statusmessageput = await HttpMethods.put(urlput, json);
+
+                            if (statusmessageput.statuscode != 200)
+                            {
+                                MessageBox.Show("Ocurrio un error durante la migracion en el la actualizacion " + deviceUpdate[0].codigo);
+                                return;
+                            }
+                        }
+
+                        
+
                     }
 
+                  
 
 
-                    porcentaje.Text = worksheet.GetText(row, 1) + "  " + (row * 100 / 1576).ToString() + "%";
+                    this.Invoke((MethodInvoker)delegate () {
+                        porcentaje.Text = worksheet.GetText(row, 1) + "  " + (row * 100 / 1576).ToString() + "%";
+                    });
+                    
                     row = row + 1;
                 }
                 row = 2;
-                porcentaje.Text = "terminado";
-
+                
+                this.Invoke((MethodInvoker)delegate () {
+                    porcentaje.Text = "terminado";
+                });
                 workbook.Close();
-
+                fStream.Close();
             }
             catch (Exception ex) {
+              
                 MessageBox.Show("Ocurrio un error en el proceso, revise el archivo que sea correcto, o su conexion a internet");
             }
         
