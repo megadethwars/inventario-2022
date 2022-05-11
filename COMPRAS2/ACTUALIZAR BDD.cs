@@ -88,15 +88,19 @@ namespace COMPRAS2
                         this.Invoke((MethodInvoker)delegate(){
                             porcentaje.Text = "Detenido";
                         });
+                        workbook.Close();
+                        fStream.Close();
 
-                        
                         break;
                     }
 
                     //columnas
 
                     var strs = worksheet.GetText(row, 1);
-
+                    if (strs == "") {
+                        row = row + 1;
+                        continue;
+                    }
                     //list = await App.MobileService.GetTable<InventDB>().Where(u => u.codigo == strs).ToListAsync();
 
 
@@ -115,7 +119,8 @@ namespace COMPRAS2
                         this.Invoke((MethodInvoker)delegate () {
                             porcentaje.Text = "Error de conexion";
                         });
-                        
+                        workbook.Close();
+                        fStream.Close();
                         break;
                     }
 
@@ -126,6 +131,8 @@ namespace COMPRAS2
                         this.Invoke((MethodInvoker)delegate () {
                             porcentaje.Text = "Error de sincronizacion";
                         });
+                        workbook.Close();
+                        fStream.Close();
                         break;
                     }
 
@@ -179,39 +186,43 @@ namespace COMPRAS2
                             if (statusmessagePost.statuscode != 201)
                             {
                                 MessageBox.Show("Ocurrio un error durante la migracion en el producto " + n.codigo);
+                                workbook.Close();
+                                fStream.Close();
                                 return;
                             }
                         }
                         else {
                             List<DeviceMigrate> deviceUpdate = JsonConvert.DeserializeObject<List<DeviceMigrate>>(statusmessageD.data);
 
+                            DeviceMigrate devUpd = new DeviceMigrate();
+                            devUpd.id = deviceUpdate[0].id;
 
-                            deviceUpdate[0].compra = (string)worksheet.GetValueRowCol(row, 8);
+                            devUpd.compra = (string)worksheet.GetValueRowCol(row, 8);
                             try
                             {
-                                deviceUpdate[0].costo = int.Parse((string)worksheet.GetValueRowCol(row, 6));
-                                if (deviceUpdate[0].costo == 0)
+                                devUpd.costo = int.Parse((string)worksheet.GetValueRowCol(row, 6));
+                                if (devUpd.costo == 0)
                                 {
-                                    deviceUpdate[0].costo = 1;
+                                    devUpd.costo = 1;
                                 }
                             }
                             catch
                             {
-                                deviceUpdate[0].costo = 1;
+                                devUpd.costo = 1;
                             }
-                           
-                            deviceUpdate[0].descompostura = (string)worksheet.GetValueRowCol(row, 11);
-                            deviceUpdate[0].marca = (string)worksheet.GetValueRowCol(row, 4);
-                            deviceUpdate[0].modelo = (string)worksheet.GetValueRowCol(row, 5);
-                            deviceUpdate[0].producto = (string)worksheet.GetValueRowCol(row, 3);
-                            deviceUpdate[0].observaciones = (string)worksheet.GetValueRowCol(row, 9);
-                            deviceUpdate[0].origen = (string)worksheet.GetValueRowCol(row, 7);
-                            deviceUpdate[0].pertenece = (string)worksheet.GetValueRowCol(row, 10);
-                            deviceUpdate[0].serie = (string)worksheet.GetValueRowCol(row, 1);
-                            deviceUpdate[0].lugarId = 1;
-                            deviceUpdate[0].serie = (string)deviceUpdate[0].serie.Replace('\x22', '\0');
 
-                            string json = JsonConvert.SerializeObject(deviceUpdate[0],
+                            devUpd.descompostura = (string)worksheet.GetValueRowCol(row, 11);
+                            devUpd.marca = (string)worksheet.GetValueRowCol(row, 4);
+                            devUpd.modelo = (string)worksheet.GetValueRowCol(row, 5);
+                            devUpd.producto = (string)worksheet.GetValueRowCol(row, 3);
+                            devUpd.observaciones = (string)worksheet.GetValueRowCol(row, 9);
+                            devUpd.origen = (string)worksheet.GetValueRowCol(row, 7);
+                            devUpd.pertenece = (string)worksheet.GetValueRowCol(row, 10);
+                            devUpd.serie = (string)worksheet.GetValueRowCol(row, 1);
+                            devUpd.lugarId = 1;
+                            devUpd.serie = (string)devUpd.serie.Replace('\x22', '\0');
+
+                            string json = JsonConvert.SerializeObject(devUpd,
                             new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
                             var urlput = HttpMethods.url + "dispositivos";
                             StatusMessage statusmessageput = await HttpMethods.put(urlput, json);
@@ -219,6 +230,8 @@ namespace COMPRAS2
                             if (statusmessageput.statuscode != 200)
                             {
                                 MessageBox.Show("Ocurrio un error durante la migracion en el la actualizacion " + deviceUpdate[0].codigo);
+                                workbook.Close();
+                                fStream.Close();
                                 return;
                             }
                         }
