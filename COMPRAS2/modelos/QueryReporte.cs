@@ -9,6 +9,9 @@ namespace COMPRAS2.modelos
 {
     public class QueryReporte
     {
+        [DefaultValue(0)]
+        public int dispositivoId { get; set; }
+
         [DefaultValue(null)]
         public string producto { get; set; }
 

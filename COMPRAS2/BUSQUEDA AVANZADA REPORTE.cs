@@ -16,6 +16,10 @@ namespace COMPRAS2
     public partial class BUSQUEDA_AVANZADA_REPORTE : Form
     {
         List<Reportes> reporte;
+        List<Devices> devices;
+
+        int iddevice = 0;
+
         public BUSQUEDA_AVANZADA_REPORTE()
         {
             InitializeComponent();
@@ -28,17 +32,63 @@ namespace COMPRAS2
 
         public async void busqueda()
         {          
-            QueryReporte reportequery = new QueryReporte();           
-            
-            if (txtProducto.Text != "")
-            {
-                reportequery.producto = txtProducto.Text;
-            }
+            QueryReporte reportequery = new QueryReporte();
+
+            QueryDevice devicequery = new QueryDevice();
 
             if (txtCodigo.Text != "")
             {
-                reportequery.codigo = txtCodigo.Text;
-            }           
+                devicequery.codigo = txtCodigo.Text;
+                string jsonD = JsonConvert.SerializeObject(devicequery,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                var urlD = HttpMethods.url + "dispositivos/query";
+                StatusMessage statusmessageD = await HttpMethods.Post(urlD, jsonD);
+
+                if (statusmessageD.statuscode == 500)
+                {
+                    MessageBox.Show("Error interno en el servidor");
+                    return;
+                }
+
+                if (statusmessageD.statuscode == 409)
+                {
+                    MessageBox.Show("Ocurrio un conflicto en busqueda de productos");
+                    return;
+                }
+
+                if (statusmessageD.statuscode == 400)
+                {
+                    MessageBox.Show("No hay campos seleccionados a consultar");
+                    return;
+                }
+
+                if (statusmessageD.statuscode == 404)
+                {
+                    MessageBox.Show("producto NO encontrado");
+                    return;
+                }
+
+                if (statusmessageD.statuscode == 200)
+                {
+                    devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessageD.data);
+
+                    if (devices.Count == 0)
+                    {
+                        MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
+                        dgvEmpleado.DataSource = null;
+                        return;
+                    }
+                    iddevice = devices[0].id;
+
+                    reportequery.dispositivoId = iddevice;
+                }
+            }
+
+            if (txtProducto.Text != "")
+            {
+                //reportequery.dispositivoId = txtProducto.Text.ToString();
+            }
+              
 
             string json = JsonConvert.SerializeObject(reportequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
