@@ -10,6 +10,9 @@ namespace COMPRAS2.modelos
     public class QueryReporte
     {
         [DefaultValue(null)]
-        public  string codigo { get; set; }
+        public string producto { get; set; }
+
+        [DefaultValue(null)]
+        public string codigo { get; set; }
     }
 }

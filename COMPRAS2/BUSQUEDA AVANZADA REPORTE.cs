@@ -29,11 +29,11 @@ namespace COMPRAS2
         public async void busqueda()
         {          
             QueryReporte reportequery = new QueryReporte();           
-            /*
-            if (txtNombre.Text != "")
+            
+            if (txtProducto.Text != "")
             {
-                reportequery.nombre = txtNombre.Text;
-            }*/
+                reportequery.producto = txtProducto.Text;
+            }
 
             if (txtCodigo.Text != "")
             {
@@ -42,7 +42,7 @@ namespace COMPRAS2
 
             string json = JsonConvert.SerializeObject(reportequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            var url = HttpMethods.url + "usuarios/query";
+            var url = HttpMethods.url + "reportes/query";
             StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
             if (statusmessage.statuscode == 500)
@@ -88,6 +88,11 @@ namespace COMPRAS2
                 this.dgvEmpleado.Columns["status"].Visible = false;
                 this.dgvEmpleado.Columns["id"].Visible = false;*/
             }
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            busqueda();
         }
     }
 }
