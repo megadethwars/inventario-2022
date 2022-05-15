@@ -56,7 +56,6 @@ namespace COMPRAS2
             this.txtBUSCADOR.Name = "txtBUSCADOR";
             this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
             this.txtBUSCADOR.TabIndex = 32;
-            this.txtBUSCADOR.Text = "Buscar";
             this.txtBUSCADOR.Click += new System.EventHandler(this.txtBUSCADOR_Click);
             // 
             // lblREPORTES

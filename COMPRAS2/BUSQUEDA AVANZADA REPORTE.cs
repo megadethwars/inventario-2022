@@ -75,7 +75,7 @@ namespace COMPRAS2
                     if (devices.Count == 0)
                     {
                         MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
-                        dgvEmpleado.DataSource = null;
+                        dgvReportes.DataSource = null;
                         return;
                     }
                     iddevice = devices[0].id;
@@ -83,12 +83,7 @@ namespace COMPRAS2
                     reportequery.dispositivoId = iddevice;
                 }
             }
-
-            if (txtProducto.Text != "")
-            {
-                //reportequery.dispositivoId = txtProducto.Text.ToString();
-            }
-              
+                                   
 
             string json = JsonConvert.SerializeObject(reportequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
@@ -117,32 +112,54 @@ namespace COMPRAS2
 
             if (statusmessage.statuscode == 200)
             {
-                reporte = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+                List<Reportes> reporte = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+
+                for (int x = 0; x < reporte.Count; x++)
+                {
+                    Devices Dispositivos = reporte[x].dispositivo;
+                    reporte[x].dispositivoActual = Dispositivos.producto;
+
+                    User Usuarios = reporte[x].usuario;
+                    reporte[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
+
+                    User UsuariosA = reporte[x].usuario;
+                    reporte[x].UserActualA = UsuariosA.apellidoPaterno;
+
+                    Devices Codigos = reporte[x].dispositivo;
+                    reporte[x].dispositivoCodigo = Codigos.codigo;
+
+                }
 
                 if (reporte.Count == 0)
                 {
                     MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
-                    dgvEmpleado.DataSource = null;
+                    dgvReportes.DataSource = null;
                     return;
                 }               
 
-                dgvEmpleado.DataSource = reporte;
-                /*
-                this.dgvEmpleado.Columns["correo"].Visible = false;
-                this.dgvEmpleado.Columns["rolId"].Visible = false;
-                this.dgvEmpleado.Columns["foto"].Visible = false;
-                this.dgvEmpleado.Columns["statusId"].Visible = false;
-                this.dgvEmpleado.Columns["password"].Visible = false;
-                this.dgvEmpleado.Columns["rol"].Visible = false;
-                this.dgvEmpleado.Columns["statusUserDescripcion"].Visible = false;
-                this.dgvEmpleado.Columns["status"].Visible = false;
-                this.dgvEmpleado.Columns["id"].Visible = false;*/
+                dgvReportes.DataSource = reporte;
+
+                this.dgvReportes.Columns["foto"].Visible = false;
+                this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
+                this.dgvReportes.Columns["UserActualA"].Visible = false;
+                this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
+                this.dgvReportes.Columns["dispositivoId"].Visible = false;
+                this.dgvReportes.Columns["Id"].Visible = false;
+                this.dgvReportes.Columns["usuarioId"].Visible = false;
+                this.dgvReportes.Columns["dispositivo"].Visible = false;
+                this.dgvReportes.Columns["usuario"].Visible = false;
+                this.dgvReportes.Columns["comentarios"].Visible = false;
             }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             busqueda();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

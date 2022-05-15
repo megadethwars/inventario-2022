@@ -233,7 +233,7 @@ namespace COMPRAS2
                 }
                 
                 dgvInventario.DataSource = devices;
-                
+
                 this.dgvInventario.Columns["lugar"].Visible = false;
                 this.dgvInventario.Columns["lugarId"].Visible = false;
                 this.dgvInventario.Columns["status"].Visible = false;
@@ -248,6 +248,10 @@ namespace COMPRAS2
                 this.dgvInventario.Columns["Proveedor"].Visible = false;
                 this.dgvInventario.Columns["Costo"].Visible = false;
                 this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
+                this.dgvInventario.Columns["id"].Visible = false;
+                this.dgvInventario.Columns["accesorios"].Visible = false;
+                this.dgvInventario.Columns["serie"].Visible = false;
+                this.dgvInventario.Columns["fechaAlta"].Visible = false;
             }
         }
 

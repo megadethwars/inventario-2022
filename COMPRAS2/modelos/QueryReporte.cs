@@ -13,6 +13,12 @@ namespace COMPRAS2.modelos
         public int dispositivoId { get; set; }
 
         [DefaultValue(null)]
+        public string dispositivoActual { get; set; }
+
+        [DefaultValue(null)]
+        public string UserActual { get; set; }
+
+        [DefaultValue(null)]
         public string producto { get; set; }
 
         [DefaultValue(null)]
