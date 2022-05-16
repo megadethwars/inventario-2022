@@ -23,5 +23,11 @@ namespace COMPRAS2.modelos
 
         [DefaultValue(null)]
         public string codigo { get; set; }
+
+        [DefaultValue(null)]
+        public String fechaAltaRangoInicio { get; set; }
+
+        [DefaultValue(null)]
+        public DateTime? fechaUltimaModificacion { get; set; }
     }
 }

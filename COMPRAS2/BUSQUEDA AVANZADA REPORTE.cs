@@ -23,6 +23,7 @@ namespace COMPRAS2
         public BUSQUEDA_AVANZADA_REPORTE()
         {
             InitializeComponent();
+            dtpReporte.CustomFormat = "yyyy-MM-dd";
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -39,51 +40,56 @@ namespace COMPRAS2
             if (txtCodigo.Text != "")
             {
                 devicequery.codigo = txtCodigo.Text;
-                string jsonD = JsonConvert.SerializeObject(devicequery,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                var urlD = HttpMethods.url + "dispositivos/query";
-                StatusMessage statusmessageD = await HttpMethods.Post(urlD, jsonD);
-
-                if (statusmessageD.statuscode == 500)
-                {
-                    MessageBox.Show("Error interno en el servidor");
-                    return;
-                }
-
-                if (statusmessageD.statuscode == 409)
-                {
-                    MessageBox.Show("Ocurrio un conflicto en busqueda de productos");
-                    return;
-                }
-
-                if (statusmessageD.statuscode == 400)
-                {
-                    MessageBox.Show("No hay campos seleccionados a consultar");
-                    return;
-                }
-
-                if (statusmessageD.statuscode == 404)
-                {
-                    MessageBox.Show("producto NO encontrado");
-                    return;
-                }
-
-                if (statusmessageD.statuscode == 200)
-                {
-                    devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessageD.data);
-
-                    if (devices.Count == 0)
-                    {
-                        MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
-                        dgvReportes.DataSource = null;
-                        return;
-                    }
-                    iddevice = devices[0].id;
-
-                    reportequery.dispositivoId = iddevice;
-                }
             }
-                                   
+
+            if (dtpReporte.Text != "")
+            {
+                reportequery.fechaAltaRangoInicio = dtpReporte.Text;
+            }
+
+            string jsonD = JsonConvert.SerializeObject(devicequery,
+            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var urlD = HttpMethods.url + "dispositivos/query";
+            StatusMessage statusmessageD = await HttpMethods.Post(urlD, jsonD);
+
+            if (statusmessageD.statuscode == 500)
+            {
+                MessageBox.Show("Error interno en el servidor");
+                return;
+            }
+
+            if (statusmessageD.statuscode == 409)
+            {
+                MessageBox.Show("Ocurrio un conflicto en busqueda de productos");
+                return;
+            }
+
+            if (statusmessageD.statuscode == 400)
+            {
+                MessageBox.Show("No hay campos seleccionados a consultar");
+                return;
+            }
+
+            if (statusmessageD.statuscode == 404)
+            {
+                MessageBox.Show("producto NO encontrado");
+                return;
+            }
+
+            if (statusmessageD.statuscode == 200)
+            {
+                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessageD.data);
+
+                if (devices.Count == 0)
+                {
+                    MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
+                    dgvReportes.DataSource = null;
+                    return;
+                }
+                iddevice = devices[0].id;
+
+                reportequery.dispositivoId = iddevice;
+            }
 
             string json = JsonConvert.SerializeObject(reportequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
@@ -159,7 +165,24 @@ namespace COMPRAS2
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            dgvReportes.DataSource = null;
+            this.txtCodigo.Text = null;           
+        }
 
+        private void dgvReportes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow cell = dgvReportes.Rows[e.RowIndex];
+                Reportes data = (Reportes)cell.DataBoundItem;
+
+                Navigator.nextPage(new DETALLES_REPORTE(data));
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
     }
 }
