@@ -41,6 +41,7 @@ namespace COMPRAS2
             this.dgvReportes = new System.Windows.Forms.DataGridView();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.dtpReporte = new System.Windows.Forms.DateTimePicker();
+            this.cbReportes = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +123,7 @@ namespace COMPRAS2
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblFecha.Location = new System.Drawing.Point(751, 79);
+            this.lblFecha.Location = new System.Drawing.Point(699, 79);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(66, 32);
             this.lblFecha.TabIndex = 153;
@@ -194,14 +195,35 @@ namespace COMPRAS2
             // 
             this.dtpReporte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpReporte.CalendarFont = new System.Drawing.Font("Knockout 48 Featherweight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpReporte.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dtpReporte.CalendarForeColor = System.Drawing.Color.White;
+            this.dtpReporte.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            this.dtpReporte.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(116)))), ((int)(((byte)(158)))));
+            this.dtpReporte.Checked = false;
+            this.dtpReporte.Enabled = false;
+            this.dtpReporte.Font = new System.Drawing.Font("Knockout 48 Featherweight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpReporte.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpReporte.Location = new System.Drawing.Point(757, 124);
+            this.dtpReporte.Location = new System.Drawing.Point(910, 119);
             this.dtpReporte.Name = "dtpReporte";
-            this.dtpReporte.Size = new System.Drawing.Size(285, 26);
+            this.dtpReporte.Size = new System.Drawing.Size(271, 33);
             this.dtpReporte.TabIndex = 180;
             this.dtpReporte.Value = new System.DateTime(2022, 5, 15, 21, 16, 50, 0);
+            // 
+            // cbReportes
+            // 
+            this.cbReportes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbReportes.AutoSize = true;
+            this.cbReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.cbReportes.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.cbReportes.Location = new System.Drawing.Point(705, 118);
+            this.cbReportes.Name = "cbReportes";
+            this.cbReportes.Size = new System.Drawing.Size(168, 36);
+            this.cbReportes.TabIndex = 181;
+            this.cbReportes.Text = "¿Buscar por fecha?";
+            this.cbReportes.UseVisualStyleBackColor = false;
+            this.cbReportes.CheckedChanged += new System.EventHandler(this.cbReportes_CheckedChanged);
             // 
             // BUSQUEDA_AVANZADA_REPORTE
             // 
@@ -209,6 +231,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.cbReportes);
             this.Controls.Add(this.dtpReporte);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.dgvReportes);
@@ -222,6 +245,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BUSQUEDA_AVANZADA_REPORTE";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.BUSQUEDA_AVANZADA_REPORTE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,5 +262,6 @@ namespace COMPRAS2
         private System.Windows.Forms.DataGridView dgvReportes;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.DateTimePicker dtpReporte;
+        private System.Windows.Forms.CheckBox cbReportes;
     }
 }

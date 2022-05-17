@@ -20,6 +20,8 @@ namespace COMPRAS2
 
         int iddevice = 0;
 
+
+
         public BUSQUEDA_AVANZADA_REPORTE()
         {
             InitializeComponent();
@@ -183,6 +185,30 @@ namespace COMPRAS2
             {
                 return;
             }
+        }
+
+
+
+        private void BUSQUEDA_AVANZADA_REPORTE_Load(object sender, EventArgs e)
+        {
+           
+           if(cbReportes.Checked == true)
+           {
+                dtpReporte.Enabled = true;
+           }
+        }
+
+        private void cbReportes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbReportes.Checked == true)
+            {
+                dtpReporte.Enabled = true;
+            }else
+            {
+                dtpReporte.Enabled = false;
+                //dtpReporte.Value = null;
+            }
+
         }
     }
 }
