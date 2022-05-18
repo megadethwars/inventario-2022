@@ -44,10 +44,20 @@ namespace COMPRAS2
                 devicequery.codigo = txtCodigo.Text;
             }
 
-            if (dtpReporte.Text != "")
+            if (cbReportes.Checked == true)
             {
-                reportequery.fechaAltaRangoInicio = dtpReporte.Text;
+                dtpReporte.Enabled = true;
+                if (dtpReporte.Text != "")
+                {
+                    reportequery.fechaAltaRangoInicio = dtpReporte.Text;
+                }
             }
+            else
+            {
+                dtpReporte.Enabled = false;
+                
+            }
+            
 
             string jsonD = JsonConvert.SerializeObject(devicequery,
             new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
@@ -68,8 +78,7 @@ namespace COMPRAS2
 
             if (statusmessageD.statuscode == 400)
             {
-                MessageBox.Show("No hay campos seleccionados a consultar");
-                return;
+               
             }
 
             if (statusmessageD.statuscode == 404)
@@ -206,9 +215,8 @@ namespace COMPRAS2
             }else
             {
                 dtpReporte.Enabled = false;
-                //dtpReporte.Value = null;
+                
             }
-
         }
     }
 }
