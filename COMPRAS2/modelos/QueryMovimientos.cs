@@ -17,15 +17,15 @@ namespace COMPRAS2.modelos
 
         [DefaultValue(0)]
         public int LugarId { get; set; }
-        /*
-        [DefaultValue(null)]
-        public DateTime? fechaAlta { get; set; }
-        */
+        
         [DefaultValue(null)]
         public string idMovimiento { get; set; }
 
         [DefaultValue(0)]
         public int tipoMovId { get; set; }
-  
+
+        [DefaultValue(null)]
+        public String fechaAltaRangoInicio { get; set; }
+
     }
 }

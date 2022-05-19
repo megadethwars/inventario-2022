@@ -185,7 +185,6 @@ namespace COMPRAS2
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             dgvBusquedaHistorial.DataSource = null;
-            this.txtMovimiento.Text = null;
             this.txtCodigo.Text = null;
             this.cbLugares.Text = null;
             this.cbUsuario.Text = null;
@@ -204,55 +203,65 @@ namespace COMPRAS2
 
             if (txtCodigo.Text != "")
             {
-                devicequery.codigo = txtCodigo.Text;
-                string jsonD = JsonConvert.SerializeObject(devicequery,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                var urlD = HttpMethods.url + "dispositivos/query";
-                StatusMessage statusmessageD = await HttpMethods.Post(urlD, jsonD);
-
-                if (statusmessageD.statuscode == 500)
-                {
-                    MessageBox.Show("Error interno en el servidor");
-                    return;
-                }
-
-                if (statusmessageD.statuscode == 409)
-                {
-                    MessageBox.Show("Ocurrio un conflicto en busqueda de productos");
-                    return;
-                }
-
-                if (statusmessageD.statuscode == 400)
-                {
-                    MessageBox.Show("No hay campos seleccionados a consultar");
-                    return;
-                }
-
-                if (statusmessageD.statuscode == 404)
-                {
-                    MessageBox.Show("producto NO encontrado");
-                    return;
-                }
-
-                if (statusmessageD.statuscode == 200)
-                {
-                    devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessageD.data);
-
-                    if (devices.Count == 0)
-                    {
-                        MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
-                        dgvBusquedaHistorial.DataSource = null;
-                        return;
-                    }
-                    iddevice = devices[0].id;
-
-                    hist.dispositivoId = iddevice;
-                }
+                devicequery.codigo = txtCodigo.Text;              
             }
 
-            if (txtMovimiento.Text != "")
+            if (cbhHistorial.Checked == true)
             {
-                hist.idMovimiento = txtMovimiento.Text;
+                dtpHistorial.Enabled = true;
+                if (cbhHistorial.Text != "")
+                {
+                    hist.fechaAltaRangoInicio = dtpHistorial.Text;
+                }
+            }
+            else
+            {
+                dtpHistorial.Enabled = false;
+
+            }
+
+            string jsonD = JsonConvert.SerializeObject(devicequery,
+            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var urlD = HttpMethods.url + "dispositivos/query";
+            StatusMessage statusmessageD = await HttpMethods.Post(urlD, jsonD);
+
+            if (statusmessageD.statuscode == 500)
+            {
+                MessageBox.Show("Error interno en el servidor");
+                return;
+            }
+
+            if (statusmessageD.statuscode == 409)
+            {
+                MessageBox.Show("Ocurrio un conflicto en busqueda de productos");
+                return;
+            }
+
+            if (statusmessageD.statuscode == 400)
+            {/*
+                MessageBox.Show("No hay campos seleccionados a consultar");
+                return;*/
+            }
+
+            if (statusmessageD.statuscode == 404)
+            {
+                MessageBox.Show("producto NO encontrado");
+                return;
+            }
+
+            if (statusmessageD.statuscode == 200)
+            {
+                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessageD.data);
+
+                if (devices.Count == 0)
+                {
+                    MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
+                    dgvBusquedaHistorial.DataSource = null;
+                    return;
+                }
+                iddevice = devices[0].id;
+
+                hist.dispositivoId = iddevice;
             }
 
             if (cbUsuario.SelectedItem != null)
@@ -283,11 +292,10 @@ namespace COMPRAS2
                 {
                     hist.tipoMovId = idtipomov;
                 }
-            }
-
+            }         
 
             string json = JsonConvert.SerializeObject(hist,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
             var url = HttpMethods.url + "movimientos/query";
             StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
@@ -340,65 +348,26 @@ namespace COMPRAS2
                 this.dgvBusquedaHistorial.Columns["dispositivo"].Visible = false;
                 this.dgvBusquedaHistorial.Columns["usuario"].Visible = false;
                 this.dgvBusquedaHistorial.Columns["tipoMovimiento"].Visible = false;
+                this.dgvBusquedaHistorial.Columns["idMovimiento"].Visible = false;
             }
-
-
-            /*if (txtCodigo.Text != "") {
-                devicequery.codigo = txtCodigo.Text;
-                string json = JsonConvert.SerializeObject(devicequery,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                var url = HttpMethods.url + "dispositivos/query";
-                StatusMessage statusmessage = await HttpMethods.Post(url, json);
-
-                if (statusmessage.statuscode == 500)
-                {
-                    MessageBox.Show("Error interno en el servidor");
-                    return;
-                }
-
-                if (statusmessage.statuscode == 409)
-                {
-                    MessageBox.Show("Ocurrio un conflicto en busqueda de productos");
-                    return;
-                }
-
-                if (statusmessage.statuscode == 400)
-                {
-                    MessageBox.Show("No hay campos seleccionados a consultar");
-                    return;
-                }
-
-                if (statusmessage.statuscode == 404)
-                {
-                    MessageBox.Show("producto NO encontrado");
-                    return;
-                }
-
-                if (statusmessage.statuscode == 200)
-                {
-                    devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-                    if (devices.Count == 0)
-                    {
-                        MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
-                        dgvBusquedaHistorial.DataSource = null;
-                        return;
-                    }
-                    iddevice = devices[0].id;
-
-                    hist.dispositivoId = iddevice;
-
-                    dgvBusquedaHistorial.DataSource = devices;
-
-                }
-
-            }*/
-
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             busqueda();
         }
+
+        private void cbhHistorial_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbhHistorial.Checked == true)
+            {
+                dtpHistorial.Enabled = true;
+            }
+            else
+            {
+                dtpHistorial.Enabled = false;
+
+            }
+        }       
     }
 }
