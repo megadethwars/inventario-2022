@@ -26,6 +26,7 @@ namespace COMPRAS2
         public BUSQUEDA_AVANZADA__HISTORIAL()
         {
             InitializeComponent();
+            dtpHistorial.CustomFormat = "yyyy-MM-dd";
             listaUsuarios = new List<Tuple<int, string>>();
             listaLugares = new List<Tuple<int, string>>();
             listaTipoMov = new List<Tuple<int, string>>();
