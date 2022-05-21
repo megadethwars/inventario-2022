@@ -29,6 +29,7 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MENU));
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.PANELCONTENEDOR = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -109,6 +110,7 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1384, 861);
             this.Controls.Add(this.PANELCONTENEDOR);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1400, 900);
             this.Name = "MENU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
