@@ -233,13 +233,14 @@ namespace COMPRAS2
 
 
                 MemoryStream stream = new MemoryStream();
-
-                //Save the document.
+                //createdate
+                //Save the document
+                var dateString = DateTime.Now.ToString("yyyy-MM-dd");
                 string save2 = hd + movimientos.idMovimiento + ".pdf";
                 //document.Save(save2);
                 document.Save(stream);
 
-                SaveStreamAsFileNAME("C:/Inventarios", document, save2);
+                SaveStreamAsFileNAME("C:/Inventarios/"+dateString, document, save2);
                
                 //Close the document.
                 document.Close(true);
