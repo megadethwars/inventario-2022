@@ -151,7 +151,7 @@ namespace COMPRAS2
 
             try
             {
-                var url = HttpMethods.url + "dispositivos?limit=10000";
+                var url = HttpMethods.url + "dispositivos?limit=100";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
                 if (statusmessage.statuscode != 200)
