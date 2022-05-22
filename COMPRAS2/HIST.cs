@@ -86,6 +86,7 @@ namespace COMPRAS2
                 this.dgvHistorial.Columns["dispositivo"].Visible = false;
                 this.dgvHistorial.Columns["usuario"].Visible = false;
                 this.dgvHistorial.Columns["tipoMovimiento"].Visible = false;
+                this.dgvHistorial.Columns["idMovimiento"].Visible = false;
             }
             catch
             {
@@ -134,6 +135,22 @@ namespace COMPRAS2
             this.dgvHistorial.Columns["dispositivo"].Visible = false;
             this.dgvHistorial.Columns["usuario"].Visible = false;
             this.dgvHistorial.Columns["tipoMovimiento"].Visible = false;
+        }
+
+        public void dgvHistorial_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow cell = dgvHistorial.Rows[e.RowIndex];
+                Movimientos data = (Movimientos)cell.DataBoundItem;
+
+                //Navigator.nextPage(new DETALLES_HISTORIAL(data));
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
         }
     }
 }

@@ -60,6 +60,7 @@ namespace COMPRAS2
                 this.dgvUsuarios.Columns["statusUserDescripcion"].Visible = false;
                 this.dgvUsuarios.Columns["status"].Visible = false;
                 this.dgvUsuarios.Columns["id"].Visible = false;
+                
 
                 return 0;
             }
@@ -126,9 +127,6 @@ namespace COMPRAS2
             Navigator.nextPage(new BUSQUEDA_AVANZADA_EMPLEADO(devices));
         }
 
-        private void txtBUSCADOR_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }

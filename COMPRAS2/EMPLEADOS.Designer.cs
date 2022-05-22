@@ -33,14 +33,10 @@ namespace COMPRAS2
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bTNBack = new System.Windows.Forms.Button();
             this.lblEMPLEADOS = new System.Windows.Forms.Label();
-            this.btBUSCADOR = new System.Windows.Forms.Button();
-            this.txtBUSCADOR = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btAgregarEmp = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBusquedaAvanzada = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,47 +68,6 @@ namespace COMPRAS2
             this.lblEMPLEADOS.TabIndex = 35;
             this.lblEMPLEADOS.Text = "EMPLEADOS";
             // 
-            // btBUSCADOR
-            // 
-            this.btBUSCADOR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            this.btBUSCADOR.BackgroundImage = global::COMPRAS2.Properties.Resources.lupa;
-            this.btBUSCADOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btBUSCADOR.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btBUSCADOR.FlatAppearance.BorderSize = 0;
-            this.btBUSCADOR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btBUSCADOR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBUSCADOR.Location = new System.Drawing.Point(144, 108);
-            this.btBUSCADOR.Name = "btBUSCADOR";
-            this.btBUSCADOR.Size = new System.Drawing.Size(31, 25);
-            this.btBUSCADOR.TabIndex = 38;
-            this.btBUSCADOR.UseVisualStyleBackColor = false;
-            // 
-            // txtBUSCADOR
-            // 
-            this.txtBUSCADOR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBUSCADOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(79)))));
-            this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBUSCADOR.ForeColor = System.Drawing.Color.White;
-            this.txtBUSCADOR.Location = new System.Drawing.Point(181, 109);
-            this.txtBUSCADOR.Name = "txtBUSCADOR";
-            this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
-            this.txtBUSCADOR.TabIndex = 37;
-            this.txtBUSCADOR.Click += new System.EventHandler(this.txtBUSCADOR_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pictureBox2.Location = new System.Drawing.Point(123, 99);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1036, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            // 
             // dgvUsuarios
             // 
             this.dgvUsuarios.AllowUserToOrderColumns = true;
@@ -137,7 +92,7 @@ namespace COMPRAS2
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
             this.dgvUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvUsuarios.Location = new System.Drawing.Point(20, 204);
+            this.dgvUsuarios.Location = new System.Drawing.Point(20, 146);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvUsuarios.RowHeadersVisible = false;
@@ -149,7 +104,7 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1235, 536);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1235, 594);
             this.dgvUsuarios.TabIndex = 40;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             this.dgvUsuarios.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellMouseEnter);
@@ -209,7 +164,7 @@ namespace COMPRAS2
             this.btnBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusquedaAvanzada.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBusquedaAvanzada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnBusquedaAvanzada.Location = new System.Drawing.Point(525, 152);
+            this.btnBusquedaAvanzada.Location = new System.Drawing.Point(522, 87);
             this.btnBusquedaAvanzada.MaximumSize = new System.Drawing.Size(210, 40);
             this.btnBusquedaAvanzada.Name = "btnBusquedaAvanzada";
             this.btnBusquedaAvanzada.Size = new System.Drawing.Size(210, 40);
@@ -228,16 +183,12 @@ namespace COMPRAS2
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btAgregarEmp);
             this.Controls.Add(this.dgvUsuarios);
-            this.Controls.Add(this.btBUSCADOR);
-            this.Controls.Add(this.txtBUSCADOR);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblEMPLEADOS);
             this.Controls.Add(this.bTNBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EMPLEADOS";
             this.Text = "EMPLEADOS";
             this.Load += new System.EventHandler(this.EMPLEADOS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -247,9 +198,6 @@ namespace COMPRAS2
         #endregion
         private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Label lblEMPLEADOS;
-        private System.Windows.Forms.Button btBUSCADOR;
-        private System.Windows.Forms.TextBox txtBUSCADOR;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Button btAgregarEmp;
         private System.Windows.Forms.Button btnActualizar;

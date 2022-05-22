@@ -155,6 +155,7 @@ namespace COMPRAS2
             this.dgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHistorial.ColumnHeadersHeight = 45;
             this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvHistorial.EnableHeadersVisualStyles = false;
             this.dgvHistorial.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvHistorial.Location = new System.Drawing.Point(20, 214);
@@ -171,6 +172,7 @@ namespace COMPRAS2
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorial.Size = new System.Drawing.Size(1230, 561);
             this.dgvHistorial.TabIndex = 45;
+            this.dgvHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellClick);
             // 
             // btnActualizar
             // 

@@ -489,7 +489,7 @@ namespace COMPRAS2
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            MENU menu = new MENU();
+            
             
         }
     }

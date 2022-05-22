@@ -154,5 +154,6 @@ namespace COMPRAS2
         private System.Windows.Forms.DataGridView dgvCarritoSalida;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCarritoDeSalida;
+        private System.Windows.Forms.TextBox PASSWORD;
     }
 }

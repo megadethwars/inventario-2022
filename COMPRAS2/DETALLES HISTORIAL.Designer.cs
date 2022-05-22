@@ -32,7 +32,7 @@ namespace COMPRAS2
             this.lblDETALLES = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblIdMovimiento = new System.Windows.Forms.Label();
             this.lblDCodigo = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -47,16 +47,18 @@ namespace COMPRAS2
             this.lblDTipoDeMovimiento = new System.Windows.Forms.Label();
             this.lblDUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblIdMovimiento = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.lblDIdMovimiento = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lblLugar = new System.Windows.Forms.Label();
+            this.lblDLugar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDETALLES
@@ -85,6 +87,7 @@ namespace COMPRAS2
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 35;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pictureBox6
             // 
@@ -100,19 +103,19 @@ namespace COMPRAS2
             this.pictureBox6.TabIndex = 153;
             this.pictureBox6.TabStop = false;
             // 
-            // lblCodigo
+            // lblIdMovimiento
             // 
-            this.lblCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblIdMovimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCodigo.Location = new System.Drawing.Point(378, 404);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(144, 20);
-            this.lblCodigo.TabIndex = 152;
-            this.lblCodigo.Text = "Estado del Usuario";
+            this.lblIdMovimiento.AutoSize = true;
+            this.lblIdMovimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblIdMovimiento.Location = new System.Drawing.Point(378, 404);
+            this.lblIdMovimiento.Name = "lblIdMovimiento";
+            this.lblIdMovimiento.Size = new System.Drawing.Size(141, 20);
+            this.lblIdMovimiento.TabIndex = 152;
+            this.lblIdMovimiento.Text = "ID de Moviemiento";
             // 
             // lblDCodigo
             // 
@@ -122,7 +125,7 @@ namespace COMPRAS2
             this.lblDCodigo.AutoSize = true;
             this.lblDCodigo.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDCodigo.Location = new System.Drawing.Point(378, 359);
+            this.lblDCodigo.Location = new System.Drawing.Point(376, 125);
             this.lblDCodigo.Name = "lblDCodigo";
             this.lblDCodigo.Size = new System.Drawing.Size(74, 32);
             this.lblDCodigo.TabIndex = 151;
@@ -194,9 +197,9 @@ namespace COMPRAS2
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblProducto.Location = new System.Drawing.Point(378, 324);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(120, 20);
+            this.lblProducto.Size = new System.Drawing.Size(73, 20);
             this.lblProducto.TabIndex = 146;
-            this.lblProducto.Text = "Tipo de Usuario";
+            this.lblProducto.Text = "Producto";
             // 
             // lblFecha
             // 
@@ -209,9 +212,9 @@ namespace COMPRAS2
             this.lblFecha.Location = new System.Drawing.Point(378, 564);
             this.lblFecha.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(71, 20);
+            this.lblFecha.Size = new System.Drawing.Size(54, 20);
             this.lblFecha.TabIndex = 145;
-            this.lblFecha.Text = "Telefono";
+            this.lblFecha.Text = "Fecha";
             // 
             // lblTipoDeMovimiento
             // 
@@ -223,9 +226,9 @@ namespace COMPRAS2
             this.lblTipoDeMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblTipoDeMovimiento.Location = new System.Drawing.Point(378, 484);
             this.lblTipoDeMovimiento.Name = "lblTipoDeMovimiento";
-            this.lblTipoDeMovimiento.Size = new System.Drawing.Size(57, 20);
+            this.lblTipoDeMovimiento.Size = new System.Drawing.Size(145, 20);
             this.lblTipoDeMovimiento.TabIndex = 144;
-            this.lblTipoDeMovimiento.Text = "Correo";
+            this.lblTipoDeMovimiento.Text = "Tipo de Movimiento";
             // 
             // lblUsuario
             // 
@@ -237,9 +240,9 @@ namespace COMPRAS2
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblUsuario.Location = new System.Drawing.Point(380, 244);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(134, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(64, 20);
             this.lblUsuario.TabIndex = 143;
-            this.lblUsuario.Text = "Fecha de Ingreso";
+            this.lblUsuario.Text = "Usuario";
             // 
             // lblDProducto
             // 
@@ -311,19 +314,19 @@ namespace COMPRAS2
             this.pictureBox1.TabIndex = 138;
             this.pictureBox1.TabStop = false;
             // 
-            // lblIdMovimiento
+            // lblCodigo
             // 
-            this.lblIdMovimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblIdMovimiento.AutoSize = true;
-            this.lblIdMovimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblIdMovimiento.Location = new System.Drawing.Point(378, 164);
-            this.lblIdMovimiento.Name = "lblIdMovimiento";
-            this.lblIdMovimiento.Size = new System.Drawing.Size(166, 20);
-            this.lblIdMovimiento.TabIndex = 137;
-            this.lblIdMovimiento.Text = "Nombre del Empleado";
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblCodigo.Location = new System.Drawing.Point(378, 164);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
+            this.lblCodigo.TabIndex = 137;
+            this.lblCodigo.Text = "Codigo";
             // 
             // lblDIdMovimiento
             // 
@@ -333,51 +336,54 @@ namespace COMPRAS2
             this.lblDIdMovimiento.AutoSize = true;
             this.lblDIdMovimiento.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDIdMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDIdMovimiento.Location = new System.Drawing.Point(378, 119);
+            this.lblDIdMovimiento.Location = new System.Drawing.Point(378, 359);
             this.lblDIdMovimiento.Name = "lblDIdMovimiento";
             this.lblDIdMovimiento.Size = new System.Drawing.Size(154, 32);
             this.lblDIdMovimiento.TabIndex = 136;
             this.lblDIdMovimiento.Text = "ID DE MOVIMIENTO";
             // 
-            // btnEditar
+            // pictureBox7
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEditar.Location = new System.Drawing.Point(18, 793);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(183, 39);
-            this.btnEditar.TabIndex = 155;
-            this.btnEditar.Text = "EDITAR EMPLEADOS";
-            this.btnEditar.UseVisualStyleBackColor = false;
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox7.Location = new System.Drawing.Point(378, 597);
+            this.pictureBox7.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(500, 3);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 158;
+            this.pictureBox7.TabStop = false;
             // 
-            // btnEliminar
+            // lblLugar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEliminar.Location = new System.Drawing.Point(224, 793);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(160, 39);
-            this.btnEliminar.TabIndex = 154;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.lblLugar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLugar.AutoSize = true;
+            this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblLugar.Location = new System.Drawing.Point(380, 644);
+            this.lblLugar.MaximumSize = new System.Drawing.Size(500, 0);
+            this.lblLugar.Name = "lblLugar";
+            this.lblLugar.Size = new System.Drawing.Size(50, 20);
+            this.lblLugar.TabIndex = 157;
+            this.lblLugar.Text = "Lugar";
+            // 
+            // lblDLugar
+            // 
+            this.lblDLugar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDLugar.AutoSize = true;
+            this.lblDLugar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDLugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblDLugar.Location = new System.Drawing.Point(378, 597);
+            this.lblDLugar.Name = "lblDLugar";
+            this.lblDLugar.Size = new System.Drawing.Size(66, 32);
+            this.lblDLugar.TabIndex = 156;
+            this.lblDLugar.Text = "LUGAR:";
             // 
             // DETALLES_HISTORIAL
             // 
@@ -385,10 +391,11 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.lblLugar);
+            this.Controls.Add(this.lblDLugar);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.lblIdMovimiento);
             this.Controls.Add(this.lblDCodigo);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -403,7 +410,7 @@ namespace COMPRAS2
             this.Controls.Add(this.lblDTipoDeMovimiento);
             this.Controls.Add(this.lblDUsuario);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblIdMovimiento);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblDIdMovimiento);
             this.Controls.Add(this.lblDETALLES);
             this.Controls.Add(this.btnBack);
@@ -416,6 +423,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,7 +434,7 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblDETALLES;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblIdMovimiento;
         private System.Windows.Forms.Label lblDCodigo;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -441,9 +449,10 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblDTipoDeMovimiento;
         private System.Windows.Forms.Label lblDUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblIdMovimiento;
+        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblDIdMovimiento;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label lblLugar;
+        private System.Windows.Forms.Label lblDLugar;
     }
 }
