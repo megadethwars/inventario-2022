@@ -72,7 +72,7 @@ namespace COMPRAS2
             {
                 devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-                if (devices[0].cantidad == 0)
+                if (devices.Count == 0)
                 {
                     MessageBox.Show("No hay dispositivos en stock, cantidad Insuficiente");
                     return;
@@ -97,7 +97,11 @@ namespace COMPRAS2
             movement.dispositivoId = device.id;
             movement.dispositivo = device;                        
             movement.tipoMovId = 1;
-
+            bool deviceExist = movimientos.Any(x => x.dispositivoId == device.id && x.dispositivoId == device.id);
+            if (deviceExist) {
+                MessageBox.Show("el producto ya existe en la lista");
+                return;
+            }
             movimientos.Add(movement);           
         }
         
