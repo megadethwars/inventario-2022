@@ -20,6 +20,7 @@ namespace COMPRAS2
         public HIST()
         {
             InitializeComponent();
+            moveslist = new List<Movimientos>();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,7 +52,7 @@ namespace COMPRAS2
         {
             try 
             {
-                var url = HttpMethods.url + "movimientos";
+                var url = HttpMethods.url + "movimientos?limit=100";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
                 if (statusmessage.statuscode != 200)
@@ -103,7 +104,7 @@ namespace COMPRAS2
         {
             dgvHistorial.DataSource = null;
 
-            var url = HttpMethods.url + "movimientos";
+            var url = HttpMethods.url + "movimientos?limit=100";
             StatusMessage statusmessage = await HttpMethods.get(url);
 
             if (statusmessage.statuscode != 200)
