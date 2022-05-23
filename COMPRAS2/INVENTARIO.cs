@@ -219,9 +219,7 @@ namespace COMPRAS2
         private async void busquedaNormal()
         {
             try
-            {
-                
-             
+            {           
                 deviceslist.Clear();
 
                 var url = HttpMethods.url + "dispositivos/filter/"+txtBUSCADOR.Text+"?limit=30";

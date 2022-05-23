@@ -417,6 +417,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DETALLES_HISTORIAL";
             this.Text = "DETALLES_HISTORIAL";
+            this.Load += new System.EventHandler(this.DETALLES_HISTORIAL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

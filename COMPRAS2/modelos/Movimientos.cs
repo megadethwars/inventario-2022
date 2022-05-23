@@ -50,7 +50,12 @@ namespace COMPRAS2.modelos
         public Devices dispositivo { get; set; }
 
 
-        
+        [DefaultValue(null)]
+        public string Lugar_Actual { get; set; }
+
+        [DefaultValue(null)]
+        public Lugares lugar { get; set; }
+
 
         [DefaultValue(0)]
         public int cantidad_Actual { get; set; }

@@ -66,7 +66,7 @@ namespace COMPRAS2
             this.PANELCONTENEDOR.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PANELCONTENEDOR.Location = new System.Drawing.Point(105, 0);
             this.PANELCONTENEDOR.Name = "PANELCONTENEDOR";
-            this.PANELCONTENEDOR.Size = new System.Drawing.Size(1279, 861);
+            this.PANELCONTENEDOR.Size = new System.Drawing.Size(1479, 861);
             this.PANELCONTENEDOR.TabIndex = 1;
             this.PANELCONTENEDOR.Paint += new System.Windows.Forms.PaintEventHandler(this.PANELCONTENEDOR_Paint);
             // 
@@ -107,7 +107,7 @@ namespace COMPRAS2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 861);
+            this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.PANELCONTENEDOR);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
