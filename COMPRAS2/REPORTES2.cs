@@ -15,9 +15,11 @@ namespace COMPRAS2
 {
     public partial class REPORTES2 : Form
     {
+        List<Reportes> reporteslist;
         public REPORTES2()
         {
             InitializeComponent();
+            reporteslist = new List<Reportes>();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -122,9 +124,7 @@ namespace COMPRAS2
                 reportes[x].UserActualA = Usuarios.apellidoPaterno;
                 
                 Devices Codigos = reportes[x].dispositivo;
-                reportes[x].dispositivoCodigo = Codigos.codigo;
-
-                
+                reportes[x].dispositivoCodigo = Codigos.codigo;                
             }
 
             dgvReportes.DataSource = reportes;
@@ -153,6 +153,60 @@ namespace COMPRAS2
         private void txtBUSCADOR_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private async void busquedaNormal()
+        {
+            try
+            {
+                reporteslist.Clear();
+
+                var url = HttpMethods.url + "reportes/filter/" + txtBUSCADOR.Text + "?limit=30";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return;
+                }
+
+                List<Reportes> reportes = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+
+                for (int x = 0; x < reportes.Count; x++)
+                {
+                    Devices Dispositivos = reportes[x].dispositivo;
+                    reportes[x].dispositivoActual = Dispositivos.producto;
+
+                    User Usuarios = reportes[x].usuario;
+                    reportes[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
+
+                    User UsuariosA = reportes[x].usuario;
+                    reportes[x].UserActualA = Usuarios.apellidoPaterno;
+
+                    Devices Codigos = reportes[x].dispositivo;
+                    reportes[x].dispositivoCodigo = Codigos.codigo;
+                }
+
+                dgvReportes.DataSource = reportes;
+                this.dgvReportes.Columns["foto"].Visible = false;
+                this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
+                this.dgvReportes.Columns["UserActualA"].Visible = false;
+                this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
+                this.dgvReportes.Columns["dispositivoId"].Visible = false;
+                this.dgvReportes.Columns["Id"].Visible = false;
+                this.dgvReportes.Columns["usuarioId"].Visible = false;
+                this.dgvReportes.Columns["dispositivo"].Visible = false;
+                this.dgvReportes.Columns["usuario"].Visible = false;
+                this.dgvReportes.Columns["comentarios"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+            }
+        }
+
+        private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
+        {
+            busquedaNormal();
         }
     }
 }

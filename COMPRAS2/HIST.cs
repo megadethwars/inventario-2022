@@ -67,7 +67,7 @@ namespace COMPRAS2
                     Devices dispositivo = hist[x].dispositivo;
                     hist[x].dispositivo_Actual = dispositivo.producto;
                     hist[x].codigo_Actual = dispositivo.codigo;
-
+                  
                     Lugares lugar = hist[x].lugar;
                     hist[x].Lugar_Actual = lugar.lugar;
 
@@ -228,5 +228,7 @@ namespace COMPRAS2
         {
             busquedaNormal();
         }
+
+        
     }
 }
