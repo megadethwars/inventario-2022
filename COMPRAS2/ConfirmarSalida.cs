@@ -275,14 +275,18 @@ namespace COMPRAS2
             textBox1.TextAlign = HorizontalAlignment.Center;
         }
 
-        private void tbpass_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            
-        }
-
+        
         private void tbpass_Click(object sender, EventArgs e)
         {
             tbpass.UseSystemPasswordChar = true;
+        }
+
+        private void tbUsuario_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Tab)
+            {
+                tbpass.UseSystemPasswordChar = true;
+            }
         }
     }
 }

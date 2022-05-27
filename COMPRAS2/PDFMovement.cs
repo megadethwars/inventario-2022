@@ -30,8 +30,9 @@ namespace COMPRAS2
         MemoryStream streamPDF;
         public PDFMovement(string idSalida)
         {
+            
             InitializeComponent();
-
+            this.Dock = DockStyle.Fill;
             streamPDF = new MemoryStream();
             IdSalida = idSalida;
 
@@ -41,10 +42,9 @@ namespace COMPRAS2
         }
 
         private async void PDFMovement_Load(object sender, EventArgs e)
-        {
-            await MainTask();
+        {            
+            await MainTask();            
         }
-
 
         public async Task InitPDFAsync(string idSalida)
         {
@@ -99,13 +99,13 @@ namespace COMPRAS2
                 PdfFont Subtitle = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
                 //Creates a text element to add the invoice number
                 string hd = "ORDEN DE MOVIMIENTO";
-                if (tipomov == 1)
-                {
-                    hd = "ORDEN DE ENTRADA ";
-                }
                 if (tipomov == 2)
                 {
-                    hd = "ORDEN DE SALIDA ";
+                    hd = "ORDEN DE ENTRADA";
+                }
+                if (tipomov == 1)
+                {
+                    hd = "ORDEN DE SALIDA";
                 }
 
                 PdfTextElement subtitelement = new PdfTextElement(hd, Subtitle);
@@ -253,24 +253,19 @@ namespace COMPRAS2
                 bool res = SendSTMPT(bytes, correo);
 
 
-                if (tipomov == 1)
+                if (tipomov == 2)
                 {
                     hd = "OrdendeEntrada";
                 }
-                if (tipomov == 2)
+                if (tipomov == 1)
                 {
                     hd = "OrdendeSalida";
                 }
 
                 string save = hd + movimientos.idMovimiento+".pdf";
+              
+                Process.Start("C:/Inventarios/"+dateString+"/" +save2);
 
-                Process.Start("C:/Inventarios/"+ save2);
-
-                //System.Diagnostics.Process.Start(@ class="hljs-string">"c:/myPDF.pdf");
-
-                //string pdfPath = Path.Combine(Application.StartupPath, "archivo.pdf");
-
-                //Process.Start(pdfPath);
                 
 
                 return true;

@@ -178,7 +178,12 @@ namespace COMPRAS2
             movement.dispositivoId = device.id;
             movement.dispositivo = device;
             movement.tipoMovId = 2;
-
+            bool deviceExist = movimientos.Any(x => x.dispositivoId == device.id && x.dispositivoId == device.id);
+            if (deviceExist)
+            {
+                MessageBox.Show("el producto ya existe en la lista");
+                return;
+            }
             movimientos.Add(movement);
         }
 

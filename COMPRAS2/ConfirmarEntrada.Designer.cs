@@ -39,19 +39,23 @@ namespace COMPRAS2
             this.tbpass = new System.Windows.Forms.TextBox();
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCarritoDeSalida
             // 
             this.lblCarritoDeSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCarritoDeSalida.AutoSize = true;
-            this.lblCarritoDeSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarritoDeSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarritoDeSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCarritoDeSalida.Location = new System.Drawing.Point(560, 30);
+            this.lblCarritoDeSalida.Location = new System.Drawing.Point(570, 46);
             this.lblCarritoDeSalida.Name = "lblCarritoDeSalida";
-            this.lblCarritoDeSalida.Size = new System.Drawing.Size(403, 39);
+            this.lblCarritoDeSalida.Size = new System.Drawing.Size(219, 42);
             this.lblCarritoDeSalida.TabIndex = 70;
             this.lblCarritoDeSalida.Text = "CARRITO DE ENTRADA";
             // 
@@ -105,11 +109,11 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(550, 378);
+            this.label3.Location = new System.Drawing.Point(550, 339);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 31);
+            this.label3.Size = new System.Drawing.Size(117, 32);
             this.label3.TabIndex = 180;
             this.label3.Text = "CONTRASEÑA:";
             // 
@@ -119,11 +123,11 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLugares.AutoSize = true;
-            this.lblLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugares.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblLugares.Location = new System.Drawing.Point(550, 258);
+            this.lblLugares.Location = new System.Drawing.Point(550, 208);
             this.lblLugares.Name = "lblLugares";
-            this.lblLugares.Size = new System.Drawing.Size(147, 31);
+            this.lblLugares.Size = new System.Drawing.Size(83, 32);
             this.lblLugares.TabIndex = 179;
             this.lblLugares.Text = "USUARIO:";
             // 
@@ -136,7 +140,7 @@ namespace COMPRAS2
             this.tbpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.tbpass.Location = new System.Drawing.Point(550, 428);
+            this.tbpass.Location = new System.Drawing.Point(550, 389);
             this.tbpass.Name = "tbpass";
             this.tbpass.Size = new System.Drawing.Size(216, 26);
             this.tbpass.TabIndex = 177;
@@ -151,7 +155,7 @@ namespace COMPRAS2
             this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.tbUsuario.Location = new System.Drawing.Point(550, 308);
+            this.tbUsuario.Location = new System.Drawing.Point(550, 258);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(216, 26);
             this.tbUsuario.TabIndex = 176;
@@ -167,12 +171,40 @@ namespace COMPRAS2
             this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(691, 562);
+            this.btnOK.Location = new System.Drawing.Point(586, 668);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(98, 40);
             this.btnOK.TabIndex = 184;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox3.Location = new System.Drawing.Point(363, 196);
+            this.pictureBox3.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 185;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox4.Location = new System.Drawing.Point(363, 309);
+            this.pictureBox4.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 186;
+            this.pictureBox4.TabStop = false;
             // 
             // ConfirmarEntrada
             // 
@@ -180,6 +212,8 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -195,6 +229,8 @@ namespace COMPRAS2
             this.Load += new System.EventHandler(this.ConfirmarEntrada_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +247,7 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox tbpass;
         private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

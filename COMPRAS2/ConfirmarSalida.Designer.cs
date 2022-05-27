@@ -87,6 +87,7 @@ namespace COMPRAS2
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(216, 26);
             this.tbUsuario.TabIndex = 71;
+            this.tbUsuario.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tbUsuario_PreviewKeyDown);
             // 
             // tbpass
             // 
@@ -102,7 +103,6 @@ namespace COMPRAS2
             this.tbpass.Size = new System.Drawing.Size(216, 26);
             this.tbpass.TabIndex = 72;
             this.tbpass.Click += new System.EventHandler(this.tbpass_Click);
-            this.tbpass.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tbpass_PreviewKeyDown);
             // 
             // cbLugares
             // 

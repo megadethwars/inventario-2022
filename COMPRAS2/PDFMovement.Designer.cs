@@ -29,42 +29,41 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDFMovement));
-            this.btnOK = new System.Windows.Forms.Button();
+            this.lblPerfil = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnOK
+            // lblPerfil
             // 
-            this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
-            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(571, 508);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(88, 34);
-            this.btnOK.TabIndex = 68;
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblPerfil.Location = new System.Drawing.Point(554, 425);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(440, 42);
+            this.lblPerfil.TabIndex = 20;
+            this.lblPerfil.Text = "Haga click en el boton de MENU para continuar";
             // 
             // PDFMovement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 861);
-            this.Controls.Add(this.btnOK);
+            this.ClientSize = new System.Drawing.Size(1479, 861);
+            this.Controls.Add(this.lblPerfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PDFMovement";
             this.Text = "PDFMovement";
             this.Load += new System.EventHandler(this.PDFMovement_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnOK;
+
+        private System.Windows.Forms.Label lblPerfil;
     }
 }
