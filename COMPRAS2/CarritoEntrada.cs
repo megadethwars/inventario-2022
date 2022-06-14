@@ -41,7 +41,7 @@ namespace COMPRAS2
             {
                 Devices producto = movimientos[x].dispositivo;
                 movimientos[x].dispositivo_Actual = producto.producto;
-                movimientos[x].cantidad_Actual = producto.cantidad;
+                movimientos[x].cantidad_Actual = producto.cantidad_de_productos;
                 movimientos[x].codigo_Actual = producto.codigo;
                 string[] row = new string[] { movimientos[x].codigo_Actual, movimientos[x].dispositivo_Actual, movimientos[x].cantidad_Actual.ToString() };
                 dgvCarritoEntrada.Rows.Add(row);

@@ -138,7 +138,7 @@ namespace COMPRAS2
                 product.producto = txtProducto.Text;
                 product.marca = txtMarca.Text;
                 product.modelo = txtModelo.Text;
-                product.cantidad = cantidad;
+                product.cantidad_de_productos = cantidad;
                 product.compra = txtCompra.Text;
                 product.descompostura = txtDescompostura.Text;
                 product.serie = txtSerie.Text;

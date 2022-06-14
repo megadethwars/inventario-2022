@@ -46,7 +46,7 @@ namespace COMPRAS2
             this.txtOrigen.Text = devices.origen;
             this.txtDescompostura.Text = devices.descompostura;
             this.txtProvedor.Text = devices.proveedor;
-            this.txtCantidad.Text = devices.cantidad.ToString();
+            this.txtCantidad.Text = devices.cantidad_de_productos.ToString();
             this.txtAccesorio.Text = devices.accesorios;
             this.txtObservaciones.Text = devices.observaciones;
             this.txtSerie.Text = devices.serie;
@@ -214,7 +214,7 @@ namespace COMPRAS2
                 MessageBox.Show("La cantidad no es numerica");
                 return;
             }
-            devicesUpdate.cantidad = cantidad;
+            devicesUpdate.cantidad_de_productos = cantidad;
 
             devicesUpdate.observaciones = txtObservaciones.Text;
             devicesUpdate.serie = txtSerie.Text;

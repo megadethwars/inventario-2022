@@ -11,7 +11,7 @@ namespace COMPRAS2.modelos
     public class Devices
     {
         [DefaultValue(0)]
-        public int cantidad { get; set; }
+        public int cantidad_de_productos { get; set; }
 
         [DefaultValue(null)]
         public string codigo { get; set; }

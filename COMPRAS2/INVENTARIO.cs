@@ -42,15 +42,27 @@ namespace COMPRAS2
 
                 deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
-                for (int x = 0; x < deviceslist.Count; x++)
+                int x = 0;
+                foreach (Devices device in deviceslist)
                 {
 
-                    Lugares lugar = deviceslist[x].lugar;
+                    Lugares lugar = device.lugar;
                     deviceslist[x].Lugar_Actual = lugar.lugar;
 
-                    StatusDevices status = deviceslist[x].status;
+                    StatusDevices status = device.status;
                     deviceslist[x].StatusActual = status.descripcion;
+                    x = x + 1;
                 }
+
+                //for (int x = 0; x < deviceslist.Count; x++)
+                //{
+
+                //    Lugares lugar = deviceslist[x].lugar;
+                //    deviceslist[x].Lugar_Actual = lugar.lugar;
+
+                //    StatusDevices status = deviceslist[x].status;
+                //    deviceslist[x].StatusActual = status.descripcion;
+                //}
 
                 dgvInventario.DataSource = deviceslist;
                 //dgvInventario.FirstDisplayedScrollingRowIndex = deviceslist;
@@ -231,7 +243,9 @@ namespace COMPRAS2
                 }
 
                 List<Devices> devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+             
 
+                
                 for (int x = 0; x < devices.Count; x++)
                 {
 
@@ -241,6 +255,7 @@ namespace COMPRAS2
                     StatusDevices status = devices[x].status;
                     devices[x].StatusActual = status.descripcion;
                 }
+                
 
                 dgvInventario.DataSource = devices;
                 this.dgvInventario.Columns["lugar"].Visible = false;
@@ -276,6 +291,11 @@ namespace COMPRAS2
         private void txtBUSCADOR_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void dgvInventario_Scroll(object sender, ScrollEventArgs e)
+        {
+            //MessageBox.Show("tu mama");
         }
     }
     
