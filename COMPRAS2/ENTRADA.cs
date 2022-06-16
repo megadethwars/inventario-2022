@@ -121,7 +121,10 @@ namespace COMPRAS2
                 devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
                 //validate if data is NOT in almacen
-
+                if (devices.Count == 0) {
+                    MessageBox.Show("El dipositivo NO existe");
+                    return;
+                }
                 if (devices[0].lugarId == 1)
                 {
                     MessageBox.Show("El dipositivo YA se encuentra en almacen");
@@ -189,7 +192,12 @@ namespace COMPRAS2
 
         private void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
-
+            if (movimientos.Count == 0)
+            {
+                MessageBox.Show("No hay productos para realizar una entrada");
+                return;
+            }
+            Navigator.nextPage(new CarritoEntrada(this));
         }
 
         private void ENTRADA_Load(object sender, EventArgs e)
