@@ -21,7 +21,6 @@ namespace COMPRAS2
         {
             InitializeComponent();
             this.entrada = entrada;
-            this.movimientos = this.entrada.movimientos;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -99,13 +98,7 @@ namespace COMPRAS2
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (this.entrada.movimientos.Count == 0)
-            {
-                MessageBox.Show("No hay productos en el carrito");
-                return;
-            }
 
-            Navigator.nextPage(new ConfirmarEntrada(this));
         }
     }
 }

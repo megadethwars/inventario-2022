@@ -234,7 +234,7 @@ namespace COMPRAS2
                 return;
             }
 
-            if (idlugar == 0 || idlugar==1)
+            if (idlugar == 0)
             {
                 MessageBox.Show("No se ha asignado algun lugar , intente de nuevo");
                 return;
