@@ -464,7 +464,7 @@
     <EmbeddedResource Include="SALIDA.resx">
       <DependentUpon>SALIDA.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Fonts\Knockout-48.otf" />
+    <None Include="Fuentes\Knockout-48.otf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
