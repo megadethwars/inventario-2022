@@ -24,6 +24,7 @@ namespace COMPRAS2
             this.lbUsername.Text = CurrentUsers.username;
         }
 
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
         }
