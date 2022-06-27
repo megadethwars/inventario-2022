@@ -54,7 +54,7 @@ namespace COMPRAS2
             this.lblDEstatus.Text = devices.StatusActual;
             this.lblDDescompostura.Text = devices.descompostura;
             this.lblDProvedor.Text = devices.proveedor;
-            this.lblDCantidad.Text = devices.cantidad_de_productos.ToString();
+            this.lblDCantidad.Text = devices.cantidad.ToString();
             this.lblDAccesorio.Text = devices.accesorios;
             this.lblObservaciones.Text = devices.observaciones;
             this.lblSerie.Text = devices.serie;

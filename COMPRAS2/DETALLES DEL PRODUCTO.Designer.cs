@@ -228,9 +228,9 @@ namespace COMPRAS2
             this.lblCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblCodigoQR.Location = new System.Drawing.Point(100, 180);
             this.lblCodigoQR.Name = "lblCodigoQR";
-            this.lblCodigoQR.Size = new System.Drawing.Size(98, 32);
+            this.lblCodigoQR.Size = new System.Drawing.Size(34, 32);
             this.lblCodigoQR.TabIndex = 35;
-            this.lblCodigoQR.Text = "CODIGO QR:";
+            this.lblCodigoQR.Text = "ID:";
             // 
             // lblTituloEditarProducto
             // 
@@ -360,9 +360,9 @@ namespace COMPRAS2
             this.lblDCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblDCodigoQR.Location = new System.Drawing.Point(102, 220);
             this.lblDCodigoQR.Name = "lblDCodigoQR";
-            this.lblDCodigoQR.Size = new System.Drawing.Size(87, 20);
+            this.lblDCodigoQR.Size = new System.Drawing.Size(26, 20);
             this.lblDCodigoQR.TabIndex = 69;
-            this.lblDCodigoQR.Text = "Codigo QR";
+            this.lblDCodigoQR.Text = "ID";
             // 
             // lblDMarca
             // 

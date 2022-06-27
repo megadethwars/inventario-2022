@@ -35,7 +35,7 @@ namespace COMPRAS2
         {
             
             lblComentarios.Text = reportes.comentarios;
-            lblDispositivoId.Text = reportes.dispositivoId.ToString();
+            
             lblFechaAlta.Text = reportes.fechaAlta.ToString();
             lblProducto.Text = reportes.dispositivoActual;
             lblNombre.Text = reportes.UserActual;

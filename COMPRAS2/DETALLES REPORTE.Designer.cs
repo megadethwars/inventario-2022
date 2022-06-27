@@ -37,21 +37,18 @@ namespace COMPRAS2
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblFechaAlta = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblComentarios = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.lblDispositivoId = new System.Windows.Forms.Label();
             this.lblDCodigo = new System.Windows.Forms.Label();
             this.lblDFechaAlta = new System.Windows.Forms.Label();
             this.lblDNombre = new System.Windows.Forms.Label();
             this.lblDComentarios = new System.Windows.Forms.Label();
             this.lblDApellido = new System.Windows.Forms.Label();
             this.lblDProducto = new System.Windows.Forms.Label();
-            this.lblDDispositivoId = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -59,7 +56,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -121,7 +117,7 @@ namespace COMPRAS2
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox5.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox5.Location = new System.Drawing.Point(90, 443);
+            this.pictureBox5.Location = new System.Drawing.Point(98, 364);
             this.pictureBox5.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(550, 3);
@@ -134,7 +130,7 @@ namespace COMPRAS2
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox4.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox4.Location = new System.Drawing.Point(90, 363);
+            this.pictureBox4.Location = new System.Drawing.Point(98, 284);
             this.pictureBox4.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(550, 3);
@@ -147,7 +143,7 @@ namespace COMPRAS2
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox3.Location = new System.Drawing.Point(90, 283);
+            this.pictureBox3.Location = new System.Drawing.Point(98, 204);
             this.pictureBox3.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(550, 3);
@@ -160,26 +156,13 @@ namespace COMPRAS2
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox2.Location = new System.Drawing.Point(90, 203);
+            this.pictureBox2.Location = new System.Drawing.Point(98, 124);
             this.pictureBox2.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(550, 3);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 116;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox1.Location = new System.Drawing.Point(90, 123);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(1000, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(550, 3);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 115;
-            this.pictureBox1.TabStop = false;
             // 
             // lblCodigo
             // 
@@ -190,9 +173,9 @@ namespace COMPRAS2
             this.lblCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblCodigo.Location = new System.Drawing.Point(715, 168);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
+            this.lblCodigo.Size = new System.Drawing.Size(26, 20);
             this.lblCodigo.TabIndex = 114;
-            this.lblCodigo.Text = "Codigo";
+            this.lblCodigo.Text = "ID";
             // 
             // lblFechaAlta
             // 
@@ -214,7 +197,7 @@ namespace COMPRAS2
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblNombre.Location = new System.Drawing.Point(90, 328);
+            this.lblNombre.Location = new System.Drawing.Point(98, 249);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(65, 20);
             this.lblNombre.TabIndex = 109;
@@ -227,7 +210,7 @@ namespace COMPRAS2
             this.lblComentarios.AutoSize = true;
             this.lblComentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComentarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblComentarios.Location = new System.Drawing.Point(90, 488);
+            this.lblComentarios.Location = new System.Drawing.Point(98, 409);
             this.lblComentarios.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblComentarios.Name = "lblComentarios";
             this.lblComentarios.Size = new System.Drawing.Size(99, 20);
@@ -241,7 +224,7 @@ namespace COMPRAS2
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblApellido.Location = new System.Drawing.Point(90, 408);
+            this.lblApellido.Location = new System.Drawing.Point(98, 329);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(65, 20);
             this.lblApellido.TabIndex = 107;
@@ -254,24 +237,11 @@ namespace COMPRAS2
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblProducto.Location = new System.Drawing.Point(90, 248);
+            this.lblProducto.Location = new System.Drawing.Point(98, 169);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(73, 20);
             this.lblProducto.TabIndex = 106;
             this.lblProducto.Text = "Producto";
-            // 
-            // lblDispositivoId
-            // 
-            this.lblDispositivoId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblDispositivoId.AutoSize = true;
-            this.lblDispositivoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDispositivoId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDispositivoId.Location = new System.Drawing.Point(90, 168);
-            this.lblDispositivoId.Name = "lblDispositivoId";
-            this.lblDispositivoId.Size = new System.Drawing.Size(103, 20);
-            this.lblDispositivoId.TabIndex = 105;
-            this.lblDispositivoId.Text = "Dispositivo Id";
             // 
             // lblDCodigo
             // 
@@ -282,9 +252,9 @@ namespace COMPRAS2
             this.lblDCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblDCodigo.Location = new System.Drawing.Point(715, 128);
             this.lblDCodigo.Name = "lblDCodigo";
-            this.lblDCodigo.Size = new System.Drawing.Size(74, 32);
+            this.lblDCodigo.Size = new System.Drawing.Size(34, 32);
             this.lblDCodigo.TabIndex = 104;
-            this.lblDCodigo.Text = "CODIGO:";
+            this.lblDCodigo.Text = "ID:";
             // 
             // lblDFechaAlta
             // 
@@ -306,7 +276,7 @@ namespace COMPRAS2
             this.lblDNombre.AutoSize = true;
             this.lblDNombre.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDNombre.Location = new System.Drawing.Point(90, 288);
+            this.lblDNombre.Location = new System.Drawing.Point(98, 209);
             this.lblDNombre.Name = "lblDNombre";
             this.lblDNombre.Size = new System.Drawing.Size(83, 32);
             this.lblDNombre.TabIndex = 99;
@@ -319,7 +289,7 @@ namespace COMPRAS2
             this.lblDComentarios.AutoSize = true;
             this.lblDComentarios.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDComentarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDComentarios.Location = new System.Drawing.Point(90, 448);
+            this.lblDComentarios.Location = new System.Drawing.Point(98, 369);
             this.lblDComentarios.Name = "lblDComentarios";
             this.lblDComentarios.Size = new System.Drawing.Size(125, 32);
             this.lblDComentarios.TabIndex = 98;
@@ -332,7 +302,7 @@ namespace COMPRAS2
             this.lblDApellido.AutoSize = true;
             this.lblDApellido.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDApellido.Location = new System.Drawing.Point(90, 368);
+            this.lblDApellido.Location = new System.Drawing.Point(98, 289);
             this.lblDApellido.Name = "lblDApellido";
             this.lblDApellido.Size = new System.Drawing.Size(88, 32);
             this.lblDApellido.TabIndex = 97;
@@ -345,24 +315,11 @@ namespace COMPRAS2
             this.lblDProducto.AutoSize = true;
             this.lblDProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDProducto.Location = new System.Drawing.Point(90, 208);
+            this.lblDProducto.Location = new System.Drawing.Point(98, 129);
             this.lblDProducto.Name = "lblDProducto";
             this.lblDProducto.Size = new System.Drawing.Size(98, 32);
             this.lblDProducto.TabIndex = 96;
             this.lblDProducto.Text = "PRODUCTO:";
-            // 
-            // lblDDispositivoId
-            // 
-            this.lblDDispositivoId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblDDispositivoId.AutoSize = true;
-            this.lblDDispositivoId.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDDispositivoId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDDispositivoId.Location = new System.Drawing.Point(90, 128);
-            this.lblDDispositivoId.Name = "lblDDispositivoId";
-            this.lblDDispositivoId.Size = new System.Drawing.Size(132, 32);
-            this.lblDDispositivoId.TabIndex = 95;
-            this.lblDDispositivoId.Text = "DISPOSITIVO ID:";
             // 
             // btnEditar
             // 
@@ -398,21 +355,18 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblFechaAlta);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblComentarios);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblProducto);
-            this.Controls.Add(this.lblDispositivoId);
             this.Controls.Add(this.lblDCodigo);
             this.Controls.Add(this.lblDFechaAlta);
             this.Controls.Add(this.lblDNombre);
             this.Controls.Add(this.lblDComentarios);
             this.Controls.Add(this.lblDApellido);
             this.Controls.Add(this.lblDProducto);
-            this.Controls.Add(this.lblDDispositivoId);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblREPORTES);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -425,7 +379,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,21 +394,18 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblFechaAlta;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblComentarios;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.Label lblDispositivoId;
         private System.Windows.Forms.Label lblDCodigo;
         private System.Windows.Forms.Label lblDFechaAlta;
         private System.Windows.Forms.Label lblDNombre;
         private System.Windows.Forms.Label lblDComentarios;
         private System.Windows.Forms.Label lblDApellido;
         private System.Windows.Forms.Label lblDProducto;
-        private System.Windows.Forms.Label lblDDispositivoId;
         private System.Windows.Forms.Button btnEditar;
     }
 }

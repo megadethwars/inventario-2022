@@ -360,7 +360,7 @@ namespace COMPRAS2
                 foreach (Movimientos mov in lista)
                 {
 
-                    tablacarrito.Rows.Add(mov.dispositivo.cantidad_de_productos, mov.dispositivo.codigo, mov.dispositivo.producto, mov.dispositivo.marca, mov.dispositivo.modelo, mov.dispositivo.serie);
+                    tablacarrito.Rows.Add(mov.dispositivo.cantidad, mov.dispositivo.codigo, mov.dispositivo.producto, mov.dispositivo.marca, mov.dispositivo.modelo, mov.dispositivo.serie);
                 }
 
 
