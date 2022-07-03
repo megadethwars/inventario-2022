@@ -42,11 +42,11 @@ namespace COMPRAS2
             // 
             // lblCodigoQR
             // 
-            this.lblCodigoQR.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCodigoQR.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblCodigoQR.AutoSize = true;
             this.lblCodigoQR.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoQR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblCodigoQR.Location = new System.Drawing.Point(530, 549);
+            this.lblCodigoQR.Location = new System.Drawing.Point(437, 608);
             this.lblCodigoQR.Name = "lblCodigoQR";
             this.lblCodigoQR.Size = new System.Drawing.Size(362, 31);
             this.lblCodigoQR.TabIndex = 56;
@@ -58,7 +58,7 @@ namespace COMPRAS2
             this.lblNombreArchivo.AutoSize = true;
             this.lblNombreArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblNombreArchivo.Location = new System.Drawing.Point(559, 128);
+            this.lblNombreArchivo.Location = new System.Drawing.Point(512, 125);
             this.lblNombreArchivo.Name = "lblNombreArchivo";
             this.lblNombreArchivo.Size = new System.Drawing.Size(333, 31);
             this.lblNombreArchivo.TabIndex = 55;
@@ -70,7 +70,7 @@ namespace COMPRAS2
             this.lblTituloAgregarProducto.AutoSize = true;
             this.lblTituloAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloAgregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblTituloAgregarProducto.Location = new System.Drawing.Point(560, 30);
+            this.lblTituloAgregarProducto.Location = new System.Drawing.Point(467, 30);
             this.lblTituloAgregarProducto.Name = "lblTituloAgregarProducto";
             this.lblTituloAgregarProducto.Size = new System.Drawing.Size(517, 39);
             this.lblTituloAgregarProducto.TabIndex = 54;
@@ -94,7 +94,7 @@ namespace COMPRAS2
             // 
             // btnDETENER
             // 
-            this.btnDETENER.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDETENER.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnDETENER.BackColor = System.Drawing.Color.Transparent;
             this.btnDETENER.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnDETENER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -105,7 +105,7 @@ namespace COMPRAS2
             this.btnDETENER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDETENER.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDETENER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnDETENER.Location = new System.Drawing.Point(567, 412);
+            this.btnDETENER.Location = new System.Drawing.Point(540, 458);
             this.btnDETENER.MaximumSize = new System.Drawing.Size(175, 39);
             this.btnDETENER.Name = "btnDETENER";
             this.btnDETENER.Size = new System.Drawing.Size(175, 39);
@@ -116,7 +116,7 @@ namespace COMPRAS2
             // 
             // btnINICIAR
             // 
-            this.btnINICIAR.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnINICIAR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnINICIAR.BackColor = System.Drawing.Color.Transparent;
             this.btnINICIAR.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnINICIAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -127,7 +127,7 @@ namespace COMPRAS2
             this.btnINICIAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnINICIAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnINICIAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnINICIAR.Location = new System.Drawing.Point(567, 339);
+            this.btnINICIAR.Location = new System.Drawing.Point(540, 385);
             this.btnINICIAR.MaximumSize = new System.Drawing.Size(175, 39);
             this.btnINICIAR.Name = "btnINICIAR";
             this.btnINICIAR.Size = new System.Drawing.Size(175, 39);
@@ -138,7 +138,7 @@ namespace COMPRAS2
             // 
             // btnSeleccionarArchivo
             // 
-            this.btnSeleccionarArchivo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSeleccionarArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnSeleccionarArchivo.BackColor = System.Drawing.Color.Transparent;
             this.btnSeleccionarArchivo.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
             this.btnSeleccionarArchivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -149,7 +149,7 @@ namespace COMPRAS2
             this.btnSeleccionarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionarArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(567, 274);
+            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(540, 320);
             this.btnSeleccionarArchivo.MaximumSize = new System.Drawing.Size(175, 39);
             this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
             this.btnSeleccionarArchivo.Size = new System.Drawing.Size(175, 39);
@@ -164,11 +164,11 @@ namespace COMPRAS2
             // 
             // porcentaje
             // 
-            this.porcentaje.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.porcentaje.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.porcentaje.AutoSize = true;
             this.porcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.porcentaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.porcentaje.Location = new System.Drawing.Point(965, 549);
+            this.porcentaje.Location = new System.Drawing.Point(805, 608);
             this.porcentaje.Name = "porcentaje";
             this.porcentaje.Size = new System.Drawing.Size(60, 31);
             this.porcentaje.TabIndex = 64;
@@ -191,6 +191,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ACTUALIZAR_BDD";
             this.Text = "ACTUALIZAR_BDD";
+            this.Load += new System.EventHandler(this.ACTUALIZAR_BDD_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

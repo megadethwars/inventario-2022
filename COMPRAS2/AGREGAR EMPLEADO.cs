@@ -10,13 +10,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Drawing.Text;
 
 namespace COMPRAS2
 {
     public partial class AGREGAR_EMPLEADO : Form
     {
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
+        FontFamily ff;
+        Font font;
+
+        private void CargoEtiqueta(Font font)
+        {
+            FontStyle fontStyle = FontStyle.Regular;
+
+            this.lblREPORTES.Font = new Font(ff, 26, fontStyle);
+            this.lblProvedor.Font = new Font(ff, 22, fontStyle);
+            this.label1.Font = new Font(ff, 22, fontStyle);
+            this.label2.Font = new Font(ff, 22, fontStyle);
+            this.label8.Font = new Font(ff, 22, fontStyle);
+            this.label3.Font = new Font(ff, 22, fontStyle);
+            this.label4.Font = new Font(ff, 22, fontStyle);
+            this.label5.Font = new Font(ff, 22, fontStyle);
+            this.label6.Font = new Font(ff, 22, fontStyle);
+            this.label7.Font = new Font(ff, 22, fontStyle);
+            this.lblEstadoDelUsuario.Font = new Font(ff, 22, fontStyle);
+        }
+
+        private void CargoPrivateFontCollection()
+        {
+            // CREO EL BYTE[] Y TOMO SU LONGITUD
+            byte[] fontArray = COMPRAS2.Properties.Resources.Knockout_48;
+            int dataLength = COMPRAS2.Properties.Resources.Knockout_48.Length;
+
+            // ASIGNO MEMORIA Y COPIO BYTE[] EN LA DIRECCION
+            IntPtr ptrData = Marshal.AllocCoTaskMem(dataLength);
+            Marshal.Copy(fontArray, 0, ptrData, dataLength);
+
+            uint cFonts = 0;
+            AddFontMemResourceEx(ptrData, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            //PASO LA FUENTE A LA PRIVATEFONTCOLLECTION
+            pfc.AddMemoryFont(ptrData, dataLength);
+
+            //LIBERO LA MEMORIA "UNSAFE"
+            Marshal.FreeCoTaskMem(ptrData);
+
+            ff = pfc.Families[0];
+            font = new Font(ff, 15f, FontStyle.Bold);
+        }
+
         List<Tuple<Int32, String>> listaRoles;
         List<Tuple<Int32, String>> listaStatus;
+
         public AGREGAR_EMPLEADO()
         {
             InitializeComponent();
@@ -26,6 +75,9 @@ namespace COMPRAS2
 
         private async void AGREGAR_EMPLEADO_Load(object sender, EventArgs e)
         {
+            CargoPrivateFontCollection();
+            CargoEtiqueta(font);
+
             int roles = await Roles();
             int estatus = await Estatus();
             this.cbRoles.Text = null;

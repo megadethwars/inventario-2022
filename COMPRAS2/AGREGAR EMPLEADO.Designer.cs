@@ -350,12 +350,12 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
             this.cbRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.cbRoles.FormattingEnabled = true;
             this.cbRoles.Location = new System.Drawing.Point(700, 340);
             this.cbRoles.Name = "cbRoles";
-            this.cbRoles.Size = new System.Drawing.Size(426, 32);
+            this.cbRoles.Size = new System.Drawing.Size(426, 28);
             this.cbRoles.TabIndex = 82;
             // 
             // pictureBox1

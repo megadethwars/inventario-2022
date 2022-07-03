@@ -479,6 +479,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Knockout-48.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Resources\specialbutton2.png" />
     <None Include="Resources\specialbutton.png" />
     <None Include="Resources\Rectángulo 2 copia.png" />
