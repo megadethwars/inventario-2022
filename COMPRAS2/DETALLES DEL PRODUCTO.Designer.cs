@@ -81,6 +81,7 @@ namespace COMPRAS2
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.lblObservaciones = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblCREAR_REPORTE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -793,12 +794,34 @@ namespace COMPRAS2
             this.label4.TabIndex = 99;
             this.label4.Text = "OBSERVACIONES:";
             // 
+            // lblCREAR_REPORTE
+            // 
+            this.lblCREAR_REPORTE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCREAR_REPORTE.BackColor = System.Drawing.Color.Transparent;
+            this.lblCREAR_REPORTE.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.lblCREAR_REPORTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lblCREAR_REPORTE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCREAR_REPORTE.FlatAppearance.BorderSize = 0;
+            this.lblCREAR_REPORTE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.lblCREAR_REPORTE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.lblCREAR_REPORTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCREAR_REPORTE.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCREAR_REPORTE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblCREAR_REPORTE.Location = new System.Drawing.Point(378, 785);
+            this.lblCREAR_REPORTE.Name = "lblCREAR_REPORTE";
+            this.lblCREAR_REPORTE.Size = new System.Drawing.Size(163, 39);
+            this.lblCREAR_REPORTE.TabIndex = 105;
+            this.lblCREAR_REPORTE.Text = "CREAR REPORTE";
+            this.lblCREAR_REPORTE.UseVisualStyleBackColor = false;
+            this.lblCREAR_REPORTE.Click += new System.EventHandler(this.lblCREAR_REPORTE_Click);
+            // 
             // DETALLES_DEL_PRODUCTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.lblCREAR_REPORTE);
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.label2);
@@ -929,5 +952,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Label lblObservaciones;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button lblCREAR_REPORTE;
     }
 }

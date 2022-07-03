@@ -476,7 +476,7 @@ namespace COMPRAS2
             {
                 Console.WriteLine(ex.Message);
         
-                MessageBox.Show("Ocurrio un error en el envio del correo");
+                //MessageBox.Show("Ocurrio un error en el envio del correo");
                 return false;
             }
 

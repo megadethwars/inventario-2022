@@ -50,7 +50,7 @@ namespace COMPRAS2
 
                 dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
                 dgvInventario.Columns.Add("ID", "ID");
-                dgvInventario.Columns.Add("CANTIDAD", "CANTIDAD");
+                dgvInventario.Columns.Add("CANTIDAD DE PRODUCTOS", "CANTIDAD DE PRODUCTOS");
                 dgvInventario.Columns.Add("LUGAR", "LUGAR");
                 dgvInventario.Columns.Add("MARCA", "MARCA");
                 dgvInventario.Columns.Add("MODELO", "MODELO");
