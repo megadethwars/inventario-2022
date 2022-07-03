@@ -10,17 +10,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Drawing.Text;
 
 namespace COMPRAS2
 {
     public partial class BUSQUEDA_AVANZADA_REPORTE : Form
     {
+
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
+        FontFamily ff;
+        Font font;
+
+        private void CargoEtiqueta(Font font)
+        {
+            FontStyle fontStyle = FontStyle.Regular;
+
+            this.lblBusquedaAvanzada.Font = new Font(ff, 26, fontStyle);
+            this.lblCodigo.Font = new Font(ff, 20, fontStyle);
+            this.lblFecha.Font = new Font(ff, 20, fontStyle);
+            this.cbReportes.Font = new Font(ff, 20, fontStyle);
+            this.btnLimpiar.Font = new Font(ff, 20, fontStyle);
+        }
+
+        private void CargoPrivateFontCollection()
+        {
+            // CREO EL BYTE[] Y TOMO SU LONGITUD
+            byte[] fontArray = COMPRAS2.Properties.Resources.Knockout_48;
+            int dataLength = COMPRAS2.Properties.Resources.Knockout_48.Length;
+
+            // ASIGNO MEMORIA Y COPIO BYTE[] EN LA DIRECCION
+            IntPtr ptrData = Marshal.AllocCoTaskMem(dataLength);
+            Marshal.Copy(fontArray, 0, ptrData, dataLength);
+
+            uint cFonts = 0;
+            AddFontMemResourceEx(ptrData, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            //PASO LA FUENTE A LA PRIVATEFONTCOLLECTION
+            pfc.AddMemoryFont(ptrData, dataLength);
+
+            //LIBERO LA MEMORIA "UNSAFE"
+            Marshal.FreeCoTaskMem(ptrData);
+
+            ff = pfc.Families[0];
+            font = new Font(ff, 15f, FontStyle.Bold);
+        }
+
         List<Reportes> reporte;
         List<Devices> devices;
 
         int iddevice = 0;
-
-
 
         public BUSQUEDA_AVANZADA_REPORTE()
         {
@@ -34,7 +75,7 @@ namespace COMPRAS2
         }
 
         public async void busqueda()
-        {          
+        {
             QueryReporte reportequery = new QueryReporte();
 
             QueryDevice devicequery = new QueryDevice();
@@ -55,9 +96,9 @@ namespace COMPRAS2
             else
             {
                 dtpReporte.Enabled = false;
-                
+
             }
-            
+
 
             string jsonD = JsonConvert.SerializeObject(devicequery,
             new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
@@ -78,7 +119,7 @@ namespace COMPRAS2
 
             if (statusmessageD.statuscode == 400)
             {
-               
+
             }
 
             if (statusmessageD.statuscode == 404)
@@ -152,7 +193,7 @@ namespace COMPRAS2
                     MessageBox.Show("No hay productos que coinciden con el criterio de busqueda");
                     dgvReportes.DataSource = null;
                     return;
-                }               
+                }
 
                 dgvReportes.DataSource = reporte;
 
@@ -177,7 +218,7 @@ namespace COMPRAS2
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             dgvReportes.DataSource = null;
-            this.txtCodigo.Text = null;           
+            this.txtCodigo.Text = null;
         }
 
         private void dgvReportes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -200,11 +241,13 @@ namespace COMPRAS2
 
         private void BUSQUEDA_AVANZADA_REPORTE_Load(object sender, EventArgs e)
         {
-           
-           if(cbReportes.Checked == true)
-           {
+            CargoPrivateFontCollection();
+            CargoEtiqueta(font);
+
+            if (cbReportes.Checked == true)
+            {
                 dtpReporte.Enabled = true;
-           }
+            }
         }
 
         private void cbReportes_CheckedChanged(object sender, EventArgs e)
@@ -212,10 +255,11 @@ namespace COMPRAS2
             if (cbReportes.Checked == true)
             {
                 dtpReporte.Enabled = true;
-            }else
+            }
+            else
             {
                 dtpReporte.Enabled = false;
-                
+
             }
         }
     }

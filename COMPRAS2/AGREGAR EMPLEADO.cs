@@ -27,16 +27,16 @@ namespace COMPRAS2
             FontStyle fontStyle = FontStyle.Regular;
 
             this.lblREPORTES.Font = new Font(ff, 26, fontStyle);
-            this.lblProvedor.Font = new Font(ff, 22, fontStyle);
-            this.label1.Font = new Font(ff, 22, fontStyle);
-            this.label2.Font = new Font(ff, 22, fontStyle);
-            this.label8.Font = new Font(ff, 22, fontStyle);
-            this.label3.Font = new Font(ff, 22, fontStyle);
-            this.label4.Font = new Font(ff, 22, fontStyle);
-            this.label5.Font = new Font(ff, 22, fontStyle);
-            this.label6.Font = new Font(ff, 22, fontStyle);
-            this.label7.Font = new Font(ff, 22, fontStyle);
-            this.lblEstadoDelUsuario.Font = new Font(ff, 22, fontStyle);
+            this.lblProvedor.Font = new Font(ff, 20, fontStyle);
+            this.label1.Font = new Font(ff, 20, fontStyle);
+            this.label2.Font = new Font(ff, 20, fontStyle);
+            this.label8.Font = new Font(ff, 20, fontStyle);
+            this.label3.Font = new Font(ff, 20, fontStyle);
+            this.label4.Font = new Font(ff, 20, fontStyle);
+            this.label5.Font = new Font(ff, 20, fontStyle);
+            this.label6.Font = new Font(ff, 20, fontStyle);
+            this.label7.Font = new Font(ff, 20, fontStyle);
+            this.lblEstadoDelUsuario.Font = new Font(ff, 20, fontStyle);
         }
 
         private void CargoPrivateFontCollection()
