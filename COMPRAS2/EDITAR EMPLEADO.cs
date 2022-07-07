@@ -10,11 +10,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Drawing.Text;
 
 namespace COMPRAS2
 {
     public partial class EDITAR_EMPLEADO : Form
     {
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
+        FontFamily ff;
+        Font font;
+
+        private void CargoEtiqueta(Font font)
+        {
+            FontStyle fontStyle = FontStyle.Regular;
+
+            this.INVENTARIOTITLE.Font = new Font(ff, 26, fontStyle);
+            this.lblNombre.Font = new Font(ff, 20, fontStyle);
+            this.lblApellidoPaterno.Font = new Font(ff, 20, fontStyle);
+            this.lblApellidoMaterno.Font = new Font(ff, 20, fontStyle);
+            this.lblCorreo.Font = new Font(ff, 20, fontStyle);
+            this.lblTelefono.Font = new Font(ff, 20, fontStyle);
+            this.lblTipoDeUsuario.Font = new Font(ff, 20, fontStyle);
+            this.lblEstadoDelUsuario.Font = new Font(ff, 20, fontStyle);
+        }
+
+        private void CargoPrivateFontCollection()
+        {
+            // CREO EL BYTE[] Y TOMO SU LONGITUD
+            byte[] fontArray = COMPRAS2.Properties.Resources.Knockout_48;
+            int dataLength = COMPRAS2.Properties.Resources.Knockout_48.Length;
+
+            // ASIGNO MEMORIA Y COPIO BYTE[] EN LA DIRECCION
+            IntPtr ptrData = Marshal.AllocCoTaskMem(dataLength);
+            Marshal.Copy(fontArray, 0, ptrData, dataLength);
+
+            uint cFonts = 0;
+            AddFontMemResourceEx(ptrData, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            //PASO LA FUENTE A LA PRIVATEFONTCOLLECTION
+            pfc.AddMemoryFont(ptrData, dataLength);
+
+            //LIBERO LA MEMORIA "UNSAFE"
+            Marshal.FreeCoTaskMem(ptrData);
+
+            ff = pfc.Families[0];
+            font = new Font(ff, 15f, FontStyle.Bold);
+        }
+
         List<Tuple<Int32, String>> listaRoles;
         List<Tuple<Int32, String>> listaStatus;
         User user;
@@ -35,6 +80,9 @@ namespace COMPRAS2
 
         private async void EDITAR_EMPLEADO_Load(object sender, EventArgs e)
         {
+            CargoPrivateFontCollection();
+            CargoEtiqueta(font);
+
             this.txtNombre.Text = user.nombre;
             this.txtApellidoPaterno.Text = user.apellidoPaterno;
             this.txtApellidoMaterno.Text = user.apellidoMaterno;

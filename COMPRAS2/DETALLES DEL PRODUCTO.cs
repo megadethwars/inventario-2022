@@ -10,11 +10,69 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Drawing.Text;
 
 namespace COMPRAS2
 {
     public partial class DETALLES_DEL_PRODUCTO : Form
     {
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
+        FontFamily ff;
+        Font font;
+
+        private void CargoEtiqueta(Font font)
+        {
+            FontStyle fontStyle = FontStyle.Regular;
+
+            this.lblTituloEditarProducto.Font = new Font(ff, 26, fontStyle);
+            this.lblProducto.Font = new Font(ff, 20, fontStyle);
+            this.lblCodigoQR.Font = new Font(ff, 20, fontStyle);
+            this.lblCompra.Font = new Font(ff, 20, fontStyle);
+            this.lblMarca.Font = new Font(ff, 20, fontStyle);
+            this.lblModelo.Font = new Font(ff, 20, fontStyle);
+            this.lblCosto.Font = new Font(ff, 20, fontStyle);
+            this.lblOrigen.Font = new Font(ff, 20, fontStyle);
+            this.label4.Font = new Font(ff, 20, fontStyle);
+            this.lblLugar.Font = new Font(ff, 20, fontStyle);
+            this.lblEstatus.Font = new Font(ff, 20, fontStyle);
+            this.lblDescompostura.Font = new Font(ff, 20, fontStyle);
+            this.lblDescompostura.Font = new Font(ff, 20, fontStyle);
+            this.lblProvedor.Font = new Font(ff, 20, fontStyle);
+            this.lblCantidad.Font = new Font(ff, 20, fontStyle);
+            this.lblFecha.Font = new Font(ff, 20, fontStyle);
+            this.lblAccesorio.Font = new Font(ff, 20, fontStyle);
+            this.label2.Font = new Font(ff, 20, fontStyle);
+            this.btnEditar.Font = new Font(ff, 18, fontStyle);
+            this.btnELIMINAR.Font = new Font(ff, 18, fontStyle);
+            this.lblCREAR_REPORTE.Font = new Font(ff, 18, fontStyle);
+        }
+
+        private void CargoPrivateFontCollection()
+        {
+            // CREO EL BYTE[] Y TOMO SU LONGITUD
+            byte[] fontArray = COMPRAS2.Properties.Resources.Knockout_48;
+            int dataLength = COMPRAS2.Properties.Resources.Knockout_48.Length;
+
+            // ASIGNO MEMORIA Y COPIO BYTE[] EN LA DIRECCION
+            IntPtr ptrData = Marshal.AllocCoTaskMem(dataLength);
+            Marshal.Copy(fontArray, 0, ptrData, dataLength);
+
+            uint cFonts = 0;
+            AddFontMemResourceEx(ptrData, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            //PASO LA FUENTE A LA PRIVATEFONTCOLLECTION
+            pfc.AddMemoryFont(ptrData, dataLength);
+
+            //LIBERO LA MEMORIA "UNSAFE"
+            Marshal.FreeCoTaskMem(ptrData);
+
+            ff = pfc.Families[0];
+            font = new Font(ff, 15f, FontStyle.Bold);
+        }
+
         Devices devices;
         public DETALLES_DEL_PRODUCTO(Devices devices)
         {
@@ -41,7 +99,10 @@ namespace COMPRAS2
         }
 
         private void DETALLES_DEL_PRODUCTO_Load(object sender, EventArgs e)
-        {           
+        {
+            CargoPrivateFontCollection();
+            CargoEtiqueta(font);
+
             this.lblDProducto.Text = devices.producto;
             this.lblDCompra.Text = devices.compra;
             this.lblDCodigoQR.Text = devices.codigo;
