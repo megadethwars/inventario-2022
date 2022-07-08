@@ -241,12 +241,6 @@
     <Compile Include="HIST.Designer.cs">
       <DependentUpon>HIST.cs</DependentUpon>
     </Compile>
-    <Compile Include="INGRESAR PRODUCTO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="INGRESAR PRODUCTO.Designer.cs">
-      <DependentUpon>INGRESAR PRODUCTO.cs</DependentUpon>
-    </Compile>
     <Compile Include="INICIARSESION.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,9 +413,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HIST.resx">
       <DependentUpon>HIST.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="INGRESAR PRODUCTO.resx">
-      <DependentUpon>INGRESAR PRODUCTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="INICIARSESION.resx">
       <DependentUpon>INICIARSESION.cs</DependentUpon>

@@ -246,6 +246,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "INVENTARIO2";
             this.Text = "INVENTARIO2";
+            this.Load += new System.EventHandler(this.INVENTARIO2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

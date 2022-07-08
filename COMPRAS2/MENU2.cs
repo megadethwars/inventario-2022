@@ -13,7 +13,6 @@ namespace COMPRAS2
 {
     public partial class MENU2 : Form
     {
-
         MENU mainmenu;
 
         public MENU2(MENU mainMenu)
@@ -27,11 +26,11 @@ namespace COMPRAS2
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
         }
         
         private void AbrirFormHija(object formhija)
-        {
-                       
+        {                      
             if (this.mainmenu.PANELCONTENEDOR.Controls.Count > 0)
                 this.mainmenu.PANELCONTENEDOR.Controls.RemoveAt(0);
             Form fh = formhija as Form;
@@ -41,21 +40,16 @@ namespace COMPRAS2
             this.mainmenu.PANELCONTENEDOR.Tag = fh;
             fh.Show();
         }
-
-
         
         private void MIPERFIL_Click(object sender, EventArgs e)
-        {
-            
+        {           
             //this.Dispose();
-         
+        
             Navigator.nextPage(new MIPERFIL());
-        }
-       
+        }       
 
         private void btnREPORTE_Click(object sender, EventArgs e)
-        {
-            
+        {            
             Navigator.nextPage(new REPORTES2());
         }
 
@@ -65,21 +59,23 @@ namespace COMPRAS2
         }
 
         private void btnEMPLEADOS_Click(object sender, EventArgs e)
-        {
-          
+        {         
             Navigator.nextPage(new EMPLEADOS());
         }
 
         private void btnAJUSTES_Click(object sender, EventArgs e)
         {
-        
             Navigator.nextPage(new AJUSTES());
         }
 
         private void btnHISTORIAL_Click(object sender, EventArgs e)
-        {
-           
+        {          
             Navigator.nextPage(new HIST() { Name="HIST"});
+        }
+
+        private void MENU2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

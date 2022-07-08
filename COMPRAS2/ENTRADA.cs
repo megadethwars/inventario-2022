@@ -10,11 +10,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Drawing.Text;
 
 namespace COMPRAS2
 {
     public partial class ENTRADA : Form
     {
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
+        FontFamily ff;
+        Font font;
+
+        private void CargoEtiqueta(Font font)
+        {
+            FontStyle fontStyle = FontStyle.Regular;
+
+            this.lblCarritoDeSalida.Font = new Font(ff, 26, fontStyle);
+            this.lblProducto.Font = new Font(ff, 20, fontStyle);
+            this.lbS.Font = new Font(ff, 20, fontStyle);
+            this.or.Font = new Font(ff, 20, fontStyle);
+            this.lbd.Font = new Font(ff, 20, fontStyle);
+            this.lbm.Font = new Font(ff, 20, fontStyle);
+            this.mod.Font = new Font(ff, 20, fontStyle);
+            this.label3.Font = new Font(ff, 20, fontStyle);
+            this.btClear.Font = new Font(ff, 18, fontStyle);
+            this.btnAgregarCarrito.Font = new Font(ff, 18, fontStyle);
+        }
+
+        private void CargoPrivateFontCollection()
+        {
+            // CREO EL BYTE[] Y TOMO SU LONGITUD
+            byte[] fontArray = COMPRAS2.Properties.Resources.Knockout_48;
+            int dataLength = COMPRAS2.Properties.Resources.Knockout_48.Length;
+
+            // ASIGNO MEMORIA Y COPIO BYTE[] EN LA DIRECCION
+            IntPtr ptrData = Marshal.AllocCoTaskMem(dataLength);
+            Marshal.Copy(fontArray, 0, ptrData, dataLength);
+
+            uint cFonts = 0;
+            AddFontMemResourceEx(ptrData, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            //PASO LA FUENTE A LA PRIVATEFONTCOLLECTION
+            pfc.AddMemoryFont(ptrData, dataLength);
+
+            //LIBERO LA MEMORIA "UNSAFE"
+            Marshal.FreeCoTaskMem(ptrData);
+
+            ff = pfc.Families[0];
+            font = new Font(ff, 15f, FontStyle.Bold);
+        }
 
         public List<Devices> devices;
         public List<Movimientos> movimientos;
@@ -37,12 +83,10 @@ namespace COMPRAS2
 
         private void CheckEnter(object sender, KeyEventArgs e)
         {
-
             if (e.KeyCode == Keys.Enter)
             {
                 busqueda();
             }
-
         }
 
         public async Task<string> idMovement(int idDevice) {
@@ -78,19 +122,16 @@ namespace COMPRAS2
             {
 
             }
-
             return sameIdmovimiento;
         }
 
         public async void busqueda()
         {
-
             //busqueda
             if (txtBUSCADOR.Text == "")
             {
                 MessageBox.Show("Campo de Texto vacio");
                 return;
-
             }
 
             QueryDevice devicequery = new QueryDevice();
@@ -151,27 +192,21 @@ namespace COMPRAS2
                 }
                 */
 
-
                 this.lbNombre.Text = devices[0].producto;
                 this.lbOrigen.Text = devices[0].origen;
                 this.lbSerie.Text = "N/A";
                 this.lbCantitad.Text = devices[0].cantidad.ToString();
                 this.lbMarca.Text = devices[0].marca;
                 this.lbdesc.Text = devices[0].descompostura;
-                this.lbModelo.Text = devices[0].modelo;
-                
+                this.lbModelo.Text = devices[0].modelo;              
 
                 //llenar
-
 
                 Agregar(devices[0]);
                 currentSameIdmovimiento = sameIdmovimiento;
                 isFirst = true;
-
             }
-
         }
-
 
         private void Agregar(Devices device)
         {
@@ -202,7 +237,8 @@ namespace COMPRAS2
 
         private void ENTRADA_Load(object sender, EventArgs e)
         {
-
+            CargoPrivateFontCollection();
+            CargoEtiqueta(font);
         }
 
         private void btClear_Click(object sender, EventArgs e)

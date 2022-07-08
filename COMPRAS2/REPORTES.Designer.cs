@@ -169,6 +169,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "REPORTES";
             this.Text = "REPORTES";
+            this.Load += new System.EventHandler(this.REPORTES_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

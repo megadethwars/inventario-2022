@@ -452,6 +452,7 @@ namespace COMPRAS2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SALIDA";
             this.Text = "SALIDA";
+            this.Load += new System.EventHandler(this.SALIDA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

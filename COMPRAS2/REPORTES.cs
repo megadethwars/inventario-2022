@@ -10,11 +10,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Drawing.Text;
 
 namespace COMPRAS2
 {
     public partial class REPORTES : Form
     {
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
+        FontFamily ff;
+        Font font;
+
+        private void CargoEtiqueta(Font font)
+        {
+            FontStyle fontStyle = FontStyle.Regular;
+
+            this.lblREPORTES.Font = new Font(ff, 26, fontStyle);
+            this.lblNombreProducto.Font = new Font(ff, 20, fontStyle);
+            this.label3.Font = new Font(ff, 20, fontStyle);
+        }
+
+        private void CargoPrivateFontCollection()
+        {
+            // CREO EL BYTE[] Y TOMO SU LONGITUD
+            byte[] fontArray = COMPRAS2.Properties.Resources.Knockout_48;
+            int dataLength = COMPRAS2.Properties.Resources.Knockout_48.Length;
+
+            // ASIGNO MEMORIA Y COPIO BYTE[] EN LA DIRECCION
+            IntPtr ptrData = Marshal.AllocCoTaskMem(dataLength);
+            Marshal.Copy(fontArray, 0, ptrData, dataLength);
+
+            uint cFonts = 0;
+            AddFontMemResourceEx(ptrData, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            //PASO LA FUENTE A LA PRIVATEFONTCOLLECTION
+            pfc.AddMemoryFont(ptrData, dataLength);
+
+            //LIBERO LA MEMORIA "UNSAFE"
+            Marshal.FreeCoTaskMem(ptrData);
+
+            ff = pfc.Families[0];
+            font = new Font(ff, 15f, FontStyle.Bold);
+        }
+
         public REPORTES()
         {
             InitializeComponent();
@@ -63,24 +103,16 @@ namespace COMPRAS2
                         return 1;
                     }
 
-                    reporte.dispositivoId = devices[0].id;
-                    
+                    reporte.dispositivoId = devices[0].id;                 
 
                 }
                 else {
                     MessageBox.Show("error en el servicio, Producto no existente");
                     return 2;
                 }
-
-
-               
-               
-
+                            
                 reporte.usuarioId = CurrentUsers.id;
                 reporte.comentarios = txtDescripcion.Text;
-
-
-
 
                 string json = JsonConvert.SerializeObject(reporte,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
@@ -118,15 +150,12 @@ namespace COMPRAS2
                     MessageBox.Show("error en el servicio, Ocurrio algun conflicto");
                     return 2;
                 }
-
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo");
                 return 10;
             }
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -170,6 +199,12 @@ namespace COMPRAS2
                 txtNombreDelProducto.Text = "Producto";
                 //txtDescripcion.ForeColor = Color.FromArgb(148, 148, 202);
             }
+        }
+
+        private void REPORTES_Load(object sender, EventArgs e)
+        {
+            CargoPrivateFontCollection();
+            CargoEtiqueta(font);
         }
     }
 }
