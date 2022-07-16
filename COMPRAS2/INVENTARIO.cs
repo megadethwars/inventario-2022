@@ -68,12 +68,78 @@ namespace COMPRAS2
         MENU mainmenu;
         public Devices devices;
         public List<Devices> deviceslist;
+        ScrollBars vscrolls;
+        VScrollBar bar;
+        int offssetpage = 20;
+        int page = 1;
+        bool isEnd = false;
+        bool isFiltering = false;
+
         public INVENTARIO()
         {
             InitializeComponent();
             deviceslist= new List<Devices>();
-        }     
-        
+            dgvInventario.Scroll += new System.Windows.Forms.ScrollEventHandler(DataGridView1_Scroll);
+            ScrollBars vscrolls = dgvInventario.ScrollBars;
+            bar = new VScrollBar();
+            
+            
+        }
+
+        private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.NewValue >= (dgvInventario.Rows.Count - offssetpage)) {
+
+
+                //obtener siguiente linea
+                page = page + 1;
+                string url = "";
+                if (isFiltering)
+                {
+                     url = HttpMethods.url + "dispositivos/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
+                }
+                else
+                {
+                    url = HttpMethods.url + "dispositivos?offset=" + page.ToString() + "&limit=50";
+                }
+                 
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+                if (deviceslist.Count == 0) {
+                    return;
+                }
+                int i = 0;
+                foreach (Devices device in deviceslist)
+                {
+                    Lugares lugar = device.lugar;
+                    deviceslist[i].Lugar_Actual = lugar.lugar;
+
+                    StatusDevices status = device.status;
+                    deviceslist[i].StatusActual = status.descripcion;
+                    i++;
+                }
+
+
+                for (int x = 0; x < deviceslist.Count; x++)
+                {
+                    Devices inv = deviceslist[x];
+                    deviceslist[x].producto = inv.producto;
+                    deviceslist[x].codigo = inv.codigo;
+                    deviceslist[x].cantidad = inv.cantidad;
+                    deviceslist[x].Lugar_Actual = inv.Lugar_Actual;
+                    deviceslist[x].marca = inv.marca;
+                    deviceslist[x].modelo = inv.modelo;
+                    deviceslist[x].StatusActual = inv.StatusActual;
+
+                    string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
+                    deviceslist[x].cantidad.ToString(), deviceslist[x].Lugar_Actual.ToString(),
+                    deviceslist[x].marca, deviceslist[x].modelo, deviceslist[x].StatusActual};
+                    dgvInventario.Rows.Add(row);
+                }
+            }
+        }
+
         private async void INVENTARIO_Load(object sender, EventArgs e)
         {
             CargoPrivateFontCollection();
@@ -81,7 +147,7 @@ namespace COMPRAS2
 
             try
             {
-                var url = HttpMethods.url + "dispositivos?limit=100";
+                var url = HttpMethods.url + "dispositivos?page=1&limit=50";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
                 deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
@@ -255,10 +321,12 @@ namespace COMPRAS2
         {
             dgvInventario.DataSource = null;
             dgvInventario.Columns.Clear();
+            page = 1;
+            isFiltering = false;
 
             try
             {
-                var url = HttpMethods.url + "dispositivos?limit=100";
+                var url = HttpMethods.url + "dispositivos?limit=50";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
                 deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
@@ -331,8 +399,10 @@ namespace COMPRAS2
             try
             {           
                 deviceslist.Clear();
-
-                var url = HttpMethods.url + "dispositivos/filter/"+txtBUSCADOR.Text+"?limit=30";
+                dgvInventario.Rows.Clear();
+                page = 1;
+                isFiltering = true;
+                var url = HttpMethods.url + "dispositivos/filter/"+txtBUSCADOR.Text+"?limit=30&offset="+page.ToString();
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
                 if (statusmessage.statuscode != 200)
@@ -353,13 +423,13 @@ namespace COMPRAS2
                     i++;
                 }
 
-                dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
-                dgvInventario.Columns.Add("ID", "ID");
-                dgvInventario.Columns.Add("CANTIDAD", "CANTIDAD");
-                dgvInventario.Columns.Add("LUGAR", "LUGAR");
-                dgvInventario.Columns.Add("MARCA", "MARCA");
-                dgvInventario.Columns.Add("MODELO", "MODELO");
-                dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
+                //dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
+                //dgvInventario.Columns.Add("ID", "ID");
+                //dgvInventario.Columns.Add("CANTIDAD", "CANTIDAD");
+                //dgvInventario.Columns.Add("LUGAR", "LUGAR");
+                //dgvInventario.Columns.Add("MARCA", "MARCA");
+                //dgvInventario.Columns.Add("MODELO", "MODELO");
+                //dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
 
                 for (int x = 0; x < deviceslist.Count; x++)
                 {

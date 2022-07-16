@@ -71,11 +71,11 @@ namespace COMPRAS2
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Knockout 48 Featherweight", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label1.Location = new System.Drawing.Point(114, 374);
+            this.label1.Location = new System.Drawing.Point(114, 368);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 44);
+            this.label1.Size = new System.Drawing.Size(301, 42);
             this.label1.TabIndex = 5;
             this.label1.Text = "INICIAR SESION";
             // 
@@ -200,7 +200,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(400, 800);
+            this.ClientSize = new System.Drawing.Size(400, 788);
             this.Controls.Add(this.btnSingIn);
             this.Controls.Add(this.USERID);
             this.Controls.Add(this.PASSWORD);
