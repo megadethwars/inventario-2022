@@ -17,6 +17,8 @@ namespace COMPRAS2
 {
     public partial class HIST : Form
     {
+        public List<Movimientos> hist;
+
         [DllImport("gdi32.dll")]
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
@@ -55,15 +57,80 @@ namespace COMPRAS2
             ff = pfc.Families[0];
             font = new Font(ff, 15f, FontStyle.Bold);
         }
-
+        
+        VScrollBar bar;
         Movimientos moves;
         List<Movimientos> moveslist;
+        int offssetpage = 25;
+        int page = 1;
+        bool isFiltering = false;
+
         public HIST()
         {
             InitializeComponent();
             moveslist = new List<Movimientos>();
+            dgvHistorial.Scroll += new System.Windows.Forms.ScrollEventHandler(DataGridView1_Scroll);
+            ScrollBars vscrolls = dgvHistorial.ScrollBars;
+            bar = new VScrollBar();
         }
+        
+        private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.NewValue >= (dgvHistorial.Rows.Count - offssetpage))
+            {
+                //obtener siguiente linea
+                page = page + 1;
+                string url = "";
+                if (isFiltering)
+                {
+                    url = HttpMethods.url + "movimientos/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
+                }
+                else
+                {
+                    url = HttpMethods.url + "movimientos?offset=" + page.ToString() + "&limit=50";
+                }
 
+                StatusMessage statusmessage = await HttpMethods.get(url);
+                hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+
+                if (hist.Count == 0)
+                {
+                    return;
+                }
+                int i = 0;
+                for (int x = 0; x < hist.Count; x++)
+                {
+                    Devices dispositivo = hist[x].dispositivo;
+                    hist[x].dispositivo_Actual = dispositivo.producto;
+                    hist[x].codigo_Actual = dispositivo.codigo;
+
+                    Lugares lugar = hist[x].lugar;
+                    hist[x].Lugar_Actual = lugar.lugar;
+
+                    User usuario = hist[x].usuario;
+                    hist[x].nombre_Actual = usuario.nombre + " " + usuario.apellidoPaterno + " " + usuario.apellidoMaterno;
+
+                    TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
+                    hist[x].tipo_Actual = tipoMovimiento.tipo;
+                }
+
+                for (int x = 0; x < hist.Count; x++)
+                {
+                    Movimientos mov = hist[x];
+                    hist[x].fechaAlta = mov.fechaAlta;
+                    hist[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    hist[x].idMovimiento = mov.idMovimiento;
+                    hist[x].Lugar_Actual = mov.Lugar_Actual;
+                    hist[x].nombre_Actual = mov.nombre_Actual;
+                    hist[x].tipo_Actual = mov.tipo_Actual;
+
+                    string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual,
+                    hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
+                    dgvHistorial.Rows.Add(row);
+                }
+            }
+        }
+        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -104,7 +171,8 @@ namespace COMPRAS2
                     return;
                 }
 
-                List<Movimientos> hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+                hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+                //deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
                 for (int x = 0; x < hist.Count; x++)
                 {
@@ -122,20 +190,41 @@ namespace COMPRAS2
                     hist[x].tipo_Actual = tipoMovimiento.tipo;
                 }
 
-                dgvHistorial.DataSource = hist;
+                dgvHistorial.Columns.Add("FECHA", "FECHA");
+                dgvHistorial.Columns.Add("PRODUCTO", "PRODUCTO");
+                dgvHistorial.Columns.Add("ID", "ID");
+                dgvHistorial.Columns.Add("LUGAR", "LUGAR");
+                dgvHistorial.Columns.Add("NOMBRE", "NOMBRE");
+                dgvHistorial.Columns.Add("TIPO", "TIPO");
 
-                this.dgvHistorial.Columns["foto"].Visible = false;
-                this.dgvHistorial.Columns["fechaUltimaModificacion"].Visible = false;
-                this.dgvHistorial.Columns["foto2"].Visible = false;
-                this.dgvHistorial.Columns["dispositivoId"].Visible = false;
-                this.dgvHistorial.Columns["usuarioId"].Visible = false;
-                this.dgvHistorial.Columns["LugarId"].Visible = false;
-                this.dgvHistorial.Columns["comentarios"].Visible = false;
-                this.dgvHistorial.Columns["tipoMovId"].Visible = false;
-                this.dgvHistorial.Columns["dispositivo"].Visible = false;
-                this.dgvHistorial.Columns["usuario"].Visible = false;
-                this.dgvHistorial.Columns["tipoMovimiento"].Visible = false;
-                this.dgvHistorial.Columns["idMovimiento"].Visible = false;
+                for (int x = 0; x < hist.Count; x++)
+                {
+                    Movimientos mov = hist[x];
+                    hist[x].fechaAlta = mov.fechaAlta;
+                    hist[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    hist[x].idMovimiento = mov.idMovimiento;
+                    hist[x].Lugar_Actual = mov.Lugar_Actual;
+                    hist[x].nombre_Actual = mov.nombre_Actual;
+                    hist[x].tipo_Actual = mov.tipo_Actual;
+
+                    string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual, 
+                    hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
+                    dgvHistorial.Rows.Add(row);
+                }
+
+                //dgvHistorial.DataSource = hist;
+                //this.dgvHistorial.Columns["foto"].Visible = false;
+                //this.dgvHistorial.Columns["fechaUltimaModificacion"].Visible = false;
+                //this.dgvHistorial.Columns["foto2"].Visible = false;
+                //this.dgvHistorial.Columns["dispositivoId"].Visible = false;
+                //this.dgvHistorial.Columns["usuarioId"].Visible = false;
+                //this.dgvHistorial.Columns["LugarId"].Visible = false;
+                //this.dgvHistorial.Columns["comentarios"].Visible = false;
+                //this.dgvHistorial.Columns["tipoMovId"].Visible = false;
+                //this.dgvHistorial.Columns["dispositivo"].Visible = false;
+                //this.dgvHistorial.Columns["usuario"].Visible = false;
+                //this.dgvHistorial.Columns["tipoMovimiento"].Visible = false;
+                //this.dgvHistorial.Columns["idMovimiento"].Visible = false;
             }
             catch
             {
@@ -146,49 +235,55 @@ namespace COMPRAS2
 
         private async void btnActualizar_Click(object sender, EventArgs e)
         {
-            dgvHistorial.DataSource = null;
+            dgvHistorial.Rows.Clear();
 
-            var url = HttpMethods.url + "movimientos?limit=100";
-            StatusMessage statusmessage = await HttpMethods.get(url);
-
-            if (statusmessage.statuscode != 200)
+            try
             {
-                return;
+                var url = HttpMethods.url + "movimientos?limit=100";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return;
+                }
+
+                hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+
+                for (int x = 0; x < hist.Count; x++)
+                {
+                    Devices dispositivo = hist[x].dispositivo;
+                    hist[x].dispositivo_Actual = dispositivo.producto;
+                    hist[x].codigo_Actual = dispositivo.codigo;
+
+                    Lugares lugar = hist[x].lugar;
+                    hist[x].Lugar_Actual = lugar.lugar;
+
+                    User usuario = hist[x].usuario;
+                    hist[x].nombre_Actual = usuario.nombre + " " + usuario.apellidoPaterno + " " + usuario.apellidoMaterno;
+
+                    TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
+                    hist[x].tipo_Actual = tipoMovimiento.tipo;
+                }
+
+                for (int x = 0; x < hist.Count; x++)
+                {
+                    Movimientos mov = hist[x];
+                    hist[x].fechaAlta = mov.fechaAlta;
+                    hist[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    hist[x].idMovimiento = mov.idMovimiento;
+                    hist[x].Lugar_Actual = mov.Lugar_Actual;
+                    hist[x].nombre_Actual = mov.nombre_Actual;
+                    hist[x].tipo_Actual = mov.tipo_Actual;
+
+                    string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual,
+                    hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
+                    dgvHistorial.Rows.Add(row);
+                }
             }
-
-            List<Movimientos> hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
-
-            for (int x = 0; x < hist.Count; x++)
+            catch
             {
-                Devices dispositivo = hist[x].dispositivo;
-                hist[x].dispositivo_Actual = dispositivo.producto;
-                hist[x].codigo_Actual = dispositivo.codigo;
-
-                Lugares lugar = hist[x].lugar;
-                hist[x].Lugar_Actual = lugar.lugar;
-
-                User usuario = hist[x].usuario;
-                hist[x].nombre_Actual = usuario.nombre + " " + usuario.apellidoPaterno + " " + usuario.apellidoMaterno;
-
-                TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
-                hist[x].tipo_Actual = tipoMovimiento.tipo;
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
             }
-
-            dgvHistorial.DataSource = hist;
-
-            this.dgvHistorial.Columns["foto"].Visible = false;
-            this.dgvHistorial.Columns["fechaUltimaModificacion"].Visible = false;
-            this.dgvHistorial.Columns["foto2"].Visible = false;
-            this.dgvHistorial.Columns["dispositivoId"].Visible = false;
-            this.dgvHistorial.Columns["usuarioId"].Visible = false;
-            this.dgvHistorial.Columns["LugarId"].Visible = false;
-            this.dgvHistorial.Columns["comentarios"].Visible = false;
-            this.dgvHistorial.Columns["tipoMovId"].Visible = false;
-            this.dgvHistorial.Columns["dispositivo"].Visible = false;
-            this.dgvHistorial.Columns["usuario"].Visible = false;
-            this.dgvHistorial.Columns["tipoMovimiento"].Visible = false;
-            this.dgvHistorial.Columns["idMovimiento"].Visible = false;
-
         }
 
         public void dgvHistorial_CellClick(object sender, DataGridViewCellEventArgs e)
