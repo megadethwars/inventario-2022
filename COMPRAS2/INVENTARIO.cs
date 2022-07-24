@@ -259,10 +259,6 @@ namespace COMPRAS2
         {            
             try
             {               
-                //MessageBox.Show(dgvInventario.CurrentCell.Value.ToString());
-                //Devices datas = dgvInventario.CurrentCell.RowIndex;
-                //Devices data = (Devices)cell.
-
                 DataGridViewRow cell = dgvInventario.Rows[e.RowIndex];
   
                 DataGridViewCellCollection columns = cell.Cells;
