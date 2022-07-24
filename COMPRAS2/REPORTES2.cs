@@ -103,20 +103,35 @@ namespace COMPRAS2
 
                     Devices Codigos = reportes[x].dispositivo;
                     reportes[x].dispositivoCodigo = Codigos.codigo;
-
                 }
-            
-                dgvReportes.DataSource = reportes;
-                this.dgvReportes.Columns["foto"].Visible = false;
-                this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
-                this.dgvReportes.Columns["UserActualA"].Visible = false;
-                this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
-                this.dgvReportes.Columns["dispositivoId"].Visible = false;
-                this.dgvReportes.Columns["Id"].Visible = false;
-                this.dgvReportes.Columns["usuarioId"].Visible = false;
-                this.dgvReportes.Columns["dispositivo"].Visible = false;
-                this.dgvReportes.Columns["usuario"].Visible = false;
-                this.dgvReportes.Columns["comentarios"].Visible = false;
+
+                dgvReportes.Columns.Add("DISPOSITIVO", "DISPOSITIVO");
+                dgvReportes.Columns.Add("FECHA", "FECHA");
+                dgvReportes.Columns.Add("USUARIO", "USUARIO");
+
+                for (int x = 0; x < reportes.Count; x++)
+                {
+                    Reportes inv = reportes[x];
+                    reportes[x].dispositivoActual = inv.dispositivoActual;
+                    reportes[x].fechaAlta = inv.fechaAlta;
+                    reportes[x].UserActual = inv.UserActual;
+                    
+                    string[] row = new string[] { reportes[x].dispositivoActual, 
+                    reportes[x].fechaAlta.ToString(), reportes[x].UserActual.ToString()};
+                    dgvReportes.Rows.Add(row);
+                }
+
+                //dgvReportes.DataSource = reportes;
+                //this.dgvReportes.Columns["foto"].Visible = false;
+                //this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
+                //this.dgvReportes.Columns["UserActualA"].Visible = false;
+                //this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
+                //this.dgvReportes.Columns["dispositivoId"].Visible = false;
+                //this.dgvReportes.Columns["Id"].Visible = false;
+                //this.dgvReportes.Columns["usuarioId"].Visible = false;
+                //this.dgvReportes.Columns["dispositivo"].Visible = false;
+                //this.dgvReportes.Columns["usuario"].Visible = false;
+                //this.dgvReportes.Columns["comentarios"].Visible = false;
             }
             catch
             {
@@ -134,8 +149,15 @@ namespace COMPRAS2
                 DataGridViewRow cell = dgvReportes.Rows[e.RowIndex];
                 Reportes data = (Reportes)cell.DataBoundItem;
 
-                Navigator.nextPage(new DETALLES_REPORTE(data));
-                
+                //DataGridViewRow cell = dgvReportes.Rows[e.RowIndex];
+
+                //DataGridViewCellCollection columns = cell.Cells;
+
+                //var index = columns[1];
+                //var codigo = index.FormattedValue;
+                //var datafind = deviceslist.Find(x => x.codigo.Contains((string)codigo));
+
+                Navigator.nextPage(new DETALLES_REPORTE(data));               
             }
             catch (Exception ex)
             {
@@ -146,6 +168,7 @@ namespace COMPRAS2
         private async void btnActualizar_Click(object sender, EventArgs e)
         {
             dgvReportes.DataSource = null;
+            dgvReportes.Columns.Clear();
             var url = HttpMethods.url + "reportes";
             StatusMessage statusmessage = await HttpMethods.get(url);
 
@@ -171,17 +194,17 @@ namespace COMPRAS2
                 reportes[x].dispositivoCodigo = Codigos.codigo;                
             }
 
-            dgvReportes.DataSource = reportes;
-            this.dgvReportes.Columns["foto"].Visible = false;
-            this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
-            this.dgvReportes.Columns["UserActualA"].Visible = false;
-            this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
-            this.dgvReportes.Columns["dispositivoId"].Visible = false;
-            this.dgvReportes.Columns["Id"].Visible = false;
-            this.dgvReportes.Columns["usuarioId"].Visible = false;
-            this.dgvReportes.Columns["dispositivo"].Visible = false;
-            this.dgvReportes.Columns["usuario"].Visible = false;
-            this.dgvReportes.Columns["comentarios"].Visible = false;
+            for (int x = 0; x < reportes.Count; x++)
+            {
+                Reportes inv = reportes[x];
+                reportes[x].dispositivoActual = inv.dispositivoActual;
+                reportes[x].fechaAlta = inv.fechaAlta;
+                reportes[x].UserActual = inv.UserActual;
+
+                string[] row = new string[] { reportes[x].dispositivoActual,
+                    reportes[x].fechaAlta.ToString(), reportes[x].UserActual.ToString()};
+                dgvReportes.Rows.Add(row);
+            }
         }
 
         private void dgvReportes_CellMouseEnter(object sender, DataGridViewCellEventArgs e)

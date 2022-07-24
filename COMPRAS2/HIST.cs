@@ -291,9 +291,13 @@ namespace COMPRAS2
             try
             {
                 DataGridViewRow cell = dgvHistorial.Rows[e.RowIndex];
+                DataGridViewCellCollection columns = cell.Cells;
                 Movimientos data = (Movimientos)cell.DataBoundItem;
+                var index = columns[1];
+                var codigo = index.FormattedValue;
+                var datafind = hist.Find(x => x.dispositivo_Actual.Contains((string)codigo));
 
-                Navigator.nextPage(new DETALLES_HISTORIAL(data));
+                Navigator.nextPage(new DETALLES_HISTORIAL(datafind));
 
             }
             catch (Exception ex)
@@ -315,7 +319,9 @@ namespace COMPRAS2
             try
             {
                 moveslist.Clear();
-
+                dgvHistorial.Rows.Clear();
+                page = 1;
+                isFiltering = true;
                 var url = HttpMethods.url + "movimientos/filter/" + txtBUSCADOR.Text + "?limit=30";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
@@ -341,21 +347,21 @@ namespace COMPRAS2
                     TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
                     hist[x].tipo_Actual = tipoMovimiento.tipo;
                 }
+               
+                for (int x = 0; x < hist.Count; x++)
+                {
+                    Movimientos mov = hist[x];
+                    hist[x].fechaAlta = mov.fechaAlta;
+                    hist[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    hist[x].idMovimiento = mov.idMovimiento;
+                    hist[x].Lugar_Actual = mov.Lugar_Actual;
+                    hist[x].nombre_Actual = mov.nombre_Actual;
+                    hist[x].tipo_Actual = mov.tipo_Actual;
 
-                dgvHistorial.DataSource = hist;
-
-                this.dgvHistorial.Columns["foto"].Visible = false;
-                this.dgvHistorial.Columns["fechaUltimaModificacion"].Visible = false;
-                this.dgvHistorial.Columns["foto2"].Visible = false;
-                this.dgvHistorial.Columns["dispositivoId"].Visible = false;
-                this.dgvHistorial.Columns["usuarioId"].Visible = false;
-                this.dgvHistorial.Columns["LugarId"].Visible = false;
-                this.dgvHistorial.Columns["comentarios"].Visible = false;
-                this.dgvHistorial.Columns["tipoMovId"].Visible = false;
-                this.dgvHistorial.Columns["dispositivo"].Visible = false;
-                this.dgvHistorial.Columns["usuario"].Visible = false;
-                this.dgvHistorial.Columns["tipoMovimiento"].Visible = false;
-                this.dgvHistorial.Columns["idMovimiento"].Visible = false;
+                    string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual,
+                    hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
+                    dgvHistorial.Rows.Add(row);
+                }
             }
             catch (Exception ex)
             {

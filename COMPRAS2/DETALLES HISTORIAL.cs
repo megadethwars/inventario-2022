@@ -76,13 +76,12 @@ namespace COMPRAS2
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
 
-            lblUsuario.Text = mov.nombre_Actual;
-            lblCodigo.Text = mov.codigo_Actual;
-            lblProducto.Text = mov.dispositivo_Actual;
-            lblIdMovimiento.Text = mov.idMovimiento;
-            lblTipoDeMovimiento.Text = mov.tipo_Actual;
-            lblFecha.Text = mov.fechaAlta.ToString();
-            //lblLugar.Text = 
+            this.lblUsuario.Text = mov.nombre_Actual;
+            this.lblCodigo.Text = mov.codigo_Actual;
+            this.lblProducto.Text = mov.dispositivo_Actual;
+            this.lblIdMovimiento.Text = mov.idMovimiento;
+            this.lblTipoDeMovimiento.Text = mov.tipo_Actual;
+            this.lblFecha.Text = mov.fechaAlta.ToString();
         }
     }
 }
