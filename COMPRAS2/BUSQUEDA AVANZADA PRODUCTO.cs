@@ -21,6 +21,7 @@ namespace COMPRAS2
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
+        QueryDevice devicequery;
 
         private void CargoEtiqueta(Font font)
         {
@@ -60,19 +61,79 @@ namespace COMPRAS2
 
             ff = pfc.Families[0];
             font = new Font(ff, 15f, FontStyle.Bold);
+            dgvInventario.Scroll += new System.Windows.Forms.ScrollEventHandler(DataGridView1_Scroll);
         }
 
         List<Tuple<Int32, String>> listaEstatus;
         List<Tuple<Int32, String>> listaLugares;
         int lugarid = 0;
         int statusid = 0;
+        int offssetpage = 25;
+        int page = 1;
+        bool isFiltering = false;
         List<Devices> devices;
+
+        private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.NewValue >= (dgvInventario.Rows.Count - offssetpage))
+            {
+                try
+                {
+                    //obtener siguiente linea
+                    page = page + 1;
+                    string url = "";
+                    string json = JsonConvert.SerializeObject(devicequery,
+                    new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+
+                    url = HttpMethods.url + "dispositivos/query?offset=" + page.ToString() + "&limit=30";
+
+
+                    StatusMessage statusmessage = await HttpMethods.Post(url, json);
+                    devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+                    if (devices.Count == 0)
+                    {
+                        return;
+                    }
+                    int i = 0;
+                    foreach (Devices device in devices)
+                    {
+                        Lugares lugar = device.lugar;
+                        devices[i].Lugar_Actual = lugar.lugar;
+
+                        StatusDevices status = device.status;
+                        devices[i].StatusActual = status.descripcion;
+                        i++;
+                    }
+
+                    for (int x = 0; x < devices.Count; x++)
+                    {
+                        Devices inv = devices[x];
+                        devices[x].producto = inv.producto;
+                        devices[x].codigo = inv.codigo;
+                        devices[x].Lugar_Actual = inv.Lugar_Actual;
+                        devices[x].marca = inv.marca;
+                        devices[x].modelo = inv.modelo;
+                        devices[x].StatusActual = inv.StatusActual;
+
+                        string[] row = new string[] { devices[x].producto, devices[x].codigo,
+                    devices[x].Lugar_Actual.ToString(), devices[x].marca, devices[x].modelo,
+                    devices[x].StatusActual};
+                        dgvInventario.Rows.Add(row);
+                    }
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("ocurrio un error en la consulta");
+                }
+                
+            }
+        }
 
         public BUSQUEDA_AVANZADA(Devices devices)
         {
             InitializeComponent();
             listaEstatus = new List<Tuple<int, string>>();
             listaLugares = new List<Tuple<int, string>>();
+            devicequery = new QueryDevice();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -181,14 +242,12 @@ namespace COMPRAS2
             this.cbEstatus.Text = null;
             this.cbLugares.SelectedItem = null;
         }
-
         
         public async void busqueda()
         {
             int idLugares = 0;
             int idEstatus = 0;
-
-            QueryDevice devicequery = new QueryDevice();
+            page = 1;
             
             if (txtProducto.Text != "")
             {
@@ -223,8 +282,7 @@ namespace COMPRAS2
                 {
                     devicequery.lugarId = idLugares;
                 }               
-            }
-            
+            }         
 
             if (cbEstatus.SelectedItem != null)
             {
@@ -234,12 +292,11 @@ namespace COMPRAS2
                 {
                     devicequery.statusId = idEstatus;
                 }
-            }
-            
+            }           
 
             string json = JsonConvert.SerializeObject(devicequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            var url = HttpMethods.url + "dispositivos/query";
+            var url = HttpMethods.url + "dispositivos/query?limit=30&offset=1";
             StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
             if (statusmessage.statuscode == 500)
@@ -264,6 +321,7 @@ namespace COMPRAS2
 
             if (statusmessage.statuscode == 200)
             {
+                dgvInventario.Columns.Clear();
                 devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
                 if(devices.Count == 0)
@@ -281,27 +339,29 @@ namespace COMPRAS2
                     StatusDevices status = devices[x].status;
                     devices[x].StatusActual = status.descripcion;
                 }
-                
-                dgvInventario.DataSource = devices;
 
-                this.dgvInventario.Columns["lugar"].Visible = false;
-                this.dgvInventario.Columns["lugarId"].Visible = false;
-                this.dgvInventario.Columns["status"].Visible = false;
-                this.dgvInventario.Columns["statusId"].Visible = false;
-                this.dgvInventario.Columns["Compra"].Visible = false;
-                this.dgvInventario.Columns["Descompostura"].Visible = false;
-                this.dgvInventario.Columns["Foto"].Visible = false;
-                this.dgvInventario.Columns["IdMov"].Visible = false;
-                this.dgvInventario.Columns["Observaciones"].Visible = false;
-                this.dgvInventario.Columns["Origen"].Visible = false;
-                this.dgvInventario.Columns["Pertenece"].Visible = false;
-                this.dgvInventario.Columns["Proveedor"].Visible = false;
-                this.dgvInventario.Columns["Costo"].Visible = false;
-                this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
-                this.dgvInventario.Columns["id"].Visible = false;
-                this.dgvInventario.Columns["accesorios"].Visible = false;
-                this.dgvInventario.Columns["serie"].Visible = false;
-                this.dgvInventario.Columns["fechaAlta"].Visible = false;
+                dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
+                dgvInventario.Columns.Add("ID", "ID");
+                dgvInventario.Columns.Add("LUGAR", "LUGAR");
+                dgvInventario.Columns.Add("MARCA", "MARCA");
+                dgvInventario.Columns.Add("MODELO", "MODELO");
+                dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
+
+                for (int x = 0; x < devices.Count; x++)
+                {
+                    Devices inv = devices[x];
+                    devices[x].producto = inv.producto;
+                    devices[x].codigo = inv.codigo;
+                    devices[x].Lugar_Actual = inv.Lugar_Actual;
+                    devices[x].marca = inv.marca;
+                    devices[x].modelo = inv.modelo;
+                    devices[x].StatusActual = inv.StatusActual;
+
+                    string[] row = new string[] { devices[x].producto, devices[x].codigo,
+                    devices[x].Lugar_Actual.ToString(),
+                    devices[x].marca, devices[x].modelo, devices[x].StatusActual};
+                    dgvInventario.Rows.Add(row);
+                }                               
             }
         }
 
@@ -312,6 +372,8 @@ namespace COMPRAS2
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            dgvInventario.Rows.Clear();
+            dgvInventario.Columns.Clear();
             dgvInventario.DataSource = null;
             this.txtProducto.Text = null;
             this.txtCodigo.Text = null;
@@ -320,7 +382,7 @@ namespace COMPRAS2
             this.txtSerie.Text = null;
             this.cbEstatus.Text = null;
             this.cbLugares.SelectedItem = null;
-            
+            page = 1;
         }
 
         private void dgvInventario_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -328,9 +390,13 @@ namespace COMPRAS2
             try
             {
                 DataGridViewRow cell = dgvInventario.Rows[e.RowIndex];
-                Devices data = (Devices)cell.DataBoundItem;
+                DataGridViewCellCollection columns = cell.Cells;
 
-                Navigator.nextPage(new DETALLES_DEL_PRODUCTO(data));
+                var index = columns[1];
+                var codigo = index.FormattedValue;
+                var datafind = devices.Find(x => x.codigo.Contains((string)codigo));
+
+                Navigator.nextPage(new DETALLES_DEL_PRODUCTO(datafind));
 
             }
             catch (Exception ex)
