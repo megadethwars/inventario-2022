@@ -378,6 +378,9 @@ namespace COMPRAS2
                     historial[x].dispositivo_Actual = dispositivo.producto;
                     historial[x].codigo_Actual = dispositivo.codigo;
 
+                    Lugares lugar = historial[x].lugar;
+                    historial[x].Lugar_Actual = lugar.lugar;
+
                     User usuario = historial[x].usuario;
                     historial[x].nombre_Actual = usuario.nombre + " " + usuario.apellidoPaterno + "" + usuario.apellidoMaterno;
 
@@ -385,19 +388,40 @@ namespace COMPRAS2
                     historial[x].tipo_Actual = tipoMovimiento.tipo;
                 }
 
-                dgvBusquedaHistorial.DataSource = historial;
-                this.dgvBusquedaHistorial.Columns["foto"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["fechaUltimaModificacion"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["foto2"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["dispositivoId"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["usuarioId"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["LugarId"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["comentarios"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["tipoMovId"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["dispositivo"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["usuario"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["tipoMovimiento"].Visible = false;
-                this.dgvBusquedaHistorial.Columns["idMovimiento"].Visible = false;
+                dgvBusquedaHistorial.Columns.Add("FECHA", "FECHA");
+                dgvBusquedaHistorial.Columns.Add("PRODUCTO", "PRODUCTO");
+                dgvBusquedaHistorial.Columns.Add("ID", "ID");
+                dgvBusquedaHistorial.Columns.Add("LUGAR", "LUGAR");
+                dgvBusquedaHistorial.Columns.Add("NOMBRE", "NOMBRE");
+                dgvBusquedaHistorial.Columns.Add("TIPO", "TIPO");
+
+                for (int x = 0; x < historial.Count; x++)
+                {
+                    Movimientos mov = historial[x];
+                    historial[x].fechaAlta = mov.fechaAlta;
+                    historial[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    historial[x].idMovimiento = mov.idMovimiento;
+                    historial[x].Lugar_Actual = mov.Lugar_Actual;
+                    historial[x].nombre_Actual = mov.nombre_Actual;
+                    historial[x].tipo_Actual = mov.tipo_Actual;
+
+                    string[] row = new string[] { historial[x].fechaAlta.ToString(), historial[x].dispositivo_Actual,
+                    historial[x].idMovimiento, historial[x].Lugar_Actual, historial[x].nombre_Actual, historial[x].tipo_Actual};
+                    dgvBusquedaHistorial.Rows.Add(row);
+                }
+                //dgvBusquedaHistorial.DataSource = historial;
+                //this.dgvBusquedaHistorial.Columns["foto"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["fechaUltimaModificacion"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["foto2"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["dispositivoId"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["usuarioId"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["LugarId"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["comentarios"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["tipoMovId"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["dispositivo"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["usuario"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["tipoMovimiento"].Visible = false;
+                //this.dgvBusquedaHistorial.Columns["idMovimiento"].Visible = false;
             }
         }
 
@@ -417,6 +441,26 @@ namespace COMPRAS2
                 dtpHistorial.Enabled = false;
 
             }
-        }       
+        }
+
+        private void dgvBusquedaHistorial_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow cell = dgvBusquedaHistorial.Rows[e.RowIndex];
+                DataGridViewCellCollection columns = cell.Cells;
+                Movimientos data = (Movimientos)cell.DataBoundItem;
+                var index = columns[1];
+                var codigo = index.FormattedValue;
+                var datafind = historial.Find(x => x.dispositivo_Actual.Contains((string)codigo));
+
+                Navigator.nextPage(new DETALLES_HISTORIAL(datafind));
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
     }
 }

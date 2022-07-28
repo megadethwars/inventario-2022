@@ -137,6 +137,7 @@ namespace COMPRAS2
             this.cbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -152,6 +153,7 @@ namespace COMPRAS2
             this.cbLugares.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbLugares.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbLugares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -206,6 +208,7 @@ namespace COMPRAS2
             this.cbMovimiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbMovimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
+            this.cbMovimiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbMovimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMovimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
@@ -251,7 +254,7 @@ namespace COMPRAS2
             this.dgvBusquedaHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBusquedaHistorial.ColumnHeadersHeight = 45;
             this.dgvBusquedaHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvBusquedaHistorial.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dgvBusquedaHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvBusquedaHistorial.EnableHeadersVisualStyles = false;
             this.dgvBusquedaHistorial.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvBusquedaHistorial.Location = new System.Drawing.Point(22, 323);
@@ -268,6 +271,7 @@ namespace COMPRAS2
             this.dgvBusquedaHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBusquedaHistorial.Size = new System.Drawing.Size(1235, 440);
             this.dgvBusquedaHistorial.TabIndex = 165;
+            this.dgvBusquedaHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBusquedaHistorial_CellClick);
             // 
             // btnLimpiar
             // 

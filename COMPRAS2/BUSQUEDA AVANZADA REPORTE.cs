@@ -185,7 +185,6 @@ namespace COMPRAS2
 
                     Devices Codigos = reporte[x].dispositivo;
                     reporte[x].dispositivoCodigo = Codigos.codigo;
-
                 }
 
                 if (reporte.Count == 0)
@@ -195,18 +194,21 @@ namespace COMPRAS2
                     return;
                 }
 
-                dgvReportes.DataSource = reporte;
+                dgvReportes.Columns.Add("DISPOSITIVO", "DISPOSITIVO");
+                dgvReportes.Columns.Add("FECHA", "FECHA");
+                dgvReportes.Columns.Add("USUARIO", "USUARIO");
 
-                this.dgvReportes.Columns["foto"].Visible = false;
-                this.dgvReportes.Columns["fechaUltimaModificacion"].Visible = false;
-                this.dgvReportes.Columns["UserActualA"].Visible = false;
-                this.dgvReportes.Columns["dispositivoCodigo"].Visible = false;
-                this.dgvReportes.Columns["dispositivoId"].Visible = false;
-                this.dgvReportes.Columns["Id"].Visible = false;
-                this.dgvReportes.Columns["usuarioId"].Visible = false;
-                this.dgvReportes.Columns["dispositivo"].Visible = false;
-                this.dgvReportes.Columns["usuario"].Visible = false;
-                this.dgvReportes.Columns["comentarios"].Visible = false;
+                for (int x = 0; x < reporte.Count; x++)
+                {
+                    Reportes inv = reporte[x];
+                    reporte[x].dispositivoActual = inv.dispositivoActual;
+                    reporte[x].fechaAlta = inv.fechaAlta;
+                    reporte[x].UserActual = inv.UserActual;
+
+                    string[] row = new string[] { reporte[x].dispositivoActual,
+                    reporte[x].fechaAlta.ToString(), reporte[x].UserActual.ToString()};
+                    dgvReportes.Rows.Add(row);
+                }
             }
         }
 
@@ -226,10 +228,14 @@ namespace COMPRAS2
             try
             {
                 DataGridViewRow cell = dgvReportes.Rows[e.RowIndex];
-                Reportes data = (Reportes)cell.DataBoundItem;
 
-                Navigator.nextPage(new DETALLES_REPORTE(data));
+                DataGridViewCellCollection columns = cell.Cells;
 
+                var index = columns[1];
+                var codigo = index.FormattedValue;
+                var datafind = reporte.Find(x => x.fechaUltimaModificacion.ToString().Contains((string)codigo));
+
+                Navigator.nextPage(new DETALLES_REPORTE(datafind));
             }
             catch (Exception ex)
             {
