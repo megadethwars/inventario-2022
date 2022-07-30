@@ -67,6 +67,7 @@ namespace COMPRAS2
         {
             InitializeComponent();
             dtpReporte.CustomFormat = "yyyy-MM-dd";
+            reporte = new List<Reportes>();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -170,7 +171,7 @@ namespace COMPRAS2
 
             if (statusmessage.statuscode == 200)
             {
-                List<Reportes> reporte = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+                reporte = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
 
                 for (int x = 0; x < reporte.Count; x++)
                 {
@@ -220,6 +221,7 @@ namespace COMPRAS2
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             dgvReportes.DataSource = null;
+            
             this.txtCodigo.Text = null;
         }
 
@@ -233,7 +235,7 @@ namespace COMPRAS2
 
                 var index = columns[1];
                 var codigo = index.FormattedValue;
-                var datafind = reporte.Find(x => x.fechaUltimaModificacion.ToString().Contains((string)codigo));
+                var datafind = reporte.Find(x => x.fechaAlta.ToString().Contains((string)codigo));
 
                 Navigator.nextPage(new DETALLES_REPORTE(datafind));
             }
