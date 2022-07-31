@@ -172,7 +172,6 @@ namespace COMPRAS2
                 }
 
                 hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
-                //deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
 
                 for (int x = 0; x < hist.Count; x++)
                 {
@@ -235,8 +234,9 @@ namespace COMPRAS2
 
         private async void btnActualizar_Click(object sender, EventArgs e)
         {
-            dgvHistorial.Rows.Clear();
-
+            dgvHistorial.DataSource = null;
+            dgvHistorial.Columns.Clear();          
+            txtBUSCADOR.Clear();
             try
             {
                 var url = HttpMethods.url + "movimientos?limit=100";
@@ -264,6 +264,13 @@ namespace COMPRAS2
                     TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
                     hist[x].tipo_Actual = tipoMovimiento.tipo;
                 }
+
+                dgvHistorial.Columns.Add("FECHA", "FECHA");
+                dgvHistorial.Columns.Add("PRODUCTO", "PRODUCTO");
+                dgvHistorial.Columns.Add("ID", "ID");
+                dgvHistorial.Columns.Add("LUGAR", "LUGAR");
+                dgvHistorial.Columns.Add("NOMBRE", "NOMBRE");
+                dgvHistorial.Columns.Add("TIPO", "TIPO");
 
                 for (int x = 0; x < hist.Count; x++)
                 {

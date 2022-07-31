@@ -233,6 +233,8 @@ namespace COMPRAS2
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            dgvBusquedaHistorial.Rows.Clear();
+            dgvBusquedaHistorial.Columns.Clear();
             dgvBusquedaHistorial.DataSource = null;
             this.txtCodigo.Text = null;
             this.cbLugares.Text = null;
@@ -242,6 +244,9 @@ namespace COMPRAS2
 
         private async void busqueda() 
         {
+            dgvBusquedaHistorial.Columns.Clear();
+            dgvBusquedaHistorial.Rows.Clear();
+            dgvBusquedaHistorial.DataSource = null;
             int idtipomov = 0;
             int idUsers = 0;
             int idLugares = 0;
@@ -299,7 +304,7 @@ namespace COMPRAS2
             }
 
             if (statusmessageD.statuscode == 200)
-            {
+            {                
                 devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessageD.data);
 
                 if (devices.Count == 0)

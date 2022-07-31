@@ -279,6 +279,7 @@ namespace COMPRAS2
         {
             dgvInventario.DataSource = null;
             dgvInventario.Columns.Clear();
+            txtBUSCADOR.Clear();
             page = 1;
             isFiltering = false;
 

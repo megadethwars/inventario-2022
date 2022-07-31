@@ -221,6 +221,7 @@ namespace COMPRAS2
         {
             dgvReportes.DataSource = null;
             dgvReportes.Columns.Clear();
+            txtBUSCADOR.Clear();
             var url = HttpMethods.url + "reportes";
             StatusMessage statusmessage = await HttpMethods.get(url);
 
@@ -286,6 +287,7 @@ namespace COMPRAS2
                 dgvReportes.Rows.Clear();
                 page = 1;
                 isFiltering = true;
+
                 var url = HttpMethods.url + "reportes/filter/" + txtBUSCADOR.Text + "?limit=30";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 

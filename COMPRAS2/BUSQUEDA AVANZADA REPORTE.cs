@@ -220,6 +220,8 @@ namespace COMPRAS2
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            dgvReportes.Rows.Clear();
+            dgvReportes.Columns.Clear();
             dgvReportes.DataSource = null;
             
             this.txtCodigo.Text = null;
