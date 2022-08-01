@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
-
+using System.Threading;
 namespace COMPRAS2
 {
     public partial class REPORTES2 : Form
@@ -284,44 +284,46 @@ namespace COMPRAS2
             try
             {
                 reporteslist.Clear();
+               
                 dgvReportes.Rows.Clear();
+
                 page = 1;
                 isFiltering = true;
 
                 var url = HttpMethods.url + "reportes/filter/" + txtBUSCADOR.Text + "?limit=30";
                 StatusMessage statusmessage = await HttpMethods.get(url);
 
-                if (statusmessage.statuscode != 200)
+               if (statusmessage.statuscode != 200)
                 {
                     return;
                 }
 
-                List<Reportes> reportes = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+                reporteslist = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
                 
-                for (int x = 0; x < reportes.Count; x++)
+                for (int x = 0; x < reporteslist.Count; x++)
                 {
-                    Devices Dispositivos = reportes[x].dispositivo;
-                    reportes[x].dispositivoActual = Dispositivos.producto;
+                    Devices Dispositivos = reporteslist[x].dispositivo;
+                    reporteslist[x].dispositivoActual = Dispositivos.producto;
 
-                    User Usuarios = reportes[x].usuario;
-                    reportes[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
+                    User Usuarios = reporteslist[x].usuario;
+                    reporteslist[x].UserActual = Usuarios.nombre + " " + Usuarios.apellidoPaterno;
 
-                    User UsuariosA = reportes[x].usuario;
-                    reportes[x].UserActualA = Usuarios.apellidoPaterno;
+                    User UsuariosA = reporteslist[x].usuario;
+                    reporteslist[x].UserActualA = Usuarios.apellidoPaterno;
 
-                    Devices Codigos = reportes[x].dispositivo;
-                    reportes[x].dispositivoCodigo = Codigos.codigo;
+                    Devices Codigos = reporteslist[x].dispositivo;
+                    reporteslist[x].dispositivoCodigo = Codigos.codigo;
                 }
-
-                for (int x = 0; x < reportes.Count; x++)
+                dgvReportes.Rows.Clear();
+                for (int x = 0; x < reporteslist.Count; x++)
                 {
-                    Reportes inv = reportes[x];
-                    reportes[x].dispositivoActual = inv.dispositivoActual;
-                    reportes[x].fechaAlta = inv.fechaAlta;
-                    reportes[x].UserActual = inv.UserActual;
+                    Reportes inv = reporteslist[x];
+                    reporteslist[x].dispositivoActual = inv.dispositivoActual;
+                    reporteslist[x].fechaAlta = inv.fechaAlta;
+                    reporteslist[x].UserActual = inv.UserActual;
 
-                    string[] row = new string[] { reportes[x].dispositivoActual,
-                    reportes[x].fechaAlta.ToString(), reportes[x].UserActual.ToString()};
+                    string[] row = new string[] { reporteslist[x].dispositivoActual,
+                    reporteslist[x].fechaAlta.ToString(), reporteslist[x].UserActual.ToString()};
                     dgvReportes.Rows.Add(row);
                 }                
             }
@@ -332,7 +334,7 @@ namespace COMPRAS2
         }
 
         private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
-        {
+        {         
             busquedaNormal();
         }
     }

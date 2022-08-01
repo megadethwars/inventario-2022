@@ -354,7 +354,7 @@ namespace COMPRAS2
                     TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
                     hist[x].tipo_Actual = tipoMovimiento.tipo;
                 }
-               
+                dgvHistorial.Rows.Clear();
                 for (int x = 0; x < hist.Count; x++)
                 {
                     Movimientos mov = hist[x];

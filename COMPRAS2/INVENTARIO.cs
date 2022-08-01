@@ -378,7 +378,7 @@ namespace COMPRAS2
                     deviceslist[i].StatusActual = status.descripcion;
                     i++;
                 }
-
+                dgvInventario.Rows.Clear();
                 for (int x = 0; x < deviceslist.Count; x++)
                 {
                     Devices inv = deviceslist[x];
