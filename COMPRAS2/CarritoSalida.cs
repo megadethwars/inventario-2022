@@ -71,23 +71,17 @@ namespace COMPRAS2
 
             dgvCarritoSalida.Columns.Add("Codigo", "Codigo");
             dgvCarritoSalida.Columns.Add("Producto", "Producto");
-            dgvCarritoSalida.Columns.Add("Cantidad", "Cantidad");
-            //dgvCarritoSalida.Columns[0].Name = "Codigo";
-            //dgvCarritoSalida.Columns[1].Name = "Producto";
-            //dgvCarritoSalida.Columns[2].Name = "Cantidad";
-
+                        
             for (int x = 0; x < movimientos.Count; x++)
             {
                 Devices producto = movimientos[x].dispositivo;
-                movimientos[x].dispositivo_Actual = producto.producto;
-                movimientos[x].cantidad_Actual = producto.cantidad;
+                movimientos[x].dispositivo_Actual = producto.producto;               
                 movimientos[x].codigo_Actual = producto.codigo;
-                string[] row = new string[] { movimientos[x].codigo_Actual, movimientos[x].dispositivo_Actual, movimientos[x].cantidad_Actual.ToString() };
+                string[] row = new string[] { movimientos[x].codigo_Actual, movimientos[x].dispositivo_Actual, };
                 dgvCarritoSalida.Rows.Add(row);
             }
             
             //dgvCarritoSalida.DataSource = movimientos;
-
             //this.dgvCarritoSalida.Columns["dispositivo"].Visible = false;
             //this.dgvCarritoSalida.Columns["foto"].Visible = false;
             //this.dgvCarritoSalida.Columns["foto2"].Visible = false;
@@ -110,9 +104,7 @@ namespace COMPRAS2
             btnclm.Text = "Eliminar";
             btnclm.HeaderText = "Eliminar";
             btnclm.UseColumnTextForButtonValue = true;
-            this.dgvCarritoSalida.Columns.Add(btnclm);
-
-         
+            this.dgvCarritoSalida.Columns.Add(btnclm);         
         }
 
         private void btnBack_Click(object sender, EventArgs e)

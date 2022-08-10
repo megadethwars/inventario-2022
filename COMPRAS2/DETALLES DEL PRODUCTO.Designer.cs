@@ -82,6 +82,9 @@ namespace COMPRAS2
             this.lblObservaciones = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblCREAR_REPORTE = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.lblDModFecha = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -98,6 +101,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -293,9 +297,9 @@ namespace COMPRAS2
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblFecha.Location = new System.Drawing.Point(700, 500);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(66, 32);
+            this.lblFecha.Size = new System.Drawing.Size(103, 32);
             this.lblFecha.TabIndex = 61;
-            this.lblFecha.Text = "FECHA:";
+            this.lblFecha.Text = "FECHA ALTA:";
             // 
             // btnEditar
             // 
@@ -426,9 +430,9 @@ namespace COMPRAS2
             this.lblDFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblDFecha.Location = new System.Drawing.Point(702, 540);
             this.lblDFecha.Name = "lblDFecha";
-            this.lblDFecha.Size = new System.Drawing.Size(54, 20);
+            this.lblDFecha.Size = new System.Drawing.Size(86, 20);
             this.lblDFecha.TabIndex = 74;
-            this.lblDFecha.Text = "Fecha";
+            this.lblDFecha.Text = "Fecha Alta";
             // 
             // lblDCompra
             // 
@@ -684,7 +688,7 @@ namespace COMPRAS2
             this.lblAccesorio.AutoSize = true;
             this.lblAccesorio.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblAccesorio.Location = new System.Drawing.Point(700, 580);
+            this.lblAccesorio.Location = new System.Drawing.Point(700, 655);
             this.lblAccesorio.Name = "lblAccesorio";
             this.lblAccesorio.Size = new System.Drawing.Size(102, 32);
             this.lblAccesorio.TabIndex = 96;
@@ -695,7 +699,7 @@ namespace COMPRAS2
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox8.Location = new System.Drawing.Point(700, 575);
+            this.pictureBox8.Location = new System.Drawing.Point(700, 655);
             this.pictureBox8.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(550, 3);
@@ -710,7 +714,7 @@ namespace COMPRAS2
             this.lblDAccesorio.AutoSize = true;
             this.lblDAccesorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDAccesorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblDAccesorio.Location = new System.Drawing.Point(702, 620);
+            this.lblDAccesorio.Location = new System.Drawing.Point(702, 695);
             this.lblDAccesorio.Name = "lblDAccesorio";
             this.lblDAccesorio.Size = new System.Drawing.Size(87, 20);
             this.lblDAccesorio.TabIndex = 98;
@@ -723,7 +727,7 @@ namespace COMPRAS2
             this.lblSerie.AutoSize = true;
             this.lblSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSerie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblSerie.Location = new System.Drawing.Point(700, 700);
+            this.lblSerie.Location = new System.Drawing.Point(700, 773);
             this.lblSerie.Name = "lblSerie";
             this.lblSerie.Size = new System.Drawing.Size(46, 20);
             this.lblSerie.TabIndex = 104;
@@ -734,7 +738,7 @@ namespace COMPRAS2
             this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox15.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox15.Location = new System.Drawing.Point(700, 655);
+            this.pictureBox15.Location = new System.Drawing.Point(700, 730);
             this.pictureBox15.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(550, 3);
@@ -749,7 +753,7 @@ namespace COMPRAS2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label2.Location = new System.Drawing.Point(700, 660);
+            this.label2.Location = new System.Drawing.Point(700, 733);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 32);
             this.label2.TabIndex = 102;
@@ -815,12 +819,54 @@ namespace COMPRAS2
             this.lblCREAR_REPORTE.UseVisualStyleBackColor = false;
             this.lblCREAR_REPORTE.Click += new System.EventHandler(this.lblCREAR_REPORTE_Click);
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox17.Image = global::COMPRAS2.Properties.Resources.LINEA;
+            this.pictureBox17.Location = new System.Drawing.Point(700, 575);
+            this.pictureBox17.MaximumSize = new System.Drawing.Size(1000, 3);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 108;
+            this.pictureBox17.TabStop = false;
+            // 
+            // lblDModFecha
+            // 
+            this.lblDModFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDModFecha.AutoSize = true;
+            this.lblDModFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDModFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblDModFecha.Location = new System.Drawing.Point(700, 615);
+            this.lblDModFecha.Name = "lblDModFecha";
+            this.lblDModFecha.Size = new System.Drawing.Size(168, 20);
+            this.lblDModFecha.TabIndex = 107;
+            this.lblDModFecha.Text = "Fecha de Modificacion";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.label3.Location = new System.Drawing.Point(700, 580);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 32);
+            this.label3.TabIndex = 106;
+            this.label3.Text = "FECHA DE MODIFICACION:";
+            // 
             // DETALLES_DEL_PRODUCTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.lblDModFecha);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblCREAR_REPORTE);
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.pictureBox15);
@@ -894,6 +940,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -953,5 +1000,8 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblObservaciones;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button lblCREAR_REPORTE;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Label lblDModFecha;
+        private System.Windows.Forms.Label label3;
     }
 }
