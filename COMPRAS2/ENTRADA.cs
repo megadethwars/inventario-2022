@@ -194,7 +194,7 @@ namespace COMPRAS2
 
                 this.lbNombre.Text = devices[0].producto;
                 this.lbOrigen.Text = devices[0].origen;
-                this.lbSerie.Text = "N/A";
+                this.lbSerie.Text = devices[0].serie;
                 this.lbCantitad.Text = devices[0].cantidad.ToString();
                 this.lbMarca.Text = devices[0].marca;
                 this.lbdesc.Text = devices[0].descompostura;
