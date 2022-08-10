@@ -21,7 +21,7 @@ namespace COMPRAS2
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
-
+        int count = 0;
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
@@ -148,6 +148,9 @@ namespace COMPRAS2
                 MessageBox.Show("el producto ya existe en la lista");
                 return;
             }
+            txtBUSCADOR.Text = "";
+            count++;
+            lbCount.Text = count.ToString();
             movimientos.Add(movement);           
         }
         

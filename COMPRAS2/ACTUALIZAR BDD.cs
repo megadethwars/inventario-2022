@@ -273,8 +273,8 @@ namespace COMPRAS2
                             devUpd.observaciones = (string)worksheet.GetValueRowCol(row, 9);
                             devUpd.origen = (string)worksheet.GetValueRowCol(row, 7);
                             devUpd.pertenece = (string)worksheet.GetValueRowCol(row, 10);
-                            devUpd.serie = (string)worksheet.GetValueRowCol(row, 1);
-                            devUpd.lugarId = 1;
+                            devUpd.serie = (string)worksheet.GetValueRowCol(row, 2);
+                            
                             devUpd.serie = (string)devUpd.serie.Replace('\x22', '\0');
 
                             string json = JsonConvert.SerializeObject(devUpd,
@@ -300,7 +300,7 @@ namespace COMPRAS2
 
 
                     this.Invoke((MethodInvoker)delegate () {
-                        porcentaje.Text = worksheet.GetText(row, 1) + "  " + (row * 100 / 1800).ToString() + "%";
+                        porcentaje.Text = worksheet.GetText(row, 1) + "  " + (row * 100 / 3800).ToString() + "%";
                     });
                     
                     row = row + 1;

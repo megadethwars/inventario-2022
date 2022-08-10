@@ -264,7 +264,7 @@ namespace COMPRAS2
 
                 //texto de quien recibe
                 PdfFont usuariofont = new PdfStandardFont(PdfFontFamily.TimesRoman, 12);
-                PdfTextElement lbusuario = new PdfTextElement(User.nombre + " " + User.apellidoPaterno, usuariofont);
+                PdfTextElement lbusuario = new PdfTextElement("", usuariofont);
                 lbusuario.Brush = PdfBrushes.Black;
                 PdfLayoutResult reslbusuario = lbusuario.Draw(gridResult.Page, new PointF(350.0f + (linePenfinal.Width / 2.0f), startPoint.Y - 20));
 
