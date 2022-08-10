@@ -31,12 +31,12 @@ namespace COMPRAS2
 
             this.lblTituloAgregarProducto.Font = new Font(ff, 26, fontStyle);
             this.lblNombreArchivo.Font = new Font(ff, 20, fontStyle);
-            this.btnSeleccionarArchivo.Font = new Font(ff, 18, fontStyle);
-            this.btnINICIAR.Font = new Font(ff, 18, fontStyle);
-            this.btnDETENER.Font = new Font(ff, 18, fontStyle);
+            this.btnSelArchivo.Font = new Font(ff, 18, fontStyle);
             this.lblCodigoQR.Font = new Font(ff, 20, fontStyle);
             this.porcentaje.Font = new Font(ff, 20, fontStyle);
+            this.btnInit.Font = new Font(ff, 18, fontStyle);
 
+            this.btnStop.Font = new Font(ff, 18, fontStyle);
         }
 
         private void CargoPrivateFontCollection()
@@ -68,6 +68,7 @@ namespace COMPRAS2
         public ACTUALIZAR_BDD()
         {
             InitializeComponent();
+          
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -77,34 +78,43 @@ namespace COMPRAS2
 
         private void btnSeleccionarArchivo_Click(object sender, EventArgs e)
         {
-            if(OFDActualizar.ShowDialog() == DialogResult.OK)
-            {
-                lblNombreArchivo.Text = OFDActualizar.FileName;
-                path = OFDActualizar.FileName;
-            }
+            //if(OFDActualizar.ShowDialog() == DialogResult.OK)
+            //{
+            //    lblNombreArchivo.Text = OFDActualizar.FileName;
+            //    path = OFDActualizar.FileName;
+            //}
         }
 
         private void btnINICIAR_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Thread th = new Thread(syncDataBase);
+            //try
+            //{
+            //    Thread th = new Thread(syncDataBase);
 
-                th.Start();
+            //    th.Start();
 
-            }
-            catch (Exception ex) { 
-            }
+            //}
+            //catch (Exception ex) { 
+            //}
         }
 
 
         private async void syncDataBase() {
             try
             {
+                this.Invoke((MethodInvoker)delegate () {
+                    this.btnInit.Enabled = false;
+                });
+                
                 isStopped = false;
 
                 if (path == "") {
                     MessageBox.Show("No se ha seleccionado ningun archivo");
+                   
+                    this.Invoke((MethodInvoker)delegate () {
+                        this.btnInit.Enabled = true;
+                    });
+
                     return;
                 }
 
@@ -277,6 +287,7 @@ namespace COMPRAS2
                                 MessageBox.Show("Ocurrio un error durante la migracion en el la actualizacion " + deviceUpdate[0].codigo);
                                 workbook.Close();
                                 fStream.Close();
+                                this.btnInit.Enabled = true;
                                 return;
                             }
                         }
@@ -289,7 +300,7 @@ namespace COMPRAS2
 
 
                     this.Invoke((MethodInvoker)delegate () {
-                        porcentaje.Text = worksheet.GetText(row, 1) + "  " + (row * 100 / 1576).ToString() + "%";
+                        porcentaje.Text = worksheet.GetText(row, 1) + "  " + (row * 100 / 1800).ToString() + "%";
                     });
                     
                     row = row + 1;
@@ -303,10 +314,16 @@ namespace COMPRAS2
                 fStream.Close();
             }
             catch (Exception ex) {
-              
+                this.Invoke((MethodInvoker)delegate () {
+                    this.btnInit.Enabled = true;
+                });
+                
                 MessageBox.Show("Ocurrio un error en el proceso, revise el archivo que sea correcto, o su conexion a internet");
             }
-        
+            this.Invoke((MethodInvoker)delegate () {
+                this.btnInit.Enabled = true;
+            });
+
         }
 
         private void btnDETENER_Click(object sender, EventArgs e)
@@ -318,6 +335,37 @@ namespace COMPRAS2
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
+        }
+
+        private void btnSelArchivo_Click(object sender, EventArgs e)
+        {
+            if (OFDActualizar.ShowDialog() == DialogResult.OK)
+            {
+                lblNombreArchivo.Text = OFDActualizar.FileName;
+                path = OFDActualizar.FileName;
+            }
+        }
+
+        private void btnInit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Thread th = new Thread(syncDataBase);
+
+                th.Start();
+
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            isStopped = true;
+            
+            this.btnInit.Enabled = true;
+            
         }
     }
 }

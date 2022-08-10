@@ -33,11 +33,11 @@ namespace COMPRAS2
             this.lblNombreArchivo = new System.Windows.Forms.Label();
             this.lblTituloAgregarProducto = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnDETENER = new System.Windows.Forms.Button();
-            this.btnINICIAR = new System.Windows.Forms.Button();
-            this.btnSeleccionarArchivo = new System.Windows.Forms.Button();
             this.OFDActualizar = new System.Windows.Forms.OpenFileDialog();
             this.porcentaje = new System.Windows.Forms.Label();
+            this.btnSelArchivo = new System.Windows.Forms.Button();
+            this.btnInit = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCodigoQR
@@ -92,72 +92,6 @@ namespace COMPRAS2
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnDETENER
-            // 
-            this.btnDETENER.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnDETENER.BackColor = System.Drawing.Color.Transparent;
-            this.btnDETENER.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnDETENER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDETENER.Cursor = System.Windows.Forms.Cursors.PanSW;
-            this.btnDETENER.FlatAppearance.BorderSize = 0;
-            this.btnDETENER.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDETENER.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDETENER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDETENER.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDETENER.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnDETENER.Location = new System.Drawing.Point(540, 458);
-            this.btnDETENER.MaximumSize = new System.Drawing.Size(175, 39);
-            this.btnDETENER.Name = "btnDETENER";
-            this.btnDETENER.Size = new System.Drawing.Size(175, 39);
-            this.btnDETENER.TabIndex = 61;
-            this.btnDETENER.Text = "DETENER";
-            this.btnDETENER.UseVisualStyleBackColor = false;
-            this.btnDETENER.Click += new System.EventHandler(this.btnDETENER_Click);
-            // 
-            // btnINICIAR
-            // 
-            this.btnINICIAR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnINICIAR.BackColor = System.Drawing.Color.Transparent;
-            this.btnINICIAR.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnINICIAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnINICIAR.Cursor = System.Windows.Forms.Cursors.PanSW;
-            this.btnINICIAR.FlatAppearance.BorderSize = 0;
-            this.btnINICIAR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnINICIAR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnINICIAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnINICIAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnINICIAR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnINICIAR.Location = new System.Drawing.Point(540, 385);
-            this.btnINICIAR.MaximumSize = new System.Drawing.Size(175, 39);
-            this.btnINICIAR.Name = "btnINICIAR";
-            this.btnINICIAR.Size = new System.Drawing.Size(175, 39);
-            this.btnINICIAR.TabIndex = 62;
-            this.btnINICIAR.Text = "INICIAR";
-            this.btnINICIAR.UseVisualStyleBackColor = false;
-            this.btnINICIAR.Click += new System.EventHandler(this.btnINICIAR_Click);
-            // 
-            // btnSeleccionarArchivo
-            // 
-            this.btnSeleccionarArchivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnSeleccionarArchivo.BackColor = System.Drawing.Color.Transparent;
-            this.btnSeleccionarArchivo.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
-            this.btnSeleccionarArchivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSeleccionarArchivo.Cursor = System.Windows.Forms.Cursors.PanSW;
-            this.btnSeleccionarArchivo.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionarArchivo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSeleccionarArchivo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSeleccionarArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionarArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnSeleccionarArchivo.Location = new System.Drawing.Point(540, 320);
-            this.btnSeleccionarArchivo.MaximumSize = new System.Drawing.Size(175, 39);
-            this.btnSeleccionarArchivo.Name = "btnSeleccionarArchivo";
-            this.btnSeleccionarArchivo.Size = new System.Drawing.Size(175, 39);
-            this.btnSeleccionarArchivo.TabIndex = 63;
-            this.btnSeleccionarArchivo.Text = "SELECCIONAR ARCHIVO";
-            this.btnSeleccionarArchivo.UseVisualStyleBackColor = false;
-            this.btnSeleccionarArchivo.Click += new System.EventHandler(this.btnSeleccionarArchivo_Click);
-            // 
             // OFDActualizar
             // 
             this.OFDActualizar.FileName = "OFDActualizar";
@@ -174,16 +108,80 @@ namespace COMPRAS2
             this.porcentaje.TabIndex = 64;
             this.porcentaje.Text = "0 %";
             // 
+            // btnSelArchivo
+            // 
+            this.btnSelArchivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSelArchivo.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelArchivo.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnSelArchivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSelArchivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelArchivo.FlatAppearance.BorderSize = 0;
+            this.btnSelArchivo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSelArchivo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSelArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnSelArchivo.Location = new System.Drawing.Point(518, 195);
+            this.btnSelArchivo.Name = "btnSelArchivo";
+            this.btnSelArchivo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnSelArchivo.Size = new System.Drawing.Size(197, 39);
+            this.btnSelArchivo.TabIndex = 65;
+            this.btnSelArchivo.Text = "SELECCIONAR ";
+            this.btnSelArchivo.UseVisualStyleBackColor = false;
+            this.btnSelArchivo.Click += new System.EventHandler(this.btnSelArchivo_Click);
+            // 
+            // btnInit
+            // 
+            this.btnInit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnInit.BackColor = System.Drawing.Color.Transparent;
+            this.btnInit.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnInit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInit.FlatAppearance.BorderSize = 0;
+            this.btnInit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnInit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnInit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnInit.Location = new System.Drawing.Point(518, 261);
+            this.btnInit.Name = "btnInit";
+            this.btnInit.Size = new System.Drawing.Size(197, 39);
+            this.btnInit.TabIndex = 66;
+            this.btnInit.Text = "INICIAR";
+            this.btnInit.UseVisualStyleBackColor = false;
+            this.btnInit.Click += new System.EventHandler(this.btnInit_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnStop.BackColor = System.Drawing.Color.Transparent;
+            this.btnStop.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStop.FlatAppearance.BorderSize = 0;
+            this.btnStop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnStop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnStop.Location = new System.Drawing.Point(518, 320);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(197, 39);
+            this.btnStop.TabIndex = 67;
+            this.btnStop.Text = "DETENER";
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
             // ACTUALIZAR_BDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnInit);
+            this.Controls.Add(this.btnSelArchivo);
             this.Controls.Add(this.porcentaje);
-            this.Controls.Add(this.btnSeleccionarArchivo);
-            this.Controls.Add(this.btnINICIAR);
-            this.Controls.Add(this.btnDETENER);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblCodigoQR);
             this.Controls.Add(this.lblNombreArchivo);
@@ -203,10 +201,10 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lblCodigoQR;
         private System.Windows.Forms.Label lblNombreArchivo;
         private System.Windows.Forms.Label lblTituloAgregarProducto;
-        private System.Windows.Forms.Button btnDETENER;
-        private System.Windows.Forms.Button btnINICIAR;
-        private System.Windows.Forms.Button btnSeleccionarArchivo;
         private System.Windows.Forms.OpenFileDialog OFDActualizar;
         private System.Windows.Forms.Label porcentaje;
+        private System.Windows.Forms.Button btnSelArchivo;
+        private System.Windows.Forms.Button btnInit;
+        private System.Windows.Forms.Button btnStop;
     }
 }
