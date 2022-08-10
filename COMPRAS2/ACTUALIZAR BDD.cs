@@ -24,7 +24,9 @@ namespace COMPRAS2
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
-
+        int inicio = 0;
+        int fin = 0;
+        int diferencia = 0;
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
@@ -104,6 +106,31 @@ namespace COMPRAS2
             {
                 this.Invoke((MethodInvoker)delegate () {
                     this.btnInit.Enabled = false;
+                    try
+                    {
+                        if (txtInicio.Text.Equals("")) {
+                            MessageBox.Show("Especificque inicio de celdas");
+                            return;
+                        }
+                        if (txtFin.Text.Equals(""))
+                        {
+                            MessageBox.Show("Especifique fin de celdas");
+                            return;
+                        }
+                        inicio = int.Parse(txtInicio.Text);
+
+                        fin = int.Parse(txtFin.Text);
+
+                        diferencia = fin - inicio;
+                        if (diferencia < 0)
+                        {
+                            MessageBox.Show("el rango de fin no puede ser menor que el de inicio");
+                            return;
+                        }
+                    }
+                    catch (Exception ex) {
+                        MessageBox.Show("Deben de ser valores numericos");
+                    }
                 });
                 
                 isStopped = false;
@@ -132,10 +159,11 @@ namespace COMPRAS2
                 //Access first worksheet from the workbook.
                 IWorksheet worksheet = workbook.Worksheets[0];
 
-                int row = 2;
+                int row = inicio;
          
 
-                while (!worksheet.GetValueRowCol(row, 2).Equals("") || !worksheet.GetValueRowCol(row+1, 2).Equals("") || !worksheet.GetValueRowCol(row+2, 2).Equals("") || !worksheet.GetValueRowCol(row + 3, 2).Equals("") || !worksheet.GetValueRowCol(row + 4, 2).Equals("") || !worksheet.GetValueRowCol(row + 5, 2).Equals("") || !worksheet.GetValueRowCol(row + 6, 2).Equals(""))
+                //while (!worksheet.GetValueRowCol(row, 2).Equals("") || !worksheet.GetValueRowCol(row+1, 2).Equals("") || !worksheet.GetValueRowCol(row+2, 2).Equals("") || !worksheet.GetValueRowCol(row + 3, 2).Equals("") || !worksheet.GetValueRowCol(row + 4, 2).Equals("") || !worksheet.GetValueRowCol(row + 5, 2).Equals("") || !worksheet.GetValueRowCol(row + 6, 2).Equals(""))
+                for(int x=inicio;x<fin;x++)
                 {
 
                     if (isStopped)
@@ -230,7 +258,7 @@ namespace COMPRAS2
                             n.statusId = 1;
                             n.serie = n.serie.Replace('\x22', '\0');
                             
-
+                          
                             string json = JsonConvert.SerializeObject(n,
                             new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
                             var urlpost = HttpMethods.url + "dispositivos";

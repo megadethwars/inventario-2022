@@ -38,6 +38,9 @@ namespace COMPRAS2
             this.btnSelArchivo = new System.Windows.Forms.Button();
             this.btnInit = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
+            this.txtInicio = new System.Windows.Forms.TextBox();
+            this.txtFin = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCodigoQR
@@ -172,12 +175,41 @@ namespace COMPRAS2
             this.btnStop.UseVisualStyleBackColor = false;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
+            // txtInicio
+            // 
+            this.txtInicio.Location = new System.Drawing.Point(127, 261);
+            this.txtInicio.Name = "txtInicio";
+            this.txtInicio.Size = new System.Drawing.Size(87, 20);
+            this.txtInicio.TabIndex = 68;
+            // 
+            // txtFin
+            // 
+            this.txtFin.Location = new System.Drawing.Point(260, 261);
+            this.txtFin.Name = "txtFin";
+            this.txtFin.Size = new System.Drawing.Size(92, 20);
+            this.txtFin.TabIndex = 69;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.label1.Location = new System.Drawing.Point(121, 195);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 31);
+            this.label1.TabIndex = 70;
+            this.label1.Text = "Inicio - fin de celda";
+            // 
             // ACTUALIZAR_BDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtFin);
+            this.Controls.Add(this.txtInicio);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnInit);
             this.Controls.Add(this.btnSelArchivo);
@@ -206,5 +238,8 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnSelArchivo;
         private System.Windows.Forms.Button btnInit;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.TextBox txtInicio;
+        private System.Windows.Forms.TextBox txtFin;
+        private System.Windows.Forms.Label label1;
     }
 }
