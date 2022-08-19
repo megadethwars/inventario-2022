@@ -132,7 +132,7 @@ namespace COMPRAS2
             this.btnEditarMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarMovimientos.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnEditarMovimientos.Location = new System.Drawing.Point(1020, 728);
+            this.btnEditarMovimientos.Location = new System.Drawing.Point(1038, 728);
             this.btnEditarMovimientos.Name = "btnEditarMovimientos";
             this.btnEditarMovimientos.Size = new System.Drawing.Size(175, 39);
             this.btnEditarMovimientos.TabIndex = 38;
@@ -153,7 +153,7 @@ namespace COMPRAS2
             this.btnActualizarBDD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarBDD.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarBDD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizarBDD.Location = new System.Drawing.Point(658, 728);
+            this.btnActualizarBDD.Location = new System.Drawing.Point(676, 728);
             this.btnActualizarBDD.Name = "btnActualizarBDD";
             this.btnActualizarBDD.Size = new System.Drawing.Size(175, 39);
             this.btnActualizarBDD.TabIndex = 37;
@@ -174,7 +174,7 @@ namespace COMPRAS2
             this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizarProducto.Location = new System.Drawing.Point(839, 728);
+            this.btnActualizarProducto.Location = new System.Drawing.Point(857, 728);
             this.btnActualizarProducto.Name = "btnActualizarProducto";
             this.btnActualizarProducto.Size = new System.Drawing.Size(175, 39);
             this.btnActualizarProducto.TabIndex = 36;
@@ -195,7 +195,7 @@ namespace COMPRAS2
             this.btnSALIDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSALIDA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnSALIDA.Location = new System.Drawing.Point(455, 728);
+            this.btnSALIDA.Location = new System.Drawing.Point(473, 728);
             this.btnSALIDA.Name = "btnSALIDA";
             this.btnSALIDA.Size = new System.Drawing.Size(197, 39);
             this.btnSALIDA.TabIndex = 35;
@@ -218,7 +218,7 @@ namespace COMPRAS2
             this.btnReingresarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnReingresarProducto.Location = new System.Drawing.Point(245, 728);
             this.btnReingresarProducto.Name = "btnReingresarProducto";
-            this.btnReingresarProducto.Size = new System.Drawing.Size(204, 39);
+            this.btnReingresarProducto.Size = new System.Drawing.Size(222, 39);
             this.btnReingresarProducto.TabIndex = 34;
             this.btnReingresarProducto.Text = "ENTRADA DE PRODUCTOS";
             this.btnReingresarProducto.UseVisualStyleBackColor = false;

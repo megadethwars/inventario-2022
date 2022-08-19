@@ -31,7 +31,6 @@ namespace COMPRAS2
         {
             this.lblCarritoDeSalida = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -39,8 +38,6 @@ namespace COMPRAS2
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbdesc = new System.Windows.Forms.Label();
-            this.lbCantitad = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbModelo = new System.Windows.Forms.Label();
             this.lbOrigen = new System.Windows.Forms.Label();
             this.lbSerie = new System.Windows.Forms.Label();
@@ -57,7 +54,6 @@ namespace COMPRAS2
             this.btnAgregarCarrito = new System.Windows.Forms.Button();
             this.btClear = new System.Windows.Forms.Button();
             this.btnBuscador = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -94,19 +90,6 @@ namespace COMPRAS2
             this.btnBack.TabIndex = 69;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox7.Location = new System.Drawing.Point(661, 411);
-            this.pictureBox7.MaximumSize = new System.Drawing.Size(1000, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(550, 3);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 123;
-            this.pictureBox7.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -196,32 +179,6 @@ namespace COMPRAS2
             this.lbdesc.Size = new System.Drawing.Size(95, 24);
             this.lbdesc.TabIndex = 116;
             this.lbdesc.Text = "Por definir";
-            // 
-            // lbCantitad
-            // 
-            this.lbCantitad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbCantitad.AutoSize = true;
-            this.lbCantitad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCantitad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lbCantitad.Location = new System.Drawing.Point(661, 481);
-            this.lbCantitad.Name = "lbCantitad";
-            this.lbCantitad.Size = new System.Drawing.Size(95, 24);
-            this.lbCantitad.TabIndex = 115;
-            this.lbCantitad.Text = "Por definir";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(661, 431);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 32);
-            this.label3.TabIndex = 114;
-            this.label3.Text = "CANTIDAD:";
             // 
             // lbModelo
             // 
@@ -448,7 +405,6 @@ namespace COMPRAS2
             this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.btClear);
             this.Controls.Add(this.btnAgregarCarrito);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -456,8 +412,6 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbdesc);
-            this.Controls.Add(this.lbCantitad);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbModelo);
             this.Controls.Add(this.lbOrigen);
             this.Controls.Add(this.lbSerie);
@@ -477,7 +431,6 @@ namespace COMPRAS2
             this.Name = "ENTRADA";
             this.Text = "ENTRADA";
             this.Load += new System.EventHandler(this.ENTRADA_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -494,7 +447,6 @@ namespace COMPRAS2
 
         private System.Windows.Forms.Label lblCarritoDeSalida;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -502,8 +454,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbdesc;
-        private System.Windows.Forms.Label lbCantitad;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbModelo;
         private System.Windows.Forms.Label lbOrigen;
         private System.Windows.Forms.Label lbSerie;

@@ -84,7 +84,7 @@ namespace COMPRAS2
             this.lblCREAR_REPORTE = new System.Windows.Forms.Button();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.lblDModFecha = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblFechaDeModificacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -845,18 +845,18 @@ namespace COMPRAS2
             this.lblDModFecha.TabIndex = 107;
             this.lblDModFecha.Text = "Fecha de Modificacion";
             // 
-            // label3
+            // lblFechaDeModificacion
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblFechaDeModificacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(700, 580);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 32);
-            this.label3.TabIndex = 106;
-            this.label3.Text = "FECHA DE MODIFICACION:";
+            this.lblFechaDeModificacion.AutoSize = true;
+            this.lblFechaDeModificacion.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaDeModificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.lblFechaDeModificacion.Location = new System.Drawing.Point(700, 580);
+            this.lblFechaDeModificacion.Name = "lblFechaDeModificacion";
+            this.lblFechaDeModificacion.Size = new System.Drawing.Size(200, 32);
+            this.lblFechaDeModificacion.TabIndex = 106;
+            this.lblFechaDeModificacion.Text = "FECHA DE MODIFICACION:";
             // 
             // DETALLES_DEL_PRODUCTO
             // 
@@ -866,7 +866,7 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1279, 861);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.lblDModFecha);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblFechaDeModificacion);
             this.Controls.Add(this.lblCREAR_REPORTE);
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.pictureBox15);
@@ -1002,6 +1002,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button lblCREAR_REPORTE;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Label lblDModFecha;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblFechaDeModificacion;
     }
 }

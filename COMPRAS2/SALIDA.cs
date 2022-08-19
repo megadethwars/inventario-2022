@@ -33,7 +33,6 @@ namespace COMPRAS2
             this.lbd.Font = new Font(ff, 20, fontStyle);
             this.lbm.Font = new Font(ff, 20, fontStyle);
             this.mod.Font = new Font(ff, 20, fontStyle);
-            this.label3.Font = new Font(ff, 20, fontStyle);
             this.btnAgregarCarrito.Font = new Font(ff, 18, fontStyle);
         }
 
@@ -126,7 +125,6 @@ namespace COMPRAS2
                 this.lbNombre.Text = devices[0].producto;
                 this.lbOrigen.Text = devices[0].origen;
                 this.lbSerie.Text = devices[0].serie;
-                this.lbCantitad.Text = devices[0].cantidad.ToString();
                 this.lbMarca.Text = devices[0].marca;
                 this.lbdesc.Text = devices[0].descompostura;
                 this.lbModelo.Text = devices[0].modelo;

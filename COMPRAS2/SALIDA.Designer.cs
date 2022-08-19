@@ -44,8 +44,6 @@ namespace COMPRAS2
             this.lbSerie = new System.Windows.Forms.Label();
             this.lbOrigen = new System.Windows.Forms.Label();
             this.lbModelo = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbCantitad = new System.Windows.Forms.Label();
             this.lbdesc = new System.Windows.Forms.Label();
             this.btnAgregarCarrito = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,7 +52,6 @@ namespace COMPRAS2
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnBuscador = new System.Windows.Forms.Button();
             this.lbCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
@@ -64,7 +61,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // mod
@@ -250,32 +246,6 @@ namespace COMPRAS2
             this.lbModelo.TabIndex = 88;
             this.lbModelo.Text = "Por definir";
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(670, 410);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 35);
-            this.label3.TabIndex = 89;
-            this.label3.Text = "CANTIDAD:";
-            // 
-            // lbCantitad
-            // 
-            this.lbCantitad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbCantitad.AutoSize = true;
-            this.lbCantitad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCantitad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lbCantitad.Location = new System.Drawing.Point(670, 460);
-            this.lbCantitad.Name = "lbCantitad";
-            this.lbCantitad.Size = new System.Drawing.Size(95, 24);
-            this.lbCantitad.TabIndex = 90;
-            this.lbCantitad.Text = "Por definir";
-            // 
             // lbdesc
             // 
             this.lbdesc.AutoSize = true;
@@ -386,19 +356,6 @@ namespace COMPRAS2
             this.pictureBox6.TabIndex = 99;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox7.Location = new System.Drawing.Point(670, 390);
-            this.pictureBox7.MaximumSize = new System.Drawing.Size(1000, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(550, 3);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 100;
-            this.pictureBox7.TabStop = false;
-            // 
             // btnBuscador
             // 
             this.btnBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -438,7 +395,6 @@ namespace COMPRAS2
             this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.btnBuscador);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -447,8 +403,6 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAgregarCarrito);
             this.Controls.Add(this.lbdesc);
-            this.Controls.Add(this.lbCantitad);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbModelo);
             this.Controls.Add(this.lbOrigen);
             this.Controls.Add(this.lbSerie);
@@ -475,7 +429,6 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,8 +450,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lbSerie;
         private System.Windows.Forms.Label lbOrigen;
         private System.Windows.Forms.Label lbModelo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbCantitad;
         private System.Windows.Forms.Label lbdesc;
         private System.Windows.Forms.Button btnAgregarCarrito;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -507,7 +458,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btnBuscador;
         private System.Windows.Forms.Label lbCount;
     }

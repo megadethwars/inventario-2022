@@ -36,6 +36,7 @@ namespace COMPRAS2
             this.lblOrigen.Font = new Font(ff, 20, fontStyle);
             this.label4.Font = new Font(ff, 20, fontStyle);
             this.lblLugar.Font = new Font(ff, 20, fontStyle);
+            this.lblFechaDeModificacion.Font = new Font(ff, 20, fontStyle);
             this.lblEstatus.Font = new Font(ff, 20, fontStyle);
             this.lblDescompostura.Font = new Font(ff, 20, fontStyle);
             this.lblDescompostura.Font = new Font(ff, 20, fontStyle);
@@ -113,7 +114,7 @@ namespace COMPRAS2
             this.lblDFecha.Text = devices.fechaAlta.ToString();
             this.lblDModFecha.Text = devices.fechaUltimaModificacion.ToString();
             this.lblDLugar.Text = devices.Lugar_Actual;
-            this.lblDEstatus.Text = devices.StatusActual;
+            this.lblDEstatus.Text = devices.StatusActual;            
             this.lblDDescompostura.Text = devices.descompostura;
             this.lblDProvedor.Text = devices.proveedor;
             this.lblDCantidad.Text = devices.cantidad.ToString();
