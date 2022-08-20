@@ -382,6 +382,7 @@ namespace COMPRAS2
             this.txtSerie.Text = null;
             this.cbEstatus.Text = null;
             this.cbLugares.SelectedItem = null;
+            devicequery = new QueryDevice();
             page = 1;
         }
 
