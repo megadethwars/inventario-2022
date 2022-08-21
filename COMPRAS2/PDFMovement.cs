@@ -426,7 +426,7 @@ namespace COMPRAS2
                 //var table = await App.MobileService.GetTable<Movimientos>().Where(u => u.ID == IDsalida).ToListAsync();
                 string json = JsonConvert.SerializeObject(hist,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                var url = HttpMethods.url + "movimientos/query";
+                var url = HttpMethods.url + "movimientos/query?limit=999999";
                 StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
                 if (statusmessage.statuscode == 500)
