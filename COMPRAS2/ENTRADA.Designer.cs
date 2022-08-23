@@ -67,11 +67,11 @@ namespace COMPRAS2
             // 
             this.lblCarritoDeSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCarritoDeSalida.AutoSize = true;
-            this.lblCarritoDeSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarritoDeSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarritoDeSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblCarritoDeSalida.Location = new System.Drawing.Point(560, 30);
             this.lblCarritoDeSalida.Name = "lblCarritoDeSalida";
-            this.lblCarritoDeSalida.Size = new System.Drawing.Size(104, 42);
+            this.lblCarritoDeSalida.Size = new System.Drawing.Size(182, 39);
             this.lblCarritoDeSalida.TabIndex = 70;
             this.lblCarritoDeSalida.Text = "ENTRADA";
             // 
@@ -99,7 +99,7 @@ namespace COMPRAS2
             this.pictureBox6.Location = new System.Drawing.Point(661, 301);
             this.pictureBox6.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox6.Size = new System.Drawing.Size(550, 0);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 122;
             this.pictureBox6.TabStop = false;
@@ -112,7 +112,7 @@ namespace COMPRAS2
             this.pictureBox5.Location = new System.Drawing.Point(61, 521);
             this.pictureBox5.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox5.Size = new System.Drawing.Size(550, 0);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 121;
             this.pictureBox5.TabStop = false;
@@ -125,7 +125,7 @@ namespace COMPRAS2
             this.pictureBox4.Location = new System.Drawing.Point(61, 411);
             this.pictureBox4.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox4.Size = new System.Drawing.Size(550, 0);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 120;
             this.pictureBox4.TabStop = false;
@@ -138,7 +138,7 @@ namespace COMPRAS2
             this.pictureBox3.Location = new System.Drawing.Point(61, 301);
             this.pictureBox3.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox3.Size = new System.Drawing.Size(550, 0);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 119;
             this.pictureBox3.TabStop = false;
@@ -151,7 +151,7 @@ namespace COMPRAS2
             this.pictureBox2.Location = new System.Drawing.Point(661, 191);
             this.pictureBox2.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox2.Size = new System.Drawing.Size(550, 0);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 118;
             this.pictureBox2.TabStop = false;
@@ -164,7 +164,7 @@ namespace COMPRAS2
             this.pictureBox1.Location = new System.Drawing.Point(61, 191);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox1.Size = new System.Drawing.Size(550, 0);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 117;
             this.pictureBox1.TabStop = false;
@@ -242,22 +242,22 @@ namespace COMPRAS2
             // lbd
             // 
             this.lbd.AutoSize = true;
-            this.lbd.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbd.Location = new System.Drawing.Point(61, 541);
             this.lbd.Name = "lbd";
-            this.lbd.Size = new System.Drawing.Size(208, 32);
+            this.lbd.Size = new System.Drawing.Size(383, 31);
             this.lbd.TabIndex = 108;
             this.lbd.Text = "OBSERVACIONES PREVIAS:";
             // 
             // or
             // 
             this.or.AutoSize = true;
-            this.or.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.or.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.or.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.or.Location = new System.Drawing.Point(61, 431);
             this.or.Name = "or";
-            this.or.Size = new System.Drawing.Size(97, 32);
+            this.or.Size = new System.Drawing.Size(175, 31);
             this.or.TabIndex = 107;
             this.or.Text = "ORIGEN DE:";
             // 
@@ -266,22 +266,22 @@ namespace COMPRAS2
             this.mod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mod.AutoSize = true;
-            this.mod.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mod.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.mod.Location = new System.Drawing.Point(661, 321);
             this.mod.Name = "mod";
-            this.mod.Size = new System.Drawing.Size(80, 32);
+            this.mod.Size = new System.Drawing.Size(139, 31);
             this.mod.TabIndex = 106;
             this.mod.Text = "MODELO:";
             // 
             // lbS
             // 
             this.lbS.AutoSize = true;
-            this.lbS.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbS.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbS.Location = new System.Drawing.Point(61, 321);
             this.lbS.Name = "lbS";
-            this.lbS.Size = new System.Drawing.Size(62, 32);
+            this.lbS.Size = new System.Drawing.Size(104, 31);
             this.lbS.TabIndex = 105;
             this.lbS.Text = "SERIE:";
             // 
@@ -290,22 +290,22 @@ namespace COMPRAS2
             this.lbm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbm.AutoSize = true;
-            this.lbm.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbm.Location = new System.Drawing.Point(661, 211);
             this.lbm.Name = "lbm";
-            this.lbm.Size = new System.Drawing.Size(71, 32);
+            this.lbm.Size = new System.Drawing.Size(120, 31);
             this.lbm.TabIndex = 104;
             this.lbm.Text = "MARCA:";
             // 
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblProducto.Location = new System.Drawing.Point(61, 211);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(83, 32);
+            this.lblProducto.Size = new System.Drawing.Size(141, 31);
             this.lblProducto.TabIndex = 103;
             this.lblProducto.Text = "NOMBRE:";
             // 
@@ -347,9 +347,9 @@ namespace COMPRAS2
             this.btnAgregarCarrito.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarCarrito.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCarrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarCarrito.Location = new System.Drawing.Point(1026, 774);
+            this.btnAgregarCarrito.Location = new System.Drawing.Point(1026, 701);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
             this.btnAgregarCarrito.Size = new System.Drawing.Size(175, 39);
             this.btnAgregarCarrito.TabIndex = 124;
@@ -368,9 +368,9 @@ namespace COMPRAS2
             this.btClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btClear.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btClear.Location = new System.Drawing.Point(61, 774);
+            this.btClear.Location = new System.Drawing.Point(61, 701);
             this.btClear.Name = "btClear";
             this.btClear.Size = new System.Drawing.Size(175, 39);
             this.btClear.TabIndex = 125;
@@ -401,7 +401,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.btClear);
             this.Controls.Add(this.btnAgregarCarrito);

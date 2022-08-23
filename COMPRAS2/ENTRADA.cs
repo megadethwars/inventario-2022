@@ -135,7 +135,7 @@ namespace COMPRAS2
 
             QueryDevice devicequery = new QueryDevice();
             devicequery.codigo = txtBUSCADOR.Text;
-
+            txtBUSCADOR.Clear();
             string json = JsonConvert.SerializeObject(devicequery,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
             var url = HttpMethods.url + "dispositivos/query";
@@ -192,11 +192,12 @@ namespace COMPRAS2
                 */
 
                 this.lbNombre.Text = devices[0].producto;
-                this.lbOrigen.Text = devices[0].origen;
+                this.lbOrigen.Text = devices[0].lugar.lugar;
                 this.lbSerie.Text = devices[0].serie;
                 this.lbMarca.Text = devices[0].marca;
                 this.lbdesc.Text = devices[0].descompostura;
-                this.lbModelo.Text = devices[0].modelo;              
+                this.lbModelo.Text = devices[0].modelo;    
+                
 
                 //llenar
 
