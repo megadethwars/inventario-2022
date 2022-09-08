@@ -233,7 +233,7 @@ namespace COMPRAS2
 
             devicesUpdate.origen = txtOrigen.Text;
             
-            if (cbLugares.SelectedItem != null)
+            if (cbEstatus.SelectedItem != null)
             {
                 var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
                 idLugares = idLugarestuple.Item1;

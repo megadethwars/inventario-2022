@@ -119,6 +119,7 @@ namespace COMPRAS2
         {
             InitializeComponent();
             reporteslist = new List<Reportes>();
+            offssetpage = VG.offssetpage;
         }
 
         private void btnBack_Click(object sender, EventArgs e)

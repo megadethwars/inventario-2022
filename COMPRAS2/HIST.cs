@@ -72,6 +72,7 @@ namespace COMPRAS2
             dgvHistorial.Scroll += new System.Windows.Forms.ScrollEventHandler(DataGridView1_Scroll);
             ScrollBars vscrolls = dgvHistorial.ScrollBars;
             bar = new VScrollBar();
+            offssetpage = VG.offssetpage;
         }
         
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)

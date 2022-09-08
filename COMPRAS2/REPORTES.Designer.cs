@@ -45,11 +45,11 @@ namespace COMPRAS2
             // 
             this.lblREPORTES.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblREPORTES.AutoSize = true;
-            this.lblREPORTES.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblREPORTES.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblREPORTES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblREPORTES.Location = new System.Drawing.Point(560, 30);
             this.lblREPORTES.Name = "lblREPORTES";
-            this.lblREPORTES.Size = new System.Drawing.Size(243, 42);
+            this.lblREPORTES.Size = new System.Drawing.Size(455, 39);
             this.lblREPORTES.TabIndex = 5;
             this.lblREPORTES.Text = "CREACION DE REPORTES";
             // 
@@ -72,7 +72,7 @@ namespace COMPRAS2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(140, 267);
+            this.label3.Location = new System.Drawing.Point(140, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 22;
@@ -99,7 +99,7 @@ namespace COMPRAS2
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.ForeColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(144, 308);
+            this.txtDescripcion.Location = new System.Drawing.Point(144, 235);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(1031, 447);
@@ -117,7 +117,7 @@ namespace COMPRAS2
             this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(605, 799);
+            this.btnOK.Location = new System.Drawing.Point(605, 726);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(88, 34);
             this.btnOK.TabIndex = 62;
@@ -157,7 +157,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombreDelProducto);
             this.Controls.Add(this.btnOK);

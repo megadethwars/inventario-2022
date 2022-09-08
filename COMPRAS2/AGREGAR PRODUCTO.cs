@@ -174,17 +174,13 @@ namespace COMPRAS2
                     return 1;
                 }
                 
-                if ((txtObservaciones.Text == "") || (txtObservaciones.Text == "Introduzca las Observaciones"))
+                if ((txtObservaciones.Text == ""))
                 {
                     MessageBox.Show("campo de observaciones vacio");
                     return 1;
                 }
 
-                if ((txtAccesorio.Text == "") || (txtAccesorio.Text == "Introduzca los Accesorios"))
-                {
-                    MessageBox.Show("campo de observaciones vacio");
-                    return 1;
-                }
+               
 
                 Devices product = new Devices();
                 product.producto = txtProducto.Text;
