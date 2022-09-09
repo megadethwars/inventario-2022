@@ -173,14 +173,7 @@ namespace COMPRAS2
                     MessageBox.Show("El costo no es numerico");
                     return 1;
                 }
-                
-                if ((txtObservaciones.Text == ""))
-                {
-                    MessageBox.Show("campo de observaciones vacio");
-                    return 1;
-                }
-
-               
+                               
 
                 Devices product = new Devices();
                 product.producto = txtProducto.Text;
