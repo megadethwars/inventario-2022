@@ -102,6 +102,7 @@ namespace COMPRAS2
 
 
         private async void syncDataBase() {
+            
             try
             {
                 this.Invoke((MethodInvoker)delegate () {
@@ -231,8 +232,11 @@ namespace COMPRAS2
 
                             DeviceMigrate n = new DeviceMigrate();
                             n.codigo = strs;
+                            n.codigo = RemoveSpecialCharacters(n.codigo);
                             n.serie = (string)worksheet.GetValueRowCol(row, 2);
+                            n.serie = RemoveSpecialCharacters(n.serie);
                             n.compra = worksheet.GetText(row, 8);
+                            n.compra = RemoveSpecialCharacters(n.compra);
                             try
                             {
                                 n.costo = int.Parse((string)worksheet.GetValueRowCol(row, 6));
@@ -246,12 +250,19 @@ namespace COMPRAS2
                             }
                             
                             n.descompostura = (string)worksheet.GetValueRowCol(row, 11);
+                            n.descompostura = RemoveSpecialCharacters(n.descompostura);
                             n.marca = (string)worksheet.GetValueRowCol(row, 4);
+                            n.marca = RemoveSpecialCharacters(n.marca);
                             n.modelo = (string)worksheet.GetValueRowCol(row, 5);
+                            n.modelo = RemoveSpecialCharacters(n.modelo);
                             n.producto = (string)worksheet.GetValueRowCol(row, 3);
+                            n.producto = RemoveSpecialCharacters(n.producto);
                             n.observaciones = (string)worksheet.GetValueRowCol(row, 9);
+                            n.observaciones = RemoveSpecialCharacters(n.observaciones);
                             n.origen = (string)worksheet.GetValueRowCol(row, 7);
+                            n.origen = RemoveSpecialCharacters(n.origen);
                             n.pertenece = (string)worksheet.GetValueRowCol(row, 10);
+                            n.pertenece = RemoveSpecialCharacters(n.pertenece);
                             //ID = id,
                             n.lugarId = 1;
                             n.cantidad = 2;
@@ -283,6 +294,9 @@ namespace COMPRAS2
                             devUpd.id = deviceUpdate[0].id;
 
                             devUpd.compra = (string)worksheet.GetValueRowCol(row, 8);
+                            devUpd.compra = devUpd.compra.Replace("\"", "");
+                            devUpd.compra = (string)devUpd.compra.Replace('\x22', '\0');
+                            devUpd.compra = RemoveSpecialCharacters(devUpd.compra);
                             try
                             {
                                 devUpd.costo = int.Parse((string)worksheet.GetValueRowCol(row, 6));
@@ -297,37 +311,94 @@ namespace COMPRAS2
                             }
 
                             devUpd.descompostura = (string)worksheet.GetValueRowCol(row, 11);
+                            devUpd.descompostura = devUpd.descompostura.Replace("\"", "");
+                            devUpd.descompostura = (string)devUpd.descompostura.Replace('\x22', '\0');
+                            devUpd.descompostura = (string)devUpd.descompostura.Replace('\x63', '\0');
+                      
+                            devUpd.descompostura = RemoveSpecialCharacters(devUpd.descompostura);
+                            if (devUpd.descompostura == "" || devUpd.descompostura == " ")
+                            {
+                                devUpd.descompostura = "-";
+                            }
                             devUpd.marca = (string)worksheet.GetValueRowCol(row, 4);
+                            if (devUpd.marca == "" || devUpd.marca == " ")
+                            {
+                                devUpd.marca = "-";
+                            }
                             devUpd.modelo = (string)worksheet.GetValueRowCol(row, 5);
+                            devUpd.modelo = devUpd.modelo.Replace("\"", "");
+                            devUpd.modelo = (string)devUpd.modelo.Replace('\x22', '\0');
+                            devUpd.modelo = RemoveSpecialCharacters(devUpd.modelo);
+                            if (devUpd.modelo == "" || devUpd.modelo == " ")
+                            {
+                                devUpd.modelo = "-";
+                            }
                             devUpd.producto = (string)worksheet.GetValueRowCol(row, 3);
+                            devUpd.producto = devUpd.producto.Replace("\"", "");
+                            devUpd.producto = (string)devUpd.producto.Replace('\x22', '\0');
+                            devUpd.producto = RemoveSpecialCharacters(devUpd.producto);
+                            if (devUpd.producto == "" || devUpd.producto == " ")
+                            {
+                                devUpd.producto = "-";
+                            }
                             devUpd.observaciones = (string)worksheet.GetValueRowCol(row, 9);
+                            devUpd.observaciones = devUpd.observaciones.Replace("\"", "");
+                            devUpd.observaciones = (string)devUpd.observaciones.Replace('\x22', '\0');
+                            devUpd.observaciones = RemoveSpecialCharacters(devUpd.observaciones);
+                            if (devUpd.observaciones == "" || devUpd.observaciones == " ")
+                            {
+                                devUpd.observaciones = "-";
+                            }
                             devUpd.origen = (string)worksheet.GetValueRowCol(row, 7);
+                            devUpd.origen = devUpd.origen.Replace("\"", "");
+                            devUpd.origen = (string)devUpd.origen.Replace('\x22', '\0');
+                            devUpd.origen = RemoveSpecialCharacters(devUpd.origen);
+                            if (devUpd.origen == "" || devUpd.origen == " ")
+                            {
+                                devUpd.origen = "-";
+                            }
                             devUpd.pertenece = (string)worksheet.GetValueRowCol(row, 10);
-                            devUpd.serie = (string)worksheet.GetValueRowCol(row, 2);
+                            devUpd.pertenece = devUpd.pertenece.Replace("\"", "");
+                            devUpd.pertenece = (string)devUpd.pertenece.Replace('\x22', '\0');
+                            devUpd.pertenece = RemoveSpecialCharacters(devUpd.pertenece);
+                            if (devUpd.pertenece == "" || devUpd.pertenece == " ")
+                            {
+                                devUpd.pertenece = "-";
+                            }
+                            devUpd.serie = (string)worksheet.GetValueRowCol(row, 2);                         
                             devUpd.serie = devUpd.serie.Replace("\"", "");
                             devUpd.serie = (string)devUpd.serie.Replace('\x22', '\0');
+                            devUpd.serie = RemoveSpecialCharacters(devUpd.serie);
+                            if (devUpd.serie == "" || devUpd.serie == " ")
+                            {
+                                devUpd.serie = "-";
+                            }
 
                             string json = JsonConvert.SerializeObject(devUpd,
                             new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
                             var urlput = HttpMethods.url + "dispositivos";
-                            StatusMessage statusmessageput = await HttpMethods.put(urlput, json);
 
-                            if (statusmessageput.statuscode != 200)
+                            try
                             {
-                                MessageBox.Show("Ocurrio un error durante la migracion en el la actualizacion " + deviceUpdate[0].codigo);
-                                workbook.Close();
-                                fStream.Close();
-                                this.btnInit.Enabled = true;
-                                return;
+                                StatusMessage statusmessageput = await HttpMethods.put(urlput, json);
+
+                                if (statusmessageput.statuscode != 200)
+                                {
+                                    MessageBox.Show("Ocurrio un error durante la migracion en el la actualizacion " + deviceUpdate[0].codigo);
+                                    workbook.Close();
+                                    fStream.Close();
+                                    this.btnInit.Enabled = true;
+                                    return;
+                                }
                             }
+                            catch(Exception ex)
+                            {
+
+                            }
+                            
                         }
 
-                        
-
                     }
-
-                  
-
 
                     this.Invoke((MethodInvoker)delegate () {
                         porcentaje.Text = worksheet.GetText(row, 1) + "  " + ((row-inicio) * 100 / (fin-inicio)).ToString() + "%";
@@ -356,6 +427,26 @@ namespace COMPRAS2
 
         }
 
+        private  string RemoveSpecialCharacters(string str)
+        {
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (char c in str)
+                {
+                    if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '.' || c == '_')
+                    {
+                        sb.Append(c);
+                    }
+                }
+                return sb.ToString();
+            }
+            catch
+            {
+                return "";
+            }
+            
+        }
         private void btnDETENER_Click(object sender, EventArgs e)
         {
             isStopped = true;

@@ -17,7 +17,7 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string compra { get; set; }
 
-     
+        [DefaultValue(0)]
         public int costo { get; set; }
 
         [DefaultValue(null)]
