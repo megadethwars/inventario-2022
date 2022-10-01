@@ -75,18 +75,20 @@ namespace COMPRAS2
         }
 
         Devices devices;
-        public DETALLES_DEL_PRODUCTO(Devices devices)
+        List<Devices> listDevices = new List<Devices>();
+        string codigo = "";
+        public DETALLES_DEL_PRODUCTO(string codigo)
         {
             InitializeComponent();
-            this.devices = devices;           
+            this.codigo = codigo;
         }
 
         public void brnOPCIONES_Click(object sender, EventArgs e)
-        {            
+        {
             try
-            {               
+            {
                 this.devices = devices;
-                Navigator.nextPage(new EDITAR_PRODUCTO(devices));                
+                Navigator.nextPage(new EDITAR_PRODUCTO(devices));
             }
             catch (Exception ex)
             {
@@ -99,10 +101,28 @@ namespace COMPRAS2
             Navigator.backPage(this.Name, this);
         }
 
-        private void DETALLES_DEL_PRODUCTO_Load(object sender, EventArgs e)
+        private async void DETALLES_DEL_PRODUCTO_Load(object sender, EventArgs e)
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
+
+            QueryDevice devicequery = new QueryDevice();
+            devicequery.codigo = this.codigo;
+            int page = 1;
+            string url = "";
+            string json = JsonConvert.SerializeObject(devicequery,
+            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+
+            url = HttpMethods.url + "dispositivos/query?offset=" + page.ToString() + "&limit=30";
+
+
+            StatusMessage statusmessage = await HttpMethods.Post(url, json);
+            listDevices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+            if (listDevices.Count == 0)
+            {
+                return;
+            }
+            devices = listDevices[0];
 
             this.lblDProducto.Text = devices.producto;
             this.lblDCompra.Text = devices.compra;
@@ -114,13 +134,15 @@ namespace COMPRAS2
             this.lblDFecha.Text = devices.fechaAlta.ToString();
             this.lblDModFecha.Text = devices.fechaUltimaModificacion.ToString();
             this.lblDLugar.Text = devices.Lugar_Actual;
-            this.lblDEstatus.Text = devices.StatusActual;            
+            this.lblDEstatus.Text = devices.StatusActual;
             this.lblDDescompostura.Text = devices.descompostura;
             this.lblDProvedor.Text = devices.proveedor;
             this.lblDCantidad.Text = devices.cantidad.ToString();
             this.lblDAccesorio.Text = devices.accesorios;
             this.lblObservaciones.Text = devices.observaciones;
             this.lblSerie.Text = devices.serie;
+
+            
         }
 
         private void btnELIMINAR_Click(object sender, EventArgs e)

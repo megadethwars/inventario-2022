@@ -276,10 +276,10 @@ namespace COMPRAS2
                 DataGridViewCellCollection columns = cell.Cells;
 
                 var index =columns[1];
-                var codigo = index.FormattedValue;             
-                var datafind =deviceslist.Find(x => x.codigo.Contains((string)codigo));
-               
-                Navigator.nextPage(new DETALLES_DEL_PRODUCTO(datafind));                
+                var codigo = index.FormattedValue;
+                //var datafind =deviceslist.Find(x => x.codigo.Contains((string)codigo));
+
+                Navigator.nextPage(new DETALLES_DEL_PRODUCTO((string)codigo));              
             }
             catch(Exception ex)
             {

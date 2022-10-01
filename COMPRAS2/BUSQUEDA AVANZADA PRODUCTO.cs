@@ -395,9 +395,9 @@ namespace COMPRAS2
 
                 var index = columns[1];
                 var codigo = index.FormattedValue;
-                var datafind = devices.Find(x => x.codigo.Contains((string)codigo));
+                //var datafind = devices.Find(x => x.codigo.Contains((string)codigo));
 
-                Navigator.nextPage(new DETALLES_DEL_PRODUCTO(datafind));
+                Navigator.nextPage(new DETALLES_DEL_PRODUCTO((string)codigo));
 
             }
             catch (Exception ex)
