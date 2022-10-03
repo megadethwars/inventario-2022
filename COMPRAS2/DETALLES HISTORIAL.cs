@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using Newtonsoft.Json;
 
 namespace COMPRAS2
 {
@@ -59,11 +60,15 @@ namespace COMPRAS2
             font = new Font(ff, 15f, FontStyle.Bold);
         }
 
+        Movimientos movi;
+        List<Movimientos> listMovi = new List<Movimientos>();
+        string codigo = "";
+
         Movimientos mov;
-        public DETALLES_HISTORIAL(Movimientos mov)
+        public DETALLES_HISTORIAL(string codigo)
         {
             InitializeComponent();
-            this.mov = mov;
+            this.codigo = codigo;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -71,10 +76,28 @@ namespace COMPRAS2
             Navigator.backPage(this.Name, this);
         }
 
-        private void DETALLES_HISTORIAL_Load(object sender, EventArgs e)
+        private async void DETALLES_HISTORIAL_Load(object sender, EventArgs e)
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
+
+            QueryDevice devicequery = new QueryDevice();
+            devicequery.codigo = this.codigo;
+            int page = 1;
+            string url = "";
+            string json = JsonConvert.SerializeObject(devicequery,
+            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+
+            url = HttpMethods.url + "dispositivos/query?offset=" + page.ToString() + "&limit=30";
+
+
+            StatusMessage statusmessage = await HttpMethods.Post(url, json);
+            listMovi = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+            if (listMovi.Count == 0)
+            {
+                return;
+            }
+            movi = listMovi[0];
 
             this.lblUsuario.Text = mov.nombre_Actual;
             this.lblCodigo.Text = mov.codigo_Actual;

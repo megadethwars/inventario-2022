@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using Newtonsoft.Json;
 
 namespace COMPRAS2
 {
@@ -59,11 +60,15 @@ namespace COMPRAS2
             font = new Font(ff, 15f, FontStyle.Bold);
         }
 
+        Reportes rep;
+        List<Reportes> listRep = new List<Reportes>();
+        string codigo = "";
+
         Reportes reportes;
-        public DETALLES_REPORTE(Reportes reportes)
+        public DETALLES_REPORTE(string codigo)
         {
             InitializeComponent();
-            this.reportes = reportes;
+            this.codigo = codigo;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -76,10 +81,28 @@ namespace COMPRAS2
             Navigator.backPage(this.Name, this);
         }
 
-        private void DETALLES_REPORTE_Load(object sender, EventArgs e)
+        private async void DETALLES_REPORTE_Load(object sender, EventArgs e)
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
+
+            QueryDevice devicequery = new QueryDevice();
+            devicequery.codigo = this.codigo;
+            int page = 1;
+            string url = "";
+            string json = JsonConvert.SerializeObject(devicequery,
+            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+
+            url = HttpMethods.url + "dispositivos/query?offset=" + page.ToString() + "&limit=30";
+
+
+            StatusMessage statusmessage = await HttpMethods.Post(url, json);
+            listRep = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+            if (listRep.Count == 0)
+            {
+                return;
+            }
+            rep = listRep[0];
 
             lblComentarios.Text = reportes.comentarios;
             

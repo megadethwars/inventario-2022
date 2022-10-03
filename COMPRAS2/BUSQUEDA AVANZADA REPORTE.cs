@@ -239,7 +239,7 @@ namespace COMPRAS2
                 var codigo = index.FormattedValue;
                 var datafind = reporte.Find(x => x.fechaAlta.ToString().Contains((string)codigo));
 
-                Navigator.nextPage(new DETALLES_REPORTE(datafind));
+                Navigator.nextPage(new DETALLES_REPORTE((string)codigo));
             }
             catch (Exception ex)
             {

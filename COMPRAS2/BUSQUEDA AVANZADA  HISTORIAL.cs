@@ -457,9 +457,9 @@ namespace COMPRAS2
                 Movimientos data = (Movimientos)cell.DataBoundItem;
                 var index = columns[1];
                 var codigo = index.FormattedValue;
-                var datafind = historial.Find(x => x.dispositivo_Actual.Contains((string)codigo));
+                //var datafind = historial.Find(x => x.dispositivo_Actual.Contains((string)codigo));
 
-                Navigator.nextPage(new DETALLES_HISTORIAL(datafind));
+                Navigator.nextPage(new DETALLES_HISTORIAL((string)codigo));
 
             }
             catch (Exception ex)
