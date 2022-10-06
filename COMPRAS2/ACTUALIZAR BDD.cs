@@ -321,7 +321,7 @@ namespace COMPRAS2
                                 devUpd.descompostura = "-";
                             }
                             devUpd.marca = (string)worksheet.GetValueRowCol(row, 4);
-                            if (devUpd.marca == "" || devUpd.marca == " ")
+                            if (devUpd.marca == "")
                             {
                                 devUpd.marca = "-";
                             }
@@ -434,7 +434,7 @@ namespace COMPRAS2
                 StringBuilder sb = new StringBuilder();
                 foreach (char c in str)
                 {
-                    if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '.' || c == '_')
+                    if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '.' || c == '_' || c == '/' || c == '"' || c == ' ' || c == ',' || c == ':' || c == ';' || c == '_' || c == '(' || c == ')' || c == '=' || c == '|' || c == '°' || c == '?' || c == '¿' || c == '!' || c == '¡')
                     {
                         sb.Append(c);
                     }
