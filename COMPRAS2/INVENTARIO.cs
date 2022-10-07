@@ -130,10 +130,11 @@ namespace COMPRAS2
                         deviceslist[x].marca = inv.marca;
                         deviceslist[x].modelo = inv.modelo;
                         deviceslist[x].StatusActual = inv.StatusActual;
+                        deviceslist[x].serie = inv.serie;
 
                         string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
                         deviceslist[x].Lugar_Actual.ToString(), deviceslist[x].marca, deviceslist[x].modelo,
-                        deviceslist[x].StatusActual};
+                        deviceslist[x].StatusActual, deviceslist[x].serie};
                         dgvInventario.Rows.Add(row);
                     }
 
@@ -175,6 +176,7 @@ namespace COMPRAS2
                 dgvInventario.Columns.Add("MARCA", "MARCA");
                 dgvInventario.Columns.Add("MODELO", "MODELO");
                 dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
+                dgvInventario.Columns.Add("SERIE", "SERIE");
 
                 for (int x = 0; x < deviceslist.Count; x++)
                 {
@@ -185,10 +187,12 @@ namespace COMPRAS2
                     deviceslist[x].marca = inv.marca;
                     deviceslist[x].modelo = inv.modelo;
                     deviceslist[x].StatusActual = inv.StatusActual;
+                    deviceslist[x].serie = inv.serie;
 
                     string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
                     deviceslist[x].Lugar_Actual.ToString(),
-                    deviceslist[x].marca, deviceslist[x].modelo, deviceslist[x].StatusActual};
+                    deviceslist[x].marca, deviceslist[x].modelo, deviceslist[x].StatusActual,
+                    deviceslist[x].serie};
                     dgvInventario.Rows.Add(row);
                 }
                                
@@ -320,6 +324,7 @@ namespace COMPRAS2
                 dgvInventario.Columns.Add("MARCA", "MARCA");
                 dgvInventario.Columns.Add("MODELO", "MODELO");
                 dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
+                dgvInventario.Columns.Add("SERIE", "SERIE");
 
                 for (int x = 0; x < deviceslist.Count; x++)
                 {
@@ -330,10 +335,11 @@ namespace COMPRAS2
                     deviceslist[x].marca = inv.marca;
                     deviceslist[x].modelo = inv.modelo;
                     deviceslist[x].StatusActual = inv.StatusActual;
+                    deviceslist[x].serie = inv.serie;
 
                     string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
                     deviceslist[x].Lugar_Actual.ToString(), deviceslist[x].marca, deviceslist[x].modelo, 
-                    deviceslist[x].StatusActual};
+                    deviceslist[x].StatusActual, deviceslist[x].serie};
                     dgvInventario.Rows.Add(row);
                 }
             }
