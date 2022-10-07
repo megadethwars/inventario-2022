@@ -98,14 +98,25 @@ namespace COMPRAS2
                     string url = "";
                     if (isFiltering)
                     {
-                         url = HttpMethods.url + "dispositivos/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
-                    }else
+                         
+                         //url = HttpMethods.url + "dispositivos/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
+
+                        FilterDeviceValue valuedevice = new FilterDeviceValue();
+                        valuedevice.value = txtBUSCADOR.Text;
+                        string json = JsonConvert.SerializeObject(valuedevice,
+                        new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });                      
+                        url = HttpMethods.url + "dispositivos/filterdevice?limit=30&offset=" + page.ToString();
+                        StatusMessage statusmessage = await HttpMethods.Post(url,json);
+                        deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+                    }
+                    else
                     {
                         url = HttpMethods.url + "dispositivos?offset=" + page.ToString() + "&limit=50";
+                        StatusMessage statusmessage = await HttpMethods.get(url);
+                        deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
                     }
                  
-                    StatusMessage statusmessage = await HttpMethods.get(url);
-                    deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+                    
                     if (deviceslist.Count == 0) 
                     {
                         return;
@@ -376,8 +387,13 @@ namespace COMPRAS2
                 dgvInventario.Rows.Clear();
                 page = 1;
                 isFiltering = true;
-                var url = HttpMethods.url + "dispositivos/filter/"+txtBUSCADOR.Text+"?limit=30&offset="+page.ToString();
-                StatusMessage statusmessage = await HttpMethods.get(url);
+                FilterDeviceValue valuedevice = new FilterDeviceValue();
+                valuedevice.value = txtBUSCADOR.Text;
+                string json = JsonConvert.SerializeObject(valuedevice,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+                //var url = HttpMethods.url + "dispositivos/filter/"+txtBUSCADOR.Text+"?limit=30&offset="+page.ToString();
+                var url = HttpMethods.url + "dispositivos/filterdevice?limit=30&offset=" + page.ToString();
+                StatusMessage statusmessage = await HttpMethods.Post(url,json);
 
                 if (statusmessage.statuscode != 200)
                 {
