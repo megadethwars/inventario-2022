@@ -422,10 +422,12 @@ namespace COMPRAS2
                     deviceslist[x].marca = inv.marca;
                     deviceslist[x].modelo = inv.modelo;
                     deviceslist[x].StatusActual = inv.StatusActual;
+                    deviceslist[x].serie = inv.serie;
 
                     string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
                     deviceslist[x].Lugar_Actual.ToString(),
-                    deviceslist[x].marca, deviceslist[x].modelo, deviceslist[x].StatusActual};
+                    deviceslist[x].marca, deviceslist[x].modelo, deviceslist[x].StatusActual,
+                    deviceslist[x].serie};
                     dgvInventario.Rows.Add(row);
                 }
             }
