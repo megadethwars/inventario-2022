@@ -97,6 +97,50 @@ namespace COMPRAS2.servicios
 
         }
 
+        public static async Task<StatusMessage> get(string path,string value)
+        {
+
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("value", value);
+                    var response = await client.GetAsync(path);
+
+                    var stringres = await response.Content.ReadAsStringAsync();
+
+                    StatusMessage statusmessage = new StatusMessage();
+                    Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(stringres, new Dictionary<string, object>());
+
+                    statusmessage.message = htmlAttributes["message"].ToString();
+                    if (htmlAttributes.ContainsKey("data"))
+                    {
+
+                        if (htmlAttributes.TryGetValue("data", out var name))
+                        {
+                            var valueAsString = name?.ToString();
+                            htmlAttributes.Add("data2", valueAsString ?? "unknown");
+                        }
+
+                        statusmessage.data = htmlAttributes["data2"].ToString();
+
+                    }
+                    statusmessage.data = htmlAttributes["data2"].ToString();
+                    statusmessage.statuscode = (int)response.StatusCode;
+
+                    return statusmessage;
+                }
+
+            }
+            catch (Exception e)
+            {
+                StatusMessage statusmessage = new StatusMessage();
+                statusmessage.statuscode = 500;
+                return statusmessage;
+            }
+
+        }
+
         public static async Task<StatusMessage> put(string url, string objeto)
         {
             try

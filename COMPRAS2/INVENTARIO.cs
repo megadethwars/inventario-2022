@@ -101,16 +101,8 @@ namespace COMPRAS2
                     {
                         //url = HttpMethods.url + "dispositivos/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
 
-                        FilterDeviceValue valuedevice = new FilterDeviceValue();
-                        valuedevice.value = txtBUSCADOR.Text;
-                        string json = JsonConvert.SerializeObject(valuedevice,
-                        new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });                      
-                        //url = HttpMethods.url + "dispositivos/filterdevice?limit=30&offset=" + page.ToString();
-                        //StatusMessage statusmessage = await HttpMethods.Post(url,json);
-                        //deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-                        var url2 = HttpMethods.url + "dispositivos/alldeviceSomeFields?limit=30";
-                        StatusMessage statusmessage2 = await HttpMethods.Post(url2, json);
+                        var url2 = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString();
+                        StatusMessage statusmessage2 = await HttpMethods.get(url2, txtBUSCADOR.Text);
                         deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
                     }
                     else
@@ -365,15 +357,10 @@ namespace COMPRAS2
                 dgvInventario.Rows.Clear();
                 page = 1;
                 isFiltering = true;
-                FilterDeviceValue valuedevice = new FilterDeviceValue();
-                valuedevice.value = txtBUSCADOR.Text;
-                string json = JsonConvert.SerializeObject(valuedevice,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-              
-                var url2 = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString(); 
-                StatusMessage statusmessage2 = await HttpMethods.Post(url2, json);
+                var url = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString();
+                StatusMessage statusmessage2 = await HttpMethods.get(url,txtBUSCADOR.Text);
 
-                
+
 
                 if (statusmessage2.statuscode != 200)
                 {
