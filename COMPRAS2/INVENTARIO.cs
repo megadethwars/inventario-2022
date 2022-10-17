@@ -124,7 +124,7 @@ namespace COMPRAS2
                         deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
                     }
                                      
-                    if (deviceslist.Count == 0) 
+                    if (deviceslist2.Count == 0) 
                     {
                         return;
                     }
@@ -156,13 +156,7 @@ namespace COMPRAS2
                     //    dgvInventario.Rows.Add(row);
                     //}
 
-                    dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
-                    dgvInventario.Columns.Add("ID", "ID");
-                    dgvInventario.Columns.Add("LUGAR", "LUGAR");
-                    dgvInventario.Columns.Add("MARCA", "MARCA");
-                    dgvInventario.Columns.Add("MODELO", "MODELO");
-                    dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
-                    dgvInventario.Columns.Add("SERIE", "SERIE");
+                    
 
                     for (int x = 0; x < deviceslist2.Count; x++)
                     {
@@ -376,8 +370,10 @@ namespace COMPRAS2
                 string json = JsonConvert.SerializeObject(valuedevice,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
               
-                var url2 = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString(); ;
+                var url2 = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString(); 
                 StatusMessage statusmessage2 = await HttpMethods.Post(url2, json);
+
+                
 
                 if (statusmessage2.statuscode != 200)
                 {
@@ -385,16 +381,8 @@ namespace COMPRAS2
                 }
 
                 deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
-                dgvInventario.Columns.Clear();
                 
-                dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
-                dgvInventario.Columns.Add("ID", "ID");
-                dgvInventario.Columns.Add("LUGAR", "LUGAR");
-                dgvInventario.Columns.Add("MARCA", "MARCA");
-                dgvInventario.Columns.Add("MODELO", "MODELO");
-                dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
-                dgvInventario.Columns.Add("SERIE", "SERIE");
-                                
+           
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     DeviceSomeFields inv = deviceslist2[x];
