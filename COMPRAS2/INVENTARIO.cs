@@ -67,7 +67,8 @@ namespace COMPRAS2
 
         MENU mainmenu;
         public Devices devices;
-        public List<Devices> deviceslist;
+        public List<Devices> deviceslist;       
+        public List<DeviceSomeFields> deviceslist2;
         ScrollBars vscrolls;
         VScrollBar bar;
         int offssetpage = 25;
@@ -91,14 +92,12 @@ namespace COMPRAS2
             {
                 try
                 {
-
-                
+                                    
                 //obtener siguiente linea
                     page = page + 1;
                     string url = "";
                     if (isFiltering)
-                    {
-                         
+                    {                         
                          //url = HttpMethods.url + "dispositivos/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
 
                         FilterDeviceValue valuedevice = new FilterDeviceValue();
@@ -115,8 +114,7 @@ namespace COMPRAS2
                         StatusMessage statusmessage = await HttpMethods.get(url);
                         deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
                     }
-                 
-                    
+                                     
                     if (deviceslist.Count == 0) 
                     {
                         return;
@@ -148,14 +146,12 @@ namespace COMPRAS2
                         deviceslist[x].StatusActual, deviceslist[x].serie};
                         dgvInventario.Rows.Add(row);
                     }
-
                 }
                 catch
                 {
 
                 }
             }
-
         }
 
         private async void INVENTARIO_Load(object sender, EventArgs e)
@@ -164,23 +160,11 @@ namespace COMPRAS2
             CargoEtiqueta(font);
 
             try
-            {
-                var url = HttpMethods.url + "dispositivos?page=1&limit=50";
-                StatusMessage statusmessage = await HttpMethods.get(url);
-
-                deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-                int i = 0;
-                foreach (Devices device in deviceslist)
-                {
-                    Lugares lugar = device.lugar;
-                    deviceslist[i].Lugar_Actual = lugar.lugar;
-
-                    StatusDevices status = device.status;
-                    deviceslist[i].StatusActual = status.descripcion;
-                    i++;
-                }
-
+            {                
+                var url2 = HttpMethods.url + "dispositivos/alldeviceSomeFields?limit=30";
+                StatusMessage statusmessage2 = await HttpMethods.get(url2);
+                deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
+                               
                 dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
                 dgvInventario.Columns.Add("ID", "ID");
                 dgvInventario.Columns.Add("LUGAR", "LUGAR");
@@ -188,51 +172,29 @@ namespace COMPRAS2
                 dgvInventario.Columns.Add("MODELO", "MODELO");
                 dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
                 dgvInventario.Columns.Add("SERIE", "SERIE");
-
-                for (int x = 0; x < deviceslist.Count; x++)
+                                
+                for (int x = 0; x < deviceslist2.Count; x++)
                 {
-                    Devices inv = deviceslist[x];
-                    deviceslist[x].producto = inv.producto;
-                    deviceslist[x].codigo = inv.codigo;
-                    deviceslist[x].Lugar_Actual = inv.Lugar_Actual;
-                    deviceslist[x].marca = inv.marca;
-                    deviceslist[x].modelo = inv.modelo;
-                    deviceslist[x].StatusActual = inv.StatusActual;
-                    deviceslist[x].serie = inv.serie;
+                    DeviceSomeFields inv = deviceslist2[x];
+                    deviceslist2[x].producto = inv.producto;
+                    deviceslist2[x].codigo = inv.codigo;
+                    deviceslist2[x].lugar = inv.lugar;
+                    deviceslist2[x].marca = inv.marca;
+                    deviceslist2[x].modelo = inv.modelo;
+                    deviceslist2[x].descripcion = inv.descripcion;
+                    deviceslist2[x].serie = inv.serie;
 
-                    string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
-                    deviceslist[x].Lugar_Actual.ToString(),
-                    deviceslist[x].marca, deviceslist[x].modelo, deviceslist[x].StatusActual,
-                    deviceslist[x].serie};
+                    string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].codigo,
+                    deviceslist2[x].lugar, deviceslist2[x].marca, deviceslist2[x].modelo,
+                    deviceslist2[x].descripcion, deviceslist2[x].serie};
                     dgvInventario.Rows.Add(row);
                 }
-                               
-                //dgvInventario.DataSource = deviceslist;
-                //this.dgvInventario.Columns["lugar"].Visible = false;
-                //this.dgvInventario.Columns["lugarId"].Visible = false;
-                //this.dgvInventario.Columns["status"].Visible = false;
-                //this.dgvInventario.Columns["statusId"].Visible = false;
-                //this.dgvInventario.Columns["Compra"].Visible = false;
-                //this.dgvInventario.Columns["Descompostura"].Visible = false;
-                //this.dgvInventario.Columns["Foto"].Visible = false;
-                //this.dgvInventario.Columns["IdMov"].Visible = false;
-                //this.dgvInventario.Columns["Observaciones"].Visible = false;
-                //this.dgvInventario.Columns["Origen"].Visible = false;
-                //this.dgvInventario.Columns["Pertenece"].Visible = false;
-                //this.dgvInventario.Columns["Proveedor"].Visible = false;
-                //this.dgvInventario.Columns["Costo"].Visible = false;
-                //this.dgvInventario.Columns["FechaUltimaModificacion"].Visible = false;
-                //this.dgvInventario.Columns["id"].Visible = false;
-                //this.dgvInventario.Columns["accesorios"].Visible = false;
-                //this.dgvInventario.Columns["serie"].Visible = false;
-                //this.dgvInventario.Columns["fechaAlta"].Visible = false;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");               
-            }
-            
+            }            
         }
        
         private void AbrirFormHija(object formhija)
@@ -311,23 +273,10 @@ namespace COMPRAS2
             isFiltering = false;
 
             try
-            {
-                var url = HttpMethods.url + "dispositivos?limit=50";
-                StatusMessage statusmessage = await HttpMethods.get(url);
-
-                deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-                int i = 0;
-                foreach (Devices device in deviceslist)
-                {
-
-                    Lugares lugar = device.lugar;
-                    deviceslist[i].Lugar_Actual = lugar.lugar;
-
-                    StatusDevices status = device.status;
-                    deviceslist[i].StatusActual = status.descripcion;
-                    i++;
-                }
+            {                             
+                var url2 = HttpMethods.url + "dispositivos/alldeviceSomeFields?limit=30";
+                StatusMessage statusmessage2 = await HttpMethods.get(url2);
+                deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
 
                 dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
                 dgvInventario.Columns.Add("ID", "ID");
@@ -337,20 +286,20 @@ namespace COMPRAS2
                 dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
                 dgvInventario.Columns.Add("SERIE", "SERIE");
 
-                for (int x = 0; x < deviceslist.Count; x++)
+                for (int x = 0; x < deviceslist2.Count; x++)
                 {
-                    Devices inv = deviceslist[x];
-                    deviceslist[x].producto = inv.producto;
-                    deviceslist[x].codigo = inv.codigo;
-                    deviceslist[x].Lugar_Actual = inv.Lugar_Actual;
-                    deviceslist[x].marca = inv.marca;
-                    deviceslist[x].modelo = inv.modelo;
-                    deviceslist[x].StatusActual = inv.StatusActual;
-                    deviceslist[x].serie = inv.serie;
+                    DeviceSomeFields inv = deviceslist2[x];
+                    deviceslist2[x].producto = inv.producto;
+                    deviceslist2[x].codigo = inv.codigo;
+                    deviceslist2[x].lugar = inv.lugar;
+                    deviceslist2[x].marca = inv.marca;
+                    deviceslist2[x].modelo = inv.modelo;
+                    deviceslist2[x].descripcion = inv.descripcion;
+                    deviceslist2[x].serie = inv.serie;
 
-                    string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
-                    deviceslist[x].Lugar_Actual.ToString(), deviceslist[x].marca, deviceslist[x].modelo, 
-                    deviceslist[x].StatusActual, deviceslist[x].serie};
+                    string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].codigo,
+                    deviceslist2[x].lugar, deviceslist2[x].marca, deviceslist2[x].modelo,
+                    deviceslist2[x].descripcion, deviceslist2[x].serie};
                     dgvInventario.Rows.Add(row);
                 }
             }
@@ -391,47 +340,46 @@ namespace COMPRAS2
                 valuedevice.value = txtBUSCADOR.Text;
                 string json = JsonConvert.SerializeObject(valuedevice,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                //var url = HttpMethods.url + "dispositivos/filter/"+txtBUSCADOR.Text+"?limit=30&offset="+page.ToString();
-                var url = HttpMethods.url + "dispositivos/filterdevice?limit=30&offset=" + page.ToString();
-                StatusMessage statusmessage = await HttpMethods.Post(url,json);
+              
+                var url2 = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString(); ;
+                StatusMessage statusmessage2 = await HttpMethods.Post(url2, json);
 
-                if (statusmessage.statuscode != 200)
+                if (statusmessage2.statuscode != 200)
                 {
                     return;
                 }
 
-                deviceslist = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-                int i = 0;
-                foreach (Devices device in deviceslist)
+                deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
+                dgvInventario.Columns.Clear();
+                
+                dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");
+                dgvInventario.Columns.Add("ID", "ID");
+                dgvInventario.Columns.Add("LUGAR", "LUGAR");
+                dgvInventario.Columns.Add("MARCA", "MARCA");
+                dgvInventario.Columns.Add("MODELO", "MODELO");
+                dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
+                dgvInventario.Columns.Add("SERIE", "SERIE");
+                                
+                for (int x = 0; x < deviceslist2.Count; x++)
                 {
-                    Lugares lugar = device.lugar;
-                    deviceslist[i].Lugar_Actual = lugar.lugar;
+                    DeviceSomeFields inv = deviceslist2[x];
+                    deviceslist2[x].producto = inv.producto;
+                    deviceslist2[x].codigo = inv.codigo;
+                    deviceslist2[x].lugar = inv.lugar;
+                    deviceslist2[x].marca = inv.marca;
+                    deviceslist2[x].modelo = inv.modelo;
+                    deviceslist2[x].descripcion = inv.descripcion;
+                    deviceslist2[x].serie = inv.serie;
 
-                    StatusDevices status = device.status;
-                    deviceslist[i].StatusActual = status.descripcion;
-                    i++;
-                }
-                dgvInventario.Rows.Clear();
-                for (int x = 0; x < deviceslist.Count; x++)
-                {
-                    Devices inv = deviceslist[x];
-                    deviceslist[x].producto = inv.producto;
-                    deviceslist[x].codigo = inv.codigo;
-                    deviceslist[x].Lugar_Actual = inv.Lugar_Actual;
-                    deviceslist[x].marca = inv.marca;
-                    deviceslist[x].modelo = inv.modelo;
-                    deviceslist[x].StatusActual = inv.StatusActual;
-                    deviceslist[x].serie = inv.serie;
-
-                    string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
-                    deviceslist[x].Lugar_Actual.ToString(),
-                    deviceslist[x].marca, deviceslist[x].modelo, deviceslist[x].StatusActual,
-                    deviceslist[x].serie};
+                    string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].codigo,
+                    deviceslist2[x].lugar, deviceslist2[x].marca, deviceslist2[x].modelo,
+                    deviceslist2[x].descripcion, deviceslist2[x].serie};
                     dgvInventario.Rows.Add(row);
                 }
+
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
             }

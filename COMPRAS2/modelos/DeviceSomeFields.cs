@@ -23,6 +23,8 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string modelo { get; set; }
 
+        [DefaultValue(null)]
+        public string marca { get; set; }
 
         [DefaultValue(null)]
         public string producto { get; set; }

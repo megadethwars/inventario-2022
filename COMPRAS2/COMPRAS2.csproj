@@ -284,6 +284,7 @@
       <DependentUpon>MIPERFIL.cs</DependentUpon>
     </Compile>
     <Compile Include="modelos\DeviceMigrate.cs" />
+    <Compile Include="modelos\DeviceSomeFields.cs" />
     <Compile Include="modelos\FilterDeviceValue.cs" />
     <Compile Include="modelos\Movimientos.cs" />
     <Compile Include="modelos\QueryDevice.cs" />
