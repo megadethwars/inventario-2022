@@ -134,6 +134,10 @@ namespace COMPRAS2
                 try
                 {
                     cantidad = int.Parse(txtCantidad.Text);
+                    if (cantidad == 0)
+                    {
+                        cantidad = 1;
+                    }
                 }
                 catch {
                     MessageBox.Show("La cantidad no es numerica");
@@ -167,6 +171,10 @@ namespace COMPRAS2
                 try
                 {
                     costo = Int32.Parse(txtCosto.Text);
+                    if (costo == 0)
+                    {
+                        costo = 1;
+                    }
                 }
                 catch
                 {
@@ -226,6 +234,7 @@ namespace COMPRAS2
                 }
                 else
                 {
+                    MessageBox.Show("error en el servicio "+statusmessage.message);
                     return 2;
                 }
 
