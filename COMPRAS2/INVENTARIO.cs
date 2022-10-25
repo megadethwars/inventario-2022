@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using System.Threading;
 
 namespace COMPRAS2
 {
@@ -23,7 +24,9 @@ namespace COMPRAS2
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
-
+        System.Timers.Timer timer1 = new System.Timers.Timer();
+        
+       
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
@@ -75,7 +78,7 @@ namespace COMPRAS2
         int page = 1;
         bool isEnd = false;
         bool isFiltering = false;
-
+        bool isRunning = false;
         public INVENTARIO()
         {
             InitializeComponent();
@@ -84,6 +87,9 @@ namespace COMPRAS2
             ScrollBars vscrolls = dgvInventario.ScrollBars;
             bar = new VScrollBar();
             offssetpage = VG.offssetpage;
+            timer1.Interval = 500;
+            timer1.Elapsed += timer1_Tick;
+            //timer1.Enabled = true;
         }
 
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -349,12 +355,19 @@ namespace COMPRAS2
             }
         }
 
+        private void timer1_Tick(object sender, System.EventArgs e)
+        {
+            isRunning = false;
+            timer1.Stop();
+        }
         private async void busquedaNormal()
         {
             try
-            {           
+            {  
+
                 deviceslist2.Clear();
                 dgvInventario.Rows.Clear();
+                
                 page = 1;
                 isFiltering = true;
                 var url = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString();
@@ -397,6 +410,12 @@ namespace COMPRAS2
 
         private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
         {
+            if (isRunning)
+            {
+                return;
+            }
+            timer1.Start();
+            isRunning = true;
             busquedaNormal();
         }
 
