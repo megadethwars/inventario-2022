@@ -90,6 +90,7 @@ namespace COMPRAS2
             timer1.Interval = 500;
             timer1.Elapsed += timer1_Tick;
             //timer1.Enabled = true;
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -359,15 +360,21 @@ namespace COMPRAS2
         {
             isRunning = false;
             timer1.Stop();
+            busquedaNormal();
         }
         private async void busquedaNormal()
         {
             try
-            {  
-
+            {
+                isRunning = false;
                 deviceslist2.Clear();
+                //this.Invoke((MethodInvoker)delegate ()
+                //{
+                //    dgvInventario.Rows.Clear();
+                //});
                 dgvInventario.Rows.Clear();
-                
+
+
                 page = 1;
                 isFiltering = true;
                 var url = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString();
@@ -381,8 +388,9 @@ namespace COMPRAS2
                 }
 
                 deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
-                
-           
+
+                string[,] rows = new string[deviceslist2.Count,7];
+            
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     DeviceSomeFields inv = deviceslist2[x];
@@ -397,10 +405,23 @@ namespace COMPRAS2
                     string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].codigo,
                     deviceslist2[x].lugar, deviceslist2[x].marca, deviceslist2[x].modelo,
                     deviceslist2[x].descripcion, deviceslist2[x].serie};
+                    rows[x,0] = deviceslist2[x].producto;
+                    rows[x, 1] = deviceslist2[x].codigo;
+                    rows[x, 2] = deviceslist2[x].lugar;
+                    rows[x, 3] = deviceslist2[x].marca;
+                    rows[x, 4] = deviceslist2[x].modelo;
+                    rows[x, 5] = deviceslist2[x].descripcion;
+                    rows[x, 6] = deviceslist2[x].serie;
+
+                    //this.Invoke((MethodInvoker)delegate ()
+                    //{
+                    //    dgvInventario.Rows.Add(row);
+
+                    //});
                     dgvInventario.Rows.Add(row);
                 }
 
-
+                
             }
             catch (Exception ex)
             {
@@ -410,13 +431,14 @@ namespace COMPRAS2
 
         private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
         {
-            if (isRunning)
-            {
-                return;
-            }
+            //if (isRunning)
+            //{
+            //    return;
+            //}
+            timer1.Stop();
             timer1.Start();
             isRunning = true;
-            busquedaNormal();
+            //busquedaNormal();
         }
 
         private void txtBUSCADOR_Click(object sender, EventArgs e)
