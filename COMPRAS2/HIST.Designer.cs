@@ -61,11 +61,11 @@ namespace COMPRAS2
             // 
             this.lblHISTORIAL.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHISTORIAL.AutoSize = true;
-            this.lblHISTORIAL.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHISTORIAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHISTORIAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblHISTORIAL.Location = new System.Drawing.Point(560, 30);
             this.lblHISTORIAL.Name = "lblHISTORIAL";
-            this.lblHISTORIAL.Size = new System.Drawing.Size(116, 42);
+            this.lblHISTORIAL.Size = new System.Drawing.Size(198, 39);
             this.lblHISTORIAL.TabIndex = 34;
             this.lblHISTORIAL.Text = "HISTORIAL";
             // 
@@ -79,7 +79,7 @@ namespace COMPRAS2
             this.btnBUSQUEDAAVANZADA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBUSQUEDAAVANZADA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBUSQUEDAAVANZADA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBUSQUEDAAVANZADA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnBUSQUEDAAVANZADA.Location = new System.Drawing.Point(525, 152);
             this.btnBUSQUEDAAVANZADA.Name = "btnBUSQUEDAAVANZADA";
@@ -170,7 +170,7 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvHistorial.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorial.Size = new System.Drawing.Size(1230, 561);
+            this.dgvHistorial.Size = new System.Drawing.Size(1230, 488);
             this.dgvHistorial.TabIndex = 45;
             this.dgvHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellClick);
             // 
@@ -185,7 +185,7 @@ namespace COMPRAS2
             this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
             this.btnActualizar.Name = "btnActualizar";
@@ -206,9 +206,9 @@ namespace COMPRAS2
             this.btnSalida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnSalida.Location = new System.Drawing.Point(20, 810);
+            this.btnSalida.Location = new System.Drawing.Point(20, 737);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(114, 39);
             this.btnSalida.TabIndex = 50;
@@ -221,7 +221,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.btnSalida);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvHistorial);

@@ -87,10 +87,11 @@ namespace COMPRAS2
             ScrollBars vscrolls = dgvInventario.ScrollBars;
             bar = new VScrollBar();
             offssetpage = VG.offssetpage;
-            timer1.Interval = 500;
+            timer1.Interval = 1000;
             timer1.Elapsed += timer1_Tick;
             //timer1.Enabled = true;
             CheckForIllegalCrossThreadCalls = false;
+            deviceslist2 = new List<DeviceSomeFields>();
         }
 
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -389,7 +390,7 @@ namespace COMPRAS2
 
                 deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
 
-                string[,] rows = new string[deviceslist2.Count,7];
+             
             
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
@@ -405,13 +406,7 @@ namespace COMPRAS2
                     string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].codigo,
                     deviceslist2[x].lugar, deviceslist2[x].marca, deviceslist2[x].modelo,
                     deviceslist2[x].descripcion, deviceslist2[x].serie};
-                    rows[x,0] = deviceslist2[x].producto;
-                    rows[x, 1] = deviceslist2[x].codigo;
-                    rows[x, 2] = deviceslist2[x].lugar;
-                    rows[x, 3] = deviceslist2[x].marca;
-                    rows[x, 4] = deviceslist2[x].modelo;
-                    rows[x, 5] = deviceslist2[x].descripcion;
-                    rows[x, 6] = deviceslist2[x].serie;
+                
 
                     //this.Invoke((MethodInvoker)delegate ()
                     //{
