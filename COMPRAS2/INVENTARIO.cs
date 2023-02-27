@@ -24,7 +24,7 @@ namespace COMPRAS2
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
-        System.Timers.Timer timer1 = new System.Timers.Timer();
+        System.Timers.Timer timer1;
         
        
         private void CargoEtiqueta(Font font)
@@ -87,11 +87,13 @@ namespace COMPRAS2
             ScrollBars vscrolls = dgvInventario.ScrollBars;
             bar = new VScrollBar();
             offssetpage = VG.offssetpage;
+            timer1 = new System.Timers.Timer();
             timer1.Interval = 1000;
             timer1.Elapsed += timer1_Tick;
             //timer1.Enabled = true;
-            CheckForIllegalCrossThreadCalls = false;
+            //CheckForIllegalCrossThreadCalls = false;
             deviceslist2 = new List<DeviceSomeFields>();
+            
         }
 
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -172,13 +174,16 @@ namespace COMPRAS2
                         string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].codigo,
                         deviceslist2[x].lugar, deviceslist2[x].marca, deviceslist2[x].modelo,
                         deviceslist2[x].descripcion, deviceslist2[x].serie};
-                        dgvInventario.Rows.Add(row);
+                        if (dgvInventario != null)
+                        {
+                            dgvInventario.Rows.Add(row);
+                        }
                     }
 
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
                 }
             }
         }
@@ -359,9 +364,21 @@ namespace COMPRAS2
 
         private void timer1_Tick(object sender, System.EventArgs e)
         {
-            isRunning = false;
-            timer1.Stop();
-            busquedaNormal();
+            try
+            {
+                isRunning = false;
+                timer1.Stop();
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    busquedaNormal();
+
+                });
+                
+            }
+            catch (Exception ex) { 
+
+            }
+            
         }
         private async void busquedaNormal()
         {
@@ -406,14 +423,19 @@ namespace COMPRAS2
                     string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].codigo,
                     deviceslist2[x].lugar, deviceslist2[x].marca, deviceslist2[x].modelo,
                     deviceslist2[x].descripcion, deviceslist2[x].serie};
-                
+
 
                     //this.Invoke((MethodInvoker)delegate ()
                     //{
                     //    dgvInventario.Rows.Add(row);
 
                     //});
+
                     dgvInventario.Rows.Add(row);
+                    
+                     
+                   
+                    
                 }
 
                 
@@ -426,13 +448,15 @@ namespace COMPRAS2
 
         private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
         {
-            //if (isRunning)
-            //{
-            //    return;
-            //}
-            timer1.Stop();
-            timer1.Start();
-            isRunning = true;
+            try
+            {
+                timer1.Stop();
+                timer1.Start();
+                isRunning = true;
+            }
+            catch (Exception ex) { 
+            }
+            
             //busquedaNormal();
         }
 
