@@ -37,30 +37,24 @@ namespace COMPRAS2
             this.lblSALIDA = new System.Windows.Forms.Label();
             this.pboxBuscador = new System.Windows.Forms.PictureBox();
             this.bTNBack = new System.Windows.Forms.Button();
-            this.lbd = new System.Windows.Forms.Label();
-            this.or = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.lbMarca = new System.Windows.Forms.Label();
             this.lbSerie = new System.Windows.Forms.Label();
-            this.lbOrigen = new System.Windows.Forms.Label();
             this.lbModelo = new System.Windows.Forms.Label();
-            this.lbdesc = new System.Windows.Forms.Label();
             this.btnAgregarCarrito = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnBuscador = new System.Windows.Forms.Button();
             this.lbCount = new System.Windows.Forms.Label();
+            this.dgvSalida = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalida)).BeginInit();
             this.SuspendLayout();
             // 
             // mod
@@ -68,22 +62,22 @@ namespace COMPRAS2
             this.mod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mod.AutoSize = true;
-            this.mod.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mod.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.mod.Location = new System.Drawing.Point(670, 300);
             this.mod.Name = "mod";
-            this.mod.Size = new System.Drawing.Size(85, 35);
+            this.mod.Size = new System.Drawing.Size(149, 33);
             this.mod.TabIndex = 76;
             this.mod.Text = "MODELO:";
             // 
             // lbS
             // 
             this.lbS.AutoSize = true;
-            this.lbS.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbS.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbS.Location = new System.Drawing.Point(70, 300);
             this.lbS.Name = "lbS";
-            this.lbS.Size = new System.Drawing.Size(63, 35);
+            this.lbS.Size = new System.Drawing.Size(109, 33);
             this.lbS.TabIndex = 75;
             this.lbS.Text = "SERIE:";
             // 
@@ -92,22 +86,22 @@ namespace COMPRAS2
             this.lbm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbm.AutoSize = true;
-            this.lbm.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbm.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lbm.Location = new System.Drawing.Point(670, 190);
             this.lbm.Name = "lbm";
-            this.lbm.Size = new System.Drawing.Size(76, 35);
+            this.lbm.Size = new System.Drawing.Size(127, 33);
             this.lbm.TabIndex = 72;
             this.lbm.Text = "MARCA:";
             // 
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblProducto.Location = new System.Drawing.Point(70, 190);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(88, 35);
+            this.lblProducto.Size = new System.Drawing.Size(150, 33);
             this.lblProducto.TabIndex = 71;
             this.lblProducto.Text = "NOMBRE:";
             // 
@@ -130,11 +124,11 @@ namespace COMPRAS2
             // 
             this.lblSALIDA.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSALIDA.AutoSize = true;
-            this.lblSALIDA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSALIDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblSALIDA.Location = new System.Drawing.Point(560, 30);
             this.lblSALIDA.Name = "lblSALIDA";
-            this.lblSALIDA.Size = new System.Drawing.Size(84, 42);
+            this.lblSALIDA.Size = new System.Drawing.Size(139, 39);
             this.lblSALIDA.TabIndex = 65;
             this.lblSALIDA.Text = "SALIDA";
             // 
@@ -164,28 +158,6 @@ namespace COMPRAS2
             this.bTNBack.TabIndex = 66;
             this.bTNBack.UseVisualStyleBackColor = true;
             this.bTNBack.Click += new System.EventHandler(this.bTNBack_Click);
-            // 
-            // lbd
-            // 
-            this.lbd.AutoSize = true;
-            this.lbd.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lbd.Location = new System.Drawing.Point(70, 520);
-            this.lbd.Name = "lbd";
-            this.lbd.Size = new System.Drawing.Size(217, 35);
-            this.lbd.TabIndex = 82;
-            this.lbd.Text = "OBSERVACIONES PREVIAS:";
-            // 
-            // or
-            // 
-            this.or.AutoSize = true;
-            this.or.Font = new System.Drawing.Font("Knockout 48 Featherweight", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.or.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.or.Location = new System.Drawing.Point(70, 410);
-            this.or.Name = "or";
-            this.or.Size = new System.Drawing.Size(102, 35);
-            this.or.TabIndex = 79;
-            this.or.Text = "ORIGEN DE:";
             // 
             // lbNombre
             // 
@@ -222,17 +194,6 @@ namespace COMPRAS2
             this.lbSerie.TabIndex = 85;
             this.lbSerie.Text = "Por definir";
             // 
-            // lbOrigen
-            // 
-            this.lbOrigen.AutoSize = true;
-            this.lbOrigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOrigen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lbOrigen.Location = new System.Drawing.Point(70, 460);
-            this.lbOrigen.Name = "lbOrigen";
-            this.lbOrigen.Size = new System.Drawing.Size(95, 24);
-            this.lbOrigen.TabIndex = 87;
-            this.lbOrigen.Text = "Por definir";
-            // 
             // lbModelo
             // 
             this.lbModelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -246,17 +207,6 @@ namespace COMPRAS2
             this.lbModelo.TabIndex = 88;
             this.lbModelo.Text = "Por definir";
             // 
-            // lbdesc
-            // 
-            this.lbdesc.AutoSize = true;
-            this.lbdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbdesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lbdesc.Location = new System.Drawing.Point(70, 570);
-            this.lbdesc.Name = "lbdesc";
-            this.lbdesc.Size = new System.Drawing.Size(95, 24);
-            this.lbdesc.TabIndex = 91;
-            this.lbdesc.Text = "Por definir";
-            // 
             // btnAgregarCarrito
             // 
             this.btnAgregarCarrito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -268,7 +218,7 @@ namespace COMPRAS2
             this.btnAgregarCarrito.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarCarrito.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCarrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnAgregarCarrito.Location = new System.Drawing.Point(1068, 703);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
@@ -317,32 +267,6 @@ namespace COMPRAS2
             this.pictureBox3.TabIndex = 96;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox4.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox4.Location = new System.Drawing.Point(70, 390);
-            this.pictureBox4.MaximumSize = new System.Drawing.Size(1000, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(550, 3);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 97;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox5.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox5.Location = new System.Drawing.Point(70, 500);
-            this.pictureBox5.MaximumSize = new System.Drawing.Size(1000, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(550, 3);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 98;
-            this.pictureBox5.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -387,29 +311,33 @@ namespace COMPRAS2
             this.lbCount.TabIndex = 102;
             this.lbCount.Text = "0";
             // 
+            // dgvSalida
+            // 
+            this.dgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalida.Location = new System.Drawing.Point(76, 388);
+            this.dgvSalida.Name = "dgvSalida";
+            this.dgvSalida.Size = new System.Drawing.Size(1167, 297);
+            this.dgvSalida.TabIndex = 103;
+            this.dgvSalida.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarritoSalida_CellMouseClick);
+            // 
             // SALIDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.dgvSalida);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAgregarCarrito);
-            this.Controls.Add(this.lbdesc);
             this.Controls.Add(this.lbModelo);
-            this.Controls.Add(this.lbOrigen);
             this.Controls.Add(this.lbSerie);
             this.Controls.Add(this.lbMarca);
             this.Controls.Add(this.lbNombre);
-            this.Controls.Add(this.lbd);
-            this.Controls.Add(this.or);
             this.Controls.Add(this.mod);
             this.Controls.Add(this.lbS);
             this.Controls.Add(this.lbm);
@@ -426,9 +354,8 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalida)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,22 +370,17 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pboxBuscador;
         private System.Windows.Forms.Button bTNBack;
         private System.Windows.Forms.Label lblSALIDA;
-        private System.Windows.Forms.Label lbd;
-        private System.Windows.Forms.Label or;
         private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.Label lbMarca;
         private System.Windows.Forms.Label lbSerie;
-        private System.Windows.Forms.Label lbOrigen;
         private System.Windows.Forms.Label lbModelo;
-        private System.Windows.Forms.Label lbdesc;
         private System.Windows.Forms.Button btnAgregarCarrito;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnBuscador;
         private System.Windows.Forms.Label lbCount;
+        private System.Windows.Forms.DataGridView dgvSalida;
     }
 }

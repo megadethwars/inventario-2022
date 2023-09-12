@@ -22,6 +22,7 @@ namespace COMPRAS2
         FontFamily ff;
         Font font;
         int count = 0;
+        DataGridViewButtonColumn btnclm;
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
@@ -29,8 +30,6 @@ namespace COMPRAS2
             this.lblSALIDA.Font = new Font(ff, 26, fontStyle);
             this.lblProducto.Font = new Font(ff, 20, fontStyle);
             this.lbS.Font = new Font(ff, 20, fontStyle);
-            this.or.Font = new Font(ff, 20, fontStyle);
-            this.lbd.Font = new Font(ff, 20, fontStyle);
             this.lbm.Font = new Font(ff, 20, fontStyle);
             this.mod.Font = new Font(ff, 20, fontStyle);
             this.btnAgregarCarrito.Font = new Font(ff, 18, fontStyle);
@@ -122,11 +121,9 @@ namespace COMPRAS2
                     MessageBox.Show("No hay dispositivos en stock, cantidad Insuficiente");
                     return;
                 }
-                this.lbNombre.Text = devices[0].producto;
-                this.lbOrigen.Text = devices[0].origen;
+                this.lbNombre.Text = devices[0].producto;    
                 this.lbSerie.Text = devices[0].serie;
-                this.lbMarca.Text = devices[0].marca;
-                this.lbdesc.Text = devices[0].descompostura;
+                this.lbMarca.Text = devices[0].marca;       
                 this.lbModelo.Text = devices[0].modelo;
 
                 Agregar(devices[0]);
@@ -150,7 +147,9 @@ namespace COMPRAS2
             txtBUSCADOR.Text = "";
             count++;
             lbCount.Text = count.ToString();
-            movimientos.Add(movement);           
+            movimientos.Add(movement);
+            string[] row = new string[] { device.codigo, device.producto,device.modelo,device.serie };
+            dgvSalida.Rows.Add(row);
         }
         
 
@@ -177,6 +176,39 @@ namespace COMPRAS2
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
+
+            dgvSalida.Columns.Add("Codigo", "Codigo");
+            dgvSalida.Columns.Add("Producto", "Producto");
+            dgvSalida.Columns.Add("modelo", "modelo");
+            dgvSalida.Columns.Add("serie", "serie");
+
+            btnclm = new DataGridViewButtonColumn();
+            btnclm.Name = "El";
+            btnclm.Text = "Eliminar";
+            btnclm.HeaderText = "Eliminar";
+            btnclm.UseColumnTextForButtonValue = true;
+            this.dgvSalida.Columns.Add(btnclm);
+        }
+
+        private void dgvCarritoSalida_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == dgvSalida.Columns.IndexOf(btnclm))
+            {
+                try
+                {
+                    //DataGridViewRow row = dgvCarritoSalida.Rows[e.RowIndex];
+                    dgvSalida.Rows.RemoveAt(dgvSalida.CurrentRow.Index);
+
+                    //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
+                    this.movimientos.RemoveAt(e.RowIndex);
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+
+            }
         }
     }
 }
