@@ -51,11 +51,11 @@ namespace COMPRAS2
             // 
             this.lblConfirmarSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblConfirmarSalida.AutoSize = true;
-            this.lblConfirmarSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmarSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblConfirmarSalida.Location = new System.Drawing.Point(560, 30);
             this.lblConfirmarSalida.Name = "lblConfirmarSalida";
-            this.lblConfirmarSalida.Size = new System.Drawing.Size(202, 42);
+            this.lblConfirmarSalida.Size = new System.Drawing.Size(357, 39);
             this.lblConfirmarSalida.TabIndex = 70;
             this.lblConfirmarSalida.Text = "CONFIRMAR SALIDA";
             // 
@@ -73,6 +73,7 @@ namespace COMPRAS2
             this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 69;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // tbUsuario
             // 
@@ -129,7 +130,7 @@ namespace COMPRAS2
             this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(591, 789);
+            this.btnOK.Location = new System.Drawing.Point(591, 716);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(98, 40);
             this.btnOK.TabIndex = 168;
@@ -142,11 +143,11 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLugares.AutoSize = true;
-            this.lblLugares.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblLugares.Location = new System.Drawing.Point(530, 150);
             this.lblLugares.Name = "lblLugares";
-            this.lblLugares.Size = new System.Drawing.Size(83, 32);
+            this.lblLugares.Size = new System.Drawing.Size(147, 31);
             this.lblLugares.TabIndex = 169;
             this.lblLugares.Text = "USUARIO:";
             // 
@@ -156,11 +157,11 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.label3.Location = new System.Drawing.Point(530, 270);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 32);
+            this.label3.Size = new System.Drawing.Size(212, 31);
             this.label3.TabIndex = 170;
             this.label3.Text = "CONTRASEÑA:";
             // 
@@ -170,11 +171,11 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.label1.Location = new System.Drawing.Point(534, 390);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 32);
+            this.label1.Size = new System.Drawing.Size(290, 31);
             this.label1.TabIndex = 172;
             this.label1.Text = "LUGAR DE DESTINO:";
             // 
@@ -187,7 +188,7 @@ namespace COMPRAS2
             this.pictureBox1.Location = new System.Drawing.Point(378, 144);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox1.Size = new System.Drawing.Size(550, 0);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 173;
             this.pictureBox1.TabStop = false;
@@ -201,7 +202,7 @@ namespace COMPRAS2
             this.pictureBox2.Location = new System.Drawing.Point(378, 264);
             this.pictureBox2.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox2.Size = new System.Drawing.Size(550, 0);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 174;
             this.pictureBox2.TabStop = false;
@@ -215,7 +216,7 @@ namespace COMPRAS2
             this.pictureBox3.Location = new System.Drawing.Point(378, 384);
             this.pictureBox3.MaximumSize = new System.Drawing.Size(1000, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(550, 3);
+            this.pictureBox3.Size = new System.Drawing.Size(550, 0);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 175;
             this.pictureBox3.TabStop = false;
@@ -225,7 +226,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

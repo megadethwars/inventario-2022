@@ -23,15 +23,13 @@ namespace COMPRAS2
         Font font;
         int count = 0;
         DataGridViewButtonColumn btnclm;
+        List<Tuple<Int32, String>> listaLugares;
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
 
             this.lblSALIDA.Font = new Font(ff, 26, fontStyle);
-            this.lblProducto.Font = new Font(ff, 20, fontStyle);
-            this.lbS.Font = new Font(ff, 20, fontStyle);
-            this.lbm.Font = new Font(ff, 20, fontStyle);
-            this.mod.Font = new Font(ff, 20, fontStyle);
+  
             this.btnAgregarCarrito.Font = new Font(ff, 18, fontStyle);
         }
 
@@ -66,6 +64,7 @@ namespace COMPRAS2
             InitializeComponent();
             devices = new List<Devices>();
             movimientos = new List<Movimientos>();
+            listaLugares = new List<Tuple<Int32, String>>();
         }
 
         private void bTNBack_Click(object sender, EventArgs e)
@@ -121,10 +120,7 @@ namespace COMPRAS2
                     MessageBox.Show("No hay dispositivos en stock, cantidad Insuficiente");
                     return;
                 }
-                this.lbNombre.Text = devices[0].producto;    
-                this.lbSerie.Text = devices[0].serie;
-                this.lbMarca.Text = devices[0].marca;       
-                this.lbModelo.Text = devices[0].modelo;
+                
 
                 Agregar(devices[0]);
 
@@ -172,7 +168,7 @@ namespace COMPRAS2
             busqueda();
         }
 
-        private void SALIDA_Load(object sender, EventArgs e)
+        private async void SALIDA_LoadAsync(object sender, EventArgs e)
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
@@ -188,6 +184,8 @@ namespace COMPRAS2
             btnclm.HeaderText = "Eliminar";
             btnclm.UseColumnTextForButtonValue = true;
             this.dgvSalida.Columns.Add(btnclm);
+
+            int lugars = await Lugares();
         }
 
         private void dgvCarritoSalida_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -208,6 +206,49 @@ namespace COMPRAS2
                 }
 
 
+            }
+        }
+
+        private async Task<int> Lugares()
+        {
+            try
+            {
+                var url = HttpMethods.url + "lugares";
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode == 500)
+                {
+                    MessageBox.Show("Error interno del servidor");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode == 404)
+                {
+                    MessageBox.Show("Estatus no encontrados");
+                    return 2;
+                }
+
+                if (statusmessage.statuscode != 200)
+                {
+                    return 1;
+                }
+
+                var lugares = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
+                listaLugares.Add(Tuple.Create<Int32, String>(0, "ninguno"));
+                for (int x = 0; x < lugares.Count; x++)
+                {
+                    listaLugares.Add(Tuple.Create<Int32, String>(lugares[x].id, lugares[x].lugar));
+                }
+                cblugares.DataSource = listaLugares;
+                cblugares.DisplayMember = "Item2";
+                cblugares.ValueMember = "Item1";
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+                return 10;
             }
         }
     }

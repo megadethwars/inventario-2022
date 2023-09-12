@@ -332,5 +332,10 @@ namespace COMPRAS2
                 tbpass.UseSystemPasswordChar = true;
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Navigator.backPage(this.Name, this);
+        }
     }
 }
