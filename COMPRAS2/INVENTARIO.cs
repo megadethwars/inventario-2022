@@ -69,6 +69,7 @@ namespace COMPRAS2
         string url = "https://avsinventoryswagger25.azurewebsites.net/api/v1/";
 
         MENU mainmenu;
+        public Lugares L;
         public Devices devices;
         public List<Devices> deviceslist;       
         public List<DeviceSomeFields> deviceslist2;
@@ -93,6 +94,7 @@ namespace COMPRAS2
             //timer1.Enabled = true;
             //CheckForIllegalCrossThreadCalls = false;
             deviceslist2 = new List<DeviceSomeFields>();
+            L = new Lugares();
             
         }
 
@@ -259,6 +261,13 @@ namespace COMPRAS2
         }
 
         private void btnSALIDA_Click(object sender, EventArgs e)
+        {
+            var lugaresPop = new LugaresPopUp(this);
+            lugaresPop.Show(this);
+            
+        }
+
+        public void OpenSalida()
         {
             Navigator.nextPage(new SALIDA());
         }

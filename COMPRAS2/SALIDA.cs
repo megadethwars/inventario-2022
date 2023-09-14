@@ -251,5 +251,10 @@ namespace COMPRAS2
                 return 10;
             }
         }
+
+        private void dgvSalida_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

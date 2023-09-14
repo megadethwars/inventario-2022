@@ -270,6 +270,12 @@
     <Compile Include="LUGARES.Designer.cs">
       <DependentUpon>LUGARES.cs</DependentUpon>
     </Compile>
+    <Compile Include="LugaresPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LugaresPopUp.Designer.cs">
+      <DependentUpon>LugaresPopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="MENU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LUGARES.resx">
       <DependentUpon>LUGARES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LugaresPopUp.resx">
+      <DependentUpon>LugaresPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU.resx">
       <DependentUpon>MENU.cs</DependentUpon>

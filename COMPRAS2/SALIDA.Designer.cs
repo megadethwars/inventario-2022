@@ -37,7 +37,6 @@ namespace COMPRAS2
             this.btnBuscador = new System.Windows.Forms.Button();
             this.lbCount = new System.Windows.Forms.Label();
             this.dgvSalida = new System.Windows.Forms.DataGridView();
-            this.cblugares = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalida)).BeginInit();
             this.SuspendLayout();
@@ -155,15 +154,8 @@ namespace COMPRAS2
             this.dgvSalida.Name = "dgvSalida";
             this.dgvSalida.Size = new System.Drawing.Size(1167, 275);
             this.dgvSalida.TabIndex = 103;
+            this.dgvSalida.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalida_CellContentClick);
             this.dgvSalida.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarritoSalida_CellMouseClick);
-            // 
-            // cblugares
-            // 
-            this.cblugares.FormattingEnabled = true;
-            this.cblugares.Location = new System.Drawing.Point(123, 51);
-            this.cblugares.Name = "cblugares";
-            this.cblugares.Size = new System.Drawing.Size(173, 21);
-            this.cblugares.TabIndex = 104;
             // 
             // SALIDA
             // 
@@ -171,7 +163,6 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
-            this.Controls.Add(this.cblugares);
             this.Controls.Add(this.dgvSalida);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.btnBuscador);
@@ -200,6 +191,5 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnBuscador;
         private System.Windows.Forms.Label lbCount;
         private System.Windows.Forms.DataGridView dgvSalida;
-        private System.Windows.Forms.ComboBox cblugares;
     }
 }
