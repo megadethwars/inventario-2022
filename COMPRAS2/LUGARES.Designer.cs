@@ -46,11 +46,11 @@ namespace COMPRAS2
             // 
             this.lblLugares.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLugares.AutoSize = true;
-            this.lblLugares.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblLugares.Location = new System.Drawing.Point(560, 30);
             this.lblLugares.Name = "lblLugares";
-            this.lblLugares.Size = new System.Drawing.Size(103, 42);
+            this.lblLugares.Size = new System.Drawing.Size(182, 39);
             this.lblLugares.TabIndex = 66;
             this.lblLugares.Text = "LUGARES";
             // 
@@ -61,7 +61,7 @@ namespace COMPRAS2
             this.txtLugarDeseado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLugarDeseado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugarDeseado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.txtLugarDeseado.Location = new System.Drawing.Point(477, 709);
+            this.txtLugarDeseado.Location = new System.Drawing.Point(477, 636);
             this.txtLugarDeseado.Name = "txtLugarDeseado";
             this.txtLugarDeseado.Size = new System.Drawing.Size(331, 26);
             this.txtLugarDeseado.TabIndex = 75;
@@ -72,11 +72,11 @@ namespace COMPRAS2
             // 
             this.lblIngresarLugarDeseado.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblIngresarLugarDeseado.AutoSize = true;
-            this.lblIngresarLugarDeseado.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresarLugarDeseado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngresarLugarDeseado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblIngresarLugarDeseado.Location = new System.Drawing.Point(531, 674);
+            this.lblIngresarLugarDeseado.Location = new System.Drawing.Point(531, 601);
             this.lblIngresarLugarDeseado.Name = "lblIngresarLugarDeseado";
-            this.lblIngresarLugarDeseado.Size = new System.Drawing.Size(198, 32);
+            this.lblIngresarLugarDeseado.Size = new System.Drawing.Size(370, 31);
             this.lblIngresarLugarDeseado.TabIndex = 74;
             this.lblIngresarLugarDeseado.Text = "INGRESAR NUEVO LUGAR:";
             // 
@@ -117,7 +117,7 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvLugares.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLugares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLugares.Size = new System.Drawing.Size(537, 553);
+            this.dgvLugares.Size = new System.Drawing.Size(537, 480);
             this.dgvLugares.TabIndex = 166;
             this.dgvLugares.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLugares_CellClick);
             // 
@@ -132,7 +132,7 @@ namespace COMPRAS2
             this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
             this.btnActualizar.Name = "btnActualizar";
@@ -168,7 +168,7 @@ namespace COMPRAS2
             this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(591, 753);
+            this.btnOK.Location = new System.Drawing.Point(591, 680);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(88, 34);
             this.btnOK.TabIndex = 76;
@@ -181,7 +181,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvLugares);
             this.Controls.Add(this.bTNBack);

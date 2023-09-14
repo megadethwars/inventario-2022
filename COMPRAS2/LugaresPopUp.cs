@@ -155,6 +155,12 @@ namespace COMPRAS2
                 var l = new Lugares();
                 l.id = listaLugares[comboPlaces.SelectedIndex].Item1;
                 l.lugar = listaLugares[comboPlaces.SelectedIndex].Item2;
+                if (l.id == 1)
+                {
+                    MessageBox.Show("Debes seleccionar un lugar distinto al Almacen");
+                    return;
+                }
+                VG.id_current_lugar = l.id;
                 this.mainForm.L = l;
                 this.mainForm.OpenSalida();
                 this.Close();

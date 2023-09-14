@@ -150,9 +150,9 @@ namespace COMPRAS2
             // dgvSalida
             // 
             this.dgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalida.Location = new System.Drawing.Point(76, 388);
+            this.dgvSalida.Location = new System.Drawing.Point(123, 293);
             this.dgvSalida.Name = "dgvSalida";
-            this.dgvSalida.Size = new System.Drawing.Size(1167, 275);
+            this.dgvSalida.Size = new System.Drawing.Size(1036, 223);
             this.dgvSalida.TabIndex = 103;
             this.dgvSalida.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalida_CellContentClick);
             this.dgvSalida.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarritoSalida_CellMouseClick);

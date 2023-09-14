@@ -143,8 +143,9 @@ namespace COMPRAS2
             txtBUSCADOR.Text = "";
             count++;
             lbCount.Text = count.ToString();
+            lbCount.Text = count.ToString();
             movimientos.Add(movement);
-            string[] row = new string[] { device.codigo, device.producto,device.modelo,device.serie };
+            string[] row = new string[] { device.codigo, device.producto,device.modelo };
             dgvSalida.Rows.Add(row);
         }
         
@@ -176,7 +177,7 @@ namespace COMPRAS2
             dgvSalida.Columns.Add("Codigo", "Codigo");
             dgvSalida.Columns.Add("Producto", "Producto");
             dgvSalida.Columns.Add("modelo", "modelo");
-            dgvSalida.Columns.Add("serie", "serie");
+            
 
             btnclm = new DataGridViewButtonColumn();
             btnclm.Name = "El";
@@ -185,7 +186,7 @@ namespace COMPRAS2
             btnclm.UseColumnTextForButtonValue = true;
             this.dgvSalida.Columns.Add(btnclm);
 
-            int lugars = await Lugares();
+           
         }
 
         private void dgvCarritoSalida_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -209,48 +210,7 @@ namespace COMPRAS2
             }
         }
 
-        private async Task<int> Lugares()
-        {
-            try
-            {
-                var url = HttpMethods.url + "lugares";
-                StatusMessage statusmessage = await HttpMethods.get(url);
-
-                if (statusmessage.statuscode == 500)
-                {
-                    MessageBox.Show("Error interno del servidor");
-                    return 2;
-                }
-
-                if (statusmessage.statuscode == 404)
-                {
-                    MessageBox.Show("Estatus no encontrados");
-                    return 2;
-                }
-
-                if (statusmessage.statuscode != 200)
-                {
-                    return 1;
-                }
-
-                var lugares = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
-                listaLugares.Add(Tuple.Create<Int32, String>(0, "ninguno"));
-                for (int x = 0; x < lugares.Count; x++)
-                {
-                    listaLugares.Add(Tuple.Create<Int32, String>(lugares[x].id, lugares[x].lugar));
-                }
-                cblugares.DataSource = listaLugares;
-                cblugares.DisplayMember = "Item2";
-                cblugares.ValueMember = "Item1";
-
-                return 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
-                return 10;
-            }
-        }
+        
 
         private void dgvSalida_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

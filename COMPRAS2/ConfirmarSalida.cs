@@ -211,7 +211,7 @@ namespace COMPRAS2
                     //actualizar lugar del dispositivo
 
 
-                    movement.LugarId = idlugar;
+                    movement.LugarId = VG.id_current_lugar;
                     movement.usuarioId = idUsuario;
                     movement.usuario = null;
                     movement.dispositivo_Actual = null;
@@ -265,7 +265,7 @@ namespace COMPRAS2
 
         private async void btnOK_Click(object sender, EventArgs e)
         {
-
+            /*
             if (cbLugares.SelectedItem != null)
             {
                 var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
@@ -277,20 +277,21 @@ namespace COMPRAS2
                 MessageBox.Show("No se ha seleccionado ningun estatus");
                 return;
             }
-
+            */
+            /*
             if (idlugar == 0 || idlugar==1)
             {
                 MessageBox.Show("No se ha asignado algun lugar , intente de nuevo");
                 return;
             }
-
+            */
             int statusUser = await Auth();
 
             if (statusUser != 0)
             {
                 return;
             }
-
+            /*
             if (cbLugares.SelectedItem != null)
             {
                 var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
@@ -301,6 +302,7 @@ namespace COMPRAS2
                 MessageBox.Show("No se ha seleccionado ningun lugar");
                 return;
             }
+            */
 
             int statusmovements = await sendMovementAsync();
         }
