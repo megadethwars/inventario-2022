@@ -269,7 +269,7 @@ namespace COMPRAS2
 
         public void OpenSalida()
         {
-            Navigator.nextPage(new SALIDA());
+            Navigator.nextPage(new SALIDA(this.L));
         }
 
         private void btnActualizarProducto_Click(object sender, EventArgs e)

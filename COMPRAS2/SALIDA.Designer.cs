@@ -37,8 +37,10 @@ namespace COMPRAS2
             this.btnBuscador = new System.Windows.Forms.Button();
             this.lbCount = new System.Windows.Forms.Label();
             this.dgvSalida = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalida)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBUSCADOR
@@ -48,12 +50,13 @@ namespace COMPRAS2
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBUSCADOR.ForeColor = System.Drawing.Color.White;
-            this.txtBUSCADOR.Location = new System.Drawing.Point(191, 109);
+            this.txtBUSCADOR.Location = new System.Drawing.Point(191, 104);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
             this.txtBUSCADOR.Size = new System.Drawing.Size(924, 19);
             this.txtBUSCADOR.TabIndex = 68;
             this.txtBUSCADOR.Text = "AGREGAR ID";
             this.txtBUSCADOR.Click += new System.EventHandler(this.txtBUSCADOR_Click);
+            this.txtBUSCADOR.TextChanged += new System.EventHandler(this.txtBUSCADOR_TextChanged);
             this.txtBUSCADOR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CheckEnter);
             // 
             // lblSALIDA
@@ -72,9 +75,9 @@ namespace COMPRAS2
             // 
             this.pboxBuscador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pboxBuscador.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pboxBuscador.Location = new System.Drawing.Point(123, 99);
+            this.pboxBuscador.Location = new System.Drawing.Point(123, 83);
             this.pboxBuscador.Name = "pboxBuscador";
-            this.pboxBuscador.Size = new System.Drawing.Size(1036, 40);
+            this.pboxBuscador.Size = new System.Drawing.Size(1036, 56);
             this.pboxBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxBuscador.TabIndex = 67;
             this.pboxBuscador.TabStop = false;
@@ -108,9 +111,9 @@ namespace COMPRAS2
             this.btnAgregarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCarrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarCarrito.Location = new System.Drawing.Point(1068, 703);
+            this.btnAgregarCarrito.Location = new System.Drawing.Point(1009, 669);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
-            this.btnAgregarCarrito.Size = new System.Drawing.Size(175, 39);
+            this.btnAgregarCarrito.Size = new System.Drawing.Size(234, 73);
             this.btnAgregarCarrito.TabIndex = 93;
             this.btnAgregarCarrito.Text = "AGREGAR AL CARRITO";
             this.btnAgregarCarrito.UseVisualStyleBackColor = false;
@@ -127,7 +130,7 @@ namespace COMPRAS2
             this.btnBuscador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscador.Location = new System.Drawing.Point(154, 108);
+            this.btnBuscador.Location = new System.Drawing.Point(154, 103);
             this.btnBuscador.Name = "btnBuscador";
             this.btnBuscador.Size = new System.Drawing.Size(31, 25);
             this.btnBuscador.TabIndex = 101;
@@ -149,13 +152,24 @@ namespace COMPRAS2
             // 
             // dgvSalida
             // 
+            this.dgvSalida.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalida.Location = new System.Drawing.Point(123, 293);
+            this.dgvSalida.Location = new System.Drawing.Point(435, 169);
             this.dgvSalida.Name = "dgvSalida";
-            this.dgvSalida.Size = new System.Drawing.Size(1036, 223);
+            this.dgvSalida.Size = new System.Drawing.Size(409, 573);
             this.dgvSalida.TabIndex = 103;
             this.dgvSalida.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalida_CellContentClick);
             this.dgvSalida.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarritoSalida_CellMouseClick);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(265, 129);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(328, 24);
+            this.dataGridView1.TabIndex = 104;
+            this.dataGridView1.Visible = false;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // SALIDA
             // 
@@ -163,6 +177,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dgvSalida);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.btnBuscador);
@@ -177,6 +192,7 @@ namespace COMPRAS2
             this.Load += new System.EventHandler(this.SALIDA_LoadAsync);
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalida)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +207,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnBuscador;
         private System.Windows.Forms.Label lbCount;
         private System.Windows.Forms.DataGridView dgvSalida;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

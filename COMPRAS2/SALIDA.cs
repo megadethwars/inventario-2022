@@ -24,6 +24,9 @@ namespace COMPRAS2
         int count = 0;
         DataGridViewButtonColumn btnclm;
         List<Tuple<Int32, String>> listaLugares;
+        Lugares lugar =  new Lugares();
+        List<String> codigos = new List<String>();
+        public List<DeviceSomeFields> deviceslist2;
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
@@ -80,51 +83,43 @@ namespace COMPRAS2
             }          
         }
 
-        public async void busqueda() {
+        public void busqueda() {
 
             //busqueda
             if (txtBUSCADOR.Text == "") {
                 MessageBox.Show("Campo de Texto vacio");
                 return;          
             }
-
-            QueryDevice devicequery = new QueryDevice();
-            devicequery.codigo = txtBUSCADOR.Text;
-
-            string json = JsonConvert.SerializeObject(devicequery,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            var url = HttpMethods.url + "dispositivos/query";
-            StatusMessage statusmessage = await HttpMethods.Post(url,json);
-
-            if (statusmessage.statuscode == 500)
+            if (txtBUSCADOR.Text.StartsWith("AV"))
             {
-                MessageBox.Show("Error interno en el servidor");
-            }
-
-            if (statusmessage.statuscode == 409)
-            {
-                MessageBox.Show("Ocurrio un conflicto");
-            }
-
-            if (statusmessage.statuscode == 404)
-            {
-                MessageBox.Show("recurso NO encontrado");
-            }
-
-            if (statusmessage.statuscode == 200)
-            {
-                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-                if (devices.Count == 0)
+                if (!codigos.Contains(txtBUSCADOR.Text))
                 {
-                    MessageBox.Show("No hay dispositivos en stock, cantidad Insuficiente");
+                    codigos.Add(txtBUSCADOR.Text);
+                    string[] row = new string[] { txtBUSCADOR.Text };
+                    dgvSalida.Rows.Add(row);
+                    txtBUSCADOR.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Codigo Añadido");
+                    txtBUSCADOR.Text = "";
                     return;
                 }
-                
-
-                Agregar(devices[0]);
-
             }
+            else
+            {
+                dataGridView1.Visible = true;
+                dataGridView1.Rows.Clear();
+                dataGridView1.Height = 0;
+                for(int x = 0;x<10 - txtBUSCADOR.Text.Length;x++)
+                {
+                    string[] row = new string[] { "dsfdsfdsf" };
+                    dataGridView1.Rows.Add(row);
+                    dataGridView1.Height = dataGridView1.Height + 15;
+                }
+            }
+
+
 
         }
 
@@ -175,8 +170,6 @@ namespace COMPRAS2
             CargoEtiqueta(font);
 
             dgvSalida.Columns.Add("Codigo", "Codigo");
-            dgvSalida.Columns.Add("Producto", "Producto");
-            dgvSalida.Columns.Add("modelo", "modelo");
             
 
             btnclm = new DataGridViewButtonColumn();
@@ -184,9 +177,14 @@ namespace COMPRAS2
             btnclm.Text = "Eliminar";
             btnclm.HeaderText = "Eliminar";
             btnclm.UseColumnTextForButtonValue = true;
+            btnclm.DefaultCellStyle.BackColor = Color.Red;
+            btnclm.DefaultCellStyle.ForeColor = Color.White;
             this.dgvSalida.Columns.Add(btnclm);
+            dgvSalida.Columns[0].Width = dgvSalida.Width / 2 - 22;
+            dgvSalida.Columns[1].Width = dgvSalida.Width / 2 - 22;
 
-           
+            lblSALIDA.Text = "SALIDA " + "(" + lugar.lugar + ")";
+
         }
 
         private void dgvCarritoSalida_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -199,7 +197,7 @@ namespace COMPRAS2
                     dgvSalida.Rows.RemoveAt(dgvSalida.CurrentRow.Index);
 
                     //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
-                    this.movimientos.RemoveAt(e.RowIndex);
+                    this.codigos.RemoveAt(e.RowIndex);
                 }
                 catch (Exception ex)
                 {
@@ -211,10 +209,121 @@ namespace COMPRAS2
         }
 
         
-
+         public SALIDA(Lugares l)
+        {
+            InitializeComponent();
+            dataGridView1.Columns.Add("Productos","Productos");
+            this.lugar = l;
+            devices = new List<Devices>();
+            movimientos = new List<Movimientos>();
+            listaLugares = new List<Tuple<Int32, String>>();
+        }
         private void dgvSalida_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            string[] row = new string[] { deviceslist2[e.RowIndex].producto };
+            dgvSalida.Rows.Add(row);
+            txtBUSCADOR.Text = "";
+            dataGridView1.Rows.Clear();
+            dataGridView1.Visible = false;
+        }
+
+        private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
+        {
+            if ( txtBUSCADOR.Text != "")
+            {
+                if(txtBUSCADOR.Text.Length == 1)
+                {
+                    if (txtBUSCADOR.Text[0] != 'A')
+                    {
+
+                        busquedaNormal();
+                    }
+                }
+                else if (txtBUSCADOR.Text.Length > 1)
+                {
+                    if (txtBUSCADOR.Text[0] != 'A' && txtBUSCADOR.Text[1] != 'V')
+                    {
+                        busquedaNormal();
+                    }
+                    else if (txtBUSCADOR.Text[0] == 'A' && txtBUSCADOR.Text[1] != 'V')
+                    {
+                        busquedaNormal();
+                    }
+                }
+
+            }
+        }
+
+        private async void busquedaNormal()
+        {
+            try
+            {
+     
+                //this.Invoke((MethodInvoker)delegate ()
+                //{
+                //    dgvInventario.Rows.Clear();
+                //});
+                dataGridView1.Rows.Clear();
+                dataGridView1.Visible = true;
+                dataGridView1.Height = 15;
+                var url = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=1";
+                StatusMessage statusmessage2 = await HttpMethods.get(url, txtBUSCADOR.Text);
+
+
+
+                if (statusmessage2.statuscode != 200)
+                {
+                    return;
+                }
+
+                deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
+
+
+
+                for (int x = 0; x < deviceslist2.Count; x++)
+                {
+                    if (dataGridView1.Height < 300)
+                    { 
+                    dataGridView1.Height = dataGridView1.Height + 15;
+                    }
+                    DeviceSomeFields inv = deviceslist2[x];
+                    deviceslist2[x].producto = inv.producto;
+                    deviceslist2[x].codigo = inv.codigo;
+                    deviceslist2[x].lugar = inv.lugar;
+                    deviceslist2[x].marca = inv.marca;
+                    deviceslist2[x].modelo = inv.modelo;
+                    deviceslist2[x].descripcion = inv.descripcion;
+                    deviceslist2[x].serie = inv.serie;
+
+                    string[] row = new string[] { deviceslist2[x].producto};
+
+
+                    //this.Invoke((MethodInvoker)delegate ()
+                    //{
+                    //    dgvInventario.Rows.Add(row);
+
+                    //});
+
+                    dataGridView1.Rows.Add(row);
+
+                    dataGridView1.Columns[0].Width = 250;
+
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+            }
         }
     }
 }

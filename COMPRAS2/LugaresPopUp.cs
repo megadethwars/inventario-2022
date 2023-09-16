@@ -26,7 +26,10 @@ namespace COMPRAS2
         private async void LugaresPopUp_Load(object sender, EventArgs e)
         {
             listaLugares = new List<Tuple<Int32, String>>();
+            progressBar1.Visible = true;
+            progressBar1.Style = ProgressBarStyle.Marquee;
             int lugars = await Lugares();
+            progressBar1.Visible = false;
         }
         private async Task<int> Lugares()
         {
@@ -58,6 +61,7 @@ namespace COMPRAS2
                 {
                     listaLugares.Add(Tuple.Create<Int32, String>(lugares[x].id, lugares[x].lugar));
                 }
+                listaLugares = listaLugares.OrderBy(t => t.Item2).ToList();
                 comboPlaces.DataSource = listaLugares;
                 comboPlaces.DisplayMember = "Item2";
                 comboPlaces.ValueMember = "Item1";
@@ -109,6 +113,7 @@ namespace COMPRAS2
                             listaLugares.Add(Tuple.Create<Int32, String>(devices[x].id, devices[x].lugar));
                             Console.WriteLine(devices[x].lugar);
                         }
+                        
                         comboPlaces.DataSource = null;
                         comboPlaces.DataSource = listaLugares;
                         comboPlaces.DisplayMember = "Item2";
