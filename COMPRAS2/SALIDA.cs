@@ -106,18 +106,7 @@ namespace COMPRAS2
                     return;
                 }
             }
-            else
-            {
-                dataGridView1.Visible = true;
-                dataGridView1.Rows.Clear();
-                dataGridView1.Height = 0;
-                for(int x = 0;x<10 - txtBUSCADOR.Text.Length;x++)
-                {
-                    string[] row = new string[] { "dsfdsfdsf" };
-                    dataGridView1.Rows.Add(row);
-                    dataGridView1.Height = dataGridView1.Height + 15;
-                }
-            }
+            
 
 
 
@@ -228,6 +217,7 @@ namespace COMPRAS2
             
             string[] row = new string[] { deviceslist2[e.RowIndex].producto };
             dgvSalida.Rows.Add(row);
+            codigos.Add(deviceslist2[e.RowIndex].codigo);
             txtBUSCADOR.Text = "";
             dataGridView1.Rows.Clear();
             dataGridView1.Visible = false;
