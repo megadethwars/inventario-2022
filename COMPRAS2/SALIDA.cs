@@ -169,8 +169,6 @@ namespace COMPRAS2
             btnclm.DefaultCellStyle.BackColor = Color.Red;
             btnclm.DefaultCellStyle.ForeColor = Color.White;
             this.dgvSalida.Columns.Add(btnclm);
-            dgvSalida.Columns[0].Width = dgvSalida.Width / 2 - 22;
-            dgvSalida.Columns[1].Width = dgvSalida.Width / 2 - 22;
 
             lblSALIDA.Text = "SALIDA " + "(" + lugar.lugar + ")";
 
