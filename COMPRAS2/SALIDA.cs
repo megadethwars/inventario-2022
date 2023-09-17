@@ -248,6 +248,10 @@ namespace COMPRAS2
                 }
 
             }
+            else
+            {
+                dataGridView1.Visible = false;
+            }
         }
 
         private async void busquedaNormal()
