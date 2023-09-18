@@ -149,7 +149,11 @@ namespace COMPRAS2
                 MessageBox.Show("No hay productos para realizar una salida");
                 return;
             }
-            await validate_devices_movements();
+            bool result = await validate_devices_movements();
+            if (!result)
+            {
+                return;
+            }
             Navigator.nextPage(new CarritoSalida(this));
         }        
 
@@ -270,7 +274,7 @@ namespace COMPRAS2
                 dataGridView1.Rows.Clear();
                 dataGridView1.Visible = true;
                 dataGridView1.Height = 15;
-                var url = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=1";
+                var url = HttpMethods.url + "dispositivos/filterdeviceminFields?limit=20&offset=1";
                 StatusMessage statusmessage2 = await HttpMethods.get(url, txtBUSCADOR.Text);
 
                 if (statusmessage2.statuscode != 200)
@@ -331,14 +335,13 @@ namespace COMPRAS2
             //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
             this.codigos.Remove(code);
         }
-        private async         Task
-validate_devices_movements()
+        private async Task<bool> validate_devices_movements()
         {
             //check if devices exist
             if (codigos.Count == 0)
             {
                 MessageBox.Show("No hay productos para realizar una salida");
-                return;
+                return false;
 
             }
 
@@ -353,7 +356,7 @@ validate_devices_movements()
                 if (statusmessage.statuscode != 200)
                 {
                     MessageBox.Show("Ocurrio un error durante la peticion");
-                    return;
+                    return false;
                 }
 
 
@@ -364,11 +367,13 @@ validate_devices_movements()
                 {
                     delete_code_tables(codigo);
                     MessageBox.Show("el producto con e codigo"+codigo+" no existe, favor de verificarlo de nuevo");
-                    return;
+                    return false;
                 }
                 Agregar(deviceslistcheck[0]);
                 
             }
+
+            return true;
         }
     }
 }
