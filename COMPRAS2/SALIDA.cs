@@ -79,6 +79,14 @@ namespace COMPRAS2
         {        
             if (e.KeyCode == Keys.Enter)
             {
+                if (codigos.Count != 0)
+                {
+                    if (codigos.Contains(this.txtBUSCADOR.Text))
+                    {
+                        MessageBox.Show("el producto ya esta en la lista deseada");
+                        return;
+                    }
+                }
                 busqueda();
             }          
         }
