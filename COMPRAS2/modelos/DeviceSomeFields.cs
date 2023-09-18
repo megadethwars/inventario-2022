@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace COMPRAS2.modelos
 {
-    public class DeviceSomeFields
+    public class DeviceSomeFields: Devices
     {
 
         [DefaultValue(null)]

@@ -60,12 +60,12 @@ namespace COMPRAS2
             font = new Font(ff, 15f, FontStyle.Bold);
         }
 
-        public List<Devices> devices;
+        
         public List<Movimientos> movimientos;
         public SALIDA()
         {
             InitializeComponent();
-            devices = new List<Devices>();
+          
             movimientos = new List<Movimientos>();
             listaLugares = new List<Tuple<Int32, String>>();
         }
@@ -112,7 +112,7 @@ namespace COMPRAS2
 
         }
 
-        private void Agregar(Devices device) {
+        private bool Agregar(Devices device) {
             //convert device to movement
             Movimientos movement = new Movimientos();
             movement.usuarioId = CurrentUsers.id;
@@ -120,26 +120,28 @@ namespace COMPRAS2
             movement.dispositivo = device;                        
             movement.tipoMovId = 1;
             bool deviceExist = movimientos.Any(x => x.dispositivoId == device.id && x.dispositivoId == device.id);
-            if (deviceExist) {
-                MessageBox.Show("el producto ya existe en la lista");
-                return;
-            }
+            ///if (deviceExist) {
+                //MessageBox.Show("el producto ya existe en la lista");
+               // return false;
+            //}
             txtBUSCADOR.Text = "";
             count++;
             lbCount.Text = count.ToString();
             lbCount.Text = count.ToString();
             movimientos.Add(movement);
-            string[] row = new string[] { device.codigo, device.producto,device.modelo };
-            dgvSalida.Rows.Add(row);
+            return true;
+            //string[] row = new string[] { device.codigo, device.producto,device.modelo };
+            //dgvSalida.Rows.Add(row);
         }
         
 
-        private void btnAgregarCarrito_Click(object sender, EventArgs e)
+        private async void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
-            if (movimientos.Count == 0) {
+            if (codigos.Count == 0) {
                 MessageBox.Show("No hay productos para realizar una salida");
                 return;
             }
+            await validate_devices_movements();
             Navigator.nextPage(new CarritoSalida(this));
         }        
 
@@ -201,7 +203,7 @@ namespace COMPRAS2
             InitializeComponent();
             dataGridView1.Columns.Add("Productos","Productos");
             this.lugar = l;
-            devices = new List<Devices>();
+            
             movimientos = new List<Movimientos>();
             listaLugares = new List<Tuple<Int32, String>>();
         }
@@ -257,17 +259,11 @@ namespace COMPRAS2
             try
             {
      
-                //this.Invoke((MethodInvoker)delegate ()
-                //{
-                //    dgvInventario.Rows.Clear();
-                //});
                 dataGridView1.Rows.Clear();
                 dataGridView1.Visible = true;
                 dataGridView1.Height = 15;
                 var url = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=1";
                 StatusMessage statusmessage2 = await HttpMethods.get(url, txtBUSCADOR.Text);
-
-
 
                 if (statusmessage2.statuscode != 200)
                 {
@@ -275,8 +271,6 @@ namespace COMPRAS2
                 }
 
                 deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
-
-
 
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
@@ -295,17 +289,8 @@ namespace COMPRAS2
 
                     string[] row = new string[] { deviceslist2[x].producto};
 
-
-                    //this.Invoke((MethodInvoker)delegate ()
-                    //{
-                    //    dgvInventario.Rows.Add(row);
-
-                    //});
-
                     dataGridView1.Rows.Add(row);
-
                     dataGridView1.Columns[0].Width = 250;
-
 
 
                 }
@@ -315,6 +300,66 @@ namespace COMPRAS2
             catch (Exception ex)
             {
                 MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+            }
+        }
+
+
+        private void delete_code_tables(string code)
+        {
+            int indiceFila = 0;
+            foreach (DataGridViewRow fila in dgvSalida.Rows)
+            {
+                
+                string valorCelda = fila.Cells["codigo"].Value?.ToString();
+
+                if (!string.IsNullOrEmpty(valorCelda) && valorCelda.Equals(code))
+                {
+                    indiceFila = fila.Index;
+                    break; 
+                }
+            }
+            dgvSalida.Rows.RemoveAt(indiceFila);
+            
+            //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
+            this.codigos.Remove(code);
+        }
+        private async         Task
+validate_devices_movements()
+        {
+            //check if devices exist
+            if (codigos.Count == 0)
+            {
+                MessageBox.Show("No hay productos para realizar una salida");
+                return;
+
+            }
+
+            foreach(string codigo in codigos)
+            {
+                //search device
+                var url = HttpMethods.url + "dispositivos/filterdeviceminFields?limit=2&offset=1";
+                StatusMessage statusmessage = await HttpMethods.get(url, codigo);
+
+
+
+                if (statusmessage.statuscode != 200)
+                {
+                    MessageBox.Show("Ocurrio un error durante la peticion");
+                    return;
+                }
+
+
+
+                List<Devices> deviceslistcheck = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+
+                if(deviceslistcheck==null || deviceslistcheck.Count == 0)
+                {
+                    delete_code_tables(codigo);
+                    MessageBox.Show("el producto con e codigo"+codigo+" no existe, favor de verificarlo de nuevo");
+                    return;
+                }
+                Agregar(deviceslistcheck[0]);
+                
             }
         }
     }
