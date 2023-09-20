@@ -595,6 +595,8 @@
   <ItemGroup>
     <Content Include="AudioVideoSolutionsLogo.ico" />
     <Content Include="Resources\AudioVideoSolutionsLogo.ico" />
+    <Content Include="Resources\ZKZg.gif" />
+    <None Include="Resources\ZKZg1.gif" />
     <None Include="Resources\Icon1.ico" />
   </ItemGroup>
   <ItemGroup>

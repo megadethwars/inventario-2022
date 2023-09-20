@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Broadcast Division" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Broadcast Division.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LINEA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LINEA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="specialbutton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\specialbutton2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,6 +145,9 @@
   <data name="Grupo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Grupo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="NewLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewLogo.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="REPORTE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\REPORTE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,14 +160,14 @@
   <data name="panel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panel2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RECARGAORIG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RECARGAORIG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="specialbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\specialbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectángulo 1 copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectángulo 1 copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BUTTON2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BUTTON2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectángulo 2 copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectángulo 2 copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,17 +196,17 @@
   <data name="ACEPTAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ACEPTAR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SEARCH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SEARCH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MIPERFIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MIPERFIL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="recarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\recarga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="max2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\max2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AudioVideoSolutionsLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AudioVideoSolutionsLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Knockout_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Knockout-48.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,26 +217,29 @@
   <data name="AVS Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AVS Design.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="max2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\max2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BUTTON2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BUTTON2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TOGGLE BUTTON 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TOGGLE BUTTON 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Broadcast Division" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Broadcast Division.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="recarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\recarga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HISTORIAL1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HISTORIAL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LINEA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LINEA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SEARCH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SEARCH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="max" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\max.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EMPLEADOS copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EMPLEADOS copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon1.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TOGGLE BUTTON 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TOGGLE BUTTON 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,16 +250,7 @@
   <data name="OK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RECARGAORIG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RECARGAORIG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NewLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewLogo.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon1.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Knockout_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Knockout-48.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ZKZg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZKZg1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

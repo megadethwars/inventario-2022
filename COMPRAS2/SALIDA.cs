@@ -149,7 +149,10 @@ namespace COMPRAS2
                 MessageBox.Show("No hay productos para realizar una salida");
                 return;
             }
+            pictureBox1.Visible = true;
             bool result = await validate_devices_movements();
+            pictureBox1.Visible = false;
+           
             if (!result)
             {
                 return;
