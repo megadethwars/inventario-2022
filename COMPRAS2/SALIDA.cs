@@ -351,28 +351,34 @@ namespace COMPRAS2
             foreach(string codigo in codigos)
             {
                 //search device
-                var url = HttpMethods.url + "dispositivos/filterdeviceminFields?limit=2&offset=1";
+                var url = HttpMethods.url + "dispositivos/filterdeviceByCodigo";
                 StatusMessage statusmessage = await HttpMethods.get(url, codigo);
 
+
+                if (statusmessage.statuscode == 404)
+                {
+                    MessageBox.Show("el producto con el codigo" + codigo + " no existe, favor de verificarlo de nuevo");
+                    return false;
+                }
 
 
                 if (statusmessage.statuscode != 200)
                 {
-                    MessageBox.Show("Ocurrio un error durante la peticion");
+                    MessageBox.Show("Ocurrio un error durante la peticion, probablemente no exista el producto con codigo "+codigo);
                     return false;
                 }
 
 
 
-                List<Devices> deviceslistcheck = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+                Devices deviceslistcheck = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
 
-                if(deviceslistcheck==null || deviceslistcheck.Count == 0)
+                if(deviceslistcheck==null)
                 {
                     delete_code_tables(codigo);
-                    MessageBox.Show("el producto con e codigo"+codigo+" no existe, favor de verificarlo de nuevo");
+                    MessageBox.Show("el producto con el codigo"+codigo+" no existe, favor de verificarlo de nuevo");
                     return false;
                 }
-                Agregar(deviceslistcheck[0]);
+                Agregar(deviceslistcheck);
                 
             }
 
