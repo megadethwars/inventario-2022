@@ -72,8 +72,9 @@ namespace COMPRAS2
             try
             {
                 var url = HttpMethods.url + "usuarios";
+                pictureBox6.Visible = true;
                 StatusMessage statusmessage = await HttpMethods.get(url);
-
+                pictureBox6.Visible = false;
                 if (statusmessage.statuscode != 200)
                 {
                     return 1;

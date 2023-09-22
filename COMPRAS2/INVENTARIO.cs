@@ -198,7 +198,9 @@ namespace COMPRAS2
             try
             {                
                 var url2 = HttpMethods.url + "dispositivos/alldeviceSomeFields?limit=30";
+                pictureBox6.Visible = true;
                 StatusMessage statusmessage2 = await HttpMethods.get(url2);
+                pictureBox6.Visible = false;
                 deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
                                
                 dgvInventario.Columns.Add("PRODUCTO", "PRODUCTO");

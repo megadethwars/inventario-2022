@@ -29,8 +29,8 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.INVENTARIOTITLE = new System.Windows.Forms.Label();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.txtBUSCADOR = new System.Windows.Forms.TextBox();
@@ -45,19 +45,21 @@ namespace COMPRAS2
             this.bTNBack = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBusquedaAvanzada = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // INVENTARIOTITLE
             // 
             this.INVENTARIOTITLE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.INVENTARIOTITLE.AutoSize = true;
-            this.INVENTARIOTITLE.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INVENTARIOTITLE.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.INVENTARIOTITLE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.INVENTARIOTITLE.Location = new System.Drawing.Point(560, 30);
             this.INVENTARIOTITLE.Name = "INVENTARIOTITLE";
-            this.INVENTARIOTITLE.Size = new System.Drawing.Size(129, 42);
+            this.INVENTARIOTITLE.Size = new System.Drawing.Size(227, 39);
             this.INVENTARIOTITLE.TabIndex = 2;
             this.INVENTARIOTITLE.Text = "INVENTARIO";
             // 
@@ -73,14 +75,14 @@ namespace COMPRAS2
             this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvInventario.ColumnHeadersHeight = 45;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -90,13 +92,13 @@ namespace COMPRAS2
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvInventario.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(1235, 501);
             this.dgvInventario.StandardTab = true;
@@ -130,7 +132,7 @@ namespace COMPRAS2
             this.btnEditarMovimientos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEditarMovimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditarMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarMovimientos.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarMovimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnEditarMovimientos.Location = new System.Drawing.Point(1038, 728);
             this.btnEditarMovimientos.Name = "btnEditarMovimientos";
@@ -151,7 +153,7 @@ namespace COMPRAS2
             this.btnActualizarBDD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarBDD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarBDD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarBDD.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarBDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarBDD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizarBDD.Location = new System.Drawing.Point(676, 728);
             this.btnActualizarBDD.Name = "btnActualizarBDD";
@@ -172,7 +174,7 @@ namespace COMPRAS2
             this.btnActualizarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizarProducto.Location = new System.Drawing.Point(857, 728);
             this.btnActualizarProducto.Name = "btnActualizarProducto";
@@ -193,7 +195,7 @@ namespace COMPRAS2
             this.btnSALIDA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSALIDA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSALIDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSALIDA.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSALIDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSALIDA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnSALIDA.Location = new System.Drawing.Point(473, 728);
             this.btnSALIDA.Name = "btnSALIDA";
@@ -214,7 +216,7 @@ namespace COMPRAS2
             this.btnReingresarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReingresarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReingresarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReingresarProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReingresarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReingresarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnReingresarProducto.Location = new System.Drawing.Point(245, 728);
             this.btnReingresarProducto.Name = "btnReingresarProducto";
@@ -235,7 +237,7 @@ namespace COMPRAS2
             this.btnAgregarNuevoProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarNuevoProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAgregarNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarNuevoProducto.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarNuevoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarNuevoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnAgregarNuevoProducto.Location = new System.Drawing.Point(30, 728);
             this.btnAgregarNuevoProducto.Name = "btnAgregarNuevoProducto";
@@ -300,7 +302,7 @@ namespace COMPRAS2
             this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
             this.btnActualizar.Name = "btnActualizar";
@@ -321,7 +323,7 @@ namespace COMPRAS2
             this.btnBusquedaAvanzada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBusquedaAvanzada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusquedaAvanzada.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusquedaAvanzada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBusquedaAvanzada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnBusquedaAvanzada.Location = new System.Drawing.Point(525, 152);
             this.btnBusquedaAvanzada.MaximumSize = new System.Drawing.Size(210, 40);
@@ -332,12 +334,25 @@ namespace COMPRAS2
             this.btnBusquedaAvanzada.UseVisualStyleBackColor = false;
             this.btnBusquedaAvanzada.Click += new System.EventHandler(this.btnBusquedaAvanzada_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.ZKZg;
+            this.pictureBox6.Location = new System.Drawing.Point(539, 297);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(201, 195);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 107;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
+            // 
             // INVENTARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.btnBusquedaAvanzada);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEditarMovimientos);
@@ -358,6 +373,7 @@ namespace COMPRAS2
             this.Load += new System.EventHandler(this.INVENTARIO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +395,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnEditarMovimientos;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnBusquedaAvanzada;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

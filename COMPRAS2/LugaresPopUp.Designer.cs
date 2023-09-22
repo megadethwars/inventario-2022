@@ -38,6 +38,8 @@ namespace COMPRAS2
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,12 +138,25 @@ namespace COMPRAS2
             this.progressBar1.Size = new System.Drawing.Size(378, 23);
             this.progressBar1.TabIndex = 7;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.ZKZg;
+            this.pictureBox6.Location = new System.Drawing.Point(150, 165);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(117, 120);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 108;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
+            // 
             // LugaresPopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(426, 450);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox1);
@@ -155,6 +170,7 @@ namespace COMPRAS2
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lugares";
             this.Load += new System.EventHandler(this.LugaresPopUp_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +186,6 @@ namespace COMPRAS2
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

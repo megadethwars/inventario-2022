@@ -26,10 +26,10 @@ namespace COMPRAS2
         private async void LugaresPopUp_Load(object sender, EventArgs e)
         {
             listaLugares = new List<Tuple<Int32, String>>();
-            progressBar1.Visible = true;
-            progressBar1.Style = ProgressBarStyle.Marquee;
+            pictureBox6.Visible = true;
+            
             int lugars = await Lugares();
-            progressBar1.Visible = false;
+            pictureBox6.Visible = false;
         }
         private async Task<int> Lugares()
         {

@@ -42,6 +42,7 @@ namespace COMPRAS2
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnSingIn = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCERRAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMIN)).BeginInit();
@@ -50,6 +51,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // USERID
@@ -194,6 +196,18 @@ namespace COMPRAS2
             this.btnSingIn.UseVisualStyleBackColor = true;
             this.btnSingIn.Click += new System.EventHandler(this.btnSingIn_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.ZKZg;
+            this.pictureBox6.Location = new System.Drawing.Point(105, 413);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(201, 195);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 106;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
+            // 
             // INICIARSESION
             // 
             this.AcceptButton = this.btnSingIn;
@@ -201,6 +215,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(400, 788);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.btnSingIn);
             this.Controls.Add(this.USERID);
             this.Controls.Add(this.PASSWORD);
@@ -226,6 +241,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +260,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnSingIn;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

@@ -37,7 +37,9 @@ namespace COMPRAS2
             this.btAgregarEmp = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBusquedaAvanzada = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // bTNBack
@@ -60,11 +62,11 @@ namespace COMPRAS2
             // 
             this.lblEMPLEADOS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEMPLEADOS.AutoSize = true;
-            this.lblEMPLEADOS.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEMPLEADOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEMPLEADOS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblEMPLEADOS.Location = new System.Drawing.Point(560, 30);
             this.lblEMPLEADOS.Name = "lblEMPLEADOS";
-            this.lblEMPLEADOS.Size = new System.Drawing.Size(131, 42);
+            this.lblEMPLEADOS.Size = new System.Drawing.Size(232, 39);
             this.lblEMPLEADOS.TabIndex = 35;
             this.lblEMPLEADOS.Text = "EMPLEADOS";
             // 
@@ -120,7 +122,7 @@ namespace COMPRAS2
             this.btAgregarEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btAgregarEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btAgregarEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAgregarEmp.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAgregarEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAgregarEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btAgregarEmp.Location = new System.Drawing.Point(20, 798);
             this.btAgregarEmp.Name = "btAgregarEmp";
@@ -141,7 +143,7 @@ namespace COMPRAS2
             this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
             this.btnActualizar.Name = "btnActualizar";
@@ -162,7 +164,7 @@ namespace COMPRAS2
             this.btnBusquedaAvanzada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBusquedaAvanzada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusquedaAvanzada.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusquedaAvanzada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBusquedaAvanzada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.btnBusquedaAvanzada.Location = new System.Drawing.Point(522, 87);
             this.btnBusquedaAvanzada.MaximumSize = new System.Drawing.Size(210, 40);
@@ -173,12 +175,25 @@ namespace COMPRAS2
             this.btnBusquedaAvanzada.UseVisualStyleBackColor = false;
             this.btnBusquedaAvanzada.Click += new System.EventHandler(this.btnBusquedaAvanzada_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.Image = global::COMPRAS2.Properties.Resources.ZKZg;
+            this.pictureBox6.Location = new System.Drawing.Point(539, 333);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(201, 195);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 107;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
+            // 
             // EMPLEADOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.btnBusquedaAvanzada);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btAgregarEmp);
@@ -190,6 +205,7 @@ namespace COMPRAS2
             this.Text = "EMPLEADOS";
             this.Load += new System.EventHandler(this.EMPLEADOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +218,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btAgregarEmp;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnBusquedaAvanzada;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
