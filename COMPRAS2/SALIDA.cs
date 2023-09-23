@@ -277,7 +277,7 @@ namespace COMPRAS2
                 dataGridView1.Rows.Clear();
                 dataGridView1.Visible = true;
                 dataGridView1.Height = 15;
-                var url = HttpMethods.url + "dispositivos/filterdeviceminFields?limit=20&offset=1";
+                var url = HttpMethods.url + "dispositivos/filterdeviceminFields?limit=20&offset=1&inStorage=1";
                 StatusMessage statusmessage2 = await HttpMethods.get(url, txtBUSCADOR.Text);
 
                 if (statusmessage2.statuscode != 200)
