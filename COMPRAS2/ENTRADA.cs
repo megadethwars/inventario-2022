@@ -21,18 +21,17 @@ namespace COMPRAS2
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
-
+        int count = 0;
+        DataGridViewButtonColumn btnclm;
+        List<Tuple<Int32, String>> listaLugares;
+        Lugares lugar = new Lugares();
+        List<String> codigos = new List<String>();
+        public List<DeviceSomeFields> deviceslist2;
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
 
             this.lblCarritoDeSalida.Font = new Font(ff, 26, fontStyle);
-            this.lblProducto.Font = new Font(ff, 20, fontStyle);
-            this.lbS.Font = new Font(ff, 20, fontStyle);
-            this.or.Font = new Font(ff, 20, fontStyle);
-            this.lbd.Font = new Font(ff, 20, fontStyle);
-            this.lbm.Font = new Font(ff, 20, fontStyle);
-            this.mod.Font = new Font(ff, 20, fontStyle);
             this.btClear.Font = new Font(ff, 18, fontStyle);
             this.btnAgregarCarrito.Font = new Font(ff, 18, fontStyle);
         }
@@ -84,6 +83,14 @@ namespace COMPRAS2
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (codigos.Count != 0)
+                {
+                    if (codigos.Contains(this.txtBUSCADOR.Text))
+                    {
+                        MessageBox.Show("el producto ya esta en la lista deseada");
+                        return;
+                    }
+                }
                 busqueda();
             }
         }
@@ -126,84 +133,26 @@ namespace COMPRAS2
 
         public async void busqueda()
         {
-            //busqueda
             if (txtBUSCADOR.Text == "")
             {
                 MessageBox.Show("Campo de Texto vacio");
                 return;
             }
-
-            QueryDevice devicequery = new QueryDevice();
-            devicequery.codigo = txtBUSCADOR.Text;
-            txtBUSCADOR.Clear();
-            string json = JsonConvert.SerializeObject(devicequery,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            var url = HttpMethods.url + "dispositivos/query";
-            StatusMessage statusmessage = await HttpMethods.Post(url, json);
-
-            if (statusmessage.statuscode == 500)
+            if (txtBUSCADOR.Text.StartsWith("AV"))
             {
-                MessageBox.Show("Error interno en el servidor");
-            }
-
-            if (statusmessage.statuscode == 409)
-            {
-                MessageBox.Show("Ocurrio un conflicto");
-            }
-
-            if (statusmessage.statuscode == 404)
-            {
-                MessageBox.Show("recurso NO encontrado");
-            }
-
-            if (statusmessage.statuscode == 200)
-            {
-                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
-
-                //validate if data is NOT in almacen
-                if (devices.Count == 0) {
-                    MessageBox.Show("El dipositivo NO existe");
-                    return;
-                }
-                if (devices[0].lugarId == 1)
+                if (!codigos.Contains(txtBUSCADOR.Text))
                 {
-                    MessageBox.Show("El dipositivo YA se encuentra en almacen");
+                    codigos.Add(txtBUSCADOR.Text);
+                    string[] row = new string[] { txtBUSCADOR.Text };
+                    dgvSalida.Rows.Add(row);
+                    txtBUSCADOR.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Codigo Añadido");
+                    txtBUSCADOR.Text = "";
                     return;
                 }
-
-                /*
-                sameIdmovimiento = await idMovement(devices[0].id);
-
-                if (sameIdmovimiento == "") {
-
-                    MessageBox.Show("Vuelva a repetir el proceso, ha ocurrido un error en los movimientos");
-
-                    return;
-                }
-                */
-
-                /*
-                if (isFirst) {
-                    if (sameIdmovimiento != currentSameIdmovimiento) {
-                        MessageBox.Show("El dipositivo no pertenece al mismo movimiento");
-                        return;
-                    }
-                }
-                */
-
-                this.lbNombre.Text = devices[0].producto;
-                this.lbOrigen.Text = devices[0].lugar.lugar;
-                this.lbSerie.Text = devices[0].serie;
-                this.lbMarca.Text = devices[0].marca;
-                this.lbdesc.Text = devices[0].descompostura;
-                this.lbModelo.Text = devices[0].modelo;    
-                
-
-                //llenar
-
-                Agregar(devices[0]);
-                currentSameIdmovimiento = sameIdmovimiento;
-                isFirst = true;
             }
         }
 
@@ -224,13 +173,22 @@ namespace COMPRAS2
             movimientos.Add(movement);
         }
 
-        private void btnAgregarCarrito_Click(object sender, EventArgs e)
+        private async void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
-            if (movimientos.Count == 0)
+            if (codigos.Count == 0)
             {
-                MessageBox.Show("No hay productos para realizar una entrada");
+                MessageBox.Show("No hay productos para realizar una salida");
                 return;
             }
+            pictureBox1.Visible = true;
+            bool result = await validate_devices_movements();
+            pictureBox1.Visible = false;
+
+            if (!result)
+            {
+                return;
+            }
+
             Navigator.nextPage(new CarritoEntrada(this));
         }
 
@@ -238,6 +196,19 @@ namespace COMPRAS2
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
+
+            dgvSalida.Columns.Add("Codigo", "Codigo");
+
+
+            btnclm = new DataGridViewButtonColumn();
+            btnclm.Name = "El";
+            btnclm.Text = "Eliminar";
+            btnclm.HeaderText = "Eliminar";
+            btnclm.UseColumnTextForButtonValue = true;
+            btnclm.DefaultCellStyle.BackColor = Color.Red;
+            btnclm.DefaultCellStyle.ForeColor = Color.White;
+            this.dgvSalida.Columns.Add(btnclm);
+
         }
 
         private void btClear_Click(object sender, EventArgs e)
@@ -245,17 +216,86 @@ namespace COMPRAS2
             isFirst = false;
             movimientos.Clear();
 
-            this.lbNombre.Text = "Por definir";
-            this.lbOrigen.Text = "Por definir";
-            this.lbSerie.Text = "Por definir";
-            this.lbMarca.Text = "Por definir";
-            this.lbdesc.Text = "Por definir";
-            this.lbModelo.Text = "Por definir";
         }
 
         private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
         {
+            if (txtBUSCADOR.Text != "")
+            {
+                if (txtBUSCADOR.Text.Length == 1)
+                {
+                    if (txtBUSCADOR.Text[0] != 'A')
+                    {
 
+                        busquedaNormal();
+                    }
+                }
+                else if (txtBUSCADOR.Text.Length > 1)
+                {
+                    if (txtBUSCADOR.Text[0] != 'A' && txtBUSCADOR.Text[1] != 'V')
+                    {
+                        busquedaNormal();
+                    }
+                    else if (txtBUSCADOR.Text[0] == 'A' && txtBUSCADOR.Text[1] != 'V')
+                    {
+                        busquedaNormal();
+                    }
+                }
+
+            }
+            else
+            {
+                dataGridView1.Visible = false;
+            }
+        }
+
+        private async void busquedaNormal()
+        {
+            try
+            {
+
+                dataGridView1.Rows.Clear();
+                dataGridView1.Visible = true;
+                dataGridView1.Height = 15;
+                var url = HttpMethods.url + "dispositivos/filterdeviceminFields?limit=20&offset=1&inStorage=2";
+                StatusMessage statusmessage2 = await HttpMethods.get(url, txtBUSCADOR.Text);
+
+                if (statusmessage2.statuscode != 200)
+                {
+                    return;
+                }
+
+                deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
+
+                for (int x = 0; x < deviceslist2.Count; x++)
+                {
+                    if (dataGridView1.Height < 300)
+                    {
+                        dataGridView1.Height = dataGridView1.Height + 15;
+                    }
+                    DeviceSomeFields inv = deviceslist2[x];
+                    deviceslist2[x].producto = inv.producto;
+                    deviceslist2[x].codigo = inv.codigo;
+                    deviceslist2[x].lugar = inv.lugar;
+                    deviceslist2[x].marca = inv.marca;
+                    deviceslist2[x].modelo = inv.modelo;
+                    deviceslist2[x].descripcion = inv.descripcion;
+                    deviceslist2[x].serie = inv.serie;
+
+                    string[] row = new string[] { deviceslist2[x].producto };
+
+                    dataGridView1.Rows.Add(row);
+                    dataGridView1.Columns[0].Width = 250;
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+            }
         }
 
         private void txtBUSCADOR_Click(object sender, EventArgs e)
@@ -266,6 +306,82 @@ namespace COMPRAS2
         private void btnBuscador_Click(object sender, EventArgs e)
         {
             busqueda();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string[] row = new string[] { deviceslist2[e.RowIndex].producto };
+            dgvSalida.Rows.Add(row);
+            codigos.Add(deviceslist2[e.RowIndex].codigo);
+            txtBUSCADOR.Text = "";
+            dataGridView1.Rows.Clear();
+            dataGridView1.Visible = false;
+        }
+
+        private void delete_code_tables(string code)
+        {
+            int indiceFila = 0;
+            foreach (DataGridViewRow fila in dgvSalida.Rows)
+            {
+
+                string valorCelda = fila.Cells["codigo"].Value?.ToString();
+
+                if (!string.IsNullOrEmpty(valorCelda) && valorCelda.Equals(code))
+                {
+                    indiceFila = fila.Index;
+                    break;
+                }
+            }
+            dgvSalida.Rows.RemoveAt(indiceFila);
+
+            //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
+            this.codigos.Remove(code);
+        }
+        private async Task<bool> validate_devices_movements()
+        {
+            //check if devices exist
+            if (codigos.Count == 0)
+            {
+                MessageBox.Show("No hay productos para realizar una salida");
+                return false;
+
+            }
+
+            foreach (string codigo in codigos)
+            {
+                //search device
+                var url = HttpMethods.url + "dispositivos/filterdeviceByCodigo";
+                StatusMessage statusmessage = await HttpMethods.get(url, codigo);
+
+
+                if (statusmessage.statuscode == 404)
+                {
+                    MessageBox.Show("el producto con el codigo" + codigo + " no existe, favor de verificarlo de nuevo");
+                    return false;
+                }
+
+
+                if (statusmessage.statuscode != 200)
+                {
+                    MessageBox.Show("Ocurrio un error durante la peticion, probablemente no exista el producto con codigo " + codigo);
+                    return false;
+                }
+
+
+
+                Devices deviceslistcheck = JsonConvert.DeserializeObject<Devices>(statusmessage.data);
+
+                if (deviceslistcheck == null)
+                {
+                    delete_code_tables(codigo);
+                    MessageBox.Show("el producto con el codigo" + codigo + " no existe, favor de verificarlo de nuevo");
+                    return false;
+                }
+                Agregar(deviceslistcheck);
+
+            }
+
+            return true;
         }
     }
 }
