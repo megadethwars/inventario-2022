@@ -199,7 +199,7 @@ namespace COMPRAS2
 
             dgvSalida.Columns.Add("Codigo", "Codigo");
 
-
+            dataGridView1.Columns.Add("Productos", "Productos");
             btnclm = new DataGridViewButtonColumn();
             btnclm.Name = "El";
             btnclm.Text = "Eliminar";
