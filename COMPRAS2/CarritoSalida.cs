@@ -171,5 +171,52 @@ namespace COMPRAS2
 
             Navigator.nextPage(new ConfirmarSalida(this));
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //ASCENDENTE
+            this.movimientos.Sort((s1, s2) => s1.dispositivo_Actual.CompareTo(s2.dispositivo_Actual));
+            dgvCarritoSalida.Rows.Clear();
+            foreach (Movimientos x in movimientos)
+             {
+                string[] row = new string[] { x.codigo_Actual, x.dispositivo_Actual };
+                dgvCarritoSalida.Rows.Add(row);
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //descendente
+            this.movimientos.Sort((s1, s2) => s2.dispositivo_Actual.CompareTo(s1.dispositivo_Actual));
+            dgvCarritoSalida.Rows.Clear();
+            foreach (Movimientos x in movimientos)
+            {
+                string[] row = new string[] { x.codigo_Actual, x.dispositivo_Actual };
+                dgvCarritoSalida.Rows.Add(row);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.movimientos.Sort((s1, s2) => s2.codigo_Actual.CompareTo(s1.codigo_Actual));
+            dgvCarritoSalida.Rows.Clear();
+            foreach (Movimientos x in movimientos)
+            {
+                string[] row = new string[] { x.codigo_Actual, x.dispositivo_Actual };
+                dgvCarritoSalida.Rows.Add(row);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.movimientos.Sort((s1, s2) => s1.codigo_Actual.CompareTo(s2.codigo_Actual));
+            dgvCarritoSalida.Rows.Clear();
+            foreach (Movimientos x in movimientos)
+            {
+                string[] row = new string[] { x.codigo_Actual, x.dispositivo_Actual };
+                dgvCarritoSalida.Rows.Add(row);
+            }
+        }
     }
 }

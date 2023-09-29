@@ -61,7 +61,6 @@ namespace COMPRAS2
             this.entrada = entrada;
             this.movimientos = this.entrada.movimientos;
         }
-       
 
         private void btnBack_Click(object sender, EventArgs e)
         {
