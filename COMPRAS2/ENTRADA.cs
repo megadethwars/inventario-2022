@@ -143,7 +143,7 @@ namespace COMPRAS2
                 if (!codigos.Contains(txtBUSCADOR.Text))
                 {
                     codigos.Add(txtBUSCADOR.Text);
-                    string[] row = new string[] { txtBUSCADOR.Text };
+                    string[] row = new string[] { txtBUSCADOR.Text,"1" };
                     dgvSalida.Rows.Add(row);
                     txtBUSCADOR.Text = "";
                 }
@@ -198,7 +198,7 @@ namespace COMPRAS2
             CargoEtiqueta(font);
 
             dgvSalida.Columns.Add("Codigo", "Codigo");
-
+            dgvSalida.Columns.Add("Cantidad", "Cantidad");
             dataGridView1.Columns.Add("Productos", "Productos");
             btnclm = new DataGridViewButtonColumn();
             btnclm.Name = "El";
@@ -310,9 +310,29 @@ namespace COMPRAS2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string[] row = new string[] { deviceslist2[e.RowIndex].producto };
-            dgvSalida.Rows.Add(row);
-            codigos.Add(deviceslist2[e.RowIndex].codigo);
+            if (textBox1.Text == "CANTIDAD = 1")
+            {
+                string[] row = new string[] { deviceslist2[e.RowIndex].producto, "1" };
+                dgvSalida.Rows.Add(row);
+                codigos.Add(deviceslist2[e.RowIndex].codigo);
+
+            }
+            else
+            {
+                int x = 0;
+
+                if (Int32.TryParse(textBox1.Text, out x))
+                {
+                    string[] row = new string[] { deviceslist2[e.RowIndex].producto, x.ToString() };
+                    dgvSalida.Rows.Add(row);
+                    codigos.Add(deviceslist2[e.RowIndex].codigo);
+                }
+                else
+                {
+                    MessageBox.Show("Introduzca un numero valido ");
+                }
+            }
+            textBox1.Text = "CANTIDAD = 1";
             txtBUSCADOR.Text = "";
             dataGridView1.Rows.Clear();
             dataGridView1.Visible = false;
@@ -382,6 +402,11 @@ namespace COMPRAS2
             }
 
             return true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Clear();
         }
     }
 }
