@@ -89,7 +89,6 @@ namespace COMPRAS2.modelos
         [DefaultValue(null)]
         public string accesorios { get; set; }
 
-        [DefaultValue(false)]
-        public bool isLugarparcial { get; set; }
+        
 }
 }
