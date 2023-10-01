@@ -241,7 +241,6 @@ namespace COMPRAS2
                         busquedaNormal();
                     }
                 }
-
             }
             else
             {
@@ -266,7 +265,7 @@ namespace COMPRAS2
                 }
 
                 deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
-
+                dataGridView1.Rows.Clear();
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     if (dataGridView1.Height < 300)
@@ -407,6 +406,27 @@ namespace COMPRAS2
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox1.Clear();
+        }
+
+        private void dgvSalida_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == dgvSalida.Columns.IndexOf(btnclm))
+            {
+                try
+                {
+                    //DataGridViewRow row = dgvCarritoSalida.Rows[e.RowIndex];
+                    dgvSalida.Rows.RemoveAt(dgvSalida.CurrentRow.Index);
+
+                    //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
+                    this.codigos.RemoveAt(e.RowIndex);
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+
+            }
         }
     }
 }

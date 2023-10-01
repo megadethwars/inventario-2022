@@ -303,14 +303,13 @@ namespace COMPRAS2
                 dataGridView1.Height = 15;
                 var url = HttpMethods.url + "dispositivos/filterdeviceminFields?limit=20&offset=1&inStorage=1";
                 StatusMessage statusmessage2 = await HttpMethods.get(url, txtBUSCADOR.Text);
-
                 if (statusmessage2.statuscode != 200)
                 {
                     return;
                 }
 
                 deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
-
+                dataGridView1.Rows.Clear();
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     if (dataGridView1.Height < 300)

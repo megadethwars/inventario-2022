@@ -214,6 +214,7 @@ namespace COMPRAS2
             this.dgvSalida.Size = new System.Drawing.Size(409, 573);
             this.dgvSalida.StandardTab = true;
             this.dgvSalida.TabIndex = 127;
+            this.dgvSalida.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSalida_CellMouseClick);
             // 
             // dataGridView1
             // 
