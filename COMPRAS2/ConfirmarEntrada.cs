@@ -192,8 +192,7 @@ namespace COMPRAS2
                     movement.LugarId = idlugar;
                     movement.usuarioId = idUsuario;
                     movement.usuario = null;
-                    movement.dispositivo_Actual = null;
-                    movement.cantidad_Actual = 0;
+                    movement.dispositivo_Actual = null;          
                     movement.codigo_Actual = null;
                     movement.dispositivo = null;
                     movement.idMovimiento = uniqueId;
