@@ -30,7 +30,7 @@ namespace COMPRAS2
             this.lblConfirmarSalida.Font = new Font(ff, 26, fontStyle);
             this.lblLugares.Font = new Font(ff, 20, fontStyle);
             this.label3.Font = new Font(ff, 20, fontStyle);
-            this.label1.Font = new Font(ff, 20, fontStyle);
+            
         }
 
         private void CargoPrivateFontCollection()
@@ -110,9 +110,7 @@ namespace COMPRAS2
                 {
                     listaLugares.Add(Tuple.Create<Int32, String>(lugares[x].id, lugares[x].lugar));
                 }
-                cbLugares.DataSource = listaLugares;
-                cbLugares.DisplayMember = "Item2";
-                cbLugares.ValueMember = "Item1";
+                
 
                 return 0;
             }
@@ -215,7 +213,6 @@ namespace COMPRAS2
                     movement.usuarioId = idUsuario;
                     movement.usuario = null;
                     movement.dispositivo_Actual = null;
-                    movement.cantidad_Actual = 0;
                     movement.codigo_Actual = null;
                     movement.dispositivo = null;
                     movement.idMovimiento = uniqueId;

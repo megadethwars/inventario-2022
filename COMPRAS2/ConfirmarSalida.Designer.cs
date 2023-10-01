@@ -34,11 +34,9 @@ namespace COMPRAS2
             this.btnBack = new System.Windows.Forms.Button();
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.tbpass = new System.Windows.Forms.TextBox();
-            this.cbLugares = new System.Windows.Forms.ComboBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.lblLugares = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -105,21 +103,6 @@ namespace COMPRAS2
             this.tbpass.TabIndex = 72;
             this.tbpass.Click += new System.EventHandler(this.tbpass_Click);
             // 
-            // cbLugares
-            // 
-            this.cbLugares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbLugares.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(70)))));
-            this.cbLugares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.cbLugares.FormattingEnabled = true;
-            this.cbLugares.Location = new System.Drawing.Point(530, 440);
-            this.cbLugares.Name = "cbLugares";
-            this.cbLugares.Size = new System.Drawing.Size(216, 28);
-            this.cbLugares.TabIndex = 73;
-            // 
             // btnOK
             // 
             this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -164,20 +147,6 @@ namespace COMPRAS2
             this.label3.Size = new System.Drawing.Size(212, 31);
             this.label3.TabIndex = 170;
             this.label3.Text = "CONTRASEÑA:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label1.Location = new System.Drawing.Point(534, 390);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 31);
-            this.label1.TabIndex = 172;
-            this.label1.Text = "LUGAR DE DESTINO:";
             // 
             // pictureBox1
             // 
@@ -230,11 +199,9 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblLugares);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.cbLugares);
             this.Controls.Add(this.tbpass);
             this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.lblConfirmarSalida);
@@ -257,11 +224,9 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.TextBox tbpass;
-        private System.Windows.Forms.ComboBox cbLugares;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label lblLugares;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

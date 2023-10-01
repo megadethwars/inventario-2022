@@ -120,13 +120,14 @@ namespace COMPRAS2
 
         }
 
-        private bool Agregar(Devices device) {
+        private bool Agregar(Devices device,int cantidad_a_salir) {
             //convert device to movement
             Movimientos movement = new Movimientos();
             movement.usuarioId = CurrentUsers.id;
             movement.dispositivoId = device.id;
             movement.dispositivo = device;                        
             movement.tipoMovId = 1;
+            movement.cantidad_Actual = cantidad_a_salir;
             bool deviceExist = movimientos.Any(x => x.dispositivoId == device.id && x.dispositivoId == device.id);
             ///if (deviceExist) {
                 //MessageBox.Show("el producto ya existe en la lista");
@@ -234,7 +235,7 @@ namespace COMPRAS2
         {
             if (textBox1.Text == "CANTIDAD = 1")
             {
-                string[] row = new string[] { deviceslist2[e.RowIndex].producto,"1" };
+                string[] row = new string[] { deviceslist2[e.RowIndex].codigo,"1" };
                 dgvSalida.Rows.Add(row);
                 codigos.Add(deviceslist2[e.RowIndex].codigo);
                 
@@ -245,7 +246,7 @@ namespace COMPRAS2
 
                 if (Int32.TryParse(textBox1.Text, out x))
                 {
-                    string[] row = new string[] { deviceslist2[e.RowIndex].producto, x.ToString() };
+                    string[] row = new string[] { deviceslist2[e.RowIndex].codigo, x.ToString() };
                     dgvSalida.Rows.Add(row);
                     codigos.Add(deviceslist2[e.RowIndex].codigo);
                 }
@@ -325,7 +326,7 @@ namespace COMPRAS2
                     deviceslist2[x].descripcion = inv.descripcion;
                     deviceslist2[x].serie = inv.serie;
 
-                    string[] row = new string[] { deviceslist2[x].producto};
+                    string[] row = new string[] { deviceslist2[x].codigo};
 
                     dataGridView1.Rows.Add(row);
                     dataGridView1.Columns[0].Width = 250;
@@ -361,6 +362,41 @@ namespace COMPRAS2
             //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
             this.codigos.Remove(code);
         }
+
+        private bool check_cantidad(string code,int cant,ref int cantidad_a_salir)
+        {
+            cantidad_a_salir = 1;
+            foreach (DataGridViewRow fila in dgvSalida.Rows)
+            {
+
+                string valorCelda = fila.Cells["codigo"].Value?.ToString();
+
+                if (!string.IsNullOrEmpty(valorCelda) && valorCelda.Equals(code))
+                {
+                   
+                    DataGridViewCellCollection columna = fila.Cells;
+                    DataGridViewCell segundaCelda = fila.Cells[1];  // Obtiene la segunda celda (índice 1).
+
+                    if (segundaCelda.Value != null)
+                    {
+                        Int16 valorSegundaCelda =Int16.Parse(segundaCelda.Value.ToString());
+                        if ((Int16)cant >= valorSegundaCelda)
+                        {
+                            cantidad_a_salir = (int)valorSegundaCelda;
+                            return true;
+                        }
+                        return false;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    
+                }
+            }
+ 
+            return false;
+        }
         private async Task<bool> validate_devices_movements()
         {
             //check if devices exist
@@ -381,6 +417,7 @@ namespace COMPRAS2
                 if (statusmessage.statuscode == 404)
                 {
                     MessageBox.Show("el producto con el codigo" + codigo + " no existe, favor de verificarlo de nuevo");
+                    delete_code_tables(codigo);
                     return false;
                 }
 
@@ -388,6 +425,7 @@ namespace COMPRAS2
                 if (statusmessage.statuscode != 200)
                 {
                     MessageBox.Show("Ocurrio un error durante la peticion, probablemente no exista el producto con codigo "+codigo);
+                    delete_code_tables(codigo);
                     return false;
                 }
 
@@ -401,7 +439,14 @@ namespace COMPRAS2
                     MessageBox.Show("el producto con el codigo"+codigo+" no existe, favor de verificarlo de nuevo");
                     return false;
                 }
-                Agregar(deviceslistcheck);
+                int cantidad_a_salir = 1;
+                if (!check_cantidad(codigo, deviceslistcheck.cantidad, ref cantidad_a_salir))
+                {
+                    MessageBox.Show("el producto con el codigo " + codigo + " no cuenta con las cantidades que deseas sacar del almacen");
+                    delete_code_tables(codigo);
+                    return false;
+                }
+                Agregar(deviceslistcheck, cantidad_a_salir);
                 
             }
 
