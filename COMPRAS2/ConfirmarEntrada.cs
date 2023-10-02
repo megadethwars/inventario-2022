@@ -81,7 +81,7 @@ namespace COMPRAS2
             
 
             
-
+            pictureBox5.Visible = true;
             int statusUser = await Auth();
 
             if (statusUser != 0)
@@ -93,6 +93,7 @@ namespace COMPRAS2
             
 
             int statusmovements = await sendMovementAsync();
+            pictureBox5.Visible = false;
         }
 
         private void ConfirmarEntrada_Load(object sender, EventArgs e)

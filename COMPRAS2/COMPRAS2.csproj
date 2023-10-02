@@ -597,6 +597,8 @@
     <Content Include="Resources\AudioVideoSolutionsLogo.ico" />
     <None Include="Resources\icons8-arriba-48.png" />
     <None Include="Resources\icons8-abajo-48.png" />
+    <None Include="Resources\icons8-arriba-481.png" />
+    <None Include="Resources\icons8-abajo-48 %281%29.png" />
     <Content Include="Resources\ZKZg.gif" />
     <None Include="Resources\ZKZg1.gif" />
     <None Include="Resources\Icon1.ico" />

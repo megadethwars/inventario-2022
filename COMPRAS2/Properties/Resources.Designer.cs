@@ -263,9 +263,29 @@ namespace COMPRAS2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_abajo_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-abajo-48 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_arriba_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-arriba-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_arriba_481 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-arriba-481", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

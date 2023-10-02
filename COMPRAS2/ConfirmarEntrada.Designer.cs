@@ -41,21 +41,23 @@ namespace COMPRAS2
             this.btnOK = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCarritoDeSalida
             // 
             this.lblCarritoDeSalida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCarritoDeSalida.AutoSize = true;
-            this.lblCarritoDeSalida.Font = new System.Drawing.Font("Knockout 48 Featherweight", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarritoDeSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarritoDeSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblCarritoDeSalida.Location = new System.Drawing.Point(570, 46);
             this.lblCarritoDeSalida.Name = "lblCarritoDeSalida";
-            this.lblCarritoDeSalida.Size = new System.Drawing.Size(219, 42);
+            this.lblCarritoDeSalida.Size = new System.Drawing.Size(403, 39);
             this.lblCarritoDeSalida.TabIndex = 70;
             this.lblCarritoDeSalida.Text = "CARRITO DE ENTRADA";
             // 
@@ -109,11 +111,11 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.label3.Location = new System.Drawing.Point(550, 339);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 32);
+            this.label3.Size = new System.Drawing.Size(212, 31);
             this.label3.TabIndex = 180;
             this.label3.Text = "CONTRASEÑA:";
             // 
@@ -123,11 +125,11 @@ namespace COMPRAS2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLugares.AutoSize = true;
-            this.lblLugares.Font = new System.Drawing.Font("Knockout 48 Featherweight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLugares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
             this.lblLugares.Location = new System.Drawing.Point(550, 208);
             this.lblLugares.Name = "lblLugares";
-            this.lblLugares.Size = new System.Drawing.Size(83, 32);
+            this.lblLugares.Size = new System.Drawing.Size(147, 31);
             this.lblLugares.TabIndex = 179;
             this.lblLugares.Text = "USUARIO:";
             // 
@@ -206,12 +208,25 @@ namespace COMPRAS2
             this.pictureBox4.TabIndex = 186;
             this.pictureBox4.TabStop = false;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.Image = global::COMPRAS2.Properties.Resources.ZKZg;
+            this.pictureBox5.Location = new System.Drawing.Point(539, 297);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(201, 195);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 187;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
+            // 
             // ConfirmarEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnOK);
@@ -231,6 +246,7 @@ namespace COMPRAS2
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +265,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
