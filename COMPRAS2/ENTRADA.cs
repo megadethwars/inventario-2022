@@ -446,7 +446,7 @@ namespace COMPRAS2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            
         }
 
         private void dgvSalida_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -468,6 +468,16 @@ namespace COMPRAS2
 
 
             }
+        }
+
+        private void ENTRADA_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
         }
     }
 }
