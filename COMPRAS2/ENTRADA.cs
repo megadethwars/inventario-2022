@@ -166,11 +166,6 @@ namespace COMPRAS2
             movement.tipoMovId = 2;
             movement.cantidad_Actual = cantidad_a_entrar;
             bool deviceExist = movimientos.Any(x => x.dispositivoId == device.id && x.dispositivoId == device.id);
-            if (deviceExist)
-            {
-                MessageBox.Show("el producto ya existe en la lista");
-                return;
-            }
             movimientos.Add(movement);
         }
 
@@ -310,32 +305,40 @@ namespace COMPRAS2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (textBox1.Text == "CANTIDAD = 1")
+            if (!codigos.Contains(deviceslist2[e.RowIndex].codigo))
             {
-                string[] row = new string[] { deviceslist2[e.RowIndex].codigo, "1" };
-                dgvSalida.Rows.Add(row);
-                codigos.Add(deviceslist2[e.RowIndex].codigo);
-
-            }
-            else
-            {
-                int x = 0;
-
-                if (Int32.TryParse(textBox1.Text, out x))
+                if (textBox1.Text == "CANTIDAD = 1")
                 {
-                    string[] row = new string[] { deviceslist2[e.RowIndex].codigo, x.ToString() };
+                    string[] row = new string[] { deviceslist2[e.RowIndex].codigo, "1" };
                     dgvSalida.Rows.Add(row);
                     codigos.Add(deviceslist2[e.RowIndex].codigo);
+
                 }
                 else
                 {
-                    MessageBox.Show("Introduzca un numero valido ");
+                    int x = 0;
+
+                    if (Int32.TryParse(textBox1.Text, out x))
+                    {
+                        string[] row = new string[] { deviceslist2[e.RowIndex].codigo, x.ToString() };
+                        dgvSalida.Rows.Add(row);
+                        codigos.Add(deviceslist2[e.RowIndex].codigo);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Introduzca un numero valido ");
+                    }
                 }
+                textBox1.Text = "CANTIDAD = 1";
+                txtBUSCADOR.Text = "";
+                dataGridView1.Rows.Clear();
+                dataGridView1.Visible = false;
             }
-            textBox1.Text = "CANTIDAD = 1";
-            txtBUSCADOR.Text = "";
-            dataGridView1.Rows.Clear();
-            dataGridView1.Visible = false;
+            else
+            {
+                MessageBox.Show("el producto ya esta en la lista deseada");
+                return;
+            }
         }
 
         private void delete_code_tables(string code)
