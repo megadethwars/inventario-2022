@@ -65,7 +65,7 @@ namespace COMPRAS2
         public SALIDA()
         {
             InitializeComponent();
-          
+            pictureBox1.BringToFront();
             movimientos = new List<Movimientos>();
             listaLugares = new List<Tuple<Int32, String>>();
         }

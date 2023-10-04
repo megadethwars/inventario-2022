@@ -69,7 +69,7 @@ namespace COMPRAS2
         public ENTRADA()
         {
             InitializeComponent();
-
+            pictureBox1.BringToFront();
             devices = new List<Devices>();
             movimientos = new List<Movimientos>();
         }
