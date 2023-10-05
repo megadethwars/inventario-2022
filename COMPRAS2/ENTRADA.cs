@@ -146,6 +146,7 @@ namespace COMPRAS2
                     string[] row = new string[] { txtBUSCADOR.Text,"1" };
                     dgvSalida.Rows.Add(row);
                     txtBUSCADOR.Text = "";
+                    lbCount.Text = codigos.Count.ToString();
                 }
                 else
                 {
@@ -312,6 +313,7 @@ namespace COMPRAS2
                     string[] row = new string[] { deviceslist2[e.RowIndex].codigo, "1" };
                     dgvSalida.Rows.Add(row);
                     codigos.Add(deviceslist2[e.RowIndex].codigo);
+                    lbCount.Text = codigos.Count.ToString();
 
                 }
                 else
@@ -323,6 +325,7 @@ namespace COMPRAS2
                         string[] row = new string[] { deviceslist2[e.RowIndex].codigo, x.ToString() };
                         dgvSalida.Rows.Add(row);
                         codigos.Add(deviceslist2[e.RowIndex].codigo);
+                        lbCount.Text = codigos.Count.ToString();
                     }
                     else
                     {
@@ -359,6 +362,7 @@ namespace COMPRAS2
 
             //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
             this.codigos.Remove(code);
+            lbCount.Text = codigos.Count.ToString();
         }
 
         private bool check_cantidad(string code, int cant, ref int cantidad_a_salir)
@@ -463,6 +467,7 @@ namespace COMPRAS2
 
                     //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
                     this.codigos.RemoveAt(e.RowIndex);
+                    lbCount.Text = codigos.Count.ToString();
                 }
                 catch (Exception ex)
                 {
