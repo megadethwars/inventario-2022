@@ -42,10 +42,10 @@ namespace COMPRAS2
         }
         
         private void MIPERFIL_Click(object sender, EventArgs e)
-        {           
+        {
             //this.Dispose();
-        
-            Navigator.nextPage(new MIPERFIL());
+            Navigator.nextPage(new pruebaSQLITE());
+            //Navigator.nextPage(new MIPERFIL());
         }       
 
         private void btnREPORTE_Click(object sender, EventArgs e)
