@@ -374,6 +374,8 @@
     </Compile>
     <Compile Include="servicios\HttpMethods.cs" />
     <Compile Include="servicios\Navigator.cs" />
+    <Compile Include="servicios\SqliteHandler.cs" />
+    <Compile Include="servicios\SyncMoveManager.cs" />
     <Compile Include="servicios\VG.cs" />
     <Compile Include="Toggle Button\ToggleButton.cs">
       <SubType>Component</SubType>
