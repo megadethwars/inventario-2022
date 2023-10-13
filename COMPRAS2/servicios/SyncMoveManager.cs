@@ -15,7 +15,10 @@ namespace COMPRAS2.servicios
         }
         public void SyncMovesToAzure(string idMovement)
         {
+            var movement = SqliteHandler.Selectregister("fghfhfhfhfhf");
+            int a = 1;
 
+            bool status = SqliteHandler.updateRegister("fghfhfhfhfhf");
         }
 
         public  void WriteMovesToSqlite(List<Movimientos> movimientos)
@@ -30,6 +33,8 @@ namespace COMPRAS2.servicios
             
             SqliteHandler.insertRegister(mov);
         }
+
+        
 
         public void deleteMovesSqlite()
         {
