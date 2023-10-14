@@ -289,7 +289,8 @@ namespace COMPRAS2
                     dgvSalida.Rows.Add(row);
                     codigos.Add(deviceslist2[e.RowIndex].codigo);
                     lbCount.Text = codigos.Count.ToString();
-                    await BusquedaAsync(deviceslist2[e.RowIndex].codigo);
+                    Thread myNewThread = new Thread(() => BusquedaAsync(deviceslist2[e.RowIndex].codigo));
+                    myNewThread.Start();
 
                 }
                 else
@@ -302,7 +303,8 @@ namespace COMPRAS2
                         dgvSalida.Rows.Add(row);
                         codigos.Add(deviceslist2[e.RowIndex].codigo);
                         lbCount.Text = codigos.Count.ToString();
-                        await BusquedaAsync(deviceslist2[e.RowIndex].codigo);
+                        Thread myNewThread = new Thread(() => BusquedaAsync(deviceslist2[e.RowIndex].codigo));
+                        myNewThread.Start();
                     }
                     else
                     {

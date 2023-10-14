@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using System.Threading;
 
 namespace COMPRAS2
 {
@@ -145,8 +146,9 @@ namespace COMPRAS2
                     codigos.Add(txtBUSCADOR.Text);
                     string[] row = new string[] { txtBUSCADOR.Text,"1" };
                     dgvSalida.Rows.Add(row);
-                    txtBUSCADOR.Text = "";
                     lbCount.Text = codigos.Count.ToString();
+                    Thread myNewThread = new Thread(() => BusquedaAsync(txtBUSCADOR.Text));
+                    myNewThread.Start();
                 }
                 else
                 {
@@ -155,6 +157,52 @@ namespace COMPRAS2
                     return;
                 }
             }
+        }
+
+        public async Task<bool> BusquedaAsync(String code)
+        {
+            QueryDevice devicequery = new QueryDevice();
+            devicequery.codigo = code;
+            this.txtBUSCADOR.Invoke((MethodInvoker)delegate
+            {
+                this.txtBUSCADOR.Text = "";
+            });
+            string json = JsonConvert.SerializeObject(devicequery,
+                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            var url = HttpMethods.url + "dispositivos/query";
+            StatusMessage statusmessage = await HttpMethods.Post(url, json);
+            Console.WriteLine(statusmessage.statuscode.ToString(), url);
+            if (statusmessage.statuscode == 500)
+            {
+                delete_code_tables(code);
+                return false;
+            }
+
+            if (statusmessage.statuscode == 409)
+            {
+                delete_code_tables(code);
+                return false;
+            }
+            if (statusmessage.statuscode == 200)
+            {
+                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+
+                if (devices.Count == 0)
+                {
+                    delete_code_tables(code);
+                    return false;
+                }
+                int cantidad_a_salir = 1;
+                if (!check_cantidad(devices[0].codigo, devices[0].cantidad, ref cantidad_a_salir))
+                {
+
+                    delete_code_tables(code);
+                    return false;
+                }
+                Agregar(devices[0], cantidad_a_salir);
+            }
+            return true;
+
         }
 
         private void Agregar(Devices device,int cantidad_a_entrar)
@@ -178,12 +226,14 @@ namespace COMPRAS2
                 return;
             }
             pictureBox1.Visible = true;
-            bool result = await validate_devices_movements();
-            pictureBox1.Visible = false;
-
-            if (!result)
+            while (true)
             {
-                return;
+                Console.WriteLine(movimientos.Count.ToString() + "," + codigos.Count.ToString());
+                if (movimientos.Count == codigos.Count)
+                {
+                    pictureBox1.Visible = false;
+                    break;
+                }
             }
 
             Navigator.nextPage(new CarritoEntrada(this));
@@ -304,7 +354,7 @@ namespace COMPRAS2
             busqueda();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!codigos.Contains(deviceslist2[e.RowIndex].codigo))
             {
@@ -314,6 +364,8 @@ namespace COMPRAS2
                     dgvSalida.Rows.Add(row);
                     codigos.Add(deviceslist2[e.RowIndex].codigo);
                     lbCount.Text = codigos.Count.ToString();
+                    Thread myNewThread = new Thread(() => BusquedaAsync(deviceslist2[e.RowIndex].codigo));
+                    myNewThread.Start();
 
                 }
                 else
@@ -326,6 +378,8 @@ namespace COMPRAS2
                         dgvSalida.Rows.Add(row);
                         codigos.Add(deviceslist2[e.RowIndex].codigo);
                         lbCount.Text = codigos.Count.ToString();
+                        Thread myNewThread = new Thread(() => BusquedaAsync(deviceslist2[e.RowIndex].codigo));
+                        myNewThread.Start();
                     }
                     else
                     {
@@ -358,11 +412,17 @@ namespace COMPRAS2
                     break;
                 }
             }
-            dgvSalida.Rows.RemoveAt(indiceFila);
+            this.dgvSalida.Invoke((MethodInvoker)delegate
+            {
+                this.dgvSalida.Rows.RemoveAt(indiceFila);
+            });
 
             //movimientos.RemoveAt(dgvCarritoSalida.CurrentRow.Index);
             this.codigos.Remove(code);
-            lbCount.Text = codigos.Count.ToString();
+            this.lbCount.Invoke((MethodInvoker)delegate
+            {
+                this.lbCount.Text = codigos.Count.ToString();
+            });
         }
 
         private bool check_cantidad(string code, int cant, ref int cantidad_a_salir)
