@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Converters;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using System.Threading;
 
 namespace COMPRAS2
 {
@@ -63,6 +64,7 @@ namespace COMPRAS2
         private int idUsuario;
         CarritoSalida carrito;
         public string uniqueId;
+        User curruser;
         public ConfirmarSalida(CarritoSalida carrito)
         {
             InitializeComponent();
@@ -184,7 +186,7 @@ namespace COMPRAS2
 
                 User userDeserialize = JsonConvert.DeserializeObject<User>(statusmessage.data, new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSz" });
                 idUsuario = userDeserialize.id;
-                
+                curruser = userDeserialize;
 
 
                 return 0;
@@ -199,89 +201,74 @@ namespace COMPRAS2
 
     
 
-        private async Task<int> sendMovementAsync() {
+        private  int sendMovementAsync() {
 
-            try
-            {
+            Thread thproccesOuts = new Thread(() => SyncMoveManager.WriteMovesToSqlite(this.carrito.salida.movimientos, uniqueId, idUsuario));
+            thproccesOuts.Start();
+            Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.salida.movimientos, curruser));
+            //try
+            //{
 
-                foreach (Movimientos movement in this.carrito.salida.movimientos) {
+            //    foreach (Movimientos movement in this.carrito.salida.movimientos) {
 
-                    //actualizar lugar del dispositivo
+            //        //actualizar lugar del dispositivo
 
 
-                    movement.LugarId = VG.id_current_lugar;
-                    movement.usuarioId = idUsuario;
-                    movement.usuario = null;
-                    movement.dispositivo_Actual = null;
-                    movement.codigo_Actual = null;
-                    movement.dispositivo = null;
-                    movement.idMovimiento = uniqueId;
-                    
+            //        movement.LugarId = VG.id_current_lugar;
+            //        movement.usuarioId = idUsuario;
+            //        movement.usuario = null;
+            //        movement.dispositivo_Actual = null;
+            //        movement.codigo_Actual = null;
+            //        movement.dispositivo = null;
+            //        movement.idMovimiento = uniqueId;
 
-                    List<Movimientos> movimientos = new List<Movimientos>();
-                    movimientos.Add(movement);
 
-                    string json = JsonConvert.SerializeObject(movimientos,
-                    new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                    var url = HttpMethods.url + "movimientos";
-                    StatusMessage statusmessage = await HttpMethods.Post(url, json);
+            //        List<Movimientos> movimientos = new List<Movimientos>();
+            //        movimientos.Add(movement);
 
-                    if (statusmessage.statuscode == 409)
-                    {
-    
-                    }
+            //        string json = JsonConvert.SerializeObject(movimientos,
+            //        new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            //        var url = HttpMethods.url + "movimientos";
+            //        StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
-                    else if (statusmessage.statuscode == 500)
-                    {
-                        
-                    }
-                    else if (statusmessage.statuscode == 200)
-                    {
-                        
-                   
-                    }
-                    else if (statusmessage.statuscode == 404)
-                    {
-                        MessageBox.Show("error en el servicio, NO encontrado");
+            //        if (statusmessage.statuscode == 409)
+            //        {
 
-                        
-                    }
-                    movimientos.Clear();
-                    movimientos = null;
-                }
+            //        }
 
-                Navigator.nextPage(new PDFMovement(uniqueId));
+            //        else if (statusmessage.statuscode == 500)
+            //        {
 
-                return 0;
-            }
-            catch (Exception ex) {
-                return 10;
-            }
+            //        }
+            //        else if (statusmessage.statuscode == 200)
+            //        {
+
+
+            //        }
+            //        else if (statusmessage.statuscode == 404)
+            //        {
+            //            MessageBox.Show("error en el servicio, NO encontrado");
+
+
+            //        }
+            //        movimientos.Clear();
+            //        movimientos = null;
+            //    }
+
+            //    Navigator.nextPage(new PDFMovement(uniqueId));
+
+            //    return 0;
+            //}
+            //catch (Exception ex) {
+            //    return 10;
+            //}
+            return 0;
         }
         
 
-        private async void btnOK_Click(object sender, EventArgs e)
+        private async void btnOK_ClickAsync(object sender, EventArgs e)
         {
-            /*
-            if (cbLugares.SelectedItem != null)
-            {
-                var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
-                idlugar = idLugarestuple.Item1;
-        
-            }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado ningun estatus");
-                return;
-            }
-            */
-            /*
-            if (idlugar == 0 || idlugar==1)
-            {
-                MessageBox.Show("No se ha asignado algun lugar , intente de nuevo");
-                return;
-            }
-            */
+           
             pictureBox5.Visible = true;
             int statusUser = await Auth();
 
@@ -289,20 +276,9 @@ namespace COMPRAS2
             {
                 return;
             }
-            /*
-            if (cbLugares.SelectedItem != null)
-            {
-                var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
-                idlugar = idLugarestuple.Item1;
-            }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado ningun lugar");
-                return;
-            }
-            */
+         
 
-            int statusmovements = await sendMovementAsync();
+            int statusmovements =  sendMovementAsync();
             pictureBox5.Visible = true;
         }
 

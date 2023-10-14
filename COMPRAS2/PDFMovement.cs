@@ -67,32 +67,36 @@ namespace COMPRAS2
         string IdSalida;
         string correo;
         MemoryStream streamPDF;
-        public PDFMovement(string idSalida)
+        List<Movimientos> movements;
+        User curruser;
+        public PDFMovement(string idSalida,List<Movimientos> movements, User curruser)
         {          
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             streamPDF = new MemoryStream();
             IdSalida = idSalida;
 
-            table = new DataTable();         
+            table = new DataTable();
+            this.movements = movements;
+            this.curruser = curruser;
         }
 
-        private async void PDFMovement_Load(object sender, EventArgs e)
+        private  void PDFMovement_Load(object sender, EventArgs e)
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
 
-            await MainTask();            
+            MainTask();            
         }
 
-        public async Task InitPDFAsync(string idSalida)
+        public  void  InitPDFAsync(string idSalida)
         {
             streamPDF = new MemoryStream();
             IdSalida = idSalida;
 
             table = new DataTable();
 
-            await MainTask();
+            MainTask();
         }
 
         public bool CreatePDF(Movimientos movimientos, DataTable tablacarrito, User User, int tipomov)
@@ -287,7 +291,7 @@ namespace COMPRAS2
                 byte[] bytes = stream.ToArray();
 
 
-                bool res = SendSTMPT(bytes, correo);
+                //bool res = SendSTMPT(bytes, correo);
 
 
                 if (tipomov == 2)
@@ -359,13 +363,14 @@ namespace COMPRAS2
 
         }
 
-        private async Task MainTask()
+        private  void MainTask()
         {
             DataTable tablacarrito;
             tablacarrito = new DataTable();
             try
             {
-                List<Movimientos> lista = await queryData(IdSalida);
+                List<Movimientos> lista = this.movements;
+                
 
                 if (lista == null)
                 {
@@ -377,7 +382,7 @@ namespace COMPRAS2
                     return;
                 }
 
-                User Usuario = lista[0].usuario;
+                User Usuario = this.curruser;
                 //fill table
                 correo = Usuario.correo;
                 if (Usuario==null)

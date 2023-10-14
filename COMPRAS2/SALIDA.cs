@@ -178,7 +178,10 @@ namespace COMPRAS2
             movement.tipoMovId = 1;
             movement.cantidad_Actual = cantidad_a_salir;
             bool deviceExist = movimientos.Any(x => x.dispositivoId == device.id && x.dispositivoId == device.id);
-
+            movement.dispositivo_Actual = device.producto;
+            movement.codigo_Actual = device.codigo;
+            movement.tipo_Actual = "salida";
+            movement.LugarId = VG.id_current_lugar;
             movimientos.Add(movement);
             return true;
             //string[] row = new string[] { device.codigo, device.producto,device.modelo };

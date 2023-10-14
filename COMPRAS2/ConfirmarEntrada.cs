@@ -63,6 +63,7 @@ namespace COMPRAS2
         private int idlugar=1;
         private int idUsuario;
         public string uniqueId;
+        User curruser;
         public ConfirmarEntrada(CarritoEntrada carrito)
         {
             InitializeComponent();
@@ -164,7 +165,7 @@ namespace COMPRAS2
 
                 User userDeserialize = JsonConvert.DeserializeObject<User>(statusmessage.data, new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSz" });
                 idUsuario = userDeserialize.id;
-
+                curruser = userDeserialize;
 
 
                 return 0;
@@ -230,7 +231,7 @@ namespace COMPRAS2
                     movimientos = null;
                 }
 
-                Navigator.nextPage(new PDFMovement(uniqueId));
+                Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.entrada.movimientos, curruser));
 
                 return 0;
             }
