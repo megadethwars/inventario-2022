@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 using COMPRAS2.modelos;
 using COMPRAS2.servicios;
@@ -14,13 +15,22 @@ namespace COMPRAS2
     public partial class MENU2 : Form
     {
         MENU mainmenu;
-
+        System.Timers.Timer timer;
         public MENU2(MENU mainMenu)
         {
             InitializeComponent();
             this.mainmenu = mainMenu;
 
             this.lbUsername.Text = CurrentUsers.username;
+            timer = new System.Timers.Timer(300000);
+            timer.Elapsed += TimerElapsed;
+            timer.Start();
+        }
+
+        private  void TimerElapsed(object sender, ElapsedEventArgs e)
+        {
+
+            SyncMoveManager.SyncMovesToAzurethread();
         }
 
 
@@ -77,5 +87,10 @@ namespace COMPRAS2
         {
 
         }
+
+        ~MENU2()
+        {
+            timer.Stop();
+        } 
     }
 }

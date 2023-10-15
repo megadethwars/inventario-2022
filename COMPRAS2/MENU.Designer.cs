@@ -48,10 +48,10 @@ namespace COMPRAS2
             this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 775);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 663);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(105, 86);
             this.btnCerrarSesion.TabIndex = 13;
@@ -66,7 +66,7 @@ namespace COMPRAS2
             this.PANELCONTENEDOR.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PANELCONTENEDOR.Location = new System.Drawing.Point(105, 0);
             this.PANELCONTENEDOR.Name = "PANELCONTENEDOR";
-            this.PANELCONTENEDOR.Size = new System.Drawing.Size(1479, 861);
+            this.PANELCONTENEDOR.Size = new System.Drawing.Size(1265, 749);
             this.PANELCONTENEDOR.TabIndex = 1;
             this.PANELCONTENEDOR.Paint += new System.Windows.Forms.PaintEventHandler(this.PANELCONTENEDOR_Paint);
             // 
@@ -78,7 +78,7 @@ namespace COMPRAS2
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(105, 861);
+            this.panel1.Size = new System.Drawing.Size(105, 749);
             this.panel1.TabIndex = 2;
             // 
             // btnPerfil
@@ -92,7 +92,7 @@ namespace COMPRAS2
             this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Knockout 48 Featherweight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(226)))));
             this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfil.Location = new System.Drawing.Point(0, 0);
@@ -107,11 +107,11 @@ namespace COMPRAS2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.PANELCONTENEDOR);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1400, 900);
+            this.MinimumSize = new System.Drawing.Size(1364, 726);
             this.Name = "MENU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU";

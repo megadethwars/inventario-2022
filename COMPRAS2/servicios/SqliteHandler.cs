@@ -162,7 +162,7 @@ namespace COMPRAS2.servicios
 
             string connectionString = "Data Source=" + VG.dbsqlite + ";Version=3;";
             
-            string selectQuery = "SELECT * FROM Movements WHERE ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>5 AND Status_sync_azure=0  order by fecha_db DESC;";
+            string selectQuery = "SELECT * FROM Movements WHERE ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>10 AND Status_sync_azure=0  order by fecha_db DESC limit 50;";
             int count = 0;
 
             while (count <= max_attemps)

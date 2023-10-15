@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
+using System.Threading;
 
 namespace COMPRAS2
 {
@@ -93,7 +94,7 @@ namespace COMPRAS2
 
             
 
-            int statusmovements = await sendMovementAsync();
+            int statusmovements = sendMovementAsync();
             pictureBox5.Visible = false;
         }
 
@@ -179,66 +180,69 @@ namespace COMPRAS2
         }
 
 
-        private async Task<int> sendMovementAsync()
+        private int sendMovementAsync()
         {
+            Thread thproccesOuts = new Thread(() => SyncMoveManager.WriteMovesToSqlite(this.carrito.entrada.movimientos, uniqueId, idUsuario));
+            thproccesOuts.Start();
+            Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.entrada.movimientos, curruser));
+            //try
+            //{
 
-            try
-            {
+            //    foreach (Movimientos movement in this.carrito.entrada.movimientos)
+            //    {
 
-                foreach (Movimientos movement in this.carrito.entrada.movimientos)
-                {
-
-                    //actualizar lugar del dispositivo
-
-
-                    movement.LugarId = idlugar;
-                    movement.usuarioId = idUsuario;
-                    movement.usuario = null;
-                    movement.dispositivo_Actual = null;          
-                    movement.codigo_Actual = null;
-                    movement.dispositivo = null;
-                    movement.idMovimiento = uniqueId;
-
-                    List<Movimientos> movimientos = new List<Movimientos>();
-                    movimientos.Add(movement);
-
-                    string json = JsonConvert.SerializeObject(movimientos,
-                    new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-                    var url = HttpMethods.url + "movimientos";
-                    StatusMessage statusmessage = await HttpMethods.Post(url, json);
-
-                    if (statusmessage.statuscode == 409)
-                    {
-
-                    }
-
-                    else if (statusmessage.statuscode == 500)
-                    {
-
-                    }
-                    else if (statusmessage.statuscode == 200)
-                    {
+            //        //actualizar lugar del dispositivo
 
 
-                    }
-                    else if (statusmessage.statuscode == 404)
-                    {
-                        MessageBox.Show("error en el servicio, NO encontrado");
+            //        movement.LugarId = idlugar;
+            //        movement.usuarioId = idUsuario;
+            //        movement.usuario = null;
+            //        movement.dispositivo_Actual = null;          
+            //        movement.codigo_Actual = null;
+            //        movement.dispositivo = null;
+            //        movement.idMovimiento = uniqueId;
+
+            //        List<Movimientos> movimientos = new List<Movimientos>();
+            //        movimientos.Add(movement);
+
+            //        string json = JsonConvert.SerializeObject(movimientos,
+            //        new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
+            //        var url = HttpMethods.url + "movimientos";
+            //        StatusMessage statusmessage = await HttpMethods.Post(url, json);
+
+            //        if (statusmessage.statuscode == 409)
+            //        {
+
+            //        }
+
+            //        else if (statusmessage.statuscode == 500)
+            //        {
+
+            //        }
+            //        else if (statusmessage.statuscode == 200)
+            //        {
 
 
-                    }
-                    movimientos.Clear();
-                    movimientos = null;
-                }
+            //        }
+            //        else if (statusmessage.statuscode == 404)
+            //        {
+            //            MessageBox.Show("error en el servicio, NO encontrado");
 
-                Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.entrada.movimientos, curruser));
 
-                return 0;
-            }
-            catch (Exception ex)
-            {
-                return 10;
-            }
+            //        }
+            //        movimientos.Clear();
+            //        movimientos = null;
+            //    }
+
+            //    Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.entrada.movimientos, curruser));
+
+            //    return 0;
+            //}
+            //catch (Exception ex)
+            //{
+            //    return 10;
+            //}
+            return 0;
         }
         
         private void tbpass_Click(object sender, EventArgs e)
