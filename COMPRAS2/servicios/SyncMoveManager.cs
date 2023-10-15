@@ -32,7 +32,7 @@ namespace COMPRAS2.servicios
             //bool status = SqliteHandler.updateRegister(movement.idMovimiento);
         }
 
-        public async void SyncMovesToAzurethread(string idMovement)
+        public async static void SyncMovesToAzurethread()
         {
             var movements = SqliteHandler.Selectregister();
 
@@ -66,12 +66,12 @@ namespace COMPRAS2.servicios
 
                 if (statusmessage.statuscode == 409)
                 {
-
+                    return false;
                 }
 
                 else if (statusmessage.statuscode == 500)
                 {
-
+                    return false;
                 }
                 else if (statusmessage.statuscode == 200)
                 {
@@ -81,7 +81,7 @@ namespace COMPRAS2.servicios
                 else if (statusmessage.statuscode == 404)
                 {
                     //MessageBox.Show("error en el servicio, NO encontrado");
-
+                    return false;
 
                 }
                 movimientos.Clear();
@@ -89,7 +89,7 @@ namespace COMPRAS2.servicios
             }
             catch(Exception ex)
             {
-
+                return false;
             }
             return false;
         }
