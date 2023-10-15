@@ -199,6 +199,11 @@ namespace COMPRAS2
                     delete_code_tables(code);
                     return false;
                 }
+                if (devices[0].lugarId == 1)
+                {
+                    delete_code_tables(code);
+                    return false;
+                }
                 Agregar(devices[0], cantidad_a_salir);
             }
             return true;
