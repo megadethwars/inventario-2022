@@ -180,6 +180,7 @@ namespace COMPRAS2
 
             if (statusmessage.statuscode == 409)
             {
+                this.Invoke(new Action(() => { MessageBox.Show(this, "No existe el producto " + code); }));
                 delete_code_tables(code);
                 return false;
             }
@@ -189,18 +190,20 @@ namespace COMPRAS2
 
                 if (devices.Count == 0)
                 {
+                    this.Invoke(new Action(() => { MessageBox.Show(this, "No existe el producto " + code); }));
                     delete_code_tables(code);
                     return false;
                 }
                 int cantidad_a_salir = 1;
                 if (!check_cantidad(devices[0].codigo, devices[0].cantidad, ref cantidad_a_salir))
                 {
-
+                    this.Invoke(new Action(() => { MessageBox.Show(this, "La cantidad indicada no existe en el inventario para el producto " + code); }));
                     delete_code_tables(code);
                     return false;
                 }
                 if (devices[0].lugarId == 1)
                 {
+                    this.Invoke(new Action(() => { MessageBox.Show(this, "El producto " + code + "ya esta en el inventario"); }));
                     delete_code_tables(code);
                     return false;
                 }

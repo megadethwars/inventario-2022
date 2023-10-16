@@ -138,12 +138,15 @@ namespace COMPRAS2
             Console.WriteLine(statusmessage.statuscode.ToString(), url);
             if (statusmessage.statuscode == 500)
             {
+                this.Invoke(new Action(() => { MessageBox.Show(this, "Ocurrio un error al agregar el producto " + code); }));
                 delete_code_tables(code);
                 return false;
             }
 
             if (statusmessage.statuscode == 409)
             {
+                this.Invoke(new Action(() => { MessageBox.Show(this, "No existe el producto " + code); }));
+                
                 delete_code_tables(code);
                 return false;
             }
@@ -153,13 +156,14 @@ namespace COMPRAS2
 
                 if (devices.Count == 0)
                 {
+                    this.Invoke(new Action(() => { MessageBox.Show(this, "No existe el producto " + code); }));
                     delete_code_tables(code);
                     return false;
                 }
                 int cantidad_a_salir = 1;
                 if (!check_cantidad(devices[0].codigo, devices[0].cantidad, ref cantidad_a_salir))
                 {
-
+                    this.Invoke(new Action(() => { MessageBox.Show(this, "La cantidad indicada no existe en el inventario para el producto " + code); }));
                     delete_code_tables(code);
                     return false;
                 }
