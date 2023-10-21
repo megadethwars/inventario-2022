@@ -164,9 +164,10 @@ namespace COMPRAS2
 
             try 
             {
+                pictureBox1.Visible = true;
                 var url = HttpMethods.url + "movimientos?limit=100";
                 StatusMessage statusmessage = await HttpMethods.get(url);
-
+                pictureBox1.Visible = false;
                 if (statusmessage.statuscode != 200)
                 {
                     return;
@@ -305,7 +306,7 @@ namespace COMPRAS2
                 var codigo = index.FormattedValue;
                 //var datafind = hist.Find(x => x.dispositivo_Actual.Contains((string)codigo));
 
-                Navigator.nextPage(new DETALLES_HISTORIAL((string)codigo));
+                Navigator.nextPage(new DETALLES_HISTORIAL(hist[e.RowIndex]));
 
             }
             catch (Exception ex)
@@ -338,7 +339,7 @@ namespace COMPRAS2
                     return;
                 }
                 
-                List<Movimientos> hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+                hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
 
                 for (int x = 0; x < hist.Count; x++)
                 {

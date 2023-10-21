@@ -62,13 +62,13 @@ namespace COMPRAS2
 
         Reportes rep;
         List<Reportes> listRep = new List<Reportes>();
-        string codigo = "";
+        Reportes codigo;
 
         Reportes reportes;
-        public DETALLES_REPORTE(string codigo)
+        public DETALLES_REPORTE(Reportes codigo)
         {
             InitializeComponent();
-            this.codigo = codigo;
+            this.reportes = codigo;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -85,24 +85,6 @@ namespace COMPRAS2
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
-
-            QueryDevice devicequery = new QueryDevice();
-            devicequery.codigo = this.codigo;
-            int page = 1;
-            string url = "";
-            string json = JsonConvert.SerializeObject(devicequery,
-            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-
-            url = HttpMethods.url + "dispositivos/query?offset=" + page.ToString() + "&limit=30";
-
-
-            StatusMessage statusmessage = await HttpMethods.Post(url, json);
-            listRep = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
-            if (listRep.Count == 0)
-            {
-                return;
-            }
-            rep = listRep[0];
 
             lblComentarios.Text = reportes.comentarios;
             

@@ -65,10 +65,10 @@ namespace COMPRAS2
         string codigo = "";
 
         Movimientos mov;
-        public DETALLES_HISTORIAL(string codigo)
+        public DETALLES_HISTORIAL(Movimientos codigo)
         {
             InitializeComponent();
-            this.codigo = codigo;
+            this.mov = codigo;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -80,31 +80,13 @@ namespace COMPRAS2
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
-
-            QueryDevice devicequery = new QueryDevice();
-            devicequery.codigo = this.codigo;
-            int page = 1;
-            string url = "";
-            string json = JsonConvert.SerializeObject(devicequery,
-            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-
-            url = HttpMethods.url + "dispositivos/query?offset=" + page.ToString() + "&limit=30";
-
-
-            StatusMessage statusmessage = await HttpMethods.Post(url, json);
-            listMovi = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
-            if (listMovi.Count == 0)
-            {
-                return;
-            }
-            movi = listMovi[0];
-
             this.lblUsuario.Text = mov.nombre_Actual;
             this.lblCodigo.Text = mov.codigo_Actual;
             this.lblProducto.Text = mov.dispositivo_Actual;
             this.lblIdMovimiento.Text = mov.idMovimiento;
             this.lblTipoDeMovimiento.Text = mov.tipo_Actual;
             this.lblFecha.Text = mov.fechaAlta.ToString();
+            this.lblLugar.Text = mov.Lugar_Actual;
         }
     }
 }

@@ -89,6 +89,7 @@ namespace COMPRAS2
                 string jsonquery = JsonConvert.SerializeObject(query,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
                 var urlquery = HttpMethods.url + "dispositivos/query";
+                pictureBox2.Visible = true;
                 StatusMessage statusmessagequery = await HttpMethods.Post(urlquery, jsonquery);
 
                 Reportes reporte = new Reportes();
@@ -99,7 +100,9 @@ namespace COMPRAS2
                     devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessagequery.data);
                     if (devices.Count== 0)
                     {
+                        pictureBox2.Visible = false;
                         MessageBox.Show("El producto no fue encontrado");
+                        
                         return 1;
                     }
 
@@ -107,6 +110,7 @@ namespace COMPRAS2
 
                 }
                 else {
+                    pictureBox2.Visible = false;
                     MessageBox.Show("error en el servicio, Producto no existente");
                     return 2;
                 }
@@ -119,7 +123,7 @@ namespace COMPRAS2
                 var url = HttpMethods.url + "reportes";
                 StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
-
+                pictureBox2.Visible = false;
                 if (statusmessage.statuscode == 409)
                 {
                     MessageBox.Show("error en el servicio, posiblemente el producto ya exista");
@@ -205,6 +209,11 @@ namespace COMPRAS2
         {
             CargoPrivateFontCollection();
             CargoEtiqueta(font);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

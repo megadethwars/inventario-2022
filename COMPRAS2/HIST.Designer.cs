@@ -40,8 +40,10 @@ namespace COMPRAS2
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalida = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBUSCADOR
@@ -51,9 +53,10 @@ namespace COMPRAS2
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBUSCADOR.ForeColor = System.Drawing.Color.White;
-            this.txtBUSCADOR.Location = new System.Drawing.Point(180, 110);
+            this.txtBUSCADOR.Location = new System.Drawing.Point(188, 135);
+            this.txtBUSCADOR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
-            this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
+            this.txtBUSCADOR.Size = new System.Drawing.Size(1245, 23);
             this.txtBUSCADOR.TabIndex = 32;
             this.txtBUSCADOR.TextChanged += new System.EventHandler(this.txtBUSCADOR_TextChanged);
             // 
@@ -63,9 +66,10 @@ namespace COMPRAS2
             this.lblHISTORIAL.AutoSize = true;
             this.lblHISTORIAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHISTORIAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblHISTORIAL.Location = new System.Drawing.Point(560, 30);
+            this.lblHISTORIAL.Location = new System.Drawing.Point(695, 37);
+            this.lblHISTORIAL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHISTORIAL.Name = "lblHISTORIAL";
-            this.lblHISTORIAL.Size = new System.Drawing.Size(198, 39);
+            this.lblHISTORIAL.Size = new System.Drawing.Size(254, 52);
             this.lblHISTORIAL.TabIndex = 34;
             this.lblHISTORIAL.Text = "HISTORIAL";
             // 
@@ -81,9 +85,10 @@ namespace COMPRAS2
             this.btnBUSQUEDAAVANZADA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBUSQUEDAAVANZADA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBUSQUEDAAVANZADA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnBUSQUEDAAVANZADA.Location = new System.Drawing.Point(525, 152);
+            this.btnBUSQUEDAAVANZADA.Location = new System.Drawing.Point(648, 187);
+            this.btnBUSQUEDAAVANZADA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBUSQUEDAAVANZADA.Name = "btnBUSQUEDAAVANZADA";
-            this.btnBUSQUEDAAVANZADA.Size = new System.Drawing.Size(187, 34);
+            this.btnBUSQUEDAAVANZADA.Size = new System.Drawing.Size(249, 42);
             this.btnBUSQUEDAAVANZADA.TabIndex = 37;
             this.btnBUSQUEDAAVANZADA.Text = "BUSQUEDA AVANZADA";
             this.btnBUSQUEDAAVANZADA.UseVisualStyleBackColor = true;
@@ -100,9 +105,10 @@ namespace COMPRAS2
             this.btBUSCADOR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btBUSCADOR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBUSCADOR.Location = new System.Drawing.Point(145, 110);
+            this.btBUSCADOR.Location = new System.Drawing.Point(141, 135);
+            this.btBUSCADOR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btBUSCADOR.Name = "btBUSCADOR";
-            this.btBUSCADOR.Size = new System.Drawing.Size(31, 25);
+            this.btBUSCADOR.Size = new System.Drawing.Size(41, 31);
             this.btBUSCADOR.TabIndex = 33;
             this.btBUSCADOR.UseVisualStyleBackColor = false;
             // 
@@ -110,9 +116,10 @@ namespace COMPRAS2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pictureBox2.Location = new System.Drawing.Point(120, 100);
+            this.pictureBox2.Location = new System.Drawing.Point(108, 123);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1036, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(1381, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
@@ -126,9 +133,10 @@ namespace COMPRAS2
             this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(20, 20);
+            this.btnBack.Location = new System.Drawing.Point(27, 25);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(50, 50);
+            this.btnBack.Size = new System.Drawing.Size(67, 62);
             this.btnBack.TabIndex = 30;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -158,10 +166,12 @@ namespace COMPRAS2
             this.dgvHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvHistorial.EnableHeadersVisualStyles = false;
             this.dgvHistorial.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvHistorial.Location = new System.Drawing.Point(20, 214);
+            this.dgvHistorial.Location = new System.Drawing.Point(27, 263);
+            this.dgvHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvHistorial.Name = "dgvHistorial";
             this.dgvHistorial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvHistorial.RowHeadersVisible = false;
+            this.dgvHistorial.RowHeadersWidth = 51;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,7 +180,7 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvHistorial.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorial.Size = new System.Drawing.Size(1230, 488);
+            this.dgvHistorial.Size = new System.Drawing.Size(1535, 331);
             this.dgvHistorial.TabIndex = 45;
             this.dgvHistorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorial_CellClick);
             // 
@@ -187,9 +197,10 @@ namespace COMPRAS2
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizar.Location = new System.Drawing.Point(1140, 21);
+            this.btnActualizar.Location = new System.Drawing.Point(1415, 26);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(114, 39);
+            this.btnActualizar.Size = new System.Drawing.Size(152, 48);
             this.btnActualizar.TabIndex = 48;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -208,20 +219,34 @@ namespace COMPRAS2
             this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnSalida.Location = new System.Drawing.Point(20, 737);
+            this.btnSalida.Location = new System.Drawing.Point(27, 637);
+            this.btnSalida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalida.Name = "btnSalida";
-            this.btnSalida.Size = new System.Drawing.Size(114, 39);
+            this.btnSalida.Size = new System.Drawing.Size(152, 48);
             this.btnSalida.TabIndex = 50;
             this.btnSalida.Text = "SALIDA";
             this.btnSalida.UseVisualStyleBackColor = false;
             this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.ZKZg;
+            this.pictureBox1.Location = new System.Drawing.Point(618, 333);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(268, 240);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 108;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // HIST
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.ClientSize = new System.Drawing.Size(1600, 700);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalida);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvHistorial);
@@ -233,11 +258,13 @@ namespace COMPRAS2
             this.Controls.Add(this.btnBack);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HIST";
             this.Text = "HIST";
             this.Load += new System.EventHandler(this.HIST_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +280,6 @@ namespace COMPRAS2
         private System.Windows.Forms.DataGridView dgvHistorial;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalida;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

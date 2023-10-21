@@ -26,6 +26,7 @@ namespace COMPRAS2
         bool isFiltering = false;
         int offssetpage = 25;
         List<Reportes> reporteslist;
+        List<Reportes> reportes;
 
         private void CargoEtiqueta(Font font)
         {
@@ -69,12 +70,13 @@ namespace COMPRAS2
                 page = page + 1;
                 string url = "";
                 if (isFiltering)
+
                 {
-                    url = HttpMethods.url + "dispositivos/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
+                    url = HttpMethods.url + "reportes/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
                 }
                 else
                 {
-                    url = HttpMethods.url + "dispositivos?offset=" + page.ToString() + "&limit=50";
+                    url = HttpMethods.url + "reportes?offset=" + page.ToString() + "&limit=50";
                 }
 
                 StatusMessage statusmessage = await HttpMethods.get(url);
@@ -84,7 +86,7 @@ namespace COMPRAS2
                     return;
                 }
 
-                List<Reportes> reportes = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
+                reporteslist = JsonConvert.DeserializeObject<List<Reportes>>(statusmessage.data);
 
                 for (int x = 0; x < reportes.Count; x++)
                 {
@@ -139,9 +141,10 @@ namespace COMPRAS2
 
             try
             {
-                var url = HttpMethods.url + "reportes";
+                var url = HttpMethods.url + "reportes?limit=100";
+                pictureBox1.Visible = true;
                 StatusMessage statusmessage = await HttpMethods.get(url);
-
+                pictureBox1.Visible = false;
                 if (statusmessage.statuscode != 200)
                 {
                     return;
@@ -210,7 +213,7 @@ namespace COMPRAS2
                 var codigo = index.FormattedValue;
                 //var datafind = reporteslist.Find(x => x.fechaAlta.ToString().Contains((string)codigo));
                 
-                Navigator.nextPage(new DETALLES_REPORTE((string)codigo));              
+                Navigator.nextPage(new DETALLES_REPORTE(reporteslist[e.RowIndex]));              
             }
             catch (Exception ex)
             {

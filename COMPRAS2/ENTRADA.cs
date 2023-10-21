@@ -203,7 +203,7 @@ namespace COMPRAS2
                 }
                 if (devices[0].lugarId == 1)
                 {
-                    this.Invoke(new Action(() => { MessageBox.Show(this, "El producto " + code + "ya esta en el inventario"); }));
+                    this.Invoke(new Action(() => { MessageBox.Show(this, "El producto " + code + " ya esta en el inventario"); }));
                     delete_code_tables(code);
                     return false;
                 }
@@ -312,7 +312,7 @@ namespace COMPRAS2
                 dataGridView1.Rows.Clear();
                 dataGridView1.Visible = true;
                 dataGridView1.Height = 15;
-                var url = HttpMethods.url + "dispositivos/filterdeviceminFields?limit=20&offset=1&inStorage=2";
+                var url = HttpMethods.url + "dispositivos/filterdeviceFields?limit=20&offset=1&inStorage=2";
                 StatusMessage statusmessage2 = await HttpMethods.get(url, txtBUSCADOR.Text);
 
                 if (statusmessage2.statuscode != 200)

@@ -459,7 +459,7 @@ namespace COMPRAS2
                 var codigo = index.FormattedValue;
                 //var datafind = historial.Find(x => x.dispositivo_Actual.Contains((string)codigo));
 
-                Navigator.nextPage(new DETALLES_HISTORIAL((string)codigo));
+                Navigator.nextPage(new DETALLES_HISTORIAL(historial[e.RowIndex]));
 
             }
             catch (Exception ex)
