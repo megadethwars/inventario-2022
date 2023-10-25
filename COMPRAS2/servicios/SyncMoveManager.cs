@@ -111,9 +111,9 @@ namespace COMPRAS2.servicios
 
         
 
-        public void deleteMovesSqlite()
+        public static void deleteMovesSqlite()
         {
-
+            SqliteHandler.deleteregister();
         }
 
     }

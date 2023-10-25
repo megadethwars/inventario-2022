@@ -162,7 +162,7 @@ namespace COMPRAS2.servicios
 
             string connectionString = "Data Source=" + VG.dbsqlite + ";Version=3;";
             
-            string selectQuery = "SELECT * FROM Movements WHERE ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>10 AND Status_sync_azure=0  order by fecha_db DESC limit 50;";
+            string selectQuery = "SELECT * FROM Movements WHERE ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>5 AND Status_sync_azure=0  order by fecha_db DESC limit 50;";
             int count = 0;
 
             while (count <= max_attemps)
@@ -211,9 +211,36 @@ namespace COMPRAS2.servicios
             return true;
         }
 
-        public bool deleteregister(int status)
+        public static bool deleteregister()
         {
-            return true;
+            string connectionString = "Data Source=" + VG.dbsqlite + ";Version=3;";
+            try
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(connection))
+                    {
+                        // Query SQL para eliminar registros donde Status_sync_azure = 1
+                        cmd.CommandText = "DELETE FROM Movements WHERE Status_sync_azure = 1 and ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>20";
+
+                        // Ejecutar la consulta SQL DELETE
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        Console.WriteLine($"Se eliminaron {rowsAffected} registros.");
+                    }
+
+                    connection.Close();
+                }
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+            
+           
         }
 
     }

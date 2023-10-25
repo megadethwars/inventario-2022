@@ -16,6 +16,7 @@ namespace COMPRAS2
     {
         MENU mainmenu;
         System.Timers.Timer timer;
+        System.Timers.Timer timer2;
         public MENU2(MENU mainMenu)
         {
             InitializeComponent();
@@ -25,12 +26,22 @@ namespace COMPRAS2
             timer = new System.Timers.Timer(300000);
             timer.Elapsed += TimerElapsed;
             timer.Start();
+
+            timer2 = new System.Timers.Timer(451000);
+            timer2.Elapsed += TimerElapsed2;
+            timer2.Start();
         }
 
         private  void TimerElapsed(object sender, ElapsedEventArgs e)
         {
 
             SyncMoveManager.SyncMovesToAzurethread();
+        }
+
+        private void TimerElapsed2(object sender, ElapsedEventArgs e)
+        {
+
+            SyncMoveManager.deleteMovesSqlite();
         }
 
 
