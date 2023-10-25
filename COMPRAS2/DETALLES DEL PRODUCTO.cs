@@ -124,23 +124,23 @@ namespace COMPRAS2
             }
             devices = listDevices[0];
 
-            this.lblDProducto.Text = devices.producto;
-            this.lblDCompra.Text = devices.compra;
-            this.lblDCodigoQR.Text = devices.codigo;
-            this.lblDMarca.Text = devices.marca;
-            this.lblDModelo.Text = devices.modelo;
-            this.lblDCosto.Text = devices.costo.ToString();
-            this.lblDOrigen.Text = devices.origen;
-            this.lblDFecha.Text = devices.fechaAlta.ToString();
-            this.lblDModFecha.Text = devices.fechaUltimaModificacion.ToString();
-            this.lblDLugar.Text = devices.Lugar_Actual;
-            this.lblDEstatus.Text = devices.StatusActual;
-            this.lblDDescompostura.Text = devices.descompostura;
-            this.lblDProvedor.Text = devices.proveedor;
-            this.lblDCantidad.Text = devices.cantidad.ToString();
-            this.lblDAccesorio.Text = devices.accesorios;
-            this.lblObservaciones.Text = devices.observaciones;
-            this.lblSerie.Text = devices.serie;
+            this.lblDProducto.Text = listDevices[0].producto;
+            this.lblDCompra.Text = listDevices[0].compra;
+            this.lblDCodigoQR.Text = listDevices[0].codigo;
+            this.lblDMarca.Text = listDevices[0].marca;
+            this.lblDModelo.Text = listDevices[0].modelo;
+            this.lblDCosto.Text = listDevices[0].costo.ToString();
+            this.lblDOrigen.Text = listDevices[0].origen;
+            this.lblDFecha.Text = listDevices[0].fechaAlta.ToString();
+            this.lblDModFecha.Text = listDevices[0].fechaUltimaModificacion.ToString();
+            this.lblDLugar.Text = listDevices[0].Lugar_Actual;
+            this.lblDEstatus.Text = listDevices[0].StatusActual;
+            this.lblDDescompostura.Text = listDevices[0].descompostura;
+            this.lblDProvedor.Text = listDevices[0].proveedor;
+            this.lblDCantidad.Text = listDevices[0].cantidad.ToString();
+            this.lblDAccesorio.Text = listDevices[0].accesorios;
+            this.lblObservaciones.Text = listDevices[0].observaciones;
+            this.lblSerie.Text = listDevices[0].serie;
 
             
         }
