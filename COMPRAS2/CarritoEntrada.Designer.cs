@@ -29,8 +29,8 @@ namespace COMPRAS2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarritoEntrada));
             this.lblCarritoDeSalida = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
@@ -83,14 +83,14 @@ namespace COMPRAS2
             this.dgvCarritoEntrada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCarritoEntrada.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvCarritoEntrada.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCarritoEntrada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCarritoEntrada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCarritoEntrada.ColumnHeadersHeight = 45;
             this.dgvCarritoEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCarritoEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -100,15 +100,15 @@ namespace COMPRAS2
             this.dgvCarritoEntrada.Name = "dgvCarritoEntrada";
             this.dgvCarritoEntrada.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCarritoEntrada.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCarritoEntrada.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(18)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCarritoEntrada.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCarritoEntrada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCarritoEntrada.Size = new System.Drawing.Size(1230, 561);
+            this.dgvCarritoEntrada.Size = new System.Drawing.Size(1230, 488);
             this.dgvCarritoEntrada.TabIndex = 71;
             this.dgvCarritoEntrada.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarritoSalida_CellMouseClick);
             // 
@@ -123,7 +123,7 @@ namespace COMPRAS2
             this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(1156, 763);
+            this.btnOK.Location = new System.Drawing.Point(1156, 690);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(98, 40);
             this.btnOK.TabIndex = 72;
@@ -136,7 +136,7 @@ namespace COMPRAS2
             this.button3.BackgroundImage = global::COMPRAS2.Properties.Resources.icons8_abajo_48__1_;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Location = new System.Drawing.Point(20, 163);
+            this.button3.Location = new System.Drawing.Point(20, 127);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(29, 28);
             this.button3.TabIndex = 73;
@@ -148,7 +148,7 @@ namespace COMPRAS2
             this.button4.BackgroundImage = global::COMPRAS2.Properties.Resources.icons8_arriba_481;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button4.Location = new System.Drawing.Point(145, 158);
+            this.button4.Location = new System.Drawing.Point(145, 122);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(32, 33);
             this.button4.TabIndex = 74;
@@ -161,7 +161,7 @@ namespace COMPRAS2
             this.button1.BackgroundImage = global::COMPRAS2.Properties.Resources.icons8_abajo_48__1_;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(369, 160);
+            this.button1.Location = new System.Drawing.Point(369, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(29, 28);
             this.button1.TabIndex = 75;
@@ -173,7 +173,7 @@ namespace COMPRAS2
             this.button2.BackgroundImage = global::COMPRAS2.Properties.Resources.icons8_arriba_481;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(503, 158);
+            this.button2.Location = new System.Drawing.Point(500, 127);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(32, 33);
             this.button2.TabIndex = 76;
@@ -185,7 +185,7 @@ namespace COMPRAS2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1279, 861);
+            this.ClientSize = new System.Drawing.Size(1279, 788);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);

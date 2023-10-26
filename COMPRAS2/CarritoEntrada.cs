@@ -79,6 +79,8 @@ namespace COMPRAS2
             //dgvCarritoSalida.Columns[1].Name = "Producto";
             //dgvCarritoSalida.Columns[2].Name = "Cantidad";
 
+
+
             for (int x = 0; x < movimientos.Count; x++)
             {
                 Devices producto = movimientos[x].dispositivo;
@@ -113,6 +115,14 @@ namespace COMPRAS2
             btnclm.HeaderText = "Eliminar";
             btnclm.UseColumnTextForButtonValue = true;
             this.dgvCarritoEntrada.Columns.Add(btnclm);
+
+
+            var division = (dgvCarritoEntrada.Size.Width / 12);
+            button3.Location = dgvCarritoEntrada.Location;
+            this.button3.Location = new Point(this.button3.Location.X + division - 30,this.button3.Location.Y + 45);
+            this.button4.Location = new Point(this.dgvCarritoEntrada.Location.X + (division * 2), this.button3.Location.Y);
+            this.button1.Location = new Point(this.dgvCarritoEntrada.Location.X + (division * 4) - 30, this.button3.Location.Y);
+            this.button2.Location = new Point(this.dgvCarritoEntrada.Location.X + (division * 5), this.button3.Location.Y);
         }
 
 

@@ -215,5 +215,10 @@ namespace COMPRAS2
         {
 
         }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,10 +54,9 @@ namespace COMPRAS2
             this.txtBUSCADOR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBUSCADOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBUSCADOR.ForeColor = System.Drawing.Color.White;
-            this.txtBUSCADOR.Location = new System.Drawing.Point(-218, 211);
-            this.txtBUSCADOR.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBUSCADOR.Location = new System.Drawing.Point(-109, 110);
             this.txtBUSCADOR.Name = "txtBUSCADOR";
-            this.txtBUSCADOR.Size = new System.Drawing.Size(1868, 37);
+            this.txtBUSCADOR.Size = new System.Drawing.Size(934, 19);
             this.txtBUSCADOR.TabIndex = 32;
             this.txtBUSCADOR.Click += new System.EventHandler(this.txtBUSCADOR_Click);
             this.txtBUSCADOR.TextChanged += new System.EventHandler(this.txtBUSCADOR_TextChanged);
@@ -68,20 +67,18 @@ namespace COMPRAS2
             this.lblREPORTES.AutoSize = true;
             this.lblREPORTES.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblREPORTES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblREPORTES.Location = new System.Drawing.Point(542, 58);
-            this.lblREPORTES.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblREPORTES.Location = new System.Drawing.Point(271, 30);
             this.lblREPORTES.Name = "lblREPORTES";
-            this.lblREPORTES.Size = new System.Drawing.Size(421, 79);
+            this.lblREPORTES.Size = new System.Drawing.Size(207, 39);
             this.lblREPORTES.TabIndex = 30;
             this.lblREPORTES.Text = "REPORTES";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 364);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(17, 189);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 25);
+            this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 38;
             this.label3.Text = "SERIE";
             // 
@@ -94,10 +91,9 @@ namespace COMPRAS2
             this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(40, 39);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnBack.Location = new System.Drawing.Point(20, 20);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 97);
+            this.btnBack.Size = new System.Drawing.Size(50, 50);
             this.btnBack.TabIndex = 34;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -113,10 +109,9 @@ namespace COMPRAS2
             this.btBUSCADOR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btBUSCADOR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btBUSCADOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBUSCADOR.Location = new System.Drawing.Point(-288, 211);
-            this.btBUSCADOR.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btBUSCADOR.Location = new System.Drawing.Point(-144, 110);
             this.btBUSCADOR.Name = "btBUSCADOR";
-            this.btBUSCADOR.Size = new System.Drawing.Size(62, 48);
+            this.btBUSCADOR.Size = new System.Drawing.Size(31, 25);
             this.btBUSCADOR.TabIndex = 33;
             this.btBUSCADOR.UseVisualStyleBackColor = false;
             // 
@@ -124,10 +119,9 @@ namespace COMPRAS2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.SEARCH;
-            this.pictureBox2.Location = new System.Drawing.Point(-338, 192);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(-169, 100);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(2072, 77);
+            this.pictureBox2.Size = new System.Drawing.Size(1036, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
@@ -145,12 +139,11 @@ namespace COMPRAS2
             this.btnAgregarNuevoReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarNuevoReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarNuevoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnAgregarNuevoReporte.Location = new System.Drawing.Point(56, 571);
-            this.btnAgregarNuevoReporte.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnAgregarNuevoReporte.MaximumSize = new System.Drawing.Size(418, 75);
-            this.btnAgregarNuevoReporte.MinimumSize = new System.Drawing.Size(418, 75);
+            this.btnAgregarNuevoReporte.Location = new System.Drawing.Point(28, 297);
+            this.btnAgregarNuevoReporte.MaximumSize = new System.Drawing.Size(209, 39);
+            this.btnAgregarNuevoReporte.MinimumSize = new System.Drawing.Size(209, 39);
             this.btnAgregarNuevoReporte.Name = "btnAgregarNuevoReporte";
-            this.btnAgregarNuevoReporte.Size = new System.Drawing.Size(418, 75);
+            this.btnAgregarNuevoReporte.Size = new System.Drawing.Size(209, 39);
             this.btnAgregarNuevoReporte.TabIndex = 41;
             this.btnAgregarNuevoReporte.Text = "AGREGAR NUEVO REPORTE";
             this.btnAgregarNuevoReporte.UseVisualStyleBackColor = false;
@@ -180,8 +173,7 @@ namespace COMPRAS2
             this.dgvReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvReportes.EnableHeadersVisualStyles = false;
             this.dgvReportes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvReportes.Location = new System.Drawing.Point(40, 394);
-            this.dgvReportes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvReportes.Location = new System.Drawing.Point(20, 205);
             this.dgvReportes.Name = "dgvReportes";
             this.dgvReportes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvReportes.RowHeadersVisible = false;
@@ -194,7 +186,7 @@ namespace COMPRAS2
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReportes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReportes.Size = new System.Drawing.Size(1313, 72);
+            this.dgvReportes.Size = new System.Drawing.Size(656, 37);
             this.dgvReportes.TabIndex = 44;
             this.dgvReportes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReportes_CellClick);
             this.dgvReportes.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReportes_CellMouseEnter);
@@ -212,10 +204,9 @@ namespace COMPRAS2
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnActualizar.Location = new System.Drawing.Point(1122, 41);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnActualizar.Location = new System.Drawing.Point(561, 21);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(228, 75);
+            this.btnActualizar.Size = new System.Drawing.Size(114, 39);
             this.btnActualizar.TabIndex = 45;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -234,11 +225,10 @@ namespace COMPRAS2
             this.btnBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusquedaAvanzada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBusquedaAvanzada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.btnBusquedaAvanzada.Location = new System.Drawing.Point(472, 292);
-            this.btnBusquedaAvanzada.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnBusquedaAvanzada.MaximumSize = new System.Drawing.Size(420, 77);
+            this.btnBusquedaAvanzada.Location = new System.Drawing.Point(236, 152);
+            this.btnBusquedaAvanzada.MaximumSize = new System.Drawing.Size(210, 40);
             this.btnBusquedaAvanzada.Name = "btnBusquedaAvanzada";
-            this.btnBusquedaAvanzada.Size = new System.Drawing.Size(420, 77);
+            this.btnBusquedaAvanzada.Size = new System.Drawing.Size(210, 40);
             this.btnBusquedaAvanzada.TabIndex = 48;
             this.btnBusquedaAvanzada.Text = "BUSQUEDA AVANZADA";
             this.btnBusquedaAvanzada.UseVisualStyleBackColor = false;
@@ -248,10 +238,9 @@ namespace COMPRAS2
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.ZKZg;
-            this.pictureBox1.Location = new System.Drawing.Point(499, 163);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(250, 85);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(402, 375);
+            this.pictureBox1.Size = new System.Drawing.Size(201, 195);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 107;
             this.pictureBox1.TabStop = false;
@@ -259,10 +248,10 @@ namespace COMPRAS2
             // 
             // REPORTES2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1400, 700);
+            this.ClientSize = new System.Drawing.Size(693, 364);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBusquedaAvanzada);
             this.Controls.Add(this.btnActualizar);
@@ -275,7 +264,6 @@ namespace COMPRAS2
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblREPORTES);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "REPORTES2";
             this.Text = "REPORTES2";
             this.Load += new System.EventHandler(this.REPORTES2_Load);
