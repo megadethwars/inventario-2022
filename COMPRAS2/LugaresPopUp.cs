@@ -166,6 +166,7 @@ namespace COMPRAS2
                     return;
                 }
                 VG.id_current_lugar = l.id;
+                VG.current_lugar = l.lugar;
                 this.mainForm.L = l;
                 this.mainForm.OpenSalida();
                 this.Close();

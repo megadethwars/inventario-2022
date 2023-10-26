@@ -140,13 +140,16 @@ namespace COMPRAS2
                 PdfFont Subtitle = new PdfStandardFont(PdfFontFamily.Helvetica, 14);
                 //Creates a text element to add the invoice number
                 string hd = "ORDEN DE MOVIMIENTO";
+                string current_lugar = "";
                 if (tipomov == 2)
                 {
                     hd = "ORDEN DE ENTRADA";
+                    current_lugar = "Almacen";
                 }
                 if (tipomov == 1)
                 {
                     hd = "ORDEN DE SALIDA";
+                    current_lugar = VG.current_lugar;
                 }
 
                 PdfTextElement subtitelement = new PdfTextElement(hd, Subtitle);
@@ -179,9 +182,10 @@ namespace COMPRAS2
                 //Draws a rectangle to place the heading in that region.
                 graphics.DrawRectangle(solidBrush2, bounds);
 
+                
 
                 //variables de campos
-                PdfTextElement lugar = new PdfTextElement(movimientos.dispositivo.lugar.lugar, campofont);
+                PdfTextElement lugar = new PdfTextElement(current_lugar, campofont);
                 lugar.Brush = PdfBrushes.Black;
                 PdfLayoutResult reslugar = lugar.Draw(page, new PointF(bounds.Left + 40, bounds.Top));
 

@@ -11,6 +11,7 @@ namespace COMPRAS2.servicios
         public static string url = "https://avsinventoryswagger25.azurewebsites.net/api/v1/";
         public static int offssetpage = 35;
         public static int id_current_lugar = 0;
+        public static string current_lugar = "";
         public static string dbsqlite = "dbMovements.db";
     }
 }
