@@ -49,10 +49,10 @@ namespace COMPRAS2
             this.lblREPORTES.AutoSize = true;
             this.lblREPORTES.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblREPORTES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblREPORTES.Location = new System.Drawing.Point(747, 37);
-            this.lblREPORTES.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblREPORTES.Location = new System.Drawing.Point(541, 58);
+            this.lblREPORTES.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblREPORTES.Name = "lblREPORTES";
-            this.lblREPORTES.Size = new System.Drawing.Size(581, 52);
+            this.lblREPORTES.Size = new System.Drawing.Size(928, 79);
             this.lblREPORTES.TabIndex = 5;
             this.lblREPORTES.Text = "CREACION DE REPORTES";
             // 
@@ -63,10 +63,10 @@ namespace COMPRAS2
             this.lblNombreProducto.AutoSize = true;
             this.lblNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.lblNombreProducto.Location = new System.Drawing.Point(543, 201);
-            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreProducto.Location = new System.Drawing.Point(814, 314);
+            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(266, 25);
+            this.lblNombreProducto.Size = new System.Drawing.Size(413, 37);
             this.lblNombreProducto.TabIndex = 16;
             this.lblNombreProducto.Text = "CLAVE DEL PRODUCTO:";
             // 
@@ -76,10 +76,10 @@ namespace COMPRAS2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(187, 169);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(-299, -442);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 25);
+            this.label3.Size = new System.Drawing.Size(205, 37);
             this.label3.TabIndex = 22;
             this.label3.Text = "Descripcion:";
             // 
@@ -90,10 +90,10 @@ namespace COMPRAS2
             this.txtNombreDelProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreDelProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreDelProducto.ForeColor = System.Drawing.Color.White;
-            this.txtNombreDelProducto.Location = new System.Drawing.Point(503, 254);
-            this.txtNombreDelProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreDelProducto.Location = new System.Drawing.Point(175, 397);
+            this.txtNombreDelProducto.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtNombreDelProducto.Name = "txtNombreDelProducto";
-            this.txtNombreDelProducto.Size = new System.Drawing.Size(799, 30);
+            this.txtNombreDelProducto.Size = new System.Drawing.Size(1198, 44);
             this.txtNombreDelProducto.TabIndex = 67;
             this.txtNombreDelProducto.Click += new System.EventHandler(this.txtNombreDelProducto_Click);
             this.txtNombreDelProducto.Leave += new System.EventHandler(this.txtNombreDelProducto_Leave);
@@ -105,11 +105,11 @@ namespace COMPRAS2
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.ForeColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(192, 219);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Location = new System.Drawing.Point(-291, -364);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(1374, 550);
+            this.txtDescripcion.Size = new System.Drawing.Size(2060, 858);
             this.txtDescripcion.TabIndex = 68;
             this.txtDescripcion.Click += new System.EventHandler(this.txtDescripcion_Click);
             this.txtDescripcion.Leave += new System.EventHandler(this.txtDescripcion_Leave);
@@ -124,10 +124,10 @@ namespace COMPRAS2
             this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Location = new System.Drawing.Point(807, 824);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Location = new System.Drawing.Point(631, 582);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(117, 42);
+            this.btnOK.Size = new System.Drawing.Size(176, 66);
             this.btnOK.TabIndex = 62;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_ClickAsync);
@@ -137,10 +137,10 @@ namespace COMPRAS2
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::COMPRAS2.Properties.Resources.LINEA;
-            this.pictureBox1.Location = new System.Drawing.Point(503, 188);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(754, 294);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 4);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 6);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
@@ -154,10 +154,10 @@ namespace COMPRAS2
             this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(27, 25);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Location = new System.Drawing.Point(40, 39);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(67, 62);
+            this.btnBack.Size = new System.Drawing.Size(100, 97);
             this.btnBack.TabIndex = 29;
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -166,10 +166,10 @@ namespace COMPRAS2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::COMPRAS2.Properties.Resources.ZKZg;
-            this.pictureBox2.Location = new System.Drawing.Point(718, 330);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(498, 163);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(268, 240);
+            this.pictureBox2.Size = new System.Drawing.Size(402, 375);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 106;
             this.pictureBox2.TabStop = false;
@@ -178,10 +178,10 @@ namespace COMPRAS2
             // 
             // REPORTES
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1705, 900);
+            this.ClientSize = new System.Drawing.Size(1400, 700);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombreDelProducto);
@@ -192,7 +192,7 @@ namespace COMPRAS2
             this.Controls.Add(this.lblNombreProducto);
             this.Controls.Add(this.lblREPORTES);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "REPORTES";
             this.Text = "REPORTES";
             this.Load += new System.EventHandler(this.REPORTES_Load);
