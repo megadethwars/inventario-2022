@@ -210,7 +210,9 @@ namespace COMPRAS2
                 dgvInventario.Columns.Add("MODELO", "MODELO");
                 dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
                 dgvInventario.Columns.Add("SERIE", "SERIE");
-                                
+
+                dgvInventario.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dgvInventario.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     DeviceSomeFields inv = deviceslist2[x];
