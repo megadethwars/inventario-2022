@@ -111,7 +111,7 @@ namespace COMPRAS2
                     reportes[x].UserActual = inv.UserActual;
 
                     string[] row = new string[] { reportes[x].dispositivoActual,
-                    reportes[x].fechaAlta.ToString(), reportes[x].UserActual.ToString()};
+                    reportes[x].fechaAlta.ToString(), reportes[x].UserActual.ToString(),reportes[x].comentarios};
                     dgvReportes.Rows.Add(row);
                 }
             }
@@ -170,6 +170,7 @@ namespace COMPRAS2
                 dgvReportes.Columns.Add("DISPOSITIVO", "DISPOSITIVO");
                 dgvReportes.Columns.Add("FECHA", "FECHA");
                 dgvReportes.Columns.Add("USUARIO", "USUARIO");
+                dgvReportes.Columns.Add("Descompostura", "Descompostura");
 
                 for (int x = 0; x < reporteslist.Count; x++)
                 {
@@ -179,7 +180,7 @@ namespace COMPRAS2
                     reporteslist[x].UserActual = inv.UserActual;
                     
                     string[] row = new string[] { reporteslist[x].dispositivoActual,
-                    reporteslist[x].fechaAlta.ToString(), reporteslist[x].UserActual.ToString()};
+                    reporteslist[x].fechaAlta.ToString(), reporteslist[x].UserActual.ToString(),reporteslist[x].comentarios };
                     dgvReportes.Rows.Add(row);
                 }
 
@@ -254,7 +255,7 @@ namespace COMPRAS2
             dgvReportes.Columns.Add("DISPOSITIVO", "DISPOSITIVO");
             dgvReportes.Columns.Add("FECHA", "FECHA");
             dgvReportes.Columns.Add("USUARIO", "USUARIO");
-
+            dgvReportes.Columns.Add("Descompostura", "Descompostura");
             for (int x = 0; x < reportes.Count; x++)
             {
                 Reportes inv = reportes[x];
@@ -263,7 +264,7 @@ namespace COMPRAS2
                 reportes[x].UserActual = inv.UserActual;
 
                 string[] row = new string[] { reportes[x].dispositivoActual,
-                    reportes[x].fechaAlta.ToString(), reportes[x].UserActual.ToString()};
+                    reportes[x].fechaAlta.ToString(), reportes[x].UserActual.ToString(),reportes[x].comentarios};
                 dgvReportes.Rows.Add(row);
             }
         }
@@ -327,7 +328,7 @@ namespace COMPRAS2
                     reporteslist[x].UserActual = inv.UserActual;
 
                     string[] row = new string[] { reporteslist[x].dispositivoActual,
-                    reporteslist[x].fechaAlta.ToString(), reporteslist[x].UserActual.ToString()};
+                    reporteslist[x].fechaAlta.ToString(), reporteslist[x].UserActual.ToString(),reporteslist[x].comentarios};
                     dgvReportes.Rows.Add(row);
                 }                
             }
