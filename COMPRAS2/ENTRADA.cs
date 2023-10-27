@@ -224,6 +224,7 @@ namespace COMPRAS2
             movement.tipoMovId = 2;
             movement.cantidad_Actual = cantidad_a_entrar;
             movement.LugarId = 1;
+            movement.comentarios = device.descompostura;
             bool deviceExist = movimientos.Any(x => x.dispositivoId == device.id && x.dispositivoId == device.id);
             movimientos.Add(movement);
         }
