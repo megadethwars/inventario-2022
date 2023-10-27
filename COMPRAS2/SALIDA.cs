@@ -29,6 +29,7 @@ namespace COMPRAS2
         List<String> codigos = new List<String>();
         List<Devices> devices = new List<Devices>();
         public List<DeviceSomeFields> deviceslist2;
+        List<Thread> hilos = new List<Thread>();
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
@@ -111,6 +112,7 @@ namespace COMPRAS2
                     lbCount.Text = codigos.Count.ToString();
                     Thread myNewThread = new Thread(() => BusquedaAsync(txtBUSCADOR.Text));
                     myNewThread.Start();
+                    hilos.Add(myNewThread);
 
                 }
                 else
@@ -200,10 +202,21 @@ namespace COMPRAS2
                 return;
             }
             pictureBox1.Visible = true;
+            
             while(true)
             {
-                Console.WriteLine(movimientos.Count.ToString() + "," + codigos.Count.ToString());
-                if (movimientos.Count == codigos.Count)
+                var finalizado = true;
+                foreach (Thread h in hilos)
+                {
+                    //Console.WriteLine(h.IsAlive);
+                    if (h.IsAlive)
+                    {
+                        finalizado = false;
+                    }
+
+                }
+                //Console.WriteLine(movimientos.Count.ToString() + "," + codigos.Count.ToString());
+                if (finalizado)
                 {
                     pictureBox1.Visible = false;
                     break;
