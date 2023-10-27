@@ -71,13 +71,15 @@ namespace COMPRAS2
 
             dgvCarritoSalida.Columns.Add("Codigo", "Codigo");
             dgvCarritoSalida.Columns.Add("Producto", "Producto");
-                        
+            dgvCarritoSalida.Columns.Add("Cantidad", "Cantidad");
+            dgvCarritoSalida.Columns.Add("Reporte", "Reporte");
+
             for (int x = 0; x < movimientos.Count; x++)
             {
                 Devices producto = movimientos[x].dispositivo;
                 movimientos[x].dispositivo_Actual = producto.producto;               
                 movimientos[x].codigo_Actual = producto.codigo;
-                string[] row = new string[] { movimientos[x].codigo_Actual, movimientos[x].dispositivo_Actual, };
+                string[] row = new string[] { movimientos[x].codigo_Actual, movimientos[x].dispositivo_Actual, movimientos[x].cantidad_Actual.ToString(), movimientos[x].comentarios };
                 dgvCarritoSalida.Rows.Add(row);
             }
             
@@ -104,7 +106,14 @@ namespace COMPRAS2
             btnclm.Text = "Eliminar";
             btnclm.HeaderText = "Eliminar";
             btnclm.UseColumnTextForButtonValue = true;
-            this.dgvCarritoSalida.Columns.Add(btnclm);         
+            this.dgvCarritoSalida.Columns.Add(btnclm);
+            var division = (dgvCarritoSalida.Size.Width / 15);
+            button3.Location = dgvCarritoSalida.Location;
+            this.button3.Location = new Point(this.button3.Location.X + division - 250, this.button3.Location.Y - 110);
+            this.button4.Location = new Point(this.dgvCarritoSalida.Location.X + (division * 2) - 220, this.button3.Location.Y);
+            this.button1.Location = new Point(this.dgvCarritoSalida.Location.X + (division * 4) - 160, this.button3.Location.Y);
+            this.button2.Location = new Point(this.dgvCarritoSalida.Location.X + (division * 5) - 110, this.button3.Location.Y);
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
