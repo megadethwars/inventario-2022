@@ -114,6 +114,7 @@ namespace COMPRAS2
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore});
                 var url = HttpMethods.url + "usuarios/login";
                 pictureBox6.Visible = true;
+                pictureBox6.BringToFront();
                 StatusMessage statusmessage = await HttpMethods.Post(url, json);
                 pictureBox6.Visible = false;
 

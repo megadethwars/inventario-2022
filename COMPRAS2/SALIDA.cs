@@ -201,6 +201,7 @@ namespace COMPRAS2
                 MessageBox.Show("No hay productos para realizar una salida");
                 return;
             }
+            pictureBox2.BringToFront();
             pictureBox1.Visible = true;
             
             while(true)
