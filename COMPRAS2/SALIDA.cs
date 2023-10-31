@@ -286,6 +286,9 @@ namespace COMPRAS2
         {
             InitializeComponent();
             dataGridView1.Columns.Add("Productos","Productos");
+            dataGridView1.Columns.Add("Marca", "MARCA");
+            dataGridView1.Columns.Add("MODELO", "MODELO");
+            dataGridView1.BringToFront();
             this.lugar = l;
             
             movimientos = new List<Movimientos>();
@@ -405,7 +408,7 @@ namespace COMPRAS2
                     deviceslist2[x].descripcion = inv.descripcion;
                     deviceslist2[x].serie = inv.serie;
 
-                    string[] row = new string[] { deviceslist2[x].producto};
+                    string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].marca, deviceslist2[x].modelo };
 
                     dataGridView1.Rows.Add(row);
                     dataGridView1.Columns[0].Width = 250;
