@@ -213,6 +213,7 @@ namespace COMPRAS2
 
                 dgvInventario.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 dgvInventario.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+                
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     DeviceSomeFields inv = deviceslist2[x];
@@ -229,6 +230,13 @@ namespace COMPRAS2
                     deviceslist2[x].descripcion, deviceslist2[x].serie};
                     dgvInventario.Rows.Add(row);
                 }
+                dgvInventario.Columns["PRODUCTO"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                dgvInventario.Columns["ID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvInventario.Columns["LUGAR"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvInventario.Columns["MARCA"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvInventario.Columns["MODELO"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvInventario.Columns["ESTATUS"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvInventario.Columns["SERIE"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             }
             catch (Exception ex)
