@@ -81,60 +81,55 @@ namespace COMPRAS2
         
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
         {
-            if (e.NewValue >= (dgvHistorial.Rows.Count - offssetpage))
-            {
-                //obtener siguiente linea
-                page = page + 1;
-                string url = "";
-                if (isFiltering)
+            try {
+                if (e.NewValue >= (dgvHistorial.Rows.Count - offssetpage))
                 {
-                    url = HttpMethods.url + "movimientos/filter?limit=30&offset=" + page.ToString();
-                }
-                else
-                {
-                    url = HttpMethods.url + "movimientos?offset=" + page.ToString() + "&limit=50";
-                }
+                    //obtener siguiente linea
+                    page = page + 1;
+                    string url = "";
+                    StatusMessage statusmessage;
+                    if (isFiltering)
+                    {
+                        url = HttpMethods.url + "movimientos/filter?limit=30&offset=" + page.ToString();
+                        statusmessage = await HttpMethods.get(url, txtBUSCADOR.Text);
+                    }
+                    else
+                    {
+                        url = HttpMethods.url + "movimientos?offset=" + page.ToString() + "&limit=50";
+                        statusmessage = await HttpMethods.get(url);
+                    }
 
-                StatusMessage statusmessage = await HttpMethods.get(url);
-                hist = JsonConvert.DeserializeObject<List<MovimientosDTO>>(statusmessage.data);
 
-                if (hist.Count == 0)
-                {
-                    return;
-                }
-                int i = 0;
-                /*
-                for (int x = 0; x < hist.Count; x++)
-                {
-                    Devices dispositivo = hist[x].dispositivo;
-                    hist[x].dispositivo_Actual = dispositivo.producto;
-                    hist[x].codigo_Actual = dispositivo.codigo;
+                    hist = JsonConvert.DeserializeObject<List<MovimientosDTO>>(statusmessage.data);
 
-                    Lugares lugar = hist[x].lugar;
-                    hist[x].Lugar_Actual = lugar.lugar;
+                    if (hist.Count == 0)
+                    {
+                        return;
+                    }
+                    int i = 0;
+                    
 
-                    User usuario = hist[x].usuario;
-                    hist[x].nombre_Actual = usuario.nombre + " " + usuario.apellidoPaterno + " " + usuario.apellidoMaterno;
+                    for (int x = 0; x < hist.Count; x++)
+                    {
+                        MovimientosDTO mov = hist[x];
+                        hist[x].fechaAlta = mov.fechaAlta;
+                        hist[x].dispositivo_Actual = mov.producto;
+                        hist[x].idMovimiento = mov.idMovimiento;
+                        hist[x].Lugar_Actual = mov.lugar;
+                        hist[x].nombre_Actual = mov.nombre;
+                        hist[x].tipo_Actual = mov.tipo;
 
-                    TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
-                    hist[x].tipo_Actual = tipoMovimiento.tipo;
-                }*/
-
-                for (int x = 0; x < hist.Count; x++)
-                {
-                    MovimientosDTO mov = hist[x];
-                    hist[x].fechaAlta = mov.fechaAlta;
-                    hist[x].dispositivo_Actual = mov.producto;
-                    hist[x].idMovimiento = mov.idMovimiento;
-                    hist[x].Lugar_Actual = mov.lugar;
-                    hist[x].nombre_Actual = mov.nombre;
-                    hist[x].tipo_Actual = mov.tipo;
-
-                    string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual,
+                        string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual,
                     hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
-                    dgvHistorial.Rows.Add(row);
+                        dgvHistorial.Rows.Add(row);
+                    }
                 }
             }
+            catch(Exception ex)
+            {
+
+            }
+            
         }
         
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
