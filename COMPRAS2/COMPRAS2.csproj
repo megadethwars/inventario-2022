@@ -315,6 +315,7 @@
     <Compile Include="modelos\DeviceSomeFields.cs" />
     <Compile Include="modelos\FilterDeviceValue.cs" />
     <Compile Include="modelos\Movimientos.cs" />
+    <Compile Include="modelos\MovimientosDTO.cs" />
     <Compile Include="modelos\QueryDevice.cs" />
     <Compile Include="modelos\QueryMovimientos.cs" />
     <Compile Include="modelos\QueryReporte.cs" />

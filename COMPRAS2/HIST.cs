@@ -17,13 +17,13 @@ namespace COMPRAS2
 {
     public partial class HIST : Form
     {
-        public List<Movimientos> hist;
+        public List<MovimientosDTO> hist;
 
         [DllImport("gdi32.dll")]
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
-
+        System.Timers.Timer timer1;
         private void CargoEtiqueta(Font font)
         {
             FontStyle fontStyle = FontStyle.Regular;
@@ -64,7 +64,7 @@ namespace COMPRAS2
         int offssetpage = 25;
         int page = 1;
         bool isFiltering = false;
-
+        bool isRunning = false;
         public HIST()
         {
             InitializeComponent();
@@ -73,6 +73,10 @@ namespace COMPRAS2
             ScrollBars vscrolls = dgvHistorial.ScrollBars;
             bar = new VScrollBar();
             offssetpage = VG.offssetpage;
+
+            timer1 = new System.Timers.Timer();
+            timer1.Interval = 700;
+            timer1.Elapsed += timer1_Tick;
         }
         
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -84,7 +88,7 @@ namespace COMPRAS2
                 string url = "";
                 if (isFiltering)
                 {
-                    url = HttpMethods.url + "movimientos/filter/" + txtBUSCADOR.Text + "?limit=30&offset=" + page.ToString();
+                    url = HttpMethods.url + "movimientos/filter?limit=30&offset=" + page.ToString();
                 }
                 else
                 {
@@ -92,13 +96,14 @@ namespace COMPRAS2
                 }
 
                 StatusMessage statusmessage = await HttpMethods.get(url);
-                hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
+                hist = JsonConvert.DeserializeObject<List<MovimientosDTO>>(statusmessage.data);
 
                 if (hist.Count == 0)
                 {
                     return;
                 }
                 int i = 0;
+                /*
                 for (int x = 0; x < hist.Count; x++)
                 {
                     Devices dispositivo = hist[x].dispositivo;
@@ -113,17 +118,17 @@ namespace COMPRAS2
 
                     TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
                     hist[x].tipo_Actual = tipoMovimiento.tipo;
-                }
+                }*/
 
                 for (int x = 0; x < hist.Count; x++)
                 {
-                    Movimientos mov = hist[x];
+                    MovimientosDTO mov = hist[x];
                     hist[x].fechaAlta = mov.fechaAlta;
-                    hist[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    hist[x].dispositivo_Actual = mov.producto;
                     hist[x].idMovimiento = mov.idMovimiento;
-                    hist[x].Lugar_Actual = mov.Lugar_Actual;
-                    hist[x].nombre_Actual = mov.nombre_Actual;
-                    hist[x].tipo_Actual = mov.tipo_Actual;
+                    hist[x].Lugar_Actual = mov.lugar;
+                    hist[x].nombre_Actual = mov.nombre;
+                    hist[x].tipo_Actual = mov.tipo;
 
                     string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual,
                     hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
@@ -173,8 +178,8 @@ namespace COMPRAS2
                     return;
                 }
 
-                hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
-
+                hist = JsonConvert.DeserializeObject<List<MovimientosDTO>>(statusmessage.data);
+                /*
                 for (int x = 0; x < hist.Count; x++)
                 {
                     Devices dispositivo = hist[x].dispositivo;
@@ -189,7 +194,7 @@ namespace COMPRAS2
 
                     TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
                     hist[x].tipo_Actual = tipoMovimiento.tipo;
-                }
+                }*/
 
                 dgvHistorial.Columns.Add("FECHA", "FECHA");
                 dgvHistorial.Columns.Add("PRODUCTO", "PRODUCTO");
@@ -200,13 +205,13 @@ namespace COMPRAS2
 
                 for (int x = 0; x < hist.Count; x++)
                 {
-                    Movimientos mov = hist[x];
+                    MovimientosDTO mov = hist[x];
                     hist[x].fechaAlta = mov.fechaAlta;
-                    hist[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    hist[x].dispositivo_Actual = mov.producto;
                     hist[x].idMovimiento = mov.idMovimiento;
-                    hist[x].Lugar_Actual = mov.Lugar_Actual;
-                    hist[x].nombre_Actual = mov.nombre_Actual;
-                    hist[x].tipo_Actual = mov.tipo_Actual;
+                    hist[x].Lugar_Actual = mov.lugar;
+                    hist[x].nombre_Actual = mov.nombre;
+                    hist[x].tipo_Actual = mov.tipo;
 
                     string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual, 
                     hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
@@ -249,8 +254,8 @@ namespace COMPRAS2
                     return;
                 }
 
-                hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
-
+                hist = JsonConvert.DeserializeObject<List<MovimientosDTO>>(statusmessage.data);
+                /*
                 for (int x = 0; x < hist.Count; x++)
                 {
                     Devices dispositivo = hist[x].dispositivo;
@@ -265,7 +270,7 @@ namespace COMPRAS2
 
                     TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
                     hist[x].tipo_Actual = tipoMovimiento.tipo;
-                }
+                }*/
 
                 dgvHistorial.Columns.Add("FECHA", "FECHA");
                 dgvHistorial.Columns.Add("PRODUCTO", "PRODUCTO");
@@ -276,13 +281,13 @@ namespace COMPRAS2
 
                 for (int x = 0; x < hist.Count; x++)
                 {
-                    Movimientos mov = hist[x];
+                    MovimientosDTO mov = hist[x];
                     hist[x].fechaAlta = mov.fechaAlta;
-                    hist[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    hist[x].dispositivo_Actual = mov.producto;
                     hist[x].idMovimiento = mov.idMovimiento;
-                    hist[x].Lugar_Actual = mov.Lugar_Actual;
-                    hist[x].nombre_Actual = mov.nombre_Actual;
-                    hist[x].tipo_Actual = mov.tipo_Actual;
+                    hist[x].Lugar_Actual = mov.lugar;
+                    hist[x].nombre_Actual = mov.nombre;
+                    hist[x].tipo_Actual = mov.tipo;
 
                     string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual,
                     hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
@@ -327,20 +332,21 @@ namespace COMPRAS2
         {
             try
             {
+                isRunning = false;
                 moveslist.Clear();
                 dgvHistorial.Rows.Clear();
                 page = 1;
                 isFiltering = true;
-                var url = HttpMethods.url + "movimientos/filter/" + txtBUSCADOR.Text + "?limit=30";
-                StatusMessage statusmessage = await HttpMethods.get(url);
+                var url = HttpMethods.url + "movimientos/filter?limit=30";
+                StatusMessage statusmessage = await HttpMethods.get(url, txtBUSCADOR.Text);
 
                 if (statusmessage.statuscode != 200)
                 {
                     return;
                 }
                 
-                hist = JsonConvert.DeserializeObject<List<Movimientos>>(statusmessage.data);
-
+                hist = JsonConvert.DeserializeObject<List<MovimientosDTO>>(statusmessage.data);
+                /*
                 for (int x = 0; x < hist.Count; x++)
                 {
                     Devices dispositivo = hist[x].dispositivo;
@@ -356,16 +362,17 @@ namespace COMPRAS2
                     TipoMovimiento tipoMovimiento = hist[x].tipoMovimiento;
                     hist[x].tipo_Actual = tipoMovimiento.tipo;
                 }
+                */
                 dgvHistorial.Rows.Clear();
                 for (int x = 0; x < hist.Count; x++)
                 {
-                    Movimientos mov = hist[x];
+                    MovimientosDTO mov = hist[x];
                     hist[x].fechaAlta = mov.fechaAlta;
-                    hist[x].dispositivo_Actual = mov.dispositivo_Actual;
+                    hist[x].dispositivo_Actual = mov.producto;
                     hist[x].idMovimiento = mov.idMovimiento;
-                    hist[x].Lugar_Actual = mov.Lugar_Actual;
-                    hist[x].nombre_Actual = mov.nombre_Actual;
-                    hist[x].tipo_Actual = mov.tipo_Actual;
+                    hist[x].Lugar_Actual = mov.lugar;
+                    hist[x].nombre_Actual = mov.nombre;
+                    hist[x].tipo_Actual = mov.tipo;
 
                     string[] row = new string[] { hist[x].fechaAlta.ToString(), hist[x].dispositivo_Actual,
                     hist[x].idMovimiento, hist[x].Lugar_Actual, hist[x].nombre_Actual, hist[x].tipo_Actual};
@@ -378,11 +385,39 @@ namespace COMPRAS2
             }
         }
 
+        private void timer1_Tick(object sender, System.EventArgs e)
+        {
+            try
+            {
+                isRunning = false;
+                timer1.Stop();
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    busquedaNormal();
+
+                });
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
         private void txtBUSCADOR_TextChanged(object sender, EventArgs e)
         {
-            busquedaNormal();
+            try
+            {
+                timer1.Stop();
+                timer1.Start();
+                isRunning = true;
+            }
+            catch (Exception ex)
+            {
+            }
+            
         }
 
-        
+   
     }
 }
