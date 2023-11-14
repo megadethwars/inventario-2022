@@ -32,6 +32,19 @@ namespace COMPRAS2
             timer2.Start();
         }
 
+        private void ManejarEvento(int dato)
+        {
+            // Actualizar el formulario con el dato recibido
+            if (dato == 1) {
+                this.lbStatus.Text = "Sincronizacion pendiente..";
+            }
+
+            if (dato == 0) {
+                this.lbStatus.Text = "Sincronizacion Completa";
+            }
+            
+        }
+
         private  void TimerElapsed(object sender, ElapsedEventArgs e)
         {
 

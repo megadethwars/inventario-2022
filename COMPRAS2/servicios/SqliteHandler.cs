@@ -64,10 +64,10 @@ namespace COMPRAS2.servicios
            
         }
 
-        public static bool updateRegister(string idMovimiento)
+        public static bool updateRegister(string idMovimiento,int dispositivoId)
         {
             string connectionString = "Data Source=" + VG.dbsqlite + ";Version=3;";
-            string updateQuery = "UPDATE Movements SET Status_sync_azure = 1 WHERE idMovimiento ='"+idMovimiento+"'";
+            string updateQuery = "UPDATE Movements SET Status_sync_azure = 1 WHERE idMovimiento ='"+idMovimiento+"' "+"and idDispositivo='"+ dispositivoId .ToString()+ "'";
             
             int count=0;
 
@@ -223,7 +223,7 @@ namespace COMPRAS2.servicios
                     using (SQLiteCommand cmd = new SQLiteCommand(connection))
                     {
                         // Query SQL para eliminar registros donde Status_sync_azure = 1
-                        cmd.CommandText = "DELETE FROM Movements WHERE Status_sync_azure = 1 and ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>20";
+                        cmd.CommandText = "DELETE FROM Movements WHERE Status_sync_azure = 1 and ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>200";
 
                         // Ejecutar la consulta SQL DELETE
                         int rowsAffected = cmd.ExecuteNonQuery();

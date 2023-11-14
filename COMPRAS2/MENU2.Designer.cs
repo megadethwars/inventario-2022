@@ -39,6 +39,7 @@ namespace COMPRAS2
             this.btnREPORTE = new System.Windows.Forms.PictureBox();
             this.btnHISTORIAL = new System.Windows.Forms.PictureBox();
             this.btnMIPERFIL = new System.Windows.Forms.PictureBox();
+            this.lbStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -174,12 +175,24 @@ namespace COMPRAS2
             this.btnMIPERFIL.TabStop = false;
             this.btnMIPERFIL.Click += new System.EventHandler(this.MIPERFIL_Click);
             // 
+            // lbStatus
+            // 
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatus.ForeColor = System.Drawing.Color.White;
+            this.lbStatus.Location = new System.Drawing.Point(592, 12);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(17, 25);
+            this.lbStatus.TabIndex = 11;
+            this.lbStatus.Text = ".";
+            // 
             // MENU2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
@@ -219,5 +232,6 @@ namespace COMPRAS2
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.PictureBox btnHISTORIAL;
+        private System.Windows.Forms.Label lbStatus;
     }
 }

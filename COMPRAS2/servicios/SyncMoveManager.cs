@@ -8,43 +8,60 @@ using Newtonsoft.Json;
 
 namespace COMPRAS2.servicios
 {
-    public class SyncMoveManager
+    public static class SyncMoveManager
     {
-        public SyncMoveManager()
-        {
+        public delegate void EventHandlerStatus(int dato);
 
+        public static event EventHandlerStatus eventStatus;
+
+        public static int statusId = 0;
+
+        // Método estático protegido para invocar el evento
+        private static void OnEvent(int dato)
+        {
+            eventStatus?.Invoke(dato);
         }
         public async static void SyncMovesToAzure(string idMovement)
         {
+            OnEvent(1);
             var movements = SqliteHandler.Selectregister(idMovement);
             if (movements != null)
             {
                 foreach (Movimientos movement in movements)
                 {
+                    
                     if (await postMovementApi(movement))
                     {
-                        SqliteHandler.updateRegister(movement.idMovimiento);
+                        SqliteHandler.updateRegister(movement.idMovimiento,movement.dispositivoId);
                     }
                 }
+                OnEvent(0);
             }
             
 
             //bool status = SqliteHandler.updateRegister(movement.idMovimiento);
         }
 
+        public static int requestStatus() {
+            return statusId;
+        }
         public async static void SyncMovesToAzurethread()
         {
             var movements = SqliteHandler.Selectregister();
 
             if (movements != null)
             {
+                OnEvent(1);
+                statusId = 1;
                 foreach (Movimientos movement in movements)
                 {
                     if (await postMovementApi(movement))
                     {
-                        SqliteHandler.updateRegister(movement.idMovimiento);
+                        SqliteHandler.updateRegister(movement.idMovimiento,movement.dispositivoId);
                     }
                 }
+                OnEvent(0);
+                statusId = 0;
             }
 
             
