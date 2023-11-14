@@ -95,7 +95,8 @@ namespace COMPRAS2
             //CheckForIllegalCrossThreadCalls = false;
             deviceslist2 = new List<DeviceSomeFields>();
             L = new Lugares();
-            
+            SyncMoveManager.eventStatus += ManejarEvento;
+
         }
 
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -190,6 +191,20 @@ namespace COMPRAS2
             }
         }
 
+        private void ManejarEvento(int dato)
+        {
+            // Actualizar el formulario con el dato recibido
+            if (dato == 1)
+            {
+                Console.WriteLine("Sincronizando....");
+            }
+
+            if (dato == 0)
+            {
+                Console.WriteLine("sincronizacion completa");
+            }
+
+        }
         private async void INVENTARIO_Load(object sender, EventArgs e)
         {
             CargoPrivateFontCollection();
