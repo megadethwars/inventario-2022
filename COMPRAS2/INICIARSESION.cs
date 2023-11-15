@@ -57,7 +57,8 @@ namespace COMPRAS2
 
         public INICIARSESION()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            Program.log.Info("Iniciando Aplicacion...");
         }
 
         private void btnCERRAR_Click(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace COMPRAS2.servicios
         }
         public async static void SyncMovesToAzure(string idMovement)
         {
+            Program.log.Debug("Iniciando sincronizacion de movimientos....");
             OnEvent(1);
             statusId = 1;
             var movements = SqliteHandler.Selectregister(idMovement);
@@ -40,7 +41,7 @@ namespace COMPRAS2.servicios
                 }
                 statusId = 0;
                 OnEvent(0);
-
+                Program.log.Debug("Sincronizacion terminada.");
             }
             
         }
@@ -50,6 +51,7 @@ namespace COMPRAS2.servicios
         }
         public async static void SyncMovesToAzurethread()
         {
+            Program.log.Debug("Iniciando sincronizacion de movimientos thread....");
             var movements = SqliteHandler.Selectregister();
 
             if (movements != null)
@@ -65,6 +67,7 @@ namespace COMPRAS2.servicios
                 }
                 OnEvent(0);
                 statusId = 0;
+                Program.log.Debug("Sincronizacion terminada thread.");
             }
 
             
@@ -86,6 +89,7 @@ namespace COMPRAS2.servicios
 
                 if (statusmessage.statuscode == 409)
                 {
+                    Program.log.Error("error en el servicio, Conflicto--" + statusmessage.message);
                     return false;
                 }
 
@@ -101,6 +105,7 @@ namespace COMPRAS2.servicios
                 else if (statusmessage.statuscode == 404)
                 {
                     //MessageBox.Show("error en el servicio, NO encontrado");
+                    Program.log.Error("error en el servicio, NO encontrado--"+movement.dispositivoId);
                     return false;
 
                 }
@@ -109,8 +114,10 @@ namespace COMPRAS2.servicios
             }
             catch(Exception ex)
             {
+                Program.log.Error("Ocurrio un error al sincronizar un movimiento ---"+ex.Message);
                 return false;
             }
+            
             return false;
         }
 

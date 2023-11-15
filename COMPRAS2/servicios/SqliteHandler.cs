@@ -53,7 +53,7 @@ namespace COMPRAS2.servicios
                 catch (Exception ex)
                 {
                     //logging error
-                    
+                    Program.log.Error("error en escritura SQLite -- " + ex.Message);
                 }
             }
 
@@ -94,7 +94,7 @@ namespace COMPRAS2.servicios
                 }
                 catch (Exception ex)
                 {
-                   
+                    Program.log.Error("error en actualizacion SQLite -- " + ex.Message);
                 }
             }
             return false;
@@ -148,7 +148,7 @@ namespace COMPRAS2.servicios
                 }
                 catch (Exception ex)
                 {
-                   
+                    Program.log.Error("error en consulta SQLite -- " + ex.Message);
                 }
             }
             return null;
@@ -237,6 +237,7 @@ namespace COMPRAS2.servicios
             }
             catch(Exception ex)
             {
+                Program.log.Error("error en eliminacion SQLite -- " + ex.Message);
                 return false;
             }
             
