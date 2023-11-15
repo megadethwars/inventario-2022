@@ -24,6 +24,7 @@ namespace COMPRAS2.servicios
         public async static void SyncMovesToAzure(string idMovement)
         {
             OnEvent(1);
+            statusId = 1;
             var movements = SqliteHandler.Selectregister(idMovement);
             if (movements != null)
             {
@@ -34,12 +35,14 @@ namespace COMPRAS2.servicios
                     {
                         SqliteHandler.updateRegister(movement.idMovimiento,movement.dispositivoId);
                     }
+                    
+                    
                 }
+                statusId = 0;
                 OnEvent(0);
+
             }
             
-
-            //bool status = SqliteHandler.updateRegister(movement.idMovimiento);
         }
 
         public static int requestStatus() {

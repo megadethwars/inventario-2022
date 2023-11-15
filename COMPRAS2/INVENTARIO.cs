@@ -97,6 +97,9 @@ namespace COMPRAS2
             L = new Lugares();
             SyncMoveManager.eventStatus += ManejarEvento;
 
+            //check status before start
+            int bandera = SyncMoveManager.requestStatus();
+
         }
 
         private async void DataGridView1_Scroll(object sender, ScrollEventArgs e)
