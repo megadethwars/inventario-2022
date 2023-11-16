@@ -182,6 +182,7 @@ namespace COMPRAS2
 
         private int sendMovementAsync()
         {
+            Program.log.Info($"insertando {this.carrito.entrada.movimientos.Count} registros a process PDF");
             Thread thproccesOuts = new Thread(() => SyncMoveManager.WriteMovesToSqlite(this.carrito.entrada.movimientos, uniqueId, idUsuario));
             thproccesOuts.Start();
             Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.entrada.movimientos, curruser));

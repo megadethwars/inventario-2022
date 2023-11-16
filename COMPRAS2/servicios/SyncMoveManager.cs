@@ -95,6 +95,7 @@ namespace COMPRAS2.servicios
 
                 else if (statusmessage.statuscode == 500)
                 {
+                    Program.log.Error("error en el servicio, eror interno--" + movement.dispositivoId);
                     return false;
                 }
                 else if (statusmessage.statuscode == 200)
@@ -123,7 +124,7 @@ namespace COMPRAS2.servicios
 
         public static  void WriteMovesToSqlite(List<Movimientos> movimientos,string idMovimiento,int idusuario)
         {
-
+            Program.log.Info($"insertando {movimientos.Count} registros a BD local");
             foreach(Movimientos movement in movimientos)
             {
                 movement.idMovimiento = idMovimiento;

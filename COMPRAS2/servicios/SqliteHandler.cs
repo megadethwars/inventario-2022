@@ -16,6 +16,7 @@ namespace COMPRAS2.servicios
             // Cadena de conexión a la base de datos SQLite
             string connectionString = "Data Source="+VG.dbsqlite+";Version=3;";
             int count = 0;
+            Program.log.Debug("insertando registro ---  " + movimiento.idMovimiento + "----" + movimiento.dispositivoId.ToString()+"---"+movimiento.codigo_Actual);
             while (count <= max_attemps)
             {
                 count++;
@@ -70,7 +71,7 @@ namespace COMPRAS2.servicios
             string updateQuery = "UPDATE Movements SET Status_sync_azure = 1 WHERE idMovimiento ='"+idMovimiento+"' "+"and idDispositivo='"+ dispositivoId .ToString()+ "'";
             
             int count=0;
-
+            Program.log.Debug("actualizando registro---"+idMovimiento+"----"+dispositivoId.ToString());
             while (count <= max_attemps)
             {
                 count++;
@@ -162,7 +163,7 @@ namespace COMPRAS2.servicios
 
             string connectionString = "Data Source=" + VG.dbsqlite + ";Version=3;";
             
-            string selectQuery = "SELECT * FROM Movements WHERE ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>5 AND Status_sync_azure=0  order by fecha_db DESC limit 50;";
+            string selectQuery = "SELECT * FROM Movements WHERE ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>5 AND Status_sync_azure=0  order by fecha_db DESC limit 300;";
             int count = 0;
 
             while (count <= max_attemps)
@@ -200,7 +201,7 @@ namespace COMPRAS2.servicios
                 }
                 catch (Exception ex)
                 {
-
+                    Program.log.Error("error en consulta SQLite -- " + ex.Message);
                 }
             }
             return null;
@@ -223,11 +224,11 @@ namespace COMPRAS2.servicios
                     using (SQLiteCommand cmd = new SQLiteCommand(connection))
                     {
                         // Query SQL para eliminar registros donde Status_sync_azure = 1
-                        cmd.CommandText = "DELETE FROM Movements WHERE Status_sync_azure = 1 and ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>200";
+                        cmd.CommandText = "DELETE FROM Movements WHERE Status_sync_azure = 1 and ((strftime('%s', datetime('now', 'localtime')) - strftime('%s', fecha_db)) / 60)>43200";
 
                         // Ejecutar la consulta SQL DELETE
                         int rowsAffected = cmd.ExecuteNonQuery();
-
+                        Program.log.Info($"Se eliminaron  {rowsAffected} registros.");
                         Console.WriteLine($"Se eliminaron {rowsAffected} registros.");
                     }
 
