@@ -80,9 +80,23 @@ namespace COMPRAS2
         bool isEnd = false;
         bool isFiltering = false;
         bool isRunning = false;
+        SpinningCircles spinner;
+        Label sync;
         public INVENTARIO()
         {
             InitializeComponent();
+            sync = new Label();
+            sync.Location = new Point(160,43);
+            sync.Width = 200;
+            sync.Text = "Sincronizando...";
+            sync.ForeColor = Color.White;
+            sync.Font = new Font("Arial", 15, FontStyle.Bold);
+            spinner = new SpinningCircles();
+            spinner.Location = new Point(80,20);
+            sync.Hide();
+            spinner.Hide();
+            this.Controls.Add(spinner);
+            this.Controls.Add(sync);
             deviceslist= new List<Devices>();
             dgvInventario.Scroll += new System.Windows.Forms.ScrollEventHandler(DataGridView1_Scroll);
             ScrollBars vscrolls = dgvInventario.ScrollBars;
@@ -99,6 +113,11 @@ namespace COMPRAS2
 
             //check status before start
             int bandera = SyncMoveManager.requestStatus();
+            if (bandera == 1)
+            {
+                spinner.Show();
+                sync.Show();
+            }
 
         }
 
@@ -200,11 +219,27 @@ namespace COMPRAS2
             if (dato == 1)
             {
                 Console.WriteLine("Sincronizando....");
+                if (!this.IsDisposed)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        this.spinner.Show();
+                        sync.Show();
+                    }));
+                }
             }
 
             if (dato == 0)
             {
                 Console.WriteLine("sincronizacion completa");
+                if (!this.IsDisposed)
+                {
+                    Invoke(new Action(() =>
+                    {
+                        this.spinner.Hide();
+                        sync.Hide();
+                    }));
+                }
             }
 
         }
