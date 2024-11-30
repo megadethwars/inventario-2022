@@ -85,6 +85,7 @@ namespace COMPRAS2.servicios
                 string json = JsonConvert.SerializeObject(movimientos,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
                 var url = HttpMethods.url + "movimientos";
+                Program.log.Info($"sincronizando con azure objeto-{json}");
                 StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
                 if (statusmessage.statuscode == 409)

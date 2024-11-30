@@ -237,7 +237,7 @@ namespace COMPRAS2
             {
                 var idLugarestuple = (Tuple<int, string>)cbLugares.SelectedItem;
                 idLugares = idLugarestuple.Item1;
-                devicesUpdate.lugarId = idLugares;
+                devicesUpdate.lugarId = devices.lugarId;
             }
             else
             {
