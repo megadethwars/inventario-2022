@@ -460,7 +460,7 @@ namespace COMPRAS2
             {
 
                 string valorCelda = fila.Cells["codigo"].Value?.ToString();
-
+                code = code.Trim();
                 if (!string.IsNullOrEmpty(valorCelda) && valorCelda.Equals(code))
                 {
                    

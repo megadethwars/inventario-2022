@@ -83,7 +83,6 @@ namespace COMPRAS2
             Navigator.backPage(this.Name, this);
         }
 
-
         private async Task<int> Auth()
         {
             try
@@ -190,8 +189,8 @@ namespace COMPRAS2
                 product.cantidad = cantidad;
                 product.compra = txtCompra.Text;
                 product.descompostura = txtDescompostura.Text;
-                product.serie = txtSerie.Text;
-                product.codigo = txtCodigo.Text;
+                product.serie = txtSerie.Text.Trim();
+                product.codigo = txtCodigo.Text.Trim();
                 product.proveedor = txtProvedor.Text;
                 product.costo = (int)costo;
                 product.observaciones = txtObservaciones.Text;

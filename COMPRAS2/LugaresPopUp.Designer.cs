@@ -56,9 +56,9 @@ namespace COMPRAS2
             // comboPlaces
             // 
             this.comboPlaces.FormattingEnabled = true;
-            this.comboPlaces.Location = new System.Drawing.Point(150, 102);
+            this.comboPlaces.Location = new System.Drawing.Point(25, 102);
             this.comboPlaces.Name = "comboPlaces";
-            this.comboPlaces.Size = new System.Drawing.Size(121, 21);
+            this.comboPlaces.Size = new System.Drawing.Size(378, 21);
             this.comboPlaces.TabIndex = 1;
             // 
             // button1
