@@ -15,6 +15,9 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
 using System.Threading;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
 
 namespace COMPRAS2
 {
@@ -160,8 +163,7 @@ namespace COMPRAS2
                     //    dgvInventario.Rows.Add(row);
                     //}
 
-                    
-
+                  
                     for (int x = 0; x < deviceslist2.Count; x++)
                     {
                         DeviceSomeFields inv = deviceslist2[x];
@@ -210,9 +212,10 @@ namespace COMPRAS2
                 dgvInventario.Columns.Add("MODELO", "MODELO");
                 dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
                 dgvInventario.Columns.Add("SERIE", "SERIE");
-
+                
                 dgvInventario.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 dgvInventario.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+                dgvInventario.Rows.Clear();
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     DeviceSomeFields inv = deviceslist2[x];
@@ -332,7 +335,7 @@ namespace COMPRAS2
                 dgvInventario.Columns.Add("MODELO", "MODELO");
                 dgvInventario.Columns.Add("ESTATUS", "ESTATUS");
                 dgvInventario.Columns.Add("SERIE", "SERIE");
-
+                dgvInventario.Rows.Clear();
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     DeviceSomeFields inv = deviceslist2[x];
@@ -403,7 +406,6 @@ namespace COMPRAS2
                 //{
                 //    dgvInventario.Rows.Clear();
                 //});
-                dgvInventario.Rows.Clear();
 
 
                 page = 1;
@@ -420,8 +422,8 @@ namespace COMPRAS2
 
                 deviceslist2 = JsonConvert.DeserializeObject<List<DeviceSomeFields>>(statusmessage2.data);
 
-             
-            
+
+                dgvInventario.Rows.Clear();
                 for (int x = 0; x < deviceslist2.Count; x++)
                 {
                     DeviceSomeFields inv = deviceslist2[x];
@@ -466,6 +468,8 @@ namespace COMPRAS2
                 timer1.Stop();
                 timer1.Start();
                 isRunning = true;
+
+                btnGenerarPDF.Visible = !string.IsNullOrEmpty(txtBUSCADOR.Text);
             }
             catch (Exception ex) { 
             }
@@ -481,6 +485,80 @@ namespace COMPRAS2
         private void dgvInventario_Scroll(object sender, ScrollEventArgs e)
         {
             //MessageBox.Show("tu mama");
+        }
+
+        private void btnGenerarPDF_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvInventario.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay datos para generar el PDF.");
+                    return;
+                }
+
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
+                    saveFileDialog.FileName = "Inventario_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".pdf";
+
+                    if (saveFileDialog.ShowDialog() != DialogResult.OK)
+                        return;
+
+                    PdfDocument document = new PdfDocument();
+                    PdfPage pdfPage = document.Pages.Add();
+
+                    PdfFont titleFont = new PdfStandardFont(PdfFontFamily.Helvetica, 16, PdfFontStyle.Bold);
+                    pdfPage.Graphics.DrawString("Inventario - Búsqueda: " + txtBUSCADOR.Text, titleFont, PdfBrushes.DarkBlue, new PointF(0, 0));
+
+                    int colCount = dgvInventario.Columns.Count;
+
+                    PdfGrid pdfGrid = new PdfGrid();
+                    pdfGrid.Columns.Add(colCount);
+                    pdfGrid.Headers.Add(1);
+
+                    PdfGridRow header = pdfGrid.Headers[0];
+                    for (int c = 0; c < colCount; c++)
+                    {
+                        header.Cells[c].Value = dgvInventario.Columns[c].HeaderText;
+                    }
+
+                    PdfGridCellStyle headerStyle = new PdfGridCellStyle();
+                    headerStyle.BackgroundBrush = PdfBrushes.DarkBlue;
+                    headerStyle.TextBrush = PdfBrushes.White;
+                    headerStyle.Font = new PdfStandardFont(PdfFontFamily.Helvetica, 10, PdfFontStyle.Bold);
+                    foreach (PdfGridCell cell in header.Cells)
+                    {
+                        cell.Style = headerStyle;
+                    }
+
+                    foreach (DataGridViewRow dgvRow in dgvInventario.Rows)
+                    {
+                        if (dgvRow.IsNewRow) continue;
+
+                        PdfGridRow pdfRow = pdfGrid.Rows.Add();
+                        for (int c = 0; c < colCount; c++)
+                        {
+                            pdfRow.Cells[c].Value = (dgvRow.Cells[c].Value ?? "").ToString();
+                        }
+                    }
+
+                    PdfLayoutFormat layoutFormat = new PdfLayoutFormat();
+                    layoutFormat.Break = PdfLayoutBreakType.FitPage;
+                    layoutFormat.Layout = PdfLayoutType.Paginate;
+
+                    pdfGrid.Draw(pdfPage, new PointF(0, 30), layoutFormat);
+
+                    document.Save(saveFileDialog.FileName);
+                    document.Close(true);
+
+                    MessageBox.Show("PDF generado exitosamente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al generar el PDF: " + ex.Message);
+            }
         }
     }   
 }
