@@ -417,7 +417,7 @@ namespace COMPRAS2
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
+                //MessageBox.Show("Occurrio un error en la respuesta, reintente de nuevo ");
             }
         }
 
