@@ -46,6 +46,7 @@ namespace COMPRAS2
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBusquedaAvanzada = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnGenerarPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -333,6 +334,29 @@ namespace COMPRAS2
             this.btnBusquedaAvanzada.UseVisualStyleBackColor = false;
             this.btnBusquedaAvanzada.Click += new System.EventHandler(this.btnBusquedaAvanzada_Click);
             // 
+            // btnGenerarPDF
+            // 
+            this.btnGenerarPDF.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGenerarPDF.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarPDF.BackgroundImage = global::COMPRAS2.Properties.Resources.BUTTON2;
+            this.btnGenerarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGenerarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerarPDF.FlatAppearance.BorderSize = 0;
+            this.btnGenerarPDF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarPDF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(202)))));
+            this.btnGenerarPDF.Location = new System.Drawing.Point(741, 152);
+            this.btnGenerarPDF.MaximumSize = new System.Drawing.Size(210, 40);
+            this.btnGenerarPDF.Name = "btnGenerarPDF";
+            this.btnGenerarPDF.Size = new System.Drawing.Size(210, 40);
+            this.btnGenerarPDF.TabIndex = 108;
+            this.btnGenerarPDF.Text = "GENERAR PDF";
+            this.btnGenerarPDF.UseVisualStyleBackColor = false;
+            this.btnGenerarPDF.Visible = false;
+            this.btnGenerarPDF.Click += new System.EventHandler(this.btnGenerarPDF_Click);
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -351,6 +375,7 @@ namespace COMPRAS2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.btnGenerarPDF);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.btnBusquedaAvanzada);
             this.Controls.Add(this.btnActualizar);
@@ -395,5 +420,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnBusquedaAvanzada;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnGenerarPDF;
     }
 }
