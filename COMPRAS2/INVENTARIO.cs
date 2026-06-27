@@ -468,7 +468,7 @@ namespace COMPRAS2
                 //});
 
 
-                page = 1;
+                page = 0;
                 isFiltering = true;
                 var url = HttpMethods.url + "dispositivos/filterdeviceFields?limit=30&offset=" + page.ToString();
                 StatusMessage statusmessage2 = await HttpMethods.get(url,txtBUSCADOR.Text);

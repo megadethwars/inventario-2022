@@ -10,6 +10,7 @@ using System.Timers;
 using System.Windows.Forms;
 using COMPRAS2.modelos;
 using COMPRAS2.servicios;
+using Newtonsoft.Json;
 namespace COMPRAS2
 {
     public partial class MENU2 : Form
@@ -17,6 +18,8 @@ namespace COMPRAS2
         MENU mainmenu;
         System.Timers.Timer timer;
         System.Timers.Timer timer2;
+        System.Timers.Timer timerPolling;
+        string pollingUniqueId;
         public MENU2(MENU mainMenu)
         {
             InitializeComponent();
@@ -34,7 +37,6 @@ namespace COMPRAS2
 
         private void ManejarEvento(int dato)
         {
-            // Actualizar el formulario con el dato recibido
             if (dato == 1) {
                 this.lbStatus.Text = "Sincronizacion pendiente..";
             }
@@ -42,7 +44,63 @@ namespace COMPRAS2
             if (dato == 0) {
                 this.lbStatus.Text = "Sincronizacion Completa";
             }
-            
+        }
+
+        public void StartMovementPolling(string uniqueId)
+        {
+            pollingUniqueId = uniqueId;
+            this.Invoke((MethodInvoker)delegate
+            {
+                lbStatus.Text = "⏳ Procesando movimiento...";
+                lbStatus.Visible = true;
+            });
+
+            timerPolling = new System.Timers.Timer(3000);
+            timerPolling.Elapsed += TimerPollingElapsed;
+            timerPolling.AutoReset = true;
+            timerPolling.Start();
+        }
+
+        private async void TimerPollingElapsed(object sender, ElapsedEventArgs e)
+        {
+            try
+            {
+                string url = "https://avsinventoryswagger25.azurewebsites.net/api/v1/movimientos/processMovements/status/" + pollingUniqueId;
+                StatusMessage statusmessage = await HttpMethods.get(url);
+
+                if (statusmessage.statuscode != 200 || string.IsNullOrEmpty(statusmessage.data))
+                    return;
+
+                MovementStatusResponse response = JsonConvert.DeserializeObject<MovementStatusResponse>(statusmessage.data);
+
+                if (response == null)
+                    return;
+
+                if (response.status == "completed")
+                {
+                    StopMovementPolling();
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        int failed = response.failed_devices?.Count ?? 0;
+                        int skipped = response.skipped_devices?.Count ?? 0;
+                        if (failed > 0 || skipped > 0)
+                            lbStatus.Text = $"✅ Completado | Fallidos: {failed} | Omitidos: {skipped}";
+                        else
+                            lbStatus.Text = "✅ Movimiento completado";
+                    });
+                }
+            }
+            catch { }
+        }
+
+        public void StopMovementPolling()
+        {
+            if (timerPolling != null)
+            {
+                timerPolling.Stop();
+                timerPolling.Dispose();
+                timerPolling = null;
+            }
         }
 
         private  void TimerElapsed(object sender, ElapsedEventArgs e)

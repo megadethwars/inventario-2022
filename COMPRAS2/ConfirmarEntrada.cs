@@ -80,21 +80,16 @@ namespace COMPRAS2
 
         private async void btnOK_Click(object sender, EventArgs e)
         {
-            
-
-            
             pictureBox5.Visible = true;
             int statusUser = await Auth();
 
             if (statusUser != 0)
             {
-            
+                pictureBox5.Visible = false;
                 return;
             }
 
-            
-
-            int statusmovements = sendMovementAsync();
+            int statusmovements = await sendMovementAsync();
             pictureBox5.Visible = false;
         }
 
@@ -180,70 +175,52 @@ namespace COMPRAS2
         }
 
 
-        private int sendMovementAsync()
+        private async Task<int> sendMovementAsync()
         {
-            Program.log.Info($"insertando {this.carrito.entrada.movimientos.Count} registros a process PDF");
-            Thread thproccesOuts = new Thread(() => SyncMoveManager.WriteMovesToSqlite(this.carrito.entrada.movimientos, uniqueId, idUsuario));
-            thproccesOuts.Start();
-            Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.entrada.movimientos, curruser));
-            //try
-            //{
+            try
+            {
+                Program.log.Info($"Enviando {this.carrito.entrada.movimientos.Count} registros a processMovements");
 
-            //    foreach (Movimientos movement in this.carrito.entrada.movimientos)
-            //    {
+                var dispositivos = this.carrito.entrada.movimientos
+                    .Select(m => m.dispositivoId)
+                    .ToList();
 
-            //        //actualizar lugar del dispositivo
+                if (dispositivos.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron dispositivos en el carrito.");
+                    return 1;
+                }
 
+                var payload = new
+                {
+                    dispositivoId = dispositivos,
+                    usuarioId = idUsuario,
+                    comentarios = "",
+                    LugarId = 1,
+                    idMovimiento = uniqueId,
+                    tipoMovId = 2
+                };
 
-            //        movement.LugarId = idlugar;
-            //        movement.usuarioId = idUsuario;
-            //        movement.usuario = null;
-            //        movement.dispositivo_Actual = null;          
-            //        movement.codigo_Actual = null;
-            //        movement.dispositivo = null;
-            //        movement.idMovimiento = uniqueId;
+                string json = JsonConvert.SerializeObject(payload);
+                string url = "https://avsinventoryswagger25.azurewebsites.net/api/v1/movimientos/processMovements";
 
-            //        List<Movimientos> movimientos = new List<Movimientos>();
-            //        movimientos.Add(movement);
+                StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
-            //        string json = JsonConvert.SerializeObject(movimientos,
-            //        new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            //        var url = HttpMethods.url + "movimientos";
-            //        StatusMessage statusmessage = await HttpMethods.Post(url, json);
+                if (statusmessage.statuscode == 200 || statusmessage.statuscode == 201)
+                {
+                    Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.entrada.movimientos, curruser));
+                    return 0;
+                }
 
-            //        if (statusmessage.statuscode == 409)
-            //        {
-
-            //        }
-
-            //        else if (statusmessage.statuscode == 500)
-            //        {
-
-            //        }
-            //        else if (statusmessage.statuscode == 200)
-            //        {
-
-
-            //        }
-            //        else if (statusmessage.statuscode == 404)
-            //        {
-            //            MessageBox.Show("error en el servicio, NO encontrado");
-
-
-            //        }
-            //        movimientos.Clear();
-            //        movimientos = null;
-            //    }
-
-            //    Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.entrada.movimientos, curruser));
-
-            //    return 0;
-            //}
-            //catch (Exception ex)
-            //{
-            //    return 10;
-            //}
-            return 0;
+                MessageBox.Show($"Error al procesar movimientos. Código: {statusmessage.statuscode}");
+                return 2;
+            }
+            catch (Exception ex)
+            {
+                Program.log.Error("Error en sendMovementAsync", ex);
+                MessageBox.Show("Ocurrió un error al enviar los movimientos.");
+                return 10;
+            }
         }
         
         private void tbpass_Click(object sender, EventArgs e)

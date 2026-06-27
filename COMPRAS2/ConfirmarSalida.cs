@@ -199,87 +199,72 @@ namespace COMPRAS2
 
         }
 
-    
-
-        private  int sendMovementAsync() {
-            Program.log.Info($"insertando {this.carrito.salida.movimientos.Count} registros a process PDF");
-            Thread thproccesOuts = new Thread(() => SyncMoveManager.WriteMovesToSqlite(this.carrito.salida.movimientos, uniqueId, idUsuario));
-            thproccesOuts.Start();
-            Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.salida.movimientos, curruser));
-            //try
-            //{
-
-            //    foreach (Movimientos movement in this.carrito.salida.movimientos) {
-
-            //        //actualizar lugar del dispositivo
 
 
-            //        movement.LugarId = VG.id_current_lugar;
-            //        movement.usuarioId = idUsuario;
-            //        movement.usuario = null;
-            //        movement.dispositivo_Actual = null;
-            //        movement.codigo_Actual = null;
-            //        movement.dispositivo = null;
-            //        movement.idMovimiento = uniqueId;
+        private async Task<int> sendMovementAsync()
+        {
+            try
+            {
+                Program.log.Info($"Enviando {this.carrito.salida.movimientos.Count} registros a processMovements");
 
+                var dispositivos = this.carrito.salida.movimientos
+                    .Select(m => m.dispositivoId)
+                    .ToList();
 
-            //        List<Movimientos> movimientos = new List<Movimientos>();
-            //        movimientos.Add(movement);
+                if (dispositivos.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron dispositivos en el carrito.");
+                    return 1;
+                }
 
-            //        string json = JsonConvert.SerializeObject(movimientos,
-            //        new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            //        var url = HttpMethods.url + "movimientos";
-            //        StatusMessage statusmessage = await HttpMethods.Post(url, json);
+                var payload = new
+                {
+                    dispositivoId = dispositivos,
+                    usuarioId = idUsuario,
+                    comentarios = "",
+                    LugarId = VG.id_current_lugar,
+                    idMovimiento = uniqueId,
+                    tipoMovId = 1
+                };
 
-            //        if (statusmessage.statuscode == 409)
-            //        {
+                string json = JsonConvert.SerializeObject(payload);
+                string url = "https://avsinventoryswagger25.azurewebsites.net/api/v1/movimientos/processMovements";
 
-            //        }
+                StatusMessage statusmessage = await HttpMethods.Post(url, json);
 
-            //        else if (statusmessage.statuscode == 500)
-            //        {
+                if (statusmessage.statuscode == 200 || statusmessage.statuscode == 201)
+                {
+                    Navigator.nextPage(new PDFMovement(uniqueId, this.carrito.salida.movimientos, curruser));
+                    return 0;
+                }
 
-            //        }
-            //        else if (statusmessage.statuscode == 200)
-            //        {
-
-
-            //        }
-            //        else if (statusmessage.statuscode == 404)
-            //        {
-            //            MessageBox.Show("error en el servicio, NO encontrado");
-
-
-            //        }
-            //        movimientos.Clear();
-            //        movimientos = null;
-            //    }
-
-            //    Navigator.nextPage(new PDFMovement(uniqueId));
-
-            //    return 0;
-            //}
-            //catch (Exception ex) {
-            //    return 10;
-            //}
-            return 0;
+                MessageBox.Show($"Error al procesar movimientos. Código: {statusmessage.statuscode}");
+                return 2;
+            }
+            catch (Exception ex)
+            {
+                Program.log.Error("Error en sendMovementAsync", ex);
+                MessageBox.Show("Ocurrió un error al enviar los movimientos.");
+                return 10;
+            }
         }
         
 
         private async void btnOK_ClickAsync(object sender, EventArgs e)
         {
-           
+
             pictureBox5.Visible = true;
             int statusUser = await Auth();
 
             if (statusUser != 0)
             {
+                pictureBox5.Visible = false;
                 return;
             }
-         
 
-            int statusmovements =  sendMovementAsync();
-            pictureBox5.Visible = true;
+
+            int statusmovements = await sendMovementAsync();
+            pictureBox5.Visible = false;
         }
 
         public void CreateMyPasswordTextBox()

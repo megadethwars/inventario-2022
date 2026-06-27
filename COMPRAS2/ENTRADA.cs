@@ -1,4 +1,4 @@
-﻿using COMPRAS2.modelos;
+using COMPRAS2.modelos;
 using COMPRAS2.servicios;
 using Newtonsoft.Json;
 using System;
@@ -76,6 +76,7 @@ namespace COMPRAS2
             movimientos = new List<Movimientos>();
         }
 
+       
         private void btnBack_Click(object sender, EventArgs e)
         {
             Navigator.backPage(this.Name, this);
@@ -133,6 +134,8 @@ namespace COMPRAS2
             return sameIdmovimiento;
         }
 
+        
+
         public async void busqueda()
         {
             if (txtBUSCADOR.Text == "")
@@ -160,21 +163,40 @@ namespace COMPRAS2
             }
         }
 
+        public void PruebaMasiva500()
+        {
+            for (int i = 20006; i <= 20506; i++)
+            {
+                string code = "AV" + i.ToString();
+                if (!codigos.Contains(code))
+                {
+                    codigos.Add(code);
+                    string[] row = new string[] { code, "1" };
+                    this.dgvSalida.Invoke((MethodInvoker)delegate
+                    {
+                        dgvSalida.Rows.Add(row);
+                        lbCount.Text = codigos.Count.ToString();
+                    });
+                    string captura = code;
+                    Thread myNewThread = new Thread(() => BusquedaAsync(captura));
+                    myNewThread.Start();
+                    hilos.Add(myNewThread);
+                }
+            }
+        }
+
         public async Task<bool> BusquedaAsync(String code)
         {
-            QueryDevice devicequery = new QueryDevice();
-            devicequery.codigo = code;
             this.txtBUSCADOR.Invoke((MethodInvoker)delegate
             {
                 this.txtBUSCADOR.Text = "";
             });
-            string json = JsonConvert.SerializeObject(devicequery,
-                new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
-            var url = HttpMethods.url + "dispositivos/query";
-            StatusMessage statusmessage = await HttpMethods.Post(url, json);
+            var url = HttpMethods.url + "dispositivos/filterdeviceByCodigo";
+            StatusMessage statusmessage = await HttpMethods.get(url, code);
             Console.WriteLine(statusmessage.statuscode.ToString(), url);
             if (statusmessage.statuscode == 500)
             {
+                this.Invoke(new Action(() => { MessageBox.Show(this, "Ocurrio un error al agregar el producto " + code); }));
                 delete_code_tables(code);
                 return false;
             }
@@ -187,28 +209,40 @@ namespace COMPRAS2
             }
             if (statusmessage.statuscode == 200)
             {
-                devices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
+                try
+                {
+                    DeviceDTO deviceDTO = JsonConvert.DeserializeObject<DeviceDTO>(statusmessage.data);
 
-                if (devices.Count == 0)
+                    if (deviceDTO == null)
+                    {
+                        this.Invoke(new Action(() => { MessageBox.Show(this, "No existe el producto " + code); }));
+                        delete_code_tables(code);
+                        return false;
+                    }
+
+                    Devices device = deviceDTO.ToDevices();
+
+                    int cantidad_a_salir = 1;
+                    if (!check_cantidad(device.codigo, device.cantidad, ref cantidad_a_salir))
+                    {
+                        this.Invoke(new Action(() => { MessageBox.Show(this, "La cantidad indicada no existe en el inventario para el producto " + code); }));
+                        delete_code_tables(code);
+                        return false;
+                    }
+                    if (device.lugarId == 1)
+                    {
+                        this.Invoke(new Action(() => { MessageBox.Show(this, "El producto " + code + " ya esta en el inventario"); }));
+                        delete_code_tables(code);
+                        return false;
+                    }
+                    Agregar(device, cantidad_a_salir);
+                }
+                catch (JsonSerializationException ex)
                 {
-                    this.Invoke(new Action(() => { MessageBox.Show(this, "No existe el producto " + code); }));
+                    this.Invoke(new Action(() => { MessageBox.Show(this, "Error al procesar los datos del producto " + code + ": " + ex.Message); }));
                     delete_code_tables(code);
                     return false;
                 }
-                int cantidad_a_salir = 1;
-                if (!check_cantidad(devices[0].codigo, devices[0].cantidad, ref cantidad_a_salir))
-                {
-                    this.Invoke(new Action(() => { MessageBox.Show(this, "La cantidad indicada no existe en el inventario para el producto " + code); }));
-                    delete_code_tables(code);
-                    return false;
-                }
-                if (devices[0].lugarId == 1)
-                {
-                    this.Invoke(new Action(() => { MessageBox.Show(this, "El producto " + code + " ya esta en el inventario"); }));
-                    delete_code_tables(code);
-                    return false;
-                }
-                Agregar(devices[0], cantidad_a_salir);
             }
             return true;
 
@@ -279,6 +313,7 @@ namespace COMPRAS2
             btnclm.DefaultCellStyle.BackColor = Color.Red;
             btnclm.DefaultCellStyle.ForeColor = Color.White;
             this.dgvSalida.Columns.Add(btnclm);
+            //PruebaMasiva500();
 
         }
 

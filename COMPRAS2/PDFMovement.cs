@@ -185,7 +185,7 @@ namespace COMPRAS2
                 
 
                 //variables de campos
-                PdfTextElement lugar = new PdfTextElement(current_lugar, campofont);
+                PdfTextElement lugar = new PdfTextElement(current_lugar ?? "", campofont);
                 lugar.Brush = PdfBrushes.Black;
                 PdfLayoutResult reslugar = lugar.Draw(page, new PointF(bounds.Left + 40, bounds.Top));
 
@@ -193,7 +193,7 @@ namespace COMPRAS2
                 fecha.Brush = PdfBrushes.Black;
                 PdfLayoutResult resfecha = fecha.Draw(page, new PointF(bounds.Left + 40, bounds.Top + 16));
 
-                PdfTextElement folio = new PdfTextElement(movimientos.idMovimiento, campofont);
+                PdfTextElement folio = new PdfTextElement(IdSalida, campofont);
                 folio.Brush = PdfBrushes.Black;
                 PdfLayoutResult resfolio = folio.Draw(page, new PointF(bounds.Left + 40, bounds.Top + 32));
 
@@ -281,7 +281,7 @@ namespace COMPRAS2
                 //createdate
                 //Save the document
                 var dateString = DateTime.Now.ToString("yyyy-MM-dd");
-                string save2 = hd + movimientos.idMovimiento + ".pdf";
+                string save2 = hd + IdSalida + ".pdf";
                 //document.Save(save2);
                 document.Save(stream);
 
@@ -308,10 +308,13 @@ namespace COMPRAS2
                 }
 
                 string save = hd + movimientos.idMovimiento+".pdf";
-              
+
                 Process.Start("C:/Inventarios/"+dateString+"/" +save2);
 
-                
+                if (Navigator.mainmenuOPT != null)
+                {
+                    Navigator.mainmenuOPT.StartMovementPolling(IdSalida);
+                }
 
                 return true;
             }
@@ -405,8 +408,14 @@ namespace COMPRAS2
 
                 foreach (Movimientos mov in lista)
                 {
-
-                    tablacarrito.Rows.Add(mov.cantidad_Actual, mov.dispositivo.codigo, mov.dispositivo.producto, mov.dispositivo.marca, mov.dispositivo.modelo, mov.dispositivo.serie);
+                    Devices disp = mov.dispositivo;
+                    tablacarrito.Rows.Add(
+                        mov.cantidad_Actual,
+                        disp?.codigo ?? "",
+                        disp?.producto ?? "",
+                        disp?.marca ?? "",
+                        disp?.modelo ?? "",
+                        disp?.serie ?? "");
                 }
 
 

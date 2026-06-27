@@ -21,14 +21,34 @@ namespace COMPRAS2.servicios
                 using (HttpClient client = new HttpClient())
                 {
                     var stringcontent = new StringContent(objeto, Encoding.UTF8, "application/json");
-                    var result = client.PostAsync(url, stringcontent).Result;
+                    var result = await client.PostAsync(url, stringcontent);
                     var estado = await result.Content.ReadAsStringAsync();
                     StatusMessage mensaje = new StatusMessage();
+                    mensaje.statuscode = (int)result.StatusCode;
+
+                    // Validar que la respuesta sea exitosa y tenga contenido
+                    if (!result.IsSuccessStatusCode || string.IsNullOrEmpty(estado))
+                    {
+                        mensaje.message = result.ReasonPhrase ?? "Error en la solicitud";
+                        return mensaje;
+                    }
+
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(estado, new Dictionary<string, object>());
 
-                    mensaje.message = htmlAttributes["message"].ToString();
-                    if (htmlAttributes.ContainsKey("data")) {
+                    // Validar que la deserialización fue exitosa
+                    if (htmlAttributes == null)
+                    {
+                        mensaje.message = "Error al procesar la respuesta del servidor";
+                        return mensaje;
+                    }
 
+                    if (htmlAttributes.ContainsKey("message"))
+                    {
+                        mensaje.message = htmlAttributes["message"].ToString();
+                    }
+
+                    if (htmlAttributes.ContainsKey("data"))
+                    {
                         if (htmlAttributes.TryGetValue("data", out var name))
                         {
                             var valueAsString = name?.ToString();
@@ -36,10 +56,8 @@ namespace COMPRAS2.servicios
                         }
 
                         mensaje.data = htmlAttributes["data2"].ToString();
-                                                
                     }
-                    
-                    mensaje.statuscode = (int)result.StatusCode;
+
                     return mensaje;
                 }
 
@@ -48,6 +66,7 @@ namespace COMPRAS2.servicios
             {
                 StatusMessage statusmessage = new StatusMessage();
                 statusmessage.statuscode = 500;
+                statusmessage.message = e.Message;
                 return statusmessage;
             }
 
@@ -66,12 +85,31 @@ namespace COMPRAS2.servicios
                     var stringres = await response.Content.ReadAsStringAsync();
 
                     StatusMessage statusmessage = new StatusMessage();
+                    statusmessage.statuscode = (int)response.StatusCode;
+
+                    // Validar que la respuesta sea exitosa y tenga contenido
+                    if (!response.IsSuccessStatusCode || string.IsNullOrEmpty(stringres))
+                    {
+                        statusmessage.message = response.ReasonPhrase ?? "Error en la solicitud";
+                        return statusmessage;
+                    }
+
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(stringres, new Dictionary<string, object>());
 
-                    statusmessage.message = htmlAttributes["message"].ToString();
+                    // Validar que la deserialización fue exitosa
+                    if (htmlAttributes == null)
+                    {
+                        statusmessage.message = "Error al procesar la respuesta del servidor";
+                        return statusmessage;
+                    }
+
+                    if (htmlAttributes.ContainsKey("message"))
+                    {
+                        statusmessage.message = htmlAttributes["message"].ToString();
+                    }
+
                     if (htmlAttributes.ContainsKey("data"))
                     {
-
                         if (htmlAttributes.TryGetValue("data", out var name))
                         {
                             var valueAsString = name?.ToString();
@@ -79,10 +117,11 @@ namespace COMPRAS2.servicios
                         }
 
                         statusmessage.data = htmlAttributes["data2"].ToString();
-
                     }
-                    statusmessage.data = htmlAttributes["data2"].ToString();
-                    statusmessage.statuscode = (int)response.StatusCode;
+                    else if (htmlAttributes.ContainsKey("data2"))
+                    {
+                        statusmessage.data = htmlAttributes["data2"].ToString();
+                    }
 
                     return statusmessage;
                 }
@@ -92,6 +131,7 @@ namespace COMPRAS2.servicios
             {
                 StatusMessage statusmessage = new StatusMessage();
                 statusmessage.statuscode = 500;
+                statusmessage.message = e.Message;
                 return statusmessage;
             }
 
@@ -110,12 +150,31 @@ namespace COMPRAS2.servicios
                     var stringres = await response.Content.ReadAsStringAsync();
 
                     StatusMessage statusmessage = new StatusMessage();
+                    statusmessage.statuscode = (int)response.StatusCode;
+
+                    // Validar que la respuesta sea exitosa y tenga contenido
+                    if (!response.IsSuccessStatusCode || string.IsNullOrEmpty(stringres))
+                    {
+                        statusmessage.message = response.ReasonPhrase ?? "Error en la solicitud";
+                        return statusmessage;
+                    }
+
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(stringres, new Dictionary<string, object>());
 
-                    statusmessage.message = htmlAttributes["message"].ToString();
+                    // Validar que la deserialización fue exitosa
+                    if (htmlAttributes == null)
+                    {
+                        statusmessage.message = "Error al procesar la respuesta del servidor";
+                        return statusmessage;
+                    }
+
+                    if (htmlAttributes.ContainsKey("message"))
+                    {
+                        statusmessage.message = htmlAttributes["message"].ToString();
+                    }
+
                     if (htmlAttributes.ContainsKey("data"))
                     {
-
                         if (htmlAttributes.TryGetValue("data", out var name))
                         {
                             var valueAsString = name?.ToString();
@@ -123,10 +182,11 @@ namespace COMPRAS2.servicios
                         }
 
                         statusmessage.data = htmlAttributes["data2"].ToString();
-
                     }
-                    statusmessage.data = htmlAttributes["data2"].ToString();
-                    statusmessage.statuscode = (int)response.StatusCode;
+                    else if (htmlAttributes.ContainsKey("data2"))
+                    {
+                        statusmessage.data = htmlAttributes["data2"].ToString();
+                    }
 
                     return statusmessage;
                 }
@@ -136,6 +196,7 @@ namespace COMPRAS2.servicios
             {
                 StatusMessage statusmessage = new StatusMessage();
                 statusmessage.statuscode = 500;
+                statusmessage.message = e.Message;
                 return statusmessage;
             }
 
@@ -151,25 +212,44 @@ namespace COMPRAS2.servicios
                     HttpResponseMessage response = await client.PutAsync(url, stringcontent);
                     var estado = await response.Content.ReadAsStringAsync();
                     StatusMessage statusmessage = new StatusMessage();
+                    statusmessage.statuscode = (int)response.StatusCode;
+
+                    // Validar que la respuesta sea exitosa y tenga contenido
+                    if (!response.IsSuccessStatusCode || string.IsNullOrEmpty(estado))
+                    {
+                        statusmessage.message = response.ReasonPhrase ?? "Error en la solicitud";
+                        return statusmessage;
+                    }
+
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(estado, new Dictionary<string, object>());
 
-                    statusmessage.message = htmlAttributes["message"].ToString();
+                    // Validar que la deserialización fue exitosa
+                    if (htmlAttributes == null)
+                    {
+                        statusmessage.message = "Error al procesar la respuesta del servidor";
+                        return statusmessage;
+                    }
+
+                    if (htmlAttributes.ContainsKey("message"))
+                    {
+                        statusmessage.message = htmlAttributes["message"].ToString();
+                    }
+
                     if (htmlAttributes.ContainsKey("data"))
                     {
-
                         if (htmlAttributes.TryGetValue("data", out var name))
                         {
                             var valueAsString = name?.ToString();
                             htmlAttributes.Add("data2", valueAsString ?? "unknown");
                         }
 
-
                         statusmessage.data = htmlAttributes["data2"].ToString();
-
-
                     }
-                    statusmessage.data = htmlAttributes["data2"].ToString();
-                    statusmessage.statuscode = (int)response.StatusCode;
+                    else if (htmlAttributes.ContainsKey("data2"))
+                    {
+                        statusmessage.data = htmlAttributes["data2"].ToString();
+                    }
+
                     return statusmessage;
                 }
 
@@ -179,6 +259,7 @@ namespace COMPRAS2.servicios
             {
                 StatusMessage statusmessage = new StatusMessage();
                 statusmessage.statuscode = 500;
+                statusmessage.message = ex.Message;
                 return statusmessage;
             }
 
@@ -198,25 +279,44 @@ namespace COMPRAS2.servicios
                     HttpResponseMessage response = await client.DeleteAsync(url);
                     var estado = await response.Content.ReadAsStringAsync();
                     StatusMessage statusmessage = new StatusMessage();
+                    statusmessage.statuscode = (int)response.StatusCode;
+
+                    // Validar que la respuesta sea exitosa y tenga contenido
+                    if (!response.IsSuccessStatusCode || string.IsNullOrEmpty(estado))
+                    {
+                        statusmessage.message = response.ReasonPhrase ?? "Error en la solicitud";
+                        return statusmessage;
+                    }
+
                     Dictionary<string, object> htmlAttributes = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(estado, new Dictionary<string, object>());
 
-                    statusmessage.message = htmlAttributes["message"].ToString();
+                    // Validar que la deserialización fue exitosa
+                    if (htmlAttributes == null)
+                    {
+                        statusmessage.message = "Error al procesar la respuesta del servidor";
+                        return statusmessage;
+                    }
+
+                    if (htmlAttributes.ContainsKey("message"))
+                    {
+                        statusmessage.message = htmlAttributes["message"].ToString();
+                    }
+
                     if (htmlAttributes.ContainsKey("data"))
                     {
-
                         if (htmlAttributes.TryGetValue("data", out var name))
                         {
                             var valueAsString = name?.ToString();
                             htmlAttributes.Add("data2", valueAsString ?? "unknown");
                         }
 
-
                         statusmessage.data = htmlAttributes["data2"].ToString();
-
-
                     }
-                    statusmessage.data = htmlAttributes["data2"].ToString();
-                    statusmessage.statuscode = (int)response.StatusCode;
+                    else if (htmlAttributes.ContainsKey("data2"))
+                    {
+                        statusmessage.data = htmlAttributes["data2"].ToString();
+                    }
+
                     return statusmessage;
                 }
 
@@ -226,6 +326,7 @@ namespace COMPRAS2.servicios
                 Console.WriteLine(e.Message);
                 StatusMessage statusmessage = new StatusMessage();
                 statusmessage.statuscode = 500;
+                statusmessage.message = e.Message;
                 return statusmessage;
             }
 

@@ -311,9 +311,12 @@
     <Compile Include="MIPERFIL.Designer.cs">
       <DependentUpon>MIPERFIL.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelos\DeviceDTO.cs" />
     <Compile Include="modelos\DeviceMigrate.cs" />
     <Compile Include="modelos\DeviceSomeFields.cs" />
     <Compile Include="modelos\FilterDeviceValue.cs" />
+    <Compile Include="modelos\LugarDTO.cs" />
+    <Compile Include="modelos\MovementStatusResponse.cs" />
     <Compile Include="modelos\Movimientos.cs" />
     <Compile Include="modelos\MovimientosDTO.cs" />
     <Compile Include="modelos\QueryDevice.cs" />
@@ -326,6 +329,7 @@
     <Compile Include="modelos\Reportes.cs" />
     <Compile Include="modelos\Rol.cs" />
     <Compile Include="modelos\StatusDevices.cs" />
+    <Compile Include="modelos\StatusDTO.cs" />
     <Compile Include="modelos\StatusMessage.cs" />
     <Compile Include="modelos\StatusUser.cs" />
     <Compile Include="modelos\TipoMovimiento.cs" />
