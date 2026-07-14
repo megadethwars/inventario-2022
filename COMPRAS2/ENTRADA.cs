@@ -165,7 +165,7 @@ namespace COMPRAS2
 
         public void PruebaMasiva500()
         {
-            for (int i = 20006; i <= 20506; i++)
+            for (int i = 20006; i <= 20899; i++)
             {
                 string code = "AV" + i.ToString();
                 if (!codigos.Contains(code))
@@ -314,6 +314,8 @@ namespace COMPRAS2
             btnclm.DefaultCellStyle.ForeColor = Color.White;
             this.dgvSalida.Columns.Add(btnclm);
             //PruebaMasiva500();
+
+            
 
         }
 

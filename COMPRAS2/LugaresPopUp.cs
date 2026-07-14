@@ -103,22 +103,11 @@ namespace COMPRAS2
                     }
                     else if (statusmessage.statuscode == 201)
                     {
-                        List<Lugares> devices = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
+                        Lugares devices = JsonConvert.DeserializeObject<Lugares>(statusmessage.data);
                         
                         MessageBox.Show("Locación agregada correctamente.");
-                       
+                        await Lugares();
 
-                        for (int x = 0; x < devices.Count; x++)
-                        {
-                            listaLugares.Add(Tuple.Create<Int32, String>(devices[x].id, devices[x].lugar));
-                            Console.WriteLine(devices[x].lugar);
-                        }
-                        
-                        comboPlaces.DataSource = null;
-                        comboPlaces.DataSource = listaLugares;
-                        comboPlaces.DisplayMember = "Item2";
-                        comboPlaces.ValueMember = "Item1";
-                        comboPlaces.SelectedIndex = listaLugares.Count - 1;
                         textBox1.Text = "";
                         return 0;
                     }

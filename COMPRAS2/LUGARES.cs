@@ -115,7 +115,7 @@ namespace COMPRAS2
                 }
                 else if (statusmessage.statuscode == 201)
                 {
-                    List<Lugares> devices = JsonConvert.DeserializeObject<List<Lugares>>(statusmessage.data);
+                    Lugares devices = JsonConvert.DeserializeObject<Lugares>(statusmessage.data);
                     MessageBox.Show("PRODUCTO AGREGADO CORRECTAMENTE");                    
 
                     return 0;

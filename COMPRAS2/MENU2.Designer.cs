@@ -40,6 +40,7 @@ namespace COMPRAS2
             this.btnHISTORIAL = new System.Windows.Forms.PictureBox();
             this.btnMIPERFIL = new System.Windows.Forms.PictureBox();
             this.lbStatus = new System.Windows.Forms.Label();
+            this.pbMovimiento = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -186,12 +187,23 @@ namespace COMPRAS2
             this.lbStatus.TabIndex = 11;
             this.lbStatus.Text = ".";
             // 
+            // pbMovimiento
+            // 
+            this.pbMovimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbMovimiento.Location = new System.Drawing.Point(592, 45);
+            this.pbMovimiento.Name = "pbMovimiento";
+            this.pbMovimiento.Size = new System.Drawing.Size(250, 23);
+            this.pbMovimiento.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbMovimiento.TabIndex = 12;
+            this.pbMovimiento.Visible = false;
+            // 
             // MENU2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1279, 788);
+            this.Controls.Add(this.pbMovimiento);
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.pictureBox4);
@@ -233,5 +245,6 @@ namespace COMPRAS2
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.PictureBox btnHISTORIAL;
         private System.Windows.Forms.Label lbStatus;
+        private System.Windows.Forms.ProgressBar pbMovimiento;
     }
 }

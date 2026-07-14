@@ -106,7 +106,8 @@ namespace COMPRAS2
             bar = new VScrollBar();
             offssetpage = VG.offssetpage;
             timer1 = new System.Timers.Timer();
-            timer1.Interval = 1000;
+            timer1.Interval = 1500;
+            timer1.AutoReset = false;
             timer1.Elapsed += timer1_Tick;
             //timer1.Enabled = true;
             //CheckForIllegalCrossThreadCalls = false;
@@ -158,33 +159,7 @@ namespace COMPRAS2
                     {
                         return;
                     }
-                    //int i = 0;
-                    //foreach (Devices device in deviceslist)
-                    //{
-                    //    Lugares lugar = device.lugar;
-                    //    deviceslist[i].Lugar_Actual = lugar.lugar;
 
-                    //    StatusDevices status = device.status;
-                    //    deviceslist[i].StatusActual = status.descripcion;
-                    //    i++;
-                    //}
-
-                    //for (int x = 0; x < deviceslist.Count; x++)
-                    //{
-                    //    Devices inv = deviceslist[x];
-                    //    deviceslist[x].producto = inv.producto;
-                    //    deviceslist[x].codigo = inv.codigo;
-                    //    deviceslist[x].Lugar_Actual = inv.Lugar_Actual;
-                    //    deviceslist[x].marca = inv.marca;
-                    //    deviceslist[x].modelo = inv.modelo;
-                    //    deviceslist[x].StatusActual = inv.StatusActual;
-                    //    deviceslist[x].serie = inv.serie;
-
-                    //    string[] row = new string[] { deviceslist[x].producto, deviceslist[x].codigo,
-                    //    deviceslist[x].Lugar_Actual.ToString(), deviceslist[x].marca, deviceslist[x].modelo,
-                    //    deviceslist[x].StatusActual, deviceslist[x].serie};
-                    //    dgvInventario.Rows.Add(row);
-                    //}
 
                   
                     for (int x = 0; x < deviceslist2.Count; x++)
@@ -498,13 +473,6 @@ namespace COMPRAS2
                     string[] row = new string[] { deviceslist2[x].producto, deviceslist2[x].codigo,
                     deviceslist2[x].lugar, deviceslist2[x].marca, deviceslist2[x].modelo,
                     deviceslist2[x].descripcion, deviceslist2[x].serie};
-
-
-                    //this.Invoke((MethodInvoker)delegate ()
-                    //{
-                    //    dgvInventario.Rows.Add(row);
-
-                    //});
 
                     dgvInventario.Rows.Add(row);
                     

@@ -21,6 +21,7 @@ namespace COMPRAS2
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
+        SpinningCircles spinner;
 
         private void CargoEtiqueta(Font font)
         {
@@ -81,6 +82,12 @@ namespace COMPRAS2
         {
             InitializeComponent();
             this.codigo = codigo;
+            spinner = new SpinningCircles();
+            spinner.Anchor = System.Windows.Forms.AnchorStyles.None;
+            spinner.Location = new Point((this.ClientSize.Width - spinner.Width) / 2, (this.ClientSize.Height - spinner.Height) / 2);
+            spinner.Hide();
+            this.Controls.Add(spinner);
+            spinner.BringToFront();
         }
 
         public void brnOPCIONES_Click(object sender, EventArgs e)
@@ -108,15 +115,23 @@ namespace COMPRAS2
 
             QueryDevice devicequery = new QueryDevice();
             devicequery.codigo = this.codigo;
-            int page = 1;
+            int page = 0;
             string url = "";
             string json = JsonConvert.SerializeObject(devicequery,
             new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
 
             url = HttpMethods.url + "dispositivos/query?offset=" + page.ToString() + "&limit=30";
 
-
-            StatusMessage statusmessage = await HttpMethods.Post(url, json);
+            spinner.Show();
+            StatusMessage statusmessage;
+            try
+            {
+                statusmessage = await HttpMethods.Post(url, json);
+            }
+            finally
+            {
+                spinner.Hide();
+            }
             listDevices = JsonConvert.DeserializeObject<List<Devices>>(statusmessage.data);
             if (listDevices.Count == 0)
             {
@@ -129,7 +144,7 @@ namespace COMPRAS2
             this.lblDCodigoQR.Text = listDevices[0].codigo;
             this.lblDMarca.Text = listDevices[0].marca;
             this.lblDModelo.Text = listDevices[0].modelo;
-            this.lblDCosto.Text = listDevices[0].costo.ToString();
+            this.lblDCosto.Text = (listDevices[0].costo ?? 0).ToString();
             this.lblDOrigen.Text = listDevices[0].origen;
             this.lblDFecha.Text = listDevices[0].fechaAlta.ToString();
             this.lblDModFecha.Text = listDevices[0].fechaUltimaModificacion.ToString();
@@ -167,7 +182,19 @@ namespace COMPRAS2
             string json = JsonConvert.SerializeObject(devicesUpdate,
                 new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
             var url = HttpMethods.url + "dispositivos";
-            StatusMessage statusmessage = await HttpMethods.put(url, json);
+
+            btnELIMINAR.Enabled = false;
+            spinner.Show();
+            StatusMessage statusmessage;
+            try
+            {
+                statusmessage = await HttpMethods.put(url, json);
+            }
+            finally
+            {
+                spinner.Hide();
+                btnELIMINAR.Enabled = true;
+            }
 
             if (statusmessage.statuscode == 409)
             {

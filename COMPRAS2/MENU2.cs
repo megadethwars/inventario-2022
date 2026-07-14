@@ -51,8 +51,12 @@ namespace COMPRAS2
             pollingUniqueId = uniqueId;
             this.Invoke((MethodInvoker)delegate
             {
-                lbStatus.Text = "⏳ Procesando movimiento...";
+                lbStatus.Text = "Procesando movimiento...";
                 lbStatus.Visible = true;
+                pbMovimiento.Minimum = 0;
+                pbMovimiento.Maximum = 1;
+                pbMovimiento.Value = 0;
+                pbMovimiento.Visible = true;
             });
 
             timerPolling = new System.Timers.Timer(3000);
@@ -76,17 +80,29 @@ namespace COMPRAS2
                 if (response == null)
                     return;
 
-                if (response.status == "completed")
+                if (response.status != "processing")
                 {
                     StopMovementPolling();
                     this.Invoke((MethodInvoker)delegate
                     {
+                        pbMovimiento.Visible = false;
                         int failed = response.failed_devices?.Count ?? 0;
                         int skipped = response.skipped_devices?.Count ?? 0;
                         if (failed > 0 || skipped > 0)
                             lbStatus.Text = $"✅ Completado | Fallidos: {failed} | Omitidos: {skipped}";
                         else
                             lbStatus.Text = "✅ Movimiento completado";
+                    });
+                }
+                else
+                {
+                    int processed = response.processed_devices?.Count ?? 0;
+                    int total = response.requested_devices > 0 ? response.requested_devices : 1;
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        pbMovimiento.Maximum = total;
+                        pbMovimiento.Value = Math.Min(processed, total);
+                        lbStatus.Text = $"Procesando movimiento... ({processed}/{total})";
                     });
                 }
             }

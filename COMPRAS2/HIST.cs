@@ -62,7 +62,7 @@ namespace COMPRAS2
         Movimientos moves;
         List<Movimientos> moveslist;
         int offssetpage = 25;
-        int page = 1;
+        int page = 0;
         bool isFiltering = false;
         bool isRunning = false;
         public HIST()
@@ -75,7 +75,7 @@ namespace COMPRAS2
             offssetpage = VG.offssetpage;
 
             timer1 = new System.Timers.Timer();
-            timer1.Interval = 700;
+            timer1.Interval = 1200;
             timer1.Elapsed += timer1_Tick;
         }
         
@@ -330,7 +330,7 @@ namespace COMPRAS2
                 isRunning = false;
                 moveslist.Clear();
                 dgvHistorial.Rows.Clear();
-                page = 1;
+                page = 0;
                 isFiltering = true;
                 var url = HttpMethods.url + "movimientos/filter?limit=30";
                 StatusMessage statusmessage = await HttpMethods.get(url, txtBUSCADOR.Text);

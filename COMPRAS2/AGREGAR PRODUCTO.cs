@@ -22,6 +22,7 @@ namespace COMPRAS2
         private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
         FontFamily ff;
         Font font;
+        SpinningCircles spinner;
 
         private void CargoEtiqueta(Font font)
         {
@@ -70,6 +71,12 @@ namespace COMPRAS2
         public AGREGAR_PRODUCTO()
         {
             InitializeComponent();
+            spinner = new SpinningCircles();
+            spinner.Location = new Point(btnOK.Left - 45, btnOK.Top - 18);
+            spinner.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
+            spinner.Hide();
+            this.Controls.Add(spinner);
+            spinner.BringToFront();
         }
 
         private void AGREGAR_PRODUCTO_Load(object sender, EventArgs e)
@@ -249,7 +256,17 @@ namespace COMPRAS2
 
         private async void btnOK_Click_1(object sender, EventArgs e)
         {
-            int status = await Auth();
+            btnOK.Enabled = false;
+            spinner.Show();
+            try
+            {
+                int status = await Auth();
+            }
+            finally
+            {
+                spinner.Hide();
+                btnOK.Enabled = true;
+            }
         }      
     }
 }

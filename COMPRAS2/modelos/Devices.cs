@@ -20,7 +20,7 @@ namespace COMPRAS2.modelos
         public string compra { get; set; }
 
         [DefaultValue(0)]
-        public int costo { get; set; }
+        public int? costo { get; set; }
 
         [DefaultValue(null)]
         public string descompostura { get; set; }

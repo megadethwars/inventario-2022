@@ -8,6 +8,7 @@ namespace COMPRAS2.modelos
         public string status { get; set; }
         public int requested_devices { get; set; }
         public List<int> failed_devices { get; set; }
+        public List<int> processed_devices { get; set; }
         public List<int> skipped_devices { get; set; }
     }
 }
